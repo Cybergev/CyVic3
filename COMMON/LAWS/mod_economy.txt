@@ -1,0 +1,202 @@
+﻿law_cooperative_ownership = {
+	group = lawgroup_economic_system
+	
+	icon = "gfx/interface/icons/law_icons/cooperative_ownership.dds"
+	
+	progressiveness = 100
+	
+	disallowing_laws = {
+		law_serfdom
+	}
+	
+	unlocking_laws = {
+		law_council_republic		
+		law_anarchy
+	}
+	
+	on_activate = {		
+		custom_tooltip = {
+			text = enact_law_radical_leftist_economy_warning_desc
+		}	
+	}
+	
+	modifier = {
+		country_private_construction_allocation_mult = 0.50
+		state_bureaucracy_population_base_cost_factor_mult = -0.25
+		country_subsidies_all = yes
+		state_academics_investment_pool_contribution_add = 0.25
+		state_academics_investment_pool_efficiency_mult = 1
+		state_bureaucrats_investment_pool_contribution_add = 0.25
+		state_bureaucrats_investment_pool_efficiency_mult = 1
+		state_engineers_investment_pool_contribution_add = 0.25
+		state_engineers_investment_pool_efficiency_mult = 1
+		state_farmers_investment_pool_contribution_add = 0.25
+		state_farmers_investment_pool_efficiency_mult = 1
+		state_officers_investment_pool_contribution_add = 0.25
+		state_officers_investment_pool_efficiency_mult = 1
+		state_shopkeepers_investment_pool_contribution_add = 0.25
+		state_shopkeepers_investment_pool_efficiency_mult = 1
+	}
+
+	build_from_investment_pool = {
+		bg_manufacturing
+		bg_agriculture
+		bg_ranching
+		bg_plantations
+		bg_mining
+		bg_logging
+		bg_whaling
+		bg_fishing
+		bg_rubber
+		bg_oil_extraction
+		bg_service
+		bg_urban_facilities
+		bg_trade
+		bg_infrastructure
+	}	
+	
+	possible_political_movements = {
+		law_interventionism
+		law_agrarianism
+		law_laissez_faire
+		law_command_economy
+	}
+
+	pop_support = {
+		value = 0
+		add = {
+			desc = "POP_CAPITALISTS"			
+			if = {
+				limit = {
+					owner = {
+						OR = { 
+							has_law = law_type:law_agrarianism 
+							has_law = law_type:law_traditionalism 
+						}
+					}
+					is_pop_type = capitalists
+				}
+				value = 0.5
+			}
+		}
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { 
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+                scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+		
+		if = {
+			limit = { 
+				has_law = law_type:law_council_republic
+			}
+			add = 250
+		}
+	}
+}
+
+law_command_economy = {
+	group = lawgroup_economic_system
+	
+	icon = "gfx/interface/icons/law_icons/command_economy.dds"
+	
+	progressiveness = 100
+	
+	disallowing_laws = {
+		law_serfdom
+		law_anarchy
+	}
+	
+	unlocking_technologies = {
+		central_planning
+	}
+	
+	unlocking_laws = {
+		law_autocracy
+		law_oligarchy
+		law_single_party_state
+		law_technocracy
+	}	
+	
+	on_activate = {
+		seize_investment_pool = yes
+		custom_tooltip = {
+			text = enact_law_radical_leftist_economy_warning_desc
+		}	
+	}
+	
+	modifier = {
+		country_private_construction_allocation_mult = 0
+		country_authority_mult = 0.25
+		country_subsidies_all = yes
+		country_disable_investment_pool = yes
+	}
+	
+	possible_political_movements = {
+		law_interventionism
+		law_agrarianism
+		law_laissez_faire
+		law_cooperative_ownership
+		law_industry_banned
+	}
+
+	pop_support = {
+		value = 0
+		add = {
+			desc = "POP_BUREAUCRATS"			
+			if = {
+				limit = {
+					is_pop_type = bureaucrats
+				}
+				value = 0.2
+			}
+		}
+	}
+	
+	ai_will_do = {
+		OR = {
+			has_law = law_type:law_technocracy
+			AND = {
+				has_law = law_type:law_council_republic
+				ruler ?= {
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_communist
+				}			
+			}
+		}
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { 
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+                scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+		
+		if = {
+			limit = { 
+				has_law = law_type:law_council_republic
+			}
+			add = 250
+		}
+		
+		if = {
+			limit = { 
+				has_law = law_type:law_technocracy
+			}
+			add = 100
+		}
+	}
+}

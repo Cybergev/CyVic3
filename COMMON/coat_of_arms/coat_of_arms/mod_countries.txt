@@ -1,0 +1,68 @@
+
+USE = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	colored_emblem = {
+		texture = "ce_stars_circle_13.dds"
+		color1 = "yellow"
+	}
+}
+
+USE_republic = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	colored_emblem = {
+		texture = "ce_stars_circle_13.dds"
+		color1 = "yellow"
+	}
+}
+
+USE_technate = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_delta.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_octagon.dds"
+		color1 = "blue"
+		color2 = "yellow"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+	
+}
+
+USE_fascist = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+
+	colored_emblem = {
+		texture = "ce_labrys.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }				
+	}	
+}
+
+USE_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_hammer_sickle_cogwheel_usa.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }				
+	}
+
+	colored_emblem = {
+		texture = "ce_coa_frame_austria.dds"
+		color1 = "yellow"
+		color2 = "red"
+		color3 = "blue"
+		instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }				
+	}
+}

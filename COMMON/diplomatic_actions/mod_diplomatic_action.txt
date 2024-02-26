@@ -1,0 +1,83 @@
+redeem_obligation = {
+	requires_approval = no
+	potential = {
+		NOT = {
+			is_country_type = decentralized
+		}
+		scope:target_country = {
+			NOT = {
+				is_country_type = decentralized
+			}
+		}
+		scope:target_country = {
+			owes_obligation_to = root
+		}
+	}
+	possible = {
+		is_revolutionary = no
+		scope:target_country = {
+			is_revolutionary = no
+		}
+	}
+	accept_effect = {
+		change_relations = {
+			country = scope:target_country
+			value = 30
+		}
+		scope:target_country = {
+			set_owes_obligation_to = {
+				country = root
+				setting = no
+			}
+		}
+		if = {
+			limit = {
+				scope:target_country = {
+					country_rank = rank_value:great_power
+				}
+			}
+			change_infamy = -20
+		}
+		if = {
+			limit = {
+				scope:target_country = {
+					OR = {
+						country_rank = rank_value:major_power
+						country_rank = rank_value:unrecognized_major_power
+					}
+				}
+			}
+			change_infamy = -10
+		}
+		if = {
+			limit = {
+				scope:target_country = {
+					OR = {
+						country_rank = rank_value:minor_power
+						country_rank = rank_value:unrecognized_regional_power
+					}
+				}
+			}
+			change_infamy = -5
+		}
+		if = {
+			limit = {
+				scope:target_country = {
+					OR = {
+						country_rank = rank_value:insignificant_power
+						country_rank = rank_value:unrecognized_power
+					}
+				}
+			}
+			change_infamy = -2
+		}
+	}
+	ai = {
+		propose_score = {
+			value = 10
+		}
+		will_propose = {
+			always = no
+		}
+	}
+}
