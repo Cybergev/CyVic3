@@ -66,3 +66,153 @@ USE_communist = {
 		instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }				
 	}
 }
+
+PAN_theocracy = {
+	# Actually the imperial war flag
+	pattern = "pattern_solid.tga"
+	color1 = "saffron"
+	
+	colored_emblem = {
+		texture = "ce_border_ceylon.dds"
+		color1 = "red"
+		color2 = "saffron"
+		color3 = "blue"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_khanda.dds"
+		color1 = "saffron"
+		color2 = "saffron"
+		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }		
+	}	
+}
+PAN_absolute_monarchy = { # Sikh Empire
+	# Starting flag
+	
+	pattern = "pattern_solid.tga"
+	color1 = "saffron"
+	
+	colored_emblem = {
+		texture = "ce_khanda.dds"
+		color1 = "blue"
+		color2 = "blue"
+		instance = { scale = { 0.7 0.7 } position = { 0.3 0.5 } }		
+	}			
+}
+PAN = {
+	# default monarchy
+	
+	pattern = "pattern_solid.tga"
+	color1 = "saffron"
+	color2 = "black"
+	
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { scale = { 1.0 0.8 } position = { 0.435 0.5 } }	
+	}	
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "saffron"
+		color2 = "saffron"
+		instance = { scale = { 0.98 0.78 } position = { 0.435 0.5 } }	
+	}	
+	colored_emblem = {
+		texture = "ce_border_decor_india.dds"
+		color1 = "saffron"
+		color2 = "black"
+		color3 = "black"
+		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }
+	}			
+	colored_emblem = {
+		texture = "ce_scimitar.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { scale = { 1.33 -1.33 } position = { 0.475 0.30 } rotation = 5 }		
+	}	
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "saffron"
+		color2 = "saffron"
+		instance = { scale = { 0.45 0.45 } position = { 0.5 0.5 } }		
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { scale = { 0.435 0.435 } position = { 0.5 0.505 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "saffron"
+		color2 = "saffron"
+		instance = { scale = { 0.08 0.08 } position = { 0.47 0.45 } }	
+		instance = { scale = { 0.08 0.08 } position = { 0.47 0.55 } }	
+		instance = { scale = { 0.08 0.08 } position = { 0.53 0.45 } }	
+		instance = { scale = { 0.08 0.08 } position = { 0.53 0.55 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { scale = { 0.07 0.07 } position = { 0.47 0.455 } }	
+		instance = { scale = { 0.07 0.07 } position = { 0.47 0.555 } }	
+		instance = { scale = { 0.07 0.07 } position = { 0.53 0.455 } }	
+		instance = { scale = { 0.07 0.07 } position = { 0.53 0.555 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "saffron"
+		color2 = "saffron"
+		instance = { scale = { 0.025 0.025 } position = { 0.5 0.5 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_katar.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { scale = { 0.5 1.0 } position = { 0.45 0.75 } rotation = 90 }		
+	}		
+}
+
+PAN_republic = {
+	pattern = "pattern_solid.tga"
+	color1 = "orange"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "blue"
+		color2 = "orange"
+	}
+	colored_emblem = {
+		texture = "ce_khanda.dds"
+		color1 = "blue"
+		color2 = "blue"
+		instance = { scale = { 0.35 0.35 } position = { 0.12 @[third/2] } }		
+	}	
+}
+PAN_dictatorship = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "saffron"
+	
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "saffron"
+		color2 = "saffron"
+		instance = { scale = { 1.0 0.15 } position = { 0.5 0.2 } }		
+		instance = { scale = { 1.0 0.15 } position = { 0.5 0.8 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_khanda.dds"
+		color1 = "saffron"
+		color2 = "saffron"
+		instance = { scale = { 0.45 0.45 } position = { 0.5 0.5 } }		
+	}			
+}

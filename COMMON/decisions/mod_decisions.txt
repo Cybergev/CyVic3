@@ -362,78 +362,24 @@ remove_south_italian = {
 european_culture_unification = {
 	is_shown = {
 		c:USE ?= root
+		not = {
+			country_has_primary_culture = cu:european
+		}
 	}
 	possible = {
 		c:USE ?= root
-		country_has_primary_culture = cu:european
-		country_has_primary_culture = cu:british
-		country_has_primary_culture = cu:scottish
-		country_has_primary_culture = cu:welsh
-		country_has_primary_culture = cu:irish
-		country_has_primary_culture = cu:french
-		country_has_primary_culture = cu:occitan
-		country_has_primary_culture = cu:breton
-		country_has_primary_culture = cu:spanish
-		country_has_primary_culture = cu:portuguese
-		country_has_primary_culture = cu:galician
-		country_has_primary_culture = cu:catalan
-		country_has_primary_culture = cu:basque
-		country_has_primary_culture = cu:north_italian
-		country_has_primary_culture = cu:south_italian
-		country_has_primary_culture = cu:corsican
-		country_has_primary_culture = cu:danish
-		country_has_primary_culture = cu:dutch
-		country_has_primary_culture = cu:flemish
-		country_has_primary_culture = cu:wallonian
-		country_has_primary_culture = cu:north_german
-		country_has_primary_culture = cu:south_german
-		country_has_primary_culture = cu:alemannic
-		country_has_primary_culture = cu:polish
-		country_has_primary_culture = cu:czech
-		country_has_primary_culture = cu:slovak
-		country_has_primary_culture = cu:hungarian
-		country_has_primary_culture = cu:romanian
-		country_has_primary_culture = cu:bosniak
-		country_has_primary_culture = cu:croat
-		country_has_primary_culture = cu:serb
-		country_has_primary_culture = cu:slovene
-		country_has_primary_culture = cu:albanian
-		country_has_primary_culture = cu:greek
 	}
 	when_taken = {
-		remove_primary_culture = cu:british
-		remove_primary_culture = cu:scottish
-		remove_primary_culture = cu:welsh
-		remove_primary_culture = cu:irish
-		remove_primary_culture = cu:french
-		remove_primary_culture = cu:occitan
-		remove_primary_culture = cu:breton
-		remove_primary_culture = cu:spanish
-		remove_primary_culture = cu:portuguese
-		remove_primary_culture = cu:galician
-		remove_primary_culture = cu:catalan
-		remove_primary_culture = cu:basque
-		remove_primary_culture = cu:north_italian
-		remove_primary_culture = cu:south_italian
-		remove_primary_culture = cu:corsican
-		remove_primary_culture = cu:danish
-		remove_primary_culture = cu:dutch
-		remove_primary_culture = cu:flemish
-		remove_primary_culture = cu:wallonian
-		remove_primary_culture = cu:north_german
-		remove_primary_culture = cu:south_german
-		remove_primary_culture = cu:alemannic
-		remove_primary_culture = cu:polish
-		remove_primary_culture = cu:czech
-		remove_primary_culture = cu:slovak
-		remove_primary_culture = cu:hungarian
-		remove_primary_culture = cu:romanian
-		remove_primary_culture = cu:bosniak
-		remove_primary_culture = cu:croat
-		remove_primary_culture = cu:serb
-		remove_primary_culture = cu:slovene
-		remove_primary_culture = cu:albanian
-		remove_primary_culture = cu:greek
+		add_primary_culture = cu:european
+		every_primary_culture = {
+			ROOT = {
+				remove_primary_culture = prev
+				add_radicals = {
+					value = 0.5
+					culture = prev
+				}
+			}
+		}
 	}
 	ai_chance = {
 		base = 0
@@ -443,11 +389,32 @@ european_culture_unification = {
 european_homeland_unification = {
 	is_shown = {
 		c:USE ?= root
+		country_has_primary_culture = cu:european
 	}
 	possible = {
 		c:USE ?= root
+		NOT = {
+			has_variable = european_homeland_unificated
+		}
 		any_scope_state = {
-			state_is_in_europe = yes
+			OR = {
+				region = sr:region_north_sea_coast
+				region = sr:region_england
+				region = sr:region_iberia
+				region = sr:region_occitania
+				region = sr:region_france
+				region = sr:region_rhine
+				region = sr:region_baltic	
+				region = sr:region_north_germany
+				region = sr:region_south_germany
+				region = sr:region_italy	
+				region = sr:region_balkans
+				region = sr:region_danubia
+				region = sr:region_poland
+				region = sr:region_dnieper
+				region = sr:region_russia
+				region = sr:region_caucasus
+			}
 			is_incorporated = yes
 			is_split_state = no
 			owner = root
@@ -460,9 +427,26 @@ european_homeland_unification = {
 		}
 	}
 	when_taken = {
-		every_scope_state = {
+		random_scope_state = {
 			limit = {
-				state_is_in_europe = yes
+				OR = {
+					region = sr:region_north_sea_coast
+					region = sr:region_england
+					region = sr:region_iberia
+					region = sr:region_occitania
+					region = sr:region_france
+					region = sr:region_rhine
+					region = sr:region_baltic	
+					region = sr:region_north_germany
+					region = sr:region_south_germany
+					region = sr:region_italy	
+					region = sr:region_balkans
+					region = sr:region_danubia
+					region = sr:region_poland
+					region = sr:region_dnieper
+					region = sr:region_russia
+					region = sr:region_caucasus
+				}
 				is_incorporated = yes
 				is_split_state = no
 				owner = root
@@ -479,9 +463,18 @@ european_homeland_unification = {
 				}
 				prev.state_region = {
 					remove_homeland = prev
-					add_homeland = european
+					add_homeland = cu:european
+					add_radicals = {
+						value = 1
+						culture = prev
+					}
 				}
 			}
+		}
+		set_variable = {
+			name = european_homeland_unificated
+			value = 1
+			days = 180
 		}
 	}
 	ai_chance = {
@@ -619,6 +612,94 @@ socialistic_reform = {
 	}
 }
 
+set_theocracy = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_theocracy
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_theocracy
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_theocracy
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_technocracy = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_technocracy
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_technocracy
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_technocracy
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_universal_suffrage = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_universal_suffrage
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_universal_suffrage
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_universal_suffrage
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_single_party_state = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_single_party_state
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_single_party_state
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_single_party_state
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
 get_imposter = {
 	is_shown = {
 		has_law = law_type:law_council_republic
@@ -647,32 +728,203 @@ get_imposter = {
 	}
 }
 
-promote_atheism = {
+vanguardism_political_purge = {
 	is_shown = {
-		always = yes
-	}
-	possible = {
-		country_has_state_religion = rel:atheist
-		NOT = {
-			has_variable = atheism_promoted
+		ruler = {
+			has_ideology = ideology:ideology_vanguardist
 		}
 	}
-	when_taken = {
-		ROOT = {
-			set_variable = {
-				name = atheism_promoted
-				days = 180
-			}
-			every_scope_state = {
-				convert_population = {
-					target = rel:atheist
-					value = 0.01
+	possible = {
+		any_interest_group = {
+			is_marginal = no
+			leader = {
+				NOT = {
+					has_ideology = ideology:ideology_vanguardist
 				}
 			}
 		}
 	}
+	when_taken = {
+		every_interest_group = {
+			limit = {
+				is_marginal = no
+				leader = {
+					NOT = {
+						has_ideology = ideology:ideology_vanguardist
+					}
+				}
+			}
+			save_scope_as = purge_ig
+		}
+		create_character = {
+			interest_group = scope:purge_ig
+			ig_leader = yes
+			ideology = ideology_vanguardist
+		}
+		add_radicals = {
+			value = 0.5
+			interest_group = scope:purge_ig
+		}
+	}
+}
+
+fascism_political_purge = {
+	is_shown = {
+		ruler = {
+			has_ideology = ideology:ideology_fascist
+		}
+	}
+	possible = {
+		any_interest_group = {
+			is_marginal = no
+			leader = {
+				NOT = {
+					has_ideology = ideology:ideology_fascist
+				}
+			}
+		}
+	}
+	when_taken = {
+		every_interest_group = {
+			limit = {
+				is_marginal = no
+				leader = {
+					NOT = {
+						has_ideology = ideology:ideology_fascist
+					}
+				}
+			}
+			save_scope_as = purge_ig
+		}
+		create_character = {
+			interest_group = scope:purge_ig
+			ig_leader = yes
+			ideology = ideology_fascist
+		}
+		add_radicals = {
+			value = 0.5
+			interest_group = scope:purge_ig
+		}
+	}
+}
+
+promote_atheism = {
+	is_shown = {
+		OR = {
+			country_has_state_religion = rel:atheist
+			has_law = law_type:law_state_atheism
+		}
+	}
+	possible = {
+		OR = {
+			country_has_state_religion = rel:atheist
+			has_law = law_type:law_state_atheism
+		}
+		NOT = {
+			has_variable = state_religion_promoted
+		}
+	}
+	when_taken = {
+		if = {
+			limit = {
+				has_law = law_type:law_state_atheism
+				country_has_state_religion = rel:atheist
+			}
+			ROOT = {
+				every_scope_state = {
+					convert_population = {
+						target = rel:atheist
+						value = 0.01
+					}
+				}
+			}
+			set_variable = {
+				name = state_religion_promoted
+				value = 1
+				days = 180
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					OR = {
+						has_law = law_type:law_state_atheism
+						NOT = {
+							country_has_state_religion = rel:atheist
+						}
+					}
+					OR = {
+						NOT = {
+							has_law = law_type:law_state_atheism
+						}
+						country_has_state_religion = rel:atheist
+					}
+				}
+			}
+			activate_law = law_type:law_state_atheism
+		}
+	}
 	ai_chance = {
-		base = 0
+		base = 100
+	}
+}
+
+promote_sikh = {
+	is_shown = {
+		country_has_state_religion = rel:sikh
+	}
+	possible = {
+		OR = {
+			country_has_state_religion = rel:sikh
+			has_law = law_type:law_state_religion
+		}
+		NOT = {
+			has_variable = state_religion_promoted
+		}
+	}
+	when_taken = {
+		if = {
+			limit = {
+				country_has_state_religion = rel:sikh
+				has_law = law_type:law_state_religion
+			}
+			ROOT = {
+				every_scope_state = {
+					convert_population = {
+						target = rel:sikh
+						value = 0.01
+					}
+				}
+			}
+			set_variable = {
+				name = state_religion_promoted
+				value = 1
+				days = 180
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					OR = {
+						NOT = {
+							country_has_state_religion = rel:sikh
+						}
+						has_law = law_type:law_state_religion
+					}
+					OR = {
+						country_has_state_religion = rel:sikh
+						NOT = {
+							has_law = law_type:law_state_religion
+						}
+					}
+				}
+			}
+			set_state_religion = rel:sikh
+			activate_law = law_type:law_state_religion
+		}
+	}
+	ai_chance = {
+		base = 100
 	}
 }
 

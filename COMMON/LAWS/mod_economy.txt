@@ -22,7 +22,6 @@
 	
 	modifier = {
 		country_private_construction_allocation_mult = 0.50
-		state_bureaucracy_population_base_cost_factor_mult = -0.25
 		country_subsidies_all = yes
 		state_academics_investment_pool_contribution_add = 0.25
 		state_academics_investment_pool_efficiency_mult = 1
@@ -134,7 +133,6 @@ law_command_economy = {
 	
 	modifier = {
 		country_private_construction_allocation_mult = 0
-		country_authority_mult = 0.25
 		country_subsidies_all = yes
 		country_disable_investment_pool = yes
 	}

@@ -1,0 +1,456 @@
+﻿
+RU_CL_RP = {
+	type = country
+	log_loc_errors = no
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_monarchy_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_RP_dyn_c_united_kindom_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_republic_flag_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				has_law = law_type:law_technocracy
+			}
+		}
+		localization_key = RU_CL_RP_dyn_c_united_state_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_republic_flag_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_RP_dyn_c_united_technate_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_communist_flag_trigger = yes
+				NOT = { coa_def_republic_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_RP_dyn_c_united_council_europe
+	}
+	
+	text = {
+		trigger = {
+			exists = c:PAN
+			this = c:PAN
+			c:PAN = { 
+				country_has_state_religion = rel:sikh
+				has_law = law_type:law_state_religion
+				OR = {
+					has_law = law_type:law_theocracy
+					has_law = law_type:law_monarchy
+				}
+			}
+		}
+		localization_key = RU_CL_RP_dyn_c_sikh_empire
+	}
+	text = {
+		trigger = {
+			exists = c:PAN
+			this = c:PAN
+			c:PAN = { 
+				country_has_state_religion = rel:sikh
+				NOT = {
+					has_law = law_type:law_state_religion
+					OR = {
+						has_law = law_type:law_theocracy
+						has_law = law_type:law_monarchy
+					}
+				}
+			}
+		}
+		localization_key = RU_CL_RP_dyn_c_sikh_state
+	}
+}
+RU_CL_DP = {
+	type = country
+	log_loc_errors = no
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_monarchy_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_DP_dyn_c_united_kindom_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_republic_flag_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				has_law = law_type:law_technocracy
+			}
+		}
+		localization_key = RU_CL_DP_dyn_c_united_state_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_republic_flag_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_DP_dyn_c_united_technate_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_communist_flag_trigger = yes
+				NOT = { coa_def_republic_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_DP_dyn_c_united_council_europe
+	}
+	
+	text = {
+		trigger = {
+			exists = c:PAN
+			this = c:PAN
+			c:PAN = { 
+				country_has_state_religion = rel:sikh
+				has_law = law_type:law_state_religion
+				OR = {
+					has_law = law_type:law_theocracy
+					has_law = law_type:law_monarchy
+				}
+			}
+		}
+		localization_key = RU_CL_DP_dyn_c_sikh_empire
+	}
+	text = {
+		trigger = {
+			exists = c:PAN
+			this = c:PAN
+			c:PAN = { 
+				country_has_state_religion = rel:sikh
+				NOT = {
+					has_law = law_type:law_state_religion
+					OR = {
+						has_law = law_type:law_theocracy
+						has_law = law_type:law_monarchy
+					}
+				}
+			}
+		}
+		localization_key = RU_CL_DP_dyn_c_sikh_state
+	}
+}
+RU_CL_VP = {
+	type = country
+	log_loc_errors = no
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_monarchy_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_VP_dyn_c_united_kindom_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_republic_flag_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				has_law = law_type:law_technocracy
+			}
+		}
+		localization_key = RU_CL_VP_dyn_c_united_state_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_republic_flag_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_VP_dyn_c_united_technate_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_communist_flag_trigger = yes
+				NOT = { coa_def_republic_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_VP_dyn_c_united_council_europe
+	}
+	
+	text = {
+		trigger = {
+			exists = c:PAN
+			this = c:PAN
+			c:PAN = { 
+				country_has_state_religion = rel:sikh
+				has_law = law_type:law_state_religion
+				OR = {
+					has_law = law_type:law_theocracy
+					has_law = law_type:law_monarchy
+				}
+			}
+		}
+		localization_key = RU_CL_VP_dyn_c_sikh_empire
+	}
+	text = {
+		trigger = {
+			exists = c:PAN
+			this = c:PAN
+			c:PAN = { 
+				country_has_state_religion = rel:sikh
+				NOT = {
+					has_law = law_type:law_state_religion
+					OR = {
+						has_law = law_type:law_theocracy
+						has_law = law_type:law_monarchy
+					}
+				}
+			}
+		}
+		localization_key = RU_CL_VP_dyn_c_sikh_state
+	}
+}
+RU_CL_TP = {
+	type = country
+	log_loc_errors = no
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_monarchy_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_TP_dyn_c_united_kindom_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_republic_flag_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				has_law = law_type:law_technocracy
+			}
+		}
+		localization_key = RU_CL_TP_dyn_c_united_state_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_republic_flag_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_TP_dyn_c_united_technate_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_communist_flag_trigger = yes
+				NOT = { coa_def_republic_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_TP_dyn_c_united_council_europe
+	}
+	
+	text = {
+		trigger = {
+			exists = c:PAN
+			this = c:PAN
+			c:PAN = { 
+				country_has_state_religion = rel:sikh
+				has_law = law_type:law_state_religion
+				OR = {
+					has_law = law_type:law_theocracy
+					has_law = law_type:law_monarchy
+				}
+			}
+		}
+		localization_key = RU_CL_TP_dyn_c_sikh_empire
+	}
+	text = {
+		trigger = {
+			exists = c:PAN
+			this = c:PAN
+			c:PAN = { 
+				country_has_state_religion = rel:sikh
+				NOT = {
+					has_law = law_type:law_state_religion
+					OR = {
+						has_law = law_type:law_theocracy
+						has_law = law_type:law_monarchy
+					}
+				}
+			}
+		}
+		localization_key = RU_CL_TP_dyn_c_sikh_state
+	}
+}
+RU_CL_PP = {
+	type = country
+	log_loc_errors = no
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_monarchy_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_PP_dyn_c_united_kindom_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_republic_flag_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				has_law = law_type:law_technocracy
+			}
+		}
+		localization_key = RU_CL_PP_dyn_c_united_state_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_republic_flag_trigger = yes
+				NOT = { coa_def_communist_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_PP_dyn_c_united_technate_europe
+	}
+	text = {
+		trigger = {
+			exists = c:USE
+			this = c:USE
+			c:USE = { 
+				coa_def_communist_flag_trigger = yes
+				NOT = { coa_def_republic_flag_trigger = yes }
+				NOT = {	
+					has_law = law_type:law_technocracy
+				}
+			}
+		}
+		localization_key = RU_CL_PP_dyn_c_united_council_europe
+	}
+	
+	text = {
+		trigger = {
+			exists = c:PAN
+			this = c:PAN
+			c:PAN = { 
+				country_has_state_religion = rel:sikh
+				has_law = law_type:law_state_religion
+				OR = {
+					has_law = law_type:law_theocracy
+					has_law = law_type:law_monarchy
+				}
+			}
+		}
+		localization_key = RU_CL_PP_dyn_c_sikh_empire
+	}
+	text = {
+		trigger = {
+			exists = c:PAN
+			this = c:PAN
+			c:PAN = { 
+				country_has_state_religion = rel:sikh
+				NOT = {
+					has_law = law_type:law_state_religion
+					OR = {
+						has_law = law_type:law_theocracy
+						has_law = law_type:law_monarchy
+					}
+				}
+			}
+		}
+		localization_key = RU_CL_PP_dyn_c_sikh_state
+	}
+}

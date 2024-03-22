@@ -26,13 +26,6 @@ region_central_asia = {
 	states = { STATE_UZBEKIA STATE_KHIVA STATE_TAJIKISTAN STATE_KIRGHIZIA STATE_TURKMENIA STATE_SEMIRECHE STATE_AKMOLINSK STATE_DZUNGARIA STATE_TIANSHAN STATE_URALSK STATE_JETISY }
 }
 
-region_caucasus = {
-	graphical_culture = "arabic"
-	capital_province = xFB38B0
-	map_color = { 1 0.1 0.2 }
-	states = { STATE_ARMENIA STATE_AZERBAIJAN STATE_DAGESTAN STATE_KUBAN STATE_GREATER_CAUCASUS STATE_ROSTOV STATE_ASTRAKHAN STATE_KARS }
-}
-
 region_south_india = {
 	graphical_culture = "arabic"
 	capital_province = x9A2EF3

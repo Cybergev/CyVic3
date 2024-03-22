@@ -1,34 +1,5 @@
 ﻿# Root = Country
 on_country_formed = {
-	effect = {
-		if = {
-			limit = {
-				c:USE ?= ROOT
-			}
-			every_scope_state = {
-				limit = {
-					state_is_in_europe = yes
-					is_incorporated = yes
-					is_split_state = no
-					owner = root
-					cu:european = {
-						not = {
-							has_homeland = prev
-						}
-					}
-				}
-				every_scope_culture = {
-					limit = {
-						has_homeland = prev
-					}
-					prev.state_region = {
-						remove_homeland = prev
-						add_homeland = european
-					}
-				}
-			}
-		}
-	}
 }
 
 on_diplomatic_play_started = {

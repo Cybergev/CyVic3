@@ -2,8 +2,6 @@
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 	unlocking_laws = {
 		law_collectivized_agriculture
-		law_cooperative_ownership
-		law_command_economy
 	}
 	building_modifiers = {
 		level_scaled = {
@@ -20,7 +18,6 @@ pm_government_run = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 	unlocking_laws = {
 		law_collectivized_agriculture
-		law_command_economy
 	}
 	disallowing_laws = {
 		law_cooperative_ownership
@@ -39,7 +36,6 @@ pm_worker_cooperative_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 	unlocking_laws = {
 		law_collectivized_agriculture
-		law_cooperative_ownership
 	}
 	building_modifiers = {
 		level_scaled = {
@@ -56,7 +52,6 @@ pm_government_run_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 	unlocking_laws = {
 		law_collectivized_agriculture
-		law_command_economy
 	}
 	disallowing_laws = {
 		law_cooperative_ownership
@@ -75,7 +70,6 @@ pm_worker_cooperative_building_subsistence = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 	unlocking_laws = {
 		law_collectivized_agriculture
-		law_cooperative_ownership
 	}
 	building_modifiers = {
 		level_scaled = {
@@ -92,7 +86,6 @@ pm_government_run_building_subsistence = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 	unlocking_laws = {
 		law_collectivized_agriculture
-		law_command_economy
 	}
 	disallowing_laws = {
 		law_cooperative_ownership
@@ -617,6 +610,65 @@ pm_government_run_industry = {
 	}
 }
 
+pm_worker_cooperative_building_arms_industry = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+	unlocking_production_methods = {
+		pm_rifles
+		pm_repeaters
+		pm_bolt_action_rifles
+	}
+	unlocking_laws = {
+		law_cooperative_ownership
+		law_command_economy
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 200
+		}
+		unscaled = {
+			building_workforce_shares_add = 0.5
+			building_government_shares_add = 0.5
+		}
+	}
+}
+
+pm_government_run_building_arms_industry = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+	unlocking_laws = {
+		law_command_economy
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 200
+		}
+		unscaled = {
+			building_government_shares_add = 1
+		}
+	}
+}
+
+pm_worker_cooperative_building_artillery_foundries = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+	unlocking_production_methods = {
+		pm_smoothbores
+		pm_breech_loaders
+		pm_recoiled_barrels
+	}
+	unlocking_laws = {
+		law_cooperative_ownership
+		law_command_economy
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 200
+		}
+		unscaled = {
+			building_workforce_shares_add = 0.5
+			building_government_shares_add = 0.5
+		}
+	}
+}
+
 pm_worker_cooperative_building_shipyards = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 	unlocking_production_methods = {
@@ -677,43 +729,6 @@ pm_worker_cooperative_building_military_shipyards = {
 }
 
 pm_government_run_building_military_shipyards = {
-	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
-	unlocking_laws = {
-		law_command_economy
-	}
-	building_modifiers = {
-		level_scaled = {
-			building_employment_bureaucrats_add = 200
-		}
-		unscaled = {
-			building_government_shares_add = 1
-		}
-	}
-}
-
-pm_worker_cooperative_building_arms_industry = {
-	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
-	unlocking_production_methods = {
-		pm_rifles
-		pm_repeaters
-		pm_bolt_action_rifles
-	}
-	unlocking_laws = {
-		law_cooperative_ownership
-		law_command_economy
-	}
-	building_modifiers = {
-		level_scaled = {
-			building_employment_bureaucrats_add = 200
-		}
-		unscaled = {
-			building_workforce_shares_add = 0.5
-			building_government_shares_add = 0.5
-		}
-	}
-}
-
-pm_government_run_building_arms_industry = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 	unlocking_laws = {
 		law_command_economy

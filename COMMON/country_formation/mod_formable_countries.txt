@@ -175,14 +175,6 @@
 	}
 
 	ai_will_do = { 
-		has_technology_researched = pan-nationalism
-		OR = {
-			has_law = law_type:law_cultural_exclusion
-			has_law = law_type:law_multicultural
-		}
-		OR = {
-			has_law = law_type:law_total_separation
-			has_law = law_type:law_state_atheism
-		}
+		always = no
 	}
 }
