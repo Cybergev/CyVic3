@@ -1,4 +1,4 @@
-﻿remove_alemannic = {
+remove_alemannic = {
 	is_shown = {
 		country_has_primary_culture = cu:alemannic
 	}
@@ -725,6 +725,51 @@ get_imposter = {
 	}
 	ai_chance = {
 		base = 0
+	}
+}
+
+political_purge = {
+	is_shown = {
+		any_interest_group = {
+			is_marginal = no
+			leader = {
+				NOT = {
+					has_ideology = scope:ruler.ideology
+				}
+			}
+		}
+	}
+	possible = {
+		any_interest_group = {
+			is_marginal = no
+			leader = {
+				NOT = {
+					has_ideology = scope:ruler.ideology
+				}
+			}
+		}
+	}
+	when_taken = {
+		every_interest_group = {
+			limit = {
+				is_marginal = no
+				leader = {
+					NOT = {
+						has_ideology = scope:ruler.ideology
+					}
+				}
+			}
+			save_scope_as = purge_ig
+		}
+		create_character = {
+			interest_group = scope:purge_ig
+			ig_leader = yes
+			ideology = scope:ruler.ideology
+		}
+		add_radicals = {
+			value = 0.5
+			interest_group = scope:purge_ig
+		}
 	}
 }
 

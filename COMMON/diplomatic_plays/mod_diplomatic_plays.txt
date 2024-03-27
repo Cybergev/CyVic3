@@ -11,10 +11,15 @@
 		NOT = {
 			exists = c:USE
 		}
-		NOT = {
-			is_country_type = decentralized
-		}
 		has_technology_researched = pan-nationalism
+		OR = {
+			has_law = law_type:law_cultural_exclusion
+			has_law = law_type:law_multicultural
+		}
+		OR = {
+			has_law = law_type:law_total_separation
+			has_law = law_type:law_state_atheism
+		}
 	}
 	on_weekly_pulse = {
 	}
