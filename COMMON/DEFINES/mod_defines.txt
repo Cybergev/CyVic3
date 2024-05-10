@@ -1,5 +1,9 @@
-NDiplomacy = {
+﻿NDiplomacy = {
 	BASE_YEARLY_INFAMY_DECAY_RATE = 6.0
+	WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR = 10000 # The amount of population by which the factor below is multiplied
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER = 0.02 # For each WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR population in a country/state, multiply infamy by this
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE = 2 # Infamy population multiplier can't be higher than this for each state affected
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL = 20 # Infamy population multiplier can't be higher than this, regardless of number of states affected
 }
 NPops = {
 	ASSIMILATION_RATE = 0.02					# Percentage of pops who will Assimilate into a different Culture each month, if eligible

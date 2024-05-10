@@ -1,0 +1,157 @@
+﻿purge_dissents = {
+	ruler.ideology = {
+		save_scope_as = target_ideology
+	}
+	random_interest_group = {
+		limit = {
+			is_in_government = yes
+			leader = {
+				NOT = {
+					has_ideology = scope:target_ideology
+				}
+			}
+		}
+		save_scope_as = target_ig
+	}
+	create_character = {
+		interest_group = scope:target_ig
+		ig_leader = yes
+		ideology = scope:target_ideology
+	}
+	scope:target_ig = {
+		add_radicals = {
+			value = 0.5
+			interest_group = scope:target_ig
+		}
+		add_modifier = {
+			name = purged_ig
+			months = 12
+			is_decaying = yes
+		}
+	}
+}
+promote_state_rel = {
+	add_modifier = {
+		name = state_religion_promotion
+		years = 1
+		is_decaying = yes
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:catholic
+		}
+		rel:catholic = {
+			save_scope_as = state_rel
+		}
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:protestant
+		}
+		rel:protestant = {
+			save_scope_as = state_rel
+		}
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:orthodox
+		}
+		rel:orthodox = {
+			save_scope_as = state_rel
+		}
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:oriental_orthodox
+		}
+		rel:oriental_orthodox = {
+			save_scope_as = state_rel
+		}
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:sunni
+		}
+		rel:sunni = {
+			save_scope_as = state_rel
+		}
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:shiite
+		}
+		rel:shiite = {
+			save_scope_as = state_rel
+		}
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:jewish
+		}
+		rel:jewish = {
+			save_scope_as = state_rel
+		}
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:gelugpa
+		}
+		rel:gelugpa = {
+			save_scope_as = state_rel
+		}
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:theravada
+		}
+		rel:theravada = {
+			save_scope_as = state_rel
+		}
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:hindu
+		}
+		rel:hindu = {
+			save_scope_as = state_rel
+		}
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:shinto
+		}
+		rel:shinto = {
+			save_scope_as = state_rel
+		}
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:sikh
+		}
+		rel:sikh = {
+			save_scope_as = state_rel
+		}
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:animist
+		}
+		rel:animist = {
+			save_scope_as = state_rel
+		}
+	}
+	if = {
+		limit = {
+			country_has_state_religion = rel:atheist
+		}
+		rel:atheist = {
+			save_scope_as = state_rel
+		}
+	}
+	every_scope_state = {
+		convert_population = {
+			target = scope:state_rel
+			value = 0.01
+		}
+	}
+}

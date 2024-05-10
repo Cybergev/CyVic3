@@ -1,43 +1,15 @@
 ﻿dp_unify_europe = {
-	war_goal = unification
-	requires_interest_marker = no
-	blocked_by_diplomatic_status = no
-	add_infamy_for_starting_initiator_wargoals = yes
-	texture = "gfx/interface/icons/war_goals/unify_germany.dds"
-	selectable_in_lens = {
-		always = no
-	}
-	possible = {
-		NOT = {
-			exists = c:USE
-		}
-		has_technology_researched = pan-nationalism
-		OR = {
-			has_law = law_type:law_cultural_exclusion
-			has_law = law_type:law_multicultural
-		}
-		OR = {
-			has_law = law_type:law_total_separation
-			has_law = law_type:law_state_atheism
-		}
-	}
-	on_weekly_pulse = {
-	}
-	on_war_begins = {
-	}
-	on_war_end = {
-	}
-}
+	war_goal = annex_country
 
-dp_leadership_europe = {
-	war_goal = unification_leadership
-	requires_interest_marker = no
-	mirror_war_goal = yes
 	texture = "gfx/interface/icons/war_goals/unify_germany.dds"
 	selectable_in_lens = {
 		can_form_nation = USE
 	}
 	possible = {
+		NOT = {
+			exists = c:USE
+		}
+		is_subject = no
 		has_technology_researched = pan-nationalism
 		OR = {
 			has_law = law_type:law_cultural_exclusion
@@ -46,6 +18,17 @@ dp_leadership_europe = {
 		OR = {
 			has_law = law_type:law_total_separation
 			has_law = law_type:law_state_atheism
+		}
+		scope:target_country = {
+			can_form_nation = USE
+			has_technology_researched = pan-nationalism
+			scope:target_country = {
+				NOT = {
+					country_rank = rank_value:great_power
+					country_rank = rank_value:major_power
+					country_rank = rank_value:unrecognized_major_power
+				}
+			}
 		}
 	}
 	on_weekly_pulse = {

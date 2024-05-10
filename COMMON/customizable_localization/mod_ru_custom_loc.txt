@@ -1,5 +1,4 @@
-﻿
-RU_CL_RP = {
+﻿RU_CL_RP = {
 	type = country
 	log_loc_errors = no
 	text = {

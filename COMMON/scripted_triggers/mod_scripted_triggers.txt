@@ -1,0 +1,23 @@
+﻿check_dissents = {
+	ruler.ideology = {
+		save_scope_as = target_ideology
+	}
+	random_interest_group = {
+		limit = {
+			leader = {
+				NOT = {
+					has_ideology = scope:target_ideology
+				}
+			}
+		}
+		save_scope_as = target_ig
+	}
+	any_interest_group = {
+		is_in_government = yes
+		leader = {
+			NOT = {
+				has_ideology = scope:target_ideology
+			}
+		}
+	}
+}

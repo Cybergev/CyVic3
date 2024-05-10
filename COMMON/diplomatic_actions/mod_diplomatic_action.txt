@@ -1,4 +1,4 @@
-redeem_obligation = {
+﻿redeem_obligation = {
 	requires_approval = no
 	potential = {
 		NOT = {

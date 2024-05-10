@@ -1,3 +1,18 @@
+﻿test_test_test = {
+	is_shown = {
+		always = yes
+	}
+	possible = {
+		check_dissents = yes
+	}
+	when_taken = {
+		purge_dissents = yes
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
 remove_alemannic = {
 	is_shown = {
 		country_has_primary_culture = cu:alemannic
@@ -386,95 +401,77 @@ european_culture_unification = {
 	}
 }
 
-european_homeland_unification = {
+homeland_expansion = {
 	is_shown = {
-		c:USE ?= root
-		country_has_primary_culture = cu:european
+		always = yes
 	}
 	possible = {
-		c:USE ?= root
+		has_technology_researched = pan-nationalism
 		NOT = {
-			has_variable = european_homeland_unificated
+			has_modifier = homeland_expanded
 		}
 		any_scope_state = {
-			OR = {
-				region = sr:region_north_sea_coast
-				region = sr:region_england
-				region = sr:region_iberia
-				region = sr:region_occitania
-				region = sr:region_france
-				region = sr:region_rhine
-				region = sr:region_baltic	
-				region = sr:region_north_germany
-				region = sr:region_south_germany
-				region = sr:region_italy	
-				region = sr:region_balkans
-				region = sr:region_danubia
-				region = sr:region_poland
-				region = sr:region_dnieper
-				region = sr:region_russia
-				region = sr:region_caucasus
-			}
 			is_incorporated = yes
 			is_split_state = no
 			owner = root
 			has_decree = decree_promote_national_values
-			cu:european = {
-				not = {
-					has_homeland = prev
+			any_scope_culture = {
+				has_homeland = prev
+				NOT = {
+					culture_is_discriminated_in = prev.owner
+					is_primary_culture_of = prev.owner
 				}
 			}
 		}
 	}
 	when_taken = {
+		every_primary_culture = {
+			save_scope_as = adition_culture
+		}
 		random_scope_state = {
 			limit = {
-				OR = {
-					region = sr:region_north_sea_coast
-					region = sr:region_england
-					region = sr:region_iberia
-					region = sr:region_occitania
-					region = sr:region_france
-					region = sr:region_rhine
-					region = sr:region_baltic	
-					region = sr:region_north_germany
-					region = sr:region_south_germany
-					region = sr:region_italy	
-					region = sr:region_balkans
-					region = sr:region_danubia
-					region = sr:region_poland
-					region = sr:region_dnieper
-					region = sr:region_russia
-					region = sr:region_caucasus
-				}
 				is_incorporated = yes
 				is_split_state = no
 				owner = root
 				has_decree = decree_promote_national_values
-				cu:european = {
-					not = {
-						has_homeland = prev
+				any_scope_culture = {
+					has_homeland = prev
+					NOT = {
+						culture_is_discriminated_in = prev.owner
+						is_primary_culture_of = prev.owner
 					}
 				}
 			}
 			every_scope_culture = {
 				limit = {
 					has_homeland = prev
+					NOT = {
+						culture_is_discriminated_in = prev.owner
+						is_primary_culture_of = prev.owner
+					}
 				}
 				prev.state_region = {
 					remove_homeland = prev
-					add_homeland = cu:european
-					add_radicals = {
+					add_radicals_in_state = {
 						value = 1
 						culture = prev
 					}
 				}
 			}
+			scope:adition_culture = {
+				prev.state_region = {
+					add_homeland = prev
+					add_loyalists_in_state = {
+						value = 0.5
+						culture = prev
+					}
+				}
+			}
 		}
-		set_variable = {
-			name = european_homeland_unificated
-			value = 1
-			days = 180
+		add_modifier = {
+			name = homeland_expanded
+			years = 5
+			is_decaying = yes
 		}
 	}
 	ai_chance = {
@@ -484,21 +481,16 @@ european_homeland_unification = {
 
 destroy_china = {
 	is_shown = {
-		c:chi ?= root
-		not = {
-			has_variable = china_destroyed
-		}
+		c:CHI ?= root
+		exists = c:CHI
 	}
 	possible = {
-		c:chi ?= root
+		c:CHI ?= root
+		exists = c:CHI
 	}
 	when_taken = {
 		trigger_event = {
 			id = warlord_china_events.100
-		}
-		set_variable = {
-			name = china_destroyed
-			value = 1
 		}
 	}
 	ai_chance = {
@@ -634,6 +626,72 @@ set_theocracy = {
 	}
 }
 
+set_monarchy = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_monarchy
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_monarchy
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_monarchy
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_parliamentary_republic = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_parliamentary_republic
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_parliamentary_republic
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_parliamentary_republic
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_council_republic = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_council_republic
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_council_republic
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_council_republic
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
 set_technocracy = {
 	is_shown = {
 		not = {
@@ -700,273 +758,57 @@ set_single_party_state = {
 	}
 }
 
-get_imposter = {
+political_purge = {
 	is_shown = {
-		has_law = law_type:law_council_republic
+		always = yes
 	}
 	possible = {
-		ROOT = {
-			ig:ig_petty_bourgeoisie = {
-				is_in_government = yes
-			}
-			ruler.interest_group.party = {
-				is_party_type = communist_party
-			}
-		}
+		check_dissents = yes
 	}
 	when_taken = {
-		ROOT = {
-			create_character = {
-				interest_group = ig_petty_bourgeoisie
-				ig_leader = yes
-				ideology = ideology_vanguardist
-			}
-		}
+		purge_dissents = yes
 	}
 	ai_chance = {
 		base = 0
 	}
 }
 
-political_purge = {
-	is_shown = {
-		any_interest_group = {
-			is_marginal = no
-			leader = {
-				NOT = {
-					has_ideology = scope:ruler.ideology
-				}
-			}
-		}
-	}
-	possible = {
-		any_interest_group = {
-			is_marginal = no
-			leader = {
-				NOT = {
-					has_ideology = scope:ruler.ideology
-				}
-			}
-		}
-	}
-	when_taken = {
-		every_interest_group = {
-			limit = {
-				is_marginal = no
-				leader = {
-					NOT = {
-						has_ideology = scope:ruler.ideology
-					}
-				}
-			}
-			save_scope_as = purge_ig
-		}
-		create_character = {
-			interest_group = scope:purge_ig
-			ig_leader = yes
-			ideology = scope:ruler.ideology
-		}
-		add_radicals = {
-			value = 0.5
-			interest_group = scope:purge_ig
-		}
-	}
-}
-
-vanguardism_political_purge = {
-	is_shown = {
-		ruler = {
-			has_ideology = ideology:ideology_vanguardist
-		}
-	}
-	possible = {
-		any_interest_group = {
-			is_marginal = no
-			leader = {
-				NOT = {
-					has_ideology = ideology:ideology_vanguardist
-				}
-			}
-		}
-	}
-	when_taken = {
-		every_interest_group = {
-			limit = {
-				is_marginal = no
-				leader = {
-					NOT = {
-						has_ideology = ideology:ideology_vanguardist
-					}
-				}
-			}
-			save_scope_as = purge_ig
-		}
-		create_character = {
-			interest_group = scope:purge_ig
-			ig_leader = yes
-			ideology = ideology_vanguardist
-		}
-		add_radicals = {
-			value = 0.5
-			interest_group = scope:purge_ig
-		}
-	}
-}
-
-fascism_political_purge = {
-	is_shown = {
-		ruler = {
-			has_ideology = ideology:ideology_fascist
-		}
-	}
-	possible = {
-		any_interest_group = {
-			is_marginal = no
-			leader = {
-				NOT = {
-					has_ideology = ideology:ideology_fascist
-				}
-			}
-		}
-	}
-	when_taken = {
-		every_interest_group = {
-			limit = {
-				is_marginal = no
-				leader = {
-					NOT = {
-						has_ideology = ideology:ideology_fascist
-					}
-				}
-			}
-			save_scope_as = purge_ig
-		}
-		create_character = {
-			interest_group = scope:purge_ig
-			ig_leader = yes
-			ideology = ideology_fascist
-		}
-		add_radicals = {
-			value = 0.5
-			interest_group = scope:purge_ig
-		}
-	}
-}
-
-promote_atheism = {
+promote_state_religion = {
 	is_shown = {
 		OR = {
-			country_has_state_religion = rel:atheist
+			has_law = law_type:law_state_religion
 			has_law = law_type:law_state_atheism
 		}
 	}
 	possible = {
 		OR = {
-			country_has_state_religion = rel:atheist
+			has_law = law_type:law_state_religion
 			has_law = law_type:law_state_atheism
 		}
 		NOT = {
-			has_variable = state_religion_promoted
+			has_modifier = state_religion_promotion
 		}
 	}
 	when_taken = {
 		if = {
 			limit = {
 				has_law = law_type:law_state_atheism
+				NOT = {
+					country_has_state_religion = rel:atheist
+				}
+			}
+			set_state_religion = rel:atheist
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_law = law_type:law_state_atheism
+				}
 				country_has_state_religion = rel:atheist
 			}
-			ROOT = {
-				every_scope_state = {
-					convert_population = {
-						target = rel:atheist
-						value = 0.01
-					}
-				}
-			}
-			set_variable = {
-				name = state_religion_promoted
-				value = 1
-				days = 180
-			}
+			set_state_religion = root.country_definition.religion
 		}
-		if = {
-			limit = {
-				OR = {
-					OR = {
-						has_law = law_type:law_state_atheism
-						NOT = {
-							country_has_state_religion = rel:atheist
-						}
-					}
-					OR = {
-						NOT = {
-							has_law = law_type:law_state_atheism
-						}
-						country_has_state_religion = rel:atheist
-					}
-				}
-			}
-			activate_law = law_type:law_state_atheism
-		}
-	}
-	ai_chance = {
-		base = 100
-	}
-}
-
-promote_sikh = {
-	is_shown = {
-		country_has_state_religion = rel:sikh
-	}
-	possible = {
-		OR = {
-			country_has_state_religion = rel:sikh
-			has_law = law_type:law_state_religion
-		}
-		NOT = {
-			has_variable = state_religion_promoted
-		}
-	}
-	when_taken = {
-		if = {
-			limit = {
-				country_has_state_religion = rel:sikh
-				has_law = law_type:law_state_religion
-			}
-			ROOT = {
-				every_scope_state = {
-					convert_population = {
-						target = rel:sikh
-						value = 0.01
-					}
-				}
-			}
-			set_variable = {
-				name = state_religion_promoted
-				value = 1
-				days = 180
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					OR = {
-						NOT = {
-							country_has_state_religion = rel:sikh
-						}
-						has_law = law_type:law_state_religion
-					}
-					OR = {
-						country_has_state_religion = rel:sikh
-						NOT = {
-							has_law = law_type:law_state_religion
-						}
-					}
-				}
-			}
-			set_state_religion = rel:sikh
-			activate_law = law_type:law_state_religion
-		}
+		promote_state_rel = yes
 	}
 	ai_chance = {
 		base = 100
