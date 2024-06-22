@@ -1,23 +1,22 @@
 ﻿grant_leadership_to_agitator = {
 	icon = "gfx/interface/character_panel/grant_command_not.dds"
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
-
 	potential = {
 		has_dlc_feature = agitators
 		has_role = agitator
 		owner = scope:actor
 	}
-
 	possible = {
 		interest_group = {
 			is_in_government = yes
 		}
 		OR = {
 			is_female = no
-			scope:actor = { has_law = law_type:law_womens_suffrage }
+			scope:actor = {
+				has_law = law_type:law_womens_suffrage
+			}
 		}
 	}
-
 	effect = {
 		remove_character_role = agitator
 		add_character_role = politician
@@ -26,7 +25,6 @@
 			set_as_interest_group_leader = yes
 		}
 	}
-
 	ai_chance = {
 		value = -50
 		if = {
@@ -67,7 +65,6 @@
 grant_command_to_agitator = {
 	icon = "gfx/interface/character_panel/grant_command.dds"
 	clicksound = "event:/SFX/UI/Military/command_grant"
-
 	potential = {
 		has_dlc_feature = agitators
 		OR = {
@@ -75,21 +72,22 @@ grant_command_to_agitator = {
 			has_role = politician
 		}
 		is_ruler = no
-		NOT = { has_role = general }
-		NOT = { has_role = admiral }
+		NOT = {
+			has_role = general
+		}
+		NOT = {
+			has_role = admiral
+		}
 		owner = scope:actor
 	}
-
 	possible = {
 		age >= define:NCharacters|ADULT_AGE
 		is_female = no
 		exists = owner.capital.land_hq
 	}
-
 	effect = {
 		add_character_role = general
 	}
-
 	ai_chance = {
 		value = 0
 		if = {
@@ -97,22 +95,22 @@ grant_command_to_agitator = {
 				has_commander_traits = yes
 			}
 			add = 50
-		}	
+		}
 		if = {
 			limit = {
 				is_interest_group_type = ig_armed_forces
 			}
 			add = 25
-		}	
+		}
 		if = {
 			limit = {
 				NOT = {
-					owner = {	
+					owner = {
 						any_scope_general = {
 							exists = yes
 						}
 					}
-				}	
+				}
 			}
 			add = 25
 		}
@@ -124,7 +122,7 @@ grant_command_to_agitator = {
 							is_vulnerable_front = root
 						}
 					}
-				}	
+				}
 			}
 			add = 100
 		}
@@ -143,9 +141,7 @@ foster_national_agitation = {
 			has_technology_researched = nationalism
 		}
 	}
-
 	show_requirements = yes
-
 	possible = {
 		root.culture = {
 			save_temporary_scope_as = agitator_culture
@@ -170,7 +166,6 @@ foster_national_agitation = {
 			}
 		}
 	}
-
 	effect = {
 		root.culture = {
 			save_scope_as = agitation_culture
@@ -200,15 +195,15 @@ foster_national_agitation = {
 			owner = {
 				post_notification = nationalism_national_agitation_occurred
 				change_relations = {
-					country = root.owner 
+					country = root.owner
 					value = -10
 				}
 			}
 		}
 	}
-
-	cooldown = { years = 1 }
-
+	cooldown = {
+		years = 1
+	}
 	ai_chance = {
 		if = {
 			limit = {
@@ -219,16 +214,136 @@ foster_national_agitation = {
 							type = rivalry
 						}
 					}
-				}	
+				}
 			}
 			add = 100
 		}
 	}
 }
 
+invite_exile = {
+	# icon = ""
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/character_invite"
+	potential = {
+		is_in_exile_pool = yes
+	}
+	show_requirements = yes
+	possible = {
+		scope:actor = {
+			empty_agitator_slots >= 1
+		}
+		# Only popular individuals need apply
+		popularity > 15
+		# Cannot invite exiles if you have Closed Borders
+		scope:actor = {
+			NOT = {
+				has_law = law_type:law_closed_borders
+			}
+		}
+	}
+	effect = {
+		transfer_character = scope:actor
+		set_variable = exile_to_ruler_var
+		custom_tooltip = invite_exile_start_join_movement_effect
+		hidden_effect = {
+			remove_modifier = in_exile_modifier
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_variable = mazzini_var
+					has_dlc_feature = voice_of_the_people_content
+				}
+				scope:actor = {
+					trigger_event = {
+						id = historical_agitators.7
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_variable = garibaldi_var
+					has_dlc_feature = voice_of_the_people_content
+				}
+				set_variable = {
+					name = garibaldi_cooldown_var
+					months = short_modifier_time
+				}
+			}
+		}
+	}
+	ai_chance = {
+		value = -85
+		if = {
+			limit = {
+				popularity >= 75
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				popularity >= 50
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				culture = {
+					is_primary_culture_of = root
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				scope:actor ?= {
+					any_interest_group = {
+						is_in_government = yes
+						save_temporary_scope_as = ex_ig
+					}
+				}
+				ig_type_matches_former = yes
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				scope:actor ?= {
+					has_law = law_type:law_closed_borders
+				}
+			}
+			add = -200
+		}
+		if = {
+			limit = {
+				scope:actor ?= {
+					has_law = law_type:law_no_migration_controls
+				}
+			}
+			add = 15
+		}
+		if = {
+			limit = {
+				scope:actor ?= {
+					has_law = law_type:law_multicultural
+				}
+			}
+			add = 15
+		}
+		if = {
+			limit = {
+				scope:actor ?= {
+					country_rank < rank_value:major_power
+				}
+			}
+			multiply = 0
+		}
+	}
+}
+
 exile_character = {
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
-
 	potential = {
 		is_in_exile_pool = no
 		is_in_void = no
@@ -240,9 +355,7 @@ exile_character = {
 			has_role = agitator
 		}
 	}
-
 	show_requirements = yes
-
 	possible = {
 		owner = {
 			NOT = {
@@ -258,7 +371,6 @@ exile_character = {
 			has_role = agitator
 		}
 	}
-
 	effect = {
 		this.interest_group = {
 			save_scope_as = relevant_ig
@@ -271,7 +383,9 @@ exile_character = {
 		}
 		if = {
 			limit = {
-				owner = { has_journal_entry = je_caudillo }
+				owner = {
+					has_journal_entry = je_caudillo
+				}
 				interest_group = {
 					is_interest_group_type = ig_armed_forces
 				}
@@ -310,16 +424,22 @@ exile_character = {
 			limit = {
 				owner = {
 					is_player = yes
-					NOT = { has_variable = achievement_agitate_elsewhere_var }
+					NOT = {
+						has_variable = achievement_agitate_elsewhere_var
+					}
 				}
 				popularity >= 100
 			}
-			owner = { set_variable = achievement_agitate_elsewhere_var }
+			owner = {
+				set_variable = achievement_agitate_elsewhere_var
+			}
 		}
 		hidden_effect = {
 			if = {
 				limit = {
-					NOT = { has_role = agitator }
+					NOT = {
+						has_role = agitator
+					}
 				}
 				add_character_role = agitator
 			}
@@ -361,7 +481,9 @@ exile_character = {
 		# Standard radicals from having Right of Assembly
 		if = {
 			limit = {
-				owner = { has_law = law_type:law_right_of_assembly }
+				owner = {
+					has_law = law_type:law_right_of_assembly
+				}
 			}
 			owner = {
 				add_radicals = {
@@ -373,7 +495,9 @@ exile_character = {
 		# Fewer radicals from Censorship
 		else_if = {
 			limit = {
-				owner = { has_law = law_type:law_censorship }
+				owner = {
+					has_law = law_type:law_censorship
+				}
 			}
 			owner = {
 				add_radicals = {
@@ -416,18 +540,17 @@ exile_character = {
 			exile_character_with_martyrdom = yes
 		}
 	}
-
-	cooldown = { months = 12 }
-
+	cooldown = {
+		months = 12
+	}
 	show_confirmation_box = yes
-
 	ai_chance = {
 		value = -50
 		if = {
 			limit = {
 				interest_group = {
 					ig_approval <= -5
-				}		
+				}
 			}
 			add = 25
 		}
@@ -435,7 +558,7 @@ exile_character = {
 			limit = {
 				interest_group = {
 					ig_approval <= -10
-				}		
+				}
 			}
 			add = 30
 		}
@@ -447,7 +570,7 @@ exile_character = {
 						has_law = law_type:law_oligarchy
 						has_law = law_type:law_single_party_state
 					}
-				}			
+				}
 			}
 			add = -25
 		}
@@ -455,7 +578,7 @@ exile_character = {
 			limit = {
 				scope:actor ?= {
 					has_law = law_type:law_secret_police
-				}			
+				}
 			}
 			add = 30
 		}
@@ -463,7 +586,7 @@ exile_character = {
 			limit = {
 				scope:actor ?= {
 					has_law = law_type:law_national_guard
-				}			
+				}
 			}
 			add = 15
 		}
@@ -471,7 +594,7 @@ exile_character = {
 			limit = {
 				scope:actor ?= {
 					has_law = law_type:law_guaranteed_liberties
-				}			
+				}
 			}
 			add = -100
 		}
@@ -479,7 +602,7 @@ exile_character = {
 			limit = {
 				scope:actor ?= {
 					has_law = law_type:law_outlawed_dissent
-				}			
+				}
 			}
 			add = 30
 		}
@@ -487,7 +610,7 @@ exile_character = {
 			limit = {
 				scope:actor ?= {
 					has_law = law_type:law_censorship
-				}			
+				}
 			}
 			add = 10
 		}
@@ -495,7 +618,7 @@ exile_character = {
 			limit = {
 				scope:actor ?= {
 					has_law = law_type:law_right_of_assembly
-				}			
+				}
 			}
 			add = -10
 		}
@@ -503,129 +626,15 @@ exile_character = {
 			limit = {
 				scope:actor ?= {
 					has_law = law_type:law_protected_speech
-				}			
+				}
 			}
 			add = -20
 		}
 	}
 }
 
-invite_exile = {
-	# icon = ""
-	clicksound = "event:/SFX/DLC/1.3_ip1/UI/character_invite"
-
-	potential = {
-		is_in_exile_pool = yes
-	}
-
-	show_requirements = yes
-
-	possible = {
-		scope:actor = { empty_agitator_slots >= 1 }
-		# Only popular individuals need apply
-		popularity > 15
-		# Cannot invite exiles if you have Closed Borders
-		scope:actor = {
-			NOT = { has_law = law_type:law_closed_borders }
-		}
-	}
-
-	effect = {
-		transfer_character = scope:actor
-		set_variable = exile_to_ruler_var
-		custom_tooltip = invite_exile_start_join_movement_effect
-		hidden_effect = {
-			remove_modifier = in_exile_modifier
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					has_variable = mazzini_var
-					has_dlc_feature = voice_of_the_people_content
-				}
-				scope:actor = {
-					trigger_event = { id = historical_agitators.7 days = 3 }
-				}
-			}
-			if = {
-				limit = {
-					has_variable = garibaldi_var
-					has_dlc_feature = voice_of_the_people_content
-				}
-				set_variable = {
-					name = garibaldi_cooldown_var
-					months = short_modifier_time
-				}
-			}
-		}
-	}
-
-	ai_chance = {
-		value = -85
-		if = {
-			limit = {
-				popularity >= 75
-			}
-			add = 25
-		}	
-		if = {
-			limit = {
-				popularity >= 50
-			}
-			add = 25
-		}
-		if = {
-			limit = {
-				culture = {
-					is_primary_culture_of = root
-				}			
-			}
-			add = 50
-		}
-		if = {
-			limit = {
-				scope:actor ?= {
-					any_interest_group = {
-						is_in_government = yes
-						save_temporary_scope_as = ex_ig
-					}
-				}		
-				ig_type_matches_former = yes	
-			}
-			add = 50
-		}
-		if = {
-			limit = {
-				scope:actor ?= { has_law = law_type:law_closed_borders }
-			}
-			add = -200
-		}
-		if = {
-			limit = {
-				scope:actor ?= { has_law = law_type:law_no_migration_controls }
-			}
-			add = 15
-		}
-		if = {
-			limit = {
-				scope:actor ?= { has_law = law_type:law_multicultural }
-			}
-			add = 15
-		}
-		if = { 
-			limit = {
-				scope:actor ?= {
-					country_rank < rank_value:major_power
-				}
-			}
-			multiply = 0
-		}
-	}
-}
-
 resign_from_office = {
 	clicksound = "event:/SFX/UI/Military/command_grant"
-
 	potential = {
 		has_dlc_feature = voice_of_the_people_content
 		owner = scope:actor
@@ -637,7 +646,6 @@ resign_from_office = {
 			}
 		}
 	}
-
 	possible = {
 		OR = {
 			OR = {
@@ -664,7 +672,6 @@ resign_from_office = {
 			}
 		}
 	}
-
 	effect = {
 		if = {
 			limit = {
@@ -675,45 +682,49 @@ resign_from_office = {
 				}
 			}
 			owner = {
-				trigger_event = { id = resignation.2 popup = yes }
+				trigger_event = {
+					id = resignation.2
+					popup = yes
+				}
 			}
 		}
 		else = {
 			owner = {
-				trigger_event = { id = resignation.1 popup = yes }
+				trigger_event = {
+					id = resignation.1
+					popup = yes
+				}
 			}
 		}
 	}
-
 	show_confirmation_box = yes
-
 	ai_chance = {
 		value = -50
 		if = {
-			limit = {	
+			limit = {
 				interest_group = {
 					ig_approval <= angry
 				}
 			}
 			add = 25
-		}	
+		}
 		if = {
 			limit = {
 				interest_group = {
 					is_marginal = yes
-				}				
+				}
 			}
 			add = 25
 		}
 		if = {
 			limit = {
-				popularity <= -50			
+				popularity <= -50
 			}
 			add = 25
 		}
 		if = {
 			limit = {
-				popularity <= -75			
+				popularity <= -75
 			}
 			add = 25
 		}
@@ -724,7 +735,7 @@ resign_from_office = {
 					has_trait = cancer
 					has_trait = senile
 					has_trait = wounded
-				}			
+				}
 			}
 			add = 25
 		}
@@ -733,9 +744,138 @@ resign_from_office = {
 				OR = {
 					has_trait = arrogant
 					has_trait = imperious
-				}			
+				}
 			}
 			add = -50
 		}
+	}
+}
+
+change_ig_party_status = {
+	# icon = ""
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
+	potential = {
+		owner = scope:actor
+		has_role = politician
+	}
+	show_requirements = yes
+	possible = {
+		interest_group = {
+			is_insurrectionary = no
+			is_marginal = no
+		}
+	}
+	effect = {
+		interest_group = {
+			save_scope_as = target_ig
+			if = {
+				limit = {
+					has_party = no
+				}
+				scope:actor = {
+					random_active_party = {
+						add_ig_to_party = scope:target_ig
+					}
+				}
+			}
+			else = {
+				party = {
+					remove_ig_from_party = scope:target_ig
+				}
+			}
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+political_purge = {
+	# icon = ""
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/character_invite"
+	potential = {
+		owner = scope:actor
+		has_role = politician
+	}
+	show_requirements = yes
+	possible = {
+		owner = {
+			has_law = law_type:law_secret_police
+		}
+		is_ruler = no
+		is_heir = no
+		NOT = {
+			has_ideology = scope:actor.ruler.ideology
+		}
+		interest_group = {
+			is_insurrectionary = no
+			is_marginal = no
+		}
+	}
+	effect = {
+		interest_group = {
+			save_scope_as = target_ig
+		}
+		kill_character = yes
+		scope:actor = {
+			create_character = {
+				interest_group = scope:target_ig
+				ig_leader = yes
+				ideology = scope:actor.ruler.ideology
+			}
+		}
+		scope:target_ig = {
+			add_radicals = {
+				value = 0.5
+				interest_group = scope:target_ig
+			}
+			add_modifier = {
+				name = purged_ig
+				months = 12
+				is_decaying = yes
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_journal_entry = je_caudillo
+				}
+				interest_group = {
+					is_interest_group_type = ig_armed_forces
+				}
+			}
+			if = {
+				limit = {
+					interest_group = {
+						leader = {
+							this = ROOT
+						}
+					}
+				}
+				owner = {
+					custom_tooltip = {
+						text = lose_large_caudillo_points
+						change_variable = {
+							name = caudillo_var
+							add = -200
+						}
+					}
+				}
+			}
+			else = {
+				owner = {
+					custom_tooltip = {
+						text = lose_caudillo_points
+						change_variable = {
+							name = caudillo_var
+							add = -100
+						}
+					}
+				}
+			}
+		}
+	}
+	ai_chance = {
+		base = 0
 	}
 }

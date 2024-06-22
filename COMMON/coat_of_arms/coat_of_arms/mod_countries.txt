@@ -67,6 +67,70 @@ USE_communist = {
 	}
 }
 
+CSA_stainless = {
+	@csa_star_scale_saltire	= 0.14
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+
+	colored_emblem = {
+		texture = "ce_saltire_fimbriated.dds"
+		color1 = color2
+		color2 = color3
+	}
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color2
+		color2 = color2
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.5 0.505 } }				
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.36 0.64 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.64 0.64 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.36 0.36 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.64 0.36 } }	
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.22 0.78 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.78 0.78 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.22 0.22 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.78 0.22 } }					
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.08 0.92 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.92 0.92 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.08 0.08 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.92 0.08 } }			
+	}		
+}
+
+CSA_blood_stained = {
+	@csa_star_scale_saltire	= 0.14
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+
+	colored_emblem = {
+		texture = "ce_saltire_fimbriated.dds"
+		color1 = color2
+		color2 = color3
+	}
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color2
+		color2 = color2
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.5 0.505 } }				
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.36 0.64 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.64 0.64 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.36 0.36 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.64 0.36 } }	
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.22 0.78 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.78 0.78 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.22 0.22 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.78 0.22 } }					
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.08 0.92 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.92 0.92 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.08 0.08 } }		
+		instance = { scale = { @csa_star_scale_saltire @csa_star_scale_saltire } position = { 0.92 0.08 } }			
+	}		
+}
+
 PAN_theocracy = {
 	# Actually the imperial war flag
 	pattern = "pattern_solid.tga"
@@ -86,6 +150,41 @@ PAN_theocracy = {
 		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }		
 	}	
 }
+CSA_communist = {
+	# Stars & bars (13 stars version, arranged & rotated in circle)	
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+	colored_emblem = {
+		texture = "ce_frame_square.dds"
+		color1 = "blue"
+		instance = { scale = { 0.75 0.7 } position = { 0.25 0.319 }  }	
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "white"
+		color2 = "yellow"
+		instance = { scale = { 0.55 0.55 } position = { 0.25 0.323 } }			
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { scale = { 0.47 0.47 } position = { 0.25 0.323 } }			
+	}
+	colored_emblem = {
+		texture = "ce_hammer_sickle_cogwheel_usa.dds"
+		color1 = "white"
+		color2 = "red"
+		instance = { scale = { 0.50 0.50 } position = { 0.25 0.324 }  }	
+	}
+}
+
 PAN_absolute_monarchy = { # Sikh Empire
 	# Starting flag
 	

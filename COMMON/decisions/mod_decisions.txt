@@ -503,8 +503,11 @@ socialistic_reform = {
 		has_law = law_type:law_council_republic
 	}
 	possible = {
-		ruler.interest_group.party = {
-			is_party_type = communist_party
+		ruler = {
+			OR = {
+				has_ideology = ideology:ideology_communist
+				has_ideology = ideology:ideology_vanguardist
+			}
 		}
 		any_interest_group = {
 			is_in_government = yes
@@ -525,6 +528,12 @@ socialistic_reform = {
 				}
 				not = {
 					has_ideology = ideology:ideology_socialist
+				}
+			}
+			leader = {
+				OR = {
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
 				}
 			}
 		}
@@ -560,6 +569,14 @@ socialistic_reform = {
 							has_ideology = ideology:ideology_agrarian
 						}
 						remove_ideology = ideology_agrarian
+						add_ideology = ideology_proletarian
+						add_ideology = ideology_socialist
+					}
+					if = {
+						limit = {
+							has_ideology = ideology:ideology_agrarian_jeffersonian
+						}
+						remove_ideology = ideology_agrarian_jeffersonian
 						add_ideology = ideology_proletarian
 						add_ideology = ideology_socialist
 					}
@@ -752,21 +769,6 @@ set_single_party_state = {
 		add_radicals = {
 			value = 0.2
 		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-political_purge = {
-	is_shown = {
-		always = yes
-	}
-	possible = {
-		check_dissents = yes
-	}
-	when_taken = {
-		purge_dissents = yes
 	}
 	ai_chance = {
 		base = 0

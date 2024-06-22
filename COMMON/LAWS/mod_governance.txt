@@ -168,8 +168,6 @@ law_presidential_republic = {
 	
 	modifier = {
 		country_authority_add = 100
-		country_legitimacy_govt_total_clout_add = 10
-		country_legitimacy_govt_total_votes_add = 10
 		country_legitimacy_headofstate_add = 10
 		country_legitimacy_govt_size_add = 1
 	}
@@ -260,8 +258,6 @@ law_parliamentary_republic = {
 	}
 	
 	modifier = {
-		country_voting_power_base_add = 25
-		country_legitimacy_govt_total_votes_add = 25
 		country_legitimacy_govt_size_add = 2
 		country_legitimacy_ideological_incoherence_mult = -0.25
 		interest_group_in_government_attraction_mult = 0.25
@@ -365,8 +361,6 @@ law_council_republic = {
 	modifier = {
 		country_bureaucracy_investment_cost_factor_mult = -0.10
 		country_authority_mult = 0.10
-		country_voting_power_base_add = 10
-		country_legitimacy_govt_total_votes_add = 10
 		country_legitimacy_govt_size_add = 1
 		country_legitimacy_ideological_incoherence_mult = -0.10
 		state_bureaucracy_population_base_cost_factor_mult = -0.10
@@ -444,8 +438,8 @@ law_technocracy = {
 	modifier = {
 		country_authority_add = 100
 		country_legitimacy_govt_total_clout_add = 100
-		country_legitimacy_govt_size_add = 1
-		country_legitimacy_ideological_incoherence_mult = -0.10
+		country_legitimacy_govt_size_add = 2
+		country_legitimacy_ideological_incoherence_mult = -0.25
 		country_academics_pol_str_mult = 1
 		country_bureaucrats_pol_str_mult = 1
 		country_engineers_pol_str_mult = 1

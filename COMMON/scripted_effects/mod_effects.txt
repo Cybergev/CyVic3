@@ -1,36 +1,4 @@
-﻿purge_dissents = {
-	ruler.ideology = {
-		save_scope_as = target_ideology
-	}
-	random_interest_group = {
-		limit = {
-			is_in_government = yes
-			leader = {
-				NOT = {
-					has_ideology = scope:target_ideology
-				}
-			}
-		}
-		save_scope_as = target_ig
-	}
-	create_character = {
-		interest_group = scope:target_ig
-		ig_leader = yes
-		ideology = scope:target_ideology
-	}
-	scope:target_ig = {
-		add_radicals = {
-			value = 0.5
-			interest_group = scope:target_ig
-		}
-		add_modifier = {
-			name = purged_ig
-			months = 12
-			is_decaying = yes
-		}
-	}
-}
-promote_state_rel = {
+﻿promote_state_rel = {
 	add_modifier = {
 		name = state_religion_promotion
 		years = 1
