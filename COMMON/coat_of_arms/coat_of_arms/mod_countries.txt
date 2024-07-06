@@ -169,19 +169,19 @@ CSA_communist = {
 		texture = "ce_frame_circle.dds"
 		color1 = "white"
 		color2 = "yellow"
-		instance = { scale = { 0.55 0.55 } position = { 0.25 0.323 } }			
+		instance = { scale = { 0.55 0.55 } position = { 0.25 0.336 } }			
 	}
 	colored_emblem = {
 		texture = "ce_frame_circle.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { scale = { 0.47 0.47 } position = { 0.25 0.323 } }			
+		instance = { scale = { 0.47 0.47 } position = { 0.25 0.336 } }			
 	}
 	colored_emblem = {
 		texture = "ce_hammer_sickle_cogwheel_usa.dds"
 		color1 = "white"
 		color2 = "red"
-		instance = { scale = { 0.50 0.50 } position = { 0.25 0.324 }  }	
+		instance = { scale = { 0.50 0.50 } position = { 0.25 0.337 }  }	
 	}
 }
 
