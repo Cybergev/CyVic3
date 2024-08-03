@@ -3,371 +3,9 @@
 		always = yes
 	}
 	possible = {
-		check_dissents = yes
+		always = yes
 	}
 	when_taken = {
-		purge_dissents = yes
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_alemannic = {
-	is_shown = {
-		country_has_primary_culture = cu:alemannic
-	}
-	possible = {
-		country_has_primary_culture = cu:alemannic
-	}
-	when_taken = {
-		remove_primary_culture = cu:alemannic
-		add_radicals = {
-			value = 0.5
-			culture = cu:alemannic
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_flemish = {
-	is_shown = {
-		country_has_primary_culture = cu:flemish
-	}
-	possible = {
-		country_has_primary_culture = cu:flemish
-	}
-	when_taken = {
-		remove_primary_culture = cu:flemish
-		add_radicals = {
-			value = 0.5
-			culture = cu:flemish
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_north_german = {
-	is_shown = {
-		country_has_primary_culture = cu:north_german
-	}
-	possible = {
-		country_has_primary_culture = cu:north_german
-	}
-	when_taken = {
-		remove_primary_culture = cu:north_german
-		add_radicals = {
-			value = 0.5
-			culture = cu:north_german
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_south_german = {
-	is_shown = {
-		country_has_primary_culture = cu:south_german
-	}
-	possible = {
-		country_has_primary_culture = cu:south_german
-	}
-	when_taken = {
-		remove_primary_culture = cu:south_german
-		add_radicals = {
-			value = 0.5
-			culture = cu:south_german
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_british = {
-	is_shown = {
-		country_has_primary_culture = cu:british
-	}
-	possible = {
-		country_has_primary_culture = cu:british
-	}
-	when_taken = {
-		remove_primary_culture = cu:british
-		add_radicals = {
-			value = 0.5
-			culture = cu:british
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_scottish = {
-	is_shown = {
-		country_has_primary_culture = cu:scottish
-	}
-	possible = {
-		country_has_primary_culture = cu:scottish
-	}
-	when_taken = {
-		remove_primary_culture = cu:scottish
-		add_radicals = {
-			value = 0.5
-			culture = cu:scottish
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_yankee = {
-	is_shown = {
-		country_has_primary_culture = cu:yankee
-	}
-	possible = {
-		country_has_primary_culture = cu:yankee
-	}
-	when_taken = {
-		remove_primary_culture = cu:yankee
-		add_radicals = {
-			value = 0.5
-			culture = cu:yankee
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_dixie = {
-	is_shown = {
-		country_has_primary_culture = cu:dixie
-	}
-	possible = {
-		country_has_primary_culture = cu:dixie
-	}
-	when_taken = {
-		remove_primary_culture = cu:dixie
-		add_radicals = {
-			value = 0.5
-			culture = cu:dixie
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_azeri = {
-	is_shown = {
-		country_has_primary_culture = cu:azerbaijani
-	}
-	possible = {
-		country_has_primary_culture = cu:azerbaijani
-	}
-	when_taken = {
-		remove_primary_culture = cu:azerbaijani
-		add_radicals = {
-			value = 0.5
-			culture = cu:azerbaijani
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_ashkenazi = {
-	is_shown = {
-		country_has_primary_culture = cu:ashkenazi
-	}
-	possible = {
-		country_has_primary_culture = cu:ashkenazi
-	}
-	when_taken = {
-		remove_primary_culture = cu:ashkenazi
-		add_radicals = {
-			value = 0.5
-			culture = cu:ashkenazi
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_sephardic = {
-	is_shown = {
-		country_has_primary_culture = cu:sephardic
-	}
-	possible = {
-		country_has_primary_culture = cu:sephardic
-	}
-	when_taken = {
-		remove_primary_culture = cu:sephardic
-		add_radicals = {
-			value = 0.5
-			culture = cu:sephardic
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_french = {
-	is_shown = {
-		country_has_primary_culture = cu:french
-	}
-	possible = {
-		country_has_primary_culture = cu:french
-	}
-	when_taken = {
-		remove_primary_culture = cu:french
-		add_radicals = {
-			value = 0.5
-			culture = cu:french
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_francoprovencal = {
-	is_shown = {
-		country_has_primary_culture = cu:francoprovencal
-	}
-	possible = {
-		country_has_primary_culture = cu:francoprovencal
-	}
-	when_taken = {
-		remove_primary_culture = cu:francoprovencal
-		add_radicals = {
-			value = 0.5
-			culture = cu:francoprovencal
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_wallonian = {
-	is_shown = {
-		country_has_primary_culture = cu:wallonian
-	}
-	possible = {
-		country_has_primary_culture = cu:wallonian
-	}
-	when_taken = {
-		remove_primary_culture = cu:wallonian
-		add_radicals = {
-			value = 0.5
-			culture = cu:wallonian
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_czech = {
-	is_shown = {
-		country_has_primary_culture = cu:czech
-	}
-	possible = {
-		country_has_primary_culture = cu:czech
-	}
-	when_taken = {
-		remove_primary_culture = cu:czech
-		add_radicals = {
-			value = 0.5
-			culture = cu:czech
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_slovak = {
-	is_shown = {
-		country_has_primary_culture = cu:slovak
-	}
-	possible = {
-		country_has_primary_culture = cu:slovak
-	}
-	when_taken = {
-		remove_primary_culture = cu:slovak
-		add_radicals = {
-			value = 0.5
-			culture = cu:slovak
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_slovene = {
-	is_shown = {
-		country_has_primary_culture = cu:slovene
-	}
-	possible = {
-		country_has_primary_culture = cu:slovene
-	}
-	when_taken = {
-		remove_primary_culture = cu:slovene
-		add_radicals = {
-			value = 0.5
-			culture = cu:slovene
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_north_italian = {
-	is_shown = {
-		country_has_primary_culture = cu:north_italian
-	}
-	possible = {
-		country_has_primary_culture = cu:north_italian
-	}
-	when_taken = {
-		remove_primary_culture = cu:north_italian
-		add_radicals = {
-			value = 0.5
-			culture = cu:north_italian
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-remove_south_italian = {
-	is_shown = {
-		country_has_primary_culture = cu:south_italian
-	}
-	possible = {
-		country_has_primary_culture = cu:south_italian
-	}
-	when_taken = {
-		remove_primary_culture = cu:south_italian
-		add_radicals = {
-			value = 0.5
-			culture = cu:south_italian
-		}
 	}
 	ai_chance = {
 		base = 0
@@ -376,25 +14,27 @@ remove_south_italian = {
 
 european_culture_unification = {
 	is_shown = {
-		c:USE ?= root
+		european_culture_check = yes
 		not = {
 			country_has_primary_culture = cu:european
 		}
 	}
 	possible = {
-		c:USE ?= root
+		not = {
+			country_has_primary_culture = cu:european
+		}
 	}
 	when_taken = {
-		add_primary_culture = cu:european
 		every_primary_culture = {
 			ROOT = {
 				remove_primary_culture = prev
 				add_radicals = {
-					value = 0.5
+					value = 1
 					culture = prev
 				}
 			}
 		}
+		add_primary_culture = cu:european
 	}
 	ai_chance = {
 		base = 0
@@ -775,6 +415,44 @@ set_single_party_state = {
 	}
 }
 
+remove_private_property = {
+	is_shown = {
+		always = yes
+	}
+	possible = {
+		has_law = law_type:law_command_economy
+	}
+	when_taken = {
+		activate_law = law_type:law_laissez_faire
+		activate_law = law_type:law_command_economy
+		every_scope_state = {
+			if = {
+				limit = {
+					has_building = building_manor_house
+				}
+				remove_building = building_manor_house
+				add_radicals_in_state = {
+					value = 1
+					pop_type = aristocrats
+				}
+			}
+			if = {
+				limit = {
+					has_building = building_financial_district
+				}
+				remove_building = building_financial_district
+				add_radicals_in_state = {
+					value = 1
+					pop_type = capitalists
+				}
+			}
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
 promote_state_religion = {
 	is_shown = {
 		OR = {
@@ -814,25 +492,5 @@ promote_state_religion = {
 	}
 	ai_chance = {
 		base = 100
-	}
-}
-
-remove_private_property = {
-	is_shown = {
-		always = yes
-	}
-	possible = {
-		ROOT = {
-			has_law = law_type:law_command_economy
-		}
-	}
-	when_taken = {
-		ROOT = {
-			activate_law = law_type:law_laissez_faire
-			activate_law = law_type:law_command_economy
-		}
-	}
-	ai_chance = {
-		base = 0
 	}
 }

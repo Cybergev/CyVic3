@@ -5,7 +5,6 @@
 #    possible = { ... }   # the trigger to enable this color
 # }
 #
-
 # Example
 #dynamic_map_color_swedish_junta = {
 #    color = "black"
@@ -20,57 +19,83 @@
 #        }
 #	}
 #}
-
-use_monarchy = {
-	color = rgb { 50 150 150 }
+EUR_republic = {
+	color = "EUR_base_color"
 	possible = {
-		exists = c:USE
-		THIS = c:USE
-		has_law = law_type:law_monarchy
-	}
-}
-
-use_republic = {
-	color = { 10 50 100 }
-	possible = {
-		exists = c:USE
-		THIS = c:USE
+		exists = c:EUR
+		THIS = c:EUR
 		OR = {
-			has_law = law_type:law_presidential_republic
-			has_law = law_type:law_parliamentary_republic
+			has_government_type = gov_presidential_democracy
+			has_government_type = gov_parliamentary_democracy
 		}
 	}
 }
 
-use_technate = {
-	color = rgb { 80 80 80 }
+EUR_communist = {
+	color = "EUR_communist_color"
 	possible = {
-		exists = c:USE
-		THIS = c:USE
-		has_law = law_type:law_technocracy
+		exists = c:EUR
+		THIS = c:EUR
+		OR = {
+			has_government_type = gov_council_dictatorship
+			has_government_type = gov_cybernetic_state
+			has_government_type = gov_council_single_party_state
+			has_government_type = gov_council_republic
+		}
 	}
 }
 
-use_communist = {
-	color = rgb { 100 10 50 }
+EUR_technate = {
+	color = "EUR_tehcnate_color"
 	possible = {
-		exists = c:USE
-		THIS = c:USE
-		has_law = law_type:law_council_republic
+		exists = c:EUR
+		THIS = c:EUR
+		OR = {
+			has_government_type = gov_contechne
+			has_government_type = gov_enlightened_despotate
+			has_government_type = gov_technate_presidential
+			has_government_type = gov_technate_parliamentary
+		}
 	}
 }
 
-use_fascist = {
-	color = rgb { 50 50 50 }
+EUR_dictatorship = {
+	color = "EUR_dictatorship_color"
 	possible = {
-		exists = c:USE
-		THIS = c:USE
-		any_scope_character = {
-			is_ruler = yes
+		exists = c:EUR
+		THIS = c:EUR
+		OR = {
+			AND = {
+				has_law = law_type:law_monarchy
+				NOT = {
+					has_law = law_type:law_technocracy
+				}
+			}
 			OR = {
-				has_ideology = ideology:ideology_fascist
-				has_ideology = ideology:ideology_integralist
+				has_government_type = gov_junta
+				has_government_type = gov_military_dictatorship
+			}
+			OR = {
+				has_government_type = gov_presidential_dictatorship
+				has_government_type = gov_parliamentary_dictatorship
+			}
+			OR = {
+				has_government_type = gov_presidential_oligarchy
+				has_government_type = gov_parliamentary_oligarchy
+			}
+			OR = {
+				has_government_type = gov_presidential_single_party_state
+				has_government_type = gov_parliamentary_single_party_state
 			}
 		}
+	}
+}
+
+EUR_fascist = {
+	color = "EUR_fascist_color"
+	possible = {
+		exists = c:EUR
+		THIS = c:EUR
+		has_government_type = gov_fascist_state
 	}
 }

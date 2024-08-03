@@ -1,63 +1,44 @@
 ﻿l_russian:
 caucasus_group: "Кавказцы"
 
+EUR: "Европа"
+EUR_ADJ: "Европейск"
+
 european: "Европейцы"
-european_ADJ: "Европейск"
+european_ADJ: "$EUR_ADJ$"
 
-USE: "Европа"
-USE_ADJ: "Европейск"
-#MONARCHY
-dyn_c_united_kindom_europe: "Европейскиие Суверенные Штаты"
-RU_CL_RP_dyn_c_united_kindom_europe:0 "Европейских Суверенных Штатов"
-RU_CL_DP_dyn_c_united_kindom_europe:0 "Европейским Суверенным Штатам"
-RU_CL_VP_dyn_c_united_kindom_europe:0 "Европейские Суверенные Штаты"
-RU_CL_TP_dyn_c_united_kindom_europe:0 "Европейскими Суверенными Штатами"
-RU_CL_PP_dyn_c_united_kindom_europe:0 "Европейских Суверенных Штатах"
-#MONARCHY
-#REPUBLIC
-dyn_c_united_state_europe: "Европейские Соединённые Штаты"
-RU_CL_RP_dyn_c_united_state_europe:0 "Европейских Соединённых Штатов"
-RU_CL_DP_dyn_c_united_state_europe:0 "Европейским Соединённым Штатам"
-RU_CL_VP_dyn_c_united_state_europe:0 "Европейские Соединённые Штаты"
-RU_CL_TP_dyn_c_united_state_europe:0 "Европейскими Соединёнными Штатами"
-RU_CL_PP_dyn_c_united_state_europe:0 "Европейских Соединённых Штатах"
-#REPUBLIC
-#TECHNATE
-dyn_c_united_technate_europe: "Европейские Просветлённые Штаты"
-RU_CL_RP_dyn_c_united_technate_europe:0 "Европейских Просветлённых Штатов"
-RU_CL_DP_dyn_c_united_technate_europe:0 "Европейским Просветлённым Штатам"
-RU_CL_VP_dyn_c_united_technate_europe:0 "Европейские Просветлённые Штаты"
-RU_CL_TP_dyn_c_united_technate_europe:0 "Европейскими Просветлёнными Штатами"
-RU_CL_PP_dyn_c_united_technate_europe:0 "Европейских Просветлённых Штатах"
-#TECHNATE
+#REPUBLIC/DICTATIRSHIP
+dyn_c_united_state_europe: "Соединённые Штаты Европы"
+RU_CL_RP_dyn_c_united_state_europe:0 "Соединённых Штатов Европы"
+RU_CL_DP_dyn_c_united_state_europe:0 "Соединённым Штатам Европы"
+RU_CL_VP_dyn_c_united_state_europe:0 "Соединённые Штаты Европы"
+RU_CL_TP_dyn_c_united_state_europe:0 "Соединёнными Штатами Европы"
+RU_CL_PP_dyn_c_united_state_europe:0 "Соединённых Штатах Европы"
+#REPUBLIC/DICTATIRSHIP
 #COMMUNIST
-dyn_c_united_council_europe: "Европейские Социалистические Коммуны"
-RU_CL_RP_dyn_c_united_council_europe:0 "Европейских Социалистических Коммун"
-RU_CL_DP_dyn_c_united_council_europe:0 "Европейским Социалистическим Коммунам"
-RU_CL_VP_dyn_c_united_council_europe:0 "Европейские Социалистические Коммуны"
-RU_CL_TP_dyn_c_united_council_europe:0 "Европейскими Социалистическими Коммунами"
-RU_CL_PP_dyn_c_united_council_europe:0 "Европейских Социалистических Коммунах"
+dyn_c_united_council_europe: "Советские Коммуны Европы"
+RU_CL_RP_dyn_c_united_council_europe:0 "Советских Коммун Европы"
+RU_CL_DP_dyn_c_united_council_europe:0 "Советским Коммунам Европы"
+RU_CL_VP_dyn_c_united_council_europe:0 "Советские Коммуны Европы"
+RU_CL_TP_dyn_c_united_council_europe:0 "Советскими Коммунами Европы"
+RU_CL_PP_dyn_c_united_council_europe:0 "Советских Коммунах Европы"
 #COMMUNIST
-
-#MONARCHY/THEOCRACY
- dyn_c_sikh_empire: "Сикхская Империя"
- dyn_c_sikh_empire_adj: "Сикхск"
-RU_CL_RP_dyn_c_sikh_empire:0 "Сикхской Империи"
-RU_CL_DP_dyn_c_sikh_empire:0 "Сикхской Империи"
-RU_CL_VP_dyn_c_sikh_empire:0 "Сикхскую Империю"
-RU_CL_TP_dyn_c_sikh_empire:0 "Сикхской Империей"
-RU_CL_PP_dyn_c_sikh_empire:0 "Сикхской Империи"
-#MONARCHY/THEOCRACY
-#NOT MONARCHY/THEOCRACY
- dyn_c_sikh_state: "Сикхское Государство"
- dyn_c_sikh_state_adj: "Сикхск"
-RU_CL_RP_dyn_c_sikh_state:0 "Сикхского Государства"
-RU_CL_DP_dyn_c_sikh_state:0 "Сикхскому Государству"
-RU_CL_VP_dyn_c_sikh_state:0 "Сикхское Государство"
-RU_CL_TP_dyn_c_sikh_state:0 "Сикхским Государством"
-RU_CL_PP_dyn_c_sikh_state:0 "Сикхском Государстве"
-#NOT MONARCHY/THEOCRACY
-
+#TECHNATE
+dyn_c_united_technate_europe: "Просветлённые Штаты Европы"
+RU_CL_RP_dyn_c_united_technate_europe:0 "Просветлённых Штатов Европы"
+RU_CL_DP_dyn_c_united_technate_europe:0 "Просветлённым Штатам Европы"
+RU_CL_VP_dyn_c_united_technate_europe:0 "Просветлённые Штаты Европы"
+RU_CL_TP_dyn_c_united_technate_europe:0 "Просветлёнными Штатами Европы"
+RU_CL_PP_dyn_c_united_technate_europe:0 "Просветлённых Штатах Европы"
+#TECHNATE
+#MONARCHY
+dyn_c_united_kindom_europe: "Суверенные Штаты Европы"
+RU_CL_RP_dyn_c_united_kindom_europe:0 "Суверенных Штатов Европы"
+RU_CL_DP_dyn_c_united_kindom_europe:0 "Суверенным Штатам Европы "
+RU_CL_VP_dyn_c_united_kindom_europe:0 "Суверенные Штаты Европы"
+RU_CL_TP_dyn_c_united_kindom_europe:0 "Суверенными Штатами Европы"
+RU_CL_PP_dyn_c_united_kindom_europe:0 "Суверенных Штатах Европы"
+#MONARCHY
 
 
 dp_unify_europe: "Объединение Европы"

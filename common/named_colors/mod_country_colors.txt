@@ -1,0 +1,7 @@
+colors = {
+	EUR_base_color = rgb { 0 0 100 }
+	EUR_communist_color = rgb { 100 0 50 }
+	EUR_tehcnate_color = rgb { 20 80 100 }
+	EUR_dictatorship_color = rgb { 0 50 100 }
+	EUR_fascist_color = rgb { 50 50 50 }
+} 

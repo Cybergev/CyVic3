@@ -1,71 +1,12 @@
-﻿USE = {
-	color = { 0 100 200 }
+﻿EUR = {
+	color = { 100 100 100 }
 	
 	country_type = recognized
 
 	tier = hegemony
 	
-	cultures = { 
-		#ROMANCE LANGUAGES
-		north_italian
-		south_italian
-		spanish
-		french
-		francoprovencal
-		portuguese
-		romanian
-		occitan
-		galician
-		catalan
-		corsican
-		#ROMANCE LANGUAGES
-		#GERMANIC LANGUAGES
-		dutch
-		flemish
-		british
-		danish
-		swedish
-		icelandic
-		norwegian
-		north_german
-		south_german
-		alemannic
-		#GERMANIC LANGUAGES
-		#SLAVIC LANGUAGES
-		russian
-		byelorussian
-		ukrainian
-		polish
-		czech
-		slovak
-		slovene
-		serb
-		bulgarian
-		bosniak
-		croat
-		#SLAVIC LANGUAGES
-		#CELTIC LANGUAGES
-		breton
-		scottish
-		irish
-		wallonian
-		welsh
-		#CELTIC LANGUAGES
-		#FINNO-UGRIC LANGUAGES
-		sami
-		finnish
-		estonian
-		hungarian
-		#FINNO-UGRIC LANGUAGES
-		#BALTIC LANGUAGES
-		latvian
-		lithuanian
-		#BALTIC LANGUAGES
-		#OTHER LANGUAGES
-		basque
-		albanian
-		greek
-		#OTHER LANGUAGES
+	cultures = {
+		european
 	}
 	capital = STATE_FLANDERS
 }

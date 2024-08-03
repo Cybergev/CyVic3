@@ -3,7 +3,9 @@
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
 	potential = {
 		has_dlc_feature = agitators
-		has_role = agitator
+		NOT = {
+			has_role = politician
+		}
 		owner = scope:actor
 	}
 	possible = {
@@ -20,10 +22,7 @@
 	effect = {
 		remove_character_role = agitator
 		add_character_role = politician
-		custom_tooltip = {
-			text = make_agitator_ig_leader_tt
-			set_as_interest_group_leader = yes
-		}
+		set_as_interest_group_leader = yes
 	}
 	ai_chance = {
 		value = -50
@@ -753,7 +752,7 @@ resign_from_office = {
 
 change_ig_party_status = {
 	# icon = ""
-	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
+	clicksound = "event:/SFX/UI/Military/command_grant"
 	potential = {
 		owner = scope:actor
 		has_role = politician

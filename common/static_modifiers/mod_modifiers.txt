@@ -1,6 +1,21 @@
 #STATIC
+efficient_bureaucracy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	state_construction_mult = 0.10
+	state_tax_capacity_mult = 0.10
+	country_government_dividends_efficiency_add = 0.10
+}
+
+administrative_overburden = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	state_construction_mult = -0.50
+	state_tax_waste_add = 1
+	country_government_dividends_waste_add = 1
+}
+
 diplomatic_mitigation = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_leverage_generation_mult = 0.25
 	country_infamy_decay_mult = 1
 }
 
@@ -10,8 +25,10 @@ declared_bankruptcy = {
 	country_loan_interest_rate_mult = 0.5
 	unit_offense_mult = -0.5
 	unit_defense_mult = -0.5
-	state_radicals_from_sol_change_mult = 1
+	state_radicals_from_sol_change_mult = 1.0
+	state_welfare_payments_mult = -1
 }
+
 #STATIC
 
 state_religion_promotion = {

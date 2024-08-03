@@ -1,16 +1,13 @@
 ﻿legitimacy_level_legitimate = {
 	threshold = 75
-
 	modifier = {
 		state_radicals_from_sol_change_mult = -0.25
 		state_loyalists_from_sol_change_mult = 0.25
 	}
-
-	# Loyalists will multiply by 0.14% - 2.24% each month
 	loyalties_gain = {
 		value = legitimacy
-		subtract = 74
-		multiply = 0.0014
+		subtract = 75
+		multiply = 0.0005
 		multiply = {
 			add = 1
 			add = modifier:country_loyalists_from_legitimacy_mult
@@ -22,19 +19,16 @@
 
 legitimacy_level_righteous = {
 	threshold = 90
-
 	modifier = {
 		state_radicals_from_sol_change_mult = -0.25
 		state_loyalists_from_sol_change_mult = 0.25
 		country_law_enactment_time_mult = -0.25
 		country_authority_mult = 0.25
 	}
-
-	# Loyalists will multiply by 3.0% - 5.0% each month
 	loyalties_gain = {
 		value = legitimacy
 		subtract = 75
-		multiply = 0.002
+		multiply = 0.001
 		multiply = {
 			add = 1
 			add = modifier:country_loyalists_from_legitimacy_mult

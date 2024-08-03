@@ -1,6 +1,5 @@
 ﻿dp_unify_europe = {
 	war_goal = annex_country
-
 	texture = "gfx/interface/icons/war_goals/unify_germany.dds"
 	selectable_in_lens = {
 		can_form_nation = USE
@@ -20,14 +19,11 @@
 			has_law = law_type:law_state_atheism
 		}
 		scope:target_country = {
-			can_form_nation = USE
+			european_culture_check = yes
 			has_technology_researched = pan-nationalism
-			scope:target_country = {
-				NOT = {
-					country_rank = rank_value:great_power
-					country_rank = rank_value:major_power
-					country_rank = rank_value:unrecognized_major_power
-				}
+			NOT = {
+				country_rank = rank_value:great_power
+				country_rank = rank_value:major_power
 			}
 		}
 	}
