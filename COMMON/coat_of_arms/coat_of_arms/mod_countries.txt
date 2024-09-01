@@ -129,25 +129,6 @@ CSA_blood_stained = {
 	}		
 }
 
-PAN_theocracy = {
-	# Actually the imperial war flag
-	pattern = "pattern_solid.tga"
-	color1 = "saffron"
-	
-	colored_emblem = {
-		texture = "ce_border_ceylon.dds"
-		color1 = "red"
-		color2 = "saffron"
-		color3 = "blue"
-		instance = { scale = { 1 1 } position = { 0.5 0.5 } }		
-	}	
-	colored_emblem = {
-		texture = "ce_khanda.dds"
-		color1 = "saffron"
-		color2 = "saffron"
-		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }		
-	}	
-}
 CSA_communist = {
 	# Stars & bars (13 stars version, arranged & rotated in circle)	
 	pattern = "pattern_solid.tga"
@@ -183,6 +164,336 @@ CSA_communist = {
 	}
 }
 
+PER = { # Persia
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+	color2 = "green"
+	
+	colored_emblem = {
+		texture = "ce_inti.dds"
+		color1 = "PER_base_color"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 0.60 0.60 } position = { 0.51 0.42 } }			
+	}	
+	colored_emblem = {		
+		texture = "ce_solid.dds"
+		color1 = "green"
+		color2 = "green"
+		instance = { scale = { 0.4 0.2 } position = { 0.50 0.65 } }		
+	}	
+	colored_emblem = {		
+		texture = "ce_frame_circle.dds"
+		color1 = "PER_base_color"
+		color2 = "PER_base_color"
+		instance = { scale = { 0.16 0.16 } position = { 0.51 0.42 } }		
+	}
+	colored_emblem = {		
+		texture = "ce_solid.dds"
+		color1 = "PER_base_color"
+		color2 = "yellow_dPER_base_colorark"
+		instance = { scale = { 0.5 0.02 } position = { 0.525 0.81 } }		
+	}	
+	colored_emblem = {		
+		texture = "ce_solid.dds"
+		color1 = "PER_base_color"
+		color2 = "PER_base_color"
+		instance = { scale = { 0.49 0.01 } position = { 0.525 0.805 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_lion_persia.dds"
+		color1 = "PER_base_color"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 1.1 1.1 } position = { 0.50 0.50 } }			
+	}
+}
+
+PER_theocracy = {
+	# flag of modern islamic republic would probably stand out too much
+	
+	pattern = "pattern_solid.tga"
+	color1 = "PER_base_color"
+
+	colored_emblem = {
+		texture = "ce_crescent.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.45 0.45 } position = { 0.2 0.28 } }		
+		instance = { scale = { 0.45 0.45 } position = { 0.2 0.72 } }		
+		instance = { scale = { 0.45 0.45 } position = { 0.45 0.5 } }				
+	}
+}
+
+PER_absolute_monarchy = { 
+	# Starting flag
+	
+	pattern = "pattern_border_of_3.dds"
+	color1 = "white"
+	color2 = "green"
+	
+	colored_emblem = {
+		texture = "ce_inti.dds"
+		color1 = "PER_base_color"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 0.60 0.60 } position = { 0.46 0.42 } }			
+	}	
+	colored_emblem = {		
+		texture = "ce_solid.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.5 0.25 } position = { 0.5 0.75 } }		
+	}	
+	colored_emblem = {		
+		texture = "ce_frame_circle.dds"
+		color1 = "PER_base_color"
+		color2 = "PER_base_color"
+		instance = { scale = { 0.16 0.16 } position = { 0.46 0.42 } }		
+	}		
+	colored_emblem = {
+		texture = "ce_lion_persia.dds"
+		color1 = "PER_base_color"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 1.1 1.1 } position = { 0.45 0.50 } }			
+	}
+}
+
+PER_fascist = {		
+	# SUMKA flag
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.66 0.66 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_sumka_stylized_eagle.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { scale = { 0.6 0.6 } position = { 0.5 0.5 } }
+	}	
+}
+
+PER_dictatorship = {
+	# removed crown from an imperial standard
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "green"
+	
+	colored_emblem = {
+		texture = "ce_inti.dds"
+		color1 = "PER_base_color"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 0.30 0.30 } position = { 0.50 0.46 } }			
+	}	
+	colored_emblem = {		
+		texture = "ce_solid.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.4 0.1 } position = { 0.5 0.64 } }		
+	}	
+	colored_emblem = {		
+		texture = "ce_frame_circle.dds"
+		color1 = "PER_base_color"
+		color2 = "yellow"
+		instance = { scale = { 0.08 0.08 } position = { 0.50 0.46 } }		
+	}	
+	
+	colored_emblem = {		
+		texture = "ce_solid.dds"
+		color1 = "PER_base_color"
+		color2 = "PER_base_color"
+		instance = { scale = { 0.25 0.015 } position = { 0.50 0.67 } }		
+	}		
+	colored_emblem = {
+		texture = "ce_lion_persia.dds"
+		color1 = "PER_base_color"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 0.55 0.55 } position = { 0.49 0.51 } }			
+	}
+	colored_emblem = {
+		texture = "ce_wreath.dds"
+		color1 = "green"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 1.0 1.0 } position = { 0.50 0.51 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "red"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 0.6 0.8 } position = { 0 0 } }		
+		instance = { scale = { 0.6 0.8 } position = { 1 0 } }		
+		instance = { scale = { 0.6 0.8 } position = { 0 1 } }		
+		instance = { scale = { 0.6 0.8 } position = { 1 1 } }				
+	}	
+}
+
+PER_republic = {
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "white"
+		color2 = "red"
+	}	
+	colored_emblem = {
+		texture = "ce_inti.dds"
+		color1 = "PER_base_color"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 0.30 0.30 } position = { 0.51 0.465 } }			
+	}	
+
+	colored_emblem = {		
+		texture = "ce_frame_circle.dds"
+		color1 = "PER_base_color"
+		color2 = "PER_base_color"
+		instance = { scale = { 0.08 0.08 } position = { 0.51 0.465 } }		
+	}	
+	colored_emblem = {		
+		texture = "ce_solid.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.25 0.10 } position = { 0.5 0.6 } }		
+	}	
+	colored_emblem = {		
+		texture = "ce_solid.dds"
+		color1 = "PER_base_color"
+		color2 = "PER_base_color"
+		instance = { scale = { 0.26 0.02 } position = { 0.51 0.66 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_lion_persia.dds"
+		color1 = "PER_base_color"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 0.55 0.55 } position = { 0.5 0.505 } }			
+	}		
+}
+
+PER_council_republic = {
+	@sun_and_star_size = 0.80
+	@sun_and_star_position_x = 0.35
+	@sun_and_star_position_y = 0.25
+	pattern = "pattern_solid.tga"
+	color1 = "PER_base_color"
+	
+	colored_emblem = {
+		texture = "ce_sunburst.dds"
+		color1 = "red"
+		instance = { scale = { @sun_and_star_size @sun_and_star_size } position = { @sun_and_star_position_y @sun_and_star_position_x } }	
+	}
+	colored_emblem = {
+		texture = "ce_star_05_ring.dds"
+		color1 = "PER_base_color"
+		instance = { scale = { @[@sun_and_star_size/2] @[@sun_and_star_size/2] } position = { @sun_and_star_position_y @sun_and_star_position_x } }	
+	}	
+}
+
+PER_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+	color2 = "green"
+	
+	colored_emblem = {
+		texture = "ce_inti.dds"
+		color1 = "PER_base_color"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 0.32 0.32 } position = { 0.76 0.45 } }			
+	}	
+	colored_emblem = {		
+		texture = "ce_solid.dds"
+		color1 = "green"
+		color2 = "green"
+		instance = { scale = { 0.2 0.1 } position = { 0.75 0.6 } }		
+	}	
+	colored_emblem = {		
+		texture = "ce_frame_circle.dds"
+		color1 = "PER_base_color"
+		color2 = "PER_base_color"
+		instance = { scale = { 0.1 0.1 } position = { 0.76 0.45 } }		
+	}
+
+	colored_emblem = {		
+		texture = "ce_solid.dds"
+		color1 = "PER_base_color"
+		color2 = "PER_base_color"
+		instance = { scale = { 0.28 0.015 } position = { 0.765 0.67 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_lion_persia.dds"
+		color1 = "PER_base_color"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 0.6 0.6 } position = { 0.75 0.50 } }			
+	}	
+}
+
+PER_subject_GBR = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "blue"
+	
+	colored_emblem = {
+		texture = "ce_inti.dds"
+		color1 = "PER_base_color"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 0.25 0.25 } position = { 0.745 0.45 } }			
+	}	
+	colored_emblem = {		
+		texture = "ce_solid.dds"
+		color1 = "blue"
+		color2 = "blue"
+		instance = { scale = { 0.2 0.1 } position = { 0.74 0.6 } }		
+	}	
+	colored_emblem = {		
+		texture = "ce_frame_circle.dds"
+		color1 = "PER_base_color"
+		color2 = "PER_base_color"
+		instance = { scale = { 0.07 0.07 } position = { 0.745 0.45 } }		
+	}
+	colored_emblem = {
+		texture = "ce_lion_persia.dds"
+		color1 = "PER_base_color"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 0.5 0.5 } position = { 0.735 0.50 } }			
+	}	
+}
+
+PAN_theocracy = {
+	# Actually the imperial war flag
+	pattern = "pattern_solid.tga"
+	color1 = "saffron"
+	
+	colored_emblem = {
+		texture = "ce_border_ceylon.dds"
+		color1 = "red"
+		color2 = "saffron"
+		color3 = "blue"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_khanda.dds"
+		color1 = "saffron"
+		color2 = "saffron"
+		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }		
+	}	
+}
+
 PAN_absolute_monarchy = { # Sikh Empire
 	# Starting flag
 	
@@ -196,6 +507,7 @@ PAN_absolute_monarchy = { # Sikh Empire
 		instance = { scale = { 0.7 0.7 } position = { 0.3 0.5 } }		
 	}			
 }
+
 PAN = {
 	# default monarchy
 	
@@ -294,6 +606,7 @@ PAN_republic = {
 		instance = { scale = { 0.35 0.35 } position = { 0.12 @[third/2] } }		
 	}	
 }
+
 PAN_dictatorship = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"

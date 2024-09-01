@@ -23,7 +23,7 @@ UNL = {
 }
 
 PER = {
-	color = { 230  170  90 }
+	color = "PER_base_color"
 	
 	country_type = unrecognized
 	

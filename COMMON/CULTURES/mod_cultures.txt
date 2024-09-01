@@ -1138,7 +1138,6 @@ armenian={
 }
 
 
-
 tatar={
 	color= hsv{ 0.53 0.24 0.28 }
 	religion = sunni
