@@ -1,8 +1,8 @@
 ﻿legitimacy_level_legitimate = {
 	threshold = 75
 	modifier = {
-		state_radicals_from_sol_change_mult = -0.25
-		state_loyalists_from_sol_change_mult = 0.25
+		state_radicals_from_political_movements_mult = -0.25
+		state_loyalists_from_political_movements_mult = 0.25
 	}
 	loyalties_gain = {
 		value = legitimacy
@@ -20,8 +20,8 @@
 legitimacy_level_righteous = {
 	threshold = 90
 	modifier = {
-		state_radicals_from_sol_change_mult = -0.25
-		state_loyalists_from_sol_change_mult = 0.25
+		state_radicals_from_political_movements_mult = -0.25
+		state_loyalists_from_political_movements_mult = 0.25
 		country_law_enactment_time_mult = -0.25
 		country_authority_mult = 0.25
 	}

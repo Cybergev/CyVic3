@@ -246,3 +246,28 @@ PAN = {
 		}
 	}
 }
+
+AWS = {
+	#Aussa
+	flag_definition = {
+		coa = AWS
+		subject_canton = AWS
+		priority = 1
+	}
+	flag_definition = {
+		coa = AWS_theocracy
+		subject_canton = AWS_theocracy
+		priority = 10
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = AWS_council_republic
+		subject_canton = AWS_council_republic
+		priority = 2000
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}

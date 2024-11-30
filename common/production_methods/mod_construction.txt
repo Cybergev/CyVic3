@@ -99,7 +99,6 @@ pm_steel_frame_buildings = {
 			goods_input_steel_add = 10
 			goods_input_hardwood_add = 20
 			goods_input_transportation_add = 10
-			goods_input_automobiles_add = 5
 		}
 
 		level_scaled = {

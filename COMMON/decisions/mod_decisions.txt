@@ -1,11 +1,16 @@
-﻿test_test_test = {
+﻿destroy_china = {
 	is_shown = {
-		always = yes
+		c:CHI ?= root
+		exists = c:CHI
 	}
 	possible = {
-		always = yes
+		c:CHI ?= root
+		exists = c:CHI
 	}
 	when_taken = {
+		trigger_event = {
+			id = warlord_china_events.100
+		}
 	}
 	ai_chance = {
 		base = 0
@@ -41,96 +46,106 @@ european_culture_unification = {
 	}
 }
 
-homeland_expansion = {
+positivistic_reform = {
 	is_shown = {
-		always = yes
+		has_variable = positivism_happened
 	}
 	possible = {
-		has_technology_researched = pan-nationalism
-		NOT = {
-			has_modifier = homeland_expanded
+		ruler = {
+			has_ideology = ideology:ideology_positivist
 		}
-		any_scope_state = {
-			is_incorporated = yes
-			is_split_state = no
-			owner = root
-			has_decree = decree_promote_national_values
-			any_scope_culture = {
-				has_homeland = prev
-				NOT = {
-					culture_is_discriminated_in = prev.owner
-					is_primary_culture_of = prev.owner
+		any_interest_group = {
+			is_in_government = yes
+			OR = {
+				not = {
+					is_interest_group_type = ig_landowners
 				}
+				not = {
+					is_interest_group_type = ig_devout
+				}
+			}
+			leader = {
+				has_ideology = ideology:ideology_positivist
+			}
+			not = {
+				has_ideology = ideology:ideology_positivism
 			}
 		}
 	}
 	when_taken = {
-		every_primary_culture = {
-			save_scope_as = adition_culture
-		}
-		random_scope_state = {
-			limit = {
-				is_incorporated = yes
-				is_split_state = no
-				owner = root
-				has_decree = decree_promote_national_values
-				any_scope_culture = {
-					has_homeland = prev
-					NOT = {
-						culture_is_discriminated_in = prev.owner
-						is_primary_culture_of = prev.owner
+		ROOT = {
+			every_interest_group = {
+				if = {
+					limit = {
+						is_in_government = yes
+						OR = {
+							not = {
+								is_interest_group_type = ig_devout
+							}
+							not = {
+								is_interest_group_type = ig_landowners
+							}
+						}
+						leader = {
+							has_ideology = ideology:ideology_positivist
+						}
+						not = {
+							has_ideology = ideology:ideology_positivism
+						}
 					}
+					clear_ig_idealogies = yes
+					if = {
+						limit = {
+							is_interest_group_type = ig_armed_forces
+						}
+						add_ideology = ideology_patriotic
+						add_ideology = ideology_meritocratic
+						add_ideology = ideology_jingoist
+					}
+					if = {
+						limit = {
+							is_interest_group_type = ig_industrialists
+						}
+						add_ideology = ideology_meritocratic
+						add_ideology = ideology_individualist
+						add_ideology = ideology_liberal_modern
+					}
+					if = {
+						limit = {
+							is_interest_group_type = ig_intelligentsia
+						}
+						add_ideology = ideology_liberal_modern
+					}
+					if = {
+						limit = {
+							is_interest_group_type = ig_petty_bourgeoisie
+						}
+						add_ideology = ideology_patriotic
+						add_ideology = ideology_meritocratic
+						add_ideology = ideology_isolationist
+					}
+					if = {
+						limit = {
+							OR = {
+								is_interest_group_type = ig_trade_unions
+								is_interest_group_type = ig_rural_folk
+							}
+						}
+						add_ideology = ideology_proletarian
+						add_ideology = ideology_particularist
+						add_ideology = ideology_isolationist
+					}
+					add_ideology = ideology_positivism
 				}
 			}
-			every_scope_culture = {
+			if = {
 				limit = {
-					has_homeland = prev
 					NOT = {
-						culture_is_discriminated_in = prev.owner
-						is_primary_culture_of = prev.owner
+						has_modifier = positivistic_country
 					}
 				}
-				prev.state_region = {
-					remove_homeland = prev
-					add_radicals_in_state = {
-						value = 1
-						culture = prev
-					}
-				}
+				add_modifier = positivistic_country
 			}
-			scope:adition_culture = {
-				prev.state_region = {
-					add_homeland = prev
-					add_loyalists_in_state = {
-						value = 0.5
-						culture = prev
-					}
-				}
-			}
-		}
-		add_modifier = {
-			name = homeland_expanded
-			years = 5
-			is_decaying = yes
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-destroy_china = {
-	is_shown = {
-		c:CHI ?= root
-		exists = c:CHI
-	}
-	possible = {
-		c:CHI ?= root
-		exists = c:CHI
-	}
-	when_taken = {
-		trigger_event = {
-			id = warlord_china_events.100
 		}
 	}
 	ai_chance = {
@@ -163,17 +178,21 @@ socialistic_reform = {
 				}
 			}
 			OR = {
-				not = {
-					has_ideology = ideology:ideology_proletarian
+				AND = {
+					leader = {
+						has_ideology = ideology:ideology_communist
+					}
+					not = {
+						has_ideology = ideology:ideology_communist_movement
+					}
 				}
-				not = {
-					has_ideology = ideology:ideology_socialist
-				}
-			}
-			leader = {
-				OR = {
-					has_ideology = ideology:ideology_communist
-					has_ideology = ideology:ideology_vanguardist
+				AND = {
+					leader = {
+						has_ideology = ideology:ideology_vanguardist
+					}
+					not = {
+						has_ideology = ideology:ideology_vanguardist_movement
+					}
 				}
 			}
 		}
@@ -186,74 +205,206 @@ socialistic_reform = {
 						is_in_government = yes
 						OR = {
 							not = {
-								is_interest_group_type = ig_landowners
+								is_interest_group_type = ig_devout
 							}
 							not = {
 								is_interest_group_type = ig_industrialists
 							}
 							not = {
-								is_interest_group_type = ig_devout
+								is_interest_group_type = ig_landowners
 							}
 						}
 						OR = {
-							not = {
-								has_ideology = ideology:ideology_proletarian
+							AND = {
+								leader = {
+									has_ideology = ideology:ideology_communist
+								}
+								not = {
+									has_ideology = ideology:ideology_communist_movement
+								}
+							}
+							AND = {
+								leader = {
+									has_ideology = ideology:ideology_vanguardist
+								}
+								not = {
+									has_ideology = ideology:ideology_vanguardist_movement
+								}
+							}
+						}
+					}
+					clear_ig_idealogies = yes
+					if = {
+						limit = {
+							is_interest_group_type = ig_armed_forces
+						}
+						add_ideology = ideology_patriotic
+						add_ideology = ideology_jingoist
+					}
+					if = {
+						limit = {
+							is_interest_group_type = ig_intelligentsia
+						}
+						add_ideology = ideology_liberal_modern
+					}
+					if = {
+						limit = {
+							is_interest_group_type = ig_petty_bourgeoisie
+						}
+						add_ideology = ideology_patriotic
+						add_ideology = ideology_isolationist
+					}
+					if = {
+						limit = {
+							OR = {
+								is_interest_group_type = ig_trade_unions
+								is_interest_group_type = ig_rural_folk
+							}
+						}
+						add_ideology = ideology_proletarian
+						add_ideology = ideology_particularist
+						add_ideology = ideology_isolationist
+					}
+					if = {
+						limit = {
+							leader = {
+								has_ideology = ideology:ideology_communist
 							}
 							not = {
-								has_ideology = ideology:ideology_socialist
+								has_ideology = ideology:ideology_communist_movement
 							}
 						}
+						add_ideology = ideology_communist_movement
 					}
 					if = {
 						limit = {
-							has_ideology = ideology:ideology_agrarian
+							leader = {
+								has_ideology = ideology:ideology_vanguardist
+							}
+							not = {
+								has_ideology = ideology:ideology_vanguardist_movement
+							}
 						}
-						remove_ideology = ideology_agrarian
-						add_ideology = ideology_proletarian
-						add_ideology = ideology_socialist
-					}
-					if = {
-						limit = {
-							has_ideology = ideology:ideology_agrarian_jeffersonian
-						}
-						remove_ideology = ideology_agrarian_jeffersonian
-						add_ideology = ideology_proletarian
-						add_ideology = ideology_socialist
-					}
-					if = {
-						limit = {
-							has_ideology = ideology:ideology_republican
-						}
-						remove_ideology = ideology_republican
-						add_ideology = ideology_proletarian
-						add_ideology = ideology_socialist
-					}
-					if = {
-						limit = {
-							has_ideology = ideology:ideology_reactionary
-						}
-						remove_ideology = ideology_reactionary
-						add_ideology = ideology_proletarian
-						add_ideology = ideology_socialist
+						add_ideology = ideology_vanguardist_movement
 					}
 				}
 			}
-			hidden_effect = {
-				every_interest_group = {
-					if = {
-						limit = {
-							or = {
-								has_ideology = ideology:ideology_proletarian
-								has_ideology = ideology:ideology_socialist
-							}
-						}
-						remove_ideology = ideology_proletarian
-						remove_ideology = ideology_socialist
-						add_ideology = ideology_proletarian
-						add_ideology = ideology_socialist
-					}
+			if = {
+				limit = {
+					has_modifier = positivistic_country
 				}
+				remove_modifier = positivistic_country
 			}
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_ethnostate = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_ethnostate
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_ethnostate
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_ethnostate
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_national_supremacy = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_national_supremacy
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_national_supremacy
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_national_supremacy
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_racial_segregation = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_racial_segregation
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_racial_segregation
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_racial_segregation
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_cultural_exclusion = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_cultural_exclusion
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_cultural_exclusion
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_cultural_exclusion
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_multicultural = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_multicultural
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_multicultural
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_multicultural
+		add_radicals = {
+			value = 0.2
 		}
 	}
 	ai_chance = {
@@ -296,6 +447,28 @@ set_monarchy = {
 	}
 	when_taken = {
 		activate_law = law_type:law_monarchy
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_corporate_state = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_corporate_state
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_corporate_state
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_corporate_state
 		add_radicals = {
 			value = 0.2
 		}
@@ -415,37 +588,17 @@ set_single_party_state = {
 	}
 }
 
-remove_private_property = {
+set_collectivized_agriculture = {
 	is_shown = {
 		always = yes
 	}
 	possible = {
-		has_law = law_type:law_command_economy
+		always = yes
 	}
 	when_taken = {
-		activate_law = law_type:law_laissez_faire
-		activate_law = law_type:law_command_economy
-		every_scope_state = {
-			if = {
-				limit = {
-					has_building = building_manor_house
-				}
-				remove_building = building_manor_house
-				add_radicals_in_state = {
-					value = 1
-					pop_type = aristocrats
-				}
-			}
-			if = {
-				limit = {
-					has_building = building_financial_district
-				}
-				remove_building = building_financial_district
-				add_radicals_in_state = {
-					value = 1
-					pop_type = capitalists
-				}
-			}
+		activate_law = law_type:law_collectivized_agriculture
+		add_radicals = {
+			value = 0.5
 		}
 	}
 	ai_chance = {
@@ -453,20 +606,162 @@ remove_private_property = {
 	}
 }
 
-promote_state_religion = {
+set_cooperative_ownership = {
 	is_shown = {
-		OR = {
-			has_law = law_type:law_state_religion
-			has_law = law_type:law_state_atheism
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+	when_taken = {
+		activate_law = law_type:law_cooperative_ownership
+		add_radicals = {
+			value = 0.5
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_command_economy = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_command_economy
 		}
 	}
 	possible = {
-		OR = {
-			has_law = law_type:law_state_religion
-			has_law = law_type:law_state_atheism
+		not = {
+			has_law = law_type:law_command_economy
 		}
+	}
+	when_taken = {
+		activate_law = law_type:law_command_economy
+		add_radicals = {
+			value = 0.5
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_private_property = {
+	is_shown = {
+		always = yes
+	}
+	possible = {
+		OR = {
+			has_law = law_type:law_cooperative_ownership
+			has_law = law_type:law_command_economy
+		}
+	}
+	when_taken = {
+		if = {
+			limit = {
+				has_law = law_type:law_cooperative_ownership
+			}
+			activate_law = law_type:law_cooperative_ownership
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_command_economy
+			}
+			activate_law = law_type:law_cooperative_ownership
+			activate_law = law_type:law_command_economy
+		}
+		activate_law = law_type:law_collectivized_agriculture
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+homeland_expansion = {
+	is_shown = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = pan-nationalism
 		NOT = {
-			has_modifier = state_religion_promotion
+			has_modifier = homeland_expanded
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			is_split_state = no
+			owner = root
+			has_decree = decree_promote_national_values
+			any_scope_culture = {
+				has_homeland = prev
+				NOT = {
+					culture_is_discriminated_in = prev.owner
+					is_primary_culture_of = prev.owner
+				}
+			}
+		}
+	}
+	when_taken = {
+		every_primary_culture = {
+			save_scope_as = adition_culture
+		}
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				is_split_state = no
+				owner = root
+				has_decree = decree_promote_national_values
+				any_scope_culture = {
+					has_homeland = prev
+					NOT = {
+						culture_is_discriminated_in = prev.owner
+						is_primary_culture_of = prev.owner
+					}
+				}
+			}
+			every_scope_culture = {
+				limit = {
+					has_homeland = prev
+					NOT = {
+						culture_is_discriminated_in = prev.owner
+						is_primary_culture_of = prev.owner
+					}
+				}
+				prev.state_region = {
+					remove_homeland = prev
+					add_radicals_in_state = {
+						value = 1
+						culture = prev
+					}
+				}
+			}
+			scope:adition_culture = {
+				prev.state_region = {
+					add_homeland = prev
+					add_loyalists_in_state = {
+						value = 0.5
+						culture = prev
+					}
+				}
+			}
+		}
+		add_modifier = {
+			name = homeland_expanded
+			years = 5
+			is_decaying = yes
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+promote_national_values = {
+	is_shown = {
+		has_technology_researched = nationalism
+	}
+	possible = {
+		NOT = {
+			has_modifier = national_values_promotion
 		}
 	}
 	when_taken = {
@@ -488,7 +783,7 @@ promote_state_religion = {
 			}
 			set_state_religion = root.country_definition.religion
 		}
-		promote_state_rel = yes
+		promote_national_val = yes
 	}
 	ai_chance = {
 		base = 100

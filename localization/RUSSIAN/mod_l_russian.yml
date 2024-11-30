@@ -7,39 +7,11 @@ EUR_ADJ: "Европейск"
 european: "Европейцы"
 european_ADJ: "$EUR_ADJ$"
 
-#REPUBLIC/DICTATIRSHIP
-dyn_c_united_state_europe: "Соединённые Штаты Европы"
-RU_CL_RP_dyn_c_united_state_europe:0 "Соединённых Штатов Европы"
-RU_CL_DP_dyn_c_united_state_europe:0 "Соединённым Штатам Европы"
-RU_CL_VP_dyn_c_united_state_europe:0 "Соединённые Штаты Европы"
-RU_CL_TP_dyn_c_united_state_europe:0 "Соединёнными Штатами Европы"
-RU_CL_PP_dyn_c_united_state_europe:0 "Соединённых Штатах Европы"
-#REPUBLIC/DICTATIRSHIP
-#COMMUNIST
-dyn_c_united_council_europe: "Советские Коммуны Европы"
-RU_CL_RP_dyn_c_united_council_europe:0 "Советских Коммун Европы"
-RU_CL_DP_dyn_c_united_council_europe:0 "Советским Коммунам Европы"
-RU_CL_VP_dyn_c_united_council_europe:0 "Советские Коммуны Европы"
-RU_CL_TP_dyn_c_united_council_europe:0 "Советскими Коммунами Европы"
-RU_CL_PP_dyn_c_united_council_europe:0 "Советских Коммунах Европы"
-#COMMUNIST
-#TECHNATE
-dyn_c_united_technate_europe: "Просветлённые Штаты Европы"
-RU_CL_RP_dyn_c_united_technate_europe:0 "Просветлённых Штатов Европы"
-RU_CL_DP_dyn_c_united_technate_europe:0 "Просветлённым Штатам Европы"
-RU_CL_VP_dyn_c_united_technate_europe:0 "Просветлённые Штаты Европы"
-RU_CL_TP_dyn_c_united_technate_europe:0 "Просветлёнными Штатами Европы"
-RU_CL_PP_dyn_c_united_technate_europe:0 "Просветлённых Штатах Европы"
-#TECHNATE
-#MONARCHY
-dyn_c_united_kindom_europe: "Суверенные Штаты Европы"
-RU_CL_RP_dyn_c_united_kindom_europe:0 "Суверенных Штатов Европы"
-RU_CL_DP_dyn_c_united_kindom_europe:0 "Суверенным Штатам Европы "
-RU_CL_VP_dyn_c_united_kindom_europe:0 "Суверенные Штаты Европы"
-RU_CL_TP_dyn_c_united_kindom_europe:0 "Суверенными Штатами Европы"
-RU_CL_PP_dyn_c_united_kindom_europe:0 "Суверенных Штатах Европы"
-#MONARCHY
-
-
 dp_unify_europe: "Объединение Европы"
 dp_leadership_europe: "Европейское лидерство"
+
+ideology_positivist: "Позитивист"
+ideology_positivist_desc: "Этот персонаж выступает за модернизацию, технократию и антиклерикализм, осуждающий как непредсказуемую власть монархов, так и прихоти толпы."
+ 
+ideology_positivism: "Позитивизм"
+ideology_positivism_desc: "Эта группа выступает за модернизацию, технократию и антиклерикализм, осуждающий как непредсказуемую власть монархов, так и прихоти толпы."

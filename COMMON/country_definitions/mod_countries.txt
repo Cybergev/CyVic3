@@ -45,7 +45,7 @@ PAN = {
 }
 
 AWS = {
-	color = { 125 125 100 }
+	color = { 75 50 100 }
 	
 	country_type = unrecognized
 	

@@ -1,123 +1,361 @@
-﻿promote_state_rel = {
+﻿clear_ig_idealogies = {
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_jingoist
+		}
+		remove_ideology = ideology_jingoist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_patriotic
+		}
+		remove_ideology = ideology_patriotic
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_loyalist
+		}
+		remove_ideology = ideology_loyalist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_caudillismo
+		}
+		remove_ideology = ideology_caudillismo
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_sikh_militancy
+		}
+		remove_ideology = ideology_sikh_militancy
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_bakufu
+		}
+		remove_ideology = ideology_bakufu
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_pious
+		}
+		remove_ideology = ideology_pious
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_moralist
+		}
+		remove_ideology = ideology_moralist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_papal_moralist
+		}
+		remove_ideology = ideology_papal_moralist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_confucian
+		}
+		remove_ideology = ideology_confucian
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_shinto_moralist
+		}
+		remove_ideology = ideology_shinto_moralist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_buddhist_moralist
+		}
+		remove_ideology = ideology_buddhist_moralist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_hindu_moralist
+		}
+		remove_ideology = ideology_hindu_moralist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_hindu_moralist_british_india
+		}
+		remove_ideology = ideology_hindu_moralist_british_india
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_sikh_moralist
+		}
+		remove_ideology = ideology_sikh_moralist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_patriarchal
+		}
+		remove_ideology = ideology_patriarchal
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_orthodox_patriarch
+		}
+		remove_ideology = ideology_orthodox_patriarch
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_russian_patriarch
+		}
+		remove_ideology = ideology_russian_patriarch
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_oriental_orthodox_patriarch
+		}
+		remove_ideology = ideology_oriental_orthodox_patriarch
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_corporatist
+		}
+		remove_ideology = ideology_corporatist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_plutocratic
+		}
+		remove_ideology = ideology_plutocratic
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_laissez_faire
+		}
+		remove_ideology = ideology_laissez_faire
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_individualist
+		}
+		remove_ideology = ideology_individualist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_colonialist
+		}
+		remove_ideology = ideology_colonialist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_enclavist
+		}
+		remove_ideology = ideology_enclavist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_malthusian
+		}
+		remove_ideology = ideology_malthusian
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_liberal
+		}
+		remove_ideology = ideology_liberal
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_anti_clerical
+		}
+		remove_ideology = ideology_anti_clerical
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_republican
+		}
+		remove_ideology = ideology_republican
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_anti_slavery
+		}
+		remove_ideology = ideology_anti_slavery
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_constitutionalist
+		}
+		remove_ideology = ideology_constitutionalist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_liberal_modern
+		}
+		remove_ideology = ideology_liberal_modern
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_paternalistic
+		}
+		remove_ideology = ideology_paternalistic
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_stratocratic
+		}
+		remove_ideology = ideology_stratocratic
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_junker_paternalistic
+		}
+		remove_ideology = ideology_junker_paternalistic
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_papal_paternalistic
+		}
+		remove_ideology = ideology_papal_paternalistic
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_scholar_paternalistic
+		}
+		remove_ideology = ideology_scholar_paternalistic
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_republican_paternalistic
+		}
+		remove_ideology = ideology_republican_paternalistic
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_reactionary
+		}
+		remove_ideology = ideology_reactionary
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_meritocratic
+		}
+		remove_ideology = ideology_meritocratic
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_modernizer
+		}
+		remove_ideology = ideology_modernizer
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_sovereignist
+		}
+		remove_ideology = ideology_sovereignist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_agrarian
+		}
+		remove_ideology = ideology_agrarian
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_particularist
+		}
+		remove_ideology = ideology_particularist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_isolationist
+		}
+		remove_ideology = ideology_isolationist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_agrarian_jeffersonian
+		}
+		remove_ideology = ideology_agrarian_jeffersonian
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_proletarian
+		}
+		remove_ideology = ideology_proletarian
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_egalitarian
+		}
+		remove_ideology = ideology_egalitarian
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_populist
+		}
+		remove_ideology = ideology_populist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_anti_slavery
+		}
+		remove_ideology = ideology_anti_slavery
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_socialist
+		}
+		remove_ideology = ideology_socialist
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_egalitarian_modern
+		}
+		remove_ideology = ideology_egalitarian_modern
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_positivism
+		}
+		remove_ideology = ideology_positivism
+	}
+}
+promote_national_val = {
 	add_modifier = {
-		name = state_religion_promotion
-		years = 1
+		name = national_values_promotion
+		years = 5
 		is_decaying = yes
 	}
-	if = {
+	random_scope_state = {
 		limit = {
-			country_has_state_religion = rel:catholic
+			is_capital = yes
 		}
-		rel:catholic = {
-			save_scope_as = state_rel
+		random_scope_pop = {
+			limit = {
+				culture = {
+					is_primary_culture_of = ROOT
+				}
+				religion = {
+					is_state_religion = ROOT
+				}
+			}
+			culture = {
+				save_scope_as = state_cul
+			}
+			religion = {
+				save_scope_as = state_rel
+			}
 		}
 	}
-	if = {
+	every_scope_pop = {
 		limit = {
-			country_has_state_religion = rel:protestant
+			NOT = {
+				culture = scope:state_cul
+			}
 		}
-		rel:protestant = {
-			save_scope_as = state_rel
+		change_pop_culture = {
+			target = scope:state_cul
+			value = 0.01
 		}
-	}
-	if = {
-		limit = {
-			country_has_state_religion = rel:orthodox
-		}
-		rel:orthodox = {
-			save_scope_as = state_rel
-		}
-	}
-	if = {
-		limit = {
-			country_has_state_religion = rel:oriental_orthodox
-		}
-		rel:oriental_orthodox = {
-			save_scope_as = state_rel
-		}
-	}
-	if = {
-		limit = {
-			country_has_state_religion = rel:sunni
-		}
-		rel:sunni = {
-			save_scope_as = state_rel
-		}
-	}
-	if = {
-		limit = {
-			country_has_state_religion = rel:shiite
-		}
-		rel:shiite = {
-			save_scope_as = state_rel
-		}
-	}
-	if = {
-		limit = {
-			country_has_state_religion = rel:jewish
-		}
-		rel:jewish = {
-			save_scope_as = state_rel
-		}
-	}
-	if = {
-		limit = {
-			country_has_state_religion = rel:gelugpa
-		}
-		rel:gelugpa = {
-			save_scope_as = state_rel
-		}
-	}
-	if = {
-		limit = {
-			country_has_state_religion = rel:theravada
-		}
-		rel:theravada = {
-			save_scope_as = state_rel
-		}
-	}
-	if = {
-		limit = {
-			country_has_state_religion = rel:hindu
-		}
-		rel:hindu = {
-			save_scope_as = state_rel
-		}
-	}
-	if = {
-		limit = {
-			country_has_state_religion = rel:shinto
-		}
-		rel:shinto = {
-			save_scope_as = state_rel
-		}
-	}
-	if = {
-		limit = {
-			country_has_state_religion = rel:sikh
-		}
-		rel:sikh = {
-			save_scope_as = state_rel
-		}
-	}
-	if = {
-		limit = {
-			country_has_state_religion = rel:animist
-		}
-		rel:animist = {
-			save_scope_as = state_rel
-		}
-	}
-	if = {
-		limit = {
-			country_has_state_religion = rel:atheist
-		}
-		rel:atheist = {
-			save_scope_as = state_rel
-		}
-	}
-	every_scope_state = {
-		convert_population = {
+		change_pop_religion = {
 			target = scope:state_rel
 			value = 0.01
 		}

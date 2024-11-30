@@ -1,0 +1,17 @@
+﻿arc_welding = {
+	# Unlocks Arc Welding Shipbuilding PM in Shipyards
+	# Unlocks Very Fast PM in Construction Camps
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/arc_welding.dds"
+	category = production
+	modifier = {
+		state_building_construction_sector_max_level_add = 20
+	}
+	unlocking_technologies = {
+		electric_arc_process
+		pneumatic_tools
+	}
+	ai_weight = {
+		value = 1
+	}
+}

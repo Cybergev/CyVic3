@@ -1411,3 +1411,41 @@ mongol={
 	}
 	graphics = east_asian
 }
+
+
+afar={
+	color= { 50 0 100 }
+	religion = sunni
+	traits = { ethiopian east_african_culture_group african_heritage }
+	male_common_first_names={
+		Alimirah
+		Amda
+		Baeda
+		Hanfere
+		Kadhafo
+		Kedafu
+		Mahammad
+		Sabraddin
+		Umar
+	}
+	female_common_first_names = {
+		Fatimah
+		Medina
+	}	
+	noble_last_names = {
+		Jasa
+		Kadafo
+		Yayyo
+	}
+	common_last_names={
+		Aydahis
+		Hanfadhe
+		Maryam
+		Seyon
+		Yayyo
+	}
+	ethnicities = {
+		1 = african
+	}
+	graphics = african
+}

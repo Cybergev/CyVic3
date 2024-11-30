@@ -8,3 +8,7 @@ colors = {
 colors = {
 	PER_base_color = rgb { 230 170 100 }
 } 
+colors = {
+	AWS_base_color = rgb { 25 0 100 }
+	AWS_second_color = rgb { 200 150 100 }
+} 

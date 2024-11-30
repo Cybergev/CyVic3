@@ -1,16 +1,20 @@
 #STATIC
 efficient_bureaucracy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_construction_mult = 0.10
-	state_tax_capacity_mult = 0.10
-	country_government_dividends_efficiency_add = 0.10
+	state_construction_mult = 0.1
+	state_tax_capacity_mult = 0.1
+	country_government_dividends_efficiency_add = 0.1
 }
 
 administrative_overburden = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	state_construction_mult = -0.50
-	state_tax_waste_add = 1
-	country_government_dividends_waste_add = 1
+	state_construction_mult = -0.2
+	state_tax_waste_add = 0.2
+	country_government_dividends_waste_add = 0.2
+}
+
+government_owned_debt = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 }
 
 diplomatic_mitigation = {
@@ -25,14 +29,49 @@ declared_bankruptcy = {
 	country_loan_interest_rate_mult = 0.5
 	unit_offense_mult = -0.5
 	unit_defense_mult = -0.5
-	state_radicals_from_sol_change_mult = 1.0
+	state_radicals_from_political_movements_mult = 1
 	state_welfare_payments_mult = -1
 }
 
-#STATIC
+tax_modifier_very_low = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_authority_mult = 0.1
+	state_radicals_from_political_movements_mult = -0.2
+	state_loyalists_from_political_movements_mult = 0.2
+	interest_group_in_government_attraction_mult = 0.1
+}
 
-state_religion_promotion = {
+tax_modifier_low = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_authority_mult = 0.05
+	state_radicals_from_political_movements_mult = -0.1
+	state_loyalists_from_political_movements_mult = 0.1
+	interest_group_in_government_attraction_mult = 0.05
+}
+
+tax_modifier_medium = {
+}
+
+tax_modifier_high = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_authority_mult = -0.1
+	state_radicals_from_political_movements_mult = 0.5
+	state_loyalists_from_political_movements_mult = -0.5
+	interest_group_in_government_attraction_mult = -0.1
+}
+
+tax_modifier_very_high = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_authority_mult = -0.2
+	state_radicals_from_political_movements_mult = 1
+	state_loyalists_from_political_movements_mult = -1
+	interest_group_in_government_attraction_mult = -0.2
+}
+
+#STATIC
+national_values_promotion = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_assimilation_mult = 0.1
 	state_conversion_mult = 0.1
 }
 
@@ -46,4 +85,9 @@ purged_ig = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
 	interest_group_approval_add = -8
 	interest_group_pop_attraction_mult = -0.4
+}
+
+positivistic_country = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_pop_support_movement_positivist_mult = 0.5
 }

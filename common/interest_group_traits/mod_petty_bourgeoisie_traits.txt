@@ -1,0 +1,49 @@
+﻿ig_trait_treasury_bonds = {
+	icon = "gfx/interface/icons/ig_trait_icons/treasury_bonds.dds"
+	min_approval = loyal
+	modifier = {
+		country_loan_interest_rate_mult = -0.1
+		country_gold_reserve_limit_mult = 0.1
+	}
+}
+
+ig_trait_middle_managers = {
+	icon = "gfx/interface/icons/ig_trait_icons/middle_managers.dds"
+	min_approval = happy
+	modifier = {
+		building_group_bg_government_throughput_add = 0.1
+		building_group_bg_service_throughput_add = 0.1
+	}
+}
+
+ig_trait_xenophobia = {
+	icon = "gfx/interface/icons/ig_trait_icons/xenophobia.dds"
+	max_approval = unhappy
+	modifier = {
+		state_migration_pull_mult = -0.2
+		state_radicalism_increases_violent_hostility_mult = 0.2
+		state_radicalism_increases_cultural_erasure_mult = 0.2
+		state_radicalism_increases_open_prejudice_mult = 0.2
+	}
+}
+
+ig_trait_old_lady_of_threadneedle_street = {
+	icon = "gfx/interface/icons/ig_trait_icons/treasury_bonds.dds"
+	min_approval = loyal
+	
+	modifier = {
+		country_loan_interest_rate_mult = -0.2
+		country_gold_reserve_limit_mult = 0.2
+	}
+}
+
+ig_trait_civil_service = {
+	icon = "gfx/interface/icons/ig_trait_icons/middle_managers.dds"
+	min_approval = happy
+	
+	modifier = {
+		country_bureaucracy_mult = 0.1
+		country_authority_mult = 0.1
+		country_influence_mult = 0.1
+	}
+}

@@ -29,8 +29,8 @@ principle_construction_3 = {
 		# Members Construction Sectors effectve
 		building_construction_sector_throughput_add = 0.1
 
-		# Members Construction Sectors cost less infrastructure
-		building_group_bg_construction_infrastructure_usage_mult = -0.50
+		# Members Construction Sectors goods cost less
+		country_construction_goods_cost_mult = -0.1
 		
 		# Members can form Construction type Companies unlock triggers in the company
 	}
@@ -52,6 +52,8 @@ principle_food_standardization_1 = {
 
 	member_modifier = {
 		building_group_bg_agriculture_throughput_add = 0.1
+		building_group_bg_plantations_throughput_add = 0.1
+		building_group_bg_ranching_throughput_add = 0.1
 	}
 	
 	institution = institution_health_system
@@ -88,6 +90,8 @@ principle_food_standardization_2 = {
 	member_modifier = {
 		# Modifiers from previous level(s)
 		building_group_bg_agriculture_throughput_add = 0.1
+		building_group_bg_plantations_throughput_add = 0.1
+		building_group_bg_ranching_throughput_add = 0.1
 		building_food_industry_throughput_add = 0.1
 	}
 	
@@ -108,6 +112,8 @@ principle_food_standardization_3 = {
 	member_modifier = {
 		# Modifiers from previous level(s)
 		building_group_bg_agriculture_throughput_add = 0.1
+		building_group_bg_plantations_throughput_add = 0.1
+		building_group_bg_ranching_throughput_add = 0.1
 		building_food_industry_throughput_add = 0.1
 	}
 	
@@ -145,7 +151,7 @@ principle_police_coordination_1 = {
 	
 	institution = institution_police
 	institution_modifier = {
-		country_authority_mult = 0.01
+		country_authority_mult = 0.05
 		political_movement_radicalism_mult = -0.01
 	}
 	
@@ -191,7 +197,7 @@ principle_police_coordination_2 = {
 
 	institution = institution_police
 	institution_modifier = {
-		country_authority_mult = 0.025
+		country_authority_mult = 0.075
 		political_movement_radicalism_mult = -0.025
 	}
 	
@@ -217,7 +223,7 @@ principle_police_coordination_3 = {
 
 	institution = institution_police
 	institution_modifier = {
-		country_authority_mult = 0.05
+		country_authority_mult = 0.10
 		political_movement_radicalism_mult = -0.05
 	}
 	

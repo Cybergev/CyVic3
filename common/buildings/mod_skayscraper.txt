@@ -1,0 +1,52 @@
+﻿building_skyscraper = {
+	building_group = bg_skyscraper
+	city_type = city
+	levels_per_mesh = 1
+	enable_air_connection = yes
+	override_centerpiece_mesh = yes
+	centerpiece_mesh_weight = 2
+	expandable = no
+	downsizeable = no
+	production_method_groups = {
+		pmg_airship_mooring_post
+		pmg_base_building_skyscraper
+		pmg_base_building_government_administration
+		pmg_government_administration_bureaucrat_professionalism
+		pmg_government_administration_religious_administration
+	}
+	icon = "gfx/interface/icons/building_icons/skyscraper.dds"
+	required_construction = construction_cost_monument
+	can_build_government = {
+		OR = {
+			has_modifier = skyscraper_site
+			owner = {
+				any_scope_state = {
+					has_building = building_skyscraper
+				}
+			}
+		}
+	}
+	can_build_private = {
+		always = no
+	}
+	ai_value = {
+		if = {
+			limit = {
+				is_capital = yes
+			}
+			add = 2500
+		}
+		if = {
+			limit = {
+				is_incorporated = yes
+				state_population >= 500000
+			}
+			add = {
+				value = state_population
+				divide = 1000
+				max = 5000
+			}
+		}
+	}
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
