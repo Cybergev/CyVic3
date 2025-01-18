@@ -1,13 +1,63 @@
-﻿legitimacy_level_legitimate = {
-	threshold = 75
+﻿legitimacy_level_illegitimate = {
+	threshold = 0
 	modifier = {
+		country_authority_mult = -0.5
+		state_radicals_from_political_movements_mult = 0.5
+		state_loyalists_from_political_movements_mult = -0.5
+		country_must_have_movement_to_enact_laws_bool = yes
+	}
+	# Radicals will multiply by 1.5% - 3.0% each month
+	loyalties_gain = {
+		value = -50
+		add = legitimacy
+		multiply = 0.001
+		multiply = {
+			add = 1
+			add = modifier:country_radicals_from_legitimacy_mult
+			min = 0
+		}
+		max = 1
+	}
+}
+
+legitimacy_level_unacceptable = {
+	threshold = 20
+	modifier = {
+		country_authority_mult = -0.25
+		country_law_enactment_time_mult = 0.5
+		state_radicals_from_political_movements_mult = 0.25
+		state_loyalists_from_political_movements_mult = -0.25
+	}
+	# Radicals will multiply by 0% - 1.5% each month
+	loyalties_gain = {
+		value = -50
+		add = legitimacy
+		multiply = 0.0005
+		multiply = {
+			add = 1
+			add = modifier:country_radicals_from_legitimacy_mult
+			min = 0
+		}
+		max = 1
+	}
+}
+
+legitimacy_level_contested = {
+	threshold = 40
+}
+
+legitimacy_level_legitimate = {
+	threshold = 60
+	modifier = {
+		country_authority_mult = 0.25
+		country_law_enactment_time_mult = -0.25
 		state_radicals_from_political_movements_mult = -0.25
 		state_loyalists_from_political_movements_mult = 0.25
 	}
 	loyalties_gain = {
 		value = legitimacy
 		subtract = 75
-		multiply = 0.0005
+		multiply = 0.001
 		multiply = {
 			add = 1
 			add = modifier:country_loyalists_from_legitimacy_mult
@@ -18,12 +68,12 @@
 }
 
 legitimacy_level_righteous = {
-	threshold = 90
+	threshold = 80
 	modifier = {
-		state_radicals_from_political_movements_mult = -0.25
-		state_loyalists_from_political_movements_mult = 0.25
-		country_law_enactment_time_mult = -0.25
-		country_authority_mult = 0.25
+		country_authority_mult = 0.5
+		country_law_enactment_time_mult = -0.5
+		state_radicals_from_political_movements_mult = -0.5
+		state_loyalists_from_political_movements_mult = 0.5
 	}
 	loyalties_gain = {
 		value = legitimacy

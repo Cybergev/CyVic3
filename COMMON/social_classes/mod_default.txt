@@ -1,0 +1,35 @@
+﻿upper_class = {
+	social_hierarchy = default_social_hierarchy
+	strata = upper
+	allowed_professions = {
+		academics
+		aristocrats
+		bureaucrats
+		capitalists
+		clergymen
+		engineers
+		officers
+	}
+}
+
+middle_class = {
+	social_hierarchy = default_social_hierarchy
+	strata = middle
+	allowed_professions = {
+		clerks
+		farmers
+		machinists
+		shopkeepers
+		soldiers
+	}
+}
+
+lower_class = {
+	social_hierarchy = default_social_hierarchy
+	strata = lower
+	allowed_professions = {
+		laborers
+		peasants
+		slaves
+	}
+}

@@ -6,7 +6,6 @@
 	override_centerpiece_mesh = yes
 	centerpiece_mesh_weight = 2
 	expandable = no
-	downsizeable = no
 	production_method_groups = {
 		pmg_airship_mooring_post
 		pmg_base_building_skyscraper

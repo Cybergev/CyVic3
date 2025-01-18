@@ -1,0 +1,49 @@
+﻿pm_hardwood = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection_mod.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	is_default = yes
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 60
+			# output goods
+			goods_output_hardwood_add = 80
+		}
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_increased_hardwood = {
+	texture = "gfx/interface/icons/production_method_icons/increased_hardwood_mod.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		steelworking
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 80
+			# output goods
+			goods_output_hardwood_add = 100
+		}
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}

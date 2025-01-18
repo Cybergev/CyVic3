@@ -1,0 +1,422 @@
+﻿default_building_coffee_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_coffee_add = 50
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4500
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+automatic_irrigation_building_coffee_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		pumpjacks
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_engines_add = 10
+			goods_output_coffee_add = 100
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+default_building_cotton_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_fabric_add = 50
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4500
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+automatic_irrigation_building_cotton_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		pumpjacks
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_engines_add = 10
+			goods_output_fabric_add = 100
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+default_building_dye_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_dye_add = 50
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4500
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+automatic_irrigation_building_dye_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		pumpjacks
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_engines_add = 10
+			goods_output_dye_add = 100
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+default_building_opium_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods	
+			goods_output_opium_add = 50
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4500
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+automatic_irrigation_building_opium_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		pumpjacks
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_engines_add = 10
+			goods_output_opium_add = 100
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+default_building_tea_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_tea_add = 50
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4500
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+automatic_irrigation_building_tea_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		pumpjacks
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_engines_add = 10
+			goods_output_tea_add = 100
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+default_building_tobacco_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_tobacco_add = 50
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4500
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+automatic_irrigation_building_tobacco_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		pumpjacks
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_engines_add = 10
+			goods_output_tobacco_add = 100
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+default_building_sugar_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_sugar_add = 50
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4500
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+automatic_irrigation_building_sugar_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		pumpjacks
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_engines_add = 10
+			goods_output_sugar_add = 100
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+default_building_banana_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_fruit_add = 50
+		}
+		level_scaled = {
+			building_employment_laborers_add = 4500
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+automatic_irrigation_building_banana_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		pumpjacks
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_engines_add = 10
+			goods_output_fruit_add = 100
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+default_building_silk_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_silk_add = 50
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4500
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+automatic_irrigation_building_silk_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		pumpjacks
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_engines_add = 10
+			goods_output_silk_add = 100
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+default_building_vineyard_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_wine_add = 50
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4500
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+automatic_irrigation_building_vineyard_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		pumpjacks
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_engines_add = 10
+			goods_output_wine_add = 100
+		}
+		level_scaled = {
+			# profit
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+default_building_rubber_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_rubber_add = 50
+		}
+		level_scaled = {
+			building_employment_laborers_add = 4500
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+automatic_irrigation_building_rubber_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		pumpjacks
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 10
+			goods_output_rubber_add = 100
+		}
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}

@@ -932,6 +932,69 @@ circassian = {
 	graphics = european
 }
 
+chechen ={
+	color= rgb{ 12 61 45 }
+	religion = sunni
+	traits = { caucasus_group middle_eastern_heritage european_heritage }
+	male_common_first_names={
+		Abdul-Muslim Ali Akhmad Abdulla Alibek-Khadzhi Albir-Murza Abdurakhman
+		Dziyaudin Dzhabrail Dzhamal Dzhokhar
+		Elmurza
+		Gubash
+		Iznaur Ibragim Islambek Ismail
+		Khamid Khota Khoza Khasan
+		Magoma Mamad Mavlid Mokhmad
+		Nurdi
+		Shahid Shamil Salambek
+		Tamerlan Timur
+		Yahya
+		Zaur Zaurbek Zelim
+	}
+	female_common_first_names = {
+		Aimani Aishat
+		Fariza
+		Khava
+		Lidia
+		Malika Madina
+		Zainap
+	}	
+	noble_last_names = {
+	}
+	common_last_names={
+		Albury Ammigler Akhmadgyer Aybulat
+		Dudigyer
+		Islamgyer
+		Khamidgler Klushagger
+		Lorisgler
+		Musigyer Morgigier Mokhmadgyer Mavlidgler
+		Salmangier
+
+		# Chechen teips
+
+		Achalo Allaroy Anastoy 
+		Buni Belgatoy Benoy Biltoy
+		Chartoy Chermoy Chantiy Chinkhoy
+		Dishni 
+		Elistanzhkhoy Engnoy Ersenoy 
+		Gendargenoy Gordaloy Gunoy Galai Ghoandaloy 
+		Keloy Kharachoy Khaikharoy Khindkhoy Kalkhoy 
+		Makazhoy Merzhoy Marshaloy Mulkoy 
+		Nizhaloy Nokhchmakhkakhoy Nashkhoy 
+		Orstkhoy
+		Peshkhoy 
+		Rigakhoy
+		Sharoy Shotoy Shonoy Satoy 
+		Tsontaroy Tsechoy Turkoy  Terloy
+		Varandoy
+		Yalkhoy Yalkharoy 
+		Zandkhoy Zumsoy Zurzaqoy 
+	}
+	ethnicities = {
+		1 = north_caucasian
+	}
+	graphics = arabic
+}
+
 georgian={
 	color= hsv{ 0.33 0.26 0.43 }
 	religion = orthodox
@@ -1301,7 +1364,7 @@ uighur={
 tuvan={
 	color= rgb{ 140 185 206 }
 	religion = gelugpa
-	traits = { turkic mongol_language central_asian_heritage north_asian_heritage }
+	traits = { turkic central_asian_heritage north_asian_heritage }
 	male_common_first_names={
 		Donduk
 		Salchak

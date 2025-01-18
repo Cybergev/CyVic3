@@ -1,0 +1,7 @@
+﻿pmg_hardwood = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_hardwood
+		pm_increased_hardwood
+	}
+}

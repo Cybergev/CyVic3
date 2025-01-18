@@ -56,9 +56,36 @@
 		country_has_primary_culture = cu:lithuanian
 		#BALTIC LANGUAGES
 		#OTHER LANGUAGES
-		country_has_primary_culture = cu:basque
+		country_has_primary_culture = cu:armenian
 		country_has_primary_culture = cu:albanian
+		country_has_primary_culture = cu:basque
+		country_has_primary_culture = cu:circassian
+		country_has_primary_culture = cu:chechen
 		country_has_primary_culture = cu:greek
+		country_has_primary_culture = cu:georgian
+		country_has_primary_culture = cu:north_caucasian
 		#OTHER LANGUAGES
+	}
+}
+
+ideology_communist_valid_trigger = {
+	NOR = {
+		is_interest_group_type = ig_devout
+		is_interest_group_type = ig_industrialists
+		is_interest_group_type = ig_landowners
+	}
+}
+
+ideology_vanguardist_valid_trigger = {
+	NOR = {
+		is_interest_group_type = ig_devout
+		is_interest_group_type = ig_industrialists
+		is_interest_group_type = ig_landowners
+		AND = {
+			is_interest_group_type = ig_petty_bourgeoisie
+			NOT = {
+				has_ideology = ideology:ideology_vanguardist
+			}
+		}
 	}
 }
