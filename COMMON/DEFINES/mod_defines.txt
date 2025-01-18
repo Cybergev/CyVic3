@@ -1,19 +1,39 @@
 ﻿NDiplomacy = {
-	BASE_YEARLY_INFAMY_DECAY_RATE = 6.0
-	WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR = 10000 # The amount of population by which the factor below is multiplied
-	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER = 0.02 # For each WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR population in a country/state, multiply infamy by this
-	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE = 2 # Infamy population multiplier can't be higher than this for each state affected
-	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL = 20 # Infamy population multiplier can't be higher than this, regardless of number of states affected
+	BASE_YEARLY_INFAMY_DECAY_RATE = 6
+	WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR = 10000	# The amount of population by which the factor below is multiplied
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER = 0.02	# For each WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR population in a country/state, multiply infamy by this
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE = 2	# Infamy population multiplier can't be higher than this for each state affected
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL = 20	# Infamy population multiplier can't be higher than this, regardless of number of states affected
 }
+
 NPops = {
-	ASSIMILATION_RATE = 0.02					# Percentage of pops who will Assimilate into a different Culture each month, if eligible
-	MIN_ASSIMILATION = 25						# If there is any assmiliation at least this many people will assimilate
-	CONVERSION_RATE = 0.02						# Percentage of pops who will Convert into a different Religion each month, if eligible
-	MIN_CONVERSION = 25							# If there is any conversion at least this many people will convert
+	ASSIMILATION_RATE = 0.02	# Percentage of pops who will Assimilate into a different Culture each month, if eligible
+	MIN_ASSIMILATION = 25	# If there is any assmiliation at least this many people will assimilate
+	CONVERSION_RATE = 0.02	# Percentage of pops who will Convert into a different Religion each month, if eligible
+	MIN_CONVERSION = 25	# If there is any conversion at least this many people will convert
 }
+
 NCountry = {
-	INCORPORATION_TIME_SAME_CULTURE = 1				# Years if the state is a Homeland of one of the country's primary cultures
-	INCORPORATION_TIME_SAME_HERITAGE = 2.5			# Years if the state is a Homeland of a culture that matches of one of the country's primary cultures' Heritage traits
-	INCORPORATION_TIME_SAME_TRAIT = 5				# Years if the state is a Homeland of a culture with any trait in common with a country's primary cultures
-	INCORPORATION_TIME_NO_MATCH = 10				# Years if the state's Homeland cultures have nothing in common with the country's primary cultures
+	INCORPORATION_TIME_SAME_CULTURE = 1	# Years if the state is a Homeland of one of the country's primary cultures
+	INCORPORATION_TIME_SAME_HERITAGE = 5	# Years if the state is a Homeland of a culture that matches of one of the country's primary cultures' Heritage traits
+	INCORPORATION_TIME_SAME_TRAIT = 5	# Years if the state is a Homeland of a culture with any trait in common with a country's primary cultures
+	INCORPORATION_TIME_NO_MATCH = 10	# Years if the state's Homeland cultures have nothing in common with the country's primary cultures
+}
+
+NPolitics = {
+	MIN_DECREE_COST = 1
+}
+
+NEconomy = {
+	ECONOMY_OF_SCALE_START_LEVEL = 1	# Level at which buildings start getting economy of scale bonuses. Levels lower than this value provide no bonus [>=1]
+	ECONOMY_OF_SCALE_NATIONALIZED_FRACTION_MULT = 0	# Non-government building economy of scale modifier if multiplied by (1 - the fraction of nationalized levels * this)
+	COUNTRY_GDP_MODIFIER_MAX_MULTIPLIER = 1000000000
+	GOLD_RESERVE_LIMIT_FACTOR = 0.5	# The base factor of annual GDP that should be provided as a Gold Reserve
+	OVERSEAS_INFRASTRUCTURE_CONVOY_COST_MULTIPLIER = 1	# Convoy cost for each infrastructure usage in overseas state for port connection shipping lanes
+}
+
+NPowerBlocs = {
+	MAX_MANDATE_PROGRESS = 1000	# When mandate progress reaches this value, the power bloc gains one mandate
+	MAX_MANDATES = 6	# This is the maximum number of mandates that can be accumulated at once
+	MAX_PRINCIPLES = 20
 }

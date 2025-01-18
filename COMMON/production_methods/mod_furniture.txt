@@ -1,0 +1,69 @@
+﻿pm_handcrafted_furniture = {
+	texture = "gfx/interface/icons/production_method_icons/furniture_handicraft.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 40
+			goods_input_fabric_add = 20
+			goods_input_tools_add = 10
+			# output goods
+			goods_output_furniture_add = 60
+		}
+		level_scaled = {
+			# profit = 550 (6.4)
+			building_employment_laborers_add = 4500
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_lathe = {
+	texture = "gfx/interface/icons/production_method_icons/lathes.dds"
+	unlocking_technologies = {
+		lathe
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_hardwood_add = 20
+			goods_input_fabric_add = 10
+			goods_input_tools_add = 10
+			# output goods
+			goods_output_furniture_add = 80
+		}
+		level_scaled = {
+			# profit = 950 (8.8)
+			building_employment_laborers_add = 3500
+			building_employment_machinists_add = 1000
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_mechanized_workshops = {
+	texture = "gfx/interface/icons/production_method_icons/mechanized_workshops.dds"
+	unlocking_technologies = {
+		mechanized_workshops
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_hardwood_add = 40
+			goods_input_fabric_add = 20
+			goods_input_tools_add = 10
+			# output goods
+			goods_output_furniture_add = 100
+		}
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}

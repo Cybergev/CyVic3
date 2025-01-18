@@ -1,0 +1,6 @@
+﻿subsidies = {
+	building_trade_center = must_have
+	building_power_plant = must_have
+	building_railway = must_have
+	building_port = must_have
+}

@@ -1,0 +1,18 @@
+﻿building_whaling_station = {
+	building_group = bg_whaling
+	icon = "gfx/interface/icons/building_icons/whaling_station.dds"
+	city_type = port
+	required_construction = construction_cost_low
+	unlocking_technologies = {
+		navigation
+	}
+	production_method_groups = {
+		pmg_base_building_whaling_station
+		pmg_refrigeration
+	}
+	potential = {
+		is_sea_adjacent = yes
+	}
+	ownership_type = self
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}

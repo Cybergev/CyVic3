@@ -4,7 +4,7 @@
 	
 	modifier = {
 		state_capitalists_investment_pool_contribution_add = 0.1
-		state_capitalists_investment_pool_efficiency_mult = 0.1
+		state_capitalists_investment_pool_efficiency_mult = 0.2
 	}
 }
 
@@ -32,6 +32,7 @@ ig_trait_zaibatsu_cooperation = {
 	
 	modifier = {
 		building_group_bg_manufacturing_tax_mult = 0.1
+		state_capitalists_investment_pool_contribution_add = 0.1
 	}
 }
 
@@ -41,6 +42,6 @@ ig_trait_zaibatsu_withdrawal = {
 	
 	modifier = {
 		state_capitalists_investment_pool_contribution_add = -0.20
-		state_capitalists_investment_pool_efficiency_mult = -0.20
+		state_capitalists_investment_pool_efficiency_mult = -0.40
 	}
 }

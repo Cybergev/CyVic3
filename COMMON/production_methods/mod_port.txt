@@ -1,0 +1,91 @@
+﻿pm_anchorage = {
+	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
+	low_pop_method = yes	# AI will activate this method for states with low population
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 100
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 10
+		}
+	}
+}
+
+pm_basic_port = {
+	texture = "gfx/interface/icons/production_method_icons/basic_port.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_clippers_add = 1
+		}
+		level_scaled = {
+			building_employment_laborers_add = 500
+			building_employment_bureaucrats_add = 500
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 20
+		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			state_infrastructure_add = 2
+		}
+	}
+}
+
+pm_industrial_port = {
+	texture = "gfx/interface/icons/production_method_icons/industrial_port.dds"
+	unlocking_technologies = {
+		gantry_cranes
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steamers_add = 1
+			goods_input_coal_add = 1
+		}
+		level_scaled = {
+			building_employment_machinists_add = 500
+			building_employment_bureaucrats_add = 500
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 50
+		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			state_infrastructure_add = 5
+		}
+	}
+}
+
+pm_modern_port = {
+	texture = "gfx/interface/icons/production_method_icons/modern_port.dds"
+	unlocking_technologies = {
+		concrete_dockyards
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_oil_add = 1
+			goods_input_steamers_add = 1
+		}
+		level_scaled = {
+			building_employment_engineers_add = 500
+			building_employment_bureaucrats_add = 500
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 100
+		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			state_infrastructure_add = 10
+		}
+	}
+}

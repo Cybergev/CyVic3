@@ -1,0 +1,80 @@
+﻿pm_crude_tools = {
+	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 20
+			# output goods
+			goods_output_tools_add = 40
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4500
+		}
+	}
+}
+
+pm_pig_iron = {
+	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
+	unlocking_technologies = {
+		steelworking
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_hardwood_add = 20
+			goods_input_iron_add = 20
+			# output goods
+			goods_output_tools_add = 60
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_steel = {
+	texture = "gfx/interface/icons/production_method_icons/bessemer_process.dds"
+	unlocking_technologies = {
+		mechanical_tools
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_hardwood_add = 20
+			goods_input_steel_add = 20
+			# output goods
+			goods_output_tools_add = 80
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3500
+			building_employment_machinists_add = 500
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_rubber_grips = {
+	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+	unlocking_technologies = {
+		vulcanization
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_rubber_add = 20
+			goods_input_steel_add = 20
+			# output goods
+			goods_output_tools_add = 100
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}

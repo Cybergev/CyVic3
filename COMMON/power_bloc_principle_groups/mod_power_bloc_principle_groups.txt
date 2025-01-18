@@ -1,0 +1,35 @@
+﻿principle_group_aggressive_coordination = {
+	primary_for_identity = identity_military_treaty_organization
+	levels = {
+		principle_aggressive_coordination_1
+		principle_aggressive_coordination_2
+		principle_aggressive_coordination_3
+	}
+}
+
+principle_group_divine_economics = {
+	primary_for_identity = identity_religious
+	levels = {
+		principle_divine_economics_1
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+}
+
+principle_group_exploit_members = {
+	primary_for_identity = identity_sovereign_empire
+	levels = {
+		principle_exploit_members_1
+		principle_exploit_members_2
+		principle_exploit_members_3
+	}
+}
+
+principle_group_ideological_truth = {
+	primary_for_identity = identity_ideological_union
+	levels = {
+		principle_ideological_truth_1
+		principle_ideological_truth_2
+		principle_ideological_truth_3
+	}
+}

@@ -15,3 +15,72 @@ ideology_positivist_desc: "Этот персонаж выступает за м�
  
 ideology_positivism: "Позитивизм"
 ideology_positivism_desc: "Эта группа выступает за модернизацию, технократию и антиклерикализм, осуждающий как непредсказуемую власть монархов, так и прихоти толпы."
+
+building_automobiles_industry: "Автомобильные заводы"
+building_automobiles_industry_lens_option: "Расширить автомобильные заводы"
+
+building_distillation_plants: "Дистилляционные заводы"
+building_distillation_plants_lens_option: "Расширить дистилляционные заводы"
+
+building_luxury_furniture_manufacturies: "Роскошно-мебельные фабрики"
+building_luxury_furniture_manufacturies_lens_option: "Расширить роскошно-мебельные фабрики"
+
+building_hardwood_workshops: "Древесные мастерские"
+building_hardwood_workshops_lens_option: "Расширить древесные мастерские"
+
+building_luxury_textile_mills: "Роскошно-текстильные фабрики"
+building_luxury_textile_mills_lens_option: "Расширить роскошно-текстильные фабрики"
+
+building_porcelain_manufacturies: "Керамозаводы"
+building_porcelain_manufacturies_lens_option: "Расширить керамозаводы"
+
+building_radios_industry: "Радиозаводы"
+building_radios_industry_lens_option: "Расширить радиозаводы"
+
+building_synthetic_oil_plants: "Заводы синтетического топлива"
+building_synthetic_oil_plants_lens_option: "Расширить заводы синтетического топлива"
+
+building_synthetic_opium_plants: "Заводы синтетического опиума"
+building_synthetic_opium_plants_lens_option: "Расширить заводы синтетического опиума"
+
+building_synthetic_rubber_plants: "Заводы синтетического каучука"
+building_synthetic_rubber_plants_lens_option: "Расширить заводы синтетического каучука"
+
+building_synthetic_silk_plants: "Заводы синтетического шёлка"
+building_synthetic_silk_plants_lens_option: "Расширить заводы синтетического шёлка"
+
+building_tanks_industry: "Бронетанковые заводы"
+building_tanks_industry_lens_option: "Расширить бронетанковые заводы"
+
+pmg_luxury_furniture_manufacturies: "$pmg_luxury_building_furniture_manufacturies$"
+pmg_luxury_textile_manufacturies: "$pmg_luxury_building_textile_mills$"
+
+pm_synthetic_oil: "Просцесс Фишера-Тропша"
+pm_synthetic_opium: "Синтетические опиаты"
+pm_synthetic_rubber: "Процесс разложения скипидара"
+
+pm_disel_trawlers: "Совеременные траулеры"
+pm_disel_whaling_ships: "Совеременные китобойные суда"
+
+#---------------------------
+
+pm_assembly_lines_building_paper_mills: "$pm_assembly_lines_building_tooling_workshops$"
+pm_assembly_lines_building_steel_mills: "$pm_assembly_lines_building_tooling_workshops$"
+
+pm_automatic_power_mine: "Автоматическая лебедка"
+
+pmg_refrigeration: "$pmg_refrigeration_building_livestock_ranch$"
+pm_refrigerated_storage: "$pm_refrigerated_storage_building_livestock_ranch$"
+pm_refrigerated_rail_cars: "$pm_refrigerated_rail_cars_building_livestock_ranch$"
+pm_flash_freezing: "$pm_flash_freezing_building_fishing_wharf$"
+
+pm_tractors_building_rice_farm: "$pm_tractors$"
+pm_compression_ignition_tractors_building_rice_farm: "$pm_compression_ignition_tractors$"
+
+pmg_equipment_plantation: "$pmg_harvesting_process_building_rye_farm$"
+pm_simple_equipment: "$pm_tools$"
+pm_automatic_power_equipment: "Механизированная сборка урожая"
+
+pmg_automation_building_chemical_plant: "$pmg_automation_building_tooling_workshops$"
+pm_automatic_chemical_disabled: "Ручное обарудование"
+pm_automatic_power_chemical_equipment: "Автоматизированное обарудование"

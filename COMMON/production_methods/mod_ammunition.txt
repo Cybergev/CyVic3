@@ -1,0 +1,50 @@
+﻿pm_percussion_caps = {
+	texture = "gfx/interface/icons/production_method_icons/percussion_caps.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_explosives_add = 50
+			goods_input_lead_add = 50
+			# output goods
+			goods_output_ammunition_add = 100
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_explosive_shells = {
+	texture = "gfx/interface/icons/production_method_icons/explosive_shells.dds"
+	unlocking_technologies = {
+		dynamite
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_explosives_add = 100
+			goods_input_steel_add = 100
+			# output goods
+			goods_output_ammunition_add = 200
+		}
+		level_scaled = {
+			building_employment_laborers_add = 2500
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 500
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
