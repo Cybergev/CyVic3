@@ -739,9 +739,9 @@ law_protected_speech = {
 	unlocking_technologies = {
 		human_rights
 	}
-	modifier = {
-		country_tech_spread_mult = 0.5
-		country_leverage_resistance_mult = -0.25
+	institution_modifier = {
+		country_tech_spread_mult = 0.1
+		country_leverage_resistance_mult = -0.05
 	}
 	on_activate = {
 		custom_tooltip = protected_speech_tt
