@@ -6,7 +6,6 @@
 		aristocrats
 		bureaucrats
 		capitalists
-		clergymen
 		engineers
 		officers
 	}
@@ -16,6 +15,7 @@ middle_class = {
 	social_hierarchy = default_social_hierarchy
 	strata = middle
 	allowed_professions = {
+		clergymen
 		clerks
 		farmers
 		machinists

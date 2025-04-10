@@ -4,8 +4,8 @@
 	layer = "revolution_dynamic_armed_forces"
 	index = 0
 	ideologies = {
+		ideology_meritocratic
 		ideology_jingoist
-		ideology_loyalist
 		ideology_patriotic
 	}
 	character_ideologies = {

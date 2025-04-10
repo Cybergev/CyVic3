@@ -766,6 +766,50 @@ exile_character = {
 	}
 }
 
+return_to_home_country = {
+	potential = {
+		is_in_exile_pool = no
+		has_role = agitator
+		NOT = {
+			has_role = politician
+		}
+		is_ruler = no
+		is_heir = no
+		exists = root.home_country
+		NOT = {
+			root.home_country = this.owner
+		}
+	}
+	show_requirements = yes
+	possible = {
+		home_country = {
+			empty_agitator_slots >= 1
+		}
+		can_agitate = root.home_country
+	}
+	effect = {
+		this = {
+			save_scope_as = repatriated_scope
+		}
+		owner ?= {
+			save_scope_as = repatriator_country_scope
+		}
+		home_country = {
+			save_scope_as = home_country_scope
+		}
+		transfer_character = home_country
+		home_country = {
+			trigger_event = {
+				id = exiles_events.100
+			}
+		}
+	}
+	show_confirmation_box = yes
+	ai_chance = {
+		value = -50
+	}
+}
+
 resign_from_office = {
 	clicksound = "event:/SFX/UI/Military/command_grant"
 	potential = {

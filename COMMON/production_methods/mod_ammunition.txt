@@ -36,7 +36,7 @@ pm_explosive_shells = {
 		workforce_scaled = {
 			# input goods
 			goods_input_explosives_add = 100
-			goods_input_steel_add = 100
+			goods_input_lead_add = 100
 			# output goods
 			goods_output_ammunition_add = 200
 		}

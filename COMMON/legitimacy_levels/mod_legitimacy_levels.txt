@@ -56,8 +56,8 @@ legitimacy_level_legitimate = {
 	}
 	loyalties_gain = {
 		value = legitimacy
-		subtract = 75
-		multiply = 0.001
+		subtract = 74
+		multiply = 0.0005
 		multiply = {
 			add = 1
 			add = modifier:country_loyalists_from_legitimacy_mult
@@ -77,8 +77,8 @@ legitimacy_level_righteous = {
 	}
 	loyalties_gain = {
 		value = legitimacy
-		subtract = 75
-		multiply = 0.001
+		subtract = 74
+		multiply = 0.0005
 		multiply = {
 			add = 1
 			add = modifier:country_loyalists_from_legitimacy_mult

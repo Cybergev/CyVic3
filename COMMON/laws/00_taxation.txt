@@ -280,50 +280,7 @@ law_free_trade = {
 		country_trade_route_quantity_mult = 0.5
 		country_trade_route_cost_mult = -0.5
 		country_trade_route_competitiveness_mult = 0.5
-		country_leverage_resistance_mult = -0.25
-	}
-	ai_enact_weight_modifier = {
-		#Petitions
-		value = 0
-		if = {
-			limit = {
-				ai_has_enact_weight_modifier_journal_entries = yes
-			}
-			add = 750
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_meiji_diplomacy
-				has_law = law_type:law_isolationism
-			}
-			add = 1000
-		}
-	}
-}
-
-law_mercantilism = {
-	group = lawgroup_trade_policy
-	icon = "gfx/interface/icons/law_icons/mercantilism.dds"
-	progressiveness = 0
-	unlocking_technologies = {
-		international_trade
-	}
-	tariff_modifier_no_priority = {
-		tariff_import_add = 0.2
-		tariff_export_add = 0.1
-	}
-	tariff_modifier_import_priority = {
-		tariff_export_add = 0.2
-	}
-	tariff_modifier_export_priority = {
-		tariff_import_add = 0.4
-	}
-	# Don't change back to mercantilism once we have protectionism or free trade
-	ai_will_do = {
-		NOR = {
-			has_law = law_type:law_protectionism
-			has_law = law_type:law_free_trade
-		}
+		country_leverage_resistance_mult = -0.5
 	}
 	ai_enact_weight_modifier = {
 		#Petitions
@@ -352,17 +309,60 @@ law_protectionism = {
 		stock_exchange
 	}
 	tariff_modifier_no_priority = {
-		tariff_export_add = 0.2
-		tariff_import_add = 0.2
+		tariff_export_add = 0.25
+		tariff_import_add = 0.25
 	}
 	tariff_modifier_import_priority = {
-		tariff_export_add = 0.4
+		tariff_export_add = 0.5
 	}
 	tariff_modifier_export_priority = {
-		tariff_import_add = 0.4
+		tariff_import_add = 0.5
 	}
 	modifier = {
 		country_leverage_resistance_mult = 0.25
+	}
+	ai_enact_weight_modifier = {
+		#Petitions
+		value = 0
+		if = {
+			limit = {
+				ai_has_enact_weight_modifier_journal_entries = yes
+			}
+			add = 750
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_meiji_diplomacy
+				has_law = law_type:law_isolationism
+			}
+			add = 1000
+		}
+	}
+}
+
+law_mercantilism = {
+	group = lawgroup_trade_policy
+	icon = "gfx/interface/icons/law_icons/mercantilism.dds"
+	progressiveness = 0
+	unlocking_technologies = {
+		international_trade
+	}
+	tariff_modifier_no_priority = {
+		tariff_import_add = 0.15
+		tariff_export_add = 0.15
+	}
+	tariff_modifier_import_priority = {
+		tariff_export_add = 0.25
+	}
+	tariff_modifier_export_priority = {
+		tariff_import_add = 0.5
+	}
+	# Don't change back to mercantilism once we have protectionism or free trade
+	ai_will_do = {
+		NOR = {
+			has_law = law_type:law_protectionism
+			has_law = law_type:law_free_trade
+		}
 	}
 	ai_enact_weight_modifier = {
 		#Petitions

@@ -251,7 +251,6 @@ principle_police_coordination_1 = {
 	}
 	institution = institution_police
 	institution_modifier = {
-		country_authority_mult = 0.05
 		political_movement_radicalism_mult = -0.01
 	}
 	ai_weight = {
@@ -295,7 +294,6 @@ principle_police_coordination_2 = {
 	}
 	institution = institution_police
 	institution_modifier = {
-		country_authority_mult = 0.075
 		political_movement_radicalism_mult = -0.025
 	}
 	ai_weight = {
@@ -317,7 +315,6 @@ principle_police_coordination_3 = {
 	}
 	institution = institution_police
 	institution_modifier = {
-		country_authority_mult = 0.1
 		political_movement_radicalism_mult = -0.05
 	}
 	ai_weight = {

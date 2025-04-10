@@ -4,8 +4,8 @@
 	layer = "revolution_dynamic_petty_bourgeoisie"
 	index = 5
 	ideologies = {
-		ideology_reactionary
 		ideology_meritocratic
+		ideology_reactionary
 		ideology_patriotic
 	}
 	character_ideologies = {

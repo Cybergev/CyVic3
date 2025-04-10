@@ -6,8 +6,8 @@
 		building_group_bg_agriculture_allowed_collectivization_add = 1
 		building_group_bg_plantations_allowed_collectivization_add = 1
 		building_group_bg_ranching_allowed_collectivization_add = 1
-		country_farmers_pol_str_mult = 0.5
-		state_farmers_investment_pool_efficiency_mult = 0.5
+		country_farmers_pol_str_mult = 1
+		state_farmers_investment_pool_efficiency_mult = 1
 	}
 	on_enact = {
 		if = {

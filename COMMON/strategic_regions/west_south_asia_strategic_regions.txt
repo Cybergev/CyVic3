@@ -37,7 +37,7 @@ region_bengal = {
 	graphical_culture = "arabic"
 	capital_province = x0A2277
 	map_color = { 255 182 193 }
-	states = { STATE_BIHAR STATE_EAST_BENGAL STATE_WEST_BENGAL STATE_ASSAM STATE_ORISSA }
+	states = { STATE_EAST_BENGAL STATE_WEST_BENGAL STATE_ASSAM STATE_EASTERN_HIMALAYAS }
 }
 
 region_bombay = {
@@ -58,12 +58,12 @@ region_himalayas = {
 	graphical_culture = "asian"
 	capital_province = x06698A
 	map_color = { 177 207 205 }
-	states = { STATE_HIMALAYAS STATE_LHASA STATE_NGARI STATE_KASHMIR STATE_EASTERN_HIMALAYAS }
+	states = { STATE_LHASA STATE_NGARI STATE_KASHMIR }
 }
 
 region_central_india = {
 	graphical_culture = "arabic"
 	capital_province = x13E50E
 	map_color = { 0.392 0.863 1 }
-	states = { STATE_CENTRAL_PROVINCES STATE_AWADH STATE_MALWA STATE_AGRA STATE_BUNDELKHAND }
+	states = { STATE_CENTRAL_PROVINCES STATE_AWADH STATE_MALWA STATE_AGRA STATE_BUNDELKHAND STATE_HIMALAYAS STATE_BIHAR STATE_ORISSA }
 }

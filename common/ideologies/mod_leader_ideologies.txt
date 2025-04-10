@@ -470,6 +470,12 @@ ideology_positivist = {
 		law_elected_bureaucrats = disapprove
 		law_appointed_bureaucrats = approve
 	}
+	lawgroup_church_and_state = {
+		law_state_religion = strongly_disapprove
+		law_freedom_of_conscience = disapprove
+		law_total_separation = neutral
+		law_state_atheism = approve
+	}
 	lawgroup_education_system = {
 		law_public_schools = approve
 		law_private_schools = neutral
