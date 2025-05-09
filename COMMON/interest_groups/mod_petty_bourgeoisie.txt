@@ -4,9 +4,9 @@
 	layer = "revolution_dynamic_petty_bourgeoisie"
 	index = 5
 	ideologies = {
-		ideology_meritocratic
 		ideology_reactionary
 		ideology_patriotic
+		ideology_meritocratic
 	}
 	character_ideologies = {
 		ideology_moderate
@@ -73,7 +73,10 @@
 			else_if = {
 				limit = {
 					owner = {
-						c:GBR ?= this
+						OR = {
+							c:ENG ?= this
+							c:GBR ?= this
+						}
 					}
 				}
 				set_ig_trait = ig_trait:ig_trait_bah_humbug

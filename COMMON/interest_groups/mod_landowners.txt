@@ -6,7 +6,6 @@
 	ideologies = {
 		ideology_paternalistic
 		ideology_stratocratic
-		ideology_patriarchal
 	}
 	character_ideologies = {
 		ideology_moderate
@@ -138,7 +137,9 @@
 			ig:ig_landowners = {
 				set_interest_group_name = ig_junkers
 				remove_ideology = ideology_paternalistic
+				remove_ideology = ideology_stratocratic
 				add_ideology = ideology_junker_paternalistic
+				add_ideology = ideology_stratocratic
 			}
 		}
 		# Gentry Assembly
@@ -158,7 +159,9 @@
 			ig:ig_landowners = {
 				set_interest_group_name = ig_roman_landowners
 				remove_ideology = ideology_paternalistic
+				remove_ideology = ideology_stratocratic
 				add_ideology = ideology_papal_paternalistic
+				add_ideology = ideology_stratocratic
 			}
 		}
 		# Ali'i
@@ -168,7 +171,6 @@
 			}
 			ig:ig_landowners = {
 				set_interest_group_name = ig_alii
-				add_ideology = ideology_loyalist
 			}
 		}
 		# Landed Gentry
@@ -197,7 +199,9 @@
 			ig:ig_landowners = {
 				set_interest_group_name = ig_scholar_officials
 				remove_ideology = ideology_paternalistic
+				remove_ideology = ideology_stratocratic
 				add_ideology = ideology_scholar_paternalistic
+				add_ideology = ideology_stratocratic
 			}
 		}
 		# Pious Spanish Landowners
@@ -234,7 +238,9 @@
 			ig:ig_landowners = {
 				set_interest_group_name = ig_southern_planters
 				remove_ideology = ideology_paternalistic
+				remove_ideology = ideology_stratocratic
 				add_ideology = ideology_republican_paternalistic
+				add_ideology = ideology_stratocratic
 			}
 		}
 		# South American Caudillos/republicans
@@ -253,7 +259,9 @@
 			}
 			ig:ig_landowners = {
 				remove_ideology = ideology_paternalistic
+				remove_ideology = ideology_stratocratic
 				add_ideology = ideology_republican_paternalistic
+				add_ideology = ideology_stratocratic
 			}
 		}
 		# India

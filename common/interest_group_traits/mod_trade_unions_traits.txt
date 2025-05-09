@@ -13,11 +13,9 @@ ig_trait_industrial_organizers = {
 	
 	modifier = {
 		building_group_bg_extraction_throughput_add = 0.1
-		building_group_bg_mining_throughput_add = 0.1
 		building_group_bg_manufacturing_throughput_add = 0.1
 		building_group_bg_service_throughput_add = 0.1
 		building_group_bg_infrastructure_throughput_add = 0.1
-		building_group_bg_power_throughput_add = 0.1
 	}
 }
 
@@ -27,10 +25,8 @@ ig_trait_work_to_rule = {
 	
 	modifier = {
 		building_group_bg_extraction_throughput_add = -0.2
-		building_group_bg_mining_throughput_add = -0.2
 		building_group_bg_manufacturing_throughput_add = -0.2
 		building_group_bg_service_throughput_add = -0.2
 		building_group_bg_infrastructure_throughput_add = -0.2
-		building_group_bg_power_throughput_add = -0.2
 	}
 }

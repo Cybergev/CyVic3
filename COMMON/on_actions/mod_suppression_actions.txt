@@ -1,0 +1,12 @@
+﻿on_monthly_pulse_state = {
+	on_actions = {
+		suppression_actions
+	}
+}
+
+suppression_actions = {
+	events = {
+		suppression_event.1
+		suppression_event.2
+	}
+}

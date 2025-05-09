@@ -5,8 +5,8 @@
 	index = 2
 	ideologies = {
 		ideology_plutocratic
-		ideology_laissez_faire
 		ideology_individualist
+		ideology_laissez_faire
 	}
 	character_ideologies = {
 		ideology_moderate

@@ -75,6 +75,7 @@ pm_serfdom_no = {
 pm_homesteading_building_subsistence = {
 	texture = "gfx/interface/icons/production_method_icons/homesteading.dds"
 	unlocking_laws = {
+		law_collectivized_agriculture
 		law_homesteading
 	}
 	building_modifiers = {
@@ -88,6 +89,7 @@ pm_homesteading_building_subsistence = {
 pm_homesteading_building_subsistence_rice_paddies = {
 	texture = "gfx/interface/icons/production_method_icons/homesteading.dds"
 	unlocking_laws = {
+		law_collectivized_agriculture
 		law_homesteading
 	}
 	building_modifiers = {

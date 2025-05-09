@@ -3,9 +3,9 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 20
+			goods_input_wood_add = 80
 			# output goods
-			goods_output_tools_add = 40
+			goods_output_tools_add = 100
 		}
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
@@ -22,10 +22,10 @@ pm_pig_iron = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_hardwood_add = 20
-			goods_input_iron_add = 20
+			goods_input_hardwood_add = 40
+			goods_input_iron_add = 40
 			# output goods
-			goods_output_tools_add = 60
+			goods_output_tools_add = 120
 		}
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
@@ -43,10 +43,10 @@ pm_steel = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_hardwood_add = 20
-			goods_input_steel_add = 20
+			goods_input_hardwood_add = 60
+			goods_input_steel_add = 60
 			# output goods
-			goods_output_tools_add = 80
+			goods_output_tools_add = 160
 		}
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
@@ -65,10 +65,10 @@ pm_rubber_grips = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_rubber_add = 20
-			goods_input_steel_add = 20
+			goods_input_rubber_add = 40
+			goods_input_steel_add = 40
 			# output goods
-			goods_output_tools_add = 100
+			goods_output_tools_add = 200
 		}
 		level_scaled = {
 			building_employment_shopkeepers_add = 500

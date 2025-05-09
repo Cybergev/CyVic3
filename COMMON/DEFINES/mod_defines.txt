@@ -13,6 +13,10 @@ NPops = {
 	MIN_CONVERSION = 25	# If there is any conversion at least this many people will convert
 }
 
+NTechnology = {
+	TECH_SPREAD_RANDOM_RANGE = 1 # How much can distribution of tech spread vary each week
+}
+
 NCountry = {
 	INCORPORATION_TIME_SAME_CULTURE = 1	# Years if the state is a Homeland of one of the country's primary cultures
 	INCORPORATION_TIME_SAME_HERITAGE = 5	# Years if the state is a Homeland of a culture that matches of one of the country's primary cultures' Heritage traits

@@ -7,11 +7,6 @@
 			building_group_bg_infrastructure_throughput_add = 0.1
 		}
 	}
-	building_modifiers = {
-		level_scaled = {
-			building_employment_bureaucrats_add = 1000
-		}
-	}
 }
 
 pm_skyscraper_trade_nexus = {
@@ -25,11 +20,6 @@ pm_skyscraper_trade_nexus = {
 	state_modifiers = {
 		workforce_scaled = {
 			building_trade_center_throughput_add = 0.1
-		}
-	}
-	building_modifiers = {
-		level_scaled = {
-			building_employment_bureaucrats_add = 1000
 		}
 	}
 }

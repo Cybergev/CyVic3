@@ -99,7 +99,8 @@ pm_hereditary_bureaucrats = {
 	}
 	building_modifiers = {
 		level_scaled = {
-			building_employment_aristocrats_add = 500
+			building_employment_aristocrats_add = 1000
+			building_employment_bureaucrats_add = -500
 		}
 	}
 }
@@ -124,7 +125,8 @@ pm_religious_bureaucrats = {
 	}
 	building_modifiers = {
 		level_scaled = {
-			building_employment_clergymen_add = 500
+			building_employment_bureaucrats_add = -500
+			building_employment_clergymen_add = 1000
 		}
 	}
 }

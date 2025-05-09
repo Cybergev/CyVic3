@@ -1,6 +1,6 @@
 ﻿l_russian:
 region_england: "Британия"
-
+fixers: "fixers"
 EUR: "Европа"
 EUR_ADJ: "Европейск"
 
@@ -15,6 +15,11 @@ ideology_positivist_desc: "Этот персонаж выступает за м�
  
 ideology_positivism: "Позитивизм"
 ideology_positivism_desc: "Эта группа выступает за модернизацию, технократию и антиклерикализм, осуждающий как непредсказуемую власть монархов, так и прихоти толпы."
+
+#---------------------------
+
+building_canning_industry: "Консервные заводы"
+building_canning_industry_lens_option: "Расширить Консервные заводы"
 
 building_automobiles_industry: "Автомобильные заводы"
 building_automobiles_industry_lens_option: "Расширить автомобильные заводы"
@@ -55,6 +60,16 @@ building_tanks_industry_lens_option: "Расширить бронетанков�
 pmg_luxury_furniture_manufacturies: "$pmg_luxury_building_furniture_manufacturies$"
 pmg_luxury_textile_manufacturies: "$pmg_luxury_building_textile_mills$"
 
+pm_cannery_meat: "Мясные консервы"
+pm_cannery_fish: "Рыбные консервы"
+pm_cannery: "Консервы"
+pm_vacuum_cannery_meat: "Вакуумные мясные консервы"
+pm_vacuum_cannery_fish: "Вакуумные рыбные консервы"
+pm_vacuum_canning: "Вакуумные консервы"
+pm_vacuum_cannery_meat_principle_3: "Эффектвиные мясные консервы"
+pm_vacuum_cannery_fish_principle_3: "Эффектвиные рыбные консервы"
+pm_vacuum_canning_principle_3: "Эффектвиные консервы"
+
 pm_synthetic_oil: "Просцесс Фишера-Тропша"
 pm_synthetic_opium: "Синтетические опиаты"
 pm_synthetic_rubber: "Процесс разложения скипидара"
@@ -84,3 +99,10 @@ pm_automatic_power_equipment: "Механизированная сборка у�
 pmg_automation_building_chemical_plant: "$pmg_automation_building_tooling_workshops$"
 pm_automatic_chemical_disabled: "Ручное обарудование"
 pm_automatic_power_chemical_equipment: "Автоматизированное обарудование"
+
+#---------------------------
+pm_percussion_lead_caps: "$pm_percussion_caps$"
+pm_percussion_iron_caps: "$pm_percussion_caps$"
+pm_explosive_lead_shells: "$pm_explosive_shells$"
+pm_explosive_iron_shells: "$pm_explosive_shells$"
+pm_explosive_steel_shells: "$pm_explosive_shells$"

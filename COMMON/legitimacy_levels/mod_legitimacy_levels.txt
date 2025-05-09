@@ -1,9 +1,7 @@
 ﻿legitimacy_level_illegitimate = {
 	threshold = 0
 	modifier = {
-		country_authority_mult = -0.5
-		state_radicals_from_political_movements_mult = 0.5
-		state_loyalists_from_political_movements_mult = -0.5
+		country_authority_mult = -1
 		country_must_have_movement_to_enact_laws_bool = yes
 	}
 	# Radicals will multiply by 1.5% - 3.0% each month
@@ -23,10 +21,8 @@
 legitimacy_level_unacceptable = {
 	threshold = 20
 	modifier = {
-		country_authority_mult = -0.25
+		country_authority_mult = -0.5
 		country_law_enactment_time_mult = 0.5
-		state_radicals_from_political_movements_mult = 0.25
-		state_loyalists_from_political_movements_mult = -0.25
 	}
 	# Radicals will multiply by 0% - 1.5% each month
 	loyalties_gain = {
@@ -49,10 +45,7 @@ legitimacy_level_contested = {
 legitimacy_level_legitimate = {
 	threshold = 60
 	modifier = {
-		country_authority_mult = 0.25
 		country_law_enactment_time_mult = -0.25
-		state_radicals_from_political_movements_mult = -0.25
-		state_loyalists_from_political_movements_mult = 0.25
 	}
 	loyalties_gain = {
 		value = legitimacy
@@ -70,10 +63,7 @@ legitimacy_level_legitimate = {
 legitimacy_level_righteous = {
 	threshold = 80
 	modifier = {
-		country_authority_mult = 0.5
 		country_law_enactment_time_mult = -0.5
-		state_radicals_from_political_movements_mult = -0.5
-		state_loyalists_from_political_movements_mult = 0.5
 	}
 	loyalties_gain = {
 		value = legitimacy

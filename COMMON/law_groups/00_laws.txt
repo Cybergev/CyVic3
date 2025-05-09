@@ -54,17 +54,17 @@ lawgroup_church_and_state = {
 	regressive_movement_chance = 0.25
 }
 
-lawgroup_policing = {
-	law_group_category = power_structure
-	progressive_movement_chance = 1.5
-	regressive_movement_chance = 0.15
-}
-
 lawgroup_internal_security = {
 	law_group_category = power_structure
 	affected_by_regime_change = yes
 	progressive_movement_chance = 1.5
 	regressive_movement_chance = 0.1
+}
+
+lawgroup_policing = {
+	law_group_category = power_structure
+	progressive_movement_chance = 1.5
+	regressive_movement_chance = 0.15
 }
 
 lawgroup_army_model = {

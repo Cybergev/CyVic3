@@ -1,107 +1,116 @@
-﻿building_automobiles_industry_throughput_add={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+﻿building_canning_industry_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
-building_distillation_plants_throughput_add={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+building_automobiles_industry_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
-building_hardwood_workshops_throughput_add={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+building_distillation_plants_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
-building_luxury_furniture_manufacturies_throughput_add={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+building_hardwood_workshops_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
-building_luxury_textile_mills_throughput_add={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+building_luxury_furniture_manufacturies_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
-building_porcelain_manufacturies_throughput_add={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+building_luxury_textile_mills_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
-building_radios_industry_throughput_add={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+building_porcelain_manufacturies_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
-building_synthetics_oil_plants_throughput_add={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+building_radios_industry_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
-building_synthetics_opium_plants_throughput_add={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+building_synthetics_oil_plants_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
-building_synthetics_rubber_plants_throughput_add={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+building_synthetics_opium_plants_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
-building_synthetics_silk_plants_throughput_add={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+building_synthetics_rubber_plants_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
-building_tanks_industry_throughput_add={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+building_synthetics_silk_plants_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_tanks_industry_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }

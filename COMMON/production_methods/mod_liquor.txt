@@ -9,7 +9,7 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_grain_add = 60
+			goods_input_grain_add = 80
 			# output goods
 			goods_output_liquor_add = 80
 		}
@@ -34,7 +34,7 @@ pm_patent_stills = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_grain_add = 80
+			goods_input_grain_add = 100
 			# output goods
 			goods_output_liquor_add = 100
 		}

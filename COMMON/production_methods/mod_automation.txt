@@ -566,7 +566,6 @@ pm_steam_donkey_building_coal_mine = {
 		workforce_scaled = {
 			# input goods					
 			goods_input_engines_add = 5
-			goods_output_coal_add = -5
 		}
 		level_scaled = {
 			building_employment_laborers_add = -1000

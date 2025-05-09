@@ -5,7 +5,7 @@
 			# input goods
 			goods_input_tools_add = 5
 			# output goods
-			goods_output_lead_add = 20
+			goods_output_lead_add = 40
 		}
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
@@ -30,7 +30,7 @@ pm_atmospheric_engine_pump_building_lead_mine = {
 			goods_input_tools_add = 10
 			goods_input_coal_add = 10
 			# output goods
-			goods_output_lead_add = 40
+			goods_output_lead_add = 60
 		}
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
@@ -57,7 +57,7 @@ pm_condensing_engine_pump_building_lead_mine = {
 			goods_input_engines_add = 10
 			goods_input_coal_add = 10
 			# output goods
-			goods_output_lead_add = 60
+			goods_output_lead_add = 80
 		}
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
@@ -84,7 +84,7 @@ pm_diesel_pump_building_lead_mine = {
 			goods_input_engines_add = 10
 			goods_input_oil_add = 10
 			# output goods
-			goods_output_lead_add = 80
+			goods_output_lead_add = 100
 		}
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
@@ -110,9 +110,9 @@ pm_nitroglycerin_building_lead_mine = {
 			# input goods
 			goods_input_explosives_add = 5
 			# output goods
-			goods_output_lead_add = 10
 		}
 		unscaled = {
+			building_throughput_add = 0.5
 			building_employment_laborers_add = 1000
 			building_laborers_mortality_mult = 0.3
 			building_machinists_mortality_mult = 0.2
@@ -135,9 +135,9 @@ pm_dynamite_building_lead_mine = {
 		workforce_scaled = {
 			goods_input_explosives_add = 10
 			# output goods
-			goods_output_lead_add = 20
 		}
 		unscaled = {
+			building_throughput_add = 1.0
 			building_employment_laborers_add = 1000
 		}
 	}

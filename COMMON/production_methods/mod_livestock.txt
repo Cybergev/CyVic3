@@ -105,11 +105,6 @@ pm_intensive_grazing_ranch = {
 	unlocking_technologies = {
 		mechanized_farming
 	}
-	unlocking_production_methods = {
-		pm_butchering_tools
-		pm_slaughterhouses
-		pm_mechanized_slaughtering
-	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_grain_add = 20

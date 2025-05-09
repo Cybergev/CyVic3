@@ -1,4 +1,32 @@
-﻿european={
+﻿fixers = {
+	color = { 200 200 200 }
+	religion = atheist
+	traits = { european_heritage american_heritage african_heritage indigenous_american_heritage indigenous_oceanic_heritage middle_eastern_heritage east_asian_heritage south_asian_heritage central_asian_heritage north_asian_heritage }
+	male_common_first_names = {
+		fixer
+	}
+	female_common_first_names = {
+		fixer
+	}
+	noble_last_names = {
+		fixer
+	}
+	common_last_names = {
+		fixer
+	}
+	male_regal_first_names = {
+		fixer
+	}
+	female_regal_first_names = {
+		fixer
+	}
+	graphics = european
+	ethnicities = {
+		1 = caucasian
+	}
+}
+
+european={
 	color = { 50 100 200 }
 	religion = atheist
 	traits = { european_heritage }
@@ -1201,6 +1229,101 @@ armenian={
 }
 
 
+sephardic= {
+	color = { 0.20 0.4 0.4 }
+	religion = jewish
+	traits = { jewish_group european_heritage middle_eastern_heritage }
+	male_common_first_names = {
+		Abraham
+		Amos
+		Baruch
+		Binyamin
+		Daniel
+		David
+		Efraim
+		Ehud
+		Eli
+		Eliezer
+		Elijah
+		Gavriel
+		Hebel
+		Immanuel
+		Itzhak
+		Levi
+		Mattiyahu
+		Mensahe
+		Mikhael
+		Mordecai
+		Moshe
+		Natan
+		Noach
+		Reuben
+		Roi
+		Shalom
+		Shimon
+		Tovia
+		Uriel
+		Uzziel
+		Yaakov
+		Yachin
+		Yafe
+		Yehoshua
+		Yehudah
+		Yochanan
+		Yonatan
+		Yosef
+		Zohar
+	}
+	female_common_first_names = {
+		Barbara
+		Beatrice
+		Cecile
+		Eugenie
+		Inez
+		Irene
+		Noemie
+		Nora
+		Ruth
+		Sonia
+		Yosefa
+	}	
+	noble_last_names = {
+		Abrabanel
+		Camondo
+		Curiel
+		De_Leon
+		Sassoon
+	}
+	common_last_names = {
+		Banai
+		Barak
+		Ben_Ami
+		Benveniste
+		Canetti
+		Cantor
+		Cardoso
+		Cohen
+		Disraeli
+		Gaon
+		Golan
+		Haddad
+		Halevi
+		Levy
+		Maimon
+		Mizrachi
+		Montefiore
+		Peretz
+		Rafaeli
+		Saban
+		Sebag
+	}
+	graphics = european
+	ethnicities = {
+		1 = caucasian
+	}
+}
+
+
 tatar={
 	color= hsv{ 0.53 0.24 0.28 }
 	religion = sunni
@@ -1471,6 +1594,182 @@ mongol={
 	}
 	ethnicities = {
 		1 = central_asian
+	}
+	graphics = east_asian
+}
+
+japanese= {
+	color= hsv{ 0 0 90 }
+	religion = shinto
+	traits = { yamato east_asian_heritage }
+	male_common_first_names = {
+		Aritomo
+		Gentaro
+		Gonnohyoe
+		Goro
+		Hayao
+		Heihachiro
+		Hikonojo
+		Hiroshi
+		Hyoe
+		Iwao
+		Jinzaburo
+		Jiro
+		Kageaki
+		Kagenori
+		Kantaro
+		Kazushige
+		Keisuke
+		Kenkichi
+		Kiyotaka
+		Koichiro
+		Kotohito
+		Kozo
+		Kuranosuke
+		Maresuke
+		Masatake
+		Masujiro
+		Michisura
+		Mineo
+		Mitsue
+		Mitsuomi
+		Nariaki
+		Nobuyoshi
+		Rokuro
+		Sadao
+		Samata
+		Shichiro
+		Shigeru
+		Shigeto
+		Shinsaku
+		Shoin
+		Soroku
+		Sotokichi
+		Sukenori
+		Sukeyuki
+		Sumiyoshi
+		Tadakuni
+		Takamori
+		Takayoshi
+		Takeaki
+		Tamemoto
+		Taro
+		Taruhito
+		Tetsutaro
+		Tomasaburo
+		Tomonosuke
+		Toshimichi
+		Toshiyoshi
+		Tsugumichi
+		Yahachi
+		Yasukata
+		Yasuyoshi
+		Yoshida
+		Yoshifuru
+		Yoshika
+		Yoshimichi
+		Yoshinobu
+		Yoshinori
+		Yusaku
+	}
+	female_common_first_names = {
+		Asako
+		Chikako
+		Ginko
+		Gyokuran
+		Kaho
+		Kei
+		Kin
+		Kumehachi
+		Masako
+		Miki
+		Natsu
+		Nobu
+		Oi
+		Rengetsu
+		Sayoko
+		Teru
+		Toyoko
+		Tsuneko
+	}	
+	noble_last_names = {
+		Hayashi
+		Ito
+		Jutoku
+		Kujo
+		Matsudaira
+		Mitsune
+		Nabeshima
+		Togo
+		Tokugawa
+	}
+	common_last_names = {
+		Akiyama
+		Araki
+		Arichi
+		Arisugawa
+		Dewa
+		Enomoto
+		Hasegawa
+		Honjo
+		Ichinohe
+		Inoue
+		Itagaki
+		Kabayama
+		Kamimura
+		Kamio
+		Kanin
+		Kataoka
+		Kato
+		Katsu
+		Katsura
+		Kawakami
+		Kawamura
+		Kido
+		Kodama
+		Kuroda
+		Kuroki
+		Makino
+		Masaki
+		Minami
+		Muto
+		Nakamuta
+		Nire
+		Nogi
+		Nozu
+		Okada
+		Oku
+		Okubo
+		Omura
+		Osumi
+		Oyama
+		Saigo
+		Sakura
+		Sato
+		Shibayama
+		Shimamura
+		Shirakawa
+		Suzuki
+		Tachibana
+		Takashima
+		Takasugi
+		Tamon
+		Terauchi
+		Tsuboi
+		Ueda
+		Uehara
+		Ugaki
+		Uryu
+		Yamagata
+		Yamakawa
+		Yamamoto
+		Yamashita
+		Yamaya
+		Yashiro
+		Yui
+	}
+	ethnicities = {
+		1 = asian
 	}
 	graphics = east_asian
 }

@@ -7,8 +7,8 @@
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_steel_add = 40
-			goods_output_engines_add = 60
+			goods_input_steel_add = 50
+			goods_output_engines_add = 50
 		}
 		level_scaled = {
 			building_employment_laborers_add = 4000
@@ -31,9 +31,9 @@ pm_electric_engines = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 60
+			goods_input_steel_add = 100
 			# output goods
-			goods_output_engines_add = 80
+			goods_output_engines_add = 100
 		}
 		level_scaled = {
 			building_employment_laborers_add = 3000
@@ -57,9 +57,9 @@ pm_diesel_engines = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 80
+			goods_input_steel_add = 200
 			# output goods
-			goods_output_engines_add = 100
+			goods_output_engines_add = 200
 		}
 		level_scaled = {
 			building_employment_laborers_add = 2500

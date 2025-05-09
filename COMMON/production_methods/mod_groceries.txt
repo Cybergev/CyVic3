@@ -60,11 +60,7 @@ pm_baking_powder = {
 	}
 }
 
-pm_disabled_canning = {
-	texture = "gfx/interface/icons/production_method_icons/no_canning.dds"
-}
-
-pm_cannery = {
+pm_cannery_meat = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	unlocking_technologies = {
 		canneries
@@ -76,6 +72,11 @@ pm_cannery = {
 			goods_input_iron_add = 10
 			# output goods
 			goods_output_groceries_add = 40
+		}
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+			building_employment_shopkeepers_add = 500
 		}
 	}
 }
@@ -93,10 +94,83 @@ pm_cannery_fish = {
 			# output goods
 			goods_output_groceries_add = 40
 		}
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+			building_employment_shopkeepers_add = 500
+		}
 	}
 }
 
-pm_vacuum_canning = {
+pm_cannery = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	unlocking_technologies = {
+		canneries
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_fish_add = 40
+			goods_input_meat_add = 40
+			goods_input_iron_add = 20
+			# output goods
+			goods_output_groceries_add = 80
+		}
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_vacuum_cannery_meat = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
+	replacement_if_valid = pm_vacuum_canning_principle_3
+	unlocking_technologies = {
+		vacuum_canning
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_meat_add = 40
+			goods_input_rubber_add = 10
+			# output goods
+			goods_output_groceries_add = 40
+		}
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_vacuum_cannery_fish = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
+	replacement_if_valid = pm_vacuum_canning_principle_3
+	unlocking_technologies = {
+		vacuum_canning
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_fish_add = 40
+			goods_input_rubber_add = 10
+			# output goods
+			goods_output_groceries_add = 40
+		}
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_vacuum_cannery = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
 	replacement_if_valid = pm_vacuum_canning_principle_3
 	unlocking_technologies = {
@@ -110,6 +184,64 @@ pm_vacuum_canning = {
 			goods_input_rubber_add = 20
 			# output goods
 			goods_output_groceries_add = 80
+		}
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_vacuum_cannery_meat_principle_3 = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
+	is_hidden_when_unavailable = yes
+	unlocking_principles = {
+		principle_food_standardization_3
+	}
+	unlocking_technologies = {
+		vacuum_canning
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_meat_add = 40
+			goods_input_rubber_add = 10
+			# output goods
+			goods_output_groceries_add = 50
+		}
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_vacuum_cannery_fish_principle_3 = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
+	is_hidden_when_unavailable = yes
+	unlocking_principles = {
+		principle_food_standardization_3
+	}
+	unlocking_technologies = {
+		vacuum_canning
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_fish_add = 40
+			goods_input_rubber_add = 10
+			# output goods
+			goods_output_groceries_add = 50
+		}
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+			building_employment_shopkeepers_add = 500
 		}
 	}
 }
@@ -131,6 +263,12 @@ pm_vacuum_canning_principle_3 = {
 			goods_input_rubber_add = 20
 			# output goods
 			goods_output_groceries_add = 100
+		}
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+			building_employment_shopkeepers_add = 500
 		}
 	}
 }

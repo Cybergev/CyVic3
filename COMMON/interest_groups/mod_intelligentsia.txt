@@ -5,9 +5,7 @@
 	index = 3
 	ideologies = {
 		ideology_liberal
-		ideology_anti_clerical
-		ideology_republican
-		ideology_anti_slavery
+		ideology_constitutionalist
 	}
 	character_ideologies = {
 		ideology_moderate
@@ -151,18 +149,6 @@
 			ig:ig_intelligentsia = {
 				remove_ideology = ideology_republican
 				add_ideology = ideology_constitutionalist
-			}
-		}
-		if = {
-			limit = {
-				has_technology_researched = feminism
-			}
-			every_interest_group = {
-				limit = {
-					has_ideology = ideology:ideology_liberal
-				}
-				remove_ideology = ideology_liberal
-				add_ideology = ideology_liberal_modern
 			}
 		}
 	}

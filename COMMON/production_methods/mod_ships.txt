@@ -3,8 +3,8 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 40
-			goods_input_fabric_add = 20
+			goods_input_wood_add = 100
+			goods_input_fabric_add = 100
 			# output goods
 			goods_output_clippers_add = 50
 		}
@@ -25,8 +25,9 @@ pm_complex_shipbuilding = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_hardwood_add = 40
-			goods_input_fabric_add = 40
+			goods_input_hardwood_add = 100
+			goods_input_fabric_add = 100
+			goods_input_engines_add = 100
 			# output goods
 			goods_output_clippers_add = 100
 		}
@@ -53,8 +54,8 @@ pm_metal_shipbuilding = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 20
-			goods_input_engines_add = 50
+			goods_input_steel_add = 100
+			goods_input_engines_add = 100
 			# output goods
 			goods_output_steamers_add = 50
 		}
@@ -81,9 +82,9 @@ pm_arc_welding_shipbuilding = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 40
-			goods_input_engines_add = 100
-			goods_input_electricity_add = 20
+			goods_input_steel_add = 200
+			goods_input_engines_add = 200
+			goods_input_electricity_add = 40
 			# output goods
 			goods_output_steamers_add = 100
 		}
@@ -103,8 +104,8 @@ pm_military_shipbuilding_wooden = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input goods
-			goods_input_wood_add = 40
-			goods_input_fabric_add = 20
+			goods_input_wood_add = 200
+			goods_input_fabric_add = 100
 			# output goods
 			goods_output_manowars_add = 50
 		}
@@ -125,11 +126,11 @@ pm_military_shipbuilding_wooden_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input goods
-			goods_input_hardwood_add = 60
-			goods_input_fabric_add = 40
-			goods_input_engines_add = 50
+			goods_input_hardwood_add = 200
+			goods_input_fabric_add = 100
+			goods_input_engines_add = 100
 			# output goods
-			goods_output_manowars_add = 50
+			goods_output_manowars_add = 100
 		}
 		level_scaled = {
 			# employment
@@ -149,8 +150,8 @@ pm_military_shipbuilding_steam = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input goods
-			goods_input_steel_add = 40
-			goods_input_engines_add = 50
+			goods_input_steel_add = 200
+			goods_input_engines_add = 100
 			# output goods
 			goods_output_ironclads_add = 50
 		}
@@ -172,9 +173,9 @@ pm_military_shipbuilding_steam_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input
-			goods_input_steel_add = 80
-			goods_input_engines_add = 100
-			goods_input_electricity_add = 20
+			goods_input_steel_add = 400
+			goods_input_engines_add = 200
+			goods_input_electricity_add = 40
 			# output goods
 			goods_output_ironclads_add = 100
 		}

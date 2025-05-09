@@ -9,7 +9,6 @@
 	}
 	production_method_groups = {
 		pmg_base_building_food_industry
-		pmg_canning
 		pmg_automation_building_food_industry
 	}
 	required_construction = construction_cost_high

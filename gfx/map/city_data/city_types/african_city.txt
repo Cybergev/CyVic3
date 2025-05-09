@@ -47,6 +47,9 @@
 	building_food_industry = {
 		"african_manufactory_01_mesh"
 	}
+	building_canning_industry = {
+		"african_furniture_manufactory_01_mesh"
+	}
 	building_distillation_plants = {
 		"african_manufactory_01_mesh"
 	}

@@ -112,6 +112,15 @@ state_trait_kronstadt_island = {
 	}
 }
 
+state_trait_tihamah = {
+	icon = "gfx/interface/icons/state_trait_icons/poor_soils.dds"
+	modifier = {
+        building_group_bg_ranching_throughput_add = -0.1
+		building_group_bg_agriculture_throughput_add = -0.1
+		building_group_bg_plantations_throughput_add = -0.1
+    }
+}
+
 state_trait_manila_bay = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
@@ -184,6 +193,48 @@ state_trait_nagasaki_bay = {
 
 state_trait_halifax_harbor = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_port_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		building_naval_base_throughput_add = 0.1
+	}
+}
+
+state_trait_new_york_harbor = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_port_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		building_naval_base_throughput_add = 0.1
+	}
+}
+
+state_trait_newark_harbor = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_port_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		building_naval_base_throughput_add = 0.1
+	}
+}
+
+state_trait_cordillera_de_la_costa = {
+	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_port_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		building_naval_base_throughput_add = 0.1
+	}
+}
+
+state_trait_canales_patagonicos = {
+	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1

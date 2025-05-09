@@ -1,0 +1,11 @@
+﻿pmg_base_building_munition_plants = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_percussion_lead_caps
+		pm_percussion_iron_caps
+		pm_explosive_lead_shells
+		pm_explosive_iron_shells
+		pm_explosive_steel_shells
+	}
+}

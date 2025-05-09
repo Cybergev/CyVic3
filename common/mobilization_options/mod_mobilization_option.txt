@@ -117,11 +117,6 @@ mobilization_option_extra_supplies = {
 mobilization_option_luxurious_supplies = {
 	texture = "gfx/interface/icons/mobilization_options/luxurious_supplies.dds"
 	possible = {
-		scope:military_formation = {
-			NOT = {
-				has_mobilization_option = mobilization_option:mobilization_option_extra_supplies
-			}
-		}
 		market ?= {
 			mg:liquor ?= {
 				market_goods_sell_orders > 0
@@ -783,8 +778,8 @@ mobilization_option_first_aid = {
 		}
 	}
 	upkeep_modifier = {
-		goods_input_fabric_add = 1
-		goods_input_liquor_add = 1
+		goods_input_fabric_add = 5
+		goods_input_liquor_add = 5
 	}
 	unit_modifier = {
 		unit_recovery_rate_add = 0.25
@@ -835,8 +830,8 @@ mobilization_option_field_hospitals = {
 		}
 	}
 	upkeep_modifier = {
-		goods_input_tools_add = 1
-		goods_input_opium_add = 1
+		goods_input_tools_add = 5
+		goods_input_opium_add = 5
 	}
 	unit_modifier = {
 		unit_recovery_rate_add = 0.5

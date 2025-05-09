@@ -184,6 +184,18 @@ pm_citrus_orchards = {
 	}
 }
 
+pm_fig_orchards = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fertilizer_add = 10
+			goods_output_fruit_add = 10
+			goods_output_sugar_add = 10
+		}
+	}
+}						
+
 pm_fig_orchards_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
 	building_modifiers = {

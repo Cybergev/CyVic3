@@ -24,8 +24,8 @@ pm_coal-fired_plant = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 10
-			goods_input_coal_add = 10
+			goods_input_engines_add = 20
+			goods_input_coal_add = 20
 			goods_output_electricity_add = 200
 		}
 		level_scaled = {
@@ -47,8 +47,8 @@ pm_oil-fired_plant = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 10
-			goods_input_oil_add = 10
+			goods_input_engines_add = 30
+			goods_input_oil_add = 30
 			goods_output_electricity_add = 300
 		}
 		level_scaled = {

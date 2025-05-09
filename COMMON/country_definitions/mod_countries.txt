@@ -1,56 +1,56 @@
 ﻿EUR = {
 	color = { 100 100 100 }
-	
 	country_type = recognized
-
 	tier = hegemony
-	
-	cultures = {
-		european
-	}
+	cultures = { european }
 	capital = STATE_FLANDERS
+}
+
+ENG = {
+	color = { 150 50 50 }
+	country_type = recognized
+	tier = kingdom
+	cultures = { british }
+	capital = STATE_HOME_COUNTIES
 }
 
 UNL = {
 	color = { 255 120 30 }
-	
 	country_type = recognized
-
 	tier = empire
-	
 	cultures = { dutch }
 	capital = STATE_HOLLAND
 }
 
 PER = {
 	color = "PER_base_color"
-	
 	country_type = unrecognized
-	
 	tier = empire
-	
 	cultures = { persian }
 	capital = STATE_IRAKAJEMI
 }
 
 PAN = {
 	color = { 255  87  127 }
-	
 	country_type = unrecognized
-	
-	tier = kingdom
-	
+	tier = empire
 	cultures = { panjabi }
 	capital = STATE_PUNJAB
 }
 
+ISR = {
+	color = { 150  212  214 }
+	country_type = colonial
+	tier = principality
+	cultures = { sephardic }
+	religion = jewish
+	capital = STATE_PALESTINE
+}
+
 AWS = {
 	color = { 75 50 100 }
-	
 	country_type = unrecognized
-	
 	tier = principality
-	
 	cultures = { afar }
-	capital = STATE_GONDER
+	capital = STATE_ERITREA
 }

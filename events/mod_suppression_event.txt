@@ -1,0 +1,546 @@
+﻿namespace = suppression_event
+suppression_event.1 = {
+	type = state_event
+	hidden = yes
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					owner = {
+						any_overlord_or_above = {
+							AND = {
+								has_modifier = suppression_colonial_manufacturing_industry_policy
+								OR = {
+									has_diplomatic_pact = {
+										who = PREV
+										type = puppet
+									}
+									has_diplomatic_pact = {
+										who = PREV
+										type = colony
+									}
+									has_diplomatic_pact = {
+										who = PREV
+										type = vassal
+									}
+								}
+							}
+						}
+					}
+					AND = {
+						owner = {
+							has_modifier = suppression_colonial_manufacturing_industry_policy
+						}
+						is_incorporated = no
+					}
+				}
+				any_scope_building = {
+					OR = {
+						is_building_group = bg_manufacturing
+						is_building_type = building_railway
+						is_building_type = building_arts_academy
+					}
+					not = {
+						has_modifier = suppression_modifier
+					}
+					count > 0
+				}
+			}
+			AND = {
+				OR = {
+					owner = {
+						any_overlord_or_above = {
+							AND = {
+								has_modifier = suppression_colonial_agricultural_industry_policy
+								OR = {
+									has_diplomatic_pact = {
+										who = PREV
+										type = puppet
+									}
+									has_diplomatic_pact = {
+										who = PREV
+										type = colony
+									}
+									has_diplomatic_pact = {
+										who = PREV
+										type = vassal
+									}
+								}
+							}
+						}
+					}
+					AND = {
+						owner = {
+							has_modifier = suppression_colonial_agricultural_industry_policy
+						}
+						is_incorporated = no
+					}
+				}
+				any_scope_building = {
+					OR = {
+						is_building_group = bg_agriculture
+						is_building_group = bg_plantations
+						is_building_group = bg_ranching
+					}
+					not = {
+						has_modifier = suppression_modifier
+					}
+				}
+			}
+			AND = {
+				OR = {
+					owner = {
+						any_overlord_or_above = {
+							AND = {
+								has_modifier = suppression_colonial_resource_industry_policy
+								OR = {
+									has_diplomatic_pact = {
+										who = PREV
+										type = puppet
+									}
+									has_diplomatic_pact = {
+										who = PREV
+										type = colony
+									}
+									has_diplomatic_pact = {
+										who = PREV
+										type = vassal
+									}
+								}
+							}
+						}
+					}
+					AND = {
+						owner = {
+							has_modifier = suppression_colonial_resource_industry_policy
+						}
+						is_incorporated = no
+					}
+				}
+				any_scope_building = {
+					OR = {
+						is_building_group = bg_mining
+						is_building_group = bg_logging
+						is_building_group = bg_whaling
+						is_building_group = bg_oil_extraction
+						is_building_group = bg_rubber
+					}
+					not = {
+						has_modifier = suppression_modifier
+					}
+				}
+			}
+		}
+	}
+	immediate = {
+		every_scope_building = {
+			if = {
+				limit = {
+					state = {
+						OR = {
+							owner = {
+								any_overlord_or_above = {
+									AND = {
+										has_modifier = suppression_colonial_manufacturing_industry_policy
+										OR = {
+											has_diplomatic_pact = {
+												who = PREV
+												type = puppet
+											}
+											has_diplomatic_pact = {
+												who = PREV
+												type = colony
+											}
+											has_diplomatic_pact = {
+												who = PREV
+												type = vassal
+											}
+										}
+									}
+								}
+							}
+							AND = {
+								owner = {
+									has_modifier = suppression_colonial_manufacturing_industry_policy
+								}
+								is_incorporated = no
+							}
+						}
+					}
+					AND = {
+						OR = {
+							is_building_group = bg_manufacturing
+							is_building_type = building_railway
+							is_building_type = building_arts_academy
+						}
+						not = {
+							has_modifier = suppression_modifier
+						}
+					}
+				}
+				add_modifier = suppression_modifier
+			}
+			if = {
+				limit = {
+					state = {
+						OR = {
+							owner = {
+								any_overlord_or_above = {
+									AND = {
+										has_modifier = suppression_colonial_agricultural_industry_policy
+										OR = {
+											has_diplomatic_pact = {
+												who = PREV
+												type = puppet
+											}
+											has_diplomatic_pact = {
+												who = PREV
+												type = colony
+											}
+											has_diplomatic_pact = {
+												who = PREV
+												type = vassal
+											}
+										}
+									}
+								}
+							}
+							AND = {
+								owner = {
+									has_modifier = suppression_colonial_agricultural_industry_policy
+								}
+								is_incorporated = no
+							}
+						}
+					}
+					AND = {
+						OR = {
+							is_building_group = bg_agriculture
+							is_building_group = bg_plantations
+							is_building_group = bg_ranching
+						}
+						not = {
+							has_modifier = suppression_modifier
+						}
+					}
+				}
+				add_modifier = suppression_modifier
+			}
+			if = {
+				limit = {
+					state = {
+						OR = {
+							owner = {
+								any_overlord_or_above = {
+									AND = {
+										has_modifier = suppression_colonial_resource_industry_policy
+										OR = {
+											has_diplomatic_pact = {
+												who = PREV
+												type = puppet
+											}
+											has_diplomatic_pact = {
+												who = PREV
+												type = colony
+											}
+											has_diplomatic_pact = {
+												who = PREV
+												type = vassal
+											}
+										}
+									}
+								}
+							}
+							AND = {
+								owner = {
+									has_modifier = suppression_colonial_resource_industry_policy
+								}
+								is_incorporated = no
+							}
+						}
+					}
+					AND = {
+						OR = {
+							is_building_group = bg_mining
+							is_building_group = bg_logging
+							is_building_group = bg_whaling
+							is_building_group = bg_oil_extraction
+							is_building_group = bg_rubber
+						}
+						not = {
+							has_modifier = suppression_modifier
+						}
+					}
+				}
+				add_modifier = suppression_modifier
+			}
+		}
+	}
+}
+
+suppression_event.2 = {
+	type = state_event
+	hidden = yes
+	trigger = {
+		OR = {
+			AND = {
+				NOR = {
+					owner = {
+						any_overlord_or_above = {
+							AND = {
+								has_modifier = suppression_colonial_manufacturing_industry_policy
+								OR = {
+									has_diplomatic_pact = {
+										who = PREV
+										type = puppet
+									}
+									has_diplomatic_pact = {
+										who = PREV
+										type = colony
+									}
+									has_diplomatic_pact = {
+										who = PREV
+										type = vassal
+									}
+								}
+							}
+						}
+					}
+					AND = {
+						owner = {
+							has_modifier = suppression_colonial_manufacturing_industry_policy
+						}
+						is_incorporated = no
+					}
+				}
+				any_scope_building = {
+					OR = {
+						is_building_group = bg_manufacturing
+						is_building_type = building_railway
+						is_building_type = building_arts_academy
+					}
+					has_modifier = suppression_modifier
+					count > 0
+				}
+			}
+			AND = {
+				OR = {
+					owner = {
+						any_overlord_or_above = {
+							AND = {
+								has_modifier = suppression_colonial_agricultural_industry_policy
+								OR = {
+									has_diplomatic_pact = {
+										who = PREV
+										type = puppet
+									}
+									has_diplomatic_pact = {
+										who = PREV
+										type = colony
+									}
+									has_diplomatic_pact = {
+										who = PREV
+										type = vassal
+									}
+								}
+							}
+						}
+					}
+					AND = {
+						owner = {
+							has_modifier = suppression_colonial_agricultural_industry_policy
+						}
+						is_incorporated = no
+					}
+				}
+				any_scope_building = {
+					OR = {
+						is_building_group = bg_agriculture
+						is_building_group = bg_plantations
+						is_building_group = bg_ranching
+					}
+					has_modifier = suppression_modifier
+				}
+			}
+			AND = {
+				OR = {
+					owner = {
+						any_overlord_or_above = {
+							AND = {
+								has_modifier = suppression_colonial_resource_industry_policy
+								OR = {
+									has_diplomatic_pact = {
+										who = PREV
+										type = puppet
+									}
+									has_diplomatic_pact = {
+										who = PREV
+										type = colony
+									}
+									has_diplomatic_pact = {
+										who = PREV
+										type = vassal
+									}
+								}
+							}
+						}
+					}
+					AND = {
+						owner = {
+							has_modifier = suppression_colonial_resource_industry_policy
+						}
+						is_incorporated = no
+					}
+				}
+				any_scope_building = {
+					OR = {
+						is_building_group = bg_mining
+						is_building_group = bg_logging
+						is_building_group = bg_whaling
+						is_building_group = bg_oil_extraction
+						is_building_group = bg_rubber
+					}
+					has_modifier = suppression_modifier
+				}
+			}
+		}
+	}
+	immediate = {
+		every_scope_building = {
+			if = {
+				limit = {
+					state = {
+						NOR = {
+							owner = {
+								any_overlord_or_above = {
+									AND = {
+										has_modifier = suppression_colonial_manufacturing_industry_policy
+										OR = {
+											has_diplomatic_pact = {
+												who = PREV
+												type = puppet
+											}
+											has_diplomatic_pact = {
+												who = PREV
+												type = colony
+											}
+											has_diplomatic_pact = {
+												who = PREV
+												type = vassal
+											}
+										}
+									}
+								}
+							}
+							AND = {
+								owner = {
+									has_modifier = suppression_colonial_manufacturing_industry_policy
+								}
+								is_incorporated = no
+							}
+						}
+					}
+					AND = {
+						OR = {
+							is_building_group = bg_manufacturing
+							is_building_type = building_railway
+							is_building_type = building_arts_academy
+						}
+						has_modifier = suppression_modifier
+					}
+				}
+				remove_modifier = suppression_modifier
+			}
+			if = {
+				limit = {
+					state = {
+						NOR = {
+							owner = {
+								any_overlord_or_above = {
+									AND = {
+										has_modifier = suppression_colonial_agricultural_industry_policy
+										OR = {
+											has_diplomatic_pact = {
+												who = PREV
+												type = puppet
+											}
+											has_diplomatic_pact = {
+												who = PREV
+												type = colony
+											}
+											has_diplomatic_pact = {
+												who = PREV
+												type = vassal
+											}
+										}
+									}
+								}
+							}
+							AND = {
+								owner = {
+									has_modifier = suppression_colonial_agricultural_industry_policy
+								}
+								is_incorporated = no
+							}
+						}
+					}
+					AND = {
+						NOR = {
+							is_building_group = bg_agriculture
+							is_building_group = bg_plantations
+							is_building_group = bg_ranching
+						}
+						has_modifier = suppression_modifier
+					}
+				}
+				remove_modifier = suppression_modifier
+			}
+			if = {
+				limit = {
+					state = {
+						NOR = {
+							owner = {
+								any_overlord_or_above = {
+									AND = {
+										has_modifier = suppression_colonial_resource_industry_policy
+										OR = {
+											has_diplomatic_pact = {
+												who = PREV
+												type = puppet
+											}
+											has_diplomatic_pact = {
+												who = PREV
+												type = colony
+											}
+											has_diplomatic_pact = {
+												who = PREV
+												type = vassal
+											}
+										}
+									}
+								}
+							}
+							AND = {
+								owner = {
+									has_modifier = suppression_colonial_resource_industry_policy
+								}
+								is_incorporated = no
+							}
+						}
+					}
+					AND = {
+						OR = {
+							is_building_group = bg_mining
+							is_building_group = bg_logging
+							is_building_group = bg_whaling
+							is_building_group = bg_oil_extraction
+							is_building_group = bg_rubber
+						}
+						has_modifier = suppression_modifier
+					}
+				}
+				remove_modifier = suppression_modifier
+			}
+		}
+	}
+}

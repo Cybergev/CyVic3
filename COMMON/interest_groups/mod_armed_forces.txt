@@ -4,9 +4,9 @@
 	layer = "revolution_dynamic_armed_forces"
 	index = 0
 	ideologies = {
-		ideology_meritocratic
 		ideology_jingoist
 		ideology_patriotic
+		ideology_meritocratic
 	}
 	character_ideologies = {
 		ideology_moderate
@@ -125,7 +125,13 @@
 				}
 			}
 			ig:ig_armed_forces = {
+				remove_ideology = ideology_jingoist
+				remove_ideology = ideology_patriotic
+				remove_ideology = ideology_meritocratic
 				add_ideology = ideology_bakufu
+				add_ideology = ideology_jingoist
+				add_ideology = ideology_patriotic
+				add_ideology = ideology_meritocratic
 				set_interest_group_name = ig_samurai
 			}
 		}
@@ -146,7 +152,10 @@
 			ig:ig_armed_forces = {
 				set_interest_group_name = ig_khalsaji
 				remove_ideology = ideology_jingoist
+				remove_ideology = ideology_patriotic
+				remove_ideology = ideology_meritocratic
 				add_ideology = ideology_sikh_militancy
+				add_ideology = ideology_meritocratic
 			}
 		}
 	}

@@ -1,30 +1,19 @@
 ﻿institution_home_affairs = {
 	icon = "gfx/interface/icons/institution_icons/home_affairs.dds"
 	background_texture = "gfx/interface/illustrations/institutions/home_affairs.dds"
-	modifier = {
-		country_revolution_progress_mult = -0.05
-		country_secession_progress_mult = -0.05
-		country_leverage_resistance_mult = 0.05
-	}
 }
 
 institution_police = {
 	icon = "gfx/interface/icons/institution_icons/police.dds"
-    background_texture = "gfx/interface/illustrations/institutions/police.dds"
-	modifier = {
-		state_turmoil_effects_mult = -0.05
-		state_radicals_from_political_movements_mult = -0.05
-		state_radicalism_increases_violent_hostility_mult = -0.05
-		state_radicalism_increases_cultural_erasure_mult = -0.05
-		state_radicalism_increases_open_prejudice_mult = -0.05
-	}
+	background_texture = "gfx/interface/illustrations/institutions/police.dds"
 }
 
 institution_health_system = {
 	icon = "gfx/interface/icons/institution_icons/health_service.dds"
 	background_texture = "gfx/interface/illustrations/institutions/health_service.dds"
-	modifier = {
-		state_pollution_reduction_health_mult = -0.02
-		state_mortality_mult = -0.02
-	}
+}
+
+institution_social_security = {
+	icon = "gfx/interface/icons/institution_icons/social_security.dds"
+	background_texture = "gfx/interface/illustrations/institutions/social_security.dds"
 }

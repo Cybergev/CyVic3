@@ -34,6 +34,61 @@ urban_planning = {
 	}
 }
 
+academia = {
+	# Unlocks University building
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+	category = society
+	
+	modifier = {
+		country_institution_schools_max_investment_add = 1
+	}
+	
+	unlocking_technologies = {
+		rationalism
+	}
+	
+	ai_weight = {
+		value = 1.5 # Important in general
+	}
+}
+
+rationalism = {
+	# Unlocks Freedom of Conscience - Church and State Law
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/rationalism.dds"
+	category = society
+	
+	modifier = {
+		country_institution_schools_max_investment_add = 1
+	}
+	
+	ai_weight = {
+		value = 3 # Very important in general
+	}
+}
+
+empiricism = {
+	# Unlocks Total Separation - Church and State Law
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/empiricism.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.1
+		country_diplomatic_play_maneuvers_add = 10
+		country_institution_schools_max_investment_add = 1
+	}
+	
+	unlocking_technologies = {
+		academia
+	}
+	
+	ai_weight = {
+		value = 1.5 # Important in general
+	}
+}
+
 modern_sewerage = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/modern_sewerage.dds"
@@ -152,18 +207,15 @@ central_planning = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/central_planning.dds"
 	category = society
-	
 	modifier = {
 		state_tax_capacity_add = 25
-		country_government_dividends_efficiency_add = 0.10
+		country_government_dividends_efficiency_add = 0.1
 	}
-	
 	unlocking_technologies = {
 		identification_documents
 	}
-	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5		# Important in general
 	}
 }
 
@@ -171,19 +223,16 @@ macroeconomics = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/macroeconomics.dds"
 	category = society
-	
 	modifier = {
 		country_max_companies_add = 1
-		state_market_access_price_impact = 0.10
+		state_market_access_price_impact = 0.1
 	}
-	
 	unlocking_technologies = {
 		international_exchange_standards
 		corporate_management
 	}
-	
 	ai_weight = {
-		value = 3 # very important tech
+		value = 3		# very important tech
 	}
 }
 
@@ -193,14 +242,101 @@ modern_financial_instruments = {
 	category = society
 	modifier = {
 		country_minting_mult = 0.1
-		country_loan_interest_rate_add = -0.02	
-		country_government_dividends_efficiency_add = 0.10
+		country_loan_interest_rate_add = -0.02
+		country_government_dividends_efficiency_add = 0.1
 	}
 	unlocking_technologies = {
 		international_exchange_standards
 	}
-	
 	ai_weight = {
 		value = 1
+	}
+}
+
+socialism = {
+	# Unlocks Council Republic - Governance Principles Law
+	# Unlocks Graduated Taxation - Income Taxation Law
+	# New leaders may spawn with the Social Democrat, Communist Ideologies
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/socialism.dds"
+	category = society
+	modifier = {
+		state_expected_sol_from_literacy = 1
+		country_institution_workplace_safety_max_investment_add = 2
+	}
+	on_researched = {
+		if = {
+			limit = {
+				NOT = {
+					has_variable = socialism_researched
+				}
+			}
+			set_variable = socialism_researched
+			ig:ig_trade_unions = {
+				remove_ideology = ideology_populist
+				add_ideology = ideology_socialist
+			}
+		}
+	}
+	unlocking_technologies = {
+		labor_movement
+		dialectics
+	}
+	ai_weight = {
+		value = 1
+		if = {
+			limit = {
+				has_strategy = ai_strategy_egalitarian_agenda
+			}
+			add = -0.5
+		}
+		if = {
+			limit = {
+				OR = {
+					has_strategy = ai_strategy_conservative_agenda
+					has_strategy = ai_strategy_reactionary_agenda
+				}
+			}
+			add = 1
+		}
+	}
+}
+
+feminism = {
+	# Unlocks Women in the Workplace - Rights of Women Law
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/feminism.dds"
+	category = society
+	on_researched = {
+		if = {
+			limit = {
+				NOT = {
+					has_variable = feminism_researched
+				}
+			}
+			set_variable = feminism_researched
+		}
+	}
+	unlocking_technologies = {
+		human_rights
+	}
+	ai_weight = {
+		value = 1
+		if = {
+			limit = {
+				has_strategy = ai_strategy_egalitarian_agenda
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				OR = {
+					has_strategy = ai_strategy_conservative_agenda
+					has_strategy = ai_strategy_reactionary_agenda
+					has_strategy = ai_strategy_maintain_mandate_of_heaven
+				}
+			}
+			add = -0.5
+		}
 	}
 }

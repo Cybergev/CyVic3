@@ -1,0 +1,23 @@
+﻿pmg_base_building_food_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_bakery
+		pm_sweeteners
+		pm_baking_powder
+	}
+}
+
+pmg_canning = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_cannery_meat
+		pm_cannery_fish
+		pm_cannery
+		pm_vacuum_cannery_meat
+		pm_vacuum_cannery_fish
+		pm_vacuum_canning
+		pm_vacuum_cannery_meat_principle_3
+		pm_vacuum_cannery_fish_principle_3
+		pm_vacuum_canning_principle_3
+	}
+}

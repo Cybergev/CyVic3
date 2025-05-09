@@ -1,10 +1,11 @@
 ﻿decree_road_maintenance = {
 	texture = "gfx/interface/icons/decree/decree_road_maintenance.dds"
 	modifier = {
-		state_construction_mult = 0.1
-		state_infrastructure_mult = 0.1
-		state_infrastructure_from_population_add = 1
+		state_construction_mult = 0.2
+		state_infrastructure_from_population_add = 2
 		state_infrastructure_from_population_max_add = 20
+		state_infrastructure_mult = 0.2
+		building_group_bg_infrastructure_throughput_add = 0.2
 	}
 	unlocking_technologies = {
 		centralization
@@ -59,6 +60,186 @@
 				}
 			}
 			multiply = 0
+		}
+	}
+}
+
+decree_encourage_manufacturing_industry = {
+	texture = "gfx/interface/icons/decree/decree_encourage_manufacturing_industry.dds"
+	unlocking_technologies = {
+		manufacturies
+	}
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.2
+		building_group_bg_service_throughput_add = 0.2
+	}
+	cost = 100
+	ai_weight = {
+		value = 0
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_group = bg_manufacturing
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_group = bg_manufacturing
+					count >= 3
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_group = bg_manufacturing
+					count >= 5
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_strategy = ai_strategy_industrial_expansion
+				}
+			}
+			multiply = 1.5
+		}
+	}
+}
+
+decree_encourage_agricultural_industry = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	unlocking_technologies = {
+		enclosure
+	}
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.2
+		building_group_bg_plantations_throughput_add = 0.2
+		building_group_bg_ranching_throughput_add = 0.2
+	}
+	cost = 100
+	ai_weight = {
+		value = 0
+		if = {
+			limit = {
+				any_scope_building = {
+					OR = {
+						is_building_group = bg_agriculture
+						is_building_group = bg_ranching
+						is_building_group = bg_plantations
+					}
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					OR = {
+						is_building_group = bg_agriculture
+						is_building_group = bg_ranching
+						is_building_group = bg_plantations
+					}
+					count >= 3
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					OR = {
+						is_building_group = bg_agriculture
+						is_building_group = bg_ranching
+						is_building_group = bg_plantations
+					}
+					count >= 5
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_plantation_economy
+						has_strategy = ai_strategy_agricultural_expansion
+					}
+				}
+			}
+			multiply = 1.5
+		}
+	}
+}
+
+decree_encourage_resource_industry = {
+	texture = "gfx/interface/icons/decree/decree_encourage_resource_industry.dds"
+	unlocking_technologies = {
+		shaft_mining
+	}
+	modifier = {
+		building_group_bg_extraction_throughput_add = 0.2
+	}
+	cost = 100
+	ai_weight = {
+		value = 0
+		if = {
+			limit = {
+				any_scope_building = {
+					OR = {
+						is_building_group = bg_mining
+						is_building_group = bg_logging
+						is_building_group = bg_fishing
+						is_building_group = bg_whaling
+						is_building_group = bg_oil_extraction
+					}
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					OR = {
+						is_building_group = bg_mining
+						is_building_group = bg_logging
+						is_building_group = bg_fishing
+						is_building_group = bg_whaling
+						is_building_group = bg_oil_extraction
+					}
+					count >= 3
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					OR = {
+						is_building_group = bg_mining
+						is_building_group = bg_logging
+						is_building_group = bg_fishing
+						is_building_group = bg_whaling
+						is_building_group = bg_oil_extraction
+					}
+					count >= 5
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_strategy = ai_strategy_resource_expansion
+				}
+			}
+			multiply = 1.5
 		}
 	}
 }
@@ -289,6 +470,62 @@ decree_violent_suppression = {
 				}
 			}
 			multiply = 0.5
+		}
+	}
+}
+
+decree_add_arable_land = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	state_trigger = {
+		NOT = {
+			has_decree = decree_remove_arable_land
+		}
+	}
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_remove_arable_land = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	state_trigger = {
+		NOT = {
+			has_decree = decree_add_arable_land
+		}
+	}
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_fix_population = {
+	texture = "gfx/interface/icons/decree/decree_violent_suppression.dds"
+	country_trigger = {
+		owner = {
+			any_scope_state = {
+				state_population >= 100000000
+			}
+		}
+	}
+	state_trigger = {
+		state_population >= 100000000
+	}
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+		if = {
+			limit = {
+				state_population >= 100000000
+			}
+			add = 10000
 		}
 	}
 }

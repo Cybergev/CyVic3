@@ -4,6 +4,7 @@
 	potential = {
 		has_dlc_feature = agitators
 		OR = {
+			has_role = ruler
 			has_role = agitator
 			has_role = general
 			has_role = admiral
@@ -264,21 +265,6 @@ invite_exile = {
 			}
 			custom_tooltip = {
 				text = invite_exile_devout_tt
-				religion = scope:actor.religion
-			}
-		}
-		# If you have state religion, exiles must have your religion
-		trigger_if = {
-			limit = {
-				NOT = {
-					is_interest_group_type = ig_devout
-				}
-				scope:actor ?= {
-					has_law = law_type:law_state_religion
-				}
-			}
-			custom_tooltip = {
-				text = invite_exile_state_religion_tt
 				religion = scope:actor.religion
 			}
 		}
@@ -1191,12 +1177,12 @@ political_purge = {
 		}
 		scope:target_ig = {
 			add_radicals = {
-				value = 0.5
+				value = 1
 				interest_group = scope:target_ig
 			}
 			add_modifier = {
 				name = purged_ig
-				months = 12
+				months = 60
 				is_decaying = yes
 			}
 		}

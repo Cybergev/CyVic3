@@ -12,7 +12,7 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 40
+			goods_input_steel_add = 100
 			goods_input_engines_add = 100
 			goods_input_oil_add = 10
 			# output goods

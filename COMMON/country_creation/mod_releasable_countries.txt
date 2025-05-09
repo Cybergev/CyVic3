@@ -1,0 +1,18 @@
+﻿AWS = {
+	states = {
+		STATE_ERITREA
+		STATE_GONDER
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+ISR = {
+	states = {
+		STATE_PALESTINE
+	}
+	ai_will_do = {
+		always = no
+	}
+}
