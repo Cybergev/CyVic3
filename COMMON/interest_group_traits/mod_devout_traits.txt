@@ -6,3 +6,20 @@
 		state_mortality_mult = -0.05
 	}
 }
+
+ig_trait_secular_shrine_theory = {
+	icon = "gfx/interface/icons/ig_trait_icons/be_fruitful_and_multiply.dds"
+	min_approval = loyal
+	modifier = {
+		country_radicals_from_legitimacy_mult = -0.25
+		country_loyalists_from_legitimacy_mult = 0.25
+	}
+}
+
+ig_trait_heavenly_sovereign = {
+	icon = "gfx/interface/icons/ig_trait_icons/divine_right.dds"
+	min_approval = happy
+	modifier = {
+		country_authority_mult = 0.25
+	}
+}

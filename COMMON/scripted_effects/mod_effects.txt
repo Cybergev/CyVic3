@@ -336,16 +336,9 @@
 	remove_variable = chose_conservatism
 	remove_variable = chose_fascism
 }
+
 promote_national_val = {
-	add_modifier = {
-		name = national_values_promotion
-		years = 5
-		is_decaying = yes
-	}
-	random_scope_state = {
-		limit = {
-			is_capital = yes
-		}
+	root.capital = {
 		random_scope_pop = {
 			limit = {
 				culture = {
@@ -355,27 +348,47 @@ promote_national_val = {
 					is_state_religion = ROOT
 				}
 			}
-			culture = {
-				save_scope_as = state_cul
-			}
-			religion = {
-				save_scope_as = state_rel
-			}
+			save_scope_as = promotion_pop
 		}
 	}
-	every_scope_pop = {
-		limit = {
-			NOT = {
-				culture = scope:state_cul
+	root = {
+		every_scope_state = {
+			limit = {
+				has_decree = decree_promote_national_values
+				NOT = {
+					has_modifier = national_values_promotion
+				}
 			}
-		}
-		change_pop_culture = {
-			target = scope:state_cul
-			value = 0.01
-		}
-		change_pop_religion = {
-			target = scope:state_rel
-			value = 0.01
+			random_scope_pop = {
+				limit = {
+					NAND = {
+						culture = {
+							is_primary_culture_of = ROOT
+						}
+						religion = {
+							is_state_religion = ROOT
+						}
+					}
+				}
+				change_pop_culture = {
+					target = scope:promotion_pop.culture
+					value = 0.1
+				}
+				change_pop_religion = {
+					target = scope:promotion_pop.religion
+					value = 0.1
+				}
+			}
+			add_radicals_in_state = {
+				value = 0.2
+			}
+			hidden_effect = {
+				add_modifier = {
+					name = national_values_promotion
+					years = 10
+					is_decaying = yes
+				}
+			}
 		}
 	}
 }

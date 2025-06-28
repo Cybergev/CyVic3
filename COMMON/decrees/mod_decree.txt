@@ -264,6 +264,7 @@ decree_promote_social_mobility = {
 	}
 	modifier = {
 		state_education_access_add = 0.5
+		state_education_access_wealth_add = 0.05
 		state_pop_qualifications_mult = 0.5
 	}
 	cost = 100
@@ -286,6 +287,92 @@ decree_promote_social_mobility = {
 				literacy_rate < 0.75
 			}
 			add = 50
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_conservative_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
+					}
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_progressive_agenda
+						has_strategy = ai_strategy_egalitarian_agenda
+					}
+				}
+			}
+			multiply = 1.5
+		}
+	}
+}
+
+decree_promote_national_values = {
+	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
+	unlocking_technologies = {
+		centralization
+	}
+	modifier = {
+		state_assimilation_mult = 1
+		state_conversion_mult = 1
+	}
+	cost = 100
+	ai_weight = {
+		value = 0
+		if = {
+			limit = {
+				is_incorporated = yes
+				primary_cultures_percent_state < 0.5
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				is_incorporated = yes
+				primary_cultures_percent_state < 0.7
+				any_primary_culture = {
+					has_homeland = prev
+				}
+			}
+			add = 1000
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
+					}
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_strategy = ai_strategy_nationalist_agenda
+				}
+			}
+			add = 200
+		}
+		if = {
+			limit = {
+				state_population < 100000
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				state_population < 300000
+			}
+			multiply = 0.5
 		}
 		if = {
 			limit = {
@@ -501,31 +588,5 @@ decree_remove_arable_land = {
 	cost = 0
 	ai_weight = {
 		value = 0
-	}
-}
-
-decree_fix_population = {
-	texture = "gfx/interface/icons/decree/decree_violent_suppression.dds"
-	country_trigger = {
-		owner = {
-			any_scope_state = {
-				state_population >= 100000000
-			}
-		}
-	}
-	state_trigger = {
-		state_population >= 100000000
-	}
-	modifier = {
-	}
-	cost = 0
-	ai_weight = {
-		value = 0
-		if = {
-			limit = {
-				state_population >= 100000000
-			}
-			add = 10000
-		}
 	}
 }

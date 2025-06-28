@@ -13,8 +13,8 @@ pm_skyscraper_trade_nexus = {
 	texture = "gfx/interface/icons/production_method_icons/skyscraper_trade_nexus.dds"
 	country_modifiers = {
 		workforce_scaled = {
-			country_trade_route_quantity_mult = 0.1
-			country_trade_route_competitiveness_mult = 0.1
+			state_trade_capacity_mult = 0.1
+			state_trade_advantage_mult = 0.1
 		}
 	}
 	state_modifiers = {

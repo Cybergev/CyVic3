@@ -9,14 +9,12 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 80
+			goods_input_wood_add = 50
 			# output goods
-			goods_output_hardwood_add = 80
+			goods_output_hardwood_add = 50
 		}
 		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
+			building_employment_laborers_add = 4500
 			building_employment_shopkeepers_add = 500
 		}
 	}
@@ -30,7 +28,7 @@ pm_increased_hardwood = {
 		}
 	}
 	unlocking_technologies = {
-		steelworking
+		mechanical_tools
 	}
 	building_modifiers = {
 		workforce_scaled = {

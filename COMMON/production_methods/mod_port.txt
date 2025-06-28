@@ -2,6 +2,9 @@
 	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
 	low_pop_method = yes	# AI will activate this method for states with low population
 	building_modifiers = {
+		workforce_scaled = {
+			goods_output_merchant_marine_add = 10
+		}
 		level_scaled = {
 			building_employment_laborers_add = 100
 		}
@@ -18,20 +21,21 @@ pm_basic_port = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_clippers_add = 1
+			goods_output_merchant_marine_add = 20
 		}
 		level_scaled = {
 			building_employment_laborers_add = 500
 			building_employment_bureaucrats_add = 500
 		}
 	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_convoys_capacity_add = 20
-		}
-	}
 	state_modifiers = {
 		level_scaled = {
 			state_infrastructure_add = 2
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 20
 		}
 	}
 }
@@ -45,20 +49,21 @@ pm_industrial_port = {
 		workforce_scaled = {
 			goods_input_steamers_add = 1
 			goods_input_coal_add = 1
+			goods_output_merchant_marine_add = 50
 		}
 		level_scaled = {
 			building_employment_machinists_add = 500
 			building_employment_bureaucrats_add = 500
 		}
 	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_convoys_capacity_add = 50
-		}
-	}
 	state_modifiers = {
 		level_scaled = {
 			state_infrastructure_add = 5
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 50
 		}
 	}
 }
@@ -72,20 +77,21 @@ pm_modern_port = {
 		workforce_scaled = {
 			goods_input_oil_add = 1
 			goods_input_steamers_add = 1
+			goods_output_merchant_marine_add = 100
 		}
 		level_scaled = {
 			building_employment_engineers_add = 500
 			building_employment_bureaucrats_add = 500
 		}
 	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_convoys_capacity_add = 100
-		}
-	}
 	state_modifiers = {
 		level_scaled = {
 			state_infrastructure_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 100
 		}
 	}
 }

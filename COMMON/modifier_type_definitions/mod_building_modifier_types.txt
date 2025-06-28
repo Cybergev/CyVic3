@@ -7,15 +7,6 @@
 	}
 }
 
-building_automobiles_industry_throughput_add = {
-	decimals = 1
-	color = good
-	percent = yes
-	game_data = {
-		ai_value = 0
-	}
-}
-
 building_distillation_plants_throughput_add = {
 	decimals = 1
 	color = good
@@ -107,6 +98,15 @@ building_synthetics_silk_plants_throughput_add = {
 }
 
 building_tanks_industry_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_aeroplanes_industry_throughput_add = {
 	decimals = 1
 	color = good
 	percent = yes

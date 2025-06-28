@@ -1,8 +1,12 @@
 ﻿AWS = {
-	states = {
-		STATE_ERITREA
-		STATE_GONDER
+	use_culture_states = yes
+	ai_will_do = {
+		always = no
 	}
+}
+
+EUR = {
+	use_culture_states = yes
 	ai_will_do = {
 		always = no
 	}

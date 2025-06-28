@@ -3,8 +3,6 @@
 	city_type = city
 	levels_per_mesh = 1
 	enable_air_connection = yes
-	override_centerpiece_mesh = yes
-	centerpiece_mesh_weight = 2
 	expandable = no
 	production_method_groups = {
 		pmg_airship_mooring_post

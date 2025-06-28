@@ -8,7 +8,6 @@
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 10
 		country_max_weekly_construction_progress_add = 10
-		market_land_trade_capacity_add = 20
 	}
 	ai_weight = {
 		value = 3		# Very important in general
@@ -24,7 +23,6 @@ urban_planning = {
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 10
 		country_max_weekly_construction_progress_add = 10
-		market_land_trade_capacity_add = 20
 	}
 	unlocking_technologies = {
 		urbanization
@@ -34,37 +32,32 @@ urban_planning = {
 	}
 }
 
-academia = {
-	# Unlocks University building
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/academia.dds"
-	category = society
-	
-	modifier = {
-		country_institution_schools_max_investment_add = 1
-	}
-	
-	unlocking_technologies = {
-		rationalism
-	}
-	
-	ai_weight = {
-		value = 1.5 # Important in general
-	}
-}
-
 rationalism = {
 	# Unlocks Freedom of Conscience - Church and State Law
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/rationalism.dds"
 	category = society
-	
 	modifier = {
 		country_institution_schools_max_investment_add = 1
 	}
-	
 	ai_weight = {
-		value = 3 # Very important in general
+		value = 3		# Very important in general
+	}
+}
+
+academia = {
+	# Unlocks University building
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+	category = society
+	modifier = {
+		country_institution_schools_max_investment_add = 1
+	}
+	unlocking_technologies = {
+		rationalism
+	}
+	ai_weight = {
+		value = 1.5		# Important in general
 	}
 }
 
@@ -73,19 +66,85 @@ empiricism = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/empiricism.dds"
 	category = society
-	
 	modifier = {
-		country_influence_mult = 0.1
-		country_diplomatic_play_maneuvers_add = 10
+		country_influence_mult = 0.2
+		country_diplomatic_play_maneuvers_add = 20
 		country_institution_schools_max_investment_add = 1
 	}
-	
 	unlocking_technologies = {
 		academia
 	}
-	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5		# Important in general
+	}
+}
+
+psychiatry = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/psychiatry.dds"
+	category = society
+	modifier = {
+		country_influence_mult = 0.2
+		country_diplomatic_play_maneuvers_add = 20
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+	}
+	unlocking_technologies = {
+		empiricism
+	}
+	ai_weight = {
+		value = 1
+	}
+}
+
+philosophical_pragmatism = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/philosophical_pragmatism.dds"
+	category = society
+	modifier = {
+		country_influence_mult = 0.2
+		country_diplomatic_play_maneuvers_add = 20
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+	}
+	unlocking_technologies = {
+		psychiatry
+	}
+	ai_weight = {
+		value = 1
+	}
+}
+
+psychoanalysis = {
+	# Should provide additional methods for dealing with negative psychological character traits
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/psychoanalysis.dds"
+	category = society
+	modifier = {
+		country_influence_mult = 0.2
+		country_diplomatic_play_maneuvers_add = 20
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+	}
+	unlocking_technologies = {
+		philosophical_pragmatism
+	}
+	ai_weight = {
+		value = 1
+	}
+}
+
+behaviorism = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	category = society
+	modifier = {
+		country_influence_mult = 0.2
+		country_diplomatic_play_maneuvers_add = 20
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+	}
+	unlocking_technologies = {
+		psychoanalysis
+	}
+	ai_weight = {
+		value = 1
 	}
 }
 
@@ -98,7 +157,6 @@ modern_sewerage = {
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 10
 		country_max_weekly_construction_progress_add = 10
-		market_land_trade_capacity_add = 20
 		state_pollution_reduction_health_mult = -0.1
 		state_harvest_condition_flood_impact_mult = -0.1
 	}
@@ -120,7 +178,6 @@ steel_frame_buildings = {
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 10
 		country_max_weekly_construction_progress_add = 10
-		market_land_trade_capacity_add = 20
 		state_harvest_condition_flood_impact_mult = -0.1
 	}
 	unlocking_technologies = {
@@ -141,7 +198,6 @@ elevator = {
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 10
 		country_max_weekly_construction_progress_add = 10
-		market_land_trade_capacity_add = 20
 	}
 	unlocking_technologies = {
 		steel_frame_buildings
@@ -156,8 +212,8 @@ joint_stock_companies = {
 	texture = "gfx/interface/icons/invention_icons/joint_stock_companies.dds"
 	category = society
 	modifier = {
+		country_free_charters_add = 1
 		country_max_companies_add = 1
-		country_minting_mult = 0.1
 	}
 	unlocking_technologies = {
 		banking
@@ -173,8 +229,8 @@ investment_banks = {
 	texture = "gfx/interface/icons/invention_icons/investment_banks.dds"
 	category = society
 	modifier = {
+		country_free_charters_add = 1
 		country_max_companies_add = 1
-		country_minting_mult = 0.15
 	}
 	unlocking_technologies = {
 		joint_stock_companies
@@ -190,8 +246,8 @@ corporate_management = {
 	texture = "gfx/interface/icons/invention_icons/corporate_management.dds"
 	category = society
 	modifier = {
+		country_free_charters_add = 1
 		country_max_companies_add = 1
-		country_minting_mult = 0.25
 	}
 	unlocking_technologies = {
 		investment_banks
@@ -224,6 +280,7 @@ macroeconomics = {
 	texture = "gfx/interface/icons/invention_icons/macroeconomics.dds"
 	category = society
 	modifier = {
+		country_free_charters_add = 1
 		country_max_companies_add = 1
 		state_market_access_price_impact = 0.1
 	}

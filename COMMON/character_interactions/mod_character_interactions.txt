@@ -4,7 +4,13 @@
 	potential = {
 		has_dlc_feature = agitators
 		OR = {
-			has_role = ruler
+			AND = {
+				has_role = ruler
+				interest_group.leader = {
+					is_ruler = NO
+				}
+			}
+			has_role = heir
 			has_role = agitator
 			has_role = general
 			has_role = admiral
@@ -13,6 +19,7 @@
 		owner ?= scope:actor
 	}
 	possible = {
+		age >= define:NCharacters|ADULT_AGE
 		interest_group = {
 			is_in_government = yes
 		}
@@ -161,9 +168,6 @@ foster_national_agitation = {
 	}
 	show_requirements = yes
 	possible = {
-		root.culture = {
-			save_temporary_scope_as = agitator_culture
-		}
 		this.interest_group = {
 			is_in_government = yes
 		}
@@ -796,6 +800,160 @@ return_to_home_country = {
 	}
 }
 
+abdicate_monarch = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_republican.dds"
+	clicksound = "event:/SFX/UI/Military/command_grant"
+	potential = {
+		has_dlc_feature = voice_of_the_people_content
+		owner ?= scope:actor
+		is_ruler = yes
+		owner ?= {
+			has_law = law_type:law_monarchy
+		}
+		exists = owner.heir
+		is_immortal = no
+	}
+	possible = {
+		OR = {
+			interest_group = {
+				ig_approval <= angry
+				is_marginal = yes
+			}
+			popularity <= -50
+			age >= 70
+			OR = {
+				has_trait = psychological_affliction
+				has_trait = cancer
+				has_trait = senile
+				has_trait = wounded
+			}
+			owner ?= {
+				any_political_movement = {
+					is_insurrectionary = yes
+					exists = most_desired_law
+					trigger_if = {
+						limit = {
+							is_insurrectionary = yes
+							exists = most_desired_law
+						}
+						most_desired_law ?= {
+							save_temporary_scope_as = revolutionary_law
+						}
+						custom_tooltip = {
+							text = ruler_disapproves_of_revolutionary_law
+							root = {
+								OR = {
+									law_enactment_stance = {
+										law = scope:revolutionary_law
+										value < neutral
+									}
+									interest_group ?= {
+										law_enactment_stance = {
+											law = scope:revolutionary_law
+											value < neutral
+										}
+									}
+								}
+							}
+						}
+					}
+					trigger_else = {
+						custom_tooltip = ruler_disapproves_of_revolutionary_law_contextless
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				NOT = {
+					owner ?= {
+						any_interest_group = {
+							is_insurrectionary = yes
+						}
+					}
+				}
+			}
+			owner.heir = {
+				age >= define:NCharacters|ADULT_AGE
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = leader_abdicates_the_throne_display_tt
+		if = {
+			limit = {
+				owner ?= {
+					any_political_movement = {
+						exists = most_desired_law
+						is_insurrectionary = yes
+					}
+				}
+			}
+			owner ?= {
+				trigger_event = {
+					id = resignation.3
+					popup = yes
+				}
+			}
+		}
+		else = {
+			owner ?= {
+				trigger_event = {
+					id = wedding.3
+					popup = yes
+				}
+			}
+		}
+	}
+	cooldown = {
+		years = 1
+	}
+	show_confirmation_box = yes
+	ai_chance = {
+		value = -50
+		if = {
+			limit = {
+				interest_group = {
+					ig_approval <= angry
+				}
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				interest_group = {
+					is_marginal = yes
+				}
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				popularity <= -50
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				popularity <= -75
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				age >= 75
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				has_trait = psychological_affliction
+			}
+			add = 25
+		}
+	}
+}
+
 resign_from_office = {
 	clicksound = "event:/SFX/UI/Military/command_grant"
 	potential = {
@@ -804,9 +962,8 @@ resign_from_office = {
 		is_ruler = yes
 		is_immortal = no
 		owner ?= {
-			NOR = {
+			NOT = {
 				has_law = law_type:law_monarchy
-				has_law = law_type:law_theocracy
 			}
 		}
 	}
@@ -822,6 +979,7 @@ resign_from_office = {
 				}
 			}
 			popularity <= -50
+			age >= 70
 			OR = {
 				has_trait = psychological_affliction
 				has_trait = cancer

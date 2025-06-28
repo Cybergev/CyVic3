@@ -88,8 +88,8 @@
 					}
 				}
 				set_ig_trait = ig_trait:ig_trait_haibutsu_kishaku
-				set_ig_trait = ig_trait:ig_trait_secular_shrine_theory
 				set_ig_trait = ig_trait:ig_trait_heavenly_sovereign
+				set_ig_trait = ig_trait:ig_trait_secular_shrine_theory
 			}
 			else_if = {
 				limit = {
@@ -135,6 +135,15 @@
 		}
 		### Specific
 		# Buddhist Monks (Japan)
+		if = {
+			limit = {
+				game_date <= 1836.1.1
+				country_has_primary_culture = cu:japanese
+			}
+			owner = {
+				set_state_religion = rel:mahayana
+			}
+		}
 		if = {
 			limit = {
 				country_has_state_religion = rel:mahayana

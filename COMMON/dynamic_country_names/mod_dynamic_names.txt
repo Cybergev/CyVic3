@@ -1,1 +1,50 @@
-﻿
+﻿JAP = {
+	# Japan
+	dynamic_country_name = {
+		name = dyn_c_japan_shogunate
+		adjective = dyn_c_japan_shogunate_adj
+		is_main_tag_only = yes
+		priority = 10
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				NOT = {
+					has_variable = meiji_var
+				}
+				coa_absolute_monarchy_trigger = yes
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_empire_of_japan
+		adjective = dyn_c_empire_of_japan_adj
+		is_main_tag_only = yes
+		priority = 20
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_variable = meiji_var
+				OR = {
+					AND = {
+						country_has_state_religion = rel:shinto
+						ig:ig_armed_forces = {
+							is_in_government = yes
+						}
+						OR = {
+							coa_theocracy_trigger = yes
+							ruler = {
+								interest_group = {
+									is_interest_group_type = ig:ig_devout
+								}
+							}
+						}
+					}
+					coa_absolute_monarchy_trigger = yes
+					coa_dictatorship_trigger = yes
+					coa_fascist_trigger = yes
+					coa_military_trigger = yes
+				}
+			}
+		}
+	}
+}

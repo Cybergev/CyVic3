@@ -1,8 +1,15 @@
-﻿pm_hydroelectric_plant = {
-	texture = "gfx/interface/icons/production_method_icons/hydroelectric_plant.dds"
+﻿pm_early_power_plant = {
+	texture = "gfx/interface/icons/production_method_icons/power_plant.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_engines_add = 10
+			goods_input_coal_add = 10
+			goods_input_wood_add = 10
 			goods_output_electricity_add = 100
 		}
 		level_scaled = {

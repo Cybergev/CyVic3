@@ -937,7 +937,7 @@ pm_compression_ignition_tractors_building_rice_farm = {
 pm_refrigerated_storage = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_storage.dds"
 	unlocking_technologies = {
-		pasteurization
+		electrical_capacitors
 	}
 	building_modifiers = {
 		workforce_scaled = {

@@ -20,7 +20,6 @@ law_traditionalism = {
 		country_leverage_resistance_mult = 0.25
 		state_aristocrats_investment_pool_contribution_add = 0.25
 		state_aristocrats_investment_pool_efficiency_mult = 0.5
-		state_capitalists_investment_pool_efficiency_mult = -0.5
 	}
 	# AI should never switch back to traditionalism
 	ai_will_do = {
@@ -102,6 +101,7 @@ law_industry_banned = {
 		}
 	}
 	modifier = {
+		country_free_charters_add = 1
 		interest_group_ig_rural_folk_pol_str_mult = 0.5
 		country_private_construction_allocation_mult = 0.5
 		state_expected_sol_mult = -0.1
@@ -211,6 +211,8 @@ law_extraction_economy = {
 		building_group_bg_ranching_throughput_add = 0.1
 		building_group_bg_plantations_throughput_add = 0.1
 		building_group_bg_extraction_throughput_add = 0.1
+		building_group_bg_manufacturing_throughput_add = -0.5
+		building_group_bg_service_throughput_add = -0.5
 		country_economic_dependence_on_overlord_add = 1
 		country_disable_nationalization_without_compensation_bool = yes
 		country_disable_investment_pool_bool = yes
@@ -243,6 +245,7 @@ law_agrarianism = {
 	on_activate = {
 	}
 	modifier = {
+		country_free_charters_add = 1
 		country_private_construction_allocation_mult = 0.5
 		building_nationalization_investment_return_add = 0.5
 		country_government_dividends_efficiency_add = 0.25
@@ -252,7 +255,6 @@ law_agrarianism = {
 		country_disable_nationalization_without_compensation_bool = yes
 		state_aristocrats_investment_pool_efficiency_mult = 0.25
 		state_farmers_investment_pool_efficiency_mult = 0.25
-		state_capitalists_investment_pool_efficiency_mult = -0.25
 	}
 	ai_will_do = {
 		OR = {
@@ -321,6 +323,7 @@ law_interventionism = {
 		manufacturies
 	}
 	modifier = {
+		country_free_charters_add = 2
 		country_private_construction_allocation_mult = 0.5
 		building_nationalization_investment_return_add = 0.5
 		country_government_dividends_efficiency_add = 0.25
@@ -387,15 +390,15 @@ law_laissez_faire = {
 	on_activate = {
 	}
 	modifier = {
-		country_max_companies_add = 1
+		country_free_charters_add = 4
 		country_company_throughput_bonus_add = 0.25
 		country_private_construction_allocation_mult = 0.75
 		country_loan_interest_rate_mult = -0.25
 		building_nationalization_investment_return_add = 1
 		country_government_dividends_efficiency_add = 0.25
-		country_disable_nationalization_without_compensation_bool = yes
+		country_disable_nationalization_bool = yes
 		country_force_privatization_bool = yes
-		country_company_pay_to_establish_bool = yes
+		country_forbid_monopoly_bool = yes
 		state_capitalists_investment_pool_contribution_add = 0.25
 		state_capitalists_investment_pool_efficiency_mult = 0.5
 	}
@@ -459,6 +462,7 @@ law_cooperative_ownership = {
 		}
 	}
 	modifier = {
+		country_free_charters_add = 4
 		country_private_construction_allocation_mult = 0.5
 		country_government_dividends_reinvestment_add = 0.5
 		country_government_dividends_efficiency_add = 0.5
@@ -470,8 +474,9 @@ law_cooperative_ownership = {
 		building_group_bg_private_infrastructure_allowed_collectivization_add = 1
 		building_group_bg_arts_allowed_collectivization_add = 1
 		country_force_privatization_bool = yes
-		country_company_pay_to_establish_bool = yes
+		country_forbid_monopoly_bool = yes
 		country_foreign_collectivization_bool = yes
+		state_capitalists_investment_pool_efficiency_mult = -1
 		state_farmers_investment_pool_efficiency_mult = 1
 		state_shopkeepers_investment_pool_efficiency_mult = 1
 	}
@@ -546,6 +551,7 @@ law_command_economy = {
 		}
 	}
 	modifier = {
+		country_free_charters_add = 2
 		building_nationalization_cost_mult = -0.5
 		building_nationalization_radicals_mult = -0.5
 		country_government_dividends_efficiency_add = 0.5
@@ -1213,7 +1219,7 @@ law_isolationism = {
 		country_tech_spread_mult = -0.5
 		state_tax_capacity_mult = 0.5
 		country_leverage_resistance_mult = 1
-		market_disallow_trade_routes_bool = yes
+		country_disallow_trade_bool = yes
 	}
 	ai_will_do = {
 		OR = {
@@ -1245,15 +1251,13 @@ law_mercantilism = {
 	unlocking_technologies = {
 		international_trade
 	}
-	tariff_modifier_no_priority = {
-		tariff_import_add = 0.15
-		tariff_export_add = 0.15
-	}
-	tariff_modifier_import_priority = {
-		tariff_export_add = 0.25
-	}
-	tariff_modifier_export_priority = {
-		tariff_import_add = 0.5
+	modifier = {
+		state_tariff_import_add = 1.0
+		state_tariff_export_add = 0.5
+		state_subvention_export_add = 1.0
+		state_subvention_import_add = 0.5
+		state_import_advantage_mult = -0.5
+		state_export_advantage_mult = 0.5
 	}
 	# Don't change back to mercantilism once we have protectionism or free trade
 	ai_will_do = {
@@ -1288,17 +1292,11 @@ law_protectionism = {
 	unlocking_technologies = {
 		stock_exchange
 	}
-	tariff_modifier_no_priority = {
-		tariff_export_add = 0.25
-		tariff_import_add = 0.25
-	}
-	tariff_modifier_import_priority = {
-		tariff_export_add = 0.5
-	}
-	tariff_modifier_export_priority = {
-		tariff_import_add = 0.5
-	}
 	modifier = {
+		state_tariff_import_add = 1.0
+		state_tariff_export_add = 1.0
+		state_subvention_export_add = 1.0
+		state_subvention_import_add = 1.0
 		country_leverage_resistance_mult = 0.25
 	}
 	ai_enact_weight_modifier = {
@@ -1345,9 +1343,9 @@ law_free_trade = {
 		}
 	}
 	modifier = {
-		country_trade_route_quantity_mult = 0.5
-		country_trade_route_cost_mult = -0.5
-		country_trade_route_competitiveness_mult = 0.5
+		state_subvention_export_add = 1.0
+		state_subvention_import_add = 1.0
+		state_trade_advantage_mult = 0.5
 		country_leverage_resistance_mult = -0.5
 	}
 	ai_enact_weight_modifier = {

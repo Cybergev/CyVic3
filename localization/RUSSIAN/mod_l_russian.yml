@@ -8,13 +8,6 @@ european: "Европейцы"
 european_ADJ: "$EUR_ADJ$"
 
 dp_unify_europe: "Объединение Европы"
-dp_leadership_europe: "Европейское лидерство"
-
-ideology_positivist: "Позитивист"
-ideology_positivist_desc: "Этот персонаж выступает за модернизацию, технократию и антиклерикализм, осуждающий как непредсказуемую власть монархов, так и прихоти толпы."
- 
-ideology_positivism: "Позитивизм"
-ideology_positivism_desc: "Эта группа выступает за модернизацию, технократию и антиклерикализм, осуждающий как непредсказуемую власть монархов, так и прихоти толпы."
 
 #---------------------------
 
@@ -59,16 +52,19 @@ building_tanks_industry_lens_option: "Расширить бронетанков�
 
 pmg_luxury_furniture_manufacturies: "$pmg_luxury_building_furniture_manufacturies$"
 pmg_luxury_textile_manufacturies: "$pmg_luxury_building_textile_mills$"
-
+pm_fruit_pot_stills: "$pm_pot_stills$"
+pm_fruit_patent_stills: "$pm_patent_stills$"
+pm_fruit_sweeteners: "$pm_baking_powder$"
+pm_fruit_baking_powder: "$pm_baking_powder$"
 pm_cannery_meat: "Мясные консервы"
 pm_cannery_fish: "Рыбные консервы"
-pm_cannery: "Консервы"
+pm_cannery_all: "Консервы"
 pm_vacuum_cannery_meat: "Вакуумные мясные консервы"
 pm_vacuum_cannery_fish: "Вакуумные рыбные консервы"
-pm_vacuum_canning: "Вакуумные консервы"
+pm_vacuum_canning_all: "Вакуумные консервы"
 pm_vacuum_cannery_meat_principle_3: "Эффектвиные мясные консервы"
 pm_vacuum_cannery_fish_principle_3: "Эффектвиные рыбные консервы"
-pm_vacuum_canning_principle_3: "Эффектвиные консервы"
+pm_vacuum_canning_all_principle_3: "Эффектвиные консервы"
 
 pm_synthetic_oil: "Просцесс Фишера-Тропша"
 pm_synthetic_opium: "Синтетические опиаты"

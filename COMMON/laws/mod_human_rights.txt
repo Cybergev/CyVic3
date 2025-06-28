@@ -404,8 +404,8 @@ law_outlawed_dissent = {
 	institution = institution_home_affairs
 	institution_modifier = {
 		country_authority_mult = 0.05
-		country_bolster_attraction_mult = 0.1
-		country_suppression_attraction_mult = -0.1
+		country_bolster_attraction_factor = 0.1
+		country_suppression_attraction_factor = -0.1
 		country_tech_spread_mult = -0.1
 		country_leverage_resistance_mult = 0.1
 	}
@@ -431,8 +431,8 @@ law_censorship = {
 	institution = institution_home_affairs
 	institution_modifier = {
 		country_authority_mult = 0.025
-		country_bolster_attraction_mult = 0.08
-		country_suppression_attraction_mult = -0.08
+		country_bolster_attraction_factor = 0.08
+		country_suppression_attraction_factor = -0.08
 		country_tech_spread_mult = -0.05
 		country_leverage_resistance_mult = 0.05
 	}
@@ -457,8 +457,8 @@ law_right_of_assembly = {
 	progressiveness = 0
 	institution = institution_home_affairs
 	institution_modifier = {
-		country_bolster_attraction_mult = 0.06
-		country_suppression_attraction_mult = -0.06
+		country_bolster_attraction_factor = 0.06
+		country_suppression_attraction_factor = -0.06
 	}
 	ai_enact_weight_modifier = {
 		#Petitions
@@ -735,6 +735,7 @@ law_public_schools = {
 	institution = institution_schools
 	institution_modifier = {
 		state_education_access_add = 0.1
+		state_education_access_wealth_add = 0.01
 		state_assimilation_mult = 0.1
 	}
 	can_impose = {

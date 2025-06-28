@@ -2,7 +2,7 @@
 	icon = "gfx/interface/icons/principles_icons/external_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	member_modifier = {
-		country_trade_route_cost_mult = -0.2
+		country_convoys_capacity_mult = 0.2
 	}
 	ai_weight = {
 		value = 100
@@ -43,7 +43,7 @@ principle_external_trade_2 = {
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	member_modifier = {
 		country_convoys_capacity_mult = 0.2
-		country_trade_route_cost_mult = -0.2
+		state_trade_capacity_mult = 0.2
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones
@@ -55,9 +55,9 @@ principle_external_trade_3 = {
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	member_modifier = {
 		country_convoys_capacity_mult = 0.2
-		country_trade_route_cost_mult = -0.2
-		country_trade_route_competitiveness_mult = 0.2
-		country_allow_trade_routes_without_interest_bool = yes
+		state_trade_capacity_mult = 0.2
+		state_trade_advantage_mult = 0.2
+		country_no_advantage_loss_from_lack_of_interest_bool = yes
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones
@@ -68,10 +68,11 @@ principle_internal_trade_1 = {
 	icon = "gfx/interface/icons/principles_icons/internal_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	power_bloc_modifier = {
-		power_bloc_trade_route_cost_mult = -1
+		power_bloc_trade_route_cost_mult = -0.5
+		power_bloc_disallow_embargo_bool = yes
 	}
 	member_modifier = {
-		country_company_throughput_bonus_add = 0.1
+		country_company_throughput_bonus_add = 0.05
 	}
 	ai_weight = {
 		value = 200		# Good for trade leagues to have
@@ -99,12 +100,11 @@ principle_internal_trade_2 = {
 	icon = "gfx/interface/icons/principles_icons/internal_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	power_bloc_modifier = {
-		power_bloc_trade_route_cost_mult = -1
+		power_bloc_trade_route_cost_mult = -0.75
+		power_bloc_disallow_embargo_bool = yes
 	}
 	member_modifier = {
-		country_company_throughput_bonus_add = 0.1
-		tariff_import_outside_power_bloc_mult = 0.25
-		tariff_export_outside_power_bloc_mult = 0.25
+		country_company_throughput_bonus_add = 0.075
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones
@@ -116,12 +116,10 @@ principle_internal_trade_3 = {
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	power_bloc_modifier = {
 		power_bloc_trade_route_cost_mult = -1
+		power_bloc_disallow_embargo_bool = yes
 	}
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.1
-		tariff_import_outside_power_bloc_mult = 0.25
-		tariff_export_outside_power_bloc_mult = 0.25
-		market_land_trade_capacity_add = 100
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones
@@ -135,12 +133,11 @@ principle_market_unification_1 = {
 		has_dlc_feature = power_bloc_features
 	}
 	power_bloc_modifier = {
-		power_bloc_trade_route_cost_mult = -1
+		power_bloc_trade_route_cost_mult = -0.5
 		power_bloc_disallow_embargo_bool = yes
 	}
 	member_modifier = {
-		# Members get a bonus to company throughput
-		country_company_throughput_bonus_add = 0.1
+		country_company_throughput_bonus_add = 0.05
 	}
 	ai_weight = {
 		value = 200		# Generally a good group for a PB to have
@@ -157,13 +154,11 @@ principle_market_unification_2 = {
 	icon = "gfx/interface/icons/principles_icons/market_unification.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	power_bloc_modifier = {
-		power_bloc_trade_route_cost_mult = -1
+		power_bloc_trade_route_cost_mult = -0.75
 		power_bloc_disallow_embargo_bool = yes
 	}
 	member_modifier = {
-		country_company_throughput_bonus_add = 0.1
-		tariff_import_outside_power_bloc_mult = 0.25
-		tariff_export_outside_power_bloc_mult = 0.25
+		country_company_throughput_bonus_add = 0.075
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones
@@ -179,9 +174,6 @@ principle_market_unification_3 = {
 	}
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.1
-		tariff_import_outside_power_bloc_mult = 0.25
-		tariff_export_outside_power_bloc_mult = 0.25
-		market_land_trade_capacity_add = 100
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones
@@ -239,7 +231,6 @@ principle_transport_3 = {
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	member_modifier = {
 		country_port_connection_cost_mult = -0.25
-		market_land_trade_capacity_add = 100
 		state_infrastructure_mult = 0.2
 	}
 	ai_weight = {
@@ -390,6 +381,7 @@ principle_freedom_of_movement_1 = {
 		power_bloc_allow_wider_migration_area_bool = yes
 	}
 	member_modifier = {
+		state_migration_pull_mult = 0.1
 		state_migration_quota_mult = 0.1
 		country_mass_migration_attraction_mult = 0.1
 	}
@@ -444,6 +436,7 @@ principle_freedom_of_movement_2 = {
 		power_bloc_allow_wider_migration_area_bool = yes
 	}
 	member_modifier = {
+		state_migration_pull_mult = 0.25
 		state_migration_quota_mult = 0.25
 		country_mass_migration_attraction_mult = 0.25
 	}
@@ -459,6 +452,7 @@ principle_freedom_of_movement_3 = {
 		power_bloc_allow_wider_migration_area_bool = yes
 	}
 	member_modifier = {
+		state_migration_pull_mult = 0.5
 		state_migration_quota_mult = 0.5
 		country_mass_migration_attraction_mult = 0.5
 	}
@@ -485,7 +479,6 @@ principle_advanced_research_1 = {
 	institution_modifier = {
 		country_tech_spread_mult = 0.02
 		country_ahead_of_time_research_penalty_mult = -0.02
-		country_weekly_innovation_max_add = 5
 	}
 	ai_weight = {
 		value = 100
@@ -527,7 +520,6 @@ principle_advanced_research_2 = {
 	institution_modifier = {
 		country_tech_spread_mult = 0.05
 		country_ahead_of_time_research_penalty_mult = -0.05
-		country_weekly_innovation_max_add = 10
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones
@@ -549,7 +541,6 @@ principle_advanced_research_3 = {
 	institution_modifier = {
 		country_tech_spread_mult = 0.1
 		country_ahead_of_time_research_penalty_mult = -0.1
-		country_weekly_innovation_max_add = 20
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones
@@ -566,6 +557,8 @@ principle_ideological_truth_1 = {
 	institution_modifier = {
 		interest_group_in_opposition_agitator_popularity_add = -2
 		country_party_whip_impact_mult = 0.01
+		country_bolster_attraction_factor = 0.02
+		country_suppression_attraction_factor = -0.02
 		country_suppression_cost_mult = -0.02
 		country_bolster_cost_mult = -0.02
 		country_legitimacy_min_add = 1
@@ -597,6 +590,8 @@ principle_ideological_truth_2 = {
 	institution_modifier = {
 		interest_group_in_opposition_agitator_popularity_add = -5
 		country_party_whip_impact_mult = 0.02
+		country_bolster_attraction_factor = 0.05
+		country_suppression_attraction_factor = -0.05
 		country_suppression_cost_mult = -0.05
 		country_bolster_cost_mult = -0.05
 		country_legitimacy_min_add = 2
@@ -613,6 +608,8 @@ principle_ideological_truth_3 = {
 	institution_modifier = {
 		interest_group_in_opposition_agitator_popularity_add = -10
 		country_party_whip_impact_mult = 0.05
+		country_bolster_attraction_factor = 0.1
+		country_suppression_attraction_factor = -0.1
 		country_suppression_cost_mult = -0.1
 		country_bolster_cost_mult = -0.1
 		country_legitimacy_min_add = 5
@@ -800,10 +797,10 @@ principle_military_industry_2 = {
 	member_modifier = {
 		character_supply_route_cost_mult = -0.1
 		building_munition_plants_throughput_add = 0.1
-		building_war_machine_industry_throughput_add = 0.1
 		building_arms_industry_throughput_add = 0.1
 		building_artillery_foundries_throughput_add = 0.1
 		building_military_shipyards_throughput_add = 0.1
+		building_aeroplanes_industry_throughput_add = 0.1
 		building_tanks_industry_throughput_add = 0.1
 	}
 	ai_weight = {
@@ -818,10 +815,10 @@ principle_military_industry_3 = {
 		country_military_goods_cost_mult = -0.1
 		character_supply_route_cost_mult = -0.1
 		building_munition_plants_throughput_add = 0.1
-		building_war_machine_industry_throughput_add = 0.1
 		building_arms_industry_throughput_add = 0.1
 		building_artillery_foundries_throughput_add = 0.1
 		building_military_shipyards_throughput_add = 0.1
+		building_aeroplanes_industry_throughput_add = 0.1
 		building_tanks_industry_throughput_add = 0.1
 	}
 	ai_weight = {
@@ -1017,7 +1014,7 @@ principle_colonial_offices_2 = {
 	member_modifier = {
 		country_institution_size_change_speed_institution_colonial_affairs_mult = 0.15
 		country_institution_cost_institution_colonial_affairs_mult = -0.15
-		country_infamy_generation_against_unrecognized_mult = -0.10
+		country_infamy_generation_against_unrecognized_mult = -0.1
 		country_disallow_law_no_colonial_affairs_bool = yes
 	}
 	leader_modifier = {

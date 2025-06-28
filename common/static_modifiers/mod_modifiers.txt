@@ -16,24 +16,24 @@ base_values = {
 	state_farmers_investment_pool_contribution_add = 0.1
 	state_shopkeepers_investment_pool_contribution_add = 0.2
 	state_clergymen_investment_pool_contribution_add = 0.2
-	state_aristocrats_investment_pool_contribution_add = 0.4
-	state_capitalists_investment_pool_contribution_add = 0.4
+	state_aristocrats_investment_pool_contribution_add = 0.2
+	state_capitalists_investment_pool_contribution_add = 0.2
 	# To balance for unincorporated states not paying taxes
 	state_unincorporated_starting_wages_mult = -0.2
 	building_unincorporated_subsistence_output_mult = -0.2
 	country_construction_add = 10
 	building_mobilization_cost_mult = 0.5
 	building_economy_of_scale_level_cap_add = 20
-	state_market_access_price_impact = 1
-	country_company_throughput_bonus_add = 0.25
+	state_market_access_price_impact = 0.75
+	country_company_throughput_bonus_add = 0.2
 	country_company_construction_efficiency_bonus_add = 0.5
 	state_building_construction_sector_max_level_add = 10
 	country_max_weekly_construction_progress_add = 10
-	country_free_trade_routes_add = 5
 	military_formation_organization_gain_add = 0.5	# 200 days to get max organization
 	state_urbanization_per_level_add = 100
 	unit_experience_gain_add = 0.5
-	market_land_trade_capacity_add = 20
+	state_trade_advantage_from_capacity_add = 0.0005
+	state_max_trade_advantage_from_capacity_add = 0.2
 }
 
 legislative_efficiency = {
@@ -145,12 +145,7 @@ changed_ideology = {
 	character_popularity_add = -100
 }
 
-positivistic_country = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	political_movement_pop_attraction_mult = 1
-}
-
-socialistic_country = {
+accepted_movement = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	political_movement_pop_attraction_mult = 1
 }
@@ -178,4 +173,19 @@ suppression_modifier = {
 	building_goods_input_mult = 1
 	building_minimum_wage_mult = -1
 	building_working_conditions_mult = 1
+}
+
+ban_private_construction = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_ig_industrialists_approval_add = -10
+	interest_group_ig_landowners_approval_add = -10
+	country_private_construction_allocation_mult = -10
+	country_government_dividends_reinvestment_add = -10
+	building_nationalization_investment_return_add = -10
+	state_aristocrats_investment_pool_contribution_add = -10
+	state_aristocrats_investment_pool_efficiency_mult = -10
+	state_capitalists_investment_pool_contribution_add = -10
+	state_capitalists_investment_pool_efficiency_mult = -10
+	state_farmers_investment_pool_efficiency_mult = -10
+	state_shopkeepers_investment_pool_efficiency_mult = -10
 }

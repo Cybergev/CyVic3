@@ -13,7 +13,7 @@
 #										If unspecified, will return first non-default land usage type found in parent building group tree.
 # cash_reserves_max = number			Maximum amount of £ (per level) that buildings in this group can store into their cash reserves. If unspecified or set to 0, it will use the value from the parent group. Default 0
 # inheritable_construction =  yes/no	If yes, a construction of this building group will survive a state changing hands or a split state merging
-# stateregion_max_level = yes/no		If yes, any building types in this group with the has_max_level property will consider its level restrictions on state-region rather than state level	
+# stateregion_max_level = yes/no		If yes, any building types in this group with the has_max_level property will consider its level restrictions on state-region rather than state level
 # urbanization = number					The amount of urbanization buildings in this group provides per level
 # should_auto_expand = trigger			Under which condition buildings in this group should auto-expand if auto-expand is toggled on (trigger on more specific group or building type overrides)
 # 										If this trigger has any contents at all, the game will think the building is potentially auto-expandable, so do not write triggers that can never evaluate to true here
@@ -80,6 +80,51 @@ bg_munition_plants = {
 }
 
 # Agriculture
+bg_agriculture = {
+	category = rural
+	land_usage = rural
+	lens = agriculture
+	economy_of_scale = yes
+	can_use_slaves = yes
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	should_auto_expand = {
+		default_auto_expand_rule = yes
+	}
+	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 0.75
+}
+
+bg_rye_farms = {
+	parent_group = bg_agriculture
+	default_building = building_rye_farm
+	cash_reserves_max = 25000
+}
+
+bg_wheat_farms = {
+	parent_group = bg_agriculture
+	default_building = building_wheat_farm
+	cash_reserves_max = 25000
+}
+
+bg_rice_farms = {
+	parent_group = bg_agriculture
+	default_building = building_rice_farm
+	cash_reserves_max = 25000
+}
+
+bg_maize_farms = {
+	parent_group = bg_agriculture
+	default_building = building_maize_farm
+	cash_reserves_max = 25000
+}
+
+bg_millet_farms = {
+	parent_group = bg_agriculture
+	default_building = building_millet_farm
+	cash_reserves_max = 25000
+}
+
 bg_subsistence_agriculture = {
 	parent_group = bg_agriculture
 	always_possible = yes
@@ -90,6 +135,12 @@ bg_subsistence_agriculture = {
 	hires_unemployed_only = yes
 	ignores_productivity_when_hiring = yes
 	cash_reserves_max = 1000
+}
+
+bg_vineyard_plantations = {
+	parent_group = bg_agriculture
+	default_building = building_vineyard_plantation
+	cash_reserves_max = 25000
 }
 
 # Ranching
@@ -336,7 +387,7 @@ bg_service = {
 
 bg_urban_facilities = {
 	category = urban
-	lens = urban
+	lens = development
 	always_possible = yes
 	economy_of_scale = yes
 	cash_reserves_max = 25000
@@ -356,7 +407,7 @@ bg_arts = {
 
 bg_power = {
 	category = development
-	lens = infrastructure
+	lens = development
 	always_possible = yes
 	economy_of_scale = yes
 	cash_reserves_max = 25000
@@ -375,7 +426,7 @@ bg_government = {
 	always_possible = yes
 	is_government_funded = yes
 	economy_of_scale = yes
-	lens = government
+	lens = development
 	urbanization = 10
 	infrastructure_usage_per_level = 1
 	economy_of_scale_ai_factor = 2
@@ -390,27 +441,15 @@ bg_bureaucracy = {
 }
 
 bg_trade = {
-	parent_group = bg_urban_facilities
-	category = urban
+	parent_group = bg_private_infrastructure
+	stateregion_max_level = no
 	lens = trade
-	always_possible = yes
 	subsidized = yes
-	always_self_owning = yes
-	created_by_trade_routes = yes
-	auto_place_buildings = yes
-	min_hiring_rate = 1
-	max_hiring_rate = 1
-	ignores_productivity_when_hiring = yes
-	proportionality_limit = 1
+	has_trade_revenue = yes
 	economy_of_scale = no
 	default_building = building_trade_center
-	cash_reserves_max = 5000
-	urbanization = 5
-	infrastructure_usage_per_level = 0.1
-	fired_pops_become_radical = no
-	should_auto_expand = {
-		always = no
-	}
+	can_use_slaves = yes
+	infrastructure_usage_per_level = 0.5
 }
 
 # Needed for autonomous investment to track investments separately from other ownership buildings
@@ -422,6 +461,17 @@ bg_financial_districts = {
 bg_manor_houses = {
 	parent_group = bg_owner_buildings
 	infrastructure_usage_per_level = 0
+	urbanization = 0
+}
+
+bg_company_headquarter = {
+	parent_group = bg_owner_buildings
+	company_headquarter = yes
+}
+
+bg_company_regional_headquarter = {
+	parent_group = bg_owner_buildings
+	regional_company_headquarter = yes
 }
 
 bg_owner_buildings = {
@@ -434,14 +484,12 @@ bg_owner_buildings = {
 	auto_place_buildings = yes
 	owns_other_buildings = yes
 	always_self_owning = yes
-	min_hiring_rate = 1
-	max_hiring_rate = 1
 	ignores_productivity_when_hiring = yes
 	proportionality_limit = 1
 	economy_of_scale = no
 	default_building = building_financial_district
 	cash_reserves_max = 10000
-	urbanization = 0
+	urbanization = 10
 	infrastructure_usage_per_level = 0.1
 	fired_pops_become_radical = no
 	should_auto_expand = {
@@ -453,7 +501,7 @@ bg_owner_buildings = {
 bg_infrastructure = {
 	category = development
 	always_possible = yes
-	lens = infrastructure
+	lens = development
 	stateregion_max_level = yes
 	economy_of_scale_ai_factor = 1.5
 	foreign_investment_ai_factor = 0.75
@@ -468,7 +516,7 @@ bg_public_infrastructure = {
 bg_construction = {
 	parent_group = bg_public_infrastructure
 	infrastructure_usage_per_level = 2
-	lens = government
+	lens = development
 	is_government_funded = yes
 	can_use_slaves = yes
 	urbanization = 5
@@ -485,17 +533,18 @@ bg_private_infrastructure = {
 
 bg_canals = {
 	parent_group = bg_infrastructure
-	lens = special
+	lens = development
+	is_government_funded = yes
 	inheritable_construction = yes
 	urbanization = 100
 }
 
 bg_monuments = {
 	category = development
+	lens = development
 	always_possible = yes
 	is_government_funded = yes
-	economy_of_scale = no
-	lens = government
+	inheritable_construction = yes
 }
 
 # Military
@@ -505,7 +554,7 @@ bg_military = {
 	is_military = yes
 	is_government_funded = yes
 	infrastructure_usage_per_level = 0.2
-	lens = military
+	lens = development
 	urbanization = 5
 }
 

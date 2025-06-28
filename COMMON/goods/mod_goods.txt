@@ -1,6 +1,15 @@
 ﻿##########
 # STAPLE #
 ##########
+merchant_marine = {
+	texture = "gfx/interface/icons/goods_icons/merchant_marine.dds"
+	cost = 50
+	category = staple
+	prestige_factor = 5
+	traded_quantity = 4	# 200
+	convoy_cost_multiplier = 0.05
+}
+
 liquor = {
 	texture = "gfx/interface/icons/goods_icons/liquor.dds"
 	cost = 40

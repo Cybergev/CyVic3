@@ -1,6 +1,6 @@
-﻿building_automobiles_industry = {
+﻿building_automotive_industry = {
 	building_group = bg_heavy_industry
-	icon = "gfx/interface/icons/building_icons/automobiles_industry.dds"
+	icon = "gfx/interface/icons/building_icons/vehicles_industry.dds"
 	city_type = city
 	levels_per_mesh = 5
 	unlocking_technologies = {
