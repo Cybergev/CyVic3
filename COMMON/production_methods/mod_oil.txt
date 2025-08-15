@@ -14,9 +14,9 @@
 			goods_output_oil_add = 50
 		}
 		level_scaled = {
+			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 4000
 			building_employment_machinists_add = 500
-			building_employment_shopkeepers_add = 500
 		}
 	}
 }
@@ -39,9 +39,9 @@ pm_combustion_derricks = {
 			goods_output_oil_add = 100
 		}
 		level_scaled = {
+			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 4000
 			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
 		}
 	}
 }

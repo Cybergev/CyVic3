@@ -313,9 +313,9 @@
 	}
 	if = {
 		limit = {
-			has_ideology = ideology:ideology_positivism
+			has_ideology = ideology:ideology_anarchist_movement
 		}
-		remove_ideology = ideology_positivism
+		remove_ideology = ideology_anarchist_movement
 	}
 	if = {
 		limit = {
@@ -328,6 +328,30 @@
 			has_ideology = ideology:ideology_vanguardist_movement
 		}
 		remove_ideology = ideology_vanguardist_movement
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_corporatist_movement
+		}
+		remove_ideology = ideology_corporatist_movement
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_positivist_movement
+		}
+		remove_ideology = ideology_positivist_movement
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_fascist_movement
+		}
+		remove_ideology = ideology_fascist_movement
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_integralist_movement
+		}
+		remove_ideology = ideology_integralist_movement
 	}
 	remove_variable = chose_vanguardism
 	remove_variable = chose_anarchism
@@ -342,10 +366,10 @@ promote_national_val = {
 		random_scope_pop = {
 			limit = {
 				culture = {
-					is_primary_culture_of = ROOT
+					is_primary_culture_of = root
 				}
 				religion = {
-					is_state_religion = ROOT
+					is_state_religion = root
 				}
 			}
 			save_scope_as = promotion_pop
@@ -355,18 +379,18 @@ promote_national_val = {
 		every_scope_state = {
 			limit = {
 				has_decree = decree_promote_national_values
-				NOT = {
+				not = {
 					has_modifier = national_values_promotion
 				}
 			}
 			random_scope_pop = {
 				limit = {
-					NAND = {
+					nand = {
 						culture = {
-							is_primary_culture_of = ROOT
+							is_primary_culture_of = root
 						}
 						religion = {
-							is_state_religion = ROOT
+							is_state_religion = root
 						}
 					}
 				}
@@ -389,6 +413,447 @@ promote_national_val = {
 					is_decaying = yes
 				}
 			}
+		}
+	}
+}
+
+corporatist_reform_ig_iedologies = {
+	if = {
+		limit = {
+			not = {
+				is_interest_group_type = ig_devout
+			}
+		}
+		clear_ig_ideologies = yes
+	}
+	else = {
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_pious
+			}
+			remove_ideology = ideology_pious
+		}
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_corporatist
+			}
+			remove_ideology = ideology_corporatist
+		}
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_corporatist
+			}
+			remove_ideology = ideology_corporatist_movement
+		}
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_fascist_movement
+			}
+			remove_ideology = ideology_fascist_movement
+		}
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_integralist_movement
+			}
+			remove_ideology = ideology_integralist_movement
+		}
+	}
+	if = {
+		limit = {
+			or = {
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_landowners
+			}
+		}
+		if = {
+			limit = {
+				has_variable = red_army_var
+			}
+			hidden_effect = {
+				set_interest_group_name = ig_armed_forces
+			}
+			remove_variable = red_army_var
+		}
+		add_ideology = ideology_jingoist
+	}
+	if = {
+		limit = {
+			or = {
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_trade_unions
+			}
+		}
+		add_ideology = ideology_isolationist
+	}
+	add_ideology = ideology_corporatist_movement
+	if = {
+		limit = {
+			not = {
+				has_modifier = purged_ig
+			}
+		}
+		add_modifier = {
+			name = purged_ig
+			years = 10
+			is_decaying = yes
+		}
+		root = {
+			add_radicals = {
+				value = 1
+				interest_group = prev
+			}
+		}
+	}
+}
+
+socialist_reform_ig_iedologies = {
+	clear_ig_ideologies = yes
+	if = {
+		limit = {
+			is_interest_group_type = ig_armed_forces
+		}
+		add_ideology = ideology_jingoist
+		if = {
+			limit = {
+				root = {
+					not = {
+						has_variable = red_army_var
+					}
+				}
+			}
+			custom_tooltip = red_army_tt
+			hidden_effect = {
+				set_interest_group_name = ig_red_army
+			}
+			root = {
+				set_variable = red_army_var
+			}
+		}
+	}
+	if = {
+		limit = {
+			or = {
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+		}
+		add_ideology = ideology_isolationist
+	}
+	if = {
+		limit = {
+			or = {
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_rural_folk
+			}
+		}
+		add_ideology = ideology_proletarian
+	}
+	add_ideology = ideology_socialist
+	if = {
+		limit = {
+			not = {
+				has_modifier = purged_ig
+			}
+		}
+		add_modifier = {
+			name = purged_ig
+			years = 10
+			is_decaying = yes
+		}
+		root = {
+			add_radicals = {
+				value = 1
+				interest_group = prev
+			}
+		}
+	}
+}
+
+corporatist_reform_movements = {
+	create_political_movement = {
+		type = movement_labor
+	}
+	create_political_movement = {
+		type = movement_land_reform
+	}
+	create_political_movement = {
+		type = movement_corporatist
+	}
+	create_political_movement = {
+		type = movement_positivist
+	}
+	create_political_movement = {
+		type = movement_fascist
+	}
+	create_political_movement = {
+		type = movement_reactionary
+	}
+	create_political_movement = {
+		type = movement_cultural_majority
+	}
+	create_political_movement = {
+		type = movement_royalist_absolutist
+	}
+	every_political_movement = {
+		if = {
+			limit = {
+				or = {
+					is_political_movement_type = movement_labor
+					is_political_movement_type = movement_land_reform
+					is_political_movement_type = movement_corporatist
+					is_political_movement_type = movement_positivist
+					is_political_movement_type = movement_fascist
+					is_political_movement_type = movement_reactionary
+					is_political_movement_type = movement_cultural_majority
+					is_political_movement_type = movement_royalist_absolutist
+				}
+			}
+			remove_character_ideology = ideology_social_democrat
+			remove_character_ideology = ideology_radical
+			remove_character_ideology = ideology_anarchist
+			remove_character_ideology = ideology_communist
+			remove_character_ideology = ideology_vanguardist
+			remove_character_ideology = ideology_corporatist_leader
+			remove_character_ideology = ideology_positivist
+			remove_character_ideology = ideology_fascist
+			if = {
+				limit = {
+					or = {
+						is_political_movement_type = movement_labor
+						is_political_movement_type = movement_land_reform
+					}
+				}
+				set_core_ideology = ideology_corporatist_movement
+			}
+			if = {
+				limit = {
+					root = {
+						ruler = {
+							has_ideology = ideology:ideology_positivist
+						}
+					}
+				}
+				add_character_ideology = ideology_positivist
+				if = {
+					limit = {
+						or = {
+							is_political_movement_type = movement_positivist
+							is_political_movement_type = movement_fascist
+							is_political_movement_type = movement_reactionary
+							is_political_movement_type = movement_cultural_majority
+						}
+					}
+					set_core_ideology = ideology_positivist_movement
+				}
+			}
+			if = {
+				limit = {
+					root = {
+						ruler = {
+							has_ideology = ideology:ideology_fascist
+						}
+					}
+				}
+				add_character_ideology = ideology_fascist
+				if = {
+					limit = {
+						or = {
+							or = {
+								is_political_movement_type = movement_positivist
+								and = {
+									is_political_movement_type = movement_positivist
+									root = {
+										ruler = {
+											not = {
+												has_ideology = ideology:ideology_positivist
+											}
+										}
+									}
+								}
+							}
+							is_political_movement_type = movement_fascist
+							is_political_movement_type = movement_reactionary
+							is_political_movement_type = movement_cultural_majority
+							or = {
+								is_political_movement_type = movement_royalist_absolutist
+								and = {
+									is_political_movement_type = movement_royalist_absolutist
+									root = {
+										ruler = {
+											not = {
+												has_ideology = ideology:ideology_integralist
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					set_core_ideology = ideology_fascist_movement
+				}
+			}
+			if = {
+				limit = {
+					root = {
+						ruler = {
+							has_ideology = ideology:ideology_integralist
+						}
+					}
+				}
+				add_character_ideology = ideology_integralist
+				if = {
+					limit = {
+						or = {
+							is_political_movement_type = movement_fascist
+							is_political_movement_type = movement_reactionary
+							is_political_movement_type = movement_cultural_majority
+							is_political_movement_type = movement_royalist_absolutist
+						}
+					}
+					set_core_ideology = ideology_integralist_movement
+				}
+			}
+			if = {
+				limit = {
+					not = {
+						has_modifier = accepted_movement
+					}
+				}
+				add_modifier = {
+					name = accepted_movement
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = accepted_movement
+			}
+			remove_modifier = accepted_movement
+		}
+	}
+}
+
+socialist_reform_movements = {
+	create_political_movement = {
+		type = movement_feminist
+	}
+	create_political_movement = {
+		type = movement_labor
+	}
+	create_political_movement = {
+		type = movement_land_reform
+	}
+	create_political_movement = {
+		type = movement_corporatist
+	}
+	create_political_movement = {
+		type = movement_socialist
+	}
+	create_political_movement = {
+		type = movement_communist
+	}
+	every_political_movement = {
+		if = {
+			limit = {
+				or = {
+					is_political_movement_type = movement_feminist
+					is_political_movement_type = movement_labor
+					is_political_movement_type = movement_land_reform
+					is_political_movement_type = movement_corporatist
+					is_political_movement_type = movement_socialist
+					is_political_movement_type = movement_communist
+				}
+			}
+			remove_character_ideology = ideology_social_democrat
+			remove_character_ideology = ideology_humanitarian
+			remove_character_ideology = ideology_feminist
+			remove_character_ideology = ideology_land_reformer
+			remove_character_ideology = ideology_radical
+			remove_character_ideology = ideology_anarchist
+			remove_character_ideology = ideology_communist
+			remove_character_ideology = ideology_vanguardist
+			if = {
+				limit = {
+					or = {
+						is_political_movement_type = movement_feminist
+						is_political_movement_type = movement_land_reform
+					}
+				}
+				set_core_ideology = ideology_proletarian_movement
+			}
+			if = {
+				limit = {
+					is_political_movement_type = movement_corporatist
+				}
+				set_core_ideology = ideology_socialist_movement
+			}
+			if = {
+				limit = {
+					root = {
+						ruler = {
+							has_ideology = ideology:ideology_anarchist
+						}
+					}
+				}
+				add_character_ideology = ideology_anarchist
+				if = {
+					limit = {
+						is_political_movement_type = movement_communist
+					}
+					set_core_ideology = ideology_anarchist_movement
+				}
+			}
+			if = {
+				limit = {
+					root = {
+						ruler = {
+							has_ideology = ideology:ideology_communist
+						}
+					}
+				}
+				add_character_ideology = ideology_communist
+				if = {
+					limit = {
+						is_political_movement_type = movement_communist
+					}
+					set_core_ideology = ideology_communist_movement
+				}
+			}
+			if = {
+				limit = {
+					root = {
+						ruler = {
+							has_ideology = ideology:ideology_vanguardist
+						}
+					}
+				}
+				add_character_ideology = ideology_vanguardist
+				if = {
+					limit = {
+						is_political_movement_type = movement_communist
+					}
+					set_core_ideology = ideology_vanguardist_movement
+				}
+			}
+			if = {
+				limit = {
+					not = {
+						has_modifier = accepted_movement
+					}
+				}
+				add_modifier = {
+					name = accepted_movement
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = accepted_movement
+			}
+			remove_modifier = accepted_movement
 		}
 	}
 }

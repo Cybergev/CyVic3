@@ -88,8 +88,8 @@ mobilization_option_extra_supplies = {
 		}
 	}
 	upkeep_modifier = {
-		goods_input_fruit_add = 1
-		goods_input_groceries_add = 1
+		goods_input_fruit_add = 10
+		goods_input_groceries_add = 10
 	}
 	upkeep_modifier_unscaled = {
 		goods_input_small_arms_mult = 0.2
@@ -175,10 +175,10 @@ mobilization_option_luxurious_supplies = {
 		}
 	}
 	upkeep_modifier = {
-		goods_input_liquor_add = 1
-		goods_input_meat_add = 1
-		goods_input_fruit_add = 1
-		goods_input_groceries_add = 1
+		goods_input_liquor_add = 10
+		goods_input_meat_add = 10
+		goods_input_fruit_add = 10
+		goods_input_groceries_add = 10
 	}
 	upkeep_modifier_unscaled = {
 		goods_input_small_arms_mult = 0.4
@@ -224,7 +224,7 @@ mobilization_option_tobacco = {
 		}
 	}
 	upkeep_modifier = {
-		goods_input_tobacco_add = 1
+		goods_input_tobacco_add = 10
 	}
 	unit_modifier = {
 		unit_morale_recovery_mult = 0.1
@@ -256,7 +256,7 @@ mobilization_option_liquor = {
 		}
 	}
 	upkeep_modifier = {
-		goods_input_liquor_add = 1
+		goods_input_liquor_add = 10
 	}
 	unit_modifier = {
 		unit_morale_recovery_mult = 0.1
@@ -288,7 +288,7 @@ mobilization_option_opium = {
 		}
 	}
 	upkeep_modifier = {
-		goods_input_opium_add = 1
+		goods_input_opium_add = 10
 	}
 	unit_modifier = {
 		unit_morale_recovery_mult = 0.1
@@ -325,8 +325,7 @@ mobilization_option_forced_march = {
 	}
 	unit_modifier = {
 		military_formation_movement_speed_mult = 0.1
-		military_formation_mobilization_speed_mult = 0.25
-		unit_morale_loss_mult = 0.1
+		military_formation_mobilization_speed_mult = 0.1
 	}
 	ai_weight = {
 		value = 0
@@ -384,7 +383,7 @@ mobilization_option_rail_transport = {
 		railways
 	}
 	upkeep_modifier = {
-		goods_input_engines_add = 5
+		goods_input_engines_add = 10
 	}
 	unit_modifier = {
 		military_formation_movement_speed_mult = 0.25
@@ -435,8 +434,8 @@ mobilization_option_truck_transport = {
 		combustion_engine
 	}
 	upkeep_modifier = {
-		goods_input_oil_add = 5
-		goods_input_automobiles_add = 5
+		goods_input_oil_add = 10
+		goods_input_automobiles_add = 10
 	}
 	unit_modifier = {
 		military_formation_movement_speed_mult = 0.25
@@ -482,8 +481,8 @@ mobilization_option_machinegunners = {
 		automatic_machine_guns
 	}
 	upkeep_modifier = {
-		goods_input_small_arms_add = 5
-		goods_input_ammunition_add = 5
+		goods_input_small_arms_add = 10
+		goods_input_ammunition_add = 10
 	}
 	unit_modifier = {
 		unit_offense_add = 10
@@ -532,9 +531,9 @@ mobilization_option_chemical_weapons = {
 		chemical_warfare
 	}
 	upkeep_modifier = {
-		goods_input_fertilizer_add = 5
-		goods_input_ammunition_add = 5
-		goods_input_artillery_add = 5
+		goods_input_fertilizer_add = 10
+		goods_input_ammunition_add = 10
+		goods_input_artillery_add = 10
 	}
 	unit_modifier = {
 		unit_morale_damage_mult = 0.5
@@ -580,8 +579,8 @@ mobilization_option_flamethrowers = {
 		flamethrowers
 	}
 	upkeep_modifier = {
-		goods_input_oil_add = 5
-		goods_input_small_arms_add = 5
+		goods_input_oil_add = 10
+		goods_input_small_arms_add = 10
 	}
 	unit_modifier = {
 		unit_offense_mult = 0.2
@@ -628,8 +627,8 @@ mobilization_option_motorized_recon = {
 		combustion_engine
 	}
 	upkeep_modifier = {
-		goods_input_oil_add = 5
-		goods_input_automobiles_add = 5
+		goods_input_oil_add = 10
+		goods_input_automobiles_add = 10
 	}
 	unit_modifier = {
 		unit_occupation_mult = 0.5
@@ -676,8 +675,8 @@ mobilization_option_balloon_recon = {
 		}
 	}
 	upkeep_modifier = {
-		goods_input_fabric_add = 5
-		goods_input_oil_add = 5
+		goods_input_fabric_add = 10
+		goods_input_oil_add = 10
 	}
 	unit_modifier = {
 		unit_occupation_mult = 0.5
@@ -724,8 +723,8 @@ mobilization_option_aerial_recon = {
 		military_aviation
 	}
 	upkeep_modifier = {
-		goods_input_oil_add = 5
-		goods_input_aeroplanes_add = 5
+		goods_input_oil_add = 10
+		goods_input_aeroplanes_add = 10
 	}
 	unit_modifier = {
 		unit_occupation_mult = 1
@@ -778,8 +777,8 @@ mobilization_option_first_aid = {
 		}
 	}
 	upkeep_modifier = {
-		goods_input_fabric_add = 5
-		goods_input_liquor_add = 5
+		goods_input_fabric_add = 10
+		goods_input_liquor_add = 10
 	}
 	unit_modifier = {
 		unit_recovery_rate_add = 0.25
@@ -830,8 +829,8 @@ mobilization_option_field_hospitals = {
 		}
 	}
 	upkeep_modifier = {
-		goods_input_tools_add = 5
-		goods_input_opium_add = 5
+		goods_input_tools_add = 10
+		goods_input_opium_add = 10
 	}
 	unit_modifier = {
 		unit_recovery_rate_add = 0.5

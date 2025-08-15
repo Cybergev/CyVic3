@@ -1282,8 +1282,8 @@ ideology_republican = {
 		law_monarchy = strongly_disapprove
 		law_council_republic = neutral
 		law_corporate_state = neutral
-		law_presidential_republic = strongly_disapprove
-		law_parliamentary_republic = strongly_disapprove
+		law_presidential_republic = strongly_approve
+		law_parliamentary_republic = strongly_approve
 	}
 	lawgroup_distribution_of_power = {
 		law_anarchy = strongly_disapprove
@@ -1297,9 +1297,9 @@ ideology_republican = {
 		law_universal_suffrage = strongly_approve
 	}
 	lawgroup_bureaucracy = {
-		law_hereditary_bureaucrats = strongly_approve
+		law_hereditary_bureaucrats = strongly_disapprove
 		law_appointed_bureaucrats = approve
-		law_elected_bureaucrats = strongly_disapprove
+		law_elected_bureaucrats = strongly_approve
 	}
 }
 
@@ -1429,7 +1429,7 @@ ideology_anarchist_movement = {
 		law_no_police = strongly_approve
 	}
 	lawgroup_army_model = {
-		law_professional_army = strongly_approve
+		law_professional_army = strongly_disapprove
 		law_peasant_levies = strongly_disapprove
 		law_mass_conscription = neutral
 		law_national_militia = strongly_approve
@@ -1589,22 +1589,37 @@ ideology_vanguardist_movement = {
 
 ideology_corporatist_movement = {
 	icon = "gfx/interface/icons/ideology_icons/corporatist.dds"
+	lawgroup_governance_principles = {
+		law_council_republic = disapprove
+		law_theocracy = disapprove
+		law_monarchy = disapprove
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_corporate_state = approve
+	}
 	lawgroup_economic_system = {
-		law_traditionalism = strongly_disapprove
-		law_industry_banned = strongly_disapprove
-		law_extraction_economy = strongly_disapprove
-		law_agrarianism = disapprove
-		law_laissez_faire = disapprove
-		law_cooperative_ownership = disapprove
+		law_traditionalism = disapprove
+		law_industry_banned = disapprove
+		law_extraction_economy = disapprove
+		law_agrarianism = neutral
+		law_laissez_faire = neutral
+		law_cooperative_ownership = approve
 		law_interventionism = approve
 		law_command_economy = approve
 	}
 	lawgroup_land_reform = {
-		law_serfdom = strongly_disapprove
-		law_tenant_farmers = disapprove
-		law_commercialized_agriculture = neutral
+		law_serfdom = disapprove
+		law_tenant_farmers = neutral
+		law_commercialized_agriculture = approve
 		law_collectivized_agriculture = approve
 		law_homesteading = approve
+	}
+	lawgroup_taxation = {
+		law_per_capita_based_taxation = disapprove
+		law_land_based_taxation = disapprove
+		law_graduated_taxation = disapprove
+		law_proportional_taxation = approve
+		law_consumption_based_taxation = approve
 	}
 	lawgroup_childrens_rights = {
 		law_child_labor_allowed = disapprove
@@ -1754,7 +1769,7 @@ ideology_fascist_movement = {
 }
 
 ideology_integralist_movement = {
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_integralist.dds"
+	icon = "gfx/interface/icons/ideology_icons/integralist.dds"
 	lawgroup_governance_principles = {
 		law_council_republic = strongly_disapprove
 		law_parliamentary_republic = disapprove

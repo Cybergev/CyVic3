@@ -50,6 +50,8 @@ building_synthetic_silk_plants_lens_option: "Расширить заводы с�
 building_tanks_industry: "Бронетанковые заводы"
 building_tanks_industry_lens_option: "Расширить бронетанковые заводы"
 
+#---------------------------
+
 pmg_luxury_furniture_manufacturies: "$pmg_luxury_building_furniture_manufacturies$"
 pmg_luxury_textile_manufacturies: "$pmg_luxury_building_textile_mills$"
 pm_fruit_pot_stills: "$pm_pot_stills$"
@@ -75,6 +77,36 @@ pm_disel_whaling_ships: "Совеременные китобойные суда"
 
 #---------------------------
 
+pmg_base_building_farm: "$pm_base$"
+pmg_secondary_building_farm: "Вторичное"
+pmg_tertiary_building_farm: "Третичное"
+pmg_secondary_building_rice_farm: "$pmg_secondary_building_farm$"
+pmg_tertiary_building_rice_farm: "$pmg_tertiary_building_farm$"
+
+pm_simple_sugar_farming: "$pm_simple_farming$"
+pm_soil_enriching_sugar_farming: "$pm_soil_enriching_farming$"
+pm_fertilization_sugar_farming: "$pm_fertilization$"
+pm_chemical_fertilizer_sugar_farming: "$pm_chemical_fertilizer$"
+
+pm_simple_sugar_building_rice_farm: "$pm_simple_farming$"
+pm_soil_enriching_sugar_building_rice_farm: "$pm_soil_enriching_farming$"
+pm_fertilization_sugar_building_rice_farm: "$pm_fertilization$"
+pm_chemical_fertilizer_sugar_building_rice_farm: "$pm_chemical_fertilizer$"
+
+pm_no_sugar: "Без сахара"
+pm_simple_orchards: "$pm_simple_farming$"
+pm_soil_enriching_orchards: "$pm_soil_enriching_farming$"
+pm_fertilization_orchards: "$pm_fertilization$"
+pm_chemical_fertilizer_orchards: "$pm_chemical_fertilizer$"
+
+pm_no_orchards: "Без фруктов"
+pm_simple_orchards_building_rice_farm: "$pm_simple_farming$"
+pm_soil_enriching_orchards_building_rice_farm: "$pm_soil_enriching_farming$"
+pm_fertilization_orchards_building_rice_farm: "$pm_fertilization$"
+pm_chemical_fertilizer_orchards_building_rice_farm: "$pm_chemical_fertilizer$"
+
+#---------------------------
+
 pm_assembly_lines_building_paper_mills: "$pm_assembly_lines_building_tooling_workshops$"
 pm_assembly_lines_building_steel_mills: "$pm_assembly_lines_building_tooling_workshops$"
 
@@ -97,6 +129,7 @@ pm_automatic_chemical_disabled: "Ручное обарудование"
 pm_automatic_power_chemical_equipment: "Автоматизированное обарудование"
 
 #---------------------------
+
 pm_percussion_lead_caps: "$pm_percussion_caps$"
 pm_percussion_iron_caps: "$pm_percussion_caps$"
 pm_explosive_lead_shells: "$pm_explosive_shells$"

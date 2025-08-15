@@ -124,13 +124,17 @@ pm_default_building_vatican_city = {
 	unlocking_religions = {
 		catholic
 	}
+	unlocking_laws = {
+		law_theocracy
+		law_state_religion
+	}
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
 		level_scaled = {
-			country_legitimacy_min_add = 25
-			country_authority_add = 100
-			country_influence_add = 100
+			country_authority_add = 200
+			country_influence_add = 200
 			country_prestige_add = 100
+			country_legitimacy_min_add = 40
 			country_clergymen_pol_str_mult = 1
 		}
 	}
@@ -149,8 +153,6 @@ pm_monument_prestige_only_vatican_city = {
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
 		level_scaled = {
-			country_authority_add = 100
-			country_influence_add = 100
 			country_prestige_add = 100
 		}
 	}

@@ -1,4 +1,5 @@
-﻿pmg_automation_building_paper_mills = {
+﻿#INDSTRY--------
+pmg_automation_building_paper_mills = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_automation_disabled
@@ -72,6 +73,15 @@ pmg_steam_automation_building_gold_mine = {
 	}
 }
 
+pmg_train_automation_building_iron_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+#PLANTATION--------
 pmg_equipment_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
@@ -89,6 +99,7 @@ pmg_train_automation_plantation = {
 	}
 }
 
+#MISС--------
 pmg_refrigeration = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
@@ -96,5 +107,23 @@ pmg_refrigeration = {
 		pm_refrigerated_storage
 		pm_refrigerated_rail_cars
 		pm_flash_freezing
+	}
+}
+
+pmg_transportation_building_logging_camp = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+		pm_log_carts
+	}
+}
+
+pmg_transportation_building_oil_rig = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+		pm_tanker_cars
 	}
 }

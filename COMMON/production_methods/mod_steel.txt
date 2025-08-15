@@ -8,8 +8,7 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_iron_add = 40
-			goods_input_coal_add = 40
+			goods_input_iron_add = 100
 			# output goods
 			goods_output_steel_add = 100
 		}
@@ -35,10 +34,10 @@ pm_bessemer_process = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_iron_add = 80
-			goods_input_coal_add = 40
+			goods_input_iron_add = 100
+			goods_input_coal_add = 50
 			# output goods
-			goods_output_steel_add = 160
+			goods_output_steel_add = 200
 		}
 		level_scaled = {
 			# employment
@@ -63,9 +62,9 @@ pm_open_hearth_process = {
 		workforce_scaled = {
 			# input goods
 			goods_input_iron_add = 100
-			goods_input_coal_add = 40
+			goods_input_coal_add = 100
 			# output goods
-			goods_output_steel_add = 200
+			goods_output_steel_add = 300
 		}
 		level_scaled = {
 			# employment
@@ -90,10 +89,10 @@ pm_electric_arc_process = {
 		workforce_scaled = {
 			# input goods
 			goods_input_iron_add = 100
-			goods_input_oil_add = 40
-			goods_input_electricity_add = 20
+			goods_input_oil_add = 50
+			goods_input_electricity_add = 50
 			# output goods
-			goods_output_steel_add = 300
+			goods_output_steel_add = 400
 		}
 		level_scaled = {
 			# employment

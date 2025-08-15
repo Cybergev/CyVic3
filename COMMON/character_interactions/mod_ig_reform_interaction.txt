@@ -1,0 +1,737 @@
+﻿#ideolog swaps
+swap_ideology_to_anarchist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_anarchist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		or = {
+			has_ideology = ideology:ideology_communist
+			and = {
+				has_ideology = ideology:ideology_moderate
+				or = {
+					owner = {
+						has_law = law_type:law_council_republic
+					}
+					interest_group = {
+						or = {
+							has_ideology = ideology:ideology_anarchist_movement
+							has_ideology = ideology:ideology_communist
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		set_ideology = ideology:ideology_anarchist
+		add_modifier = {
+			name = changed_ideology
+			years = 5
+			is_decaying = yes
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+swap_ideology_to_communist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_communist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		or = {
+			has_ideology = ideology:ideology_anarchist
+			has_ideology = ideology:ideology_vanguardist
+			and = {
+				has_ideology = ideology:ideology_moderate
+				or = {
+					owner = {
+						has_law = law_type:law_council_republic
+					}
+					interest_group = {
+						or = {
+							has_ideology = ideology:ideology_anarchist_movement
+							has_ideology = ideology:ideology_vanguardist_movement
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		set_ideology = ideology:ideology_communist
+		add_modifier = {
+			name = changed_ideology
+			years = 5
+			is_decaying = yes
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+swap_ideology_to_vanguardist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_vanguardist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		or = {
+			has_ideology = ideology:ideology_communist
+			and = {
+				or = {
+					has_ideology = ideology:ideology_moderate
+					has_ideology = ideology:ideology_authoritarian
+				}
+				or = {
+					owner = {
+						has_law = law_type:law_council_republic
+					}
+					interest_group = {
+						or = {
+							has_ideology = ideology:ideology_communist_movement
+							has_ideology = ideology:ideology_vanguardist_movement
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		set_ideology = ideology:ideology_vanguardist
+		add_modifier = {
+			name = changed_ideology
+			years = 5
+			is_decaying = yes
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+swap_ideology_to_corporatist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_corporatist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		or = {
+			has_ideology = ideology:ideology_positivist
+			has_ideology = ideology:ideology_fascist
+			has_ideology = ideology:ideology_integralist
+			and = {
+				or = {
+					has_ideology = ideology:ideology_moderate
+					has_ideology = ideology:ideology_modernizer_leader
+					has_ideology = ideology:ideology_reformer
+					has_ideology = ideology:ideology_utilitarian_leader
+					has_ideology = ideology:ideology_protectionist
+				}
+				or = {
+					owner = {
+						has_law = law_type:law_corporate_state
+					}
+					interest_group = {
+						or = {
+							has_ideology = ideology:ideology_corporatist_movement
+							has_ideology = ideology:ideology_positivist_movement
+							has_ideology = ideology:ideology_fascist_movement
+							has_ideology = ideology:ideology_integralist_movement
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		set_ideology = ideology:ideology_corporatist_leader
+		add_modifier = {
+			name = changed_ideology
+			years = 5
+			is_decaying = yes
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+swap_ideology_to_positivist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_positivist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		or = {
+			has_ideology = ideology:ideology_corporatist_leader
+			has_ideology = ideology:ideology_fascist
+			and = {
+				or = {
+					has_ideology = ideology:ideology_moderate
+					has_ideology = ideology:ideology_authoritarian
+					has_ideology = ideology:ideology_nihilist
+				}
+				or = {
+					owner = {
+						has_law = law_type:law_corporate_state
+					}
+					interest_group = {
+						or = {
+							has_ideology = ideology:ideology_corporatist_movement
+							has_ideology = ideology:ideology_positivist_movement
+							has_ideology = ideology:ideology_fascist_movement
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		set_ideology = ideology:ideology_positivist
+		add_modifier = {
+			name = changed_ideology
+			years = 5
+			is_decaying = yes
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+swap_ideology_to_fascist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_fascist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		or = {
+			has_ideology = ideology:ideology_corporatist_leader
+			has_ideology = ideology:ideology_positivist
+			has_ideology = ideology:ideology_integralist
+			and = {
+				or = {
+					has_ideology = ideology:ideology_moderate
+					has_ideology = ideology:ideology_authoritarian
+					has_ideology = ideology:ideology_ethno_nationalist
+				}
+				or = {
+					owner = {
+						has_law = law_type:law_corporate_state
+					}
+					interest_group = {
+						or = {
+							has_ideology = ideology:ideology_corporatist_movement
+							has_ideology = ideology:ideology_positivist_movement
+							has_ideology = ideology:ideology_integralist_movement
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		set_ideology = ideology:ideology_fascist
+		add_modifier = {
+			name = changed_ideology
+			years = 5
+			is_decaying = yes
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+swap_ideology_to_integralist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_integralist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		or = {
+			has_ideology = ideology:ideology_corporatist_leader
+			has_ideology = ideology:ideology_fascist
+			and = {
+				or = {
+					has_ideology = ideology:ideology_moderate
+					has_ideology = ideology:ideology_authoritarian
+					has_ideology = ideology:ideology_theocrat
+					has_ideology = ideology:ideology_traditionalist
+				}
+				or = {
+					owner = {
+						has_law = law_type:law_corporate_state
+					}
+					interest_group = {
+						or = {
+							has_ideology = ideology:ideology_corporatist_movement
+							has_ideology = ideology:ideology_fascist_movement
+							has_ideology = ideology:ideology_integralist_movement
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		set_ideology = ideology:ideology_integralist
+		add_modifier = {
+			name = changed_ideology
+			years = 5
+			is_decaying = yes
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+#left
+socialist_reform = {
+	icon = "gfx/interface/icons/ideology_icons/socialist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+			has_law = law_type:law_council_republic
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		owner = {
+			has_law = law_type:law_council_republic
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		or = {
+			has_ideology = ideology:ideology_anarchist
+			has_ideology = ideology:ideology_communist
+			has_ideology = ideology:ideology_vanguardist
+		}
+		interest_group = {
+			not = {
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_landowners
+				has_ideology = ideology:ideology_socialist_movement
+			}
+		}
+	}
+	effect = {
+		interest_group = {
+			socialist_reform_ig_iedologies = yes
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+anarchist_reform = {
+	icon = "gfx/interface/icons/ideology_icons/anarchist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+			has_law = law_type:law_council_republic
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		owner = {
+			has_law = law_type:law_council_republic
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		has_ideology = ideology:ideology_anarchist
+		interest_group = {
+			not = {
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_petty_bourgeoisie
+				has_ideology = ideology:ideology_anarchist_movement
+			}
+		}
+	}
+	effect = {
+		interest_group = {
+			socialist_reform_ig_iedologies = yes
+			add_ideology = ideology_anarchist_movement
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+communist_reform = {
+	icon = "gfx/interface/icons/ideology_icons/communist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+			has_law = law_type:law_council_republic
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		owner = {
+			has_law = law_type:law_council_republic
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		has_ideology = ideology:ideology_communist
+		interest_group = {
+			not = {
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_landowners
+				has_ideology = ideology:ideology_communist_movement
+			}
+		}
+	}
+	effect = {
+		interest_group = {
+			socialist_reform_ig_iedologies = yes
+			add_ideology = ideology_communist_movement
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+vanguardist_reform = {
+	icon = "gfx/interface/icons/ideology_icons/vanguardist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+			has_law = law_type:law_council_republic
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		owner = {
+			has_law = law_type:law_council_republic
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		has_ideology = ideology:ideology_vanguardist
+		interest_group = {
+			not = {
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_landowners
+				has_ideology = ideology:ideology_vanguardist_movement
+			}
+		}
+	}
+	effect = {
+		interest_group = {
+			socialist_reform_ig_iedologies = yes
+			add_ideology = ideology_vanguardist_movement
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+#right
+corporatist_reform = {
+	icon = "gfx/interface/icons/ideology_icons/corporatist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+			has_law = law_type:law_corporate_state
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		owner = {
+			has_law = law_type:law_corporate_state
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		has_ideology = ideology:ideology_corporatist_leader
+		interest_group = {
+			not = {
+				has_ideology = ideology:ideology_corporatist_movement
+			}
+		}
+	}
+	effect = {
+		interest_group = {
+			corporatist_reform_ig_iedologies = yes
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+positivist_reform = {
+	icon = "gfx/interface/icons/ideology_icons/positivist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+			has_law = law_type:law_corporate_state
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		owner = {
+			has_law = law_type:law_corporate_state
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		has_ideology = ideology:ideology_positivist
+		interest_group = {
+			not = {
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_landowners
+				has_ideology = ideology:ideology_positivist_movement
+			}
+		}
+	}
+	effect = {
+		interest_group = {
+			corporatist_reform_ig_iedologies = yes
+			add_ideology = ideology_positivist_movement
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+fascist_reform = {
+	icon = "gfx/interface/icons/ideology_icons/fascist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+			has_law = law_type:law_corporate_state
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		owner = {
+			has_law = law_type:law_corporate_state
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		has_ideology = ideology:ideology_fascist
+		interest_group = {
+			not = {
+				has_ideology = ideology:ideology_fascist_movement
+			}
+		}
+	}
+	effect = {
+		interest_group = {
+			corporatist_reform_ig_iedologies = yes
+			add_ideology = ideology_fascist_movement
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+integralist_reform = {
+	icon = "gfx/interface/icons/ideology_icons/integralist.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
+	potential = {
+		owner = {
+			scope:actor = owner
+			has_law = law_type:law_corporate_state
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+	show_requirements = yes
+	possible = {
+		owner = {
+			has_law = law_type:law_corporate_state
+		}
+		or = {
+			has_role = ruler
+			has_role = politician
+		}
+		has_ideology = ideology:ideology_integralist
+		interest_group = {
+			not = {
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_intelligentsia
+				has_ideology = ideology:ideology_integralist_movement
+			}
+		}
+	}
+	effect = {
+		interest_group = {
+			corporatist_reform_ig_iedologies = yes
+			add_ideology = ideology_integralist_movement
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}

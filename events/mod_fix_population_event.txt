@@ -1,0 +1,22 @@
+﻿namespace = fix_population_event
+fix_population_event.1 = {
+	type = state_event
+	hidden = yes
+	trigger = {
+		state_population >= 100000000
+	}
+	immediate = {
+		kill_population_percent_in_state = {
+			strata = upper
+			percent = 0.9
+		}
+		kill_population_percent_in_state = {
+			strata = middle
+			percent = 0.9
+		}
+		kill_population_percent_in_state = {
+			strata = lower
+			percent = 0.9
+		}
+	}
+}

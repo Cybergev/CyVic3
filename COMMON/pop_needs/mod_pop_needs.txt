@@ -37,28 +37,28 @@ popneed_heating = {
 }
 
 popneed_basic_food = {
-	default = grain
+	default = groceries
 	entry = {
-		goods = grain
-		weight = 1
+		goods = groceries
+		weight = 4
 		max_supply_share = 1
 		min_supply_share = 0
 	}
 	entry = {
 		goods = fish
-		weight = 1
+		weight = 2
 		max_supply_share = 1
 		min_supply_share = 0
 	}
 	entry = {
 		goods = meat
-		weight = 1
+		weight = 2
 		max_supply_share = 1
 		min_supply_share = 0
 	}
 	entry = {
-		goods = groceries
-		weight = 2
+		goods = grain
+		weight = 1
 		max_supply_share = 1
 		min_supply_share = 0
 	}
@@ -80,19 +80,19 @@ popneed_luxury_food = {
 	default = groceries
 	entry = {
 		goods = groceries
-		weight = 2
+		weight = 4
 		max_supply_share = 1
 		min_supply_share = 0
 	}
 	entry = {
 		goods = fish
-		weight = 1
+		weight = 2
 		max_supply_share = 1
 		min_supply_share = 0
 	}
 	entry = {
 		goods = meat
-		weight = 1
+		weight = 2
 		max_supply_share = 1
 		min_supply_share = 0
 	}
@@ -229,12 +229,6 @@ popneed_household_items = {
 popneed_luxury_items = {
 	default = porcelain
 	entry = {
-		goods = porcelain
-		weight = 1
-		max_supply_share = 1
-		min_supply_share = 0
-	}
-	entry = {
 		goods = automobiles
 		weight = 4
 		max_supply_share = 1
@@ -249,6 +243,18 @@ popneed_luxury_items = {
 	entry = {
 		goods = radios
 		weight = 2
+		max_supply_share = 1
+		min_supply_share = 0
+	}
+	entry = {
+		goods = porcelain
+		weight = 1
+		max_supply_share = 1
+		min_supply_share = 0
+	}
+	entry = {
+		goods = fine_art
+		weight = 1
 		max_supply_share = 1
 		min_supply_share = 0
 	}

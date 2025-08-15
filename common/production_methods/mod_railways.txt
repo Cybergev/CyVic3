@@ -2,17 +2,17 @@
 	texture = "gfx/interface/icons/production_method_icons/experimental_trains.dds"
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 25
+			state_pollution_generation_add = 10
 		}
 		level_scaled = {
-			state_infrastructure_add = 20
+			state_infrastructure_add = 10
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_engines_add = 5			# 300
 			goods_input_coal_add = 2			# 60
-			goods_output_transportation_add = 20			# 600
+			goods_output_transportation_add = 10			# 600
 		}
 		level_scaled = {
 			building_employment_laborers_add = 2500
@@ -33,14 +33,14 @@ pm_steam_trains = {
 			state_pollution_generation_add = 20
 		}
 		level_scaled = {
-			state_infrastructure_add = 25
+			state_infrastructure_add = 20
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_engines_add = 5			# 300
 			goods_input_coal_add = 5			# 150
-			goods_output_transportation_add = 25			# 750
+			goods_output_transportation_add = 20			# 750
 		}
 		level_scaled = {
 			building_employment_laborers_add = 2000
@@ -89,14 +89,14 @@ pm_electric_trains = {
 	}
 	state_modifiers = {
 		level_scaled = {
-			state_infrastructure_add = 30
+			state_infrastructure_add = 40
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_engines_add = 5			# 300
 			goods_input_electricity_add = 10			# 300
-			goods_output_transportation_add = 30			# 1050
+			goods_output_transportation_add = 40			# 1050
 		}
 		level_scaled = {
 			building_employment_engineers_add = 500
@@ -117,14 +117,14 @@ pm_electric_trains_principle_transport_3 = {
 	}
 	state_modifiers = {
 		level_scaled = {
-			state_infrastructure_add = 50
+			state_infrastructure_add = 80
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_engines_add = 10			# 300
 			goods_input_electricity_add = 20			# 300
-			goods_output_transportation_add = 50			# 1050
+			goods_output_transportation_add = 80			# 1050
 		}
 		level_scaled = {
 			building_employment_engineers_add = 500
@@ -145,14 +145,14 @@ pm_diesel_trains = {
 			state_pollution_generation_add = 20
 		}
 		level_scaled = {
-			state_infrastructure_add = 40
+			state_infrastructure_add = 50
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_engines_add = 5			# 300
 			goods_input_oil_add = 5			# 400
-			goods_output_transportation_add = 40			# 1200
+			goods_output_transportation_add = 50			# 1200
 		}
 		level_scaled = {
 			building_employment_engineers_add = 500
@@ -175,14 +175,14 @@ pm_diesel_trains_principle_transport_3 = {
 			state_pollution_generation_add = 40
 		}
 		level_scaled = {
-			state_infrastructure_add = 60
+			state_infrastructure_add = 100
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_engines_add = 10			# 300
 			goods_input_oil_add = 10			# 400
-			goods_output_transportation_add = 60			# 1200
+			goods_output_transportation_add = 100			# 1200
 		}
 		level_scaled = {
 			building_employment_engineers_add = 500

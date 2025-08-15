@@ -1123,7 +1123,7 @@ law_single_party_state = {
 	}
 	modifier = {
 		country_authority_add = 100
-		country_voting_power_base_add = 25
+		country_voting_power_base_add = 1
 		country_legitimacy_govt_total_votes_add = 100
 		country_legitimacy_ideological_incoherence_mult = -0.25
 		interest_group_in_government_attraction_mult = 0.25
@@ -1237,6 +1237,7 @@ law_landed_voting = {
 		law_command_economy
 	}
 	modifier = {
+		country_voting_power_base_add = 1
 		country_voting_power_wealth_threshold_add = 40
 		country_legitimacy_govt_total_clout_add = 50
 		country_legitimacy_govt_total_votes_add = 50
@@ -1337,7 +1338,8 @@ law_wealth_voting = {
 		law_command_economy
 	}
 	modifier = {
-		country_voting_power_from_literacy_add = 50
+		country_voting_power_base_add = 1
+		country_voting_power_from_literacy_add = 100
 		country_voting_power_wealth_threshold_add = 40
 		country_legitimacy_govt_total_clout_add = 50
 		country_legitimacy_govt_total_votes_add = 50
@@ -1427,7 +1429,7 @@ law_census_voting = {
 		law_command_economy
 	}
 	modifier = {
-		country_voting_power_base_add = -100
+		country_voting_power_base_add = 1
 		country_voting_power_from_literacy_add = 100
 		country_legitimacy_govt_total_clout_add = 100
 		country_legitimacy_govt_size_add = 1
@@ -1514,7 +1516,7 @@ law_universal_suffrage = {
 		law_command_economy
 	}
 	modifier = {
-		country_voting_power_base_add = 25
+		country_voting_power_base_add = 1
 		country_legitimacy_govt_total_votes_add = 100
 		country_legitimacy_govt_size_add = 1
 	}
@@ -2967,8 +2969,7 @@ law_peasant_levies = {
 		state_building_barracks_max_level_add = 50
 		state_building_conscription_center_max_level_add = 100
 		state_conscription_rate_add = 0.05
-		unit_morale_loss_mult = 0.1
-		unit_experience_gain_mult = -0.25
+		military_formation_organization_gain_add = -0.25
 		country_officers_pol_str_mult = 1
 	}
 	can_impose = {
@@ -3028,9 +3029,9 @@ law_national_militia = {
 		interest_group_ig_armed_forces_pol_str_mult = -0.5
 		state_building_barracks_max_level_add = 50
 		state_building_conscription_center_max_level_add = 100
-		unit_morale_loss_mult = -0.1
-		unit_morale_recovery_mult = 0.1
+		unit_morale_recovery_mult = 0.2
 		state_conscription_rate_add = 0.05
+		building_training_rate_mult = 1
 		country_officers_pol_str_mult = -0.5
 		country_soldiers_pol_str_mult = -0.25
 	}
@@ -3174,7 +3175,6 @@ law_professional_army = {
 		state_building_barracks_max_level_add = 100
 		state_building_conscription_center_max_level_add = 50
 		state_conscription_rate_add = 0.025
-		unit_morale_loss_mult = -0.2
 		unit_morale_recovery_mult = 0.2
 		military_formation_organization_gain_add = 0.25
 		unit_experience_gain_mult = 0.2

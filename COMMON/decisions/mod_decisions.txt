@@ -42,7 +42,7 @@ fix_population = {
 chande_arable_land_10 = {
 	is_shown = {
 		any_scope_state = {
-			OR = {
+			or = {
 				has_decree = decree_add_arable_land
 				has_decree = decree_remove_arable_land
 			}
@@ -76,7 +76,7 @@ chande_arable_land_10 = {
 chande_arable_land_5 = {
 	is_shown = {
 		any_scope_state = {
-			OR = {
+			or = {
 				has_decree = decree_add_arable_land
 				has_decree = decree_remove_arable_land
 			}
@@ -110,7 +110,7 @@ chande_arable_land_5 = {
 chande_arable_land_2 = {
 	is_shown = {
 		any_scope_state = {
-			OR = {
+			or = {
 				has_decree = decree_add_arable_land
 				has_decree = decree_remove_arable_land
 			}
@@ -144,7 +144,7 @@ chande_arable_land_2 = {
 chande_arable_land_1 = {
 	is_shown = {
 		any_scope_state = {
-			OR = {
+			or = {
 				has_decree = decree_add_arable_land
 				has_decree = decree_remove_arable_land
 			}
@@ -177,12 +177,12 @@ chande_arable_land_1 = {
 
 destroy_china = {
 	is_shown = {
-		c:CHI ?= root
-		exists = c:CHI
+		c:chi ?= root
+		exists = c:chi
 	}
 	possible = {
-		c:CHI ?= root
-		exists = c:CHI
+		c:chi ?= root
+		exists = c:chi
 	}
 	when_taken = {
 		trigger_event = {
@@ -208,7 +208,7 @@ european_culture_unification = {
 	}
 	when_taken = {
 		every_primary_culture = {
-			ROOT = {
+			root = {
 				remove_primary_culture = prev
 				add_radicals = {
 					value = 1
@@ -217,1047 +217,6 @@ european_culture_unification = {
 			}
 		}
 		add_primary_culture = cu:european
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-corporate_reform = {
-	is_shown = {
-		any_political_movement = {
-			OR = {
-				is_political_movement_type = movement_corporatist
-				is_political_movement_type = movement_positivist
-				is_political_movement_type = movement_fascist
-			}
-		}
-	}
-	possible = {
-		has_law = law_type:law_corporate_state
-		ruler = {
-			OR = {
-				OR = {
-					has_ideology = ideology:ideology_positivist
-					has_ideology = ideology:ideology_fascist
-					has_ideology = ideology:ideology_integralist
-				}
-				AND = {
-					has_ideology = ideology:ideology_moderate
-					interest_group = {
-						OR = {
-							has_ideology = ideology:ideology_positivist_movement
-							has_ideology = ideology:ideology_fascist_movement
-							has_ideology = ideology:ideology_integralist_movement
-						}
-					}
-				}
-			}
-		}
-		any_interest_group = {
-			is_in_government = yes
-			NOT = {
-				is_interest_group_type = ig_landowners
-			}
-			OR = {
-				AND = {
-					NOT = {
-						is_interest_group_type = ig_devout
-					}
-					leader = {
-						has_ideology = ideology:ideology_positivist
-					}
-					NOT = {
-						has_ideology = ideology:ideology_positivist_movement
-					}
-				}
-				AND = {
-					leader = {
-						has_ideology = ideology:ideology_fascist
-					}
-					NOT = {
-						has_ideology = ideology:ideology_fascist_movement
-					}
-				}
-				AND = {
-					NAND = {
-						is_interest_group_type = ig_industrialists
-						is_interest_group_type = ig_intelligentsia
-					}
-					leader = {
-						has_ideology = ideology:ideology_integralist
-					}
-					NOT = {
-						has_ideology = ideology:ideology_integralist_movement
-					}
-				}
-			}
-		}
-	}
-	when_taken = {
-		ROOT = {
-			every_interest_group = {
-				if = {
-					limit = {
-						is_in_government = yes
-						NOT = {
-							is_interest_group_type = ig_landowners
-						}
-						OR = {
-							AND = {
-								NOT = {
-									is_interest_group_type = ig_devout
-								}
-								leader = {
-									has_ideology = ideology:ideology_positivist
-								}
-								NOT = {
-									has_ideology = ideology:ideology_positivist_movement
-								}
-							}
-							AND = {
-								leader = {
-									has_ideology = ideology:ideology_fascist
-								}
-								NOT = {
-									has_ideology = ideology:ideology_fascist_movement
-								}
-							}
-							AND = {
-								NAND = {
-									is_interest_group_type = ig_industrialists
-									is_interest_group_type = ig_intelligentsia
-								}
-								leader = {
-									has_ideology = ideology:ideology_integralist
-								}
-								NOT = {
-									has_ideology = ideology:ideology_integralist_movement
-								}
-							}
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_interest_group_type = ig_devout
-							}
-						}
-						clear_ig_ideologies = yes
-					}
-					if = {
-						limit = {
-							OR = {
-								is_interest_group_type = ig_armed_forces
-								is_interest_group_type = ig_petty_bourgeoisie
-							}
-						}
-						if = {
-							limit = {
-								is_interest_group_type = ig_armed_forces
-							}
-							add_ideology = ideology_jingoist
-						}
-						if = {
-							limit = {
-								is_interest_group_type = ig_petty_bourgeoisie
-							}
-							add_ideology = ideology_isolationist
-						}
-						if = {
-							limit = {
-								leader = {
-									has_ideology = ideology:ideology_positivist
-								}
-								not = {
-									has_ideology = ideology:ideology_positivist_movement
-								}
-							}
-							add_ideology = ideology_positivist_movement
-						}
-						if = {
-							limit = {
-								leader = {
-									has_ideology = ideology:ideology_fascist
-								}
-								not = {
-									has_ideology = ideology:ideology_fascist_movement
-								}
-							}
-							add_ideology = ideology_fascist_movement
-							set_variable = chose_fascism
-						}
-						if = {
-							limit = {
-								leader = {
-									has_ideology = ideology:ideology_integralist
-								}
-								not = {
-									has_ideology = ideology:ideology_integralist_movement
-								}
-							}
-							add_ideology = ideology_integralist_movement
-						}
-						add_ideology = ideology_meritocratic
-						if = {
-							limit = {
-								has_variable = red_army_var
-							}
-							hidden_effect = {
-								set_interest_group_name = ig_armed_forces
-							}
-							remove_variable = red_army_var
-						}
-					}
-					if = {
-						limit = {
-							is_interest_group_type = ig_devout
-						}
-						if = {
-							limit = {
-								has_ideology = ideology:ideology_pious
-							}
-							remove_ideology = ideology_pious
-						}
-						else = {
-							remove_ideology = ideology_corporatist
-						}
-						add_ideology = ideology_corporatist_movement
-					}
-					if = {
-						limit = {
-							OR = {
-								is_interest_group_type = ig_industrialists
-								is_interest_group_type = ig_intelligentsia
-							}
-						}
-						add_ideology = ideology_corporatist_movement
-						if = {
-							limit = {
-								leader = {
-									has_ideology = ideology:ideology_positivist
-								}
-								not = {
-									has_ideology = ideology:ideology_positivist_movement
-								}
-							}
-							add_ideology = ideology_positivist_movement
-						}
-						if = {
-							limit = {
-								leader = {
-									has_ideology = ideology:ideology_fascist
-								}
-								not = {
-									has_ideology = ideology:ideology_fascist_movement
-								}
-							}
-							add_ideology = ideology_fascist_movement
-							set_variable = chose_fascism
-						}
-						if = {
-							limit = {
-								is_interest_group_type = ig_industrialists
-							}
-							add_ideology = ideology_jingoist
-						}
-						if = {
-							limit = {
-								is_interest_group_type = ig_intelligentsia
-							}
-							add_ideology = ideology_isolationist
-						}
-					}
-					if = {
-						limit = {
-							OR = {
-								is_interest_group_type = ig_trade_unions
-								is_interest_group_type = ig_rural_folk
-							}
-						}
-						add_ideology = ideology_corporatist_movement
-						if = {
-							limit = {
-								leader = {
-									has_ideology = ideology:ideology_positivist
-								}
-								not = {
-									has_ideology = ideology:ideology_positivist_movement
-								}
-							}
-							add_ideology = ideology_positivist_movement
-						}
-						if = {
-							limit = {
-								leader = {
-									has_ideology = ideology:ideology_fascist
-								}
-								not = {
-									has_ideology = ideology:ideology_fascist_movement
-								}
-							}
-							add_ideology = ideology_fascist_movement
-							set_variable = chose_fascism
-						}
-						if = {
-							limit = {
-								leader = {
-									has_ideology = ideology:ideology_integralist
-								}
-								not = {
-									has_ideology = ideology:ideology_integralist_movement
-								}
-							}
-							add_ideology = ideology_integralist_movement
-						}
-						add_ideology = ideology_isolationist
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						any_political_movement = {
-							is_political_movement_type = movement_corporatist
-						}
-					}
-				}
-				create_political_movement = {
-					type = movement_corporatist
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						any_political_movement = {
-							is_political_movement_type = movement_positivist
-						}
-					}
-				}
-				create_political_movement = {
-					type = movement_positivist
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						any_political_movement = {
-							is_political_movement_type = movement_fascist
-						}
-					}
-				}
-				create_political_movement = {
-					type = movement_fascist
-				}
-			}
-			every_political_movement = {
-				if = {
-					limit = {
-						OR = {
-							is_political_movement_type = movement_corporatist
-							is_political_movement_type = movement_positivist
-							is_political_movement_type = movement_fascist
-						}
-					}
-					remove_character_ideology = ideology_corporatist_leader
-					remove_character_ideology = ideology_positivist
-					remove_character_ideology = ideology_fascist
-					if = {
-						limit = {
-							root = {
-								ruler = {
-									has_ideology = ideology:ideology_positivist
-								}
-							}
-						}
-						add_character_ideology = ideology_positivist
-						if = {
-							limit = {
-								is_political_movement_type = movement_fascist
-							}
-							set_core_ideology = ideology_positivist_movement
-						}
-					}
-					if = {
-						limit = {
-							root = {
-								ruler = {
-									has_ideology = ideology:ideology_fascist
-								}
-							}
-						}
-						add_character_ideology = ideology_fascist
-						if = {
-							limit = {
-								is_political_movement_type = movement_fascist
-							}
-							set_core_ideology = ideology_fascist_movement
-						}
-					}
-					if = {
-						limit = {
-							root = {
-								ruler = {
-									has_ideology = ideology:ideology_integralist
-								}
-							}
-						}
-						add_character_ideology = ideology_integralist
-						if = {
-							limit = {
-								is_political_movement_type = movement_fascist
-							}
-							set_core_ideology = ideology_integralist_movement
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								has_modifier = accepted_movement
-							}
-						}
-						add_modifier = {
-							name = accepted_movement
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_modifier = accepted_movement
-					}
-					remove_modifier = accepted_movement
-				}
-			}
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-socialistic_reform = {
-	is_shown = {
-		any_political_movement = {
-			OR = {
-				is_political_movement_type = movement_socialist
-				is_political_movement_type = movement_communist
-			}
-		}
-	}
-	possible = {
-		has_law = law_type:law_council_republic
-		ruler = {
-			OR = {
-				OR = {
-					has_ideology = ideology:ideology_communist
-					has_ideology = ideology:ideology_vanguardist
-				}
-				AND = {
-					has_ideology = ideology:ideology_moderate
-					interest_group = {
-						OR = {
-							has_ideology = ideology:ideology_communist_movement
-							has_ideology = ideology:ideology_vanguardist_movement
-						}
-					}
-				}
-			}
-		}
-		any_interest_group = {
-			is_in_government = yes
-			NAND = {
-				is_interest_group_type = ig_landowners
-				is_interest_group_type = ig_industrialists
-				is_interest_group_type = ig_devout
-			}
-			OR = {
-				AND = {
-					leader = {
-						has_ideology = ideology:ideology_anarchist
-					}
-					OR = {
-						NOT = {
-							has_ideology = ideology:ideology_socialist
-						}
-						NOT = {
-							has_ideology = ideology:ideology_anarchist_movement
-						}
-					}
-					hidden_trigger = {
-						NAND = {
-							is_interest_group_type = ig_armed_forces
-							is_interest_group_type = ig_petty_bourgeoisie
-						}
-					}
-				}
-				AND = {
-					leader = {
-						has_ideology = ideology:ideology_communist
-					}
-					OR = {
-						NOT = {
-							has_ideology = ideology:ideology_socialist
-						}
-						NOT = {
-							has_ideology = ideology:ideology_communist_movement
-						}
-					}
-					hidden_trigger = {
-						NAND = {
-							is_interest_group_type = ig_armed_forces
-							is_interest_group_type = ig_petty_bourgeoisie
-						}
-					}
-				}
-				AND = {
-					leader = {
-						has_ideology = ideology:ideology_vanguardist
-					}
-					OR = {
-						NOT = {
-							has_ideology = ideology:ideology_socialist
-						}
-						NOT = {
-							has_ideology = ideology:ideology_vanguardist_movement
-						}
-					}
-					hidden_trigger = {
-						NAND = {
-							is_interest_group_type = ig_intelligentsia
-						}
-					}
-				}
-			}
-		}
-	}
-	when_taken = {
-		ROOT = {
-			if = {
-				limit = {
-					NOT = {
-						has_variable = communism_1_done
-					}
-				}
-				set_variable = communism_1_done
-				trigger_event = {
-					id = communism.1
-					popup = yes
-				}
-				custom_tooltip = communism_je_1_fail_tt
-			}
-			every_interest_group = {
-				if = {
-					limit = {
-						is_in_government = yes
-						NAND = {
-							is_interest_group_type = ig_devout
-							is_interest_group_type = ig_industrialists
-							is_interest_group_type = ig_landowners
-						}
-						OR = {
-							AND = {
-								leader = {
-									has_ideology = ideology:ideology_anarchist
-								}
-								OR = {
-									NOT = {
-										has_ideology = ideology:ideology_socialist
-									}
-									NOT = {
-										has_ideology = ideology:ideology_anarchist_movement
-									}
-								}
-							}
-							AND = {
-								leader = {
-									has_ideology = ideology:ideology_communist
-								}
-								OR = {
-									NOT = {
-										has_ideology = ideology:ideology_socialist
-									}
-									NOT = {
-										has_ideology = ideology:ideology_communist_movement
-									}
-								}
-							}
-							AND = {
-								leader = {
-									has_ideology = ideology:ideology_vanguardist
-								}
-								OR = {
-									NOT = {
-										has_ideology = ideology:ideology_socialist
-									}
-									NOT = {
-										has_ideology = ideology:ideology_vanguardist_movement
-									}
-								}
-							}
-						}
-					}
-					clear_ig_ideologies = yes
-					if = {
-						limit = {
-							is_interest_group_type = ig_armed_forces
-						}
-						add_ideology = ideology_jingoist
-						add_ideology = ideology_vanguardist_movement
-						add_ideology = ideology_meritocratic
-						if = {
-							limit = {
-								root = {
-									NOT = {
-										has_variable = red_army_var
-									}
-								}
-							}
-							custom_tooltip = red_army_tt
-							hidden_effect = {
-								set_interest_group_name = ig_red_army
-							}
-							root = {
-								set_variable = red_army_var
-							}
-							set_variable = chose_vanguardism
-						}
-					}
-					if = {
-						limit = {
-							is_interest_group_type = ig_intelligentsia
-						}
-						add_ideology = ideology_socialist
-						if = {
-							limit = {
-								leader = {
-									has_ideology = ideology:ideology_anarchist
-								}
-								not = {
-									has_ideology = ideology:ideology_anarchist_movement
-								}
-							}
-							add_ideology = ideology_anarchist_movement
-							set_variable = chose_anarchism
-						}
-						if = {
-							limit = {
-								leader = {
-									OR = {
-										has_ideology = ideology:ideology_communist
-										has_ideology = ideology:ideology_vanguardist
-									}
-								}
-								not = {
-									has_ideology = ideology:ideology_communist_movement
-								}
-							}
-							add_ideology = ideology_communist_movement
-							set_variable = chose_communism
-						}
-						add_ideology = ideology_proletarian
-					}
-					if = {
-						limit = {
-							is_interest_group_type = ig_petty_bourgeoisie
-						}
-						add_ideology = ideology_isolationist
-						add_ideology = ideology_vanguardist_movement
-						add_ideology = ideology_meritocratic
-						set_variable = chose_vanguardism
-					}
-					if = {
-						limit = {
-							OR = {
-								is_interest_group_type = ig_trade_unions
-								is_interest_group_type = ig_rural_folk
-							}
-						}
-						add_ideology = ideology_socialist
-						if = {
-							limit = {
-								leader = {
-									has_ideology = ideology:ideology_anarchist
-								}
-								not = {
-									has_ideology = ideology:ideology_anarchist_movement
-								}
-							}
-							add_ideology = ideology_anarchist_movement
-							set_variable = chose_anarchism
-						}
-						if = {
-							limit = {
-								leader = {
-									has_ideology = ideology:ideology_communist
-								}
-								not = {
-									has_ideology = ideology:ideology_communist_movement
-								}
-							}
-							add_ideology = ideology_communist_movement
-							set_variable = chose_communism
-						}
-						if = {
-							limit = {
-								leader = {
-									has_ideology = ideology:ideology_vanguardist
-								}
-								not = {
-									has_ideology = ideology:ideology_vanguardist_movement
-								}
-							}
-							add_ideology = ideology_vanguardist_movement
-							set_variable = chose_vanguardism
-						}
-						add_ideology = ideology_proletarian
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						any_political_movement = {
-							is_political_movement_type = movement_labor
-						}
-					}
-				}
-				create_political_movement = {
-					type = movement_labor
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						any_political_movement = {
-							is_political_movement_type = movement_socialist
-						}
-					}
-				}
-				create_political_movement = {
-					type = movement_socialist
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						any_political_movement = {
-							is_political_movement_type = movement_communist
-						}
-					}
-				}
-				create_political_movement = {
-					type = movement_communist
-				}
-			}
-			every_political_movement = {
-				if = {
-					limit = {
-						OR = {
-							is_political_movement_type = movement_labor
-							is_political_movement_type = movement_socialist
-							is_political_movement_type = movement_communist
-						}
-					}
-					remove_character_ideology = ideology_social_democrat
-					remove_character_ideology = ideology_radical
-					remove_character_ideology = ideology_anarchist
-					remove_character_ideology = ideology_communist
-					remove_character_ideology = ideology_vanguardist
-					if = {
-						limit = {
-							root = {
-								ruler = {
-									has_ideology = ideology:ideology_anarchist
-								}
-							}
-						}
-						add_character_ideology = ideology_anarchist
-						if = {
-							limit = {
-								is_political_movement_type = movement_communist
-							}
-							set_core_ideology = ideology_anarchist_movement
-						}
-					}
-					if = {
-						limit = {
-							root = {
-								ruler = {
-									has_ideology = ideology:ideology_communist
-								}
-							}
-						}
-						add_character_ideology = ideology_communist
-						if = {
-							limit = {
-								is_political_movement_type = movement_communist
-							}
-							set_core_ideology = ideology_communist_movement
-						}
-					}
-					if = {
-						limit = {
-							root = {
-								ruler = {
-									has_ideology = ideology:ideology_vanguardist
-								}
-							}
-						}
-						add_character_ideology = ideology_vanguardist
-						if = {
-							limit = {
-								is_political_movement_type = movement_communist
-							}
-							set_core_ideology = ideology_vanguardist_movement
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								has_modifier = accepted_movement
-							}
-						}
-						add_modifier = {
-							name = accepted_movement
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_modifier = accepted_movement
-					}
-					remove_modifier = accepted_movement
-				}
-			}
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-swap_ideology_to_corporatist = {
-	is_shown = {
-		ruler = {
-			OR = {
-				has_ideology = ideology:ideology_fascist
-				has_ideology = ideology:ideology_integralist
-			}
-		}
-	}
-	possible = {
-		has_law = law_type:law_corporate_state
-	}
-	when_taken = {
-		ruler = {
-			if = {
-				limit = {
-					has_ideology = ideology:ideology_fascist
-				}
-				set_ideology = ideology:ideology_corporatist_leader
-			}
-			if = {
-				limit = {
-					has_ideology = ideology:ideology_integralist
-				}
-				set_ideology = ideology:ideology_corporatist_leader
-			}
-			add_modifier = {
-				name = changed_ideology
-				months = 60
-				is_decaying = yes
-			}
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-swap_ideology_to_fascist = {
-	is_shown = {
-		ruler = {
-			OR = {
-				has_ideology = ideology:ideology_corporatist_leader
-				has_ideology = ideology:ideology_integralist
-			}
-		}
-	}
-	possible = {
-		has_law = law_type:law_corporate_state
-	}
-	when_taken = {
-		ruler = {
-			if = {
-				limit = {
-					has_ideology = ideology:ideology_corporatist_leader
-				}
-				set_ideology = ideology:ideology_fascist
-			}
-			if = {
-				limit = {
-					has_ideology = ideology:ideology_integralist
-				}
-				set_ideology = ideology:ideology_fascist
-			}
-			add_modifier = {
-				name = changed_ideology
-				months = 60
-				is_decaying = yes
-			}
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-swap_ideology_to_integralist = {
-	is_shown = {
-		ruler = {
-			OR = {
-				has_ideology = ideology:ideology_corporatist_leader
-				has_ideology = ideology:ideology_fascist
-			}
-		}
-	}
-	possible = {
-		has_law = law_type:law_corporate_state
-	}
-	when_taken = {
-		ruler = {
-			if = {
-				limit = {
-					has_ideology = ideology:ideology_corporatist_leader
-				}
-				set_ideology = ideology:ideology_integralist
-			}
-			if = {
-				limit = {
-					has_ideology = ideology:ideology_fascist
-				}
-				set_ideology = ideology:ideology_integralist
-			}
-			add_modifier = {
-				name = changed_ideology
-				months = 60
-				is_decaying = yes
-			}
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-swap_ideology_to_anarchist = {
-	is_shown = {
-		ruler = {
-			OR = {
-				has_ideology = ideology:ideology_communist
-				has_ideology = ideology:ideology_vanguardist
-			}
-		}
-	}
-	possible = {
-		has_law = law_type:law_council_republic
-	}
-	when_taken = {
-		ruler = {
-			if = {
-				limit = {
-					has_ideology = ideology:ideology_communist
-				}
-				set_ideology = ideology:ideology_anarchist
-			}
-			if = {
-				limit = {
-					has_ideology = ideology:ideology_vanguardist
-				}
-				set_ideology = ideology:ideology_anarchist
-			}
-			add_modifier = {
-				name = changed_ideology
-				months = 60
-				is_decaying = yes
-			}
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-swap_ideology_to_communist = {
-	is_shown = {
-		ruler = {
-			OR = {
-				has_ideology = ideology:ideology_anarchist
-				has_ideology = ideology:ideology_vanguardist
-			}
-		}
-	}
-	possible = {
-		has_law = law_type:law_council_republic
-	}
-	when_taken = {
-		ruler = {
-			if = {
-				limit = {
-					has_ideology = ideology:ideology_anarchist
-				}
-				set_ideology = ideology:ideology_communist
-			}
-			if = {
-				limit = {
-					has_ideology = ideology:ideology_vanguardist
-				}
-				set_ideology = ideology:ideology_communist
-			}
-			add_modifier = {
-				name = changed_ideology
-				months = 60
-				is_decaying = yes
-			}
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-swap_ideology_to_vanguardist = {
-	is_shown = {
-		ruler = {
-			OR = {
-				has_ideology = ideology:ideology_communist
-				has_ideology = ideology:ideology_anarchist
-			}
-		}
-	}
-	possible = {
-		has_law = law_type:law_council_republic
-	}
-	when_taken = {
-		ruler = {
-			if = {
-				limit = {
-					has_ideology = ideology:ideology_anarchist
-				}
-				set_ideology = ideology:ideology_vanguardist
-			}
-			if = {
-				limit = {
-					has_ideology = ideology:ideology_communist
-				}
-				set_ideology = ideology:ideology_vanguardist
-			}
-			add_modifier = {
-				name = changed_ideology
-				months = 60
-				is_decaying = yes
-			}
-		}
 	}
 	ai_chance = {
 		base = 0
@@ -1506,6 +465,28 @@ set_universal_suffrage = {
 	}
 }
 
+set_census_voting = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_census_voting
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_census_voting
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_census_voting
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
 set_single_party_state = {
 	is_shown = {
 		not = {
@@ -1731,7 +712,7 @@ remove_private_property = {
 		always = yes
 	}
 	possible = {
-		OR = {
+		or = {
 			has_law = law_type:law_cooperative_ownership
 			has_law = law_type:law_command_economy
 		}
@@ -1750,7 +731,6 @@ remove_private_property = {
 			activate_law = law_type:law_cooperative_ownership
 			activate_law = law_type:law_command_economy
 		}
-		activate_law = law_type:law_collectivized_agriculture
 	}
 	ai_chance = {
 		base = 0
@@ -1763,7 +743,7 @@ homeland_expansion = {
 	}
 	possible = {
 		has_technology_researched = pan-nationalism
-		NOT = {
+		not = {
 			has_modifier = homeland_expanded
 		}
 		any_scope_state = {
@@ -1773,7 +753,7 @@ homeland_expansion = {
 			has_decree = decree_promote_national_values
 			any_scope_culture = {
 				has_homeland = prev
-				NOT = {
+				not = {
 					culture_is_discriminated_in = prev.owner
 					is_primary_culture_of = prev.owner
 				}
@@ -1792,7 +772,7 @@ homeland_expansion = {
 				has_decree = decree_promote_national_values
 				any_scope_culture = {
 					has_homeland = prev
-					NOT = {
+					not = {
 						culture_is_discriminated_in = prev.owner
 						is_primary_culture_of = prev.owner
 					}
@@ -1801,7 +781,7 @@ homeland_expansion = {
 			every_scope_culture = {
 				limit = {
 					has_homeland = prev
-					NOT = {
+					not = {
 						culture_is_discriminated_in = prev.owner
 						is_primary_culture_of = prev.owner
 					}
@@ -1842,7 +822,7 @@ promote_national_values = {
 	possible = {
 		any_scope_state = {
 			has_decree = decree_promote_national_values
-			NOT = {
+			not = {
 				has_modifier = national_values_promotion
 			}
 		}
@@ -1851,7 +831,7 @@ promote_national_values = {
 		if = {
 			limit = {
 				has_law = law_type:law_state_atheism
-				NOT = {
+				not = {
 					country_has_state_religion = rel:atheist
 				}
 			}
@@ -1859,7 +839,7 @@ promote_national_values = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				not = {
 					has_law = law_type:law_state_atheism
 				}
 				country_has_state_religion = rel:atheist
@@ -1875,12 +855,12 @@ promote_national_values = {
 
 suppress_colonial_manufacturing_industry = {
 	is_shown = {
-		NOT = {
+		not = {
 			has_modifier = suppression_colonial_manufacturing_industry_policy
 		}
 	}
 	possible = {
-		NOT = {
+		not = {
 			has_modifier = suppression_colonial_manufacturing_industry_policy
 		}
 	}
@@ -1890,7 +870,7 @@ suppress_colonial_manufacturing_industry = {
 	ai_chance = {
 		base = 0
 		modifier = {
-			OR = {
+			or = {
 				has_strategy = ai_strategy_economic_imperialism
 				has_strategy = ai_strategy_colonial_expansion
 				has_strategy = ai_strategy_colonial_extraction
@@ -1914,7 +894,7 @@ desuppress_colonial_manufacturing_industry = {
 	ai_chance = {
 		base = 0
 		modifier = {
-			NOR = {
+			nor = {
 				has_strategy = ai_strategy_economic_imperialism
 				has_strategy = ai_strategy_colonial_expansion
 				has_strategy = ai_strategy_colonial_extraction
@@ -1927,12 +907,12 @@ desuppress_colonial_manufacturing_industry = {
 
 suppresss_colonial_agricultural_industry = {
 	is_shown = {
-		NOT = {
+		not = {
 			has_modifier = suppression_colonial_agricultural_industry_policy
 		}
 	}
 	possible = {
-		NOT = {
+		not = {
 			has_modifier = suppression_colonial_agricultural_industry_policy
 		}
 	}
@@ -1961,12 +941,12 @@ desuppress_colonial_agricultural_industry = {
 
 suppress_colonial_resource_industry = {
 	is_shown = {
-		NOT = {
+		not = {
 			has_modifier = suppression_colonial_resource_industry_policy
 		}
 	}
 	possible = {
-		NOT = {
+		not = {
 			has_modifier = suppression_colonial_resource_industry_policy
 		}
 	}
@@ -1990,5 +970,25 @@ desuppress_colonial_resource_industry = {
 	}
 	ai_chance = {
 		base = 0
+	}
+}
+
+redirec_communism_cours = {
+	is_shown = {
+		has_law = law_type:law_council_republic
+	}
+	possible = {
+		has_law = law_type:law_council_republic
+		not = {
+			has_journal_entry = je_communism_2
+		}
+	}
+	when_taken = {
+		create_political_movement = {
+			type = movement_communist
+		}
+		trigger_event = {
+			id = communism.2
+		}
 	}
 }

@@ -2,7 +2,7 @@
 	texture = "gfx/interface/icons/production_method_icons/market_stalls.dds"
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_services_add = 20
+			goods_output_services_add = 10
 		}
 		level_scaled = {
 			building_employment_laborers_add = 2500
@@ -19,7 +19,7 @@ pm_market_squares = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_wood_add = 1
-			goods_output_services_add = 30
+			goods_output_services_add = 20
 		}
 		level_scaled = {
 			building_employment_laborers_add = 1000
@@ -38,7 +38,7 @@ pm_covered_markets = {
 		workforce_scaled = {
 			goods_input_glass_add = 1
 			goods_input_hardwood_add = 1
-			goods_output_services_add = 40
+			goods_output_services_add = 30
 		}
 		level_scaled = {
 			building_employment_clerks_add = 1500
@@ -56,7 +56,7 @@ pm_arcades = {
 		workforce_scaled = {
 			goods_input_glass_add = 1
 			goods_input_steel_add = 1
-			goods_output_services_add = 50
+			goods_output_services_add = 40
 		}
 		level_scaled = {
 			building_employment_shopkeepers_add = 1000
@@ -77,7 +77,7 @@ pm_gas_streetlights = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_coal_add = 1
-			goods_output_services_add = 20
+			goods_output_services_add = 5
 		}
 	}
 }
@@ -91,7 +91,7 @@ pm_electric_streetlights = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_electricity_add = 1
-			goods_output_services_add = 30
+			goods_output_services_add = 10
 		}
 	}
 	required_input_goods = electricity
@@ -111,14 +111,14 @@ pm_public_trams = {
 			state_pollution_generation_add = 5
 		}
 		level_scaled = {
-			state_infrastructure_add = 5
+			state_infrastructure_add = 15
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_coal_add = 1
 			goods_input_engines_add = 1
-			goods_output_transportation_add = 10
+			goods_output_transportation_add = 15
 		}
 		level_scaled = {
 			building_employment_machinists_add = 500
@@ -136,14 +136,14 @@ pm_public_motor_carriages = {
 			state_pollution_generation_add = 10
 		}
 		level_scaled = {
-			state_infrastructure_add = 10
+			state_infrastructure_add = 25
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_oil_add = 1
 			goods_input_automobiles_add = 1
-			goods_output_transportation_add = 20
+			goods_output_transportation_add = 25
 		}
 		level_scaled = {
 			building_employment_engineers_add = 500
@@ -165,13 +165,13 @@ pm_wooden_passenger_carriages = {
 			state_pollution_generation_add = 5
 		}
 		level_scaled = {
-			state_infrastructure_add = 5
+			state_infrastructure_add = 15
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_hardwood_add = 1
-			goods_output_transportation_add = 10
+			goods_output_transportation_add = 15
 		}
 		level_scaled = {
 			building_employment_machinists_add = 500
@@ -189,13 +189,13 @@ pm_steel_passenger_carriages = {
 			state_pollution_generation_add = 10
 		}
 		level_scaled = {
-			state_infrastructure_add = 10
+			state_infrastructure_add = 25
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_steel_add = 1
-			goods_output_transportation_add = 20
+			goods_output_transportation_add = 25
 		}
 		level_scaled = {
 			building_employment_engineers_add = 500

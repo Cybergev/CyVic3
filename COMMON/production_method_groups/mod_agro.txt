@@ -1,4 +1,78 @@
-﻿
+﻿pmg_base_building_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_farming
+		pm_soil_enriching_farming
+		pm_fertilization
+		pm_chemical_fertilizer
+	}
+}
+
+pmg_secondary_building_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_sugar
+		pm_simple_sugar_farming
+		pm_soil_enriching_sugar_farming
+		pm_fertilization_sugar_farming
+		pm_chemical_fertilizer_sugar_farming
+	}
+}
+
+pmg_tertiary_building_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_no_orchards
+		pm_simple_orchards
+		pm_soil_enriching_orchards
+		pm_fertilization_orchards
+		pm_chemical_fertilizer_orchards
+	}
+}
+
+pmg_harvesting_process_building_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_tools_disabled
+		pm_tools
+		pm_steam_threshers
+		pm_tractors
+		pm_compression_ignition_tractors
+	}
+}
+
+pmg_base_building_rice_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_farming_building_rice_farm
+		pm_soil_enriching_farming_building_rice_farm
+		pm_fertilization_building_rice_farm
+		pm_chemical_fertilizer_building_rice_farm
+	}
+}
+
+pmg_secondary_building_rice_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_sugar
+		pm_simple_sugar_building_rice_farm
+		pm_soil_enriching_sugar_building_rice_farm
+		pm_fertilization_sugar_building_rice_farm
+		pm_chemical_fertilizer_sugar_building_rice_farm
+	}
+}
+
+pmg_tertiary_building_rice_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_orchards
+		pm_simple_orchards_building_rice_farm
+		pm_soil_enriching_orchards_building_rice_farm
+		pm_fertilization_orchards_building_rice_farm
+		pm_chemical_fertilizer_orchards_building_rice_farm
+	}
+}
+
 pmg_harvesting_process_building_rice_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {

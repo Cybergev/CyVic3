@@ -86,6 +86,8 @@ pm_steel_frame_buildings = {
 			goods_input_steel_add = 2
 			goods_input_hardwood_add = 2
 			goods_input_transportation_add = 1
+			goods_input_engines_add = 1
+			goods_input_coal_add = 1
 		}
 		level_scaled = {
 			building_employment_machinists_add = 250

@@ -15,19 +15,19 @@
 				commander_military_formation ?= {
 					formation_army_unit_type_fraction = {
 						target = unit_type:combat_unit_type_shrapnel_artillery
-						value >= 0.2
+						value >= 0.25
 					}
 				}
 				commander_military_formation ?= {
 					formation_army_unit_type_fraction = {
 						target = unit_type:combat_unit_type_siege_artillery
-						value >= 0.2
+						value >= 0.25
 					}
 				}
 				commander_military_formation ?= {
 					formation_army_unit_type_fraction = {
 						target = unit_type:combat_unit_type_heavy_tank
-						value >= 0.2
+						value >= 0.25
 					}
 				}
 			}
@@ -35,9 +35,105 @@
 	}
 	modifier = {
 		character_advancement_speed_add = 1
-		unit_occupation_mult = -1
-		unit_devastation_mult = 0.5
+		unit_morale_damage_mult = 0.5
 		unit_kill_rate_add = 0.5
+		unit_devastation_mult = 0.5
+		unit_occupation_mult = -1
+	}
+	entity_animation = "advance"
+	clicksound = "event:/SFX/UI/Military/order_general_front_advance"
+	experience = 0.1	# This much extra experience per week while executing Order
+	ai_weight = {
+		value = 2
+	}
+}
+
+advance_tank_assualt = {
+	texture = "gfx/interface/icons/commander_order_icons/advance.dds"
+	military_type = army
+	behavior = advance
+	visible = {
+		has_role = general
+	}
+	possible = {
+		has_role = general
+		trigger_if = {
+			limit = {
+				has_role = general
+			}
+			commander_military_formation ?= {
+				formation_army_unit_type_fraction = {
+					target = unit_type:combat_unit_type_heavy_tank
+					value >= 0.25
+				}
+			}
+		}
+	}
+	modifier = {
+		character_advancement_speed_add = 2
+		unit_morale_loss_mult = -0.5
+		unit_morale_damage_mult = 0.5
+		unit_devastation_mult = 0.5
+		unit_occupation_mult = -0.5
+	}
+	entity_animation = "advance"
+	clicksound = "event:/SFX/UI/Military/order_general_front_advance"
+	experience = 0.1	# This much extra experience per week while executing Order
+	ai_weight = {
+		value = 2
+	}
+}
+
+advance_cavalry_assualt = {
+	texture = "gfx/interface/icons/commander_order_icons/advance.dds"
+	military_type = army
+	behavior = advance
+	visible = {
+		has_role = general
+	}
+	possible = {
+		has_role = general
+		trigger_if = {
+			limit = {
+				has_role = general
+			}
+			OR = {
+				commander_military_formation ?= {
+					formation_army_unit_type_fraction = {
+						target = unit_type:combat_unit_type_cuirassiers
+						value >= 0.25
+					}
+				}
+				commander_military_formation ?= {
+					formation_army_unit_type_fraction = {
+						target = unit_type:combat_unit_type_hussars
+						value >= 0.25
+					}
+				}
+				commander_military_formation ?= {
+					formation_army_unit_type_fraction = {
+						target = unit_type:combat_unit_type_dragoons
+						value >= 0.25
+					}
+				}
+				commander_military_formation ?= {
+					formation_army_unit_type_fraction = {
+						target = unit_type:combat_unit_type_lancers
+						value >= 0.25
+					}
+				}
+				commander_military_formation ?= {
+					formation_army_unit_type_fraction = {
+						target = unit_type:combat_unit_type_light_tanks
+						value >= 0.25
+					}
+				}
+			}
+		}
+	}
+	modifier = {
+		character_advancement_speed_add = 10
+		unit_occupation_mult = 0.5
 	}
 	entity_animation = "advance"
 	clicksound = "event:/SFX/UI/Military/order_general_front_advance"

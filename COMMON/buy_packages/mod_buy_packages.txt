@@ -185,6 +185,7 @@ wealth_15 = {
 		popneed_luxury_drinks = 21
 		popneed_free_movement = 21
 		popneed_communication = 6
+		popneed_luxury_food = 6
 		popneed_luxury_items = 11
 		popneed_leisure = 32
 	}
@@ -202,6 +203,7 @@ wealth_16 = {
 		popneed_luxury_drinks = 30
 		popneed_free_movement = 24
 		popneed_communication = 8
+		popneed_luxury_food = 14
 		popneed_luxury_items = 24
 		popneed_leisure = 37
 	}
@@ -219,6 +221,7 @@ wealth_17 = {
 		popneed_luxury_drinks = 46
 		popneed_free_movement = 26
 		popneed_communication = 10
+		popneed_luxury_food = 12
 		popneed_luxury_items = 39
 		popneed_leisure = 43
 	}
@@ -236,6 +239,7 @@ wealth_18 = {
 		popneed_luxury_drinks = 65
 		popneed_free_movement = 29
 		popneed_communication = 12
+		popneed_luxury_food = 20
 		popneed_luxury_items = 58
 		popneed_leisure = 49
 	}
@@ -253,6 +257,7 @@ wealth_19 = {
 		popneed_luxury_drinks = 86
 		popneed_free_movement = 39
 		popneed_communication = 14
+		popneed_luxury_food = 28
 		popneed_luxury_items = 79
 		popneed_leisure = 55
 	}
@@ -270,7 +275,7 @@ wealth_20 = {
 		popneed_luxury_drinks = 98
 		popneed_free_movement = 41
 		popneed_communication = 16
-		popneed_luxury_food = 8
+		popneed_luxury_food = 36
 		popneed_luxury_items = 98
 		popneed_leisure = 61
 	}
@@ -288,7 +293,7 @@ wealth_21 = {
 		popneed_luxury_drinks = 117
 		popneed_free_movement = 45
 		popneed_communication = 18
-		popneed_luxury_food = 18
+		popneed_luxury_food = 44
 		popneed_luxury_items = 126
 		popneed_leisure = 67
 	}
@@ -306,7 +311,7 @@ wealth_22 = {
 		popneed_luxury_drinks = 137
 		popneed_free_movement = 49
 		popneed_communication = 20
-		popneed_luxury_food = 29
+		popneed_luxury_food = 52
 		popneed_luxury_items = 157
 		popneed_leisure = 78
 	}
@@ -324,7 +329,7 @@ wealth_23 = {
 		popneed_luxury_drinks = 159
 		popneed_free_movement = 53
 		popneed_communication = 21
-		popneed_luxury_food = 42
+		popneed_luxury_food = 60
 		popneed_luxury_items = 191
 		popneed_leisure = 85
 	}
@@ -342,7 +347,7 @@ wealth_24 = {
 		popneed_luxury_drinks = 173
 		popneed_free_movement = 69
 		popneed_communication = 23
-		popneed_luxury_food = 58
+		popneed_luxury_food = 68
 		popneed_luxury_items = 220
 		popneed_leisure = 89
 	}

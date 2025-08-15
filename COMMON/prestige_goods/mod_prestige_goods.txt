@@ -1,0 +1,5 @@
+﻿prestige_good_generic_iron = {
+	base_good = iron
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/swedish_bar_iron_prestige.dds"
+}

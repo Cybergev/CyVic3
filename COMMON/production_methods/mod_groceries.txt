@@ -112,7 +112,7 @@ pm_cannery_meat = {
 			goods_input_meat_add = 40
 			goods_input_iron_add = 1
 			# output goods
-			goods_output_groceries_add = 40
+			goods_output_groceries_add = 80
 		}
 		level_scaled = {
 			building_employment_laborers_add = 4000
@@ -133,7 +133,7 @@ pm_cannery_fish = {
 			goods_input_fish_add = 40
 			goods_input_iron_add = 1
 			# output goods
-			goods_output_groceries_add = 40
+			goods_output_groceries_add = 80
 		}
 		level_scaled = {
 			building_employment_laborers_add = 4000
@@ -155,7 +155,7 @@ pm_cannery_all = {
 			goods_input_meat_add = 40
 			goods_input_iron_add = 2
 			# output goods
-			goods_output_groceries_add = 80
+			goods_output_groceries_add = 160
 		}
 		level_scaled = {
 			building_employment_laborers_add = 4000
@@ -177,7 +177,7 @@ pm_vacuum_cannery_meat = {
 			goods_input_meat_add = 40
 			goods_input_rubber_add = 1
 			# output goods
-			goods_output_groceries_add = 40
+			goods_output_groceries_add = 80
 		}
 		level_scaled = {
 			building_employment_laborers_add = 3000
@@ -200,7 +200,7 @@ pm_vacuum_cannery_fish = {
 			goods_input_fish_add = 40
 			goods_input_rubber_add = 1
 			# output goods
-			goods_output_groceries_add = 40
+			goods_output_groceries_add = 80
 		}
 		level_scaled = {
 			building_employment_laborers_add = 3000
@@ -224,7 +224,7 @@ pm_vacuum_canning_all = {
 			goods_input_meat_add = 40
 			goods_input_rubber_add = 2
 			# output goods
-			goods_output_groceries_add = 80
+			goods_output_groceries_add = 160
 		}
 		level_scaled = {
 			building_employment_laborers_add = 3000
@@ -250,7 +250,7 @@ pm_vacuum_cannery_meat_principle_3 = {
 			goods_input_meat_add = 40
 			goods_input_rubber_add = 1
 			# output goods
-			goods_output_groceries_add = 50
+			goods_output_groceries_add = 100
 		}
 		level_scaled = {
 			building_employment_laborers_add = 3000
@@ -276,7 +276,7 @@ pm_vacuum_cannery_fish_principle_3 = {
 			goods_input_fish_add = 40
 			goods_input_rubber_add = 1
 			# output goods
-			goods_output_groceries_add = 50
+			goods_output_groceries_add = 100
 		}
 		level_scaled = {
 			building_employment_laborers_add = 3000
@@ -303,7 +303,7 @@ pm_vacuum_canning_all_principle_3 = {
 			goods_input_meat_add = 40
 			goods_input_rubber_add = 2
 			# output goods
-			goods_output_groceries_add = 100
+			goods_output_groceries_add = 200
 		}
 		level_scaled = {
 			building_employment_laborers_add = 3000

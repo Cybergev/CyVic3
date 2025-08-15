@@ -23,7 +23,7 @@ base_values = {
 	building_unincorporated_subsistence_output_mult = -0.2
 	country_construction_add = 10
 	building_mobilization_cost_mult = 0.5
-	building_economy_of_scale_level_cap_add = 20
+	building_economy_of_scale_level_cap_add = 50
 	state_market_access_price_impact = 0.75
 	country_company_throughput_bonus_add = 0.2
 	country_company_construction_efficiency_bonus_add = 0.5
@@ -44,9 +44,9 @@ legislative_efficiency = {
 
 efficient_bureaucracy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_construction_mult = 0.1
-	state_tax_capacity_mult = 0.1
 	country_government_dividends_efficiency_add = 0.1
+	state_tax_capacity_mult = 0.1
+	building_group_bg_infrastructure_throughput_add = 0.1
 }
 
 administrative_overburden = {

@@ -557,7 +557,6 @@ law_command_economy = {
 		country_government_dividends_efficiency_add = 0.5
 		country_leverage_resistance_mult = 0.25
 		country_disable_investment_pool_bool = yes
-		country_disable_privatization_bool = yes
 		country_foreign_collectivization_bool = yes
 	}
 	ai_will_do = {

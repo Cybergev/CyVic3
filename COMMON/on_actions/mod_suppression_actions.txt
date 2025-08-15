@@ -1,6 +1,13 @@
 ﻿on_monthly_pulse_state = {
 	on_actions = {
+		fix_population_actions
 		suppression_actions
+	}
+}
+
+fix_population_actions = {
+	events = {
+		fix_population_event.1
 	}
 }
 

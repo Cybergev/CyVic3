@@ -6,15 +6,8 @@
 	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL = 20	# Infamy population multiplier can't be higher than this, regardless of number of states affected
 }
 
-NPops = {
-	ASSIMILATION_RATE = 0.02	# Percentage of pops who will Assimilate into a different Culture each month, if eligible
-	MIN_ASSIMILATION = 25	# If there is any assmiliation at least this many people will assimilate
-	CONVERSION_RATE = 0.02	# Percentage of pops who will Convert into a different Religion each month, if eligible
-	MIN_CONVERSION = 25	# If there is any conversion at least this many people will convert
-}
-
 NTechnology = {
-	TECH_SPREAD_RANDOM_RANGE = 1 # How much can distribution of tech spread vary each week
+	TECH_SPREAD_RANDOM_RANGE = 1	# How much can distribution of tech spread vary each week
 }
 
 NCountry = {
@@ -34,12 +27,23 @@ NEconomy = {
 	ECONOMY_OF_SCALE_NATIONALIZED_FRACTION_MULT = 0	# Non-government building economy of scale modifier if multiplied by (1 - the fraction of nationalized levels * this)
 	GOLD_RESERVE_LIMIT_FACTOR = 0.5	# The base factor of annual GDP that should be provided as a Gold Reserve
 	OVERSEAS_INFRASTRUCTURE_CONVOY_COST_MULTIPLIER = 1	# Convoy cost for each infrastructure usage in overseas state for port connection shipping lanes
-	COMPANY_ON_ESTABLISH_COOLDOWN_MONTHS = 12			# Cooldown in months after establishing a company before you can disband it
-	COMPANY_ON_DISBAND_COOLDOWN_MONTHS = 12				# Cooldown in months after disbanding a company before you can re-establish it
+	COMPANY_ON_ESTABLISH_COOLDOWN_MONTHS = 12	# Cooldown in months after establishing a company before you can disband it
+	COMPANY_ON_DISBAND_COOLDOWN_MONTHS = 12	# Cooldown in months after disbanding a company before you can re-establish it
+}
+
+NMilitary = {
+	MAX_NUM_COMMANDERS_PER_FORMATION = 8	# The maximum number of commanders in a given Military Formation
 }
 
 NPowerBlocs = {
 	MAX_MANDATE_PROGRESS = 1000	# When mandate progress reaches this value, the power bloc gains one mandate
 	MAX_MANDATES = 6	# This is the maximum number of mandates that can be accumulated at once
 	MAX_PRINCIPLES = 20
+}
+
+NPops = {
+	ASSIMILATION_RATE = 0.02	# Percentage of pops who will Assimilate into a different Culture each month, if eligible
+	MIN_ASSIMILATION = 25	# If there is any assmiliation at least this many people will assimilate
+	CONVERSION_RATE = 0.02	# Percentage of pops who will Convert into a different Religion each month, if eligible
+	MIN_CONVERSION = 25	# If there is any conversion at least this many people will convert
 }

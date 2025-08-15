@@ -79,6 +79,7 @@ pm_chemical_fertilizer = {
 	}
 }
 
+#rice_farm------------
 pm_simple_farming_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
 	building_modifiers = {
@@ -151,58 +152,206 @@ pm_chemical_fertilizer_building_rice_farm = {
 	}
 }
 
-#SECONDARY------------
-pm_potatoes = {
-	texture = "gfx/interface/icons/production_method_icons/potatoes.dds"
+#secondary------------
+pm_no_sugar = {
+	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
+}
+
+pm_simple_sugar_farming = {
+	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_grain_add = -20
-			goods_output_liquor_add = 20
+			goods_output_sugar_add = 40
 		}
 	}
 }
 
-pm_apple_orchards = {
-	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+pm_soil_enriching_sugar_farming = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	unlocking_technologies = {
+		intensive_agriculture
+	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_fertilizer_add = 10
-			goods_output_fruit_add = 10
-			goods_output_sugar_add = 10
+			goods_input_fertilizer_add = 5
+			goods_output_sugar_add = 60
 		}
 	}
 }
 
-pm_citrus_orchards = {
-	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+pm_fertilization_sugar_farming = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	unlocking_technologies = {
+		improved_fertilizer
+	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_fertilizer_add = 10
-			goods_output_fruit_add = 10
-			goods_output_sugar_add = 10
+			goods_output_sugar_add = 80
 		}
 	}
 }
 
-pm_fig_orchards = {
-	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
-	
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_fertilizer_add = 10
-			goods_output_fruit_add = 10
-			goods_output_sugar_add = 10
-		}
+pm_chemical_fertilizer_sugar_farming = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
 	}
-}						
-
-pm_fig_orchards_building_rice_farm = {
-	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_fertilizer_add = 20
-			goods_output_fruit_add = 20
-			goods_output_sugar_add = 20
+			goods_output_sugar_add = 100
+		}
+	}
+}
+
+#rice_farm------------
+pm_simple_sugar_building_rice_farm = {
+	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_sugar_add = 60
+		}
+	}
+}
+
+pm_soil_enriching_sugar_building_rice_farm = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fertilizer_add = 10
+			goods_output_sugar_add = 80
+		}
+	}
+}
+
+pm_fertilization_sugar_building_rice_farm = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fertilizer_add = 20
+			goods_output_sugar_add = 100
+		}
+	}
+}
+
+pm_chemical_fertilizer_sugar_building_rice_farm = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fertilizer_add = 40
+			goods_output_sugar_add = 200
+		}
+	}
+}
+
+#tertiary------------
+pm_no_orchards = {
+	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
+}
+
+pm_simple_orchards = {
+	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_fruit_add = 40
+		}
+	}
+}
+
+pm_soil_enriching_orchards = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fertilizer_add = 5
+			goods_output_fruit_add = 60
+		}
+	}
+}
+
+pm_fertilization_orchards = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fertilizer_add = 10
+			goods_output_fruit_add = 80
+		}
+	}
+}
+
+pm_chemical_fertilizer_orchards = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fertilizer_add = 20
+			goods_output_fruit_add = 100
+		}
+	}
+}
+
+#rice_farm------------
+pm_simple_orchards_building_rice_farm = {
+	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_fruit_add = 60
+		}
+	}
+}
+
+pm_soil_enriching_orchards_building_rice_farm = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fertilizer_add = 10
+			goods_output_fruit_add = 80
+		}
+	}
+}
+
+pm_fertilization_orchards_building_rice_farm = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fertilizer_add = 20
+			goods_output_fruit_add = 100
+		}
+	}
+}
+
+pm_chemical_fertilizer_orchards_building_rice_farm = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fertilizer_add = 40
+			goods_output_fruit_add = 200
 		}
 	}
 }

@@ -1,0 +1,56 @@
+﻿remove_manchu = {
+	is_shown = {
+		country_has_primary_culture = cu:manchu
+	}
+	possible = {
+		country_has_primary_culture = cu:manchu
+	}
+	when_taken = {
+		remove_primary_culture = cu:manchu
+		add_radicals = {
+			value = 1
+			culture = cu:manchu
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_han = {
+	is_shown = {
+		country_has_primary_culture = cu:han
+	}
+	possible = {
+		country_has_primary_culture = cu:han
+	}
+	when_taken = {
+		remove_primary_culture = cu:han
+		add_radicals = {
+			value = 1
+			culture = cu:han
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_francoprovencal = {
+	is_shown = {
+		country_has_primary_culture = cu:francoprovencal
+	}
+	possible = {
+		country_has_primary_culture = cu:francoprovencal
+	}
+	when_taken = {
+		remove_primary_culture = cu:francoprovencal
+		add_radicals = {
+			value = 1
+			culture = cu:francoprovencal
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}

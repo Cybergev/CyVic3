@@ -2,7 +2,6 @@
 	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_grain_add = 10
 			goods_output_meat_add = 40
 		}
 		level_scaled = {
@@ -79,7 +78,6 @@ pm_simple_ranch = {
 	texture = "gfx/interface/icons/production_method_icons/sheep_ranch.dds"
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_grain_add = 10
 			goods_output_fabric_add = 10
 			goods_output_fertilizer_add = 10
 		}
@@ -93,7 +91,7 @@ pm_sheep_farms = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_grain_add = 20
+			goods_input_tools_add = 10
 			goods_output_fabric_add = 20
 			goods_output_fertilizer_add = 20
 		}
@@ -107,7 +105,7 @@ pm_intensive_grazing_ranch = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_grain_add = 40
+			goods_input_tools_add = 20
 			goods_output_fabric_add = 40
 			goods_output_fertilizer_add = 40
 		}

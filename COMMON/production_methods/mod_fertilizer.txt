@@ -8,10 +8,9 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_sulfur_add = 40
-			goods_input_coal_add = 40
+			goods_input_sulfur_add = 100
 			# output goods
-			goods_output_fertilizer_add = 100
+			goods_output_fertilizer_add = 200
 		}
 		level_scaled = {
 			# employment
@@ -34,10 +33,10 @@ pm_improved_fertilizer = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_sulfur_add = 80
-			goods_input_coal_add = 80
+			goods_input_sulfur_add = 100
+			goods_input_coal_add = 100
 			# output goods
-			goods_output_fertilizer_add = 200
+			goods_output_fertilizer_add = 300
 		}
 		level_scaled = {
 			building_employment_laborers_add = 3000
@@ -63,7 +62,7 @@ pm_nitrogen_fixation = {
 			goods_input_sulfur_add = 100
 			goods_input_oil_add = 100
 			# output goods
-			goods_output_fertilizer_add = 300
+			goods_output_fertilizer_add = 400
 		}
 		level_scaled = {
 			building_employment_laborers_add = 3000

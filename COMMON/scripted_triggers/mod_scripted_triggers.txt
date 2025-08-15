@@ -1,6 +1,6 @@
 ﻿european_culture_check = {
-	OR = {
-		#ROMANCE LANGUAGES
+	or = {
+		#romance languages
 		country_has_primary_culture = cu:north_italian
 		country_has_primary_culture = cu:south_italian
 		country_has_primary_culture = cu:spanish
@@ -12,8 +12,8 @@
 		country_has_primary_culture = cu:galician
 		country_has_primary_culture = cu:catalan
 		country_has_primary_culture = cu:corsican
-		#ROMANCE LANGUAGES
-		#GERMANIC LANGUAGES
+		#romance languages
+		#germanic languages
 		country_has_primary_culture = cu:dutch
 		country_has_primary_culture = cu:flemish
 		country_has_primary_culture = cu:british
@@ -24,8 +24,8 @@
 		country_has_primary_culture = cu:north_german
 		country_has_primary_culture = cu:south_german
 		country_has_primary_culture = cu:alemannic
-		#GERMANIC LANGUAGES
-		#SLAVIC LANGUAGES
+		#germanic languages
+		#slavic languages
 		country_has_primary_culture = cu:russian
 		country_has_primary_culture = cu:byelorussian
 		country_has_primary_culture = cu:ukrainian
@@ -37,25 +37,25 @@
 		country_has_primary_culture = cu:bulgarian
 		country_has_primary_culture = cu:bosniak
 		country_has_primary_culture = cu:croat
-		#SLAVIC LANGUAGES
-		#CELTIC LANGUAGES
+		#slavic languages
+		#celtic languages
 		country_has_primary_culture = cu:breton
 		country_has_primary_culture = cu:scottish
 		country_has_primary_culture = cu:irish
 		country_has_primary_culture = cu:wallonian
 		country_has_primary_culture = cu:welsh
-		#CELTIC LANGUAGES
-		#FINNO-UGRIC LANGUAGES
+		#celtic languages
+		#finno-ugric languages
 		country_has_primary_culture = cu:sami
 		country_has_primary_culture = cu:finnish
 		country_has_primary_culture = cu:estonian
 		country_has_primary_culture = cu:hungarian
-		#FINNO-UGRIC LANGUAGES
-		#BALTIC LANGUAGES
+		#finno-ugric languages
+		#baltic languages
 		country_has_primary_culture = cu:latvian
 		country_has_primary_culture = cu:lithuanian
-		#BALTIC LANGUAGES
-		#OTHER LANGUAGES
+		#baltic languages
+		#other languages
 		country_has_primary_culture = cu:armenian
 		country_has_primary_culture = cu:albanian
 		country_has_primary_culture = cu:basque
@@ -64,12 +64,12 @@
 		country_has_primary_culture = cu:greek
 		country_has_primary_culture = cu:georgian
 		country_has_primary_culture = cu:north_caucasian
-		#OTHER LANGUAGES
+		#other languages
 	}
 }
 
 ideology_communist_valid_trigger = {
-	NOR = {
+	nor = {
 		is_interest_group_type = ig_devout
 		is_interest_group_type = ig_industrialists
 		is_interest_group_type = ig_landowners
@@ -77,13 +77,13 @@ ideology_communist_valid_trigger = {
 }
 
 ideology_vanguardist_valid_trigger = {
-	NOR = {
+	nor = {
 		is_interest_group_type = ig_devout
 		is_interest_group_type = ig_industrialists
 		is_interest_group_type = ig_landowners
-		AND = {
+		and = {
 			is_interest_group_type = ig_petty_bourgeoisie
-			NOT = {
+			not = {
 				has_ideology = ideology:ideology_vanguardist
 			}
 		}
