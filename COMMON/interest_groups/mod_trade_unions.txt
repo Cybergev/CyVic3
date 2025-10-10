@@ -11,6 +11,8 @@
 		ideology_moderate
 		ideology_reformer
 		ideology_radical
+		ideology_utopian
+		ideology_despotic_utopian
 	}
 	enable = {
 		always = yes
@@ -22,7 +24,7 @@
 		ig_trait_work_to_rule
 	}
 	on_enable = {
-		ig:ig_trade_unions = {
+		ig:ig_trade_unions ?= {
 			if = {
 				limit = {
 					has_dlc_feature = voice_of_the_people_content
@@ -45,8 +47,7 @@
 			limit = {
 				has_technology_researched = socialism
 			}
-			ig:ig_trade_unions = {
-				remove_ideology = ideology_populist
+			ig:ig_trade_unions ?= {
 				add_ideology = ideology_socialist
 			}
 		}
@@ -88,6 +89,17 @@
 				deccani
 			}
 		}
+		rule = {
+			trigger = {
+				c:ZAN ?= this
+				any_primary_culture = {
+					cu:bedouin = this
+				}
+			}
+			cultures = {
+				swahili
+			}
+		}
 	}
 	on_character_ig_membership = {
 	}
@@ -103,8 +115,8 @@
 					text = owner_has_modern_agriculture_tt
 					owner = {
 						OR = {
-							has_law = law_type:law_commercialized_agriculture
-							has_law = law_type:law_collectivized_agriculture
+							has_law_or_variant = law_type:law_commercialized_agriculture
+							has_law_or_variant = law_type:law_collectivized_agriculture
 						}
 					}
 				}
@@ -169,7 +181,10 @@
 				limit = {
 					is_pop_type = officers
 					owner = {
-						has_law = law_type:law_professional_army
+						OR = {
+							has_law_or_variant = law_type:law_professional_army
+							has_law_or_variant = law_type:law_mass_conscription
+						}
 					}
 				}
 				value = -100
@@ -181,7 +196,10 @@
 				limit = {
 					is_pop_type = soldiers
 					owner = {
-						has_law = law_type:law_professional_army
+						OR = {
+							has_law_or_variant = law_type:law_professional_army
+							has_law_or_variant = law_type:law_mass_conscription
+						}
 					}
 				}
 				value = -100
@@ -197,34 +215,6 @@
 					max = 1.25
 					min = 0.75
 				}
-			}
-		}
-		multiply = {
-			desc = "NO_LABOR_MOVEMENT"
-			value = 1
-			if = {
-				limit = {
-					owner = {
-						NOT = {
-							has_technology_researched = labor_movement
-						}
-					}
-				}
-				value = 0.5
-			}
-		}
-		multiply = {
-			desc = "NO_EGALITARIANISM"
-			value = 1
-			if = {
-				limit = {
-					owner = {
-						NOT = {
-							has_technology_researched = egalitarianism
-						}
-					}
-				}
-				value = 0.5
 			}
 		}
 		multiply = {
@@ -305,7 +295,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_worker_protections
+					has_law_or_variant = law_type:law_worker_protections
 				}
 			}
 			multiply = {
@@ -316,7 +306,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_no_workers_rights
+					has_law_or_variant = law_type:law_no_workers_rights
 				}
 			}
 			multiply = {
@@ -330,7 +320,7 @@
 		# Agitators will never be part of a marginalized IG
 		if = {
 			limit = {
-				owner.ig:ig_trade_unions = {
+				owner.ig:ig_trade_unions ?= {
 					is_marginal = yes
 				}
 			}
@@ -342,10 +332,30 @@
 	commander_weight = {
 		value = 0.5
 	}
+	executive_weight = {
+		value = 0.2
+		# The company owning BIC should not get non-industrialist executives
+		if = {
+			limit = {
+				exists = scope:company
+				exists = c:BIC
+				c:BIC = {
+					exists = owning_company
+					owning_company = scope:company
+				}
+			}
+			multiply = {
+				value = 0
+			}
+		}
+	}
 	noble_chance = {
-		value = 0.1
+		value = 0.05
 	}
 	female_commander_chance = {
+		value = 0
+	}
+	female_executive_chance = {
 		value = 0
 	}
 	female_politician_chance = {
@@ -353,11 +363,15 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_womens_suffrage
+					has_law_or_variant = law_type:law_womens_suffrage
+				}
+				law_stance = {
+					law = law_type:law_womens_suffrage
+					value >= approve
 				}
 			}
 			add = {
-				value = 0.05
+				value = 0.1
 			}
 		}
 	}
@@ -366,7 +380,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_women_own_property
+					has_law_or_variant = law_type:law_women_own_property
 				}
 			}
 			add = {
@@ -376,7 +390,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_women_in_the_workplace
+					has_law_or_variant = law_type:law_women_in_the_workplace
 				}
 			}
 			add = {
@@ -386,7 +400,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_womens_suffrage
+					has_law_or_variant = law_type:law_womens_suffrage
 				}
 			}
 			add = {
@@ -399,5 +413,10 @@
 	commander_leader_chance = {
 		value = 0.25
 		multiply = ig_commander_leader_chance_mult
+	}
+	# The chance that a executive belonging to this IG takes over leadership when it changes
+	# scope:character is the most popular executive in the IG
+	executive_leader_chance = {
+		value = 0.25
 	}
 }

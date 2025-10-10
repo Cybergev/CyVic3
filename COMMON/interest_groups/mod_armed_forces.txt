@@ -10,8 +10,6 @@
 	}
 	character_ideologies = {
 		ideology_moderate
-		ideology_orleanist
-		ideology_bonapartist
 	}
 	enable = {
 		always = yes
@@ -23,7 +21,7 @@
 		ig_trait_materiel_waste
 	}
 	on_enable = {
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			if = {
 				limit = {
 					owner = {
@@ -51,10 +49,10 @@
 				limit = {
 					owner = {
 						any_primary_culture = {
-							has_discrimination_trait = hispanophone
-							has_discrimination_trait = european_heritage
+							has_discrimination_trait = language_hispanophone
+							has_discrimination_trait_group = heritage_group_european
 							NOT = {
-								has_discrimination_trait = iberian_culture_group
+								has_discrimination_trait = heritage_iberian
 							}
 						}
 					}
@@ -95,6 +93,19 @@
 				set_ig_trait = ig_trait:ig_trait_khalsa
 				set_ig_trait = ig_trait:ig_trait_patriotic_fervor
 			}
+			else_if = {
+				limit = {
+					owner = {
+						c:ZAN ?= this
+						any_primary_culture = {
+							cu:bedouin = this
+						}
+					}
+				}
+				set_ig_trait = ig_trait:ig_trait_divided_ranks
+				set_ig_trait = ig_trait:ig_trait_veteran_consultation
+				set_ig_trait = ig_trait:ig_trait_patriotic_fervor
+			}
 			else = {
 				set_ig_trait = ig_trait:ig_trait_materiel_waste
 				set_ig_trait = ig_trait:ig_trait_veteran_consultation
@@ -112,7 +123,7 @@
 					country_has_primary_culture = cu:mexican
 				}
 			}
-			ig:ig_armed_forces = {
+			ig:ig_armed_forces ?= {
 				add_ideology = ideology_caudillismo
 			}
 		}
@@ -124,7 +135,7 @@
 					has_global_variable = fall_of_the_samurai_global_var
 				}
 			}
-			ig:ig_armed_forces = {
+			ig:ig_armed_forces ?= {
 				remove_ideology = ideology_jingoist
 				remove_ideology = ideology_patriotic
 				remove_ideology = ideology_meritocratic
@@ -140,7 +151,7 @@
 			limit = {
 				c:BIC ?= this
 			}
-			ig:ig_armed_forces = {
+			ig:ig_armed_forces ?= {
 				set_interest_group_name = ig_presidency_armies
 			}
 		}
@@ -149,7 +160,7 @@
 			limit = {
 				c:PAN ?= this
 			}
-			ig:ig_armed_forces = {
+			ig:ig_armed_forces ?= {
 				set_interest_group_name = ig_khalsaji
 				remove_ideology = ideology_jingoist
 				remove_ideology = ideology_patriotic
@@ -176,6 +187,19 @@
 				irish
 			}
 		}
+		rule = {
+			trigger = {
+				c:ZAN ?= this
+				any_primary_culture = {
+					cu:bedouin = this
+				}
+			}
+			cultures = {
+				bedouin
+				swahili
+				baluchi
+			}
+		}
 	}
 	on_character_ig_membership = {
 	}
@@ -200,7 +224,10 @@
 					# Militarisation of colonial settlers
 					limit = {
 						owner = {
-							has_law = law_type:law_colonial_resettlement
+							OR = {
+								has_law_or_variant = law_type:law_colonial_resettlement
+								has_law_or_variant = law_type:law_frontier_colonization
+							}
 						}
 						state = {
 							is_incorporated = no
@@ -221,10 +248,11 @@
 							pop_employment_building_group = bg_military_shipyards
 						}
 						owner = {
-							has_law = law_type:law_professional_army
+							has_law_or_variant = law_type:law_professional_army
+							has_law_or_variant = law_type:law_mass_conscription
 						}
 					}
-					divide = 10
+					divide = 2
 				}
 			}
 		}
@@ -283,7 +311,10 @@
 					# Institutional loyalty
 					limit = {
 						owner = {
-							has_law = law_type:law_professional_army
+							OR = {
+								has_law = law_type:law_professional_army
+								has_law = law_type:law_mass_conscription
+							}
 						}
 					}
 					add = 50
@@ -415,9 +446,9 @@
 			limit = {
 				owner = {
 					OR = {
-						has_law = law_type:law_oligarchy
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_single_party_state
+						has_law_or_variant = law_type:law_oligarchy
+						has_law_or_variant = law_type:law_autocracy
+						has_law_or_variant = law_type:law_single_party_state
 					}
 				}
 			}
@@ -430,8 +461,8 @@
 			limit = {
 				owner = {
 					OR = {
-						has_law = law_type:law_universal_suffrage
-						has_law = law_type:law_census_voting
+						has_law_or_variant = law_type:law_universal_suffrage
+						has_law_or_variant = law_type:law_census_voting
 					}
 				}
 			}
@@ -444,8 +475,8 @@
 			limit = {
 				owner = {
 					NOR = {
-						has_law = law_type:law_professional_army
-						has_law = law_type:law_mass_conscription
+						has_law_or_variant = law_type:law_professional_army
+						has_law_or_variant = law_type:law_mass_conscription
 					}
 				}
 			}
@@ -460,7 +491,7 @@
 		# Agitators will never be part of a marginalized IG
 		if = {
 			limit = {
-				owner.ig:ig_armed_forces = {
+				owner.ig:ig_armed_forces ?= {
 					is_marginal = yes
 				}
 			}
@@ -472,21 +503,55 @@
 	commander_weight = {
 		value = 5
 	}
+	executive_weight = {
+		value = 0.2
+		# The company owning BIC should not get non-industrialist executives
+		if = {
+			limit = {
+				exists = scope:company
+				exists = c:BIC
+				c:BIC = {
+					exists = owning_company
+					owning_company = scope:company
+				}
+			}
+			multiply = {
+				value = 0
+			}
+		}
+	}
 	noble_chance = {
 		value = 0.5
 	}
 	female_commander_chance = {
 		value = 0
 	}
+	female_executive_chance = {
+		value = 0
+	}
 	female_politician_chance = {
 		value = 0
+		if = {
+			limit = {
+				owner = {
+					has_law_or_variant = law_type:law_womens_suffrage
+				}
+				law_stance = {
+					law = law_type:law_womens_suffrage
+					value >= approve
+				}
+			}
+			add = {
+				value = 0.025
+			}
+		}
 	}
 	female_agitator_chance = {
 		value = 0.01
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_women_own_property
+					has_law_or_variant = law_type:law_women_own_property
 				}
 			}
 			add = {
@@ -496,7 +561,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_women_in_the_workplace
+					has_law_or_variant = law_type:law_women_in_the_workplace
 				}
 			}
 			add = {
@@ -506,7 +571,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_womens_suffrage
+					has_law_or_variant = law_type:law_womens_suffrage
 				}
 			}
 			add = {
@@ -519,5 +584,10 @@
 	commander_leader_chance = {
 		value = 0.75
 		multiply = ig_commander_leader_chance_mult
+	}
+	# The chance that a executive belonging to this IG takes over leadership when it changes
+	# scope:character is the most popular executive in the IG
+	executive_leader_chance = {
+		value = 0.1
 	}
 }

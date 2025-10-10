@@ -175,6 +175,12 @@
 	}
 	if = {
 		limit = {
+			has_ideology = ideology:ideology_technocratic
+		}
+		remove_ideology = ideology_technocratic
+	}
+	if = {
+		limit = {
 			has_ideology = ideology:ideology_anti_slavery
 		}
 		remove_ideology = ideology_anti_slavery

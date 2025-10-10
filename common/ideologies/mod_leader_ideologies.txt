@@ -50,6 +50,7 @@
 	}
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
+		law_manorialism = strongly_disapprove
 		law_tenant_farmers = strongly_disapprove
 		law_commercialized_agriculture = strongly_disapprove
 		law_collectivized_agriculture = neutral
@@ -239,6 +240,7 @@ ideology_communist = {
 	}
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
+		law_manorialism = strongly_disapprove
 		law_tenant_farmers = strongly_disapprove
 		law_commercialized_agriculture = strongly_disapprove
 		law_collectivized_agriculture = approve
@@ -432,6 +434,7 @@ ideology_vanguardist = {
 	}
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
+		law_manorialism = strongly_disapprove
 		law_tenant_farmers = strongly_disapprove
 		law_commercialized_agriculture = strongly_disapprove
 		law_homesteading = approve
@@ -655,6 +658,7 @@ ideology_corporatist_leader = {
 	}
 	lawgroup_land_reform = {
 		law_serfdom = disapprove
+		law_manorialism = neutral
 		law_tenant_farmers = neutral
 		law_commercialized_agriculture = approve
 		law_collectivized_agriculture = approve
@@ -676,6 +680,13 @@ ideology_corporatist_leader = {
 		law_no_workers_rights = disapprove
 		law_regulatory_bodies = approve
 		law_worker_protections = approve
+	}
+	lawgroup_labour_associations = {
+		law_guild_system = strongly_disapprove
+		law_combination_acts = strongly_disapprove
+		law_anti_strike_laws = disapprove
+		law_right_to_associate = disapprove
+		law_corporatized_unions = approve
 	}
 	lawgroup_education_system = {
 		law_no_schools = disapprove
@@ -1187,6 +1198,7 @@ ideology_fascist = {
 		law_multicultural = strongly_disapprove
 		law_cultural_exclusion = disapprove
 		law_racial_segregation = neutral
+		law_subjecthood = neutral
 		law_national_supremacy = approve
 		law_ethnostate = strongly_approve
 	}
@@ -1675,6 +1687,13 @@ ideology_traditionalist = {
 		law_women_own_property = neutral
 		law_no_womens_rights = approve
 	}
+	lawgroup_labour_associations = {
+		law_combination_acts = strongly_disapprove
+		law_anti_strike_laws = disapprove
+		law_right_to_associate = disapprove
+		law_corporatized_unions = neutral
+		law_guild_system = approve
+	}
 	country_trigger = {
 		NOT = {
 			c:FRA ?= this
@@ -1809,6 +1828,13 @@ ideology_traditionalist_minoritarian = {
 		law_women_in_the_workplace = disapprove
 		law_women_own_property = neutral
 		law_no_womens_rights = approve
+	}
+	lawgroup_labour_associations = {
+		law_combination_acts = strongly_disapprove
+		law_anti_strike_laws = disapprove
+		law_right_to_associate = disapprove
+		law_corporatized_unions = neutral
+		law_guild_system = approve
 	}
 	interest_group_leader_trigger = {
 		ideology_traditionalist_minoritarian_valid_trigger = yes

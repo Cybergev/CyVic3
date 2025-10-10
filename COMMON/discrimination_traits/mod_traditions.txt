@@ -1,0 +1,3 @@
+﻿tradition_european = {
+	type = tradition
+}

@@ -1,0 +1,4 @@
+﻿heritage_european = {
+	type = heritage
+	trait_group = heritage_group_european
+}

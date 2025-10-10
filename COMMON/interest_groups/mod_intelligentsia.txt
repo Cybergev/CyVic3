@@ -13,9 +13,9 @@
 		ideology_radical
 		ideology_reformer
 		ideology_sovereignist_leader
-		ideology_orleanist
 		ideology_despotic_utopian
 		ideology_humanitarian
+		ideology_utopian
 	}
 	enable = {
 		always = yes
@@ -27,7 +27,7 @@
 		ig_trait_social_criticism
 	}
 	on_enable = {
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			if = {
 				limit = {
 					owner = {
@@ -84,7 +84,7 @@
 			limit = {
 				c:PAP ?= this
 			}
-			ig:ig_intelligentsia = {
+			ig:ig_intelligentsia ?= {
 				remove_ideology = ideology_anti_clerical
 			}
 		}
@@ -93,7 +93,7 @@
 			limit = {
 				country_has_primary_culture = cu:hawaiian
 			}
-			ig:ig_intelligentsia = {
+			ig:ig_intelligentsia ?= {
 				set_interest_group_name = ig_hawaiian_democrats
 			}
 		}
@@ -101,10 +101,10 @@
 		else_if = {
 			limit = {
 				any_primary_culture = {
-					has_discrimination_trait = han_chinese
+					has_discrimination_trait = heritage_han
 				}
 			}
-			ig:ig_intelligentsia = {
+			ig:ig_intelligentsia ?= {
 				set_interest_group_name = ig_literati
 				remove_ideology = ideology_anti_clerical
 			}
@@ -115,7 +115,7 @@
 				has_dlc_feature = rp1_content
 				c:BRZ ?= THIS
 			}
-			ig:ig_intelligentsia = {
+			ig:ig_intelligentsia ?= {
 				set_ig_trait = ig_trait:ig_trait_brasilidade
 				set_ig_trait = ig_trait:ig_trait_bachareis
 				set_ig_trait = ig_trait:ig_trait_social_criticism
@@ -128,7 +128,7 @@
 			limit = {
 				c:BIC ?= THIS
 			}
-			ig:ig_intelligentsia = {
+			ig:ig_intelligentsia ?= {
 				set_interest_group_name = ig_civil_servants
 				remove_ideology = ideology_republican
 				add_ideology = ideology_constitutionalist
@@ -140,13 +140,14 @@
 				OR = {
 					c:GBR ?= THIS
 					c:JAP ?= THIS
+					c:AUS ?= THIS
 					any_primary_culture = {
 						# Princely States and Nepal
-						has_discrimination_trait = south_asian_heritage
+						has_discrimination_trait_group = heritage_group_south_asian
 					}
 				}
 			}
-			ig:ig_intelligentsia = {
+			ig:ig_intelligentsia ?= {
 				remove_ideology = ideology_republican
 				add_ideology = ideology_constitutionalist
 			}
@@ -189,6 +190,18 @@
 				deccani
 			}
 		}
+		rule = {
+			trigger = {
+				c:ZAN ?= this
+				any_primary_culture = {
+					cu:bedouin = this
+				}
+			}
+			cultures = {
+				swahili
+				bedouin
+			}
+		}
 	}
 	on_character_ig_membership = {
 	}
@@ -200,7 +213,7 @@
 		add = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
-			multiply = 50
+			multiply = 10
 		}
 		add = {
 			desc = "POP_ACADEMICS"
@@ -245,7 +258,10 @@
 				limit = {
 					is_pop_type = officers
 					owner = {
-						has_law = law_type:law_professional_army
+						OR = {
+							has_law_or_variant = law_type:law_professional_army
+							has_law_or_variant = law_type:law_mass_conscription
+						}
 					}
 				}
 				value = -100
@@ -257,10 +273,26 @@
 				limit = {
 					is_pop_type = soldiers
 					owner = {
-						has_law = law_type:law_professional_army
+						OR = {
+							has_law_or_variant = law_type:law_professional_army
+							has_law_or_variant = law_type:law_mass_conscription
+						}
 					}
 				}
 				value = -100
+			}
+		}
+		add = {
+			desc = "je_hungarian_revolution"
+			if = {
+				limit = {
+					is_pop_type = aristocrats
+					culture = cu:hungarian
+					owner ?= {
+						has_journal_entry = je_hungarian_revolution
+					}
+				}
+				value = 50
 			}
 		}
 		add = {
@@ -276,6 +308,8 @@
 						pop_employment_building_group = bg_service
 						pop_employment_building_group = bg_arts
 						pop_employment_building_group = bg_government
+						pop_employment_building_group = bg_private_infrastructure
+						pop_employment_building_group = bg_financial_districts
 					}
 				}
 				value = 100
@@ -294,7 +328,7 @@
 			if = {
 				limit = {
 					culture = {
-						has_discrimination_trait = european_heritage
+						has_discrimination_trait_group = heritage_group_european
 					}
 				}
 				multiply = {
@@ -412,7 +446,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_technocracy
+					has_law_or_variant = law_type:law_technocracy
 				}
 			}
 			multiply = {
@@ -423,7 +457,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_appointed_bureaucrats
+					has_law_or_variant = law_type:law_appointed_bureaucrats
 				}
 			}
 			multiply = {
@@ -450,7 +484,7 @@
 		# Agitators will never be part of a marginalized IG
 		if = {
 			limit = {
-				owner.ig:ig_intelligentsia = {
+				owner.ig:ig_intelligentsia ?= {
 					is_marginal = yes
 				}
 			}
@@ -462,10 +496,30 @@
 	commander_weight = {
 		value = 1
 	}
+	executive_weight = {
+		value = 2
+		# The company owning BIC should not get non-industrialist executives
+		if = {
+			limit = {
+				exists = scope:company
+				exists = c:BIC
+				c:BIC = {
+					exists = owning_company
+					owning_company = scope:company
+				}
+			}
+			multiply = {
+				value = 0
+			}
+		}
+	}
 	noble_chance = {
 		value = 0.5
 	}
 	female_commander_chance = {
+		value = 0
+	}
+	female_executive_chance = {
 		value = 0
 	}
 	female_politician_chance = {
@@ -473,11 +527,15 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_womens_suffrage
+					has_law_or_variant = law_type:law_womens_suffrage
+				}
+				law_stance = {
+					law = law_type:law_womens_suffrage
+					value >= approve
 				}
 			}
 			add = {
-				value = 0.035
+				value = 0.05
 			}
 		}
 	}
@@ -486,7 +544,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_women_own_property
+					has_law_or_variant = law_type:law_women_own_property
 				}
 			}
 			add = {
@@ -496,7 +554,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_women_in_the_workplace
+					has_law_or_variant = law_type:law_women_in_the_workplace
 				}
 			}
 			add = {
@@ -506,7 +564,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_womens_suffrage
+					has_law_or_variant = law_type:law_womens_suffrage
 				}
 			}
 			add = {
@@ -519,5 +577,10 @@
 	commander_leader_chance = {
 		value = 0.25
 		multiply = ig_commander_leader_chance_mult
+	}
+	# The chance that a executive belonging to this IG takes over leadership when it changes
+	# scope:character is the most popular executive in the IG
+	executive_leader_chance = {
+		value = 0.5
 	}
 }

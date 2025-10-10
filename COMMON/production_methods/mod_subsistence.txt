@@ -10,50 +10,21 @@
 	}
 }
 
-pm_serfdom_building_subsistence_orchards = {
-	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
+pm_corvee_labor = {
+	texture = "gfx/interface/icons/production_method_icons/corvee_labor.dds"
 	unlocking_laws = {
 		law_serfdom
+		law_manorialism
+		law_tenant_farmers
 	}
 	building_modifiers = {
 		unscaled = {
-			building_subsistence_output_add = 2
+			building_subsistence_output_add = 3
 		}
 	}
-}
-
-pm_serfdom_building_subsistence_pastures = {
-	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
-	unlocking_laws = {
-		law_serfdom
-	}
-	building_modifiers = {
-		unscaled = {
-			building_subsistence_output_add = 2
-		}
-	}
-}
-
-pm_serfdom_building_subsistence_fishing_villages = {
-	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
-	unlocking_laws = {
-		law_serfdom
-	}
-	building_modifiers = {
-		unscaled = {
-			building_subsistence_output_add = 2
-		}
-	}
-}
-
-pm_serfdom_building_subsistence_rice_paddies = {
-	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
-	unlocking_laws = {
-		law_serfdom
-	}
-	building_modifiers = {
-		unscaled = {
-			building_subsistence_output_add = 2
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.001
 		}
 	}
 }

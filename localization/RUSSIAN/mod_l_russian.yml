@@ -125,8 +125,8 @@ pm_simple_equipment: "$pm_tools$"
 pm_automatic_power_equipment: "Механизированная сборка урожая"
 
 pmg_automation_building_chemical_plant: "$pmg_automation_building_tooling_workshops$"
-pm_automatic_chemical_disabled: "Ручное обарудование"
-pm_automatic_power_chemical_equipment: "Автоматизированное обарудование"
+pm_automatic_chemical_disabled: "Ручное оборудование"
+pm_automatic_power_chemical_equipment: "Автоматизированное оборудование"
 
 #---------------------------
 

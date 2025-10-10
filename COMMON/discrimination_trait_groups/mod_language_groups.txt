@@ -1,0 +1,3 @@
+﻿language_group_european = {
+	type = language
+}

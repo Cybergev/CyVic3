@@ -3,9 +3,6 @@
 	clicksound = "event:/sfx/dlc/1.3_ip1/ui/agitator_promote"
 	potential = {
 		has_dlc_feature = agitators
-		not = {
-			has_role = politician
-		}
 		or = {
 			has_role = ruler
 			has_role = heir

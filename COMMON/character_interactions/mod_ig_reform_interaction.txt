@@ -22,7 +22,7 @@ swap_ideology_to_anarchist = {
 				has_ideology = ideology:ideology_moderate
 				or = {
 					owner = {
-						has_law = law_type:law_council_republic
+						has_technology_researched = anarchism
 					}
 					interest_group = {
 						or = {
@@ -71,7 +71,7 @@ swap_ideology_to_communist = {
 				has_ideology = ideology:ideology_moderate
 				or = {
 					owner = {
-						has_law = law_type:law_council_republic
+						has_technology_researched = socialism
 					}
 					interest_group = {
 						or = {
@@ -122,7 +122,7 @@ swap_ideology_to_vanguardist = {
 				}
 				or = {
 					owner = {
-						has_law = law_type:law_council_republic
+						has_technology_researched = socialism
 					}
 					interest_group = {
 						or = {
@@ -178,7 +178,7 @@ swap_ideology_to_corporatist = {
 				}
 				or = {
 					owner = {
-						has_law = law_type:law_corporate_state
+						has_technology_researched = corporatism
 					}
 					interest_group = {
 						or = {
@@ -233,7 +233,7 @@ swap_ideology_to_positivist = {
 				}
 				or = {
 					owner = {
-						has_law = law_type:law_corporate_state
+						has_technology_researched = corporatism
 					}
 					interest_group = {
 						or = {
@@ -288,7 +288,7 @@ swap_ideology_to_fascist = {
 				}
 				or = {
 					owner = {
-						has_law = law_type:law_corporate_state
+						has_technology_researched = corporatism
 					}
 					interest_group = {
 						or = {
@@ -343,7 +343,7 @@ swap_ideology_to_integralist = {
 				}
 				or = {
 					owner = {
-						has_law = law_type:law_corporate_state
+						has_technology_researched = corporatism
 					}
 					interest_group = {
 						or = {
@@ -376,7 +376,7 @@ socialist_reform = {
 	potential = {
 		owner = {
 			scope:actor = owner
-			has_law = law_type:law_council_republic
+			has_technology_researched = socialism
 		}
 		or = {
 			has_role = ruler
@@ -389,7 +389,7 @@ socialist_reform = {
 	show_requirements = yes
 	possible = {
 		owner = {
-			has_law = law_type:law_council_republic
+			has_technology_researched = socialism
 		}
 		or = {
 			has_role = ruler
@@ -425,7 +425,7 @@ anarchist_reform = {
 	potential = {
 		owner = {
 			scope:actor = owner
-			has_law = law_type:law_council_republic
+			has_technology_researched = anarchism
 		}
 		or = {
 			has_role = ruler
@@ -438,7 +438,7 @@ anarchist_reform = {
 	show_requirements = yes
 	possible = {
 		owner = {
-			has_law = law_type:law_council_republic
+			has_technology_researched = anarchism
 		}
 		or = {
 			has_role = ruler
@@ -473,7 +473,7 @@ communist_reform = {
 	potential = {
 		owner = {
 			scope:actor = owner
-			has_law = law_type:law_council_republic
+			has_technology_researched = socialism
 		}
 		or = {
 			has_role = ruler
@@ -486,7 +486,7 @@ communist_reform = {
 	show_requirements = yes
 	possible = {
 		owner = {
-			has_law = law_type:law_council_republic
+			has_technology_researched = socialism
 		}
 		or = {
 			has_role = ruler
@@ -519,7 +519,7 @@ vanguardist_reform = {
 	potential = {
 		owner = {
 			scope:actor = owner
-			has_law = law_type:law_council_republic
+			has_technology_researched = socialism
 		}
 		or = {
 			has_role = ruler
@@ -532,7 +532,7 @@ vanguardist_reform = {
 	show_requirements = yes
 	possible = {
 		owner = {
-			has_law = law_type:law_council_republic
+			has_technology_researched = socialism
 		}
 		or = {
 			has_role = ruler
@@ -567,7 +567,7 @@ corporatist_reform = {
 	potential = {
 		owner = {
 			scope:actor = owner
-			has_law = law_type:law_corporate_state
+			has_technology_researched = corporatism
 		}
 		or = {
 			has_role = ruler
@@ -580,7 +580,7 @@ corporatist_reform = {
 	show_requirements = yes
 	possible = {
 		owner = {
-			has_law = law_type:law_corporate_state
+			has_technology_researched = corporatism
 		}
 		or = {
 			has_role = ruler
@@ -609,7 +609,7 @@ positivist_reform = {
 	potential = {
 		owner = {
 			scope:actor = owner
-			has_law = law_type:law_corporate_state
+			has_technology_researched = corporatism
 		}
 		or = {
 			has_role = ruler
@@ -622,7 +622,7 @@ positivist_reform = {
 	show_requirements = yes
 	possible = {
 		owner = {
-			has_law = law_type:law_corporate_state
+			has_technology_researched = corporatism
 		}
 		or = {
 			has_role = ruler
@@ -654,7 +654,7 @@ fascist_reform = {
 	potential = {
 		owner = {
 			scope:actor = owner
-			has_law = law_type:law_corporate_state
+			has_technology_researched = corporatism
 		}
 		or = {
 			has_role = ruler
@@ -667,7 +667,7 @@ fascist_reform = {
 	show_requirements = yes
 	possible = {
 		owner = {
-			has_law = law_type:law_corporate_state
+			has_technology_researched = corporatism
 		}
 		or = {
 			has_role = ruler
@@ -697,7 +697,7 @@ integralist_reform = {
 	potential = {
 		owner = {
 			scope:actor = owner
-			has_law = law_type:law_corporate_state
+			has_technology_researched = corporatism
 		}
 		or = {
 			has_role = ruler
@@ -710,7 +710,7 @@ integralist_reform = {
 	show_requirements = yes
 	possible = {
 		owner = {
-			has_law = law_type:law_corporate_state
+			has_technology_researched = corporatism
 		}
 		or = {
 			has_role = ruler
