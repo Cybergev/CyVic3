@@ -109,28 +109,10 @@
 			is_pop_type = capitalists
 			is_pop_type = shopkeepers
 		}
-		OR = {
-			AND = {
-				custom_tooltip = {
-					text = owner_has_modern_agriculture_tt
-					owner = {
-						OR = {
-							has_law_or_variant = law_type:law_commercialized_agriculture
-							has_law_or_variant = law_type:law_collectivized_agriculture
-						}
-					}
-				}
-				strata = lower
-				NOR = {
-					pop_employment_building_group = bg_subsistence_agriculture
-					pop_employment_building_group = bg_subsistence_ranching
-				}
-			}
-			NOR = {
-				pop_employment_building_group = bg_agriculture
-				pop_employment_building_group = bg_ranching
-				pop_employment_building_group = bg_plantations
-			}
+		NOR = {
+			pop_employment_building_group = bg_agriculture
+			pop_employment_building_group = bg_ranching
+			pop_employment_building_group = bg_plantations
 		}
 	}
 	pop_weight = {
@@ -139,13 +121,13 @@
 			desc = "URBAN_POP"
 			if = {
 				limit = {
-					NOR = {
+					OR = {
 						pop_employment_building_group = bg_agriculture
 						pop_employment_building_group = bg_ranching
 						pop_employment_building_group = bg_plantations
 					}
 				}
-				value = 50
+				value = -100
 			}
 		}
 		add = {
@@ -163,14 +145,14 @@
 				limit = {
 					is_pop_type = machinists
 				}
-				value = 100
+				value = 250
 			}
 		}
 		add = {
-			desc = "POP_LABORERS"
+			desc = "POP_CLERKS"
 			if = {
 				limit = {
-					is_pop_type = laborers
+					is_pop_type = clerks
 				}
 				value = 50
 			}

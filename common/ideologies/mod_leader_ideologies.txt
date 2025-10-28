@@ -1689,8 +1689,8 @@ ideology_traditionalist = {
 	}
 	lawgroup_labour_associations = {
 		law_combination_acts = strongly_disapprove
-		law_anti_strike_laws = disapprove
-		law_right_to_associate = disapprove
+		law_anti_strike_laws = strongly_disapprove
+		law_right_to_associate = neutral
 		law_corporatized_unions = neutral
 		law_guild_system = approve
 	}
@@ -1831,8 +1831,8 @@ ideology_traditionalist_minoritarian = {
 	}
 	lawgroup_labour_associations = {
 		law_combination_acts = strongly_disapprove
-		law_anti_strike_laws = disapprove
-		law_right_to_associate = disapprove
+		law_anti_strike_laws = strongly_disapprove
+		law_right_to_associate = neutral
 		law_corporatized_unions = neutral
 		law_guild_system = approve
 	}

@@ -1,0 +1,162 @@
+﻿#SET-----------------------------
+decree_set_arable_land_10 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_set_arable_land_20 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_set_arable_land_40 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_set_arable_land_50 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_set_arable_land_100 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+#ADD-----------------------------
+decree_add_arable_land_1 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_add_arable_land_2 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_add_arable_land_5 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_add_arable_land_10 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_add_arable_land_100 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+#RREMOVE-----------------------------
+decree_remove_arable_land = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_remove_arable_land_1 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_remove_arable_land_2 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_remove_arable_land_5 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_remove_arable_land_10 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}
+
+decree_remove_arable_land_100 = {
+	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
+	modifier = {
+	}
+	cost = 0
+	ai_weight = {
+		value = 0
+	}
+}

@@ -420,6 +420,15 @@
 	}
 	pop_weight = {
 		value = 0
+		if = {
+			limit = {
+				strata = lower
+			}
+			add = {
+				desc = "POP_BASE_ATTRACTION"
+				value = -50
+			}
+		}
 		add = {
 			desc = "POP_ARISTOCRATS"
 			if = {
@@ -427,6 +436,7 @@
 					is_pop_type = aristocrats
 				}
 				value = 250
+				add = this.standard_of_living
 			}
 		}
 		add = {

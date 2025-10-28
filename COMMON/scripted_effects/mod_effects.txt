@@ -384,13 +384,13 @@ promote_national_val = {
 	root = {
 		every_scope_state = {
 			limit = {
-				has_decree = decree_promote_national_values
 				not = {
 					has_modifier = national_values_promotion
 				}
 			}
 			random_scope_pop = {
 				limit = {
+					strata = upper
 					nand = {
 						culture = {
 							is_primary_culture_of = root
@@ -409,8 +409,47 @@ promote_national_val = {
 					value = 0.1
 				}
 			}
-			add_radicals_in_state = {
-				value = 0.2
+			random_scope_pop = {
+				limit = {
+					strata = middle
+					nand = {
+						culture = {
+							is_primary_culture_of = root
+						}
+						religion = {
+							is_state_religion = root
+						}
+					}
+				}
+				change_pop_culture = {
+					target = scope:promotion_pop.culture
+					value = 0.1
+				}
+				change_pop_religion = {
+					target = scope:promotion_pop.religion
+					value = 0.1
+				}
+			}
+			random_scope_pop = {
+				limit = {
+					strata = lower
+					nand = {
+						culture = {
+							is_primary_culture_of = root
+						}
+						religion = {
+							is_state_religion = root
+						}
+					}
+				}
+				change_pop_culture = {
+					target = scope:promotion_pop.culture
+					value = 0.1
+				}
+				change_pop_religion = {
+					target = scope:promotion_pop.religion
+					value = 0.1
+				}
 			}
 			hidden_effect = {
 				add_modifier = {
@@ -433,6 +472,12 @@ corporatist_reform_ig_iedologies = {
 		clear_ig_ideologies = yes
 	}
 	else = {
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_ibadi_shura
+			}
+			remove_ideology = ideology_ibadi_shura
+		}
 		if = {
 			limit = {
 				has_ideology = ideology:ideology_pious
@@ -862,4 +907,75 @@ socialist_reform_movements = {
 			remove_modifier = accepted_movement
 		}
 	}
+}
+
+effect_destroy_all_buildings = {
+	remove_building = building_food_industry
+	remove_building = building_textile_mills
+	remove_building = building_furniture_manufacturies
+	remove_building = building_glassworks
+	remove_building = building_tooling_workshops
+	remove_building = building_paper_mills
+	remove_building = building_chemical_plants
+	remove_building = building_explosives_factory
+	remove_building = building_synthetics_plants
+	remove_building = building_steel_mills
+	remove_building = building_motor_industry
+	remove_building = building_shipyards
+	remove_building = building_military_shipyards
+	remove_building = building_automotive_industry
+	remove_building = building_electrics_industry
+	remove_building = building_arms_industry
+	remove_building = building_artillery_foundries
+	remove_building = building_munition_plants
+	remove_building = building_aeroplanes_industry
+	remove_building = building_canning_industry
+	remove_building = building_distillation_plants
+	remove_building = building_hardwood_workshops
+	remove_building = building_luxury_furniture_manufacturies
+	remove_building = building_luxury_textile_mills
+	remove_building = building_porcelain_manufacturies
+	remove_building = building_radios_industry
+	remove_building = building_synthetic_oil_plants
+	remove_building = building_synthetic_opium_plants
+	remove_building = building_synthetic_silk_plants
+	remove_building = building_synthetic_rubber_plants
+	remove_building = building_tanks_industry
+	remove_building = building_rye_farm
+	remove_building = building_wheat_farm
+	remove_building = building_rice_farm
+	remove_building = building_maize_farm
+	remove_building = building_millet_farm
+	remove_building = building_livestock_ranch
+	remove_building = building_coal_mine
+	remove_building = building_iron_mine
+	remove_building = building_lead_mine
+	remove_building = building_sulfur_mine
+	remove_building = building_gold_mine
+	remove_building = building_coffee_plantation
+	remove_building = building_cotton_plantation
+	remove_building = building_dye_plantation
+	remove_building = building_opium_plantation
+	remove_building = building_tea_plantation
+	remove_building = building_tobacco_plantation
+	remove_building = building_sugar_plantation
+	remove_building = building_banana_plantation
+	remove_building = building_silk_plantation
+	remove_building = building_vineyard_plantation
+	remove_building = building_barracks
+	remove_building = building_conscription_center
+	remove_building = building_naval_base
+	remove_building = building_arts_academy
+	remove_building = building_power_plant
+	remove_building = building_government_administration
+	remove_building = building_university
+	remove_building = building_logging_camp
+	remove_building = building_rubber_plantation
+	remove_building = building_fishing_wharf
+	remove_building = building_whaling_station
+	remove_building = building_oil_rig
+	remove_building = building_port
+	remove_building = building_railway
+	remove_building = building_trade_center
+	remove_building = building_construction_sector
 }

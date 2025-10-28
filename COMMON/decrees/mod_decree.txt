@@ -326,6 +326,7 @@ decree_promote_national_values = {
 		state_radicalism_increases_violent_hostility_mult = 0.5
 		state_radicalism_increases_cultural_erasure_mult = 0.4
 		state_radicalism_increases_open_prejudice_mult = 0.3
+		state_radicalism_increases_second_rate_citizen_mult = 0.2
 	}
 	cost = 100
 	ai_weight = {
@@ -601,8 +602,10 @@ decree_greener_grass_campaign = {
 		is_isolated_from_market = no
 	}
 	modifier = {
-		state_migration_pull_add = 50
-		state_migration_pull_mult = 0.5
+		state_migration_pull_add = 100
+		state_migration_pull_mult = 1
+		state_migration_quota_mult = 1
+		state_radicalism_increases_full_acceptance_mult = 0.5
 	}
 	unlocking_technologies = {
 		romanticism
@@ -704,28 +707,8 @@ decree_violent_suppression = {
 	}
 }
 
-decree_add_arable_land = {
-	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
-	state_trigger = {
-		NOT = {
-			has_decree = decree_remove_arable_land
-		}
-	}
-	modifier = {
-	}
-	cost = 0
-	ai_weight = {
-		value = 0
-	}
-}
-
-decree_remove_arable_land = {
-	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
-	state_trigger = {
-		NOT = {
-			has_decree = decree_add_arable_land
-		}
-	}
+decree_destroy_all_buildings = {
+	texture = "gfx/interface/icons/decree/decree_violent_suppression.dds"
 	modifier = {
 	}
 	cost = 0

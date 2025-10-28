@@ -814,7 +814,7 @@ abdicate_monarch = {
 				is_marginal = yes
 			}
 			popularity <= -50
-			age >= 70
+			age >= define:ncharacters|old_age
 			or = {
 				has_trait = psychological_affliction
 				has_trait = cancer
@@ -935,7 +935,7 @@ abdicate_monarch = {
 		}
 		if = {
 			limit = {
-				age >= 75
+				age >= define:ncharacters|old_age
 			}
 			add = 50
 		}
@@ -973,7 +973,7 @@ resign_from_office = {
 				}
 			}
 			popularity <= -50
-			age >= 70
+			age >= define:ncharacters|old_age
 			or = {
 				has_trait = psychological_affliction
 				has_trait = cancer
@@ -1163,7 +1163,7 @@ retire_commander = {
 		}
 		if = {
 			limit = {
-				age >= 75
+				age >= define:ncharacters|old_age
 			}
 			add = 50
 		}

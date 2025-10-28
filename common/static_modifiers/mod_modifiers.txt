@@ -13,16 +13,18 @@ base_values = {
 	state_middle_strata_expected_sol_add = 10
 	state_upper_strata_expected_sol_add = 15
 	state_expected_sol_from_literacy = 5
-	state_farmers_investment_pool_contribution_add = 0.1
+	state_machinists_investment_pool_contribution_add = 0.2
+	state_farmers_investment_pool_contribution_add = 0.2
+	state_engineers_investment_pool_contribution_add = 0.3
+	state_bureaucrats_investment_pool_contribution_add = 0.3
 	state_shopkeepers_investment_pool_contribution_add = 0.2
 	state_clergymen_investment_pool_contribution_add = 0.2
-	state_aristocrats_investment_pool_contribution_add = 0.2
-	state_capitalists_investment_pool_contribution_add = 0.2
+	state_aristocrats_investment_pool_contribution_add = 0.3
+	state_capitalists_investment_pool_contribution_add = 0.3
 	# To balance for unincorporated states not paying taxes
 	state_unincorporated_starting_wages_mult = -0.2
 	building_unincorporated_subsistence_output_mult = -0.2
 	country_construction_add = 10
-	building_mobilization_cost_mult = 0.5
 	building_economy_of_scale_level_cap_add = 50
 	state_market_access_price_impact = 0.75
 	country_company_throughput_bonus_add = 0.2
@@ -32,8 +34,14 @@ base_values = {
 	military_formation_organization_gain_add = 0.5	# 200 days to get max organization
 	state_urbanization_per_level_add = 100
 	unit_experience_gain_add = 0.5
+	# To account for the power derived from bearing arms
+	country_officers_pol_str_mult = 2
+	country_soldiers_pol_str_mult = 1
+	country_support_separatism_strength_mult = 1
+	country_support_separatism_resistance_mult = 1
 	state_trade_advantage_from_capacity_add = 0.0005
 	state_max_trade_advantage_from_capacity_add = 0.2
+	country_party_whip_impact_add = 0.5
 }
 
 legislative_efficiency = {
@@ -92,6 +100,42 @@ declared_bankruptcy = {
 	state_welfare_payments_mult = -1
 }
 
+starvation_penalty = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_birth_rate_mult = -0.5
+	state_mortality_mult = 0.5
+}
+
+severe_starvation_penalty = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_birth_rate_mult = -1
+	state_mortality_mult = 1
+}
+
+# Multiplies unemployment rate in state by this
+unemployment_birth_penalty_state = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	state_birth_rate_mult = -0.5
+}
+
+literacy_penalty = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_birth_rate_mult = -0.5
+}
+
+low_organization = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	unit_offense_mult = -0.75
+	unit_defense_mult = -0.75
+	unit_blockade_mult = -0.75
+	unit_morale_recovery_mult = -1
+	unit_recovery_rate_add = -0.5
+	unit_convoy_raiding_mult = -0.75
+	unit_convoy_defense_mult = -0.75
+	unit_supply_consumption_mult = 1
+	military_formation_movement_speed_mult = -0.5
+}
+
 #STATIC
 state_turmoil = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
@@ -126,6 +170,11 @@ national_values_promotion = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_assimilation_mult = 0.1
 	state_conversion_mult = 0.1
+	state_allow_assimilation_in_homeland_bool = yes
+	state_radicalism_increases_violent_hostility_mult = 0.4
+	state_radicalism_increases_cultural_erasure_mult = 0.3
+	state_radicalism_increases_open_prejudice_mult = 0.2
+	state_radicalism_increases_second_rate_citizen_mult = 0.1
 }
 
 homeland_expanded = {

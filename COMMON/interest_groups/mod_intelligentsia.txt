@@ -206,14 +206,31 @@
 	on_character_ig_membership = {
 	}
 	pop_potential = {
-		literacy_rate >= 0.8
+		literacy_rate >= 0.5
 	}
 	pop_weight = {
 		value = 0
 		add = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
-			multiply = 10
+			if = {
+				limit = {
+					strata = lower
+				}
+				multiply = 0.5
+			}
+			if = {
+				limit = {
+					strata = middle
+				}
+				multiply = 1
+			}
+			if = {
+				limit = {
+					strata = upper
+				}
+				multiply = 2
+			}
 		}
 		add = {
 			desc = "POP_ACADEMICS"
@@ -234,6 +251,15 @@
 			}
 		}
 		add = {
+			desc = "POP_CLERKS"
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				value = 50
+			}
+		}
+		add = {
 			desc = "POP_ARISTOCRATS"
 			if = {
 				limit = {
@@ -246,9 +272,6 @@
 						}
 					}
 					value = 100
-				}
-				else = {
-					value = 25
 				}
 			}
 		}
@@ -300,16 +323,13 @@
 			if = {
 				limit = {
 					OR = {
-						is_pop_type = aristocrats
-						is_pop_type = clergymen
-						is_pop_type = capitalists
+						strata = middle
+						strata = upper
 					}
 					OR = {
 						pop_employment_building_group = bg_service
 						pop_employment_building_group = bg_arts
 						pop_employment_building_group = bg_government
-						pop_employment_building_group = bg_private_infrastructure
-						pop_employment_building_group = bg_financial_districts
 					}
 				}
 				value = 100

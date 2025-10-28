@@ -1,5 +1,25 @@
-﻿prestige_good_generic_iron = {
+﻿prestige_good_generic_coal = {
+	base_good = coal
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/coal.dds"
+}
+prestige_good_generic_iron = {
 	base_good = iron
 	prestige_bonus = 0.1
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/swedish_bar_iron_prestige.dds"
+}
+prestige_good_generic_lead = {
+	base_good = lead
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/lead.dds"
+}
+prestige_good_wood = {
+	base_good = wood
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/rosewood_prestige.dds"
+}
+prestige_good_oil = {
+	base_good = oil
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/baku_oil_prestige.dds"
 }

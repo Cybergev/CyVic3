@@ -39,12 +39,31 @@ fix_population = {
 	}
 }
 
-chande_arable_land_10 = {
+chande_arable_land = {
 	is_shown = {
 		any_scope_state = {
 			or = {
-				has_decree = decree_add_arable_land
-				has_decree = decree_remove_arable_land
+				or = {
+					has_decree = decree_add_arable_land_1
+					has_decree = decree_add_arable_land_2
+					has_decree = decree_add_arable_land_5
+					has_decree = decree_add_arable_land_10
+					has_decree = decree_add_arable_land_100
+				}
+				or = {
+					has_decree = decree_remove_arable_land_1
+					has_decree = decree_remove_arable_land_2
+					has_decree = decree_remove_arable_land_5
+					has_decree = decree_remove_arable_land_10
+					has_decree = decree_remove_arable_land_100
+				}
+				or = {
+					has_decree = decree_set_arable_land_10
+					has_decree = decree_set_arable_land_20
+					has_decree = decree_set_arable_land_40
+					has_decree = decree_set_arable_land_50
+					has_decree = decree_set_arable_land_100
+				}
 			}
 		}
 	}
@@ -52,109 +71,7 @@ chande_arable_land_10 = {
 		every_scope_state = {
 			if = {
 				limit = {
-					has_decree = decree_add_arable_land
-				}
-				state_region = {
-					add_arable_land = 10
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_remove_arable_land
-				}
-				state_region = {
-					add_arable_land = -10
-				}
-			}
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-chande_arable_land_5 = {
-	is_shown = {
-		any_scope_state = {
-			or = {
-				has_decree = decree_add_arable_land
-				has_decree = decree_remove_arable_land
-			}
-		}
-	}
-	when_taken = {
-		every_scope_state = {
-			if = {
-				limit = {
-					has_decree = decree_add_arable_land
-				}
-				state_region = {
-					add_arable_land = 5
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_remove_arable_land
-				}
-				state_region = {
-					add_arable_land = -5
-				}
-			}
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-chande_arable_land_2 = {
-	is_shown = {
-		any_scope_state = {
-			or = {
-				has_decree = decree_add_arable_land
-				has_decree = decree_remove_arable_land
-			}
-		}
-	}
-	when_taken = {
-		every_scope_state = {
-			if = {
-				limit = {
-					has_decree = decree_add_arable_land
-				}
-				state_region = {
-					add_arable_land = 2
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_remove_arable_land
-				}
-				state_region = {
-					add_arable_land = -2
-				}
-			}
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-chande_arable_land_1 = {
-	is_shown = {
-		any_scope_state = {
-			or = {
-				has_decree = decree_add_arable_land
-				has_decree = decree_remove_arable_land
-			}
-		}
-	}
-	when_taken = {
-		every_scope_state = {
-			if = {
-				limit = {
-					has_decree = decree_add_arable_land
+					has_decree = decree_add_arable_land_1
 				}
 				state_region = {
 					add_arable_land = 1
@@ -162,10 +79,139 @@ chande_arable_land_1 = {
 			}
 			if = {
 				limit = {
-					has_decree = decree_remove_arable_land
+					has_decree = decree_add_arable_land_2
+				}
+				state_region = {
+					add_arable_land = 2
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_add_arable_land_5
+				}
+				state_region = {
+					add_arable_land = 5
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_add_arable_land_10
+				}
+				state_region = {
+					add_arable_land = 10
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_add_arable_land_100
+				}
+				state_region = {
+					add_arable_land = 100
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_remove_arable_land_1
 				}
 				state_region = {
 					add_arable_land = -1
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_remove_arable_land_2
+				}
+				state_region = {
+					add_arable_land = -2
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_remove_arable_land_5
+				}
+				state_region = {
+					add_arable_land = -5
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_remove_arable_land_10
+				}
+				state_region = {
+					add_arable_land = -10
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_remove_arable_land_100
+				}
+				state_region = {
+					add_arable_land = -100
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_set_arable_land_10
+				}
+				hidden_effect = {
+					state_region = {
+						add_arable_land = -1000
+					}
+				}
+				state_region = {
+					add_arable_land = 10
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_set_arable_land_20
+				}
+				hidden_effect = {
+					state_region = {
+						add_arable_land = -1000
+					}
+				}
+				state_region = {
+					add_arable_land = 20
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_set_arable_land_40
+				}
+				hidden_effect = {
+					state_region = {
+						add_arable_land = -1000
+					}
+				}
+				state_region = {
+					add_arable_land = 40
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_set_arable_land_50
+				}
+				hidden_effect = {
+					state_region = {
+						add_arable_land = -1000
+					}
+				}
+				state_region = {
+					add_arable_land = 50
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_set_arable_land_100
+				}
+				hidden_effect = {
+					state_region = {
+						add_arable_land = -1000
+					}
+				}
+				state_region = {
+					add_arable_land = 100
 				}
 			}
 		}
@@ -821,7 +867,6 @@ promote_national_values = {
 	}
 	possible = {
 		any_scope_state = {
-			has_decree = decree_promote_national_values
 			not = {
 				has_modifier = national_values_promotion
 			}
@@ -849,7 +894,29 @@ promote_national_values = {
 		promote_national_val = yes
 	}
 	ai_chance = {
-		base = 1000
+		base = 0
+	}
+}
+
+destroy_all_buildings = {
+	is_shown = {
+		always = yes
+	}
+	possible = {
+		any_scope_state = {
+			has_decree = decree_destroy_all_buildings
+		}
+	}
+	when_taken = {
+		every_scope_state = {
+			limit = {
+				has_decree = decree_destroy_all_buildings
+			}
+			effect_destroy_all_buildings = yes
+		}
+	}
+	ai_chance = {
+		base = 0
 	}
 }
 

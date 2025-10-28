@@ -228,7 +228,6 @@
 			}
 		}
 		NOR = {
-			is_pop_type = aristocrats
 			trigger_if = {
 				limit = {
 					NOT = {
@@ -265,19 +264,18 @@
 					pop_employment_building_group = bg_ranching
 					pop_employment_building_group = bg_plantations
 				}
-				strata = middle
 			}
 		}
 	}
 	pop_weight = {
 		if = {
 			limit = {
+				strata = middle
 				OR = {
 					pop_employment_building_group = bg_government
 					pop_employment_building_group = bg_service
 					pop_employment_building_group = bg_urban_facilities
 				}
-				strata = middle
 			}
 			add = {
 				desc = "POP_BASE_ATTRACTION"
@@ -299,7 +297,7 @@
 				limit = {
 					is_pop_type = bureaucrats
 				}
-				value = 50
+				value = 100
 			}
 		}
 		add = {
@@ -317,19 +315,26 @@
 				limit = {
 					is_pop_type = engineers
 				}
-				value = 50
+				value = 25
 			}
 		}
 		add = {
-			desc = "POP_BUREAUCRATS_ELECTED"
+			desc = "POP_ARISTOCRATS"
 			if = {
 				limit = {
-					is_pop_type = bureaucrats
-					owner = {
-						has_law_or_variant = law_type:law_elected_bureaucrats
-					}
+					is_pop_type = aristocrats
 				}
-				value = 50
+				if = {
+					limit = {
+						owner = {
+							has_law = law_type:law_hereditary_bureaucrats
+						}
+					}
+					value = 100
+				}
+				else = {
+					value = 25
+				}
 			}
 		}
 		add = {

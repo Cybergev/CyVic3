@@ -204,7 +204,6 @@
 		OR = {
 			is_pop_type = capitalists
 			is_pop_type = engineers
-			is_pop_type = shopkeepers
 			AND = {
 				exists = c:BIC
 				owner ?= c:BIC
@@ -226,7 +225,7 @@
 			}
 			add = {
 				desc = "POP_BASE_ATTRACTION"
-				value = -50
+				value = -100
 			}
 		}
 		add = {

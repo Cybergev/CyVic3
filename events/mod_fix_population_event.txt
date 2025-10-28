@@ -8,15 +8,15 @@ fix_population_event.1 = {
 	immediate = {
 		kill_population_percent_in_state = {
 			strata = upper
-			percent = 0.9
+			percent = 1
 		}
 		kill_population_percent_in_state = {
 			strata = middle
-			percent = 0.9
+			percent = 1
 		}
 		kill_population_percent_in_state = {
 			strata = lower
-			percent = 0.9
+			percent = 1
 		}
 	}
 }

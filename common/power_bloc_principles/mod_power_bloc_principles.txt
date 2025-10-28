@@ -68,11 +68,11 @@ principle_internal_trade_1 = {
 	icon = "gfx/interface/icons/principles_icons/internal_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	power_bloc_modifier = {
-		power_bloc_trade_route_cost_mult = -0.5
 		power_bloc_disallow_embargo_bool = yes
 	}
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.05
+		state_market_access_price_impact = 0.05
 	}
 	ai_weight = {
 		value = 200		# Good for trade leagues to have
@@ -100,11 +100,11 @@ principle_internal_trade_2 = {
 	icon = "gfx/interface/icons/principles_icons/internal_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	power_bloc_modifier = {
-		power_bloc_trade_route_cost_mult = -0.75
 		power_bloc_disallow_embargo_bool = yes
 	}
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.075
+		state_market_access_price_impact = 0.075
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones
@@ -115,11 +115,11 @@ principle_internal_trade_3 = {
 	icon = "gfx/interface/icons/principles_icons/internal_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	power_bloc_modifier = {
-		power_bloc_trade_route_cost_mult = -1
 		power_bloc_disallow_embargo_bool = yes
 	}
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.1
+		state_market_access_price_impact = 0.1
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones

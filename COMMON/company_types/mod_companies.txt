@@ -1,4 +1,54 @@
-﻿company_basic_metal_mining = {
+﻿company_basic_mineral_mining = {
+	icon = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+	flavored_company = no
+	uses_dynamic_naming = yes
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+		"dynamic_company_type_guild"
+	}
+	building_types = {
+		building_coal_mine
+	}
+	extension_building_types = {
+		building_sulfur_mine
+	}
+	possible_prestige_goods = {
+		prestige_good_generic_coal
+	}
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_sulfur_mine
+					is_building_type = building_coal_mine
+				}
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		building_coal_mine_throughput_add = 0.1
+	}
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_sulfur_mine
+					is_building_type = building_coal_mine
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_basic_metal_mining = {
 	icon = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	flavored_company = no
@@ -24,10 +74,7 @@
 	possible = {
 		any_scope_state = {
 			any_scope_building = {
-				OR = {
-					is_building_type = building_iron_mine
-					is_building_type = building_lead_mine
-				}
+				is_building_type = building_iron_mine
 				level >= 5
 			}
 		}
@@ -38,11 +85,202 @@
 	ai_will_do = {
 		any_scope_state = {
 			any_scope_building = {
+				is_building_type = building_iron_mine
+				level >= 5
+			}
+		}
+	}
+}
+
+company_basic_lead_mining = {
+	icon = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+	flavored_company = no
+	uses_dynamic_naming = yes
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+		"dynamic_company_type_guild"
+	}
+	building_types = {
+		building_lead_mine
+	}
+	extension_building_types = {
+		building_iron_mine
+	}
+	possible_prestige_goods = {
+		prestige_good_generic_lead
+	}
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_lead_mine
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		building_lead_mine_throughput_add = 0.1
+	}
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_lead_mine
+				level >= 5
+			}
+		}
+	}
+}
+
+company_basic_fishing = {
+	icon = "gfx/interface/icons/company_icons/basic_fishing.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+	flavored_company = no
+	uses_dynamic_naming = yes
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+		"dynamic_company_type_guild"
+	}
+	building_types = {
+		building_fishing_wharf
+	}
+	extension_building_types = {
+		building_whaling_station
+	}
+	possible_prestige_goods = {
+		prestige_good_generic_fish
+	}
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
 				OR = {
-					is_building_type = building_iron_mine
-					is_building_type = building_lead_mine
+					is_building_type = building_fishing_wharf
+					is_building_type = building_whaling_station
 				}
 				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		building_fishing_wharf_throughput_add = 0.1
+	}
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_fishing_wharf
+					is_building_type = building_whaling_station
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_basic_forestry = {
+	icon = "gfx/interface/icons/company_icons/basic_forestry.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+	category = aristocrat_owned
+	flavored_company = no
+	uses_dynamic_naming = yes
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+		"dynamic_company_type_guild"
+	}
+	building_types = {
+		building_logging_camp
+	}
+	extension_building_types = {
+		building_hardwood_workshops
+	}
+	possible_prestige_goods = {
+		prestige_good_wood
+	}
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_logging_camp
+					is_building_type = building_hardwood_workshops
+				}
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		building_logging_camp_throughput_add = 0.1
+	}
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_logging_camp
+					is_building_type = building_hardwood_workshops
+				}
+				level >= 3
+			}
+		}
+	}
+}
+
+company_basic_oil = {
+	icon = "gfx/interface/icons/company_icons/basic_oil.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	flavored_company = no
+	uses_dynamic_naming = yes
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+	}
+	building_types = {
+		building_oil_rig
+	}
+	extension_building_types = {
+		building_synthetic_oil_plants
+	}
+	possible_prestige_goods = {
+		prestige_good_oil
+	}
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_oil_rig
+					is_building_type = building_synthetic_oil_plants
+				}
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		building_oil_rig_throughput_add = 0.1
+	}
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_oil_rig
+					is_building_type = building_synthetic_oil_plants
+				}
+				level >= 3
 			}
 		}
 	}
@@ -66,12 +304,6 @@ company_basic_steel = {
 	}
 	possible_prestige_goods = {
 		prestige_good_generic_steel
-	}
-	prestige_goods_trigger = {
-		custom_tooltip = {
-			text = je_prestige_goods_steel_complete_tt
-			has_variable = prestige_good_generic_steel_var
-		}
 	}
 	extension_building_types = {
 		building_iron_mine

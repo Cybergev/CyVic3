@@ -2320,7 +2320,7 @@ law_state_religion = {
 	}
 	institution = institution_schools
 	institution_modifier = {
-		state_conversion_mult = 0.1
+		state_conversion_mult = 0.2
 	}
 	modifier = {
 		country_authority_add = 200
@@ -2588,7 +2588,7 @@ law_state_atheism = {
 	institution_modifier = {
 		interest_group_ig_devout_pol_str_mult = -0.2
 		country_authority_add = 40
-		state_conversion_mult = 0.1
+		state_conversion_mult = 0.2
 	}
 	modifier = {
 		country_acceptance_state_religion_add = 0
@@ -2723,13 +2723,14 @@ law_national_guard = {
 		state_harvest_condition_wildfire_impact_mult = -0.05
 		state_harvest_condition_extreme_winds_impact_mult = -0.05
 		state_harvest_condition_drought_impact_mult = -0.05
-		state_conscription_rate_add = 0.005
+		state_conscription_rate_add = 0.025
 		state_turmoil_effects_mult = -0.05
-		state_mortality_turmoil_mult = 0.01
-		state_radicals_from_political_movements_mult = -0.05
+		state_mortality_turmoil_mult = 0.05
 		state_radicalism_increases_violent_hostility_mult = -0.05
 		state_radicalism_increases_cultural_erasure_mult = -0.05
 		state_radicalism_increases_open_prejudice_mult = -0.05
+		state_radicalism_increases_second_rate_citizen_mult = -0.05
+		state_radicalism_increases_full_acceptance_mult = -0.05
 		country_leverage_resistance_mult = 0.05
 		country_officers_pol_str_mult = 0.1
 		country_soldiers_pol_str_mult = 0.05
@@ -2767,8 +2768,17 @@ law_secret_police = {
 	institution_modifier = {
 		country_revolution_progress_mult = -0.1
 		country_secession_progress_mult = -0.1
-		state_radicals_from_political_movements_mult = -0.1
+		state_conscription_rate_add = 0.025
+		state_turmoil_effects_mult = -0.1
+		state_mortality_turmoil_mult = 0.1
+		state_radicalism_increases_violent_hostility_mult = -0.1
+		state_radicalism_increases_cultural_erasure_mult = -0.1
+		state_radicalism_increases_open_prejudice_mult = -0.1
+		state_radicalism_increases_second_rate_citizen_mult = -0.1
+		state_radicalism_increases_full_acceptance_mult = -0.1
 		country_leverage_resistance_mult = 0.1
+		country_officers_pol_str_mult = 0.1
+		country_soldiers_pol_str_mult = 0.05
 	}
 	on_enact = {
 		custom_tooltip = unlock_arrange_accident_tt
@@ -2798,10 +2808,8 @@ law_guaranteed_liberties = {
 	}
 	institution = institution_home_affairs
 	institution_modifier = {
-		country_revolution_progress_mult = -0.1
-		country_secession_progress_mult = -0.1
-		state_radicals_from_political_movements_mult = -0.1
-		state_loyalists_from_political_movements_mult = 0.1
+		country_revolution_progress_mult = -0.2
+		country_secession_progress_mult = -0.2
 		country_leverage_resistance_mult = 0.1
 	}
 	ai_enact_weight_modifier = {
@@ -2858,10 +2866,11 @@ law_local_police = {
 		country_authority_mult = 0.025
 		interest_group_ig_landowners_pol_str_mult = 0.05
 		state_turmoil_effects_mult = -0.1
-		state_radicals_from_political_movements_mult = -0.05
 		state_radicalism_increases_violent_hostility_mult = -0.05
 		state_radicalism_increases_cultural_erasure_mult = -0.05
 		state_radicalism_increases_open_prejudice_mult = -0.05
+		state_radicalism_increases_second_rate_citizen_mult = -0.05
+		state_radicalism_increases_full_acceptance_mult = -0.05
 	}
 	can_impose = {
 		OR = {
@@ -2951,10 +2960,13 @@ law_dedicated_police = {
 	institution_modifier = {
 		country_authority_mult = 0.025
 		state_turmoil_effects_mult = -0.1
-		state_radicals_from_political_movements_mult = -0.1
 		state_radicalism_increases_violent_hostility_mult = -0.1
 		state_radicalism_increases_cultural_erasure_mult = -0.1
 		state_radicalism_increases_open_prejudice_mult = -0.1
+		state_radicalism_increases_second_rate_citizen_mult = -0.1
+		state_radicalism_increases_full_acceptance_mult = -0.1
+		country_officers_pol_str_mult = 0.05
+		country_soldiers_pol_str_mult = 0.025
 	}
 	can_impose = {
 		OR = {
@@ -3030,19 +3042,25 @@ law_militarized_police = {
 	unlocking_technologies = {
 		mass_surveillance
 	}
+	disallowing_laws = {
+		law_guaranteed_liberties
+	}
 	modifier = {
 		country_institution_police_max_investment_add = 2
 	}
 	institution = institution_police
 	institution_modifier = {
 		country_authority_mult = 0.05
-		state_conscription_rate_add = 0.005
+		country_revolution_progress_mult = -0.1
+		country_secession_progress_mult = -0.1
+		state_conscription_rate_add = 0.025
 		state_turmoil_effects_mult = -0.1
-		state_mortality_turmoil_mult = 0.01
-		state_radicals_from_political_movements_mult = -0.1
+		state_mortality_turmoil_mult = 0.1
 		state_radicalism_increases_violent_hostility_mult = -0.1
 		state_radicalism_increases_cultural_erasure_mult = -0.1
 		state_radicalism_increases_open_prejudice_mult = -0.1
+		state_radicalism_increases_second_rate_citizen_mult = -0.1
+		state_radicalism_increases_full_acceptance_mult = -0.1
 		country_officers_pol_str_mult = 0.1
 		country_soldiers_pol_str_mult = 0.05
 	}

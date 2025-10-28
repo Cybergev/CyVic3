@@ -358,8 +358,9 @@
 				set_interest_group_name = ig_ibadi_madrasahs
 				remove_ideology = ideology_moralist
 				remove_ideology = ideology_pious
-				add_ideology = ideology_ibadi_shura
 				add_ideology = ideology_ibadi_imamate
+				add_ideology = ideology_ibadi_shura
+				add_ideology = ideology_pious
 			}
 		}
 		# Oriental Orthodox Church
@@ -635,6 +636,36 @@
 					is_pop_type = peasants
 				}
 				value = 100
+			}
+		}
+		add = {
+			desc = "POP_OFFICERS"
+			if = {
+				limit = {
+					is_pop_type = officers
+					owner = {
+						OR = {
+							has_law_or_variant = law_type:law_professional_army
+							has_law_or_variant = law_type:law_mass_conscription
+						}
+					}
+				}
+				value = -100
+			}
+		}
+		add = {
+			desc = "POP_SOLDIERS"
+			if = {
+				limit = {
+					is_pop_type = soldiers
+					owner = {
+						OR = {
+							has_law_or_variant = law_type:law_professional_army
+							has_law_or_variant = law_type:law_mass_conscription
+						}
+					}
+				}
+				value = -100
 			}
 		}
 		if = {

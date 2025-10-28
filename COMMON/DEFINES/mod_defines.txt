@@ -32,13 +32,13 @@ NEconomy = {
 }
 
 NMilitary = {
-	MAX_NUM_COMMANDERS_PER_FORMATION = 8	# The maximum number of commanders in a given Military Formation
+	MAX_NUM_COMMANDERS_PER_FORMATION = 12	# The maximum number of commanders in a given Military Formation
 }
 
 NPowerBlocs = {
 	MAX_MANDATE_PROGRESS = 1000	# When mandate progress reaches this value, the power bloc gains one mandate
 	MAX_MANDATES = 6	# This is the maximum number of mandates that can be accumulated at once
-	MAX_PRINCIPLES = 20
+	MAX_PRINCIPLES = 30
 }
 
 NPops = {
@@ -46,4 +46,8 @@ NPops = {
 	MIN_ASSIMILATION = 25	# If there is any assmiliation at least this many people will assimilate
 	CONVERSION_RATE = 0.02	# Percentage of pops who will Convert into a different Religion each month, if eligible
 	MIN_CONVERSION = 25	# If there is any conversion at least this many people will convert
+	@starvation_threshold = 0.5
+	@starvation_scaling_factor = @[1/starvation_threshold]
+	FOOD_SECURITY_STARVATION_THRESHOLD = @starvation_threshold	# If Food Security is lower than this, the pop is considered to be in a starving state
+	STARVATION_EFFECTS_SCALING_FACTOR = @starvation_scaling_factor	# Acts as a scaling factor when converting food security to starvation effects: StarvationValue = CLAMP( (StarvationThreshold - FoodSecurity) * ScalingFactor, 0, 1)
 }

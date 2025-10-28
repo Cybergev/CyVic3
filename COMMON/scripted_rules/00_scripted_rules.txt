@@ -366,6 +366,166 @@ unlock_power_bloc_principle_slot_20 = {
 	}
 }
 
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
+unlock_power_bloc_principle_slot_21 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots = 21
+		}
+		AND = {
+			power_bloc_rank <= 3
+			num_power_bloc_members >= 10
+		}
+	}
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
+unlock_power_bloc_principle_slot_22 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots = 22
+		}
+		AND = {
+			power_bloc_rank <= 3
+			num_power_bloc_members >= 10
+		}
+	}
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
+unlock_power_bloc_principle_slot_23 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots = 23
+		}
+		AND = {
+			power_bloc_rank <= 3
+			num_power_bloc_members >= 10
+		}
+	}
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
+unlock_power_bloc_principle_slot_24 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots = 24
+		}
+		AND = {
+			power_bloc_rank <= 3
+			num_power_bloc_members >= 10
+		}
+	}
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
+unlock_power_bloc_principle_slot_25 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots = 25
+		}
+		AND = {
+			power_bloc_rank <= 3
+			num_power_bloc_members >= 10
+		}
+	}
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
+unlock_power_bloc_principle_slot_26 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots = 26
+		}
+		AND = {
+			power_bloc_rank <= 3
+			num_power_bloc_members >= 10
+		}
+	}
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
+unlock_power_bloc_principle_slot_27 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots = 27
+		}
+		AND = {
+			power_bloc_rank <= 3
+			num_power_bloc_members >= 10
+		}
+	}
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
+unlock_power_bloc_principle_slot_28 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots = 28
+		}
+		AND = {
+			power_bloc_rank <= 3
+			num_power_bloc_members >= 10
+		}
+	}
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
+unlock_power_bloc_principle_slot_29 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots = 29
+		}
+		AND = {
+			power_bloc_rank <= 3
+			num_power_bloc_members >= 10
+		}
+	}
+}
+
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
+unlock_power_bloc_principle_slot_30 = {
+	hidden_trigger = {
+		has_dlc_feature = power_bloc_features
+	}
+	OR = {
+		hidden_trigger = {
+			used_principle_slots = 30
+		}
+		AND = {
+			power_bloc_rank <= 3
+			num_power_bloc_members >= 10
+		}
+	}
+}
+
 unlock_power_bloc_formation_principle_slot_1 = {
 	always = yes
 }
@@ -443,5 +603,45 @@ unlock_power_bloc_formation_principle_slot_19 = {
 }
 
 unlock_power_bloc_formation_principle_slot_20 = {
+	always = no
+}
+
+unlock_power_bloc_formation_principle_slot_21 = {
+	always = no
+}
+
+unlock_power_bloc_formation_principle_slot_22 = {
+	always = no
+}
+
+unlock_power_bloc_formation_principle_slot_23 = {
+	always = no
+}
+
+unlock_power_bloc_formation_principle_slot_24 = {
+	always = no
+}
+
+unlock_power_bloc_formation_principle_slot_25 = {
+	always = no
+}
+
+unlock_power_bloc_formation_principle_slot_26 = {
+	always = no
+}
+
+unlock_power_bloc_formation_principle_slot_27 = {
+	always = no
+}
+
+unlock_power_bloc_formation_principle_slot_28 = {
+	always = no
+}
+
+unlock_power_bloc_formation_principle_slot_29 = {
+	always = no
+}
+
+unlock_power_bloc_formation_principle_slot_30 = {
 	always = no
 }

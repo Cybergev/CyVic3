@@ -364,6 +364,7 @@ combat_unit_type_cannon_artillery = {
 		combat_unit_type_mobile_artillery
 		combat_unit_type_shrapnel_artillery
 		combat_unit_type_siege_artillery
+		combat_unit_type_heavy_tank
 	}
 }
 
@@ -420,6 +421,7 @@ combat_unit_type_mobile_artillery = {
 	upgrades = {
 		combat_unit_type_shrapnel_artillery
 		combat_unit_type_siege_artillery
+		combat_unit_type_heavy_tank
 	}
 }
 
@@ -475,6 +477,7 @@ combat_unit_type_shrapnel_artillery = {
 	}
 	upgrades = {
 		combat_unit_type_siege_artillery
+		combat_unit_type_heavy_tank
 	}
 }
 
@@ -528,6 +531,9 @@ combat_unit_type_siege_artillery = {
 	combat_unit_image = {
 		# fallback
 		texture = "gfx/unit_illustrations/artillery_eu_siege.dds"
+	}
+	upgrades = {
+		combat_unit_type_heavy_tank
 	}
 }
 
@@ -614,6 +620,7 @@ combat_unit_type_hussars = {
 		combat_unit_type_dragoons
 		combat_unit_type_cuirassiers
 		combat_unit_type_lancers
+		combat_unit_type_light_tanks
 	}
 }
 
@@ -670,6 +677,7 @@ combat_unit_type_dragoons = {
 	upgrades = {
 		combat_unit_type_cuirassiers
 		combat_unit_type_lancers
+		combat_unit_type_light_tanks
 	}
 }
 
@@ -723,8 +731,8 @@ combat_unit_type_cuirassiers = {
 		texture = "gfx/unit_illustrations/cavalry_eu_cuirassier.dds"
 	}
 	upgrades = {
-		combat_unit_type_dragoons
 		combat_unit_type_lancers
+		combat_unit_type_light_tanks
 	}
 }
 
@@ -780,8 +788,7 @@ combat_unit_type_lancers = {
 		texture = "gfx/unit_illustrations/cavalry_eu_lancer.dds"
 	}
 	upgrades = {
-		combat_unit_type_dragoons
-		combat_unit_type_cuirassiers
+		combat_unit_type_light_tanks
 	}
 }
 

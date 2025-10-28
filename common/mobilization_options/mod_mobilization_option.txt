@@ -17,7 +17,7 @@
 		}
 	}
 	upkeep_modifier = {
-		goods_input_grain_add = 1
+		goods_input_grain_add = 10
 	}
 	unit_modifier = {
 		# empty on purpose - this is the minimum mobilization cost
@@ -201,6 +201,38 @@ mobilization_option_luxurious_supplies = {
 		value = 1
 	}
 	group = supplies
+}
+
+mobilization_option_chocolate = {
+	texture = "gfx/interface/icons/mobilization_options/chocolate.dds"
+	possible = {
+		market ?= {
+			mg:sugar ?= {
+				has_potential_supply = yes
+			}
+		}
+	}
+	on_deactivate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
+			every_combat_unit = {
+				add_morale = {
+					value = morale
+					multiply = -0.5
+				}
+			}
+		}
+	}
+	upkeep_modifier = {
+		goods_input_sugar_add = 10
+	}
+	unit_modifier = {
+		unit_morale_recovery_mult = 0.1
+	}
+	ai_weight = {
+		value = 1
+	}
+	group = supplements
 }
 
 mobilization_option_tobacco = {
@@ -451,10 +483,10 @@ mobilization_option_machinegunners = {
 	texture = "gfx/interface/icons/mobilization_options/machinegunners.dds"
 	possible = {
 		market ?= {
-			mg:ammunition ?= {
+			mg:small_arms ?= {
 				market_goods_sell_orders > 0
 			}
-			mg:small_arms ?= {
+			mg:ammunition ?= {
 				market_goods_sell_orders > 0
 			}
 		}
@@ -494,17 +526,14 @@ mobilization_option_machinegunners = {
 	group = special_weapons
 }
 
-mobilization_option_chemical_weapons = {
-	texture = "gfx/interface/icons/mobilization_options/chemical_weapons.dds"
+mobilization_option_mortarmen = {
+	texture = "gfx/interface/icons/mobilization_options/mortarmen.dds"
 	possible = {
 		market ?= {
-			mg:fertilizer ?= {
+			mg:artillery ?= {
 				market_goods_sell_orders > 0
 			}
 			mg:ammunition ?= {
-				market_goods_sell_orders > 0
-			}
-			mg:artillery ?= {
 				market_goods_sell_orders > 0
 			}
 		}
@@ -528,16 +557,15 @@ mobilization_option_chemical_weapons = {
 		}
 	}
 	unlocking_technologies = {
-		chemical_warfare
+		stormtroopers
 	}
 	upkeep_modifier = {
-		goods_input_fertilizer_add = 10
-		goods_input_ammunition_add = 10
 		goods_input_artillery_add = 10
+		goods_input_ammunition_add = 10
 	}
 	unit_modifier = {
 		unit_morale_damage_mult = 0.5
-		unit_kill_rate_add = 0.5
+		unit_devastation_mult = 0.5
 	}
 	ai_weight = {
 		value = 1
@@ -585,6 +613,57 @@ mobilization_option_flamethrowers = {
 	unit_modifier = {
 		unit_offense_mult = 0.2
 		unit_defense_mult = 0.2
+		unit_devastation_mult = 0.5
+	}
+	ai_weight = {
+		value = 1
+	}
+	group = special_weapons
+}
+
+mobilization_option_chemical_weapons = {
+	texture = "gfx/interface/icons/mobilization_options/chemical_artillery.dds"
+	possible = {
+		market ?= {
+			mg:fertilizer ?= {
+				market_goods_sell_orders > 0
+			}
+			mg:ammunition ?= {
+				market_goods_sell_orders > 0
+			}
+			mg:artillery ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	on_activate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+			add_organization = {
+				value = organization
+				multiply = -0.5
+			}
+		}
+	}
+	on_deactivate = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+			add_organization = {
+				value = organization
+				multiply = -0.5
+			}
+		}
+	}
+	unlocking_technologies = {
+		chemical_warfare
+	}
+	upkeep_modifier = {
+		goods_input_fertilizer_add = 10
+		goods_input_artillery_add = 10
+		goods_input_ammunition_add = 10
+	}
+	unit_modifier = {
+		unit_kill_rate_add = 0.5
 		unit_devastation_mult = 0.5
 	}
 	ai_weight = {
