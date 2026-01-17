@@ -1,4 +1,4 @@
-﻿pm_synthetic_rubber = {
+﻿REPLACE_OR_CREATE:pm_synthetic_rubber = {
 	texture = "gfx/interface/icons/production_method_icons/elastics_mod.dds" 
 	state_modifiers = {
 		workforce_scaled = {
@@ -12,12 +12,6 @@
 			goods_input_fertilizer_add = 20
 			goods_input_electricity_add = 20
 			goods_output_rubber_add = 100
-		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
 		}
 	}
 	required_input_goods = electricity

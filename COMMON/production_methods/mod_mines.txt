@@ -1,0 +1,51 @@
+﻿REPLACE_OR_CREATE:pm_no_explosives = {
+	texture = "gfx/interface/icons/production_method_icons/no_explosives.dds"
+	building_modifiers = {
+	}
+}
+
+REPLACE_OR_CREATE:pm_nitroglycerin = {
+	texture = "gfx/interface/icons/production_method_icons/nitroglycerin.dds"
+	unlocking_technologies = {
+		nitroglycerin
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_explosives_add = 5
+			# output goods
+		}
+		unscaled = {
+			building_throughput_add = 0.5
+			building_laborers_mortality_mult = 0.3
+			building_machinists_mortality_mult = 0.2
+			building_engineers_mortality_mult = 0.1
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_dynamite = {
+	texture = "gfx/interface/icons/production_method_icons/dynamite.dds"
+	unlocking_technologies = {
+		dynamite
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_explosives_add = 10
+			# output goods
+		}
+		unscaled = {
+			building_throughput_add = 1
+		}
+	}
+}

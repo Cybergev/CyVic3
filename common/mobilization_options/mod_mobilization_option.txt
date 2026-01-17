@@ -1,4 +1,4 @@
-﻿mobilization_option_basic_supplies = {
+﻿REPLACE:mobilization_option_basic_supplies = {
 	texture = "gfx/interface/icons/mobilization_options/basic_supplies.dds"
 	possible = {
 		scope:military_formation = {
@@ -28,7 +28,7 @@
 	group = supplies
 }
 
-mobilization_option_extra_supplies = {
+REPLACE:mobilization_option_extra_supplies = {
 	texture = "gfx/interface/icons/mobilization_options/extra_supplies.dds"
 	possible = {
 		scope:military_formation = {
@@ -114,7 +114,7 @@ mobilization_option_extra_supplies = {
 	group = supplies
 }
 
-mobilization_option_luxurious_supplies = {
+REPLACE:mobilization_option_luxurious_supplies = {
 	texture = "gfx/interface/icons/mobilization_options/luxurious_supplies.dds"
 	possible = {
 		market ?= {
@@ -203,7 +203,7 @@ mobilization_option_luxurious_supplies = {
 	group = supplies
 }
 
-mobilization_option_chocolate = {
+REPLACE:mobilization_option_chocolate = {
 	texture = "gfx/interface/icons/mobilization_options/chocolate.dds"
 	possible = {
 		market ?= {
@@ -235,7 +235,7 @@ mobilization_option_chocolate = {
 	group = supplements
 }
 
-mobilization_option_tobacco = {
+REPLACE:mobilization_option_tobacco = {
 	texture = "gfx/interface/icons/mobilization_options/tobacco.dds"
 	possible = {
 		market ?= {
@@ -267,7 +267,7 @@ mobilization_option_tobacco = {
 	group = supplements
 }
 
-mobilization_option_liquor = {
+REPLACE:mobilization_option_liquor = {
 	texture = "gfx/interface/icons/mobilization_options/liquor.dds"
 	possible = {
 		market ?= {
@@ -299,7 +299,7 @@ mobilization_option_liquor = {
 	group = supplements
 }
 
-mobilization_option_opium = {
+REPLACE:mobilization_option_opium = {
 	texture = "gfx/interface/icons/mobilization_options/opium.dds"
 	possible = {
 		market ?= {
@@ -331,7 +331,7 @@ mobilization_option_opium = {
 	group = supplements
 }
 
-mobilization_option_forced_march = {
+REPLACE:mobilization_option_forced_march = {
 	texture = "gfx/interface/icons/mobilization_options/forced_march.dds"
 	possible = {
 		scope:military_formation = {
@@ -379,7 +379,7 @@ mobilization_option_forced_march = {
 	group = transport
 }
 
-mobilization_option_rail_transport = {
+REPLACE:mobilization_option_rail_transport = {
 	texture = "gfx/interface/icons/mobilization_options/rail_transport.dds"
 	possible = {
 		scope:military_formation = {
@@ -427,7 +427,7 @@ mobilization_option_rail_transport = {
 	group = transport
 }
 
-mobilization_option_truck_transport = {
+REPLACE:mobilization_option_truck_transport = {
 	texture = "gfx/interface/icons/mobilization_options/truck_transport.dds"
 	possible = {
 		scope:military_formation = {
@@ -479,7 +479,7 @@ mobilization_option_truck_transport = {
 	group = transport
 }
 
-mobilization_option_machinegunners = {
+REPLACE:mobilization_option_machinegunners = {
 	texture = "gfx/interface/icons/mobilization_options/machinegunners.dds"
 	possible = {
 		market ?= {
@@ -573,7 +573,7 @@ mobilization_option_mortarmen = {
 	group = special_weapons
 }
 
-mobilization_option_flamethrowers = {
+REPLACE:mobilization_option_flamethrowers = {
 	texture = "gfx/interface/icons/mobilization_options/flamethrowers.dds"
 	possible = {
 		market ?= {
@@ -621,7 +621,7 @@ mobilization_option_flamethrowers = {
 	group = special_weapons
 }
 
-mobilization_option_chemical_weapons = {
+REPLACE:mobilization_option_chemical_weapons = {
 	texture = "gfx/interface/icons/mobilization_options/chemical_artillery.dds"
 	possible = {
 		market ?= {
@@ -672,7 +672,7 @@ mobilization_option_chemical_weapons = {
 	group = special_weapons
 }
 
-mobilization_option_motorized_recon = {
+REPLACE:mobilization_option_motorized_recon = {
 	texture = "gfx/interface/icons/mobilization_options/motorized_reconaissance.dds"
 	possible = {
 		market ?= {
@@ -720,7 +720,7 @@ mobilization_option_motorized_recon = {
 	group = reconnaissance
 }
 
-mobilization_option_balloon_recon = {
+REPLACE:mobilization_option_balloon_recon = {
 	texture = "gfx/interface/icons/mobilization_options/balloon_recon.dds"
 	unlocking_principles = {
 		principle_military_industry_3
@@ -768,7 +768,7 @@ mobilization_option_balloon_recon = {
 	group = reconnaissance
 }
 
-mobilization_option_aerial_recon = {
+REPLACE:mobilization_option_aerial_recon = {
 	texture = "gfx/interface/icons/mobilization_options/aerial_reconaissance.dds"
 	possible = {
 		market ?= {
@@ -816,7 +816,7 @@ mobilization_option_aerial_recon = {
 	group = reconnaissance
 }
 
-mobilization_option_first_aid = {
+REPLACE:mobilization_option_first_aid = {
 	unlocking_technologies = {
 		triage
 	}
@@ -868,7 +868,7 @@ mobilization_option_first_aid = {
 	group = medic_support
 }
 
-mobilization_option_field_hospitals = {
+REPLACE:mobilization_option_field_hospitals = {
 	texture = "gfx/interface/icons/mobilization_options/field_hospitals.dds"
 	unlocking_technologies = {
 		modern_nursing

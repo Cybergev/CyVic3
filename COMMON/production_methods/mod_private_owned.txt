@@ -1,4 +1,4 @@
-﻿pm_manor_house_privately_owned = {
+﻿REPLACE_OR_CREATE:pm_manor_house_privately_owned = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
 	replacement_if_valid = pm_manor_house_principle_divine_economics_2
 	is_hidden_when_unavailable = yes
@@ -16,7 +16,7 @@
 	}
 }
 
-pm_manor_house_worker_cooperative = {
+REPLACE_OR_CREATE:pm_manor_house_worker_cooperative = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 	replacement_if_valid = pm_manor_house_worker_cooperative_divine_economics_2
 	is_hidden_when_unavailable = yes
@@ -35,7 +35,7 @@ pm_manor_house_worker_cooperative = {
 	}
 }
 
-pm_manor_house_principle_divine_economics_2 = {
+REPLACE_OR_CREATE:pm_manor_house_principle_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/devine_economics.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_principles = {
@@ -52,7 +52,7 @@ pm_manor_house_principle_divine_economics_2 = {
 	}
 }
 
-pm_manor_house_worker_cooperative_divine_economics_2 = {
+REPLACE_OR_CREATE:pm_manor_house_worker_cooperative_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_laws = {
@@ -75,7 +75,7 @@ pm_manor_house_worker_cooperative_divine_economics_2 = {
 }
 
 #fINANCE-COMPANY
-pm_financial_district_privately_owned = {
+REPLACE_OR_CREATE:pm_financial_district_privately_owned = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	replacement_if_valid = pm_financial_district_publicly_traded
 	is_hidden_when_unavailable = yes
@@ -89,7 +89,7 @@ pm_financial_district_privately_owned = {
 	}
 }
 
-pm_financial_district_publicly_traded = {
+REPLACE_OR_CREATE:pm_financial_district_publicly_traded = {
 	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
 	replacement_if_valid = pm_financial_district_principle_divine_economics_2
 	is_hidden_when_unavailable = yes
@@ -106,7 +106,7 @@ pm_financial_district_publicly_traded = {
 	}
 }
 
-pm_company_headquarter_privately_owned_aristocrats = {
+REPLACE_OR_CREATE:pm_company_headquarter_privately_owned_aristocrats = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
 	replacement_if_valid = pm_financial_district_principle_divine_economics_2
 	is_hidden_when_unavailable = yes
@@ -123,7 +123,7 @@ pm_company_headquarter_privately_owned_aristocrats = {
 	}
 }
 
-pm_company_headquarter_government_run = {
+REPLACE_OR_CREATE:pm_company_headquarter_government_run = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 	replacement_if_valid = pm_company_headquarter_government_run_divine_economics_2
 	is_hidden_when_unavailable = yes
@@ -141,7 +141,7 @@ pm_company_headquarter_government_run = {
 	}
 }
 
-pm_company_headquarter_worker_cooperative = {
+REPLACE_OR_CREATE:pm_company_headquarter_worker_cooperative = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 	replacement_if_valid = pm_company_headquarter_worker_cooperative_divine_economics_2
 	is_hidden_when_unavailable = yes
@@ -160,7 +160,7 @@ pm_company_headquarter_worker_cooperative = {
 	}
 }
 
-pm_company_headquarter_principle_divine_economics_2 = {
+REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/devine_economics.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_principles = {
@@ -177,7 +177,7 @@ pm_company_headquarter_principle_divine_economics_2 = {
 	}
 }
 
-pm_company_headquarter_government_run_divine_economics_2 = {
+REPLACE_OR_CREATE:pm_company_headquarter_government_run_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_laws = {
@@ -198,7 +198,7 @@ pm_company_headquarter_government_run_divine_economics_2 = {
 	}
 }
 
-pm_company_headquarter_worker_cooperative_divine_economics_2 = {
+REPLACE_OR_CREATE:pm_company_headquarter_worker_cooperative_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_laws = {

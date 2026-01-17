@@ -1,4 +1,4 @@
-﻿pm_no_organization = {
+﻿REPLACE_OR_CREATE:pm_no_organization = {
 	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
 	is_default = yes
 	profession_ratio = {
@@ -15,7 +15,7 @@
 	}
 }
 
-pm_general_training = {
+REPLACE_OR_CREATE:pm_general_training = {
 	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
 	is_default = yes
 	unlocking_technologies = {
@@ -37,7 +37,7 @@ pm_general_training = {
 	}
 }
 
-pm_advanced_tactics_training = {
+REPLACE_OR_CREATE:pm_advanced_tactics_training = {
 	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
 	unlocking_technologies = {
 		military_statistics
@@ -58,7 +58,7 @@ pm_advanced_tactics_training = {
 	}
 }
 
-pm_training_streamlining = {
+REPLACE_OR_CREATE:pm_training_streamlining = {
 	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
 	unlocking_technologies = {
 		wargaming
@@ -79,7 +79,7 @@ pm_training_streamlining = {
 	}
 }
 
-pm_nco_incorporation = {
+REPLACE_OR_CREATE:pm_nco_incorporation = {
 	texture = "gfx/interface/icons/production_method_icons/nco_incorporation.dds"
 	unlocking_technologies = {
 		nco_training
@@ -100,7 +100,7 @@ pm_nco_incorporation = {
 	}
 }
 
-pm_mobile_warfare_tactics = {
+REPLACE_OR_CREATE:pm_mobile_warfare_tactics = {
 	texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
 	unlocking_technologies = {
 		mobile_armor
@@ -121,7 +121,7 @@ pm_mobile_warfare_tactics = {
 	}
 }
 
-pm_no_organization_conscription = {
+REPLACE_OR_CREATE:pm_no_organization_conscription = {
 	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
 	is_default = yes
 	profession_ratio = {
@@ -138,7 +138,7 @@ pm_no_organization_conscription = {
 	}
 }
 
-pm_general_training_conscription = {
+REPLACE_OR_CREATE:pm_general_training_conscription = {
 	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
 	is_default = yes
 	unlocking_technologies = {
@@ -160,7 +160,7 @@ pm_general_training_conscription = {
 	}
 }
 
-pm_advanced_tactics_training_conscription = {
+REPLACE_OR_CREATE:pm_advanced_tactics_training_conscription = {
 	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
 	unlocking_technologies = {
 		military_statistics
@@ -184,7 +184,7 @@ pm_advanced_tactics_training_conscription = {
 	}
 }
 
-pm_training_streamlining_conscription = {
+REPLACE_OR_CREATE:pm_training_streamlining_conscription = {
 	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
 	unlocking_technologies = {
 		wargaming
@@ -208,7 +208,7 @@ pm_training_streamlining_conscription = {
 	}
 }
 
-pm_nco_incorporation_conscription = {
+REPLACE_OR_CREATE:pm_nco_incorporation_conscription = {
 	texture = "gfx/interface/icons/production_method_icons/nco_incorporation.dds"
 	unlocking_technologies = {
 		nco_training
@@ -232,7 +232,7 @@ pm_nco_incorporation_conscription = {
 	}
 }
 
-pm_mobile_warfare_tactics_conscription = {
+REPLACE_OR_CREATE:pm_mobile_warfare_tactics_conscription = {
 	texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
 	unlocking_technologies = {
 		mobile_armor
@@ -253,7 +253,7 @@ pm_mobile_warfare_tactics_conscription = {
 	}
 }
 
-pm_no_naval_theory = {
+REPLACE_OR_CREATE:pm_no_naval_theory = {
 	texture = "gfx/interface/icons/production_method_icons/no_naval_theory.dds"
 	profession_ratio = {
 		soldiers = 90
@@ -269,7 +269,7 @@ pm_no_naval_theory = {
 	}
 }
 
-pm_power_of_the_purse = {
+REPLACE_OR_CREATE:pm_power_of_the_purse = {
 	texture = "gfx/interface/icons/production_method_icons/power_of_the_purse.dds"
 	unlocking_technologies = {
 		power_of_the_purse
@@ -290,7 +290,7 @@ pm_power_of_the_purse = {
 	}
 }
 
-pm_jeune_ecole = {
+REPLACE_OR_CREATE:pm_jeune_ecole = {
 	texture = "gfx/interface/icons/production_method_icons/jeune_ecole.dds"
 	unlocking_technologies = {
 		jeune_ecole
@@ -311,7 +311,7 @@ pm_jeune_ecole = {
 	}
 }
 
-pm_sea_lane_strategies = {
+REPLACE_OR_CREATE:pm_sea_lane_strategies = {
 	texture = "gfx/interface/icons/production_method_icons/mahanian_thought.dds"
 	unlocking_technologies = {
 		sea_lane_strategies
@@ -332,7 +332,7 @@ pm_sea_lane_strategies = {
 	}
 }
 
-pm_battlefleet_tactics = {
+REPLACE_OR_CREATE:pm_battlefleet_tactics = {
 	texture = "gfx/interface/icons/production_method_icons/battlefleet_tactics.dds"
 	unlocking_technologies = {
 		battlefleet_tactics

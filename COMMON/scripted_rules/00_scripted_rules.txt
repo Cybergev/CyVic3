@@ -28,6 +28,12 @@ is_weak_power_bloc = {
 # Root = Country
 # scope:target_country = target of a diplomatic play
 can_start_diplomatic_plays_against = {
+	# Not allowed to attack subjects of play participants
+	NOT = {
+		scope:target_country.top_overlord ?= {
+			is_diplomatic_play_participant_with = root
+		}
+	}
 	# Might be disallowed by power bloc
 	NOT = {
 		custom_tooltip = {
@@ -49,6 +55,11 @@ can_start_diplomatic_plays_against = {
 		# Disallow plays targeting your indirect subjects
 		scope:target_country = {
 			is_indirect_subject_of = root
+		}
+	}
+	NOT = {
+		scope:target_country = {
+			has_journal_entry = je_the_first_carlist_war
 		}
 	}
 }
@@ -100,6 +111,7 @@ unlock_power_bloc_principle_slot_2 = {
 	}
 }
 
+# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_3_DURING_FORMATION
 unlock_power_bloc_principle_slot_3 = {
 	hidden_trigger = {
 		has_dlc_feature = power_bloc_features
@@ -644,4 +656,18 @@ unlock_power_bloc_formation_principle_slot_29 = {
 
 unlock_power_bloc_formation_principle_slot_30 = {
 	always = no
+}
+
+# Evaluated when checking if a country can sign a treaty with another. Either through the player doing it in the UI or the AI looking for treaties to propose
+# root = initiating country
+# scope:other_country = other country in the potential treaty
+can_sign_treaty_with = {
+	scope:other_country = {
+		NOT = { is_country_type = decentralized }
+		is_revolutionary = no
+	}
+	root = {
+		NOT = { is_diplomatic_play_enemy_of = scope:other_country }
+	}
+	has_diplomatic_relevance = scope:other_country
 }

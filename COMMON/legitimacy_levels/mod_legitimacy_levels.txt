@@ -1,4 +1,4 @@
-﻿legitimacy_level_illegitimate = {
+﻿REPLACE:legitimacy_level_illegitimate = {
 	threshold = 0
 	modifier = {
 		country_authority_mult = -1
@@ -18,7 +18,7 @@
 	}
 }
 
-legitimacy_level_unacceptable = {
+REPLACE:legitimacy_level_unacceptable = {
 	threshold = 20
 	modifier = {
 		country_authority_mult = -0.5
@@ -38,11 +38,11 @@ legitimacy_level_unacceptable = {
 	}
 }
 
-legitimacy_level_contested = {
+REPLACE:legitimacy_level_contested = {
 	threshold = 40
 }
 
-legitimacy_level_legitimate = {
+REPLACE:legitimacy_level_legitimate = {
 	threshold = 60
 	modifier = {
 		country_law_enactment_time_mult = -0.25
@@ -60,7 +60,7 @@ legitimacy_level_legitimate = {
 	}
 }
 
-legitimacy_level_righteous = {
+REPLACE:legitimacy_level_righteous = {
 	threshold = 80
 	modifier = {
 		country_law_enactment_time_mult = -0.5

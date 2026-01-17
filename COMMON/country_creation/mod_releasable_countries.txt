@@ -1,18 +1,18 @@
-﻿AWS = {
+﻿REPLACE_OR_CREATE:AWS = {
 	use_culture_states = yes
 	ai_will_do = {
 		always = no
 	}
 }
 
-EUR = {
+REPLACE_OR_CREATE:EUR = {
 	use_culture_states = yes
 	ai_will_do = {
 		always = no
 	}
 }
 
-ISR = {
+REPLACE_OR_CREATE:ISR = {
 	states = {
 		STATE_PALESTINE
 	}

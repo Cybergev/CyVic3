@@ -1,5 +1,4 @@
-﻿state_trait_natural_harbors = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+﻿REPLACE_OR_CREATE:state_trait_natural_harbors = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -8,8 +7,7 @@
 	}
 }
 
-state_trait_london_docklands = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_london_docklands = {
 	modifier = {
 		building_shipyards_throughput_add = 0.2
 		building_port_throughput_add = 0.2
@@ -18,19 +16,7 @@ state_trait_london_docklands = {
 	}
 }
 
-state_trait_odensefjorden = {
-	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
-	modifier = {
-		building_shipyards_throughput_add = 0.2
-		building_port_throughput_add = 0.2
-		building_military_shipyards_throughput_add = 0.2
-		building_naval_base_throughput_add = 0.2
-		goods_output_electricity_mult = 0.2
-	}
-}
-
-state_trait_trondhjemsfjorden = {
-	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
+REPLACE_OR_CREATE:state_trait_odensefjorden = {
 	modifier = {
 		building_shipyards_throughput_add = 0.2
 		building_port_throughput_add = 0.2
@@ -40,8 +26,7 @@ state_trait_trondhjemsfjorden = {
 	}
 }
 
-state_trait_hardangerfjorden = {
-	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
+REPLACE_OR_CREATE:state_trait_trondhjemsfjorden = {
 	modifier = {
 		building_shipyards_throughput_add = 0.2
 		building_port_throughput_add = 0.2
@@ -51,8 +36,7 @@ state_trait_hardangerfjorden = {
 	}
 }
 
-state_trait_christianiafjorden = {
-	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
+REPLACE_OR_CREATE:state_trait_hardangerfjorden = {
 	modifier = {
 		building_shipyards_throughput_add = 0.2
 		building_port_throughput_add = 0.2
@@ -62,8 +46,17 @@ state_trait_christianiafjorden = {
 	}
 }
 
-state_trait_bremerhaven = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_christianiafjorden = {
+	modifier = {
+		building_shipyards_throughput_add = 0.2
+		building_port_throughput_add = 0.2
+		building_military_shipyards_throughput_add = 0.2
+		building_naval_base_throughput_add = 0.2
+		goods_output_electricity_mult = 0.2
+	}
+}
+
+REPLACE_OR_CREATE:state_trait_bremerhaven = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -72,8 +65,7 @@ state_trait_bremerhaven = {
 	}
 }
 
-state_trait_sevastopol_bay = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_sevastopol_bay = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -82,8 +74,7 @@ state_trait_sevastopol_bay = {
 	}
 }
 
-state_trait_hermoupolis = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_hermoupolis = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -92,8 +83,7 @@ state_trait_hermoupolis = {
 	}
 }
 
-state_trait_saronic_gulf = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_saronic_gulf = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -102,8 +92,7 @@ state_trait_saronic_gulf = {
 	}
 }
 
-state_trait_kronstadt_island = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_kronstadt_island = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -112,17 +101,15 @@ state_trait_kronstadt_island = {
 	}
 }
 
-state_trait_tihamah = {
-	icon = "gfx/interface/icons/state_trait_icons/poor_soils.dds"
+REPLACE_OR_CREATE:state_trait_tihamah = {
 	modifier = {
-        building_group_bg_ranching_throughput_add = -0.1
+		building_group_bg_ranching_throughput_add = -0.1
 		building_group_bg_agriculture_throughput_add = -0.1
 		building_group_bg_plantations_throughput_add = -0.1
-    }
+	}
 }
 
-state_trait_manila_bay = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_manila_bay = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -131,8 +118,7 @@ state_trait_manila_bay = {
 	}
 }
 
-state_trait_galle_harbor = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_galle_harbor = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -141,8 +127,7 @@ state_trait_galle_harbor = {
 	}
 }
 
-state_trait_seto_inland_sea = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_seto_inland_sea = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -151,8 +136,7 @@ state_trait_seto_inland_sea = {
 	}
 }
 
-state_trait_edo_bay = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_edo_bay = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -161,8 +145,7 @@ state_trait_edo_bay = {
 	}
 }
 
-state_trait_golden_horn_bay = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_golden_horn_bay = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -171,8 +154,7 @@ state_trait_golden_horn_bay = {
 	}
 }
 
-state_trait_dalian_bay = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_dalian_bay = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -181,8 +163,7 @@ state_trait_dalian_bay = {
 	}
 }
 
-state_trait_nagasaki_bay = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_nagasaki_bay = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -191,8 +172,7 @@ state_trait_nagasaki_bay = {
 	}
 }
 
-state_trait_halifax_harbor = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+REPLACE_OR_CREATE:state_trait_halifax_harbor = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -201,9 +181,7 @@ state_trait_halifax_harbor = {
 	}
 }
 
-state_trait_new_york_harbor = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
-	
+REPLACE_OR_CREATE:state_trait_new_york_harbor = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -212,9 +190,7 @@ state_trait_new_york_harbor = {
 	}
 }
 
-state_trait_newark_harbor = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
-	
+REPLACE_OR_CREATE:state_trait_newark_harbor = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -223,8 +199,7 @@ state_trait_newark_harbor = {
 	}
 }
 
-state_trait_cordillera_de_la_costa = {
-	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
+REPLACE_OR_CREATE:state_trait_cordillera_de_la_costa = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1
@@ -233,8 +208,7 @@ state_trait_cordillera_de_la_costa = {
 	}
 }
 
-state_trait_canales_patagonicos = {
-	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
+REPLACE_OR_CREATE:state_trait_canales_patagonicos = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.1

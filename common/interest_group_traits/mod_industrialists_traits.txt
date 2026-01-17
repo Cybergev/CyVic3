@@ -1,47 +1,37 @@
-﻿ig_trait_job_creators = {
-	icon = "gfx/interface/icons/ig_trait_icons/job_creators.dds"
+﻿REPLACE:ig_trait_job_creators = {
 	min_approval = loyal
-	
 	modifier = {
 		state_capitalists_investment_pool_contribution_add = 0.1
 		state_capitalists_investment_pool_efficiency_mult = 0.2
 	}
 }
 
-ig_trait_engines_of_progress = {
-	icon = "gfx/interface/icons/ig_trait_icons/engines_of_progress.dds"
+REPLACE:ig_trait_engines_of_progress = {
 	min_approval = happy
-	
 	modifier = {
 		country_production_tech_research_speed_mult = 0.1
 	}
 }
 
-ig_trait_tax_avoidance = {
-	icon = "gfx/interface/icons/ig_trait_icons/tax_avoidance.dds"
+REPLACE:ig_trait_tax_avoidance = {
 	max_approval = unhappy
-	
 	modifier = {
 		building_group_bg_manufacturing_tax_mult = -0.1
 	}
 }
 
-ig_trait_zaibatsu_cooperation = {
-	icon = "gfx/interface/icons/ig_trait_icons/job_creators.dds"
+REPLACE:ig_trait_zaibatsu_cooperation = {
 	min_approval = loyal
-	
 	modifier = {
 		building_group_bg_manufacturing_tax_mult = 0.1
 		state_capitalists_investment_pool_contribution_add = 0.1
 	}
 }
 
-ig_trait_zaibatsu_withdrawal = {
-	icon = "gfx/interface/icons/ig_trait_icons/tax_avoidance.dds"
+REPLACE:ig_trait_zaibatsu_withdrawal = {
 	max_approval = unhappy
-	
 	modifier = {
-		state_capitalists_investment_pool_contribution_add = -0.20
-		state_capitalists_investment_pool_efficiency_mult = -0.40
+		state_capitalists_investment_pool_contribution_add = -0.2
+		state_capitalists_investment_pool_efficiency_mult = -0.4
 	}
 }

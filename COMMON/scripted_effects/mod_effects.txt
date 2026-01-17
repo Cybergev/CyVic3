@@ -1,4 +1,4 @@
-﻿clear_ig_ideologies = {
+﻿REPLACE_OR_CREATE:clear_ig_ideologies = {
 	if = {
 		limit = {
 			has_ideology = ideology:ideology_jingoist
@@ -367,7 +367,7 @@
 	remove_variable = chose_fascism
 }
 
-promote_national_val = {
+REPLACE_OR_CREATE:promote_national_val = {
 	root.capital = {
 		random_scope_pop = {
 			limit = {
@@ -462,7 +462,7 @@ promote_national_val = {
 	}
 }
 
-corporatist_reform_ig_iedologies = {
+REPLACE_OR_CREATE:corporatist_reform_ig_iedologies = {
 	if = {
 		limit = {
 			not = {
@@ -560,7 +560,7 @@ corporatist_reform_ig_iedologies = {
 	}
 }
 
-socialist_reform_ig_iedologies = {
+REPLACE_OR_CREATE:socialist_reform_ig_iedologies = {
 	clear_ig_ideologies = yes
 	if = {
 		limit = {
@@ -623,7 +623,7 @@ socialist_reform_ig_iedologies = {
 	}
 }
 
-corporatist_reform_movements = {
+REPLACE_OR_CREATE:corporatist_reform_movements = {
 	create_political_movement = {
 		type = movement_labor
 	}
@@ -787,7 +787,7 @@ corporatist_reform_movements = {
 	}
 }
 
-socialist_reform_movements = {
+REPLACE_OR_CREATE:socialist_reform_movements = {
 	create_political_movement = {
 		type = movement_feminist
 	}
@@ -909,37 +909,37 @@ socialist_reform_movements = {
 	}
 }
 
-effect_destroy_all_buildings = {
+REPLACE_OR_CREATE:effect_destroy_all_buildings = {
 	remove_building = building_food_industry
-	remove_building = building_textile_mills
-	remove_building = building_furniture_manufacturies
+	remove_building = building_textile_mill
+	remove_building = building_furniture_manufactory
 	remove_building = building_glassworks
-	remove_building = building_tooling_workshops
-	remove_building = building_paper_mills
-	remove_building = building_chemical_plants
+	remove_building = building_tooling_workshop
+	remove_building = building_paper_mill
+	remove_building = building_chemical_plant
 	remove_building = building_explosives_factory
-	remove_building = building_synthetics_plants
-	remove_building = building_steel_mills
+	remove_building = building_synthetics_plant
+	remove_building = building_steel_mill
 	remove_building = building_motor_industry
-	remove_building = building_shipyards
-	remove_building = building_military_shipyards
+	remove_building = building_shipyard
+	remove_building = building_military_shipyard
 	remove_building = building_automotive_industry
 	remove_building = building_electrics_industry
 	remove_building = building_arms_industry
-	remove_building = building_artillery_foundries
-	remove_building = building_munition_plants
+	remove_building = building_artillery_foundry
+	remove_building = building_munition_plant
 	remove_building = building_aeroplanes_industry
 	remove_building = building_canning_industry
-	remove_building = building_distillation_plants
-	remove_building = building_hardwood_workshops
-	remove_building = building_luxury_furniture_manufacturies
-	remove_building = building_luxury_textile_mills
-	remove_building = building_porcelain_manufacturies
+	remove_building = building_distillation_plant
+	remove_building = building_hardwood_workshop
+	remove_building = building_luxury_furniture_manufactory
+	remove_building = building_luxury_textile_mill
+	remove_building = building_porcelain_manufactory
 	remove_building = building_radios_industry
-	remove_building = building_synthetic_oil_plants
-	remove_building = building_synthetic_opium_plants
-	remove_building = building_synthetic_silk_plants
-	remove_building = building_synthetic_rubber_plants
+	remove_building = building_synthetic_oil_plant
+	remove_building = building_synthetic_opium_plant
+	remove_building = building_synthetic_silk_plant
+	remove_building = building_synthetic_rubber_plant
 	remove_building = building_tanks_industry
 	remove_building = building_rye_farm
 	remove_building = building_wheat_farm
@@ -961,11 +961,11 @@ effect_destroy_all_buildings = {
 	remove_building = building_sugar_plantation
 	remove_building = building_banana_plantation
 	remove_building = building_silk_plantation
-	remove_building = building_vineyard_plantation
-	remove_building = building_barracks
+	remove_building = building_vineyard
+	remove_building = building_barrack
 	remove_building = building_conscription_center
 	remove_building = building_naval_base
-	remove_building = building_arts_academy
+	remove_building = building_art_academy
 	remove_building = building_power_plant
 	remove_building = building_government_administration
 	remove_building = building_university

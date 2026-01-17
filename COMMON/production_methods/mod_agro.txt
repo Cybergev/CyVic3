@@ -1,18 +1,14 @@
-﻿pm_simple_farming = {
+﻿REPLACE_OR_CREATE:pm_simple_farming = {
 	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods													
 			goods_output_grain_add = 40
 		}
-		level_scaled = {
-			building_employment_laborers_add = 4750
-			building_employment_farmers_add = 250
-		}
 	}
 }
 
-pm_soil_enriching_farming = {
+REPLACE_OR_CREATE:pm_soil_enriching_farming = {
 	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
 	unlocking_technologies = {
 		intensive_agriculture
@@ -24,14 +20,10 @@ pm_soil_enriching_farming = {
 			# output goods													
 			goods_output_grain_add = 60
 		}
-		level_scaled = {
-			building_employment_laborers_add = 4500
-			building_employment_farmers_add = 500
-		}
 	}
 }
 
-pm_fertilization = {
+REPLACE_OR_CREATE:pm_fertilization = {
 	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
 	unlocking_technologies = {
 		improved_fertilizer
@@ -48,14 +40,10 @@ pm_fertilization = {
 			# output goods												   
 			goods_output_grain_add = 80
 		}
-		level_scaled = {
-			building_employment_laborers_add = 4250
-			building_employment_farmers_add = 750
-		}
 	}
 }
 
-pm_chemical_fertilizer = {
+REPLACE_OR_CREATE:pm_chemical_fertilizer = {
 	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
 	unlocking_technologies = {
 		nitrogen_fixation
@@ -72,29 +60,21 @@ pm_chemical_fertilizer = {
 			# output goods												   
 			goods_output_grain_add = 100
 		}
-		level_scaled = {
-			building_employment_laborers_add = 4000
-			building_employment_farmers_add = 1000
-		}
 	}
 }
 
 #rice_farm------------
-pm_simple_farming_building_rice_farm = {
+REPLACE_OR_CREATE:pm_simple_farming_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
 			goods_output_grain_add = 60
 		}
-		level_scaled = {
-			building_employment_laborers_add = 9500
-			building_employment_farmers_add = 500
-		}
 	}
 }
 
-pm_soil_enriching_farming_building_rice_farm = {
+REPLACE_OR_CREATE:pm_soil_enriching_farming_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
 	unlocking_technologies = {
 		intensive_agriculture
@@ -106,15 +86,10 @@ pm_soil_enriching_farming_building_rice_farm = {
 			# output goods													
 			goods_output_grain_add = 80
 		}
-		level_scaled = {
-			# earnings												
-			building_employment_laborers_add = 9000
-			building_employment_farmers_add = 1000
-		}
 	}
 }
 
-pm_fertilization_building_rice_farm = {
+REPLACE_OR_CREATE:pm_fertilization_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
 	unlocking_technologies = {
 		improved_fertilizer
@@ -126,14 +101,10 @@ pm_fertilization_building_rice_farm = {
 			# output goods												   
 			goods_output_grain_add = 100
 		}
-		level_scaled = {
-			building_employment_laborers_add = 8500
-			building_employment_farmers_add = 1500
-		}
 	}
 }
 
-pm_chemical_fertilizer_building_rice_farm = {
+REPLACE_OR_CREATE:pm_chemical_fertilizer_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
 	unlocking_technologies = {
 		nitrogen_fixation
@@ -145,19 +116,15 @@ pm_chemical_fertilizer_building_rice_farm = {
 			# output goods												   
 			goods_output_grain_add = 200
 		}
-		level_scaled = {
-			building_employment_laborers_add = 8000
-			building_employment_farmers_add = 2000
-		}
 	}
 }
 
 #secondary------------
-pm_no_sugar = {
+REPLACE_OR_CREATE:pm_no_sugar = {
 	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
 }
 
-pm_simple_sugar_farming = {
+REPLACE_OR_CREATE:pm_simple_sugar_farming = {
 	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -166,7 +133,7 @@ pm_simple_sugar_farming = {
 	}
 }
 
-pm_soil_enriching_sugar_farming = {
+REPLACE_OR_CREATE:pm_soil_enriching_sugar_farming = {
 	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
 	unlocking_technologies = {
 		intensive_agriculture
@@ -179,7 +146,7 @@ pm_soil_enriching_sugar_farming = {
 	}
 }
 
-pm_fertilization_sugar_farming = {
+REPLACE_OR_CREATE:pm_fertilization_sugar_farming = {
 	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
 	unlocking_technologies = {
 		improved_fertilizer
@@ -192,7 +159,7 @@ pm_fertilization_sugar_farming = {
 	}
 }
 
-pm_chemical_fertilizer_sugar_farming = {
+REPLACE_OR_CREATE:pm_chemical_fertilizer_sugar_farming = {
 	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
 	unlocking_technologies = {
 		nitrogen_fixation
@@ -206,7 +173,7 @@ pm_chemical_fertilizer_sugar_farming = {
 }
 
 #rice_farm------------
-pm_simple_sugar_building_rice_farm = {
+REPLACE_OR_CREATE:pm_simple_sugar_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -215,7 +182,7 @@ pm_simple_sugar_building_rice_farm = {
 	}
 }
 
-pm_soil_enriching_sugar_building_rice_farm = {
+REPLACE_OR_CREATE:pm_soil_enriching_sugar_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
 	unlocking_technologies = {
 		intensive_agriculture
@@ -228,7 +195,7 @@ pm_soil_enriching_sugar_building_rice_farm = {
 	}
 }
 
-pm_fertilization_sugar_building_rice_farm = {
+REPLACE_OR_CREATE:pm_fertilization_sugar_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
 	unlocking_technologies = {
 		improved_fertilizer
@@ -241,7 +208,7 @@ pm_fertilization_sugar_building_rice_farm = {
 	}
 }
 
-pm_chemical_fertilizer_sugar_building_rice_farm = {
+REPLACE_OR_CREATE:pm_chemical_fertilizer_sugar_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
 	unlocking_technologies = {
 		nitrogen_fixation
@@ -255,11 +222,11 @@ pm_chemical_fertilizer_sugar_building_rice_farm = {
 }
 
 #tertiary------------
-pm_no_orchards = {
+REPLACE_OR_CREATE:pm_no_orchards = {
 	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
 }
 
-pm_simple_orchards = {
+REPLACE_OR_CREATE:pm_simple_orchards = {
 	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -268,7 +235,7 @@ pm_simple_orchards = {
 	}
 }
 
-pm_soil_enriching_orchards = {
+REPLACE_OR_CREATE:pm_soil_enriching_orchards = {
 	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
 	unlocking_technologies = {
 		intensive_agriculture
@@ -281,7 +248,7 @@ pm_soil_enriching_orchards = {
 	}
 }
 
-pm_fertilization_orchards = {
+REPLACE_OR_CREATE:pm_fertilization_orchards = {
 	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
 	unlocking_technologies = {
 		improved_fertilizer
@@ -294,7 +261,7 @@ pm_fertilization_orchards = {
 	}
 }
 
-pm_chemical_fertilizer_orchards = {
+REPLACE_OR_CREATE:pm_chemical_fertilizer_orchards = {
 	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
 	unlocking_technologies = {
 		nitrogen_fixation
@@ -308,7 +275,7 @@ pm_chemical_fertilizer_orchards = {
 }
 
 #rice_farm------------
-pm_simple_orchards_building_rice_farm = {
+REPLACE_OR_CREATE:pm_simple_orchards_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -317,7 +284,7 @@ pm_simple_orchards_building_rice_farm = {
 	}
 }
 
-pm_soil_enriching_orchards_building_rice_farm = {
+REPLACE_OR_CREATE:pm_soil_enriching_orchards_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
 	unlocking_technologies = {
 		intensive_agriculture
@@ -330,7 +297,7 @@ pm_soil_enriching_orchards_building_rice_farm = {
 	}
 }
 
-pm_fertilization_orchards_building_rice_farm = {
+REPLACE_OR_CREATE:pm_fertilization_orchards_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
 	unlocking_technologies = {
 		improved_fertilizer
@@ -343,7 +310,7 @@ pm_fertilization_orchards_building_rice_farm = {
 	}
 }
 
-pm_chemical_fertilizer_orchards_building_rice_farm = {
+REPLACE_OR_CREATE:pm_chemical_fertilizer_orchards_building_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
 	unlocking_technologies = {
 		nitrogen_fixation

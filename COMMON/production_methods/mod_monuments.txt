@@ -1,6 +1,6 @@
 ﻿# To ensure the game rule 'monument_effects' works properly, the game rule needs to be amended with flags disabling any new monuments' Base method
 # PM Groups should have the 'is_hidden_when_unavailable' flag to ensure only one alternative is visible at any time (unless the player actually has an option they can switch to)
-pm_default_building_eiffel_tower = {
+REPLACE_OR_CREATE:pm_default_building_eiffel_tower = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
@@ -11,7 +11,7 @@ pm_default_building_eiffel_tower = {
 	}
 }
 
-pm_default_building_cristo_redentor = {
+REPLACE_OR_CREATE:pm_default_building_cristo_redentor = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
@@ -22,7 +22,7 @@ pm_default_building_cristo_redentor = {
 	}
 }
 
-pm_default_building_angkor_wat = {
+REPLACE_OR_CREATE:pm_default_building_angkor_wat = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
@@ -33,7 +33,7 @@ pm_default_building_angkor_wat = {
 	}
 }
 
-pm_default_building_big_ben = {
+REPLACE_OR_CREATE:pm_default_building_big_ben = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
@@ -49,7 +49,7 @@ pm_default_building_big_ben = {
 	}
 }
 
-pm_default_building_forbidden_city = {
+REPLACE_OR_CREATE:pm_default_building_forbidden_city = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
@@ -61,7 +61,7 @@ pm_default_building_forbidden_city = {
 	}
 }
 
-pm_default_building_hagia_sophia = {
+REPLACE_OR_CREATE:pm_default_building_hagia_sophia = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
@@ -72,7 +72,7 @@ pm_default_building_hagia_sophia = {
 	}
 }
 
-pm_default_building_mosque_of_djenne = {
+REPLACE_OR_CREATE:pm_default_building_mosque_of_djenne = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
@@ -87,7 +87,7 @@ pm_default_building_mosque_of_djenne = {
 	}
 }
 
-pm_default_building_saint_basils_cathedral = {
+REPLACE_OR_CREATE:pm_default_building_saint_basils_cathedral = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
@@ -98,7 +98,7 @@ pm_default_building_saint_basils_cathedral = {
 	}
 }
 
-pm_default_building_statue_of_liberty = {
+REPLACE_OR_CREATE:pm_default_building_statue_of_liberty = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
@@ -109,7 +109,7 @@ pm_default_building_statue_of_liberty = {
 	}
 }
 
-pm_default_building_taj_mahal = {
+REPLACE_OR_CREATE:pm_default_building_taj_mahal = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
@@ -119,7 +119,7 @@ pm_default_building_taj_mahal = {
 	}
 }
 
-pm_default_building_vatican_city = {
+REPLACE_OR_CREATE:pm_default_building_vatican_city = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	unlocking_religions = {
 		catholic
@@ -145,7 +145,7 @@ pm_default_building_vatican_city = {
 	}
 }
 
-pm_monument_prestige_only_vatican_city = {
+REPLACE_OR_CREATE:pm_monument_prestige_only_vatican_city = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	disallowing_religions = {
 		catholic
@@ -158,7 +158,7 @@ pm_monument_prestige_only_vatican_city = {
 	}
 }
 
-pm_default_building_white_house = {
+REPLACE_OR_CREATE:pm_default_building_white_house = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
@@ -168,7 +168,7 @@ pm_default_building_white_house = {
 	}
 }
 
-pm_monument_prestige_only = {
+REPLACE_OR_CREATE:pm_monument_prestige_only = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
@@ -178,12 +178,12 @@ pm_monument_prestige_only = {
 	}
 }
 
-pm_monument_no_effects = {
+REPLACE_OR_CREATE:pm_monument_no_effects = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 }
 
-pm_power_bloc_statue_sovereign_empire = {
+REPLACE_OR_CREATE:pm_power_bloc_statue_sovereign_empire = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	unlocking_identity = identity_sovereign_empire
 	is_hidden_when_unavailable = yes
@@ -199,7 +199,7 @@ pm_power_bloc_statue_sovereign_empire = {
 	}
 }
 
-pm_power_bloc_statue_ideological_union = {
+REPLACE_OR_CREATE:pm_power_bloc_statue_ideological_union = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	unlocking_identity = identity_ideological_union
 	is_hidden_when_unavailable = yes
@@ -216,7 +216,7 @@ pm_power_bloc_statue_ideological_union = {
 	}
 }
 
-pm_power_bloc_statue_military_treaty = {
+REPLACE_OR_CREATE:pm_power_bloc_statue_military_treaty = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	unlocking_identity = identity_military_treaty_organization
 	is_hidden_when_unavailable = yes
@@ -232,7 +232,7 @@ pm_power_bloc_statue_military_treaty = {
 	}
 }
 
-pm_power_bloc_statue_trade_league = {
+REPLACE_OR_CREATE:pm_power_bloc_statue_trade_league = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	unlocking_identity = identity_trade_league
 	is_hidden_when_unavailable = yes
@@ -249,7 +249,7 @@ pm_power_bloc_statue_trade_league = {
 	}
 }
 
-pm_power_bloc_statue_religious = {
+REPLACE_OR_CREATE:pm_power_bloc_statue_religious = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	unlocking_identity = identity_religious
 	is_hidden_when_unavailable = yes
@@ -266,7 +266,7 @@ pm_power_bloc_statue_religious = {
 	}
 }
 
-pm_power_bloc_prestige_only = {
+REPLACE_OR_CREATE:pm_power_bloc_prestige_only = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {
@@ -276,7 +276,7 @@ pm_power_bloc_prestige_only = {
 	}
 }
 
-pm_default_building_victoria_terminus = {
+REPLACE_OR_CREATE:pm_default_building_victoria_terminus = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	is_hidden_when_unavailable = yes
 	country_modifiers = {

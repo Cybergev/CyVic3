@@ -1,4 +1,4 @@
-﻿afar={
+﻿REPLACE_OR_CREATE:afar={
 	color= { 50 0 100 }
 	religion = sunni
 	heritage = heritage_abyssinian
@@ -37,7 +37,7 @@
 	graphics = african
 }
 
-european={
+REPLACE_OR_CREATE:european={
 	color = { 50 100 200 }
 	religion = atheist
 	heritage = heritage_european
@@ -289,7 +289,7 @@ european={
 	}
 }
 
-japanese= {
+REPLACE_OR_CREATE:japanese= {
 	color= hsv{ 0 0 90 }
 	religion = shinto
 	heritage = heritage_japanese

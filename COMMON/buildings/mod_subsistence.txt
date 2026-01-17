@@ -1,0 +1,19 @@
+﻿REPLACE:building_subsistence_rice_farm = {
+	aliases = {
+		building_subsistence_rice_paddies
+	}
+	building_group = bg_subsistence_agriculture
+	icon = "gfx/interface/icons/building_icons/building_subsistence_farm_rice.dds"
+	production_method_groups = {
+		pmg_base_building_subsistence_rice_farm
+		pmg_home_workshops_building_subsistence_rice_farm
+		pmg_serfdom_building_subsistence_rice_farm
+	}
+	buildable = no
+	expandable = no
+	downsizeable = no
+	can_switch_owner = no
+	slaves_role = peasants
+	ownership_type = self
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}

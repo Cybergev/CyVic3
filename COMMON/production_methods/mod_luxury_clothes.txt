@@ -1,0 +1,47 @@
+﻿REPLACE_OR_CREATE:pm_no_luxury_clothes = {
+	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
+}
+
+REPLACE_OR_CREATE:pm_craftsman_sewing = {
+	texture = "gfx/interface/icons/production_method_icons/craftsman_sewing_mod.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	is_default = yes
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_silk_add = 60
+			goods_input_dye_add = 10
+			goods_input_tools_add = 10
+			# output goods
+			goods_output_luxury_clothes_add = 80
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_elastics = {
+	texture = "gfx/interface/icons/production_method_icons/elastics_mod.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		vulcanization
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_silk_add = 60
+			goods_input_dye_add = 10
+			goods_input_tools_add = 10
+			goods_input_electricity_add = 10
+			# output goods
+			goods_output_luxury_clothes_add = 100
+		}
+	}
+	required_input_goods = electricity
+}

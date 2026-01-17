@@ -1,4 +1,4 @@
-﻿building_canning_industry_throughput_add = {
+﻿building_distillation_plants_throughput_add = {
 	decimals = 1
 	color = good
 	percent = yes
@@ -7,7 +7,7 @@
 	}
 }
 
-building_distillation_plants_throughput_add = {
+building_logging_camp_throughput_add = {
 	decimals = 1
 	color = good
 	percent = yes
@@ -109,24 +109,6 @@ building_tanks_industry_throughput_add = {
 building_aeroplanes_industry_throughput_add = {
 	decimals = 1
 	color = good
-	percent = yes
-	game_data = {
-		ai_value = 0
-	}
-}
-
-country_institution_workplace_safety_size_change_speed_mult = {
-	decimals = 1
-	color = good
-	percent = yes
-	game_data = {
-		ai_value = 0
-	}
-}
-
-country_institution_cost_institution_workplace_safety_mult = {
-	decimals = 1
-	color = bad
 	percent = yes
 	game_data = {
 		ai_value = 0

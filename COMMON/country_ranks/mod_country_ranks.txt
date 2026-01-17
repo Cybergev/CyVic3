@@ -10,7 +10,7 @@
 ################
 ## RECOGNIZED ##
 ################
-great_power = {
+REPLACE:great_power = {
 	rank_value = 7
 	icon_index = 4
 	enforce_subject_rank_check = yes
@@ -36,7 +36,7 @@ great_power = {
 	}
 }
 
-major_power = {
+REPLACE:major_power = {
 	rank_value = 6
 	icon_index = 3
 	enforce_subject_rank_check = yes
@@ -62,7 +62,7 @@ major_power = {
 	}
 }
 
-minor_power = {
+REPLACE:minor_power = {
 	rank_value = 4
 	icon_index = 2
 	enforce_subject_rank_check = yes
@@ -84,7 +84,7 @@ minor_power = {
 	}
 }
 
-insignificant_power = {
+REPLACE:insignificant_power = {
 	rank_value = 2
 	icon_index = 1
 	diplo_pact_cost = 0.25
@@ -109,7 +109,7 @@ insignificant_power = {
 ##################
 ## UNRECOGNIZED ##
 ##################
-unrecognized_major_power = {
+REPLACE:unrecognized_major_power = {
 	rank_value = 5
 	icon_index = 3
 	enforce_subject_rank_check = yes
@@ -134,7 +134,7 @@ unrecognized_major_power = {
 	}
 }
 
-unrecognized_regional_power = {
+REPLACE:unrecognized_regional_power = {
 	rank_value = 3
 	icon_index = 2
 	enforce_subject_rank_check = yes
@@ -160,7 +160,7 @@ unrecognized_regional_power = {
 	}
 }
 
-unrecognized_power = {
+REPLACE:unrecognized_power = {
 	rank_value = 1
 	icon_index = 1
 	diplo_pact_cost = 0.25
@@ -185,7 +185,7 @@ unrecognized_power = {
 ###################
 ## DECENTRALIZED ##
 ###################
-decentralized_power = {
+REPLACE:decentralized_power = {
 	rank_value = 0
 	icon_index = 1
 	valid_country_types = {

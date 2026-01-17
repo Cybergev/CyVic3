@@ -1,4 +1,4 @@
-﻿pm_simple_organization = {
+﻿REPLACE_OR_CREATE:pm_simple_organization = {
 	texture = "gfx/interface/icons/production_method_icons/simple_organization.dds"
 	country_modifiers = {
 		workforce_scaled = {
@@ -18,7 +18,7 @@
 	}
 }
 
-pm_horizontal_drawer_cabinets = {
+REPLACE_OR_CREATE:pm_horizontal_drawer_cabinets = {
 	texture = "gfx/interface/icons/production_method_icons/horizontal_drawer_cabinets.dds"
 	unlocking_technologies = {
 		centralization
@@ -44,7 +44,7 @@ pm_horizontal_drawer_cabinets = {
 	}
 }
 
-pm_vertical_filing_cabinets = {
+REPLACE_OR_CREATE:pm_vertical_filing_cabinets = {
 	texture = "gfx/interface/icons/production_method_icons/vertical_filing_cabinets.dds"
 	unlocking_technologies = {
 		central_archives
@@ -69,7 +69,7 @@ pm_vertical_filing_cabinets = {
 	}
 }
 
-pm_switch_boards = {
+REPLACE_OR_CREATE:pm_switch_boards = {
 	texture = "gfx/interface/icons/production_method_icons/telephone_switchboards.dds"
 	unlocking_technologies = {
 		central_planning
@@ -92,7 +92,7 @@ pm_switch_boards = {
 	}
 }
 
-pm_hereditary_bureaucrats = {
+REPLACE_OR_CREATE:pm_hereditary_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
 	unlocking_laws = {
 		law_hereditary_bureaucrats
@@ -105,7 +105,7 @@ pm_hereditary_bureaucrats = {
 	}
 }
 
-pm_professional_bureaucrats = {
+REPLACE_OR_CREATE:pm_professional_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/professional_bureaucrats.dds"
 	disallowing_laws = {
 		law_hereditary_bureaucrats
@@ -117,7 +117,7 @@ pm_professional_bureaucrats = {
 	}
 }
 
-pm_religious_bureaucrats = {
+REPLACE_OR_CREATE:pm_religious_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
 	disallowing_laws = {
 		law_total_separation
@@ -131,7 +131,7 @@ pm_religious_bureaucrats = {
 	}
 }
 
-pm_secular_bureaucrats = {
+REPLACE_OR_CREATE:pm_secular_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
 	disallowing_laws = {
 		law_state_religion

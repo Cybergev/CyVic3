@@ -1,4 +1,4 @@
-﻿mechanized_workshops = {
+﻿REPLACE_OR_CREATE:mechanized_workshops = {
 	# Unlocks Slaughterhouses PM in Livestock Ranches
 	# Unlocks Sewing Machines PM and Mechanized Looms PM in Textile Mills
 	era = era_2
@@ -22,7 +22,7 @@
 	}
 }
 
-shift_work = {
+REPLACE_OR_CREATE:shift_work = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/shift_work.dds"
 	category = production
@@ -37,7 +37,7 @@ shift_work = {
 	}
 }
 
-reinforced_concrete = {
+REPLACE_OR_CREATE:reinforced_concrete = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/reinforced_concrete.dds"
 	category = production
@@ -52,13 +52,12 @@ reinforced_concrete = {
 	}
 }
 
-pasteurization = {
+REPLACE_OR_CREATE:pasteurization = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/pasteurization.dds"
 	category = production
 	modifier = {
 		building_food_industry_throughput_add = 0.1
-		building_canning_industry_throughput_add = 0.1
 	}
 	unlocking_technologies = {
 		vacuum_canning
@@ -69,7 +68,7 @@ pasteurization = {
 	}
 }
 
-pneumatic_tools = {
+REPLACE_OR_CREATE:pneumatic_tools = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/pneumatic_tools.dds"
 	category = production
@@ -87,7 +86,23 @@ pneumatic_tools = {
 	}
 }
 
-arc_welding = {
+REPLACE_OR_CREATE:dough_rollers = {
+	# Unlocks the Automated Bakery PM in Food Industries
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/rollers.dds"
+	category = production
+	modifier = {
+		building_food_industry_throughput_add = 0.1
+	}
+	unlocking_technologies = {
+		conveyors
+	}
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:arc_welding = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/arc_welding.dds"
 	category = production

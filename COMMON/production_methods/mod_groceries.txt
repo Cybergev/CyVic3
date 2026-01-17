@@ -1,4 +1,19 @@
-﻿pm_bakery = {
+﻿REPLACE_OR_CREATE:pm_disabled_baking = {
+	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
+	unlocking_production_methods = {
+		pm_cannery_meat
+		pm_cannery_fish
+		pm_cannery_all
+		pm_vacuum_cannery_meat
+		pm_vacuum_cannery_fish
+		pm_vacuum_canning_all
+		pm_vacuum_cannery_meat_principle_3
+		pm_vacuum_cannery_fish_principle_3
+		pm_vacuum_canning_all_principle_3
+	}
+}
+
+REPLACE_OR_CREATE:pm_bakery = {
 	texture = "gfx/interface/icons/production_method_icons/bakeries.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -7,14 +22,10 @@
 			# output goods
 			goods_output_groceries_add = 60
 		}
-		level_scaled = {
-			building_employment_laborers_add = 4500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_sweeteners = {
+REPLACE_OR_CREATE:pm_sweeteners = {
 	texture = "gfx/interface/icons/production_method_icons/sweeteners.dds"
 	unlocking_technologies = {
 		distillation
@@ -27,15 +38,10 @@ pm_sweeteners = {
 			# output goods
 			goods_output_groceries_add = 80
 		}
-		level_scaled = {
-			building_employment_laborers_add = 4000
-			building_employment_machinists_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_fruit_sweeteners = {
+REPLACE_OR_CREATE:pm_fruit_sweeteners = {
 	texture = "gfx/interface/icons/production_method_icons/sweeteners.dds"
 	unlocking_technologies = {
 		distillation
@@ -48,15 +54,10 @@ pm_fruit_sweeteners = {
 			# output goods
 			goods_output_groceries_add = 80
 		}
-		level_scaled = {
-			building_employment_laborers_add = 4000
-			building_employment_machinists_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_baking_powder = {
+REPLACE_OR_CREATE:pm_baking_powder = {
 	texture = "gfx/interface/icons/production_method_icons/baking_powder.dds"
 	unlocking_technologies = {
 		baking_powder
@@ -69,16 +70,10 @@ pm_baking_powder = {
 			# output goods
 			goods_output_groceries_add = 100
 		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_fruit_baking_powder = {
+REPLACE_OR_CREATE:pm_fruit_baking_powder = {
 	texture = "gfx/interface/icons/production_method_icons/baking_powder.dds"
 	unlocking_technologies = {
 		baking_powder
@@ -91,17 +86,22 @@ pm_fruit_baking_powder = {
 			# output goods
 			goods_output_groceries_add = 100
 		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
 #CANNING
-pm_cannery_meat = {
+REPLACE_OR_CREATE:pm_disabled_canning = {
+	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
+	unlocking_production_methods = {
+		pm_bakery
+		pm_sweeteners
+		pm_fruit_sweeteners
+		pm_baking_powder
+		pm_fruit_baking_powder
+	}
+}
+
+REPLACE_OR_CREATE:pm_cannery_meat = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	unlocking_technologies = {
 		canneries
@@ -114,15 +114,10 @@ pm_cannery_meat = {
 			# output goods
 			goods_output_groceries_add = 80
 		}
-		level_scaled = {
-			building_employment_laborers_add = 4000
-			building_employment_machinists_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_cannery_fish = {
+REPLACE_OR_CREATE:pm_cannery_fish = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	unlocking_technologies = {
 		canneries
@@ -135,15 +130,10 @@ pm_cannery_fish = {
 			# output goods
 			goods_output_groceries_add = 80
 		}
-		level_scaled = {
-			building_employment_laborers_add = 4000
-			building_employment_machinists_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_cannery_all = {
+REPLACE_OR_CREATE:pm_cannery_all = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	unlocking_technologies = {
 		canneries
@@ -157,15 +147,10 @@ pm_cannery_all = {
 			# output goods
 			goods_output_groceries_add = 160
 		}
-		level_scaled = {
-			building_employment_laborers_add = 4000
-			building_employment_machinists_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_vacuum_cannery_meat = {
+REPLACE_OR_CREATE:pm_vacuum_cannery_meat = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
 	replacement_if_valid = pm_vacuum_canning_principle_3
 	unlocking_technologies = {
@@ -179,16 +164,10 @@ pm_vacuum_cannery_meat = {
 			# output goods
 			goods_output_groceries_add = 80
 		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_vacuum_cannery_fish = {
+REPLACE_OR_CREATE:pm_vacuum_cannery_fish = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
 	replacement_if_valid = pm_vacuum_canning_principle_3
 	unlocking_technologies = {
@@ -202,16 +181,10 @@ pm_vacuum_cannery_fish = {
 			# output goods
 			goods_output_groceries_add = 80
 		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_vacuum_canning_all = {
+REPLACE_OR_CREATE:pm_vacuum_canning_all = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
 	replacement_if_valid = pm_vacuum_canning_principle_3
 	unlocking_technologies = {
@@ -226,16 +199,10 @@ pm_vacuum_canning_all = {
 			# output goods
 			goods_output_groceries_add = 160
 		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_vacuum_cannery_meat_principle_3 = {
+REPLACE_OR_CREATE:pm_vacuum_cannery_meat_principle_3 = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_principles = {
@@ -252,16 +219,10 @@ pm_vacuum_cannery_meat_principle_3 = {
 			# output goods
 			goods_output_groceries_add = 100
 		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_vacuum_cannery_fish_principle_3 = {
+REPLACE_OR_CREATE:pm_vacuum_cannery_fish_principle_3 = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_principles = {
@@ -278,16 +239,10 @@ pm_vacuum_cannery_fish_principle_3 = {
 			# output goods
 			goods_output_groceries_add = 100
 		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_vacuum_canning_all_principle_3 = {
+REPLACE_OR_CREATE:pm_vacuum_canning_all_principle_3 = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_principles = {
@@ -304,12 +259,6 @@ pm_vacuum_canning_all_principle_3 = {
 			goods_input_rubber_add = 2
 			# output goods
 			goods_output_groceries_add = 200
-		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
 		}
 	}
 }

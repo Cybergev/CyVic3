@@ -1,4 +1,4 @@
-﻿pmg_synthetic_opium = {
+﻿REPLACE_OR_CREATE:pmg_synthetic_opium = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_synthetic_opium

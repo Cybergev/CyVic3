@@ -1,4 +1,4 @@
-﻿pm_simple_whaling = {
+﻿REPLACE_OR_CREATE:pm_simple_whaling = {
 	texture = "gfx/interface/icons/production_method_icons/simple_whaling.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -7,15 +7,10 @@
 			goods_output_meat_add = 25
 			goods_output_oil_add = 25
 		}
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = 4500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_wooden_whaling_ships = {
+REPLACE_OR_CREATE:pm_wooden_whaling_ships = {
 	texture = "gfx/interface/icons/production_method_icons/wooden_whaling_ships.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -25,16 +20,10 @@ pm_wooden_whaling_ships = {
 			goods_output_meat_add = 50
 			goods_output_oil_add = 50
 		}
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = 4000
-			building_employment_machinists_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_steam_whaling_ships = {
+REPLACE_OR_CREATE:pm_steam_whaling_ships = {
 	texture = "gfx/interface/icons/production_method_icons/steam_whaling_ships.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -52,16 +41,10 @@ pm_steam_whaling_ships = {
 			goods_output_meat_add = 75
 			goods_output_oil_add = 75
 		}
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = 4000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_disel_whaling_ships = {
+REPLACE_OR_CREATE:pm_disel_whaling_ships = {
 	texture = "gfx/interface/icons/production_method_icons/steam_whaling_ships.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -78,12 +61,6 @@ pm_disel_whaling_ships = {
 			goods_input_steamers_add = 10
 			goods_output_meat_add = 100
 			goods_output_oil_add = 100
-		}
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = 4000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
 		}
 	}
 }

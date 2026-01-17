@@ -4,9 +4,6 @@ fixers: "fixers"
 EUR: "Европа"
 EUR_ADJ: "Европейск"
 
-european: "Европейцы"
-european_ADJ: "$EUR_ADJ$"
-
 dp_unify_europe: "Объединение Европы"
 
 #---------------------------
@@ -17,43 +14,43 @@ building_canning_industry_lens_option: "Расширить Консервные 
 building_automobiles_industry: "Автомобильные заводы"
 building_automobiles_industry_lens_option: "Расширить автомобильные заводы"
 
-building_distillation_plants: "Дистилляционные заводы"
-building_distillation_plants_lens_option: "Расширить дистилляционные заводы"
+building_distillation_plant: "Дистилляционные заводы"
+building_distillation_plant_lens_option: "Расширить дистилляционные заводы"
 
-building_luxury_furniture_manufacturies: "Роскошно-мебельные фабрики"
-building_luxury_furniture_manufacturies_lens_option: "Расширить роскошно-мебельные фабрики"
+building_luxury_furniture_manufactory: "Роскошно-мебельные фабрики"
+building_luxury_furniture_manufactory_lens_option: "Расширить роскошно-мебельные фабрики"
 
-building_hardwood_workshops: "Древесные мастерские"
-building_hardwood_workshops_lens_option: "Расширить древесные мастерские"
+building_hardwood_workshop: "Древесные мастерские"
+building_hardwood_workshop_lens_option: "Расширить древесные мастерские"
 
-building_luxury_textile_mills: "Роскошно-текстильные фабрики"
-building_luxury_textile_mills_lens_option: "Расширить роскошно-текстильные фабрики"
+building_luxury_textile_mill: "Роскошно-текстильные фабрики"
+building_luxury_textile_mill_lens_option: "Расширить роскошно-текстильные фабрики"
 
-building_porcelain_manufacturies: "Керамозаводы"
-building_porcelain_manufacturies_lens_option: "Расширить керамозаводы"
+building_porcelain_manufactory: "Керамозаводы"
+building_porcelain_manufactory_lens_option: "Расширить керамозаводы"
 
 building_radios_industry: "Радиозаводы"
 building_radios_industry_lens_option: "Расширить радиозаводы"
 
-building_synthetic_oil_plants: "Заводы синтетического топлива"
-building_synthetic_oil_plants_lens_option: "Расширить заводы синтетического топлива"
+building_synthetic_oil_plant: "Заводы синтетического топлива"
+building_synthetic_oil_plant_lens_option: "Расширить заводы синтетического топлива"
 
-building_synthetic_opium_plants: "Заводы синтетического опиума"
-building_synthetic_opium_plants_lens_option: "Расширить заводы синтетического опиума"
+building_synthetic_opium_plant: "Заводы синтетического опиума"
+building_synthetic_opium_plant_lens_option: "Расширить заводы синтетического опиума"
 
-building_synthetic_rubber_plants: "Заводы синтетического каучука"
-building_synthetic_rubber_plants_lens_option: "Расширить заводы синтетического каучука"
+building_synthetic_rubber_plant: "Заводы синтетического каучука"
+building_synthetic_rubber_plant_lens_option: "Расширить заводы синтетического каучука"
 
-building_synthetic_silk_plants: "Заводы синтетического шёлка"
-building_synthetic_silk_plants_lens_option: "Расширить заводы синтетического шёлка"
+building_synthetic_silk_plant: "Заводы синтетического шёлка"
+building_synthetic_silk_plant_lens_option: "Расширить заводы синтетического шёлка"
 
 building_tanks_industry: "Бронетанковые заводы"
 building_tanks_industry_lens_option: "Расширить бронетанковые заводы"
 
 #---------------------------
 
-pmg_luxury_furniture_manufacturies: "$pmg_luxury_building_furniture_manufacturies$"
-pmg_luxury_textile_manufacturies: "$pmg_luxury_building_textile_mills$"
+pmg_luxury_building_furniture_manufactory: "$pmg_luxury_building_furniture_manufacturies$"
+pmg_luxury_building_textile_mill: "$pmg_luxury_building_textile_mills$"
 pm_fruit_pot_stills: "$pm_pot_stills$"
 pm_fruit_patent_stills: "$pm_patent_stills$"
 pm_fruit_sweeteners: "$pm_baking_powder$"
@@ -94,16 +91,19 @@ pm_fertilization_sugar_building_rice_farm: "$pm_fertilization$"
 pm_chemical_fertilizer_sugar_building_rice_farm: "$pm_chemical_fertilizer$"
 
 pm_no_sugar: "Без сахара"
-pm_simple_orchards: "$pm_simple_farming$"
-pm_soil_enriching_orchards: "$pm_soil_enriching_farming$"
-pm_fertilization_orchards: "$pm_fertilization$"
-pm_chemical_fertilizer_orchards: "$pm_chemical_fertilizer$"
+pm_simple_orchard: "$pm_simple_farming$"
+pm_soil_enriching_orchard: "$pm_soil_enriching_farming$"
+pm_fertilization_orchard: "$pm_fertilization$"
+pm_chemical_fertilizer_orchard: "$pm_chemical_fertilizer$"
 
 pm_no_orchards: "Без фруктов"
 pm_simple_orchards_building_rice_farm: "$pm_simple_farming$"
 pm_soil_enriching_orchards_building_rice_farm: "$pm_soil_enriching_farming$"
 pm_fertilization_orchards_building_rice_farm: "$pm_fertilization$"
 pm_chemical_fertilizer_orchards_building_rice_farm: "$pm_chemical_fertilizer$"
+
+
+pm_homesteading_building_subsistence_rice_farm: "$pm_homesteading_building_subsistence$"
 
 #---------------------------
 

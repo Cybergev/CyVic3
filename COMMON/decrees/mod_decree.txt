@@ -1,4 +1,4 @@
-﻿decree_road_maintenance = {
+﻿REPLACE_OR_CREATE:decree_road_maintenance = {
 	texture = "gfx/interface/icons/decree/decree_road_maintenance.dds"
 	modifier = {
 		state_construction_mult = 0.2
@@ -64,7 +64,7 @@
 	}
 }
 
-decree_encourage_manufacturing_industry = {
+REPLACE_OR_CREATE:decree_encourage_manufacturing_industry = {
 	texture = "gfx/interface/icons/decree/decree_encourage_manufacturing_industry.dds"
 	unlocking_technologies = {
 		manufacturies
@@ -113,7 +113,7 @@ decree_encourage_manufacturing_industry = {
 	}
 }
 
-decree_encourage_agricultural_industry = {
+REPLACE_OR_CREATE:decree_encourage_agricultural_industry = {
 	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
 	unlocking_technologies = {
 		enclosure
@@ -178,7 +178,7 @@ decree_encourage_agricultural_industry = {
 	}
 }
 
-decree_encourage_resource_industry = {
+REPLACE_OR_CREATE:decree_encourage_resource_industry = {
 	texture = "gfx/interface/icons/decree/decree_encourage_resource_industry.dds"
 	unlocking_technologies = {
 		shaft_mining
@@ -244,7 +244,7 @@ decree_encourage_resource_industry = {
 	}
 }
 
-decree_promote_social_mobility = {
+REPLACE_OR_CREATE:decree_promote_social_mobility = {
 	texture = "gfx/interface/icons/decree/decree_promote_social_mobility.dds"
 	state_trigger = {
 		NOT = {
@@ -314,7 +314,7 @@ decree_promote_social_mobility = {
 	}
 }
 
-decree_promote_national_values = {
+REPLACE_OR_CREATE:decree_promote_national_values = {
 	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
 	unlocking_technologies = {
 		nationalism
@@ -544,7 +544,7 @@ decree_promote_national_values = {
 	}
 }
 
-decree_emergency_relief = {
+REPLACE_OR_CREATE:decree_emergency_relief = {
 	texture = "gfx/interface/icons/decree/decree_emergency_relief.dds"
 	unlocking_technologies = {
 		centralization
@@ -596,7 +596,7 @@ decree_emergency_relief = {
 	}
 }
 
-decree_greener_grass_campaign = {
+REPLACE_OR_CREATE:decree_greener_grass_campaign = {
 	texture = "gfx/interface/icons/decree/decree_greener_grass_campaign.dds"
 	state_trigger = {
 		is_isolated_from_market = no
@@ -661,7 +661,7 @@ decree_greener_grass_campaign = {
 	}
 }
 
-decree_violent_suppression = {
+REPLACE_OR_CREATE:decree_violent_suppression = {
 	texture = "gfx/interface/icons/decree/decree_violent_suppression.dds"
 	unlocking_technologies = {
 		standing_army
@@ -707,7 +707,7 @@ decree_violent_suppression = {
 	}
 }
 
-decree_destroy_all_buildings = {
+REPLACE_OR_CREATE:decree_destroy_all_buildings = {
 	texture = "gfx/interface/icons/decree/decree_violent_suppression.dds"
 	modifier = {
 	}

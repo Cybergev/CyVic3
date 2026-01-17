@@ -1,4 +1,4 @@
-﻿pm_traditional_art = {
+﻿REPLACE_OR_CREATE:pm_traditional_art = {
 	texture = "gfx/interface/icons/production_method_icons/traditional_art.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -8,7 +8,7 @@
 	}
 }
 
-pm_realist_art = {
+REPLACE_OR_CREATE:pm_realist_art = {
 	texture = "gfx/interface/icons/production_method_icons/realist_art.dds"
 	unlocking_technologies = {
 		realism
@@ -25,7 +25,7 @@ pm_realist_art = {
 	}
 }
 
-pm_photographic_art = {
+REPLACE_OR_CREATE:pm_photographic_art = {
 	texture = "gfx/interface/icons/production_method_icons/photographic_art.dds"
 	unlocking_technologies = {
 		camera
@@ -42,7 +42,7 @@ pm_photographic_art = {
 	}
 }
 
-pm_film_art = {
+REPLACE_OR_CREATE:pm_film_art = {
 	texture = "gfx/interface/icons/production_method_icons/film_art.dds"
 	unlocking_technologies = {
 		film
@@ -61,7 +61,7 @@ pm_film_art = {
 	required_input_goods = electricity
 }
 
-pm_traditional_patronage = {
+REPLACE_OR_CREATE:pm_traditional_patronage = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
 	disallowing_laws = {
 		law_command_economy
@@ -75,7 +75,7 @@ pm_traditional_patronage = {
 	}
 }
 
-pm_bourgeoisie_patronage = {
+REPLACE_OR_CREATE:pm_bourgeoisie_patronage = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	unlocking_technologies = {
 		realism
@@ -92,7 +92,7 @@ pm_bourgeoisie_patronage = {
 	}
 }
 
-pm_independent_artists = {
+REPLACE_OR_CREATE:pm_independent_artists = {
 	texture = "gfx/interface/icons/production_method_icons/independent_artists.dds"
 	unlocking_technologies = {
 		realism
@@ -105,7 +105,7 @@ pm_independent_artists = {
 	}
 }
 
-pm_principle_freedom_of_movement_3 = {
+REPLACE_OR_CREATE:pm_principle_freedom_of_movement_3 = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_principles = {

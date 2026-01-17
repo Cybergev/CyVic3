@@ -19,7 +19,7 @@
 #        }
 #	}
 #}
-EUR_republic = {
+REPLACE_OR_CREATE:EUR_republic = {
 	color = "EUR_base_color"
 	possible = {
 		exists = c:EUR
@@ -31,7 +31,7 @@ EUR_republic = {
 	}
 }
 
-EUR_communist = {
+REPLACE_OR_CREATE:EUR_communist = {
 	color = "EUR_communist_color"
 	possible = {
 		exists = c:EUR
@@ -45,7 +45,7 @@ EUR_communist = {
 	}
 }
 
-EUR_technate = {
+REPLACE_OR_CREATE:EUR_technate = {
 	color = "EUR_tehcnate_color"
 	possible = {
 		exists = c:EUR
@@ -59,7 +59,7 @@ EUR_technate = {
 	}
 }
 
-EUR_dictatorship = {
+REPLACE_OR_CREATE:EUR_dictatorship = {
 	color = "EUR_dictatorship_color"
 	possible = {
 		exists = c:EUR
@@ -91,7 +91,7 @@ EUR_dictatorship = {
 	}
 }
 
-EUR_fascist = {
+REPLACE_OR_CREATE:EUR_fascist = {
 	color = "EUR_fascist_color"
 	possible = {
 		exists = c:EUR
@@ -100,7 +100,7 @@ EUR_fascist = {
 	}
 }
 
-imperial_japan = {
+REPLACE_OR_CREATE:imperial_japan = {
 	color = "white"
 	possible = {
 		exists = c:JAP

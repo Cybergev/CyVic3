@@ -1,4 +1,4 @@
-﻿pmg_porcelain_manufacturies = {
+﻿REPLACE_OR_CREATE:pmg_porcelain_manufactory = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_ceramics

@@ -1,4 +1,8 @@
-﻿pm_handcrafted_furniture = {
+﻿REPLACE_OR_CREATE:pm_no_furniture = {
+	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
+}
+
+REPLACE_OR_CREATE:pm_handcrafted_furniture = {
 	texture = "gfx/interface/icons/production_method_icons/furniture_handicraft.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -9,15 +13,10 @@
 			# output goods
 			goods_output_furniture_add = 60
 		}
-		level_scaled = {
-			# profit = 550 (6.4)
-			building_employment_laborers_add = 4500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_lathe = {
+REPLACE_OR_CREATE:pm_lathe = {
 	texture = "gfx/interface/icons/production_method_icons/lathes.dds"
 	unlocking_technologies = {
 		lathe
@@ -31,16 +30,10 @@ pm_lathe = {
 			# output goods
 			goods_output_furniture_add = 80
 		}
-		level_scaled = {
-			# profit = 950 (8.8)
-			building_employment_laborers_add = 3500
-			building_employment_machinists_add = 1000
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_mechanized_workshops = {
+REPLACE_OR_CREATE:pm_mechanized_workshops = {
 	texture = "gfx/interface/icons/production_method_icons/mechanized_workshops.dds"
 	unlocking_technologies = {
 		mechanized_workshops
@@ -58,12 +51,6 @@ pm_mechanized_workshops = {
 			goods_input_tools_add = 10
 			# output goods
 			goods_output_furniture_add = 100
-		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
 		}
 	}
 }

@@ -1,4 +1,4 @@
-﻿pm_early_power_plant = {
+﻿REPLACE_OR_CREATE:pm_early_power_plant = {
 	texture = "gfx/interface/icons/production_method_icons/power_plant.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -19,7 +19,7 @@
 	}
 }
 
-pm_coal-fired_plant = {
+REPLACE_OR_CREATE:pm_coal-fired_plant = {
 	texture = "gfx/interface/icons/production_method_icons/coal_fired_plant.dds"
 	unlocking_technologies = {
 		steam_turbine
@@ -42,7 +42,7 @@ pm_coal-fired_plant = {
 	}
 }
 
-pm_oil-fired_plant = {
+REPLACE_OR_CREATE:pm_oil-fired_plant = {
 	texture = "gfx/interface/icons/production_method_icons/oil_fired_plant.dds"
 	unlocking_technologies = {
 		oil_turbine

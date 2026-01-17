@@ -1,16 +1,12 @@
-﻿ig_trait_solidarity = {
-	icon = "gfx/interface/icons/ig_trait_icons/solidarity.dds"
+﻿REPLACE:ig_trait_solidarity = {
 	min_approval = loyal
-	
 	modifier = {
 		state_working_adult_ratio_add = 0.1
 	}
 }
 
-ig_trait_industrial_organizers = {
-	icon = "gfx/interface/icons/ig_trait_icons/industrial_organizers.dds"
+REPLACE:ig_trait_industrial_organizers = {
 	min_approval = happy
-	
 	modifier = {
 		building_group_bg_extraction_throughput_add = 0.1
 		building_group_bg_manufacturing_throughput_add = 0.1
@@ -19,10 +15,8 @@ ig_trait_industrial_organizers = {
 	}
 }
 
-ig_trait_work_to_rule = {
-	icon = "gfx/interface/icons/ig_trait_icons/work_to_rule.dds"
+REPLACE:ig_trait_work_to_rule = {
 	max_approval = unhappy
-	
 	modifier = {
 		building_group_bg_extraction_throughput_add = -0.2
 		building_group_bg_manufacturing_throughput_add = -0.2

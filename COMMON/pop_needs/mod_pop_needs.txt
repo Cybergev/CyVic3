@@ -2,7 +2,7 @@
 # weight					The base weight that is applied to this good based on market Sell Order share
 # max_supply_share			The maximum weight that can be applied to this good based on market Sell Order share, relative supply above this amount will have no further impact on base weight
 # min_supply_share			If above 0, a minimum of this multiplier of the base weight will be applied to a good regardless of its market Sell Order share
-popneed_heating = {
+REPLACE:popneed_heating = {
 	default = wood
 	entry = {
 		goods = wood
@@ -36,7 +36,7 @@ popneed_heating = {
 	}
 }
 
-popneed_basic_food = {
+REPLACE:popneed_basic_food = {
 	default = groceries
 	entry = {
 		goods = groceries
@@ -76,7 +76,7 @@ popneed_basic_food = {
 	}
 }
 
-popneed_luxury_food = {
+REPLACE:popneed_luxury_food = {
 	default = groceries
 	entry = {
 		goods = groceries
@@ -110,7 +110,7 @@ popneed_luxury_food = {
 	}
 }
 
-popneed_intoxicants = {
+REPLACE:popneed_intoxicants = {
 	default = liquor
 	entry = {
 		goods = liquor
@@ -138,7 +138,7 @@ popneed_intoxicants = {
 	}
 }
 
-popneed_luxury_drinks = {
+REPLACE:popneed_luxury_drinks = {
 	default = wine
 	entry = {
 		goods = wine
@@ -166,7 +166,7 @@ popneed_luxury_drinks = {
 	}
 }
 
-popneed_simple_clothing = {
+REPLACE:popneed_simple_clothing = {
 	default = fabric
 	entry = {
 		goods = fabric
@@ -182,7 +182,7 @@ popneed_simple_clothing = {
 	}
 }
 
-popneed_crude_items = {
+REPLACE:popneed_crude_items = {
 	default = wood
 	entry = {
 		goods = wood
@@ -204,7 +204,7 @@ popneed_crude_items = {
 	}
 }
 
-popneed_household_items = {
+REPLACE:popneed_household_items = {
 	default = furniture
 	entry = {
 		goods = furniture
@@ -226,7 +226,7 @@ popneed_household_items = {
 	}
 }
 
-popneed_luxury_items = {
+REPLACE:popneed_luxury_items = {
 	default = porcelain
 	entry = {
 		goods = automobiles
@@ -272,7 +272,7 @@ popneed_luxury_items = {
 	}
 }
 
-popneed_standard_clothing = {
+REPLACE:popneed_standard_clothing = {
 	default = clothes
 	entry = {
 		goods = clothes
@@ -288,7 +288,7 @@ popneed_standard_clothing = {
 	}
 }
 
-popneed_free_movement = {
+REPLACE:popneed_free_movement = {
 	default = transportation
 	entry = {
 		goods = transportation
@@ -310,7 +310,7 @@ popneed_free_movement = {
 	}
 }
 
-popneed_communication = {
+REPLACE:popneed_communication = {
 	default = transportation
 	entry = {
 		goods = transportation
@@ -338,7 +338,7 @@ popneed_communication = {
 	}
 }
 
-popneed_leisure = {
+REPLACE:popneed_leisure = {
 	default = services
 	entry = {
 		goods = services

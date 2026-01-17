@@ -1,0 +1,17 @@
+﻿country_institution_workplace_safety_size_change_speed_mult = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+country_institution_cost_institution_workplace_safety_mult = {
+	decimals = 1
+	color = bad
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}

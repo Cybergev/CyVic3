@@ -1,4 +1,8 @@
-﻿pm_handsewn_clothes = {
+﻿REPLACE_OR_CREATE:pm_no_clothes = {
+	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
+}
+
+REPLACE_OR_CREATE:pm_handsewn_clothes = {
 	texture = "gfx/interface/icons/production_method_icons/handsewn_clothes.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -7,15 +11,10 @@
 			# output goods
 			goods_output_clothes_add = 40
 		}
-		level_scaled = {
-			# profit = 550 (6.3)
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 4500
-		}
 	}
 }
 
-pm_dye_workshops = {
+REPLACE_OR_CREATE:pm_dye_workshops = {
 	texture = "gfx/interface/icons/production_method_icons/dye_workshops.dds"
 	unlocking_technologies = {
 		lathe
@@ -28,16 +27,10 @@ pm_dye_workshops = {
 			# output goods
 			goods_output_clothes_add = 60
 		}
-		level_scaled = {
-			# profit = 800 (8.8)
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 4000
-			building_employment_machinists_add = 500
-		}
 	}
 }
 
-pm_sewing_machines = {
+REPLACE_OR_CREATE:pm_sewing_machines = {
 	texture = "gfx/interface/icons/production_method_icons/sewing_machines.dds"
 	unlocking_technologies = {
 		mechanized_workshops
@@ -51,17 +44,10 @@ pm_sewing_machines = {
 			# output goods
 			goods_output_clothes_add = 80
 		}
-		level_scaled = {
-			# profit = 1000
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 3500
-			building_employment_machinists_add = 750
-			building_employment_engineers_add = 250
-		}
 	}
 }
 
-pm_electric_sewing_machines = {
+REPLACE_OR_CREATE:pm_electric_sewing_machines = {
 	texture = "gfx/interface/icons/production_method_icons/electric_sewing_machines.dds"
 	unlocking_technologies = {
 		electrical_capacitors
@@ -75,13 +61,6 @@ pm_electric_sewing_machines = {
 			goods_input_electricity_add = 10
 			# output goods
 			goods_output_clothes_add = 100
-		}
-		level_scaled = {
-			# profit = 1300
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
 		}
 	}
 	required_input_goods = electricity

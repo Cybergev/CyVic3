@@ -1,4 +1,4 @@
-﻿pm_wooden_buildings = {
+﻿REPLACE_OR_CREATE:pm_wooden_buildings = {
 	texture = "gfx/interface/icons/production_method_icons/wooden_buildings.dds"
 	is_default = yes
 	country_modifiers = {
@@ -31,7 +31,7 @@
 	}
 }
 
-pm_iron_frame_buildings = {
+REPLACE_OR_CREATE:pm_iron_frame_buildings = {
 	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
 	unlocking_technologies = {
 		urban_planning
@@ -68,7 +68,7 @@ pm_iron_frame_buildings = {
 	}
 }
 
-pm_steel_frame_buildings = {
+REPLACE_OR_CREATE:pm_steel_frame_buildings = {
 	texture = "gfx/interface/icons/production_method_icons/steel_frame_buildings.dds"
 	unlocking_technologies = {
 		steel_frame_buildings
@@ -106,7 +106,7 @@ pm_steel_frame_buildings = {
 	}
 }
 
-pm_arc_welded_buildings = {
+REPLACE_OR_CREATE:pm_arc_welded_buildings = {
 	texture = "gfx/interface/icons/production_method_icons/arc_welded_buildings.dds"
 	unlocking_technologies = {
 		arc_welding

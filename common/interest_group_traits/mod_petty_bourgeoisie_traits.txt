@@ -1,5 +1,4 @@
-﻿ig_trait_treasury_bonds = {
-	icon = "gfx/interface/icons/ig_trait_icons/treasury_bonds.dds"
+﻿REPLACE:ig_trait_treasury_bonds = {
 	min_approval = loyal
 	modifier = {
 		country_loan_interest_rate_mult = -0.1
@@ -7,8 +6,7 @@
 	}
 }
 
-ig_trait_middle_managers = {
-	icon = "gfx/interface/icons/ig_trait_icons/middle_managers.dds"
+REPLACE:ig_trait_middle_managers = {
 	min_approval = happy
 	modifier = {
 		building_group_bg_government_throughput_add = 0.1
@@ -16,8 +14,7 @@ ig_trait_middle_managers = {
 	}
 }
 
-ig_trait_xenophobia = {
-	icon = "gfx/interface/icons/ig_trait_icons/xenophobia.dds"
+REPLACE:ig_trait_xenophobia = {
 	max_approval = unhappy
 	modifier = {
 		state_migration_pull_mult = -0.2
@@ -27,20 +24,16 @@ ig_trait_xenophobia = {
 	}
 }
 
-ig_trait_old_lady_of_threadneedle_street = {
-	icon = "gfx/interface/icons/ig_trait_icons/treasury_bonds.dds"
+REPLACE:ig_trait_old_lady_of_threadneedle_street = {
 	min_approval = loyal
-	
 	modifier = {
 		country_loan_interest_rate_mult = -0.2
 		country_gold_reserve_limit_mult = 0.2
 	}
 }
 
-ig_trait_civil_service = {
-	icon = "gfx/interface/icons/ig_trait_icons/middle_managers.dds"
+REPLACE:ig_trait_civil_service = {
 	min_approval = happy
-	
 	modifier = {
 		country_bureaucracy_mult = 0.1
 		country_authority_mult = 0.1

@@ -1,4 +1,4 @@
-﻿grant_leadership_to_agitator = {
+﻿REPLACE_OR_CREATE:grant_leadership_to_agitator = {
 	icon = "gfx/interface/character_panel/grant_command_not.dds"
 	clicksound = "event:/sfx/dlc/1.3_ip1/ui/agitator_promote"
 	potential = {
@@ -86,7 +86,7 @@
 	}
 }
 
-grant_command_to_agitator = {
+REPLACE_OR_CREATE:grant_command_to_agitator = {
 	icon = "gfx/interface/character_panel/grant_command.dds"
 	clicksound = "event:/sfx/ui/military/command_grant"
 	potential = {
@@ -151,7 +151,7 @@ grant_command_to_agitator = {
 	}
 }
 
-foster_national_agitation = {
+REPLACE_OR_CREATE:foster_national_agitation = {
 	potential = {
 		is_in_exile_pool = no
 		has_role = agitator
@@ -239,7 +239,7 @@ foster_national_agitation = {
 	}
 }
 
-invite_exile = {
+REPLACE_OR_CREATE:invite_exile = {
 	# icon = ""
 	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
 	# checks against actor country scope and skips the interaction completely if false, before even looking at any characters
@@ -420,7 +420,7 @@ invite_exile = {
 	}
 }
 
-exile_character = {
+REPLACE_OR_CREATE:exile_character = {
 	clicksound = "event:/sfx/dlc/1.3_ip1/ui/exile_character"
 	potential = {
 		is_in_exile_pool = no
@@ -750,7 +750,7 @@ exile_character = {
 	}
 }
 
-return_to_home_country = {
+REPLACE_OR_CREATE:return_to_home_country = {
 	potential = {
 		is_in_exile_pool = no
 		has_role = agitator
@@ -794,7 +794,7 @@ return_to_home_country = {
 	}
 }
 
-abdicate_monarch = {
+REPLACE_OR_CREATE:abdicate_monarch = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_republican.dds"
 	clicksound = "event:/sfx/ui/military/command_grant"
 	potential = {
@@ -948,7 +948,7 @@ abdicate_monarch = {
 	}
 }
 
-resign_from_office = {
+REPLACE_OR_CREATE:resign_from_office = {
 	clicksound = "event:/sfx/ui/military/command_grant"
 	potential = {
 		has_dlc_feature = voice_of_the_people_content
@@ -1100,7 +1100,7 @@ resign_from_office = {
 	}
 }
 
-retire_commander = {
+REPLACE_OR_CREATE:retire_commander = {
 	# icon = ""
 	clicksound = "event:/sfx/ui/military/commander_retire"
 	potential = {
@@ -1254,7 +1254,7 @@ retire_commander = {
 	}
 }
 
-change_ig_party_status = {
+REPLACE_OR_CREATE:change_ig_party_status = {
 	# icon = ""
 	clicksound = "event:/sfx/ui/military/command_grant"
 	potential = {
@@ -1293,7 +1293,7 @@ change_ig_party_status = {
 	}
 }
 
-political_purge = {
+REPLACE_OR_CREATE:political_purge = {
 	clicksound = "event:/sfx/dlc/1.3_ip1/ui/exile_character"
 	potential = {
 		owner = scope:actor

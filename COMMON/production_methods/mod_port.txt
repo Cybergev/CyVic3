@@ -1,4 +1,4 @@
-﻿pm_anchorage = {
+﻿REPLACE_OR_CREATE:pm_anchorage = {
 	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
 	low_pop_method = yes	# AI will activate this method for states with low population
 	building_modifiers = {
@@ -16,7 +16,7 @@
 	}
 }
 
-pm_basic_port = {
+REPLACE_OR_CREATE:pm_basic_port = {
 	texture = "gfx/interface/icons/production_method_icons/basic_port.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -40,7 +40,7 @@ pm_basic_port = {
 	}
 }
 
-pm_industrial_port = {
+REPLACE_OR_CREATE:pm_industrial_port = {
 	texture = "gfx/interface/icons/production_method_icons/industrial_port.dds"
 	unlocking_technologies = {
 		gantry_cranes
@@ -68,7 +68,7 @@ pm_industrial_port = {
 	}
 }
 
-pm_modern_port = {
+REPLACE_OR_CREATE:pm_modern_port = {
 	texture = "gfx/interface/icons/production_method_icons/modern_port.dds"
 	unlocking_technologies = {
 		concrete_dockyards

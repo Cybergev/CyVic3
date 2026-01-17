@@ -1,4 +1,4 @@
-﻿principle_external_trade_1 = {
+﻿REPLACE:principle_external_trade_1 = {
 	icon = "gfx/interface/icons/principles_icons/external_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	member_modifier = {
@@ -38,7 +38,7 @@
 	}
 }
 
-principle_external_trade_2 = {
+REPLACE:principle_external_trade_2 = {
 	icon = "gfx/interface/icons/principles_icons/external_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	member_modifier = {
@@ -50,7 +50,7 @@ principle_external_trade_2 = {
 	}
 }
 
-principle_external_trade_3 = {
+REPLACE:principle_external_trade_3 = {
 	icon = "gfx/interface/icons/principles_icons/external_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	member_modifier = {
@@ -64,7 +64,7 @@ principle_external_trade_3 = {
 	}
 }
 
-principle_internal_trade_1 = {
+REPLACE:principle_internal_trade_1 = {
 	icon = "gfx/interface/icons/principles_icons/internal_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	power_bloc_modifier = {
@@ -96,7 +96,7 @@ principle_internal_trade_1 = {
 	}
 }
 
-principle_internal_trade_2 = {
+REPLACE:principle_internal_trade_2 = {
 	icon = "gfx/interface/icons/principles_icons/internal_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	power_bloc_modifier = {
@@ -111,7 +111,7 @@ principle_internal_trade_2 = {
 	}
 }
 
-principle_internal_trade_3 = {
+REPLACE:principle_internal_trade_3 = {
 	icon = "gfx/interface/icons/principles_icons/internal_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	power_bloc_modifier = {
@@ -126,7 +126,7 @@ principle_internal_trade_3 = {
 	}
 }
 
-principle_market_unification_1 = {
+REPLACE:principle_market_unification_1 = {
 	icon = "gfx/interface/icons/principles_icons/market_unification.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	visible = {
@@ -150,7 +150,7 @@ principle_market_unification_1 = {
 	}
 }
 
-principle_market_unification_2 = {
+REPLACE:principle_market_unification_2 = {
 	icon = "gfx/interface/icons/principles_icons/market_unification.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	power_bloc_modifier = {
@@ -165,7 +165,7 @@ principle_market_unification_2 = {
 	}
 }
 
-principle_market_unification_3 = {
+REPLACE:principle_market_unification_3 = {
 	icon = "gfx/interface/icons/principles_icons/market_unification.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	power_bloc_modifier = {
@@ -180,7 +180,7 @@ principle_market_unification_3 = {
 	}
 }
 
-principle_transport_1 = {
+REPLACE:principle_transport_1 = {
 	icon = "gfx/interface/icons/principles_icons/transport.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	visible = {
@@ -214,7 +214,7 @@ principle_transport_1 = {
 	}
 }
 
-principle_transport_2 = {
+REPLACE:principle_transport_2 = {
 	icon = "gfx/interface/icons/principles_icons/transport.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	member_modifier = {
@@ -226,7 +226,7 @@ principle_transport_2 = {
 	}
 }
 
-principle_transport_3 = {
+REPLACE:principle_transport_3 = {
 	icon = "gfx/interface/icons/principles_icons/transport.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	member_modifier = {
@@ -238,7 +238,7 @@ principle_transport_3 = {
 	}
 }
 
-principle_construction_1 = {
+REPLACE:principle_construction_1 = {
 	icon = "gfx/interface/icons/principles_icons/construction.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	visible = {
@@ -272,7 +272,7 @@ principle_construction_1 = {
 	}
 }
 
-principle_construction_2 = {
+REPLACE:principle_construction_2 = {
 	icon = "gfx/interface/icons/principles_icons/construction.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	member_modifier = {
@@ -284,7 +284,7 @@ principle_construction_2 = {
 	}
 }
 
-principle_construction_3 = {
+REPLACE:principle_construction_3 = {
 	icon = "gfx/interface/icons/principles_icons/construction.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	member_modifier = {
@@ -296,7 +296,7 @@ principle_construction_3 = {
 	}
 }
 
-principle_food_standardization_1 = {
+REPLACE:principle_food_standardization_1 = {
 	icon = "gfx/interface/icons/principles_icons/food_standardization.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	visible = {
@@ -307,7 +307,6 @@ principle_food_standardization_1 = {
 		building_group_bg_ranching_throughput_add = 0.02
 		building_group_bg_plantations_throughput_add = 0.02
 		building_food_industry_throughput_add = 0.02
-		building_canning_industry_throughput_add = 0.02
 		building_distillation_plants_throughput_add = 0.02
 	}
 	ai_weight = {
@@ -334,7 +333,7 @@ principle_food_standardization_1 = {
 	}
 }
 
-principle_food_standardization_2 = {
+REPLACE:principle_food_standardization_2 = {
 	icon = "gfx/interface/icons/principles_icons/food_standardization.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	member_modifier = {
@@ -342,7 +341,6 @@ principle_food_standardization_2 = {
 		building_group_bg_ranching_throughput_add = 0.05
 		building_group_bg_plantations_throughput_add = 0.05
 		building_food_industry_throughput_add = 0.05
-		building_canning_industry_throughput_add = 0.05
 		building_distillation_plants_throughput_add = 0.05
 	}
 	ai_weight = {
@@ -350,7 +348,7 @@ principle_food_standardization_2 = {
 	}
 }
 
-principle_food_standardization_3 = {
+REPLACE:principle_food_standardization_3 = {
 	icon = "gfx/interface/icons/principles_icons/food_standardization.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	member_modifier = {
@@ -358,7 +356,6 @@ principle_food_standardization_3 = {
 		building_group_bg_ranching_throughput_add = 0.1
 		building_group_bg_plantations_throughput_add = 0.1
 		building_food_industry_throughput_add = 0.1
-		building_canning_industry_throughput_add = 0.1
 		building_distillation_plants_throughput_add = 0.1
 	}
 	ai_weight = {
@@ -366,7 +363,7 @@ principle_food_standardization_3 = {
 	}
 }
 
-principle_freedom_of_movement_1 = {
+REPLACE:principle_freedom_of_movement_1 = {
 	icon = "gfx/interface/icons/principles_icons/freedom_of_movement.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	visible = {
@@ -429,7 +426,7 @@ principle_freedom_of_movement_1 = {
 	}
 }
 
-principle_freedom_of_movement_2 = {
+REPLACE:principle_freedom_of_movement_2 = {
 	icon = "gfx/interface/icons/principles_icons/freedom_of_movement.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	power_bloc_modifier = {
@@ -445,7 +442,7 @@ principle_freedom_of_movement_2 = {
 	}
 }
 
-principle_freedom_of_movement_3 = {
+REPLACE:principle_freedom_of_movement_3 = {
 	icon = "gfx/interface/icons/principles_icons/freedom_of_movement.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	power_bloc_modifier = {
@@ -461,7 +458,7 @@ principle_freedom_of_movement_3 = {
 	}
 }
 
-principle_advanced_research_1 = {
+REPLACE:principle_advanced_research_1 = {
 	icon = "gfx/interface/icons/principles_icons/advanced_research.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	visible = {
@@ -505,7 +502,7 @@ principle_advanced_research_1 = {
 	}
 }
 
-principle_advanced_research_2 = {
+REPLACE:principle_advanced_research_2 = {
 	icon = "gfx/interface/icons/principles_icons/advanced_research.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	member_modifier = {
@@ -526,7 +523,7 @@ principle_advanced_research_2 = {
 	}
 }
 
-principle_advanced_research_3 = {
+REPLACE:principle_advanced_research_3 = {
 	icon = "gfx/interface/icons/principles_icons/advanced_research.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	member_modifier = {
@@ -547,7 +544,7 @@ principle_advanced_research_3 = {
 	}
 }
 
-principle_ideological_truth_1 = {
+REPLACE:principle_ideological_truth_1 = {
 	icon = "gfx/interface/icons/principles_icons/ideological_truth.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	visible = {
@@ -583,7 +580,7 @@ principle_ideological_truth_1 = {
 	}
 }
 
-principle_ideological_truth_2 = {
+REPLACE:principle_ideological_truth_2 = {
 	icon = "gfx/interface/icons/principles_icons/ideological_truth.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	institution = institution_home_affairs
@@ -601,7 +598,7 @@ principle_ideological_truth_2 = {
 	}
 }
 
-principle_ideological_truth_3 = {
+REPLACE:principle_ideological_truth_3 = {
 	icon = "gfx/interface/icons/principles_icons/ideological_truth.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	institution = institution_home_affairs
@@ -619,7 +616,7 @@ principle_ideological_truth_3 = {
 	}
 }
 
-principle_creative_legislature_1 = {
+REPLACE:principle_creative_legislature_1 = {
 	icon = "gfx/interface/icons/principles_icons/creative_legislature.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	visible = {
@@ -643,7 +640,7 @@ principle_creative_legislature_1 = {
 	}
 }
 
-principle_creative_legislature_2 = {
+REPLACE:principle_creative_legislature_2 = {
 	icon = "gfx/interface/icons/principles_icons/creative_legislature.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	member_modifier = {
@@ -654,7 +651,7 @@ principle_creative_legislature_2 = {
 	}
 }
 
-principle_creative_legislature_3 = {
+REPLACE:principle_creative_legislature_3 = {
 	icon = "gfx/interface/icons/principles_icons/creative_legislature.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	member_modifier = {
@@ -666,7 +663,7 @@ principle_creative_legislature_3 = {
 	}
 }
 
-principle_police_coordination_1 = {
+REPLACE:principle_police_coordination_1 = {
 	icon = "gfx/interface/icons/principles_icons/dedicated_police.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	visible = {
@@ -711,7 +708,7 @@ principle_police_coordination_1 = {
 	}
 }
 
-principle_police_coordination_2 = {
+REPLACE:principle_police_coordination_2 = {
 	icon = "gfx/interface/icons/principles_icons/dedicated_police.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	member_modifier = {
@@ -731,7 +728,7 @@ principle_police_coordination_2 = {
 	}
 }
 
-principle_police_coordination_3 = {
+REPLACE:principle_police_coordination_3 = {
 	icon = "gfx/interface/icons/principles_icons/dedicated_police.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	member_modifier = {
@@ -751,7 +748,7 @@ principle_police_coordination_3 = {
 	}
 }
 
-principle_military_industry_1 = {
+REPLACE:principle_military_industry_1 = {
 	icon = "gfx/interface/icons/principles_icons/military_industry.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	visible = {
@@ -791,7 +788,7 @@ principle_military_industry_1 = {
 	}
 }
 
-principle_military_industry_2 = {
+REPLACE:principle_military_industry_2 = {
 	icon = "gfx/interface/icons/principles_icons/military_industry.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	member_modifier = {
@@ -808,7 +805,7 @@ principle_military_industry_2 = {
 	}
 }
 
-principle_military_industry_3 = {
+REPLACE:principle_military_industry_3 = {
 	icon = "gfx/interface/icons/principles_icons/military_industry.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	member_modifier = {
@@ -826,7 +823,7 @@ principle_military_industry_3 = {
 	}
 }
 
-principle_aggressive_coordination_1 = {
+REPLACE:principle_aggressive_coordination_1 = {
 	icon = "gfx/interface/icons/principles_icons/aggressive_coordination.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	visible = {
@@ -866,7 +863,7 @@ principle_aggressive_coordination_1 = {
 	}
 }
 
-principle_aggressive_coordination_2 = {
+REPLACE:principle_aggressive_coordination_2 = {
 	icon = "gfx/interface/icons/principles_icons/aggressive_coordination.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	member_modifier = {
@@ -881,7 +878,7 @@ principle_aggressive_coordination_2 = {
 	}
 }
 
-principle_aggressive_coordination_3 = {
+REPLACE:principle_aggressive_coordination_3 = {
 	icon = "gfx/interface/icons/principles_icons/aggressive_coordination.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	power_bloc_modifier = {
@@ -901,7 +898,7 @@ principle_aggressive_coordination_3 = {
 	}
 }
 
-principle_vassalization_1 = {
+REPLACE:principle_vassalization_1 = {
 	icon = "gfx/interface/icons/principles_icons/vassals_subjects.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	visible = {
@@ -935,7 +932,7 @@ principle_vassalization_1 = {
 	}
 }
 
-principle_vassalization_2 = {
+REPLACE:principle_vassalization_2 = {
 	icon = "gfx/interface/icons/principles_icons/vassals_subjects.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	institution = institution_colonial_affairs
@@ -951,7 +948,7 @@ principle_vassalization_2 = {
 	}
 }
 
-principle_vassalization_3 = {
+REPLACE:principle_vassalization_3 = {
 	icon = "gfx/interface/icons/principles_icons/vassals_subjects.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	institution = institution_colonial_affairs
@@ -967,7 +964,7 @@ principle_vassalization_3 = {
 	}
 }
 
-principle_colonial_offices_1 = {
+REPLACE:principle_colonial_offices_1 = {
 	icon = "gfx/interface/icons/principles_icons/colonial_offices.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	visible = {
@@ -1008,7 +1005,7 @@ principle_colonial_offices_1 = {
 	}
 }
 
-principle_colonial_offices_2 = {
+REPLACE:principle_colonial_offices_2 = {
 	icon = "gfx/interface/icons/principles_icons/colonial_offices.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	member_modifier = {
@@ -1029,7 +1026,7 @@ principle_colonial_offices_2 = {
 	}
 }
 
-principle_colonial_offices_3 = {
+REPLACE:principle_colonial_offices_3 = {
 	icon = "gfx/interface/icons/principles_icons/colonial_offices.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	member_modifier = {

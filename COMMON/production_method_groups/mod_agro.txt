@@ -1,4 +1,4 @@
-﻿pmg_base_building_farm = {
+﻿REPLACE_OR_CREATE:pmg_base_building_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_simple_farming
@@ -8,7 +8,7 @@
 	}
 }
 
-pmg_secondary_building_farm = {
+REPLACE_OR_CREATE:pmg_secondary_building_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_no_sugar
@@ -19,7 +19,7 @@ pmg_secondary_building_farm = {
 	}
 }
 
-pmg_tertiary_building_farm = {
+REPLACE_OR_CREATE:pmg_tertiary_building_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_no_orchards
@@ -30,18 +30,7 @@ pmg_tertiary_building_farm = {
 	}
 }
 
-pmg_harvesting_process_building_farm = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_tools_disabled
-		pm_tools
-		pm_steam_threshers
-		pm_tractors
-		pm_compression_ignition_tractors
-	}
-}
-
-pmg_base_building_rice_farm = {
+REPLACE_OR_CREATE:pmg_base_building_rice_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_simple_farming_building_rice_farm
@@ -51,7 +40,7 @@ pmg_base_building_rice_farm = {
 	}
 }
 
-pmg_secondary_building_rice_farm = {
+REPLACE_OR_CREATE:pmg_secondary_building_rice_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_no_sugar
@@ -62,7 +51,7 @@ pmg_secondary_building_rice_farm = {
 	}
 }
 
-pmg_tertiary_building_rice_farm = {
+REPLACE_OR_CREATE:pmg_tertiary_building_rice_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_no_orchards
@@ -70,16 +59,5 @@ pmg_tertiary_building_rice_farm = {
 		pm_soil_enriching_orchards_building_rice_farm
 		pm_fertilization_orchards_building_rice_farm
 		pm_chemical_fertilizer_orchards_building_rice_farm
-	}
-}
-
-pmg_harvesting_process_building_rice_farm = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_tools_disabled
-		pm_tools_building_rice_farm
-		pm_steam_threshers_building_rice_farm
-		pm_tractors_building_rice_farm
-		pm_compression_ignition_tractors_building_rice_farm
 	}
 }

@@ -1,0 +1,5 @@
+﻿############ GOVERNMENT BUILDINGS
+
+INJECT:building_construction_sector = {
+	required_construction = 100
+}

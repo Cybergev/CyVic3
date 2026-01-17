@@ -1,5 +1,5 @@
 ﻿NDiplomacy = {
-	BASE_YEARLY_INFAMY_DECAY_RATE = 6
+	BASE_YEARLY_INFAMY_DECAY_RATE = 12
 	WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR = 10000	# The amount of population by which the factor below is multiplied
 	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER = 0.02	# For each WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR population in a country/state, multiply infamy by this
 	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE = 2	# Infamy population multiplier can't be higher than this for each state affected
@@ -25,6 +25,8 @@ NEconomy = {
 	COUNTRY_GDP_MODIFIER_MAX_MULTIPLIER = 1000000000
 	ECONOMY_OF_SCALE_START_LEVEL = 1	# Level at which buildings start getting economy of scale bonuses. Levels lower than this value provide no bonus [>=1]
 	ECONOMY_OF_SCALE_NATIONALIZED_FRACTION_MULT = 0	# Non-government building economy of scale modifier if multiplied by (1 - the fraction of nationalized levels * this)
+	MIN_GOODS_PRICE = 1	# A good cannot have a lower base price than this
+	PRICE_RANGE = 0.99999	# min price of a good is base * (1 - PRICE_RANGE), Max price is base * (1 + PRICE_RANGE), PRICE_RANGE is locked to [0-1]
 	GOLD_RESERVE_LIMIT_FACTOR = 0.5	# The base factor of annual GDP that should be provided as a Gold Reserve
 	OVERSEAS_INFRASTRUCTURE_CONVOY_COST_MULTIPLIER = 1	# Convoy cost for each infrastructure usage in overseas state for port connection shipping lanes
 	COMPANY_ON_ESTABLISH_COOLDOWN_MONTHS = 12	# Cooldown in months after establishing a company before you can disband it
@@ -42,10 +44,10 @@ NPowerBlocs = {
 }
 
 NPops = {
-	ASSIMILATION_RATE = 0.02	# Percentage of pops who will Assimilate into a different Culture each month, if eligible
-	MIN_ASSIMILATION = 25	# If there is any assmiliation at least this many people will assimilate
-	CONVERSION_RATE = 0.02	# Percentage of pops who will Convert into a different Religion each month, if eligible
-	MIN_CONVERSION = 25	# If there is any conversion at least this many people will convert
+	ASSIMILATION_RATE = 0.01	# Percentage of pops who will Assimilate into a different Culture each month, if eligible
+	MIN_ASSIMILATION = 100	# If there is any assmiliation at least this many people will assimilate
+	CONVERSION_RATE = 0.01	# Percentage of pops who will Convert into a different Religion each month, if eligible
+	MIN_CONVERSION = 100	# If there is any conversion at least this many people will convert
 	@starvation_threshold = 0.5
 	@starvation_scaling_factor = @[1/starvation_threshold]
 	FOOD_SECURITY_STARVATION_THRESHOLD = @starvation_threshold	# If Food Security is lower than this, the pop is considered to be in a starving state

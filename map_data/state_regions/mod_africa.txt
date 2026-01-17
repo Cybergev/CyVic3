@@ -9,12 +9,12 @@ STATE_ERITREA = {
     mine = "x64B77C"
     wood = "x59AB39"
     arable_land = 30
-    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" }
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" "building_sugar_plantation" }
     capped_resources = {
-        bg_iron_mining = 10
-        bg_sulfur_mining = 10
-        bg_lead_mining = 10
-        bg_fishing = 5
+        building_iron_mine = 10
+        building_sulfur_mine = 10
+        building_lead_mine = 10
+        building_fishing_wharf = 5
     }
     naval_exit_id = 3047
 }
@@ -29,13 +29,13 @@ STATE_GONDER = {
     mine = "xC040E0"
     wood = "x489309"
     arable_land = 160
-    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" }
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" }
     capped_resources = {
-        bg_coal_mining = 15
-        bg_logging = 23
+        building_coal_mine = 15
+        building_logging_camp = 23
     }
     resource = {
-        type = "bg_rubber"
+        type = "building_rubber_plantation"
         undiscovered_amount = 22
     }
 }
@@ -51,13 +51,13 @@ STATE_AMHARA = {
     mine = "x5D4889"
     wood = "xFE53F8"
     arable_land = 140
-    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" }
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" }
     capped_resources = {
-        bg_coal_mining = 20
-        bg_logging = 20
+        building_coal_mine = 20
+        building_logging_camp = 20
     }
     resource = {
-        type = "bg_rubber"
+        type = "building_rubber_plantation"
         undiscovered_amount = 26
     }
 }
@@ -73,16 +73,16 @@ STATE_OROMIA = {
     mine = "x869C8E"
     wood = "xCE40EE"
     arable_land = 130
-    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_vineyard" }
     capped_resources = {
-        bg_logging = 11
+        building_logging_camp = 11
     }
     resource = {
-        type = "bg_rubber"
+        type = "building_rubber_plantation"
         undiscovered_amount = 28
     }
     resource = {
-        type = "bg_oil_extraction"
+        type = "building_oil_rig"
         undiscovered_amount = 10
     }
 }
@@ -98,11 +98,11 @@ STATE_SOMALILAND = {
     mine = "x58307A"
     wood = "xDEFB4F"
     arable_land = 80
-    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_tea_plantations" "bg_vineyard_plantations" }
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_tea_plantation" "building_vineyard" }
     capped_resources = {
-        bg_iron_mining = 20
-        bg_sulfur_mining = 10
-        bg_fishing = 15
+        building_iron_mine = 20
+        building_sulfur_mine = 10
+        building_fishing_wharf = 15
     }
     naval_exit_id = 3018
 }

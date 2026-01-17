@@ -1,6 +1,7 @@
-﻿pmg_base_building_food_industry = {
+﻿REPLACE_OR_CREATE:pmg_base_building_food_industry = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
+		pm_disabled_baking
 		pm_bakery
 		pm_sweeteners
 		pm_fruit_sweeteners
@@ -9,9 +10,10 @@
 	}
 }
 
-pmg_canning = {
+REPLACE_OR_CREATE:pmg_canning = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
+		pm_disabled_canning
 		pm_cannery_meat
 		pm_cannery_fish
 		pm_cannery_all

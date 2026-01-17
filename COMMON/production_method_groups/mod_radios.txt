@@ -1,4 +1,4 @@
-﻿pmg_radios = {
+﻿REPLACE_OR_CREATE:pmg_radios = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_radios

@@ -1,21 +1,16 @@
-﻿
-# Starting techs for the cutting edge Western powers - Britain, America, France, Belgium etc
-
-effect_starting_technology_tier_1_tech = {
+﻿# Starting techs for the cutting edge Western powers - Britain, America, France, Belgium etc
+REPLACE_OR_CREATE:effect_starting_technology_tier_1_tech = {
 	add_era_researched = era_1
-
 	# Economic
 	add_technology_researched = railways
 	add_technology_researched = intensive_agriculture
 	add_technology_researched = mechanical_tools
 	add_technology_researched = atmospheric_engine
-
 	# Military	
 	add_technology_researched = screw_frigate
 	add_technology_researched = general_staff
 	add_technology_researched = percussion_cap
 	add_technology_researched = power_of_the_purse
-
 	# Cultural
 	add_technology_researched = dialectics
 	add_technology_researched = central_archives
@@ -25,15 +20,12 @@ effect_starting_technology_tier_1_tech = {
 }
 
 # Starting techs for advanced European and American powers - Austria, Prussia, Sweden etc
-
-effect_starting_technology_tier_2_tech = {
+REPLACE_OR_CREATE:effect_starting_technology_tier_2_tech = {
 	add_era_researched = era_1
 }
 
 # Starting techs for backwards European and American powers - Spain, Sicily, Russia
-
-effect_starting_technology_tier_3_tech = {
-
+REPLACE_OR_CREATE:effect_starting_technology_tier_3_tech = {
 	# Economic
 	add_technology_researched = enclosure
 	add_technology_researched = manufacturies
@@ -42,7 +34,6 @@ effect_starting_technology_tier_3_tech = {
 	add_technology_researched = steelworking
 	add_technology_researched = prospecting
 	add_technology_researched = cotton_gin
-	
 	# Military	
 	add_technology_researched = military_drill
 	add_technology_researched = standing_army
@@ -54,7 +45,6 @@ effect_starting_technology_tier_3_tech = {
 	add_technology_researched = mandatory_service
 	add_technology_researched = army_reserves
 	add_technology_researched = line_infantry
-
 	# Cultural
 	add_technology_researched = urbanization
 	add_technology_researched = rationalism
@@ -73,9 +63,7 @@ effect_starting_technology_tier_3_tech = {
 }
 
 # Starting techs for most unrecognized nations and very backwards European powers (Ottomans, etc)
-
-effect_starting_technology_tier_4_tech = {
-
+REPLACE_OR_CREATE:effect_starting_technology_tier_4_tech = {
 	# Economic
 	add_technology_researched = enclosure
 	add_technology_researched = manufacturies
@@ -83,7 +71,6 @@ effect_starting_technology_tier_4_tech = {
 	add_technology_researched = shaft_mining
 	add_technology_researched = distillation
 	add_technology_researched = prospecting
-
 	# Military
 	add_technology_researched = military_drill
 	add_technology_researched = standing_army
@@ -92,7 +79,6 @@ effect_starting_technology_tier_4_tech = {
 	add_technology_researched = gunsmithing
 	add_technology_researched = artillery
 	add_technology_researched = drydocks
-
 	# Cultural
 	add_technology_researched = urbanization
 	add_technology_researched = rationalism
@@ -105,17 +91,15 @@ effect_starting_technology_tier_4_tech = {
 }
 
 # Very backwards centralized powers
-effect_starting_technology_tier_5_tech = {	
+REPLACE_OR_CREATE:effect_starting_technology_tier_5_tech = {
 	# Economic
 	add_technology_researched = enclosure
 	add_technology_researched = manufacturies
 	add_technology_researched = shaft_mining
-	
 	# Military
 	add_technology_researched = standing_army
 	add_technology_researched = military_drill
 	add_technology_researched = navigation
-	
 	# Cultural
 	add_technology_researched = urbanization
 	add_technology_researched = rationalism
@@ -124,19 +108,15 @@ effect_starting_technology_tier_5_tech = {
 }
 
 # Decentralized countries with organized armies, extremely backwards centralized powers
-effect_starting_technology_tier_6_tech = {	
+REPLACE_OR_CREATE:effect_starting_technology_tier_6_tech = {
 	# Economic
 	add_technology_researched = enclosure
-	
 	# Military
 	add_technology_researched = standing_army
-	
 	# Cultural
 	add_technology_researched = urbanization
 }
 
 # Decentralized countries with no technology
-effect_starting_technology_tier_7_tech = {
+REPLACE_OR_CREATE:effect_starting_technology_tier_7_tech = {
 }
-
-

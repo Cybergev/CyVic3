@@ -1,4 +1,4 @@
-﻿pm_market_stalls = {
+﻿REPLACE_OR_CREATE:pm_market_stalls = {
 	texture = "gfx/interface/icons/production_method_icons/market_stalls.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -11,7 +11,7 @@
 	}
 }
 
-pm_market_squares = {
+REPLACE_OR_CREATE:pm_market_squares = {
 	texture = "gfx/interface/icons/production_method_icons/market_squares.dds"
 	unlocking_technologies = {
 		urban_planning
@@ -29,7 +29,7 @@ pm_market_squares = {
 	}
 }
 
-pm_covered_markets = {
+REPLACE_OR_CREATE:pm_covered_markets = {
 	texture = "gfx/interface/icons/production_method_icons/covered_markets.dds"
 	unlocking_technologies = {
 		steel_frame_buildings
@@ -47,7 +47,7 @@ pm_covered_markets = {
 	}
 }
 
-pm_arcades = {
+REPLACE_OR_CREATE:pm_arcades = {
 	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
 	unlocking_technologies = {
 		elevator
@@ -64,12 +64,12 @@ pm_arcades = {
 	}
 }
 
-pm_no_street_lighting = {
+REPLACE_OR_CREATE:pm_no_street_lighting = {
 	texture = "gfx/interface/icons/production_method_icons/no_street_lighting.dds"
 	city_lights_color_index = 0	# Needs to match city_graphics_data.settings color array
 }
 
-pm_gas_streetlights = {
+REPLACE_OR_CREATE:pm_gas_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/gas_streetlights.dds"
 	city_lights_color_index = 1	# Needs to match city_graphics_data.settings color array
 	unlocking_technologies = {
@@ -82,7 +82,7 @@ pm_gas_streetlights = {
 	}
 }
 
-pm_electric_streetlights = {
+REPLACE_OR_CREATE:pm_electric_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
 	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
 	unlocking_technologies = {
@@ -97,11 +97,11 @@ pm_electric_streetlights = {
 	required_input_goods = electricity
 }
 
-pm_no_public_transport = {
+REPLACE_OR_CREATE:pm_no_public_transport = {
 	texture = "gfx/interface/icons/production_method_icons/no_public_transport.dds"
 }
 
-pm_public_trams = {
+REPLACE_OR_CREATE:pm_public_trams = {
 	texture = "gfx/interface/icons/production_method_icons/public_trams.dds"
 	unlocking_technologies = {
 		railways
@@ -126,7 +126,7 @@ pm_public_trams = {
 	}
 }
 
-pm_public_motor_carriages = {
+REPLACE_OR_CREATE:pm_public_motor_carriages = {
 	texture = "gfx/interface/icons/production_method_icons/public_motor_carriages.dds"
 	unlocking_technologies = {
 		combustion_engine
@@ -151,11 +151,11 @@ pm_public_motor_carriages = {
 	}
 }
 
-pm_no_passenger_trains = {
+REPLACE_OR_CREATE:pm_no_passenger_trains = {
 	texture = "gfx/interface/icons/production_method_icons/no_passenger_trains.dds"
 }
 
-pm_wooden_passenger_carriages = {
+REPLACE_OR_CREATE:pm_wooden_passenger_carriages = {
 	texture = "gfx/interface/icons/production_method_icons/passenger_trains.dds"
 	unlocking_technologies = {
 		railways
@@ -179,7 +179,7 @@ pm_wooden_passenger_carriages = {
 	}
 }
 
-pm_steel_passenger_carriages = {
+REPLACE_OR_CREATE:pm_steel_passenger_carriages = {
 	texture = "gfx/interface/icons/production_method_icons/passenger_carriages.dds"
 	unlocking_technologies = {
 		steel_railway_cars
@@ -203,7 +203,7 @@ pm_steel_passenger_carriages = {
 	}
 }
 
-pm_state_urban_clergy = {
+REPLACE_OR_CREATE:pm_state_urban_clergy = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
 	unlocking_laws = {
 		law_state_religion
@@ -215,7 +215,7 @@ pm_state_urban_clergy = {
 	}
 }
 
-pm_free_urban_clergy = {
+REPLACE_OR_CREATE:pm_free_urban_clergy = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
 	disallowing_laws = {
 		law_state_religion
@@ -228,7 +228,7 @@ pm_free_urban_clergy = {
 	}
 }
 
-pm_no_urban_clergy = {
+REPLACE_OR_CREATE:pm_no_urban_clergy = {
 	texture = "gfx/interface/icons/production_method_icons/state_atheism.dds"
 	unlocking_laws = {
 		law_state_atheism

@@ -1,19 +1,14 @@
-﻿pm_simple_fishing = {
+﻿REPLACE_OR_CREATE:pm_simple_fishing = {
 	texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
 	building_modifiers = {
 		workforce_scaled = {
 			# output
 			goods_output_fish_add = 50
 		}
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = 4500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_fishing_trawlers = {
+REPLACE_OR_CREATE:pm_fishing_trawlers = {
 	texture = "gfx/interface/icons/production_method_icons/trawlers.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -22,16 +17,10 @@ pm_fishing_trawlers = {
 			# output
 			goods_output_fish_add = 100
 		}
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = 4000
-			building_employment_machinists_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_steam_trawlers = {
+REPLACE_OR_CREATE:pm_steam_trawlers = {
 	texture = "gfx/interface/icons/production_method_icons/steam_trawlers.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -49,16 +38,10 @@ pm_steam_trawlers = {
 			# output
 			goods_output_fish_add = 150
 		}
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = 4000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_disel_trawlers = {
+REPLACE_OR_CREATE:pm_disel_trawlers = {
 	texture = "gfx/interface/icons/production_method_icons/steam_trawlers.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -75,12 +58,6 @@ pm_disel_trawlers = {
 			goods_input_steamers_add = 10
 			# output
 			goods_output_fish_add = 200
-		}
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = 4000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
 		}
 	}
 }

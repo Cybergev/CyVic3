@@ -9,11 +9,11 @@
     mine = "x45F99B"
     wood = "x09AC69"
     arable_land = 5
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_sulfur_mining = 60
-        bg_whaling = 5
-        bg_fishing = 3
+        building_sulfur_mine = 60
+        building_whaling_station = 5
+        building_fishing_wharf = 3
     }
     naval_exit_id = 3022
 }
@@ -29,13 +29,13 @@ STATE_SVEALAND = {
     mine = "x6F40EC"
     wood = "x4C9918"
     arable_land = 30
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_coal_mining = 20
-        bg_iron_mining = 40
-        bg_lead_mining = 20
-        bg_logging = 23
-        bg_fishing = 11
+        building_coal_mine = 20
+        building_iron_mine = 40
+        building_lead_mine = 20
+        building_logging_camp = 23
+        building_fishing_wharf = 11
     }
     naval_exit_id = 3000
 }
@@ -51,12 +51,12 @@ STATE_GOTALAND = {
     mine = "xA67CC8"
     wood = "xEA7E80"
     arable_land = 35
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_coal_mining = 15
-        bg_iron_mining = 15
-        bg_logging = 17
-        bg_fishing = 15
+        building_coal_mine = 15
+        building_iron_mine = 15
+        building_logging_camp = 17
+        building_fishing_wharf = 15
     }
     naval_exit_id = 3019
 }
@@ -72,11 +72,11 @@ STATE_SCANIA = {
     mine = "xFBA406"
     wood = "xD19738"
     arable_land = 20
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_coal_mining = 20
-        bg_logging = 5
-        bg_fishing = 10
+        building_coal_mine = 20
+        building_logging_camp = 5
+        building_fishing_wharf = 10
     }
     naval_exit_id = 3019
 }
@@ -92,14 +92,14 @@ STATE_NORRLAND = {
     mine = "xD5FBFC"
     wood = "x420C00"
     arable_land = 22
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "building_livestock_ranch" }
     capped_resources = {
-        bg_coal_mining = 40
-        bg_iron_mining = 60
-        bg_lead_mining = 20
-        bg_gold_mining = 5
-        bg_logging = 20
-        bg_fishing = 12
+        building_coal_mine = 40
+        building_iron_mine = 60
+        building_lead_mine = 20
+        building_gold_mine = 5
+        building_logging_camp = 20
+        building_fishing_wharf = 12
     }
     naval_exit_id = 3000
 }
@@ -113,10 +113,10 @@ STATE_GOTLAND = {
     port = "x21C0E0"
     farm = "xF93B61"
     arable_land = 3
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_logging = 2
-        bg_fishing = 3
+        building_logging_camp = 2
+        building_fishing_wharf = 3
     }
     naval_exit_id = 3000
 }
@@ -132,13 +132,13 @@ STATE_WESTERN_NORWAY = {
     mine = "x608020"
     wood = "x608020"
     arable_land = 20
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_coal_mining = 20
-        bg_sulfur_mining = 20
-        bg_iron_mining = 20
-        bg_logging = 14
-        bg_fishing = 15
+        building_coal_mine = 20
+        building_sulfur_mine = 20
+        building_iron_mine = 20
+        building_logging_camp = 14
+        building_fishing_wharf = 15
     }
     naval_exit_id = 3027
 }
@@ -155,14 +155,14 @@ STATE_NORTHERN_NORWAY = {
     mine = "xB50EB0"
     wood = "x042C26"
     arable_land = 20
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "building_livestock_ranch" }
     capped_resources = {
-        bg_coal_mining = 60
-        bg_iron_mining = 40
-        bg_sulfur_mining = 20
-        bg_logging = 6
-        bg_whaling = 10
-        bg_fishing = 10
+        building_coal_mine = 60
+        building_iron_mine = 40
+        building_sulfur_mine = 20
+        building_logging_camp = 6
+        building_whaling_station = 10
+        building_fishing_wharf = 10
     }
     naval_exit_id = 3020
 }
@@ -178,12 +178,12 @@ STATE_EASTERN_NORWAY = {
     mine = "x49B529"
     wood = "x1255CC"
     arable_land = 20
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_coal_mining = 40
-        bg_iron_mining = 40
-        bg_logging = 11
-        bg_fishing = 5
+        building_coal_mine = 40
+        building_iron_mine = 40
+        building_logging_camp = 11
+        building_fishing_wharf = 5
     }
     naval_exit_id = 3019
 }
@@ -192,7 +192,6 @@ STATE_OULU = {
     id = 804
     subsistence_building = "building_subsistence_farms"
     provinces = { "x003DC2" "x0193AC" "x04ACCE" "x05C9D5" "x06CB86" "x098AD4" "x09ACC3" "x09E7C8" "x100DE3" "x12D5CC" "x14E25A" "x15D36E" "x193FE3" "x199FCA" "x1ADDF7" "x1D75EA" "x1DCF7F" "x1F98EC" "x22A760" "x25E6DB" "x2A9B33" "x2C00E3" "x2D6585" "x2DCFFF" "x31A599" "x31BE08" "x31F14B" "x326999" "x331F4E" "x35660F" "x35F442" "x39FFFD" "x3CF11A" "x3DE2C5" "x3DFFE2" "x407CB4" "x40B01E" "x40C69F" "x40EC6F" "x41B925" "x41D99D" "x420121" "x45734E" "x45C196" "x4C423D" "x4C8DA2" "x4FFAB9" "x511691" "x51D315" "x55FBB0" "x56D667" "x58107D" "x582BE1" "x58DADD" "x5A2E3F" "x5BA0C6" "x5D6094" "x6073DE" "x634F6A" "x657C52" "x6B44F2" "x6E6888" "x73B0EE" "x73B911" "x743757" "x75CD93" "x76BD66" "x7BFD0A" "x81EB90" "x827FC4" "x84C17D" "x84C20E" "x870682" "x8EC6E7" "x8FABCB" "x90A5A7" "x917130" "x938C81" "x96B319" "x9AB681" "x9AE86E" "x9BB647" "x9E4B4E" "xA0C000" "xA29D5A" "xA40B1E" "xA52381" "xA8B626" "xA8D2B9" "xA9BAEB" "xAB98EE" "xAD5504" "xAD8817" "xAD965E" "xB16417" "xB29B34" "xB36B8F" "xB3923B" "xB84B48" "xBCEB2E" "xBF4702" "xC0F405" "xC15DED" "xC21442" "xC38A5B" "xCAEF23" "xCB04BB" "xCCDC03" "xCEC631" "xCEEBD6" "xD249FD" "xD70C51" "xDAADD6" "xDB0F8C" "xE08080" "xE0C6EC" "xE30145" "xE37E57" "xE4FD8C" "xE798B3" "xE7E8FB" "xE803B4" "xEA6156" "xEC1FAF" "xEDB9FD" "xEE71BD" "xF5DEDB" "xF82995" "xF99D80" "xFB8899" "xFD8980" "xFDCD89" "xFE27F7" "xFEF24A" }
-    impassable = {}
     traits = { "state_trait_scandinavian_forests" }
     city = "xB84B48"
     port = "x1ADDF7"
@@ -200,12 +199,12 @@ STATE_OULU = {
     mine = "x73B911"
     wood = "x9AB681"
     arable_land = 8
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_coal_mining = 40
-        bg_iron_mining = 40
-        bg_logging = 56
-        bg_fishing = 10
+        building_coal_mine = 40
+        building_iron_mine = 40
+        building_logging_camp = 56
+        building_fishing_wharf = 10
     }
     naval_exit_id = 3000
 }
@@ -214,7 +213,6 @@ STATE_KOLA = {
     id = 805
     subsistence_building = "building_subsistence_farms"
     provinces = { "x0066B6" "x038388" "x042B4C" "x118D75" "x1390FF" "x13F6B8" "x1453D6" "x149AC1" "x14D2FF" "x157479" "x183954" "x1859FC" "x187B70" "x1ACA0E" "x1AD735" "x1B744E" "x1D3DC6" "x21D9DE" "x237C68" "x2BC8DE" "x2FBF05" "x2FD568" "x31D1C2" "x330917" "x335F68" "x33F3E9" "x3499C5" "x39271C" "x3A92CB" "x3DE633" "x427893" "x524940" "x526537" "x534146" "x57190F" "x5728CF" "x58F3E7" "x59ACFE" "x5A43E7" "x5A4AAB" "x5BC5FF" "x5FEE86" "x63FFF5" "x65167C" "x70D145" "x70D1FB" "x71CC9D" "x73FFD0" "x772BFF" "x77C525" "x78B65B" "x7E97C8" "x7F3B28" "x7F854D" "x8969D9" "x8A9DB3" "x8D7FEC" "x8FC731" "x91984B" "x9281D4" "x93E684" "x95A9E4" "x96AD41" "xA04000" "xA09A15" "xA1F95E" "xA2AAB3" "xA36134" "xA46459" "xA6AFFD" "xA7D0B4" "xAD410A" "xAF87D1" "xB42A73" "xB6A456" "xB85907" "xB904C3" "xBA39B1" "xBD6B78" "xC571B7" "xC575FD" "xC5C353" "xC6A932" "xC6D9A5" "xCB15D6" "xCB5F10" "xCB6CAD" "xCCB3A0" "xCD5877" "xCF26A1" "xD0C711" "xD98ED6" "xDBED6F" "xDCBC28" "xDF1F54" "xE01B42" "xE229D5" "xEDCD34" "xEF00EC" "xF2B11C" "xF2B2C8" "xF2BD0B" "xF42377" "xF475D7" "xF7D6E2" "xF7F846" "xFAD2A2" "xFC6114" "xFD1CCF" "xFF66FF" }
-    impassable = {}
     traits = { "state_trait_scandinavian_forests" }
     city = "x91984B"
     port = "xF2B2C8"
@@ -222,13 +220,13 @@ STATE_KOLA = {
     mine = "xE229D5"
     wood = "xA09A15"
     arable_land = 2
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_coal_mining = 50
-        bg_iron_mining = 100
-        bg_sulfur_mining = 20
-        bg_logging = 25
-        bg_fishing = 10
+        building_coal_mine = 50
+        building_iron_mine = 100
+        building_sulfur_mine = 20
+        building_logging_camp = 25
+        building_fishing_wharf = 10
     }
     naval_exit_id = 3039
 }
@@ -241,10 +239,10 @@ STATE_ALAND = {
     port = "x459052"
     farm = "x459052"
     arable_land = 2
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_logging = 2
-        bg_fishing = 2
+        building_logging_camp = 2
+        building_fishing_wharf = 2
     }
     naval_exit_id = 3000
 }
@@ -260,12 +258,12 @@ STATE_OSTROBOTHNIA = {
     mine = "x993955"
     wood = "x3DBB6E"
     arable_land = 15
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_coal_mining = 10
-        bg_lead_mining = 10
-        bg_logging = 25
-        bg_fishing = 10
+        building_coal_mine = 10
+        building_lead_mine = 10
+        building_logging_camp = 25
+        building_fishing_wharf = 10
     }
     naval_exit_id = 3000
 }
@@ -279,12 +277,12 @@ STATE_KUOPIO = {
     mine = "x51CC44"
     wood = "xED8DC6"
     arable_land = 25
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     traits = { "state_trait_scandinavian_forests" }
     capped_resources = {
-        bg_coal_mining = 15
-        bg_iron_mining = 15
-        bg_logging = 42
+        building_coal_mine = 15
+        building_iron_mine = 15
+        building_logging_camp = 42
     }
     naval_exit_id = 3000
 }
@@ -300,13 +298,13 @@ STATE_UUSIMAA = {
     mine = "xAFE141"
     wood = "x61C0E0"
     arable_land = 32
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_coal_mining = 10
-        bg_iron_mining = 10
-        bg_lead_mining = 10
-        bg_logging = 36
-        bg_fishing = 8
+        building_coal_mine = 10
+        building_iron_mine = 10
+        building_lead_mine = 10
+        building_logging_camp = 36
+        building_fishing_wharf = 8
     }
     naval_exit_id = 3000
 }
@@ -322,12 +320,12 @@ STATE_WEST_KARELIA = {
     mine = "xAD3FF9"
     wood = "x934610"
     arable_land = 22
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_coal_mining = 20
-        bg_iron_mining = 20
-        bg_logging = 28
-        bg_fishing = 2
+        building_coal_mine = 20
+        building_iron_mine = 20
+        building_logging_camp = 28
+        building_fishing_wharf = 2
     }
     naval_exit_id = 3000
 }
@@ -343,12 +341,12 @@ STATE_EAST_KARELIA = {
     mine = "xA857F6"
     wood = "xB7363A"
     arable_land = 10
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_coal_mining = 20
-        bg_iron_mining = 20
-        bg_logging = 30
-        bg_fishing = 5
+        building_coal_mine = 20
+        building_iron_mine = 20
+        building_logging_camp = 30
+        building_fishing_wharf = 5
     }
     naval_exit_id = 3039
 }

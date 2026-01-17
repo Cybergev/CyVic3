@@ -1,4 +1,4 @@
-﻿european_culture_check = {
+﻿REPLACE_OR_CREATE:european_culture_check = {
 	or = {
 		#romance languages
 		country_has_primary_culture = cu:north_italian
@@ -68,7 +68,7 @@
 	}
 }
 
-ideology_communist_valid_trigger = {
+REPLACE_OR_CREATE:ideology_communist_valid_trigger = {
 	nor = {
 		is_interest_group_type = ig_devout
 		is_interest_group_type = ig_industrialists
@@ -76,7 +76,7 @@ ideology_communist_valid_trigger = {
 	}
 }
 
-ideology_vanguardist_valid_trigger = {
+REPLACE_OR_CREATE:ideology_vanguardist_valid_trigger = {
 	nor = {
 		is_interest_group_type = ig_devout
 		is_interest_group_type = ig_industrialists

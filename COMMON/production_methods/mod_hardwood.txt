@@ -1,4 +1,4 @@
-﻿pm_hardwood = {
+﻿REPLACE_OR_CREATE:pm_hardwood = {
 	texture = "gfx/interface/icons/production_method_icons/hardwood_selection_mod.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -13,14 +13,10 @@
 			# output goods
 			goods_output_hardwood_add = 50
 		}
-		level_scaled = {
-			building_employment_laborers_add = 4500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_increased_hardwood = {
+REPLACE_OR_CREATE:pm_increased_hardwood = {
 	texture = "gfx/interface/icons/production_method_icons/increased_hardwood_mod.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -36,12 +32,6 @@ pm_increased_hardwood = {
 			goods_input_wood_add = 100
 			# output goods
 			goods_output_hardwood_add = 100
-		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
 		}
 	}
 }

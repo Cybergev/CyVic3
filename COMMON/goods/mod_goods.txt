@@ -1,7 +1,7 @@
 ﻿##########
 # STAPLE #
 ##########
-merchant_marine = {
+REPLACE:merchant_marine = {
 	texture = "gfx/interface/icons/goods_icons/merchant_marine.dds"
 	cost = 50
 	category = staple
@@ -11,7 +11,7 @@ merchant_marine = {
 	consumption_tax_cost = 100
 }
 
-liquor = {
+REPLACE:liquor = {
 	texture = "gfx/interface/icons/goods_icons/liquor.dds"
 	cost = 40
 	category = staple
@@ -22,7 +22,7 @@ liquor = {
 	consumption_tax_cost = 200
 }
 
-groceries = {
+REPLACE:groceries = {
 	texture = "gfx/interface/icons/goods_icons/groceries.dds"
 	cost = 40
 	category = staple
@@ -32,7 +32,7 @@ groceries = {
 	consumption_tax_cost = 400
 }
 
-services = {
+REPLACE:services = {
 	texture = "gfx/interface/icons/goods_icons/services.dds"
 	cost = 10
 	category = staple
@@ -42,7 +42,7 @@ services = {
 	consumption_tax_cost = 100
 }
 
-transportation = {
+REPLACE:transportation = {
 	texture = "gfx/interface/icons/goods_icons/transportation.dds"
 	cost = 10
 	category = staple
@@ -52,7 +52,7 @@ transportation = {
 	consumption_tax_cost = 100
 }
 
-paper = {
+REPLACE:paper = {
 	texture = "gfx/interface/icons/goods_icons/paper.dds"
 	cost = 30
 	category = staple
@@ -61,7 +61,7 @@ paper = {
 	convoy_cost_multiplier = 0.5
 }
 
-furniture = {
+REPLACE:furniture = {
 	texture = "gfx/interface/icons/goods_icons/furniture.dds"
 	cost = 30
 	category = staple
@@ -70,7 +70,7 @@ furniture = {
 	convoy_cost_multiplier = 0.5
 }
 
-clothes = {
+REPLACE:clothes = {
 	texture = "gfx/interface/icons/goods_icons/clothes.dds"
 	cost = 30
 	category = staple
@@ -80,7 +80,7 @@ clothes = {
 	consumption_tax_cost = 200
 }
 
-electricity = {
+REPLACE:electricity = {
 	texture = "gfx/interface/icons/goods_icons/electricity.dds"
 	cost = 20
 	category = staple
@@ -89,7 +89,7 @@ electricity = {
 	consumption_tax_cost = 200
 }
 
-wood = {
+REPLACE:wood = {
 	texture = "gfx/interface/icons/goods_icons/wood.dds"
 	cost = 20
 	category = staple
@@ -99,7 +99,7 @@ wood = {
 	consumption_tax_cost = 200
 }
 
-fabric = {
+REPLACE:abric = {
 	texture = "gfx/interface/icons/goods_icons/fabric.dds"
 	cost = 20
 	category = staple
@@ -109,7 +109,7 @@ fabric = {
 	consumption_tax_cost = 200
 }
 
-meat = {
+REPLACE:meat = {
 	texture = "gfx/interface/icons/goods_icons/meat.dds"
 	cost = 40
 	category = staple
@@ -120,7 +120,7 @@ meat = {
 	consumption_tax_cost = 400
 }
 
-fish = {
+REPLACE:fish = {
 	texture = "gfx/interface/icons/goods_icons/fish.dds"
 	cost = 40
 	category = staple
@@ -130,7 +130,7 @@ fish = {
 	consumption_tax_cost = 400
 }
 
-grain = {
+REPLACE:grain = {
 	texture = "gfx/interface/icons/goods_icons/grain.dds"
 	cost = 20
 	category = staple
@@ -140,7 +140,7 @@ grain = {
 	consumption_tax_cost = 400
 }
 
-sugar = {
+REPLACE:sugar = {
 	texture = "gfx/interface/icons/goods_icons/sugar.dds"
 	cost = 20
 	category = staple
@@ -150,7 +150,7 @@ sugar = {
 	convoy_cost_multiplier = 0.25
 }
 
-fruit = {
+REPLACE:fruit = {
 	texture = "gfx/interface/icons/goods_icons/fruit.dds"
 	cost = 20
 	category = staple
@@ -163,7 +163,7 @@ fruit = {
 ##########
 # LUXURY #
 ##########
-automobiles = {
+REPLACE:automobiles = {
 	texture = "gfx/interface/icons/goods_icons/automobiles.dds"
 	cost = 200
 	category = luxury
@@ -174,7 +174,7 @@ automobiles = {
 	pop_consumption_can_add_infrastructure = yes
 }
 
-telephones = {
+REPLACE:telephones = {
 	texture = "gfx/interface/icons/goods_icons/telephones.dds"
 	cost = 100
 	category = luxury
@@ -183,7 +183,7 @@ telephones = {
 	convoy_cost_multiplier = 0.5
 }
 
-radios = {
+REPLACE:radios = {
 	texture = "gfx/interface/icons/goods_icons/radios.dds"
 	cost = 100
 	category = luxury
@@ -192,7 +192,7 @@ radios = {
 	convoy_cost_multiplier = 0.5
 }
 
-porcelain = {
+REPLACE:porcelain = {
 	texture = "gfx/interface/icons/goods_icons/porcelain.dds"
 	cost = 50
 	category = luxury
@@ -202,7 +202,7 @@ porcelain = {
 	convoy_cost_multiplier = 0.5
 }
 
-luxury_furniture = {
+REPLACE:luxury_furniture = {
 	texture = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
 	cost = 50
 	category = luxury
@@ -212,7 +212,7 @@ luxury_furniture = {
 	convoy_cost_multiplier = 0.5
 }
 
-luxury_clothes = {
+REPLACE:luxury_clothes = {
 	texture = "gfx/interface/icons/goods_icons/luxury_clothes.dds"
 	cost = 50
 	category = luxury
@@ -222,7 +222,7 @@ luxury_clothes = {
 	convoy_cost_multiplier = 0.5
 }
 
-fine_art = {
+REPLACE:fine_art = {
 	texture = "gfx/interface/icons/goods_icons/fine_art.dds"
 	cost = 40
 	category = luxury
@@ -231,7 +231,7 @@ fine_art = {
 	convoy_cost_multiplier = 0.25
 }
 
-wine = {
+REPLACE:wine = {
 	texture = "gfx/interface/icons/goods_icons/wine.dds"
 	cost = 40
 	category = luxury
@@ -241,7 +241,7 @@ wine = {
 	convoy_cost_multiplier = 0.25
 }
 
-opium = {
+REPLACE:opium = {
 	texture = "gfx/interface/icons/goods_icons/opium.dds"
 	cost = 20
 	category = luxury
@@ -251,7 +251,7 @@ opium = {
 	convoy_cost_multiplier = 0.25
 }
 
-tobacco = {
+REPLACE:tobacco = {
 	texture = "gfx/interface/icons/goods_icons/tobacco.dds"
 	cost = 20
 	category = luxury
@@ -261,7 +261,7 @@ tobacco = {
 	convoy_cost_multiplier = 0.25
 }
 
-tea = {
+REPLACE:tea = {
 	texture = "gfx/interface/icons/goods_icons/tea.dds"
 	cost = 20
 	category = luxury
@@ -271,7 +271,7 @@ tea = {
 	convoy_cost_multiplier = 0.25
 }
 
-coffee = {
+REPLACE:coffee = {
 	texture = "gfx/interface/icons/goods_icons/coffee.dds"
 	cost = 20
 	category = luxury
@@ -284,7 +284,7 @@ coffee = {
 ##############
 # INDUSTRIAL #
 ##############
-steamers = {
+REPLACE:steamers = {
 	texture = "gfx/interface/icons/goods_icons/steamers.dds"
 	cost = 300
 	category = industrial
@@ -294,7 +294,7 @@ steamers = {
 	convoy_cost_multiplier = 0
 }
 
-clippers = {
+REPLACE:clippers = {
 	texture = "gfx/interface/icons/goods_icons/clippers.dds"
 	cost = 200
 	category = industrial
@@ -304,7 +304,7 @@ clippers = {
 	convoy_cost_multiplier = 0
 }
 
-engines = {
+REPLACE:engines = {
 	texture = "gfx/interface/icons/goods_icons/locomotives.dds"
 	cost = 50
 	category = industrial
@@ -313,7 +313,7 @@ engines = {
 	convoy_cost_multiplier = 1.5
 }
 
-explosives = {
+REPLACE:explosives = {
 	texture = "gfx/interface/icons/goods_icons/explosives.dds"
 	cost = 40
 	category = industrial
@@ -322,28 +322,28 @@ explosives = {
 	convoy_cost_multiplier = 1.5
 }
 
-dye = {
+REPLACE:dye = {
 	texture = "gfx/interface/icons/goods_icons/dye.dds"
 	cost = 40
 	category = industrial
 	prestige_factor = 4
 }
 
-rubber = {
+REPLACE:rubber = {
 	texture = "gfx/interface/icons/goods_icons/rubber.dds"
 	cost = 40
 	category = industrial
 	prestige_factor = 4
 }
 
-silk = {
+REPLACE:silk = {
 	texture = "gfx/interface/icons/goods_icons/silk.dds"
 	cost = 40
 	category = industrial
 	prestige_factor = 4
 }
 
-fertilizer = {
+REPLACE:fertilizer = {
 	texture = "gfx/interface/icons/goods_icons/fertilizer.dds"
 	cost = 30
 	category = industrial
@@ -351,35 +351,35 @@ fertilizer = {
 	traded_quantity = 7.5
 }
 
-tools = {
+REPLACE:tools = {
 	texture = "gfx/interface/icons/goods_icons/tools.dds"
 	cost = 30
 	category = industrial
 	prestige_factor = 3
 }
 
-steel = {
+REPLACE:steel = {
 	texture = "gfx/interface/icons/goods_icons/steel.dds"
 	cost = 30
 	category = industrial
 	prestige_factor = 3
 }
 
-glass = {
+REPLACE:glass = {
 	texture = "gfx/interface/icons/goods_icons/glass.dds"
 	cost = 30
 	category = industrial
 	prestige_factor = 3
 }
 
-hardwood = {
+REPLACE:hardwood = {
 	texture = "gfx/interface/icons/goods_icons/hardwood.dds"
 	cost = 30
 	category = industrial
 	prestige_factor = 3
 }
 
-oil = {
+REPLACE:oil = {
 	texture = "gfx/interface/icons/goods_icons/oil.dds"
 	cost = 40
 	category = industrial
@@ -387,28 +387,28 @@ oil = {
 	consumption_tax_cost = 200
 }
 
-sulfur = {
+REPLACE:sulfur = {
 	texture = "gfx/interface/icons/goods_icons/sulfur.dds"
 	cost = 20
 	category = industrial
 	prestige_factor = 2
 }
 
-lead = {
+REPLACE:lead = {
 	texture = "gfx/interface/icons/goods_icons/lead.dds"
 	cost = 20
 	category = industrial
 	prestige_factor = 2
 }
 
-iron = {
+REPLACE:iron = {
 	texture = "gfx/interface/icons/goods_icons/iron.dds"
 	cost = 20
 	category = industrial
 	prestige_factor = 2
 }
 
-coal = {
+REPLACE:coal = {
 	texture = "gfx/interface/icons/goods_icons/coal.dds"
 	cost = 20
 	category = industrial
@@ -421,7 +421,7 @@ coal = {
 ############
 # MILITARY #
 ############
-ironclads = {
+REPLACE:ironclads = {
 	texture = "gfx/interface/icons/goods_icons/ironclads.dds"
 	cost = 300
 	category = military
@@ -430,7 +430,7 @@ ironclads = {
 	convoy_cost_multiplier = 0
 }
 
-manowars = {
+REPLACE:manowars = {
 	texture = "gfx/interface/icons/goods_icons/man_o_wars.dds"
 	cost = 200
 	category = military
@@ -439,7 +439,7 @@ manowars = {
 	convoy_cost_multiplier = 0
 }
 
-aeroplanes = {
+REPLACE:aeroplanes = {
 	texture = "gfx/interface/icons/goods_icons/aeroplanes.dds"
 	cost = 200
 	category = military
@@ -449,7 +449,7 @@ aeroplanes = {
 	convoy_cost_multiplier = 2
 }
 
-tanks = {
+REPLACE:tanks = {
 	texture = "gfx/interface/icons/goods_icons/tanks.dds"
 	cost = 200
 	category = military
@@ -458,7 +458,7 @@ tanks = {
 	convoy_cost_multiplier = 2
 }
 
-artillery = {
+REPLACE:artillery = {
 	texture = "gfx/interface/icons/goods_icons/artillery.dds"
 	cost = 100
 	category = military
@@ -467,7 +467,7 @@ artillery = {
 	convoy_cost_multiplier = 2
 }
 
-small_arms = {
+REPLACE:small_arms = {
 	texture = "gfx/interface/icons/goods_icons/small_arms.dds"
 	cost = 80
 	category = military
@@ -475,7 +475,7 @@ small_arms = {
 	prestige_factor = 8
 }
 
-ammunition = {
+REPLACE:ammunition = {
 	texture = "gfx/interface/icons/goods_icons/ammunition.dds"
 	cost = 60
 	category = military

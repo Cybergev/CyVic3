@@ -1,4 +1,4 @@
-colors = {
+﻿colors = {
 	armed_forces_color = hsv{ 0.09 0.29 0.39 }
 	devout_color = hsv{ 0.50 0.30 0.67 }
 	industrialists_color = hsv{ 0.06 0.6 0.89 }

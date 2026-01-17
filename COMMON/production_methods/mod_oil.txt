@@ -1,4 +1,4 @@
-﻿pm_steam_derricks = {
+﻿REPLACE_OR_CREATE:pm_steam_derricks = {
 	texture = "gfx/interface/icons/production_method_icons/simple_oil_extraction.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -7,21 +7,14 @@
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			# input goods
 			goods_input_engines_add = 5
 			goods_input_coal_add = 5
-			# output goods
 			goods_output_oil_add = 50
-		}
-		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 4000
-			building_employment_machinists_add = 500
 		}
 	}
 }
 
-pm_combustion_derricks = {
+REPLACE_OR_CREATE:pm_combustion_derricks = {
 	texture = "gfx/interface/icons/production_method_icons/combustion_derricks.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -33,15 +26,8 @@ pm_combustion_derricks = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			# input goods
 			goods_input_engines_add = 10
-			# output goods
 			goods_output_oil_add = 100
-		}
-		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 4000
-			building_employment_engineers_add = 500
 		}
 	}
 }

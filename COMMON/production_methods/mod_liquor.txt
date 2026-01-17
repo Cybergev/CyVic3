@@ -1,4 +1,4 @@
-﻿pm_pot_stills = {
+﻿REPLACE_OR_CREATE:pm_pot_stills = {
 	texture = "gfx/interface/icons/production_method_icons/pot_stills_mod.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -14,15 +14,10 @@
 			# output goods
 			goods_output_liquor_add = 50
 		}
-		level_scaled = {
-			building_employment_laborers_add = 3500
-			building_employment_machinists_add = 1000
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_fruit_pot_stills = {
+REPLACE_OR_CREATE:pm_fruit_pot_stills = {
 	texture = "gfx/interface/icons/production_method_icons/pot_stills_mod.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -38,15 +33,10 @@ pm_fruit_pot_stills = {
 			# output goods
 			goods_output_liquor_add = 50
 		}
-		level_scaled = {
-			building_employment_laborers_add = 3500
-			building_employment_machinists_add = 1000
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_patent_stills = {
+REPLACE_OR_CREATE:pm_patent_stills = {
 	texture = "gfx/interface/icons/production_method_icons/patent_stills_mod.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -64,16 +54,10 @@ pm_patent_stills = {
 			# output goods
 			goods_output_liquor_add = 100
 		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_fruit_patent_stills = {
+REPLACE_OR_CREATE:pm_fruit_patent_stills = {
 	texture = "gfx/interface/icons/production_method_icons/patent_stills_mod.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -90,12 +74,6 @@ pm_fruit_patent_stills = {
 			goods_input_sugar_add = 20
 			# output goods
 			goods_output_liquor_add = 100
-		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
 		}
 	}
 }

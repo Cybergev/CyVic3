@@ -2,11 +2,11 @@
 	war_goal = annex_country
 	texture = "gfx/interface/icons/war_goals/unify_germany.dds"
 	selectable_in_lens = {
-		can_form_nation = USE
+		can_form_nation = EUR
 	}
 	possible = {
 		NOT = {
-			exists = c:USE
+			exists = c:EUR
 		}
 		is_subject = no
 		has_technology_researched = pan-nationalism

@@ -1,4 +1,4 @@
-﻿advance_heavy_barrage = {
+﻿REPLACE:advance_heavy_barrage = {
 	texture = "gfx/interface/icons/commander_order_icons/advance.dds"
 	military_type = army
 	behavior = advance
@@ -48,7 +48,7 @@
 	}
 }
 
-advance_tank_assualt = {
+REPLACE:advance_tank_assualt = {
 	texture = "gfx/interface/icons/commander_order_icons/advance.dds"
 	military_type = army
 	behavior = advance
@@ -84,7 +84,7 @@ advance_tank_assualt = {
 	}
 }
 
-advance_cavalry_assualt = {
+REPLACE:advance_cavalry_assualt = {
 	texture = "gfx/interface/icons/commander_order_icons/advance.dds"
 	military_type = army
 	behavior = advance

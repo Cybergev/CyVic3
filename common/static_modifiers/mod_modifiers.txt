@@ -1,5 +1,5 @@
-#STATIC
-base_values = {
+﻿#STATIC
+REPLACE_OR_CREATE:base_values = {
 	country_loan_interest_rate_add = 0.2
 	country_legitimacy_govt_size_add = 1
 	country_secession_progress_add = 0.1
@@ -44,45 +44,45 @@ base_values = {
 	country_party_whip_impact_add = 0.5
 }
 
-legislative_efficiency = {
+REPLACE_OR_CREATE:legislative_efficiency = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	state_radicals_from_political_movements_mult = -0.5
 	state_loyalists_from_political_movements_mult = 0.5
 }
 
-efficient_bureaucracy = {
+REPLACE_OR_CREATE:efficient_bureaucracy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_government_dividends_efficiency_add = 0.1
 	state_tax_capacity_mult = 0.1
 	building_group_bg_infrastructure_throughput_add = 0.1
 }
 
-administrative_overburden = {
+REPLACE_OR_CREATE:administrative_overburden = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	state_construction_mult = -0.2
 	state_tax_waste_add = 0.2
 	country_government_dividends_waste_add = 0.2
 }
 
-political_dysfunction = {
+REPLACE_OR_CREATE:political_dysfunction = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	country_opposition_ig_approval_add = -10
 	state_radicals_from_political_movements_mult = 0.5
 	state_loyalists_from_political_movements_mult = -0.5
 }
 
-country_literacy_rate = {
+REPLACE_OR_CREATE:country_literacy_rate = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 100
 	country_weekly_innovation_max_add = 100
 	country_tech_spread_add = 100
 }
 
-government_owned_debt = {
+REPLACE_OR_CREATE:government_owned_debt = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 }
 
-diplomatic_mitigation = {
+REPLACE_OR_CREATE:diplomatic_mitigation = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	country_infamy_decay_mult = 1
 	country_improve_relations_speed_mult = 1
@@ -90,7 +90,7 @@ diplomatic_mitigation = {
 	country_leverage_generation_mult = 0.5
 }
 
-declared_bankruptcy = {
+REPLACE_OR_CREATE:declared_bankruptcy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_prestige_mult = -0.5
 	country_loan_interest_rate_mult = 0.5
@@ -100,30 +100,30 @@ declared_bankruptcy = {
 	state_welfare_payments_mult = -1
 }
 
-starvation_penalty = {
+REPLACE_OR_CREATE:starvation_penalty = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	state_birth_rate_mult = -0.5
 	state_mortality_mult = 0.5
 }
 
-severe_starvation_penalty = {
+REPLACE_OR_CREATE:severe_starvation_penalty = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	state_birth_rate_mult = -1
 	state_mortality_mult = 1
 }
 
 # Multiplies unemployment rate in state by this
-unemployment_birth_penalty_state = {
+REPLACE_OR_CREATE:unemployment_birth_penalty_state = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	state_birth_rate_mult = -0.5
 }
 
-literacy_penalty = {
+REPLACE_OR_CREATE:literacy_penalty = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	state_birth_rate_mult = -0.5
 }
 
-low_organization = {
+REPLACE_OR_CREATE:low_organization = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
 	unit_offense_mult = -0.75
 	unit_defense_mult = -0.75
@@ -137,7 +137,7 @@ low_organization = {
 }
 
 #STATIC
-state_turmoil = {
+REPLACE_OR_CREATE:state_turmoil = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	state_tax_waste_add = 0.25
 	state_migration_pull_mult = -0.25
@@ -147,7 +147,7 @@ state_turmoil = {
 }
 
 # Applied if state is above 'high turmoil' threshold
-state_turmoil_high = {
+REPLACE_OR_CREATE:state_turmoil_high = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	state_tax_waste_add = 0.5
 	state_migration_pull_mult = -0.5
@@ -157,7 +157,7 @@ state_turmoil_high = {
 }
 
 # Applied if state is above 'extreme turmoil' threshold
-state_turmoil_extreme = {
+REPLACE_OR_CREATE:state_turmoil_extreme = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	state_tax_waste_add = 0.75
 	state_migration_pull_mult = -0.75
@@ -166,71 +166,78 @@ state_turmoil_extreme = {
 	state_working_adult_ratio_add = -0.75
 }
 
-national_values_promotion = {
+REPLACE_OR_CREATE:national_values_promotion = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_assimilation_mult = 0.1
 	state_conversion_mult = 0.1
-	state_allow_assimilation_in_homeland_bool = yes
 	state_radicalism_increases_violent_hostility_mult = 0.4
 	state_radicalism_increases_cultural_erasure_mult = 0.3
 	state_radicalism_increases_open_prejudice_mult = 0.2
 	state_radicalism_increases_second_rate_citizen_mult = 0.1
+	state_allow_assimilation_in_homeland_bool = yes
 }
 
-homeland_expanded = {
+REPLACE_OR_CREATE:homeland_expanded = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_assimilation_mult = 0.1
 	state_conversion_mult = 0.1
 }
 
-purged_ig = {
+REPLACE_OR_CREATE:purged_ig = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
 	interest_group_approval_add = -10
 	interest_group_pop_attraction_mult = -0.5
 }
 
-changed_ideology = {
+REPLACE_OR_CREATE:changed_ideology = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	character_popularity_add = -100
 }
 
-accepted_movement = {
+REPLACE_OR_CREATE:accepted_movement = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	political_movement_pop_attraction_mult = 1
 }
 
-suppression_colonial_manufacturing_industry_policy = {
+REPLACE_OR_CREATE:suppression_colonial_manufacturing_industry_policy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_liberty_desire_of_subjects_add = 0.25
 }
 
-suppression_colonial_agricultural_industry_policy = {
+REPLACE_OR_CREATE:suppression_colonial_agricultural_industry_policy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_liberty_desire_of_subjects_add = 0.15
 }
 
-suppression_colonial_resource_industry_policy = {
+REPLACE_OR_CREATE:suppression_colonial_resource_industry_policy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_liberty_desire_of_subjects_add = 0.15
 }
 
-suppression_modifier = {
+REPLACE_OR_CREATE:suppression_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	building_throughput_add = -1
-	building_cash_reserves_mult = -1
+	building_throughput_add = -10
+	building_cash_reserves_mult = -10
 	building_economy_of_scale_level_cap_add = -1000
-	building_goods_input_mult = 1
-	building_minimum_wage_mult = -1
-	building_working_conditions_mult = 1
+	building_goods_input_mult = 10
+	building_minimum_wage_mult = -10
+	building_working_conditions_mult = 10
 }
 
-ban_private_construction = {
+REPLACE_OR_CREATE:ban_private_construction = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_private_construction_allocation_mult = -10
 	interest_group_ig_industrialists_approval_add = -10
 	interest_group_ig_landowners_approval_add = -10
-	country_private_construction_allocation_mult = -10
+}
+
+REPLACE_OR_CREATE:ban_privatization = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
 	country_government_dividends_reinvestment_add = -10
+	interest_group_ig_industrialists_approval_add = -10
+	interest_group_ig_landowners_approval_add = -10
 	building_nationalization_investment_return_add = -10
+	country_disable_non_company_privatization_bool = yes
 	state_aristocrats_investment_pool_contribution_add = -10
 	state_aristocrats_investment_pool_efficiency_mult = -10
 	state_capitalists_investment_pool_contribution_add = -10

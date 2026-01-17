@@ -29,7 +29,7 @@
 # |overlord  | direct overlord  | player              | direct overlord   |
 # |          | if it exists     |                     | if it exists      |
 # |----------|------------------|---------------------|-------------------|
-AWS = {
+REPLACE:AWS = {
 	#Aussa
 	flag_definition = {
 		coa = AWS
@@ -148,7 +148,7 @@ EUR = {
 	}
 }
 
-PER = {
+REPLACE:PER = {
 	# Persia
 	flag_definition = {
 		coa = PER
@@ -220,7 +220,7 @@ PER = {
 	}
 }
 
-JAP = {
+REPLACE:JAP = {
 	# Japan
 	flag_definition = {
 		coa = JAP

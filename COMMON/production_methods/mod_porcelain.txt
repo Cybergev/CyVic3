@@ -1,4 +1,4 @@
-﻿pm_ceramics = {
+﻿REPLACE_OR_CREATE:pm_ceramics = {
 	texture = "gfx/interface/icons/production_method_icons/ceramics_mod.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -15,15 +15,10 @@
 			# output goods
 			goods_output_porcelain_add = 80
 		}
-		level_scaled = {
-			building_employment_laborers_add = 3500
-			building_employment_machinists_add = 1000
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_bone_china = {
+REPLACE_OR_CREATE:pm_bone_china = {
 	texture = "gfx/interface/icons/production_method_icons/bone_china_mod.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -41,12 +36,6 @@ pm_bone_china = {
 			goods_input_dye_add = 20
 			# output goods
 			goods_output_porcelain_add = 100
-		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
 		}
 	}
 }

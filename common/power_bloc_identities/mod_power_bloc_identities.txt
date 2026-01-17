@@ -1,4 +1,4 @@
-﻿identity_trade_league = {
+﻿REPLACE:identity_trade_league = {
 	power_bloc_modifier = {
 		power_bloc_customs_union_bool = yes
 		power_bloc_mandate_progress_per_great_power_member_add = 10

@@ -1,4 +1,4 @@
-﻿pmg_serfdom_building_subsistence_farms = {
+﻿REPLACE_OR_CREATE:pmg_serfdom_building_subsistence_farms = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_serfdom
@@ -8,7 +8,7 @@
 	}
 }
 
-pmg_serfdom_building_subsistence_orchards = {
+REPLACE_OR_CREATE:pmg_serfdom_building_subsistence_orchards = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_serfdom
@@ -18,7 +18,7 @@ pmg_serfdom_building_subsistence_orchards = {
 	}
 }
 
-pmg_serfdom_building_subsistence_pastures = {
+REPLACE_OR_CREATE:pmg_serfdom_building_subsistence_pastures = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_serfdom
@@ -28,7 +28,7 @@ pmg_serfdom_building_subsistence_pastures = {
 	}
 }
 
-pmg_serfdom_building_subsistence_fishing_villages = {
+REPLACE_OR_CREATE:pmg_serfdom_building_subsistence_fishing_villages = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_serfdom
@@ -38,12 +38,12 @@ pmg_serfdom_building_subsistence_fishing_villages = {
 	}
 }
 
-pmg_serfdom_building_subsistence_rice_paddies = {
+REPLACE_OR_CREATE:pmg_serfdom_building_subsistence_rice_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_serfdom
 		pm_corvee_labor
 		pm_serfdom_no
-		pm_homesteading_building_subsistence_rice_paddies
+		pm_homesteading_building_subsistence_rice_farm
 	}
 }

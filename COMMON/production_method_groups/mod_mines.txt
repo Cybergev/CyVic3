@@ -1,4 +1,4 @@
-﻿pmg_mining_equipment_building_coal_mine = {
+﻿REPLACE_OR_CREATE:pmg_mining_equipment_building_coal_mine = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_picks_and_shovels_building_coal_mine
@@ -8,24 +8,7 @@
 	}
 }
 
-pmg_explosives_building_coal_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_explosives
-		pm_nitroglycerin_building_coal_mine
-		pm_dynamite_building_coal_mine
-	}
-}
-
-pmg_train_automation_building_coal_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_rail_transport_mine
-	}
-}
-
-pmg_mining_equipment_building_iron_mine = {
+REPLACE_OR_CREATE:pmg_mining_equipment_building_iron_mine = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_picks_and_shovels_building_iron_mine
@@ -35,24 +18,7 @@ pmg_mining_equipment_building_iron_mine = {
 	}
 }
 
-pmg_explosives_building_iron_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_explosives
-		pm_nitroglycerin_building_iron_mine
-		pm_dynamite_building_iron_mine
-	}
-}
-
-pmg_train_automation_building_iron_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_rail_transport_mine
-	}
-}
-
-pmg_mining_equipment_building_lead_mine = {
+REPLACE_OR_CREATE:pmg_mining_equipment_building_lead_mine = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_picks_and_shovels_building_lead_mine
@@ -62,24 +28,7 @@ pmg_mining_equipment_building_lead_mine = {
 	}
 }
 
-pmg_explosives_building_lead_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_explosives
-		pm_nitroglycerin_building_lead_mine
-		pm_dynamite_building_lead_mine
-	}
-}
-
-pmg_train_automation_building_lead_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_rail_transport_mine
-	}
-}
-
-pmg_mining_equipment_building_sulfur_mine = {
+REPLACE_OR_CREATE:pmg_mining_equipment_building_sulfur_mine = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_picks_and_shovels_building_sulfur_mine
@@ -89,24 +38,7 @@ pmg_mining_equipment_building_sulfur_mine = {
 	}
 }
 
-pmg_explosives_building_sulfur_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_explosives
-		pm_nitroglycerin_building_sulfur_mine
-		pm_dynamite_building_sulfur_mine
-	}
-}
-
-pmg_train_automation_building_sulfur_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_rail_transport_mine
-	}
-}
-
-pmg_mining_equipment_building_gold_mine = {
+REPLACE_OR_CREATE:pmg_mining_equipment_building_gold_mine = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_picks_and_shovels_building_gold_mine
@@ -116,26 +48,18 @@ pmg_mining_equipment_building_gold_mine = {
 	}
 }
 
-pmg_explosives_building_gold_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_explosives
-		pm_nitroglycerin_building_gold_mine
-		pm_dynamite_building_gold_mine
-	}
-}
-
-pmg_train_automation_building_gold_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_rail_transport_mine
-	}
-}
-
-pmg_base_building_gold_fields = {
+REPLACE_OR_CREATE:pmg_base_building_gold_fields = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		default_building_gold_fields
+	}
+}
+
+REPLACE_OR_CREATE:pmg_explosives = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_explosives
+		pm_nitroglycerin
+		pm_dynamite
 	}
 }

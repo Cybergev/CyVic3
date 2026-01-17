@@ -1,4 +1,4 @@
-﻿pm_leblanc_process = {
+﻿REPLACE_OR_CREATE:pm_leblanc_process = {
 	texture = "gfx/interface/icons/production_method_icons/leblanc_process.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -12,16 +12,10 @@
 			# output goods
 			goods_output_explosives_add = 60
 		}
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = 4000
-			building_employment_machinists_add = 500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_ammonia-soda_process = {
+REPLACE_OR_CREATE:pm_ammonia-soda_process = {
 	texture = "gfx/interface/icons/production_method_icons/ammonia_soda_process.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -39,16 +33,10 @@ pm_ammonia-soda_process = {
 			# output goods
 			goods_output_explosives_add = 100
 		}
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = 3500
-			building_employment_machinists_add = 1000
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_vacuum_evaporation = {
+REPLACE_OR_CREATE:pm_vacuum_evaporation = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_evaporation.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -66,16 +54,10 @@ pm_vacuum_evaporation = {
 			# output goods
 			goods_output_explosives_add = 160
 		}
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1500
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_brine_electrolysis = {
+REPLACE_OR_CREATE:pm_brine_electrolysis = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_brine_electrolysis.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -93,13 +75,6 @@ pm_brine_electrolysis = {
 			goods_input_electricity_add = 20
 			# output goods
 			goods_output_explosives_add = 200
-		}
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
 		}
 	}
 	required_input_goods = electricity

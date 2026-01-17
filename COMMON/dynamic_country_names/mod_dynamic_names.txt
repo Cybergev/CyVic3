@@ -1,4 +1,4 @@
-﻿JAP = {
+﻿REPLACE_OR_CREATE:JAP = {
 	# Japan
 	dynamic_country_name = {
 		name = dyn_c_japan_shogunate

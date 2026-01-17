@@ -1,5 +1,4 @@
-﻿ig_trait_noble_privileges = {
-	icon = "gfx/interface/icons/ig_trait_icons/noble_privileges.dds"
+﻿REPLACE:ig_trait_noble_privileges = {
 	max_approval = unhappy
 	modifier = {
 		building_group_bg_agriculture_tax_mult = -0.1
@@ -8,16 +7,14 @@
 	}
 }
 
-ig_trait_family_ties = {
-	icon = "gfx/interface/icons/ig_trait_icons/family_ties.dds"
+REPLACE:ig_trait_family_ties = {
 	min_approval = happy
 	modifier = {
 		country_influence_mult = 0.1
 	}
 }
 
-ig_trait_noblesse_oblige = {
-	icon = "gfx/interface/icons/ig_trait_icons/noblesse_oblige.dds"
+REPLACE:ig_trait_noblesse_oblige = {
 	min_approval = loyal
 	modifier = {
 		state_aristocrats_investment_pool_contribution_add = 0.1
@@ -25,8 +22,7 @@ ig_trait_noblesse_oblige = {
 	}
 }
 
-ig_trait_profitable_estates = {
-	icon = "gfx/interface/icons/ig_trait_icons/noblesse_oblige.dds"
+REPLACE:ig_trait_profitable_estates = {
 	min_approval = loyal
 	modifier = {
 		state_aristocrats_investment_pool_contribution_add = 0.15
@@ -34,8 +30,7 @@ ig_trait_profitable_estates = {
 	}
 }
 
-ig_trait_latifundios = {
-	icon = "gfx/interface/icons/ig_trait_icons/farmers_markets.dds"
+REPLACE:ig_trait_latifundios = {
 	min_approval = loyal
 	modifier = {
 		building_group_bg_agriculture_tax_mult = 0.1

@@ -1,129 +1,91 @@
 ﻿#INDSTRY--------
-pmg_automation_building_paper_mills = {
+REPLACE_OR_CREATE:pmg_automation_light_industry = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
-		pm_automation_disabled
-		pm_watertube_boiler_building_paper_mills
-		pm_rotary_valve_engine_building_paper_mills
-		pm_assembly_lines_building_paper_mills
+		pm_light_industry_automation_disabled
+		pm_watertube_boiler_light_industry
+		pm_rotary_valve_engine_light_industry
+		pm_assembly_lines_light_industry
 	}
 }
 
-pmg_automation_building_steel_mills = {
+REPLACE_OR_CREATE:pmg_automation_heavy_industry = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
-		pm_automation_disabled
-		pm_watertube_boiler_building_steel_mills
-		pm_rotary_valve_engine_building_steel_mills
-		pm_assembly_lines_building_steel_mills
+		pm_heavy_industry_automation_disabled
+		pm_watertube_boiler_heavy_industry
+		pm_rotary_valve_engine_heavy_industry
+		pm_assembly_lines_heavy_industry
 	}
 }
 
-pmg_automation_building_chemical_plant = {
+REPLACE_OR_CREATE:pmg_automation_chemical_plant = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
-		pm_automatic_chemical_disabled
+		pm_heavy_industry_automation_disabled
+		pm_watertube_boiler_heavy_industry
+		pm_rotary_valve_engine_heavy_industry
 		pm_automatic_power_chemical_equipment
 	}
 }
 
-#MINES--------
-pmg_steam_automation_building_coal_mine = {
+#RESOURCES--------
+REPLACE_OR_CREATE:pmg_equipment = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_no_steam_automation
-		pm_steam_donkey_building_coal_mine
-		pm_automatic_power_mine
+		pm_steam_donkey
+		pm_chainsaws
 	}
 }
 
-pmg_steam_automation_building_iron_mine = {
+REPLACE_OR_CREATE:pmg_steam_automation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_no_steam_automation
-		pm_steam_donkey_mine
-		pm_automatic_power_mine
+		pm_steam_donkey
+		pm_automatic_power
 	}
 }
 
-pmg_steam_automation_building_lead_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_no_steam_automation
-		pm_steam_donkey_mine
-		pm_automatic_power_mine
-	}
-}
-
-pmg_steam_automation_building_sulfur_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_no_steam_automation
-		pm_steam_donkey_mine
-		pm_automatic_power_mine
-	}
-}
-
-pmg_steam_automation_building_gold_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_no_steam_automation
-		pm_steam_donkey_mine
-		pm_automatic_power_mine
-	}
-}
-
-pmg_train_automation_building_iron_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_steam_rail_transport
-	}
-}
-
-#PLANTATION--------
-pmg_equipment_plantation = {
+#AGRO-PLANTATION-----------------
+REPLACE_OR_CREATE:pmg_harvesting_process_building_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_tools_disabled
-		pm_simple_equipment
-		pm_automatic_power_equipment
+		pm_tools
+		pm_steam_threshers
+		pm_tractors
+		pm_compression_ignition_tractors
 	}
 }
 
-pmg_train_automation_plantation = {
+REPLACE_OR_CREATE:pmg_harvesting_process_building_rice_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
-		pm_road_carts
-		pm_steam_rail_transport
+		pm_tools_disabled_rice_farm
+		pm_tools_building_rice_farm
+		pm_steam_threshers_building_rice_farm
+		pm_tractors_building_rice_farm
+		pm_compression_ignition_tractors_building_rice_farm
 	}
 }
 
 #MISС--------
-pmg_refrigeration = {
+REPLACE_OR_CREATE:pmg_train_automation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+		pm_electric_rail_transport
+	}
+}
+
+REPLACE_OR_CREATE:pmg_refrigeration = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_unrefrigerated
-		pm_refrigerated_storage
 		pm_refrigerated_rail_cars
 		pm_flash_freezing
-	}
-}
-
-pmg_transportation_building_logging_camp = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_steam_rail_transport
-		pm_log_carts
-	}
-}
-
-pmg_transportation_building_oil_rig = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_road_carts
-		pm_steam_rail_transport
-		pm_tanker_cars
 	}
 }

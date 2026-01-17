@@ -1,4 +1,8 @@
-﻿pm_luxury_furniture = {
+﻿REPLACE_OR_CREATE:pm_no_luxuries = {
+	texture = "gfx/interface/icons/production_method_icons/no_luxury_furniture.dds"
+}
+
+REPLACE_OR_CREATE:pm_luxury_furniture = {
 	texture = "gfx/interface/icons/production_method_icons/luxury_furniture_mod.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -15,15 +19,10 @@
 			# output goods
 			goods_output_luxury_furniture_add = 80
 		}
-		level_scaled = {
-			building_employment_laborers_add = 3500
-			building_employment_machinists_add = 1000
-			building_employment_shopkeepers_add = 500
-		}
 	}
 }
 
-pm_precision_tools = {
+REPLACE_OR_CREATE:pm_precision_tools = {
 	texture = "gfx/interface/icons/production_method_icons/precision_tools_mod.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -41,12 +40,6 @@ pm_precision_tools = {
 			goods_input_tools_add = 10
 			# output goods
 			goods_output_luxury_furniture_add = 100
-		}
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
 		}
 	}
 }

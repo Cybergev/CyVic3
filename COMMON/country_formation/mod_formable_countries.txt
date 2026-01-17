@@ -1,4 +1,4 @@
-﻿EUR = {
+﻿REPLACE_OR_CREATE:EUR = {
 	states = {
 		#IBERIA
 		STATE_CATALONIA
@@ -170,7 +170,7 @@
 	}
 }
 
-UNL = {
+REPLACE_OR_CREATE:UNL = {
 	states = {
 		STATE_FRIESLAND
 		STATE_HOLLAND
