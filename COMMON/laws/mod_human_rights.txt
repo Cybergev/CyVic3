@@ -1085,7 +1085,7 @@ law_private_schools = {
 	}
 	institution = institution_schools
 	institution_modifier = {
-		state_education_access_wealth_add = 0.02
+		state_education_access_wealth_add = 0.002
 		state_assimilation_mult = 0.2
 	}
 	can_impose = {
@@ -1178,7 +1178,7 @@ law_public_schools = {
 	institution_modifier = {
 		country_education_fervor_add = 10
 		state_education_access_add = 0.2
-		state_education_access_wealth_add = 0.02
+		state_education_access_wealth_add = 0.002
 		state_assimilation_mult = 0.2
 	}
 	can_impose = {

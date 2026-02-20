@@ -1,9 +1,5 @@
 ﻿NDiplomacy = {
 	BASE_YEARLY_INFAMY_DECAY_RATE = 12
-	WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR = 10000	# The amount of population by which the factor below is multiplied
-	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER = 0.02	# For each WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR population in a country/state, multiply infamy by this
-	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE = 2	# Infamy population multiplier can't be higher than this for each state affected
-	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL = 20	# Infamy population multiplier can't be higher than this, regardless of number of states affected
 }
 
 NTechnology = {
@@ -48,8 +44,13 @@ NPops = {
 	MIN_ASSIMILATION = 100	# If there is any assmiliation at least this many people will assimilate
 	CONVERSION_RATE = 0.01	# Percentage of pops who will Convert into a different Religion each month, if eligible
 	MIN_CONVERSION = 100	# If there is any conversion at least this many people will convert
+	#
 	@starvation_threshold = 0.5
 	@starvation_scaling_factor = @[1/starvation_threshold]
+	FOOD_SECURITY_MODERATE_THRESHOLD = @[2*starvation_threshold]	# If Food Security is lower than this, the pop is marked as having moderate food security
 	FOOD_SECURITY_STARVATION_THRESHOLD = @starvation_threshold	# If Food Security is lower than this, the pop is considered to be in a starving state
+	FOOD_SECURITY_SEVERE_STARVATION_THRESHOLD = @[starvation_threshold/2]	# If Food Security is lower than this, the pop is considered to be in a severe starving state
 	STARVATION_EFFECTS_SCALING_FACTOR = @starvation_scaling_factor	# Acts as a scaling factor when converting food security to starvation effects: StarvationValue = CLAMP( (StarvationThreshold - FoodSecurity) * ScalingFactor, 0, 1)
+	FAMINE_POPULATION_SHARE_IN_STARVATION = 0.20	# If at least this % of state population is in starvation, the state is considered to have a famine
+	FAMINE_POPULATION_SHARE_IN_SEVERE_STARVATION = 0.10	# If at least this % of state population is in severe starvation, the state is considered to have a famine
 }

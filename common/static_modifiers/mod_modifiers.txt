@@ -24,7 +24,6 @@ REPLACE_OR_CREATE:base_values = {
 	# To balance for unincorporated states not paying taxes
 	state_unincorporated_starting_wages_mult = -0.2
 	building_unincorporated_subsistence_output_mult = -0.2
-	country_construction_add = 10
 	building_economy_of_scale_level_cap_add = 50
 	state_market_access_price_impact = 0.75
 	country_company_throughput_bonus_add = 0.2
@@ -42,6 +41,7 @@ REPLACE_OR_CREATE:base_values = {
 	state_trade_advantage_from_capacity_add = 0.0005
 	state_max_trade_advantage_from_capacity_add = 0.2
 	country_party_whip_impact_add = 0.5
+	state_blockade_resistance_add = 100
 }
 
 REPLACE_OR_CREATE:legislative_efficiency = {
@@ -102,25 +102,25 @@ REPLACE_OR_CREATE:declared_bankruptcy = {
 
 REPLACE_OR_CREATE:starvation_penalty = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	state_birth_rate_mult = -0.5
-	state_mortality_mult = 0.5
+	state_birth_rate_mult = -0.2
+	state_mortality_mult = 0.4
 }
 
 REPLACE_OR_CREATE:severe_starvation_penalty = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	state_birth_rate_mult = -1
-	state_mortality_mult = 1
+	state_birth_rate_mult = -0.4
+	state_mortality_mult = 0.8
 }
 
 # Multiplies unemployment rate in state by this
 REPLACE_OR_CREATE:unemployment_birth_penalty_state = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	state_birth_rate_mult = -0.5
+	state_birth_rate_mult = -0.2
 }
 
 REPLACE_OR_CREATE:literacy_penalty = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
-	state_birth_rate_mult = -0.5
+	state_birth_rate_mult = -0.2
 }
 
 REPLACE_OR_CREATE:low_organization = {

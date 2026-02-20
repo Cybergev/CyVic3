@@ -9,7 +9,7 @@
 REPLACE:ig_trait_avant_garde = {
 	min_approval = happy
 	modifier = {
-		building_arts_academy_throughput_add = 0.1
+		building_art_academy_throughput_add = 0.1
 		building_university_throughput_add = 0.1
 	}
 }

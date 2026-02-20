@@ -1,5 +1,5 @@
 ﻿REPLACE_OR_CREATE:afar={
-	color= { 50 0 100 }
+	color= rgb { 50 0 100 }
 	religion = sunni
 	heritage = heritage_abyssinian
 	language = language_afar
@@ -33,6 +33,56 @@
 	}
 	ethnicities = {
 		1 = east_african
+	}
+	graphics = african
+}
+
+REPLACE:akan= {
+	color= rgb { 100 0 50 }
+	religion = animist
+	heritage = heritage_guinean
+	language = language_akan
+	traditions = { }
+	male_common_first_names = {
+		Agyeman
+		Akyampon
+		Amanquatia
+		Atakora
+		Kofi
+		Kwabena
+		Kwaku
+		Kwame
+		Mensa
+		Onsei
+		Opoku
+		Owusu
+	}
+	female_common_first_names = {
+		Akofa
+		Akousua
+		Kalsoume
+		Serwaa_Nyarko
+		Yaa_Akyaa
+	}
+	noble_last_names = {
+		Asante
+		Bonoman
+		Denkyira
+		Jukwaa
+	}
+	common_last_names = {
+		Asiba
+		Bonsu
+		Dua
+		Dwomo
+		Fofie
+		Karikari
+		Panyin
+		Prempeh
+		Sekyere
+	}
+	ethnicities = {
+		1 = african
 	}
 	graphics = african
 }

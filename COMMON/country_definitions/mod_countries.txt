@@ -39,9 +39,17 @@ REPLACE_OR_CREATE:PAN = {
 }
 
 REPLACE_OR_CREATE:AWS = {
-	color = { 75 50 100 }
+	color = "afar_second_color"
 	country_type = unrecognized
 	tier = principality
 	cultures = { afar }
 	capital = STATE_ERITREA
+}
+
+REPLACE_OR_CREATE:ASH = {
+	color = "akan_second_color"
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { akan }
+	capital = STATE_GOLD_COAST
 }

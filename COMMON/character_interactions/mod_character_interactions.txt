@@ -3,24 +3,18 @@
 	clicksound = "event:/sfx/dlc/1.3_ip1/ui/agitator_promote"
 	potential = {
 		has_dlc_feature = agitators
-		or = {
-			has_role = ruler
-			has_role = heir
-			has_role = agitator
-			has_role = general
-			has_role = admiral
-		}
 		exists = owner
 		owner ?= scope:actor
 	}
+	show_requirements = yes
 	possible = {
 		age >= define:ncharacters|adult_age
-		interest_group = {
+		interest_group ?= {
 			is_in_government = yes
 		}
 		character_acceptance = {
 			target = scope:actor
-			value >= acceptance_status_3
+			value >= acceptance_status_4
 		}
 		trigger_if = {
 			limit = {
@@ -102,6 +96,7 @@ REPLACE_OR_CREATE:grant_command_to_agitator = {
 		}
 		owner ?= scope:actor
 	}
+	show_requirements = yes
 	possible = {
 		age >= define:ncharacters|adult_age
 		is_female = no
@@ -453,7 +448,7 @@ REPLACE_OR_CREATE:exile_character = {
 			interest_group = {
 				is_in_government = no
 				is_insurrectionary = no
-				is_marginal = no
+				ig_counts_as_marginal = no
 			}
 		}
 	}
@@ -807,15 +802,18 @@ REPLACE_OR_CREATE:abdicate_monarch = {
 		exists = owner.heir
 		is_immortal = no
 	}
+	show_requirements = yes
 	possible = {
 		or = {
 			interest_group = {
-				ig_approval <= angry
-				is_marginal = yes
+				OR = {
+					ig_approval <= angry
+					ig_counts_as_marginal = yes
+				}
 			}
-			popularity <= -50
-			age >= define:ncharacters|old_age
 			or = {
+				popularity <= -50
+				age >= define:ncharacters|old_age
 				has_trait = psychological_affliction
 				has_trait = cancer
 				has_trait = senile
@@ -916,7 +914,7 @@ REPLACE_OR_CREATE:abdicate_monarch = {
 		if = {
 			limit = {
 				interest_group = {
-					is_marginal = yes
+					ig_counts_as_marginal = yes
 				}
 			}
 			add = 25
@@ -961,45 +959,47 @@ REPLACE_OR_CREATE:resign_from_office = {
 			}
 		}
 	}
+	show_requirements = yes
 	possible = {
 		or = {
-			interest_group = {
+			interest_group ?= {
 				or = {
 					leader = {
 						is_ruler = no
 					}
 					ig_approval <= angry
-					is_marginal = yes
+					ig_counts_as_marginal = yes
 				}
 			}
-			popularity <= -50
-			age >= define:ncharacters|old_age
 			or = {
+				popularity <= -50
+				age >= define:ncharacters|old_age
 				has_trait = psychological_affliction
 				has_trait = cancer
 				has_trait = senile
 				has_trait = wounded
 			}
 			owner ?= {
-				any_political_movement = {
-					is_insurrectionary = yes
-					exists = most_desired_law
-					trigger_if = {
-						limit = {
-							is_insurrectionary = yes
+				# Our thanks to UHM for reporting this
+				trigger_if = {
+					limit = {
+						any_political_movement = {
+							is_revolutionary = yes
 							exists = most_desired_law
 						}
-						most_desired_law ?= {
-							save_temporary_scope_as = revolutionary_law
+					}
+					AND = {
+						any_political_movement = {
+							is_revolutionary = yes
+							exists = most_desired_law
+							most_desired_law ?= {
+								save_temporary_scope_as = revolutionary_law
+							}
 						}
 						custom_tooltip = {
 							text = ruler_disapproves_of_revolutionary_law
 							root = {
-								law_enactment_stance = {
-									law = scope:revolutionary_law
-									value <= neutral
-								}
-								or = {
+								OR = {
 									law_enactment_stance = {
 										law = scope:revolutionary_law
 										value < neutral
@@ -1014,8 +1014,16 @@ REPLACE_OR_CREATE:resign_from_office = {
 							}
 						}
 					}
-					trigger_else = {
-						custom_tooltip = ruler_disapproves_of_revolutionary_law_contextless
+				}
+				trigger_else = {
+					AND = {
+						any_political_movement = {
+							is_revolutionary = yes
+						}
+						custom_tooltip = {
+							text = ruler_disapproves_of_revolutionary_law_contextless
+							always = no
+						}
 					}
 				}
 			}
@@ -1025,8 +1033,9 @@ REPLACE_OR_CREATE:resign_from_office = {
 		if = {
 			limit = {
 				owner ?= {
-					any_interest_group = {
-						is_insurrectionary = yes
+					any_political_movement = {
+						exists = most_desired_law
+						is_revolutionary = yes
 					}
 				}
 			}
@@ -1060,7 +1069,7 @@ REPLACE_OR_CREATE:resign_from_office = {
 		if = {
 			limit = {
 				interest_group = {
-					is_marginal = yes
+					ig_counts_as_marginal = yes
 				}
 			}
 			add = 25
@@ -1108,6 +1117,7 @@ REPLACE_OR_CREATE:retire_commander = {
 		is_commander = yes
 		is_ruler = no
 	}
+	show_requirements = yes
 	possible = {
 		is_ruler = no
 		interest_group = {
@@ -1265,7 +1275,7 @@ REPLACE_OR_CREATE:change_ig_party_status = {
 	possible = {
 		interest_group = {
 			is_insurrectionary = no
-			is_marginal = no
+			ig_counts_as_marginal = no
 		}
 	}
 	effect = {
@@ -1311,7 +1321,7 @@ REPLACE_OR_CREATE:political_purge = {
 		}
 		interest_group = {
 			is_insurrectionary = no
-			is_marginal = no
+			ig_counts_as_marginal = no
 		}
 	}
 	effect = {

@@ -9,218 +9,6 @@
 	}
 }
 
-fix_population = {
-	is_shown = {
-		any_state = {
-			state_population >= 100000000
-		}
-	}
-	when_taken = {
-		every_state = {
-			limit = {
-				state_population >= 100000000
-			}
-			kill_population_percent_in_state = {
-				strata = upper
-				percent = 1
-			}
-			kill_population_percent_in_state = {
-				strata = middle
-				percent = 1
-			}
-			kill_population_percent_in_state = {
-				strata = lower
-				percent = 1
-			}
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-chande_arable_land = {
-	is_shown = {
-		any_scope_state = {
-			or = {
-				or = {
-					has_decree = decree_add_arable_land_1
-					has_decree = decree_add_arable_land_2
-					has_decree = decree_add_arable_land_5
-					has_decree = decree_add_arable_land_10
-					has_decree = decree_add_arable_land_100
-				}
-				or = {
-					has_decree = decree_remove_arable_land_1
-					has_decree = decree_remove_arable_land_2
-					has_decree = decree_remove_arable_land_5
-					has_decree = decree_remove_arable_land_10
-					has_decree = decree_remove_arable_land_100
-				}
-				or = {
-					has_decree = decree_set_arable_land_10
-					has_decree = decree_set_arable_land_20
-					has_decree = decree_set_arable_land_40
-					has_decree = decree_set_arable_land_50
-					has_decree = decree_set_arable_land_100
-				}
-			}
-		}
-	}
-	when_taken = {
-		every_scope_state = {
-			if = {
-				limit = {
-					has_decree = decree_add_arable_land_1
-				}
-				state_region = {
-					add_arable_land = 1
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_add_arable_land_2
-				}
-				state_region = {
-					add_arable_land = 2
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_add_arable_land_5
-				}
-				state_region = {
-					add_arable_land = 5
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_add_arable_land_10
-				}
-				state_region = {
-					add_arable_land = 10
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_add_arable_land_100
-				}
-				state_region = {
-					add_arable_land = 100
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_remove_arable_land_1
-				}
-				state_region = {
-					add_arable_land = -1
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_remove_arable_land_2
-				}
-				state_region = {
-					add_arable_land = -2
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_remove_arable_land_5
-				}
-				state_region = {
-					add_arable_land = -5
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_remove_arable_land_10
-				}
-				state_region = {
-					add_arable_land = -10
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_remove_arable_land_100
-				}
-				state_region = {
-					add_arable_land = -100
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_set_arable_land_10
-				}
-				hidden_effect = {
-					state_region = {
-						add_arable_land = -1000
-					}
-				}
-				state_region = {
-					add_arable_land = 10
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_set_arable_land_20
-				}
-				hidden_effect = {
-					state_region = {
-						add_arable_land = -1000
-					}
-				}
-				state_region = {
-					add_arable_land = 20
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_set_arable_land_40
-				}
-				hidden_effect = {
-					state_region = {
-						add_arable_land = -1000
-					}
-				}
-				state_region = {
-					add_arable_land = 40
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_set_arable_land_50
-				}
-				hidden_effect = {
-					state_region = {
-						add_arable_land = -1000
-					}
-				}
-				state_region = {
-					add_arable_land = 50
-				}
-			}
-			if = {
-				limit = {
-					has_decree = decree_set_arable_land_100
-				}
-				hidden_effect = {
-					state_region = {
-						add_arable_land = -1000
-					}
-				}
-				state_region = {
-					add_arable_land = 100
-				}
-			}
-		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
 destroy_china = {
 	is_shown = {
 		c:chi ?= root
@@ -263,6 +51,102 @@ european_culture_unification = {
 			}
 		}
 		add_primary_culture = cu:european
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_regency = {
+	is_shown = {
+		NOT = {
+			has_law_or_variant = law_type:law_monarchy
+		}
+		OR = {
+			AND = {
+				has_modifier = modifier_regency
+			}
+			AND = {
+				has_modifier = modifier_regency_landowners
+			}
+			AND = {
+				has_modifier = modifier_regency_devout
+			}
+			AND = {
+				has_modifier = modifier_regency_petty_bourgeoisie
+			}
+			AND = {
+				has_modifier = modifier_regency_industrialists
+			}
+			AND = {
+				has_modifier = modifier_regency_trade_unions
+			}
+			AND = {
+				has_modifier = modifier_regency_intelligentsia
+			}
+			AND = {
+				has_modifier = modifier_regency_armed_forces
+			}
+			AND = {
+				has_modifier = modifier_regency_rural_folk
+			}
+		}
+	}
+	when_taken = {
+		if = {
+			limit = {
+				has_modifier = modifier_regency
+			}
+			remove_modifier = modifier_regency
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_regency_landowners
+			}
+			remove_modifier = modifier_regency_landowners
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_regency_devout
+			}
+			remove_modifier = modifier_regency_devout
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_regency_petty_bourgeoisie
+			}
+			remove_modifier = modifier_regency_petty_bourgeoisie
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_regency_industrialists
+			}
+			remove_modifier = modifier_regency_industrialists
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_regency_trade_unions
+			}
+			remove_modifier = modifier_regency_trade_unions
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_regency_intelligentsia
+			}
+			remove_modifier = modifier_regency_intelligentsia
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_regency_armed_forces
+			}
+			remove_modifier = modifier_regency_armed_forces
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_regency_rural_folk
+			}
+			remove_modifier = modifier_regency_rural_folk
+		}
 	}
 	ai_chance = {
 		base = 0
@@ -920,6 +804,188 @@ destroy_all_buildings = {
 	}
 }
 
+chande_arable_land = {
+	is_shown = {
+		any_scope_state = {
+			or = {
+				or = {
+					has_decree = decree_add_arable_land_1
+					has_decree = decree_add_arable_land_2
+					has_decree = decree_add_arable_land_5
+					has_decree = decree_add_arable_land_10
+					has_decree = decree_add_arable_land_100
+				}
+				or = {
+					has_decree = decree_remove_arable_land_1
+					has_decree = decree_remove_arable_land_2
+					has_decree = decree_remove_arable_land_5
+					has_decree = decree_remove_arable_land_10
+					has_decree = decree_remove_arable_land_100
+				}
+				or = {
+					has_decree = decree_set_arable_land_10
+					has_decree = decree_set_arable_land_20
+					has_decree = decree_set_arable_land_40
+					has_decree = decree_set_arable_land_50
+					has_decree = decree_set_arable_land_100
+				}
+			}
+		}
+	}
+	when_taken = {
+		every_scope_state = {
+			if = {
+				limit = {
+					has_decree = decree_add_arable_land_1
+				}
+				state_region = {
+					add_arable_land = 1
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_add_arable_land_2
+				}
+				state_region = {
+					add_arable_land = 2
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_add_arable_land_5
+				}
+				state_region = {
+					add_arable_land = 5
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_add_arable_land_10
+				}
+				state_region = {
+					add_arable_land = 10
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_add_arable_land_100
+				}
+				state_region = {
+					add_arable_land = 100
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_remove_arable_land_1
+				}
+				state_region = {
+					add_arable_land = -1
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_remove_arable_land_2
+				}
+				state_region = {
+					add_arable_land = -2
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_remove_arable_land_5
+				}
+				state_region = {
+					add_arable_land = -5
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_remove_arable_land_10
+				}
+				state_region = {
+					add_arable_land = -10
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_remove_arable_land_100
+				}
+				state_region = {
+					add_arable_land = -100
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_set_arable_land_10
+				}
+				hidden_effect = {
+					state_region = {
+						add_arable_land = -1000
+					}
+				}
+				state_region = {
+					add_arable_land = 10
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_set_arable_land_20
+				}
+				hidden_effect = {
+					state_region = {
+						add_arable_land = -1000
+					}
+				}
+				state_region = {
+					add_arable_land = 20
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_set_arable_land_40
+				}
+				hidden_effect = {
+					state_region = {
+						add_arable_land = -1000
+					}
+				}
+				state_region = {
+					add_arable_land = 40
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_set_arable_land_50
+				}
+				hidden_effect = {
+					state_region = {
+						add_arable_land = -1000
+					}
+				}
+				state_region = {
+					add_arable_land = 50
+				}
+			}
+			if = {
+				limit = {
+					has_decree = decree_set_arable_land_100
+				}
+				hidden_effect = {
+					state_region = {
+						add_arable_land = -1000
+					}
+				}
+				state_region = {
+					add_arable_land = 100
+				}
+			}
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
 suppress_colonial_manufacturing_industry = {
 	is_shown = {
 		not = {
@@ -933,6 +999,9 @@ suppress_colonial_manufacturing_industry = {
 	}
 	when_taken = {
 		add_modifier = suppression_colonial_manufacturing_industry_policy
+		trigger_event = {
+			id = suppression_event.1
+		}
 	}
 	ai_chance = {
 		base = 0
@@ -957,6 +1026,9 @@ desuppress_colonial_manufacturing_industry = {
 	}
 	when_taken = {
 		remove_modifier = suppression_colonial_manufacturing_industry_policy
+		trigger_event = {
+			id = suppression_event.2
+		}
 	}
 	ai_chance = {
 		base = 0
@@ -985,6 +1057,9 @@ suppresss_colonial_agricultural_industry = {
 	}
 	when_taken = {
 		add_modifier = suppression_colonial_agricultural_industry_policy
+		trigger_event = {
+			id = suppression_event.1
+		}
 	}
 	ai_chance = {
 		base = 0
@@ -1000,6 +1075,9 @@ desuppress_colonial_agricultural_industry = {
 	}
 	when_taken = {
 		remove_modifier = suppression_colonial_agricultural_industry_policy
+		trigger_event = {
+			id = suppression_event.2
+		}
 	}
 	ai_chance = {
 		base = 0
@@ -1019,6 +1097,9 @@ suppress_colonial_resource_industry = {
 	}
 	when_taken = {
 		add_modifier = suppression_colonial_resource_industry_policy
+		trigger_event = {
+			id = suppression_event.1
+		}
 	}
 	ai_chance = {
 		base = 0
@@ -1034,6 +1115,9 @@ desuppress_colonial_resource_industry = {
 	}
 	when_taken = {
 		remove_modifier = suppression_colonial_resource_industry_policy
+		trigger_event = {
+			id = suppression_event.2
+		}
 	}
 	ai_chance = {
 		base = 0
@@ -1057,5 +1141,35 @@ redirec_communism_cours = {
 		trigger_event = {
 			id = communism.2
 		}
+	}
+}
+
+fix_population = {
+	is_shown = {
+		any_state = {
+			state_population >= 100000000
+		}
+	}
+	when_taken = {
+		every_state = {
+			limit = {
+				state_population >= 100000000
+			}
+			kill_population_percent_in_state = {
+				strata = upper
+				percent = 1
+			}
+			kill_population_percent_in_state = {
+				strata = middle
+				percent = 1
+			}
+			kill_population_percent_in_state = {
+				strata = lower
+				percent = 1
+			}
+		}
+	}
+	ai_chance = {
+		base = 1000000
 	}
 }

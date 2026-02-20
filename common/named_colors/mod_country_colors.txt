@@ -9,6 +9,10 @@ colors = {
 	PER_base_color = rgb { 230 170 100 }
 } 
 colors = {
-	AWS_base_color = rgb { 25 0 100 }
-	AWS_second_color = rgb { 200 150 100 }
+	afar_base_color = rgb { 50 0 100 }
+	afar_second_color = rgb { 75 50 100 }
+} 
+colors = {
+	akan_base_color = rgb { 100 0 50 }
+	akan_second_color = rgb { 100 50 75 }
 } 

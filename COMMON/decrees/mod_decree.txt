@@ -264,7 +264,7 @@ REPLACE_OR_CREATE:decree_promote_social_mobility = {
 	}
 	modifier = {
 		state_education_access_add = 0.5
-		state_education_access_wealth_add = 0.05
+		state_education_access_wealth_add = 0.01
 		state_pop_qualifications_mult = 0.5
 	}
 	cost = 100
@@ -333,131 +333,113 @@ REPLACE_OR_CREATE:decree_promote_national_values = {
 		value = 0
 		if = {
 			limit = {
-				scope:country = {
-					NOR = {
-						has_law_or_variant = law_type:law_multicultural
-						has_law_or_variant = law_type:law_subjecthood
-					}
-				}
-				primary_cultures_percent_state <= 0.9
+				primary_cultures_percent_state < 1
 			}
 			if = {
-				# Colonies
 				limit = {
-					scope:country = {
-						country_is_in_europe = no
-						any_primary_culture = {
-							has_discrimination_trait_group = heritage_group_european
-						}
-						NOR = {
-							has_government_type = gov_chartered_company
-							c:BIC ?= this
-							c:DEI ?= this
-						}
-					}
-				}
-				add = 300
-			}
-			else_if = {
-				limit = {
-					scope:country = {
-						OR = {
-							has_strategy = ai_strategy_reactionary_agenda
-							has_strategy = ai_strategy_conservative_agenda
-							has_strategy = ai_strategy_maintain_mandate_of_heaven
-						}
-					}
+					primary_cultures_percent_state = 0
 				}
 				add = 100
 			}
 			else_if = {
 				limit = {
-					scope:country = {
-						has_strategy = ai_strategy_nationalist_agenda
-					}
-				}
-				add = 200
-			}
-			if = {
-				limit = {
 					primary_cultures_percent_state <= 0.1
 				}
-				multiply = 5
+				add = 90
+			}
+			else_if = {
+				limit = {
+					primary_cultures_percent_state <= 0.2
+				}
+				add = 80
 			}
 			else_if = {
 				limit = {
 					primary_cultures_percent_state <= 0.3
 				}
-				multiply = 3
+				add = 70
+			}
+			else_if = {
+				limit = {
+					primary_cultures_percent_state <= 0.4
+				}
+				add = 60
 			}
 			else_if = {
 				limit = {
 					primary_cultures_percent_state <= 0.5
 				}
-				multiply = 2
+				add = 50
+			}
+			else_if = {
+				limit = {
+					primary_cultures_percent_state <= 0.6
+				}
+				add = 40
+			}
+			else_if = {
+				limit = {
+					primary_cultures_percent_state <= 0.7
+				}
+				add = 30
+			}
+			else_if = {
+				limit = {
+					primary_cultures_percent_state <= 0.8
+				}
+				add = 20
+			}
+			else_if = {
+				limit = {
+					primary_cultures_percent_state <= 0.9
+				}
+				add = 10
 			}
 			if = {
 				limit = {
 					is_homeland_of_country_cultures = scope:country
 				}
-				multiply = 5
+				multiply = 10
 			}
 		}
 		if = {
 			limit = {
-				OR = {
-					NOT = {
-						scope:country = {
-							has_law_or_variant = law_type:law_total_separation
-						}
-					}
-					AND = {
-						scope:country = {
-							country_is_in_africa = no
-						}
-						state_is_in_africa = yes
-					}
-				}
 				religion_percent_state = {
 					target = scope:country.religion
-					value <= 0.9
+					value < 1
+				}
+				NOT = {
+					scope:country = {
+						has_law_or_variant = law_type:law_total_separation
+					}
 				}
 			}
 			if = {
 				limit = {
-					scope:country = {
-						has_strategy = ai_strategy_conservative_agenda
-					}
-				}
-				add = 50
-			}
-			else_if = {
-				limit = {
-					scope:country = {
-						has_strategy = ai_strategy_reactionary_agenda
+					religion_percent_state = {
+						target = scope:country.religion
+						value = 0
 					}
 				}
 				add = 100
 			}
-			if = {
-				limit = {
-					scope:country = {
-						OR = {
-							has_law_or_variant = law_type:law_state_religion
-							has_law_or_variant = law_type:law_state_atheism
-						}
-					}
-				}
-				add = 50
-			}
-			if = {
+			else_if = {
 				limit = {
 					religion_percent_state = {
 						target = scope:country.religion
 						value <= 0.1
 					}
 				}
-				multiply = 5
+				add = 90
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:country.religion
+						value <= 0.2
+					}
+				}
+				add = 80
 			}
 			else_if = {
 				limit = {
@@ -466,7 +448,16 @@ REPLACE_OR_CREATE:decree_promote_national_values = {
 						value <= 0.3
 					}
 				}
-				multiply = 3
+				add = 70
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:country.religion
+						value <= 0.4
+					}
+				}
+				add = 60
 			}
 			else_if = {
 				limit = {
@@ -475,42 +466,116 @@ REPLACE_OR_CREATE:decree_promote_national_values = {
 						value <= 0.5
 					}
 				}
+				add = 50
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:country.religion
+						value <= 0.6
+					}
+				}
+				add = 40
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:country.religion
+						value <= 0.7
+					}
+				}
+				add = 30
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:country.religion
+						value <= 0.8
+					}
+				}
+				add = 20
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:country.religion
+						value <= 0.8
+					}
+				}
+				add = 10
+			}
+		}
+		if = {
+			limit = {
+				is_incorporated = yes
+			}
+			if = {
+				limit = {
+					state_population <= 1000000
+				}
+				multiply = 10
+			}
+			else_if = {
+				limit = {
+					state_population <= 900000
+				}
+				multiply = 9
+			}
+			else_if = {
+				limit = {
+					state_population <= 800000
+				}
+				multiply = 8
+			}
+			else_if = {
+				limit = {
+					state_population <= 700000
+				}
+				multiply = 7
+			}
+			else_if = {
+				limit = {
+					state_population <= 600000
+				}
+				multiply = 6
+			}
+			else_if = {
+				limit = {
+					state_population <= 500000
+				}
+				multiply = 5
+			}
+			else_if = {
+				limit = {
+					state_population <= 400000
+				}
+				multiply = 4
+			}
+			else_if = {
+				limit = {
+					state_population <= 300000
+				}
+				multiply = 3
+			}
+			else_if = {
+				limit = {
+					state_population <= 200000
+				}
 				multiply = 2
 			}
 		}
 		if = {
 			limit = {
-				state_population < 100000
-			}
-			multiply = 0
-		}
-		else_if = {
-			limit = {
-				state_population < 300000
-			}
-			multiply = 2
-		}
-		else_if = {
-			limit = {
 				scope:country = {
 					OR = {
-						has_law = law_type:law_cultural_exclusion
-						has_law = law_type:law_freedom_of_conscience
+						has_strategy = ai_strategy_nationalist_agenda
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_conservative_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
 					}
 				}
 			}
-			multiply = 0.5
-		}
-		else_if = {
-			limit = {
-				scope:country = {
-					OR = {
-						has_law = law_type:law_multicultural
-						has_law = law_type:law_total_separation
-					}
-				}
-			}
-			multiply = 0.1
+			add = 100
 		}
 		if = {
 			# Deliberately placed here since we want the AI to ignore laws for this
@@ -519,27 +584,7 @@ REPLACE_OR_CREATE:decree_promote_national_values = {
 					has_journal_entry = je_south_american_national_identity
 				}
 			}
-			add = 500
-		}
-		if = {
-			limit = {
-				primary_cultures_percent_state > 0.9
-				religion_percent_state = {
-					target = scope:country.religion
-					value > 0.9
-				}
-			}
-			multiply = 0
-		}
-		else_if = {
-			limit = {
-				primary_cultures_percent_state > 0.5
-				religion_percent_state = {
-					target = scope:country.religion
-					value > 0.5
-				}
-			}
-			multiply = 0.5
+			add = 1000
 		}
 	}
 }

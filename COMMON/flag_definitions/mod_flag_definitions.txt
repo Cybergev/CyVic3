@@ -54,6 +54,38 @@ REPLACE:AWS = {
 	}
 }
 
+REPLACE:ASH = { # Ashanti
+	flag_definition = {
+		coa = ASH
+		subject_canton = ASH
+		priority = 1
+	}
+	flag_definition = {
+		coa = ASH_theocracy
+		subject_canton = ASH_theocracy
+		priority = 10
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = ASH_monarchy
+		subject_canton = ASH_monarchy
+		priority = 10
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = ASH_republic
+		subject_canton = ASH_republic
+		priority = 2000
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
 EUR = {
 	flag_definition = {
 		coa = EUR_republic

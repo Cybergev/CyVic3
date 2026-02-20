@@ -5,6 +5,13 @@
 	}
 }
 
+REPLACE_OR_CREATE:ASH = {
+	use_culture_states = yes
+	ai_will_do = {
+		always = no
+	}
+}
+
 REPLACE_OR_CREATE:EUR = {
 	use_culture_states = yes
 	ai_will_do = {

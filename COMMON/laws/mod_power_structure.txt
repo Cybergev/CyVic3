@@ -190,6 +190,119 @@ law_monarchy = {
 				fra_handle_republic_monarch_assignment = yes
 			}
 		}
+		if = {
+			limit = {
+				has_dlc_feature = ip4_content
+				c:SPA ?= this
+				is_revolutionary = no
+				is_secessionist = no
+				game_date > 1836.1.1
+			}
+			add_modifier = modifier_regency
+			custom_tooltip = {
+				text = activate_provisional_government_tt
+				add_journal_entry = {
+					type = je_spain_provisional_government
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_has_primary_culture = cu:vietnamese
+			}
+			if = {
+				limit = {
+					any_scope_state = {
+						state_region = s:STATE_CAMBODIA
+					}
+				}
+				random_scope_state = {
+					limit = {
+						state_region = s:STATE_CAMBODIA
+					}
+					STATE_CAMBODIA_state_name_assign = yes
+				}
+			}
+			if = {
+				limit = {
+					any_scope_state = {
+						state_region = s:STATE_LAOS
+					}
+				}
+				random_scope_state = {
+					limit = {
+						state_region = s:STATE_LAOS
+					}
+					STATE_LAOS_state_name_assign = yes
+				}
+			}
+		}
+		crown_land_republic_effect = yes
+		if = {
+			limit = {
+				has_law = law_type:law_neo_absolutism
+			}
+			deactivate_law = law_type:law_neo_absolutism
+			activate_law = law_type:law_autocracy
+		}
+	}
+	on_deactivate = {
+		if = {
+			limit = {
+				AND = {
+					has_law = law_type:law_subjecthood
+					NOR = {
+						has_law = law_type:law_theocracy
+						is_enacting_law = law_type:law_theocracy
+					}
+				}
+			}
+			custom_tooltip = because_subjecthood_is_active_tt
+			if = {
+				limit = {
+					any_interest_group = {
+						is_in_government = yes
+						any_preferred_law = {
+							is_citizenship_law = yes
+							NOT = {
+								type ?= law_type:law_subjecthood
+							}
+						}
+					}
+				}
+				ordered_interest_group = {
+					limit = {
+						is_in_government = yes
+						any_preferred_law = {
+							is_citizenship_law = yes
+							NOT = {
+								type ?= law_type:law_subjecthood
+							}
+						}
+					}
+					order_by = ig_clout
+					position = 0
+					check_range_bounds = no
+					ordered_preferred_law = {
+						limit = {
+							is_citizenship_law = yes
+							NOT = {
+								type ?= law_type:law_subjecthood
+							}
+						}
+						position = 0
+						check_range_bounds = no
+						prev.owner = {
+							activate_law = prev.type
+						}
+					}
+				}
+			}
+			else = {
+				activate_law = law_type:law_national_supremacy
+			}
+		}
+		remove_regency_modifier = yes
 	}
 	ai_enact_weight_modifier = {
 		#Petitions
@@ -213,7 +326,7 @@ law_monarchy = {
 				scope:target_country = {
 					# Is their law different enough from what we want to impose?
 					NOT = {
-						has_law = law_type:law_theocracy
+						has_law_or_variant = law_type:law_theocracy
 					}
 				}
 			}
@@ -221,7 +334,7 @@ law_monarchy = {
 			if = {
 				limit = {
 					scope:target_country = {
-						has_law = law_type:council_republic
+						has_law_or_variant = law_type:law_council_republic
 					}
 					NOT = {
 						has_strategy = ai_strategy_egalitarian_agenda
