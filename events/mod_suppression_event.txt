@@ -3,78 +3,36 @@ suppression_event.1 = {
 	type = country_event
 	hidden = yes
 	trigger = {
-		OR = {
-			has_modifier = suppression_colonial_manufacturing_industry_policy
-			has_modifier = suppression_colonial_agricultural_industry_policy
-			has_modifier = suppression_colonial_resource_industry_policy
+		any_country = {
+			suppression_trigger = yes
 		}
 	}
 	immediate = {
 		every_country = {
+			limit = {
+				suppression_trigger = yes
+			}
 			every_scope_building = {
 				if = {
 					limit = {
-						not = {
-							has_modifier = suppression_modifier
-						}
-						OR = {
-							state = {
-								owner = {
-									this = root
-								}
-								is_incorporated = no
-							}
-							owner = {
-								OR = {
-									has_diplomatic_pact = {
-										who = root
-										type = puppet
-									}
-									has_diplomatic_pact = {
-										who = root
-										type = colony
-									}
-									has_diplomatic_pact = {
-										who = root
-										type = vassal
-									}
-								}
-							}
-						}
+						suppression_manufacturing_bg_trigger = yes
+						suppression_manufacturing_trigger = yes
 					}
-					if = {
-						limit = {
-							owner = {
-								root = {
-									has_modifier = suppression_colonial_manufacturing_industry_policy
-								}
-							}
-							suppression_manufacturing_bg_trigger = yes
-						}
-						add_modifier = suppression_modifier
+					add_modifier = suppression_modifier
+				}
+				if = {
+					limit = {
+						suppression_agricultural_bg_trigger = yes
+						suppression_agricultural_trigger = yes
 					}
-					if = {
-						limit = {
-							owner = {
-								root = {
-									has_modifier = suppression_colonial_agricultural_industry_policy
-								}
-							}
-							suppression_agricultural_bg_trigger = yes
-						}
-						add_modifier = suppression_modifier
+					add_modifier = suppression_modifier
+				}
+				if = {
+					limit = {
+						suppression_resource_bg_trigger = yes
+						suppression_resource_trigger = yes
 					}
-					if = {
-						limit = {
-							owner = {
-								root = {
-									has_modifier = suppression_colonial_resource_industry_policy
-								}
-							}
-							suppression_resource_bg_trigger = yes
-						}
-						add_modifier = suppression_modifier
-					}
+					add_modifier = suppression_modifier
 				}
 			}
 		}
@@ -85,82 +43,44 @@ suppression_event.2 = {
 	type = country_event
 	hidden = yes
 	trigger = {
-		NAND = {
-			has_modifier = suppression_colonial_manufacturing_industry_policy
-			has_modifier = suppression_colonial_agricultural_industry_policy
-			has_modifier = suppression_colonial_resource_industry_policy
+		any_country = {
+			any_scope_building = {
+				desuppression_manufacturing_trigger = yes
+				desuppression_agricultural_trigger = yes
+				desuppression_resource_trigger = yes
+			}
 		}
 	}
 	immediate = {
 		every_country = {
+			limit = {
+				any_scope_building = {
+					desuppression_manufacturing_trigger = yes
+					desuppression_agricultural_trigger = yes
+					desuppression_resource_trigger = yes
+				}
+			}
 			every_scope_building = {
 				if = {
 					limit = {
-						has_modifier = suppression_modifier
-						NAND = {
-							state = {
-								owner = {
-									this = root
-								}
-								is_incorporated = no
-							}
-							owner = {
-								OR = {
-									has_diplomatic_pact = {
-										who = root
-										type = puppet
-									}
-									has_diplomatic_pact = {
-										who = root
-										type = colony
-									}
-									has_diplomatic_pact = {
-										who = root
-										type = vassal
-									}
-								}
-							}
-						}
+						suppression_manufacturing_bg_trigger = yes
+						desuppression_manufacturing_trigger = yes
 					}
-					if = {
-						limit = {
-							owner = {
-								root = {
-									NOT = {
-										has_modifier = suppression_colonial_manufacturing_industry_policy
-									}
-								}
-							}
-							suppression_manufacturing_bg_trigger = yes
-						}
-						remove_modifier = suppression_modifier
+					remove_modifier = suppression_modifier
+				}
+				if = {
+					limit = {
+						suppression_agricultural_bg_trigger = yes
+						desuppression_agricultural_trigger = yes
 					}
-					if = {
-						limit = {
-							owner = {
-								root = {
-									NOT = {
-										has_modifier = suppression_colonial_agricultural_industry_policy
-									}
-								}
-							}
-							suppression_agricultural_bg_trigger = yes
-						}
-						remove_modifier = suppression_modifier
+					remove_modifier = suppression_modifier
+				}
+				if = {
+					limit = {
+						suppression_resource_bg_trigger = yes
+						desuppression_resource_trigger = yes
 					}
-					if = {
-						limit = {
-							owner = {
-								root = {
-									NOT = {
-										has_modifier = suppression_colonial_resource_industry_policy
-									}
-								}
-							}
-							suppression_resource_bg_trigger = yes
-						}
-						remove_modifier = suppression_modifier
-					}
+					remove_modifier = suppression_modifier
 				}
 			}
 		}

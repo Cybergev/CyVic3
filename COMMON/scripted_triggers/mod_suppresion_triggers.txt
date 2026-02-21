@@ -1,37 +1,179 @@
-﻿REPLACE_OR_CREATE:suppression_manufacturing_bg_trigger = {
+﻿REPLACE_OR_CREATE:suppression_trigger = {
 	OR = {
-		is_building_group = bg_manufacturing
-		is_building_type = building_arts_academy
+		has_modifier = suppression_colonial_manufacturing_industry_policy
+		AND = {
+			OR = {
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_colony
+				is_subject_type = subject_type_vassal
+			}
+			any_overlord_or_above = {
+				has_modifier = suppression_colonial_manufacturing_industry_policy
+			}
+		}
 	}
 }
 
 REPLACE_OR_CREATE:suppression_manufacturing_trigger = {
+	not = {
+		has_modifier = suppression_modifier
+	}
 	OR = {
-		AND = {
+		state = {
+			is_incorporated = yes
 			owner = {
-				has_modifier = suppression_colonial_manufacturing_industry_policy
+				any_overlord_or_above = {
+					has_modifier = suppression_colonial_manufacturing_industry_policy
+				}
 			}
-			is_incorporated = no
 		}
-		owner = {
-			any_overlord_or_above = {
-				has_modifier = suppression_colonial_manufacturing_industry_policy
+		state = {
+			is_incorporated = no
+			owner = {
 				OR = {
-					has_diplomatic_pact = {
-						who = PREV
-						type = puppet
-					}
-					has_diplomatic_pact = {
-						who = PREV
-						type = colony
-					}
-					has_diplomatic_pact = {
-						who = PREV
-						type = vassal
+					has_modifier = suppression_colonial_manufacturing_industry_policy
+					any_overlord_or_above = {
+						has_modifier = suppression_colonial_manufacturing_industry_policy
 					}
 				}
 			}
 		}
+	}
+}
+
+REPLACE_OR_CREATE:desuppression_manufacturing_trigger = {
+	has_modifier = suppression_modifier
+	NOT = {
+		state = {
+			is_incorporated = yes
+			owner = {
+				any_overlord_or_above = {
+					has_modifier = suppression_colonial_manufacturing_industry_policy
+				}
+			}
+		}
+		state = {
+			is_incorporated = no
+			owner = {
+				OR = {
+					has_modifier = suppression_colonial_manufacturing_industry_policy
+					any_overlord_or_above = {
+						has_modifier = suppression_colonial_manufacturing_industry_policy
+					}
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:suppression_agricultural_trigger = {
+	not = {
+		has_modifier = suppression_modifier
+	}
+	OR = {
+		state = {
+			is_incorporated = yes
+			owner = {
+				any_overlord_or_above = {
+					has_modifier = suppression_colonial_agricultural_industry_policy
+				}
+			}
+		}
+		state = {
+			is_incorporated = no
+			owner = {
+				OR = {
+					has_modifier = suppression_colonial_agricultural_industry_policy
+					any_overlord_or_above = {
+						has_modifier = suppression_colonial_agricultural_industry_policy
+					}
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:desuppression_agricultural_trigger = {
+	has_modifier = suppression_modifier
+	NOT = {
+		state = {
+			is_incorporated = yes
+			owner = {
+				any_overlord_or_above = {
+					has_modifier = suppression_colonial_agricultural_industry_policy
+				}
+			}
+		}
+		state = {
+			is_incorporated = no
+			owner = {
+				OR = {
+					has_modifier = suppression_colonial_agricultural_industry_policy
+					any_overlord_or_above = {
+						has_modifier = suppression_colonial_agricultural_industry_policy
+					}
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:suppression_resource_trigger = {
+	not = {
+		has_modifier = suppression_modifier
+	}
+	OR = {
+		state = {
+			is_incorporated = yes
+			owner = {
+				any_overlord_or_above = {
+					has_modifier = suppression_colonial_resource_industry_policy
+				}
+			}
+		}
+		state = {
+			is_incorporated = no
+			owner = {
+				OR = {
+					has_modifier = suppression_colonial_resource_industry_policy
+					any_overlord_or_above = {
+						has_modifier = suppression_colonial_resource_industry_policy
+					}
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:desuppression_resource_trigger = {
+	has_modifier = suppression_modifier
+	NOT = {
+		state = {
+			is_incorporated = yes
+			owner = {
+				any_overlord_or_above = {
+					has_modifier = suppression_colonial_resource_industry_policy
+				}
+			}
+		}
+		state = {
+			is_incorporated = no
+			owner = {
+				OR = {
+					has_modifier = suppression_colonial_resource_industry_policy
+					any_overlord_or_above = {
+						has_modifier = suppression_colonial_resource_industry_policy
+					}
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:suppression_manufacturing_bg_trigger = {
+	OR = {
+		is_building_group = bg_manufacturing
+		is_building_type = building_arts_academy
 	}
 }
 
@@ -45,88 +187,8 @@ REPLACE_OR_CREATE:suppression_agricultural_bg_trigger = {
 	}
 }
 
-REPLACE_OR_CREATE:suppression_agricultural_trigger = {
-	any_scope_state = {
-		OR = {
-			owner = {
-				any_overlord_or_above = {
-					AND = {
-						has_modifier = suppression_colonial_agricultural_industry_policy
-						OR = {
-							has_diplomatic_pact = {
-								who = PREV
-								type = puppet
-							}
-							has_diplomatic_pact = {
-								who = PREV
-								type = colony
-							}
-							has_diplomatic_pact = {
-								who = PREV
-								type = vassal
-							}
-						}
-					}
-				}
-			}
-			AND = {
-				owner = {
-					has_modifier = suppression_colonial_agricultural_industry_policy
-				}
-				is_incorporated = no
-			}
-		}
-		any_scope_building = {
-			suppression_agricultural_bg_trigger = yes
-			not = {
-				has_modifier = suppression_modifier
-			}
-		}
-	}
-}
-
 REPLACE_OR_CREATE:suppression_resource_bg_trigger = {
 	OR = {
 		is_building_group = bg_extraction
-	}
-}
-
-REPLACE_OR_CREATE:suppression_resource_trigger = {
-	any_scope_state = {
-		OR = {
-			owner = {
-				any_overlord_or_above = {
-					AND = {
-						has_modifier = suppression_colonial_resource_industry_policy
-						OR = {
-							has_diplomatic_pact = {
-								who = PREV
-								type = puppet
-							}
-							has_diplomatic_pact = {
-								who = PREV
-								type = colony
-							}
-							has_diplomatic_pact = {
-								who = PREV
-								type = vassal
-							}
-						}
-					}
-				}
-			}
-			AND = {
-				owner = {
-					has_modifier = suppression_colonial_resource_industry_policy
-				}
-				is_incorporated = no
-			}
-		}
-		any_scope_building = {
-			suppression_resource_bg_trigger = yes
-			not = {
-				has_modifier = suppression_modifier
-			}
-		}
 	}
 }
