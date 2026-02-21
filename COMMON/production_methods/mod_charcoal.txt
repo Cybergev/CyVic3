@@ -1,0 +1,75 @@
+﻿REPLACE_OR_CREATE:pm_cearmic_retors = {
+	texture = "gfx/interface/icons/production_method_icons/blister_steel_process.dds"
+	state_modifiers = {
+		level_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	is_default = yes
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 50
+			# output goods
+			goods_output_coal_add = 50
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_hard_cearmic_retors = {
+	texture = "gfx/interface/icons/production_method_icons/blister_steel_process.dds"
+	state_modifiers = {
+		level_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	is_default = yes
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_hardwood_add = 30
+			# output goods
+			goods_output_coal_add = 50
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_vacuum_pyrolisis = {
+	texture = "gfx/interface/icons/production_method_icons/electric_arc_process.dds"
+	state_modifiers = {
+		level_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		vulcanization
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 100
+			# output goods
+			goods_output_coal_add = 100
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_hard_vacuum_pyrolisis = {
+	texture = "gfx/interface/icons/production_method_icons/electric_arc_process.dds"
+	state_modifiers = {
+		level_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		vulcanization
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_hardwood_add = 60
+			# output goods
+			goods_output_coal_add = 100
+		}
+	}
+}

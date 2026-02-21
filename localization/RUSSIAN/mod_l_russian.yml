@@ -32,6 +32,9 @@ building_porcelain_manufactory_lens_option: "Расширить керамоза
 building_radios_industry: "Радиозаводы"
 building_radios_industry_lens_option: "Расширить радиозаводы"
 
+building_charcoal_plant: "Дерево-угольные заводы"
+building_charcoal_plant_lens_option: "Расширить дерево-угольные заводы"
+
 building_synthetic_oil_plant: "Заводы синтетического топлива"
 building_synthetic_oil_plant_lens_option: "Расширить заводы синтетического топлива"
 
@@ -64,6 +67,12 @@ pm_vacuum_canning_all: "Вакуумные консервы"
 pm_vacuum_cannery_meat_principle_3: "Эффектвиные мясные консервы"
 pm_vacuum_cannery_fish_principle_3: "Эффектвиные рыбные консервы"
 pm_vacuum_canning_all_principle_3: "Эффектвиные консервы"
+
+pmg_charcoal: "Сжигание"
+pm_cearmic_retors: "Керамические реторы"
+pm_hard_cearmic_retors: "Керамические реторы"
+pm_vacuum_pyrolisis: "Вакуумный пиролиз"
+pm_hard_vacuum_pyrolisis: "Вакуумный пиролиз"
 
 pm_synthetic_oil: "Просцесс Фишера-Тропша"
 pm_synthetic_opium: "Синтетические опиаты"

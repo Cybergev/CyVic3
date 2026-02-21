@@ -910,6 +910,7 @@ REPLACE_OR_CREATE:socialist_reform_movements = {
 }
 
 REPLACE_OR_CREATE:effect_destroy_all_buildings = {
+	remove_building = building_charcoal_plant
 	remove_building = building_food_industry
 	remove_building = building_textile_mill
 	remove_building = building_furniture_manufactory

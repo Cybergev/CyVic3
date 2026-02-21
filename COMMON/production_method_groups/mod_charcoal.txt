@@ -1,0 +1,9 @@
+﻿REPLACE_OR_CREATE:pmg_charcoal = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_cearmic_retors
+		pm_hard_cearmic_retors
+		pm_vacuum_pyrolisis
+		pm_hard_vacuum_pyrolisis
+	}
+}
