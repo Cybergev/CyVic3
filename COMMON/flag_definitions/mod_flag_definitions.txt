@@ -54,7 +54,8 @@ REPLACE:AWS = {
 	}
 }
 
-REPLACE:ASH = { # Ashanti
+REPLACE:ASH = {
+	# Ashanti
 	flag_definition = {
 		coa = ASH
 		subject_canton = ASH
@@ -82,6 +83,103 @@ REPLACE:ASH = { # Ashanti
 		priority = 2000
 		trigger = {
 			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+REPLACE:CHI = {
+	# China
+	flag_definition = {
+		coa = CHI
+		subject_canton = CHI
+		coa_with_overlord_canton = CHI_subject
+		allow_overlord_canton = yes
+		priority = 1
+	}
+	flag_definition = {
+		coa = CHI_theocracy
+		subject_canton = CHI_theocracy
+		priority = 10
+		trigger = {
+			scope:actor ?= {
+				has_law_or_variant = law_type:law_theocracy
+			}
+		}
+	}
+	flag_definition = {
+		coa = CHI_absolute_monarchy
+		subject_canton = CHI_absolute_monarchy
+		coa_with_overlord_canton = CHI_subject
+		allow_overlord_canton = yes
+		priority = 10
+		trigger = {
+			scope:actor ?= {
+				country_has_primary_culture = cu:manchu
+				has_law_or_variant = law_type:law_monarchy
+				has_law_or_variant = law_type:law_autocracy
+			}
+		}
+	}
+	flag_definition = {
+		coa = CHI_han_empire
+		coa_with_overlord_canton = CHI_han_empire
+		allow_overlord_canton = yes
+		priority = 10
+		trigger = {
+			scope:actor ?= {
+				has_law_or_variant = law_type:law_monarchy
+				has_law_or_variant = law_type:law_autocracy
+			}
+		}
+	}
+	flag_definition = {
+		coa = CHI_dictatorship
+		subject_canton = CHI_dictatorship
+		priority = 10
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					has_law_or_variant = law_type:law_presidential_republic
+					has_law_or_variant = law_type:law_parliamentary_republic
+					has_law_or_variant = law_type:law_corporate_state
+				}
+				OR = {
+					has_law_or_variant = law_type:law_autocracy
+					has_law_or_variant = law_type:law_oligarchy
+					has_law_or_variant = law_type:law_technocracy
+					has_law_or_variant = law_type:law_single_party_state
+				}
+			}
+		}
+	}
+	flag_definition = {
+		coa = CHI_republic
+		subject_canton = CHI_republic
+		allow_overlord_canton = yes
+		priority = 10
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					has_law_or_variant = law_type:law_presidential_republic
+					has_law_or_variant = law_type:law_parliamentary_republic
+					has_law_or_variant = law_type:law_corporate_state
+				}
+				NOR = {
+					has_law_or_variant = law_type:law_autocracy
+					has_law_or_variant = law_type:law_oligarchy
+					has_law_or_variant = law_type:law_technocracy
+					has_law_or_variant = law_type:law_single_party_state
+				}
+			}
+		}
+	}
+	flag_definition = {
+		coa = CHI_communist
+		priority = 1000
+		trigger = {
+			scope:actor ?= {
+				has_law_or_variant = law_type:law_council_republic
+			}
 		}
 	}
 }

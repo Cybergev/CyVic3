@@ -143,6 +143,29 @@
 			}
 			owner = {
 				set_state_religion = rel:mahayana
+				random_scope_state = {
+					limit = {
+						is_capital = yes
+						is_homeland_of_country_cultures = root
+					}
+					convert_population = {
+						target = rel:mahayana
+						value = 0.5
+					}
+				}
+				every_scope_state = {
+					limit = {
+						is_homeland_of_country_cultures = root
+						is_incorporated = yes
+						NOT = {
+							is_capital = yes
+						}
+					}
+					convert_population = {
+						target = rel:mahayana
+						value = 0.25
+					}
+				}
 			}
 		}
 		if = {
@@ -286,6 +309,7 @@
 				remove_ideology = ideology_moralist
 				remove_ideology = ideology_pious
 				add_ideology = ideology_confucian
+				add_ideology = ideology_pious
 			}
 		}
 		# Evangelicals

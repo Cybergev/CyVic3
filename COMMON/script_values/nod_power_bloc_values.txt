@@ -1,0 +1,319 @@
+﻿# ROOT is the leader of the power bloc.
+# scope:target is the target country.
+# scope:has_interest is whether the power bloc has interest on the target country.
+# scope:has_capital_interest is whether the power bloc has interest on the capital of the target country.
+# No randomness is allowed in this script value
+REPLACE:power_bloc_leverage_gain = {
+	##### Add factors: #####
+	add = {
+		value = 100
+		desc = POWER_BLOC_LEVERAGE_GAIN_FROM_INTEREST
+	}
+	if = {
+		limit = {
+			power_bloc ?= {
+				any_power_bloc_member = {
+					scope:target ?= this
+				}
+			}
+		}
+		add = {
+			value = 200
+			desc = POWER_BLOC_LEVERAGE_GAIN_FROM_MEMBERSHIP
+		}
+	}
+	add = {
+		value = "scope:target.economic_dependence(ROOT)"
+		multiply = 100
+		desc = POWER_BLOC_LEVERAGE_GAIN_FROM_ECONOMIC_DEPENDENCE
+		if = {
+			limit = {
+				root.power_bloc = {
+					has_principle_group = principle_group:principle_group_foreign_investment
+				}
+			}
+			multiply = 2
+		}
+	}
+	if = {
+		limit = {
+			is_in_war_together = scope:target
+		}
+		add = {
+			value = 200
+			desc = POWER_BLOC_LEVERAGE_GAIN_IN_COMMON_WAR
+		}
+	}
+	if = {
+		limit = {
+			scope:target.religion = root.religion
+			root.power_bloc = {
+				has_identity = identity:identity_religious
+			}
+		}
+		add = {
+			value = 100
+			desc = POWER_BLOC_LEVERAGE_GAIN_FROM_SHARED_RELIGION
+		}
+	}
+	if = {
+		limit = {
+			has_treaty_port_in_market = scope:target.market
+		}
+		add = {
+			value = 200
+			desc = POWER_BLOC_LEVERAGE_HAS_TREATY_PORT
+		}
+	}
+	if = {
+		limit = {
+			is_adjacent_to_country = scope:target
+		}
+		add = {
+			value = 150
+			desc = POWER_BLOC_LEVERAGE_ADJACENT_TO_LEADER
+		}
+	}
+	else_if = {
+		limit = {
+			has_strategic_adjacency = scope:target
+		}
+		add = {
+			value = 100
+			desc = POWER_BLOC_LEVERAGE_STRATEGIC_ADJACENCY
+		}
+	}
+	if = {
+		limit = {
+			scope:target = {
+				any_primary_culture = {
+					OR = {
+						shares_heritage_trait_group_with_any_primary_culture = root
+						shares_language_trait_group_with_any_primary_culture = root
+						shares_tradition_trait_with_any_primary_culture = root
+					}
+				}
+			}
+		}
+		add = {
+			value = 100
+			if = {
+				limit = {
+					scope:target = {
+						any_primary_culture = {
+							shares_heritage_trait_group_with_any_primary_culture = root
+						}
+					}
+				}
+				add = 50
+			}
+			if = {
+				limit = {
+					scope:target = {
+						any_primary_culture = {
+							AND = {
+								shares_heritage_trait_group_with_any_primary_culture = root
+								OR = {
+									shares_language_trait_group_with_any_primary_culture = root
+									shares_tradition_trait_with_any_primary_culture = root
+								}
+							}
+						}
+					}
+				}
+				add = 50
+			}
+			desc = POWER_BLOC_LEVERAGE_GAIN_FROM_CULTURAL_PROXIMITY
+		}
+	}
+
+	##### Mult factors: #####
+	if = {
+		limit = {
+			scope:target = {
+				has_diplomats_expelled = ROOT
+			}
+		}
+		multiply = {
+			value = 0.9
+			if = {
+				limit = {
+					scope:target.country_rank = rank_value:great_power
+				}
+				add = -0.6
+			}
+			if = {
+				limit = {
+					scope:target.country_rank = rank_value:major_power
+				}
+				add = -0.4
+			}
+			if = {
+				limit = {
+					scope:target.country_rank = rank_value:minor_power
+				}
+				add = -0.2
+			}
+			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_EXPELLED_DIPLOMATS
+		}
+	}
+	if = {
+		limit = {
+			scope:target = {
+				any_primary_culture = {
+					ROOT = {
+						cultural_acceptance_base = {
+							target = PREV
+							value < acceptance_status_2
+						}
+					}
+				}
+			}
+		}
+		multiply = {
+			value = 0.6
+			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_DISCRIMINATED_PRIMARY_CULTURE
+		}
+	}
+	else_if = {
+		limit = {
+			scope:target = {
+				any_primary_culture = {
+					ROOT = {
+						cultural_acceptance_base = {
+							target = PREV
+							value < acceptance_status_3
+						}
+					}
+				}
+			}
+		}
+		multiply = {
+			value = 0.7
+			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_DISCRIMINATED_PRIMARY_CULTURE
+		}
+	}
+	else_if = {
+		limit = {
+			scope:target = {
+				any_primary_culture = {
+					ROOT = {
+						cultural_acceptance_base = {
+							target = PREV
+							value < acceptance_status_4
+						}
+					}
+				}
+			}
+		}
+		multiply = {
+			value = 0.8
+			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_DISCRIMINATED_PRIMARY_CULTURE
+		}
+	}
+	else_if = {
+		limit = {
+			scope:target = {
+				any_primary_culture = {
+					ROOT = {
+						cultural_acceptance_base = {
+							target = PREV
+							value < acceptance_status_5
+						}
+					}
+				}
+			}
+		}
+		multiply = {
+			value = 0.9
+			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_DISCRIMINATED_PRIMARY_CULTURE
+		}
+	}
+	if = {
+		limit = {
+			capital = {
+				state_religious_acceptance = {
+					target = scope:target.religion
+					value < religious_acceptance_medium
+				}
+			}
+			NOT = {
+				scope:target = {
+					OR = {
+						has_law_or_variant = law_type:law_total_separation
+						has_law_or_variant = law_type:law_freedom_of_conscience
+					}
+				}
+			}
+		}
+		multiply = {
+			value = 0.7
+			if = {
+				limit = {
+					root.power_bloc = {
+						has_identity = identity:identity_religious
+					}
+				}
+				add = -0.2
+			}
+			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_DISCRIMINATED_RELIGION
+		}
+	}
+	if = {
+		limit = {
+			scope:has_capital_interest = no
+		}
+		multiply = {
+			value = 0.7
+			desc = POWER_BLOC_LEVERAGE_GAIN_NO_CAPITAL_INTEREST
+		}
+	}
+	if = {
+		limit = {
+			has_war_with = scope:target
+		}
+		multiply = {
+			value = 0.2
+			desc = POWER_BLOC_LEVERAGE_HAS_WAR_WITH
+		}
+	}
+	if = {
+		limit = {
+			infamy >= infamy_threshold:infamous
+		}
+		multiply = {
+			value = 0.9
+			if = {
+				limit = {
+					infamy >= infamy_threshold:notorious
+				}
+				add = -0.2
+			}
+			if = {
+				limit = {
+					infamy >= infamy_threshold:pariah
+				}
+				add = {
+					value = -0.003
+					multiply = infamy
+				}
+			}
+			min = 0
+			desc = POWER_BLOC_LEVERAGE_PENALTY_INFAMY
+		}
+	}
+	if = {
+		limit = {
+			is_country_type = unrecognized
+			scope:target = {
+				NOT = {
+					is_country_type = unrecognized
+				}
+			}
+		}
+		multiply = {
+			value = 0.1
+			desc = POWER_BLOC_LEVERAGE_UNRECOGNIZED_LEADER_RECOGNIZED_TARGET
+		}
+	}
+}

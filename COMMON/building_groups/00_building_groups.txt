@@ -300,7 +300,8 @@ bg_government = {
 }
 
 bg_technology = {
-	parent_group = bg_government
+	parent_group = bg_urban_facilities
+	subsidized = yes
 }
 
 bg_bureaucracy = {

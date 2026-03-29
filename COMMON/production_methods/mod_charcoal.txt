@@ -42,7 +42,7 @@ REPLACE_OR_CREATE:pm_vacuum_pyrolisis = {
 		}
 	}
 	unlocking_technologies = {
-		vulcanization
+		bessemer_process
 	}
 	building_modifiers = {
 		workforce_scaled = {
@@ -62,7 +62,7 @@ REPLACE_OR_CREATE:pm_hard_vacuum_pyrolisis = {
 		}
 	}
 	unlocking_technologies = {
-		vulcanization
+		bessemer_process
 	}
 	building_modifiers = {
 		workforce_scaled = {

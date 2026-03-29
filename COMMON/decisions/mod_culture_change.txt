@@ -1,4 +1,34 @@
-﻿remove_manchu = {
+﻿european_culture_unification = {
+	is_shown = {
+		european_culture_check = yes
+		not = {
+			country_has_primary_culture = cu:european
+		}
+	}
+	possible = {
+		not = {
+			country_has_primary_culture = cu:european
+		}
+	}
+	when_taken = {
+		every_primary_culture = {
+			root = {
+				remove_primary_culture = prev
+				add_radicals = {
+					value = 1
+					culture = prev
+				}
+			}
+		}
+		add_primary_culture = cu:european
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+#removers
+remove_manchu = {
 	is_shown = {
 		country_has_primary_culture = cu:manchu
 	}

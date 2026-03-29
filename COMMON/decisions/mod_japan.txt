@@ -35,17 +35,17 @@
 		}
 		random_scope_state = {
 			limit = {
-				owner = ROOT
 				is_capital = yes
+				is_homeland_of_country_cultures = root
 			}
 			convert_population = {
 				target = rel:shinto
-				value = 0.4
+				value = 0.5
 			}
 		}
 		every_scope_state = {
 			limit = {
-				owner = ROOT
+				is_homeland_of_country_cultures = root
 				is_incorporated = yes
 				NOT = {
 					is_capital = yes
@@ -53,11 +53,11 @@
 			}
 			convert_population = {
 				target = rel:shinto
-				value = 0.2
+				value = 0.25
 			}
 		}
 	}
 	ai_chance = {
-		base = 100
+		base = 1000
 	}
 }

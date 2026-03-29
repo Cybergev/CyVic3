@@ -2,13 +2,13 @@
 	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 10
+			state_pollution_generation_add = 5
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_steel_add = 50
-			goods_output_engines_add = 50
+			goods_input_steel_add = 100
+			goods_output_engines_add = 100
 		}
 	}
 }
@@ -26,9 +26,9 @@ REPLACE_OR_CREATE:pm_electric_engines = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 100
+			goods_input_steel_add = 150
 			# output goods
-			goods_output_engines_add = 100
+			goods_output_engines_add = 150
 		}
 	}
 }

@@ -1,0 +1,615 @@
+﻿set_homesteading_agriculture = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_homesteading
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_homesteading
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_homesteading
+		add_radicals = {
+			value = 0.5
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_collectivized_agriculture = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_collectivized_agriculture
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_collectivized_agriculture
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_collectivized_agriculture
+		add_radicals = {
+			value = 0.5
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_commercialized_agriculture_agriculture = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_commercialized_agriculture
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_commercialized_agriculture
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_commercialized_agriculture
+		add_radicals = {
+			value = 0.5
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_tenant_farmers = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_tenant_farmers
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_tenant_farmers
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_tenant_farmers
+		add_radicals = {
+			value = 0.5
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_serfdom = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_serfdom
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_serfdom
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_serfdom
+		add_radicals = {
+			value = 0.5
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_command_economy = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_command_economy
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_command_economy
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_command_economy
+		add_radicals = {
+			value = 0.5
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_cooperative_ownership = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_cooperative_ownership
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_cooperative_ownership
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_cooperative_ownership
+		add_radicals = {
+			value = 0.5
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_interventionism = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_interventionism
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_interventionism
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_interventionism
+		add_radicals = {
+			value = 0.5
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_multicultural = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_multicultural
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_multicultural
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_multicultural
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_cultural_exclusion = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_cultural_exclusion
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_cultural_exclusion
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_cultural_exclusion
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_racial_segregation = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_racial_segregation
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_racial_segregation
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_racial_segregation
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_national_supremacy = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_national_supremacy
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_national_supremacy
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_national_supremacy
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_ethnostate = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_ethnostate
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_ethnostate
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_ethnostate
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_anarchy = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_anarchy
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_anarchy
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_anarchy
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_universal_suffrage = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_universal_suffrage
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_universal_suffrage
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_universal_suffrage
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_census_voting = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_census_voting
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_census_voting
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_census_voting
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_wealth_voting = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_wealth_voting
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_wealth_voting
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_wealth_voting
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_landed_voting = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_landed_voting
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_landed_voting
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_landed_voting
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_single_party_state = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_single_party_state
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_single_party_state
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_single_party_state
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_technocracy = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_technocracy
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_technocracy
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_technocracy
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_oligarchy = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_oligarchy
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_oligarchy
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_oligarchy
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_autocracy = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_autocracy
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_autocracy
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_autocracy
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_council_republic = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_council_republic
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_council_republic
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_council_republic
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_corporate_state = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_corporate_state
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_corporate_state
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_corporate_state
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_parliamentary_republic = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_parliamentary_republic
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_parliamentary_republic
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_parliamentary_republic
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_presidential_republic = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_presidential_republic
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_presidential_republic
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_presidential_republic
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_monarchy = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_monarchy
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_monarchy
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_monarchy
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+set_theocracy = {
+	is_shown = {
+		not = {
+			has_law = law_type:law_theocracy
+		}
+	}
+	possible = {
+		not = {
+			has_law = law_type:law_theocracy
+		}
+	}
+	when_taken = {
+		activate_law = law_type:law_theocracy
+		add_radicals = {
+			value = 0.2
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}

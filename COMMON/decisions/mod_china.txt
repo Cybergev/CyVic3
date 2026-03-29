@@ -1,0 +1,46 @@
+﻿destroy_china = {
+	is_shown = {
+		has_journal_entry = je_warlord_china
+	}
+	possible = {
+		has_journal_entry = je_warlord_china
+	}
+	when_taken = {
+		trigger_event = {
+			id = warlord_china_events.100
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+save_china = {
+	is_shown = {
+		has_journal_entry = je_warlord_china
+	}
+	possible = {
+		has_journal_entry = je_warlord_china
+		is_revolutionary = no
+		NOT = {
+			has_law_or_variant = law_type:law_monarchy
+			has_law_or_variant = law_type:law_autocracy
+			has_law_or_variant = law_type:law_hereditary_bureaucrats
+			has_law_or_variant = law_type:law_subjecthood
+			has_law_or_variant = law_type:law_peasant_levies
+			has_law_or_variant = law_type:law_traditionalism
+			has_law_or_variant = law_type:law_serfdom
+		}
+		OR = {
+			country_rank = rank_value:great_power
+			country_rank = rank_value:major_power
+		}
+	}
+	when_taken = {
+		set_variable = won_boxer_rebellion
+		set_variable = china_warlord_abolished_monarchy
+	}
+	ai_chance = {
+		base = 0
+	}
+}

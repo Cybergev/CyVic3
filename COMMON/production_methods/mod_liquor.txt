@@ -1,43 +1,44 @@
-﻿REPLACE_OR_CREATE:pm_pot_stills = {
+﻿REPLACE_OR_CREATE:pm_no_grain_liquor = {
+	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
+}
+
+REPLACE_OR_CREATE:pm_grain_pot_stills = {
 	texture = "gfx/interface/icons/production_method_icons/pot_stills_mod.dds"
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 5
-		}
-	}
 	is_default = yes
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
 			goods_input_grain_add = 40
 			goods_input_sugar_add = 10
-			# output goods
-			goods_output_liquor_add = 50
+			# output goods 1.6
+			goods_output_liquor_add = 40
 		}
 	}
 }
 
-REPLACE_OR_CREATE:pm_fruit_pot_stills = {
-	texture = "gfx/interface/icons/production_method_icons/pot_stills_mod.dds"
+REPLACE_OR_CREATE:pm_grain_patent_stills = {
+	texture = "gfx/interface/icons/production_method_icons/patent_stills_mod.dds"
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 5
 		}
 	}
-	is_default = yes
+	unlocking_technologies = {
+		fractional_distillation
+	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fruit_add = 40
-			goods_input_sugar_add = 10
-			# output goods
-			goods_output_liquor_add = 50
+			goods_input_grain_add = 40
+			goods_input_sugar_add = 20
+			# output goods 2
+			goods_output_liquor_add = 60
 		}
 	}
 }
 
-REPLACE_OR_CREATE:pm_patent_stills = {
-	texture = "gfx/interface/icons/production_method_icons/patent_stills_mod.dds"
+REPLACE_OR_CREATE:pm_grain_rectification = {
+	texture = "gfx/interface/icons/production_method_icons/ammonia_soda_process.dds"
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 10
@@ -51,8 +52,26 @@ REPLACE_OR_CREATE:pm_patent_stills = {
 			# input goods
 			goods_input_grain_add = 80
 			goods_input_sugar_add = 20
-			# output goods
+			# output goods 2
 			goods_output_liquor_add = 100
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_no_fruit_liquor = {
+	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
+}
+
+REPLACE_OR_CREATE:pm_fruit_pot_stills = {
+	texture = "gfx/interface/icons/production_method_icons/pot_stills_mod.dds"
+	is_default = yes
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_fruit_add = 40
+			goods_input_sugar_add = 10
+			# output goods 1.6
+			goods_output_liquor_add = 40
 		}
 	}
 }
@@ -61,7 +80,7 @@ REPLACE_OR_CREATE:pm_fruit_patent_stills = {
 	texture = "gfx/interface/icons/production_method_icons/patent_stills_mod.dds"
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 10
+			state_pollution_generation_add = 5
 		}
 	}
 	unlocking_technologies = {
@@ -70,10 +89,81 @@ REPLACE_OR_CREATE:pm_fruit_patent_stills = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
+			goods_input_fruit_add = 40
+			goods_input_sugar_add = 20
+			# output goods 2
+			goods_output_liquor_add = 60
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_fruit_rectification = {
+	texture = "gfx/interface/icons/production_method_icons/ammonia_soda_process.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		aniline
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
 			goods_input_fruit_add = 80
 			goods_input_sugar_add = 20
-			# output goods
+			# output goods 2
 			goods_output_liquor_add = 100
 		}
 	}
+}
+
+REPLACE_OR_CREATE:pm_no_synthetic_liquor = {
+	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
+}
+
+REPLACE_OR_CREATE:pm_acetaldehyde_process = {
+	texture = "gfx/interface/icons/production_method_icons/procft.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	unlocking_technologies = {
+		chemical_bleaching
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_coal_add = 40
+			goods_input_fertilizer_add = 10
+			goods_input_electricity_add = 20
+			# output goods 1.6
+			goods_output_liquor_add = 60
+		}
+	}
+	required_input_goods = electricity
+}
+
+REPLACE_OR_CREATE:pm_ethylene_process = {
+	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		aniline
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_oil_add = 40
+			goods_input_fertilizer_add = 10
+			goods_input_electricity_add = 10
+			# output goods 1.9
+			goods_output_liquor_add = 100
+		}
+	}
+	required_input_goods = electricity
 }

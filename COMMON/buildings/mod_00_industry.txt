@@ -519,7 +519,9 @@ building_distillation_plant = {
 		distillation
 	}
 	production_method_groups = {
-		pmg_distillery
+		pmg_grain_distillery
+		pmg_fruit_distillery
+		pmg_synthetic_liquor
 		pmg_automation_chemical_plant
 	}
 	possible = {
@@ -686,7 +688,8 @@ building_food_industry = {
 	}
 	production_method_groups = {
 		pmg_base_building_food_industry
-		pmg_canning
+		pmg_canning_meat
+		pmg_canning_fish
 		pmg_automation_light_industry
 	}
 	required_construction = construction_cost_high

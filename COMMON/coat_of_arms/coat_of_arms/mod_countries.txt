@@ -128,6 +128,144 @@ ASH_subject = {
 	}
 }
 
+CHI = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+	color2 = "yellow"
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "blue"
+		color2 = "blue"
+		instance = { scale = { 1.0 1.0 } position = { 1 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { scale = { 1.0 1.0 } position = { 0 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_saltire.dds"
+		color1 = "red"
+		color2 = "red"
+	}
+}
+
+CHI_theocracy = {
+	pattern = "pattern_border_of_4.dds"
+	color1 = "red"
+	color2 = "yellow"
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "yellow"
+        instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_dragon_china_circle.dds"
+		color1 = "blue"
+		color2 = "white"
+		color3 = "white"
+		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "red"
+		instance = { scale = { 0.15 0.15 } position = { 0.5 0.525 } }
+	}
+}
+
+CHI_absolute_monarchy = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+	color2 = "blue"
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "red"
+		instance = { scale = { 0.15 0.15 } position = { 0.10 0.155 } }
+	}
+	colored_emblem = {
+		texture = "ce_dragon_china.dds"
+		color1 = "blue"
+		color2 = "white"
+		color3 = "white"
+		instance = { scale = { 1.4 1.4 } position = { 0.5 0.49 } }
+	}
+}
+
+CHI_han_empire = { # Han Imperial China
+	pattern = "pattern_solid.tga"
+	color1 = "orange"
+	color2 = "blue"
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "white"
+		instance = { scale = { 0.15 0.15 } position = { 0.10 0.155 } }
+	}
+	colored_emblem = {
+		texture = "ce_dragon_china.dds"
+		color1 = "blue"
+		color2 = "white"
+		color3 = "white"
+		instance = { scale = { 1.4 1.4 } position = { 0.5 0.49 } }
+	}
+}
+
+CHI_dictatorship = {
+	# Kuomintang flag war flag 1930
+	pattern = "pattern_border_of_4.dds"
+	color1 = "blue"
+	color2 = "red"
+	colored_emblem = {
+		texture = "ce_star_12.dds"
+		color1 = "white"
+		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "blue"
+		instance = { scale = { 0.45 0.45 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "white"
+		instance = { scale = { 0.4 0.4 } position = { 0.5 0.5 } }
+	}
+}
+
+CHI_republic = {
+	# Chinese republic 1912
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 1.0 0.2 } position = { 0.5 0.3 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "blue"
+		color2 = "blue"
+		instance = { scale = { 1.0 0.2 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 1.0 0.2 } position = { 0.5 0.7 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { scale = { 1.0 0.2 } position = { 0.5 0.9 } }
+	}
+}
 EUR_republic = {
 	pattern = "pattern_solid.tga"
 	color1 = "EUR_base_color"
@@ -766,6 +904,7 @@ JAP_shinto_theocracy = {
 		color1 = "white"
 	}
 }
+
 JAP_shinto_military_theocracy = {
 	pattern = "pattern_gironny_32.dds"
 	color1 = "black"

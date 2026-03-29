@@ -8,7 +8,7 @@
 	}
 	show_requirements = yes
 	possible = {
-		age >= define:ncharacters|adult_age
+		age >= define:NCharacters|ADULT_AGE
 		interest_group ?= {
 			is_in_government = yes
 		}
@@ -84,23 +84,20 @@ REPLACE_OR_CREATE:grant_command_to_agitator = {
 	icon = "gfx/interface/character_panel/grant_command.dds"
 	clicksound = "event:/sfx/ui/military/command_grant"
 	potential = {
-		has_dlc_feature = agitators
+		owner ?= scope:actor
+	}
+	show_requirements = yes
+	possible = {
 		or = {
 			has_role = agitator
 			has_role = politician
 		}
 		not = {
-			has_role = ruler
+			is_ruler = yes
 			has_role = general
 			has_role = admiral
 		}
-		owner ?= scope:actor
-	}
-	show_requirements = yes
-	possible = {
-		age >= define:ncharacters|adult_age
 		is_female = no
-		exists = owner.capital.land_hq
 	}
 	effect = {
 		add_character_role = general
@@ -272,8 +269,6 @@ REPLACE_OR_CREATE:invite_exile = {
 				has_law = law_type:law_closed_borders
 			}
 		}
-		# agitator must be able to start or join a movement
-		can_agitate = scope:actor
 	}
 	effect = {
 		transfer_character = scope:actor
@@ -813,7 +808,7 @@ REPLACE_OR_CREATE:abdicate_monarch = {
 			}
 			or = {
 				popularity <= -50
-				age >= define:ncharacters|old_age
+				age >= define:NCharacters|OLD_AGE
 				has_trait = psychological_affliction
 				has_trait = cancer
 				has_trait = senile
@@ -866,7 +861,7 @@ REPLACE_OR_CREATE:abdicate_monarch = {
 				}
 			}
 			owner.heir = {
-				age >= define:ncharacters|adult_age
+				age >= define:NCharacters|ADULT_AGE
 			}
 		}
 	}
@@ -933,7 +928,7 @@ REPLACE_OR_CREATE:abdicate_monarch = {
 		}
 		if = {
 			limit = {
-				age >= define:ncharacters|old_age
+				age >= define:NCharacters|OLD_AGE
 			}
 			add = 50
 		}
@@ -973,7 +968,7 @@ REPLACE_OR_CREATE:resign_from_office = {
 			}
 			or = {
 				popularity <= -50
-				age >= define:ncharacters|old_age
+				age >= define:NCharacters|OLD_AGE
 				has_trait = psychological_affliction
 				has_trait = cancer
 				has_trait = senile
@@ -1173,7 +1168,7 @@ REPLACE_OR_CREATE:retire_commander = {
 		}
 		if = {
 			limit = {
-				age >= define:ncharacters|old_age
+				age >= define:NCharacters|OLD_AGE
 			}
 			add = 50
 		}

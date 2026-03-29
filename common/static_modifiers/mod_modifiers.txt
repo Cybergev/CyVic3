@@ -30,7 +30,7 @@ REPLACE_OR_CREATE:base_values = {
 	country_company_construction_efficiency_bonus_add = 0.5
 	state_building_construction_sector_max_level_add = 10
 	country_max_weekly_construction_progress_add = 10
-	military_formation_organization_gain_add = 0.5	# 200 days to get max organization
+	military_formation_organization_gain_add = 0.25	# 400 days to get max organization
 	state_urbanization_per_level_add = 100
 	unit_experience_gain_add = 0.5
 	# To account for the power derived from bearing arms
@@ -125,14 +125,22 @@ REPLACE_OR_CREATE:literacy_penalty = {
 
 REPLACE_OR_CREATE:low_organization = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-	unit_offense_mult = -0.75
-	unit_defense_mult = -0.75
-	unit_blockade_mult = -0.75
+	character_advancement_speed_mult = -0.5
+	character_interception_add = -5
+	unit_offense_mult = -0.5
+	unit_defense_mult = -0.5
+	unit_blockade_mult = -0.5
 	unit_morale_recovery_mult = -1
+	unit_morale_damage_mult = -0.5
+	unit_morale_loss_mult = 0.5
+	battle_casualties_mult = 0.5
+	unit_kill_rate_add = -0.5
 	unit_recovery_rate_add = -0.5
-	unit_convoy_raiding_mult = -0.75
-	unit_convoy_defense_mult = -0.75
+	unit_devastation_mult = 1
+	unit_convoy_raiding_mult = -0.5
+	unit_convoy_defense_mult = -0.5
 	unit_supply_consumption_mult = 1
+	unit_occupation_mult = -1
 	military_formation_movement_speed_mult = -0.5
 }
 
@@ -166,10 +174,19 @@ REPLACE_OR_CREATE:state_turmoil_extreme = {
 	state_working_adult_ratio_add = -0.75
 }
 
+REPLACE_OR_CREATE:country_humiliated = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_authority_mult = -0.5
+	country_influence_mult = -0.5
+	country_liberty_desire_decrease_mult = 0.5
+	country_liberty_desire_increase_mult = -0.5
+	country_prestige_mult = -0.5
+	country_leverage_resistance_mult = -0.5
+	country_leverage_generation_mult = -0.5
+}
+
 REPLACE_OR_CREATE:national_values_promotion = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	state_assimilation_mult = 0.1
-	state_conversion_mult = 0.1
 	state_radicalism_increases_violent_hostility_mult = 0.4
 	state_radicalism_increases_cultural_erasure_mult = 0.3
 	state_radicalism_increases_open_prejudice_mult = 0.2
@@ -201,27 +218,58 @@ REPLACE_OR_CREATE:accepted_movement = {
 
 REPLACE_OR_CREATE:suppression_colonial_manufacturing_industry_policy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_liberty_desire_of_subjects_add = 0.25
+	country_liberty_desire_of_subjects_add = 0.5
 }
 
 REPLACE_OR_CREATE:suppression_colonial_agricultural_industry_policy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_liberty_desire_of_subjects_add = 0.15
+	country_liberty_desire_of_subjects_add = 0.25
 }
 
 REPLACE_OR_CREATE:suppression_colonial_resource_industry_policy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_liberty_desire_of_subjects_add = 0.15
+	country_liberty_desire_of_subjects_add = 0.25
 }
 
 REPLACE_OR_CREATE:suppression_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	building_throughput_add = -10
+	building_subsistence_output_add = -1000
+	building_throughput_add = -0.9
 	building_cash_reserves_mult = -10
 	building_economy_of_scale_level_cap_add = -1000
 	building_goods_input_mult = 10
-	building_minimum_wage_mult = -10
+	building_goods_output_mult = -10
+	building_minimum_wage_mult = 10
 	building_working_conditions_mult = 10
+	building_academics_job_attractiveness_mult = -10
+	building_academics_standard_of_living_add = -1000
+	building_aristocrats_job_attractiveness_mult = -10
+	building_aristocrats_standard_of_living_add = -1000
+	building_bureaucrats_job_attractiveness_mult = -10
+	building_bureaucrats_standard_of_living_add = -1000
+	building_capitalists_job_attractiveness_mult = -10
+	building_capitalists_standard_of_living_add = -1000
+	building_clergymen_job_attractiveness_mult = -10
+	building_clergymen_standard_of_living_add = -1000
+	building_clerks_job_attractiveness_mult = -10
+	building_clerks_standard_of_living_add = -1000
+	building_engineers_job_attractiveness_mult = -10
+	building_engineers_standard_of_living_add = -1000
+	building_farmers_job_attractiveness_mult = -10
+	building_farmers_standard_of_living_add = -1000
+	building_laborers_job_attractiveness_mult = -10
+	building_laborers_standard_of_living_add = -1000
+	building_machinists_job_attractiveness_mult = -10
+	building_machinists_standard_of_living_add = -1000
+	building_officers_job_attractiveness_mult = -10
+	building_officers_standard_of_living_add = -1000
+	building_peasants_job_attractiveness_mult = -10
+	building_peasants_standard_of_living_add = -1000
+	building_shopkeepers_job_attractiveness_mult = -10
+	building_shopkeepers_standard_of_living_add = -1000
+	building_slaves_standard_of_living_add = -1000
+	building_soldiers_job_attractiveness_mult = -10
+	building_soldiers_standard_of_living_add = -1000
 }
 
 REPLACE_OR_CREATE:ban_private_construction = {

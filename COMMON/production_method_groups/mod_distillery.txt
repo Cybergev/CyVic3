@@ -1,9 +1,28 @@
-﻿REPLACE_OR_CREATE:pmg_distillery = {
+﻿REPLACE_OR_CREATE:pmg_grain_distillery = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
-		pm_pot_stills
+		pm_no_grain_liquor
+		pm_grain_pot_stills
+		pm_grain_patent_stills
+		pm_grain_rectification
+	}
+}
+
+REPLACE_OR_CREATE:pmg_fruit_distillery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_fruit_liquor
 		pm_fruit_pot_stills
-		pm_patent_stills
 		pm_fruit_patent_stills
+		pm_fruit_rectification
+	}
+}
+
+REPLACE_OR_CREATE:pmg_synthetic_liquor = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_synthetic_liquor
+		pm_acetaldehyde_process
+		pm_ethylene_process
 	}
 }

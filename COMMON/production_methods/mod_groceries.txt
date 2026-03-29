@@ -1,16 +1,5 @@
 ﻿REPLACE_OR_CREATE:pm_disabled_baking = {
 	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
-	unlocking_production_methods = {
-		pm_cannery_meat
-		pm_cannery_fish
-		pm_cannery_all
-		pm_vacuum_cannery_meat
-		pm_vacuum_cannery_fish
-		pm_vacuum_canning_all
-		pm_vacuum_cannery_meat_principle_3
-		pm_vacuum_cannery_fish_principle_3
-		pm_vacuum_canning_all_principle_3
-	}
 }
 
 REPLACE_OR_CREATE:pm_bakery = {
@@ -34,9 +23,9 @@ REPLACE_OR_CREATE:pm_sweeteners = {
 		workforce_scaled = {
 			# input goods
 			goods_input_grain_add = 40
-			goods_input_sugar_add = 10
+			goods_input_sugar_add = 20
 			# output goods
-			goods_output_groceries_add = 80
+			goods_output_groceries_add = 60
 		}
 	}
 }
@@ -50,9 +39,9 @@ REPLACE_OR_CREATE:pm_fruit_sweeteners = {
 		workforce_scaled = {
 			# input goods
 			goods_input_grain_add = 40
-			goods_input_fruit_add = 10
+			goods_input_fruit_add = 20
 			# output goods
-			goods_output_groceries_add = 80
+			goods_output_groceries_add = 60
 		}
 	}
 }
@@ -90,19 +79,13 @@ REPLACE_OR_CREATE:pm_fruit_baking_powder = {
 }
 
 #CANNING
-REPLACE_OR_CREATE:pm_disabled_canning = {
+REPLACE_OR_CREATE:pm_canning_meat_disabled = {
 	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
-	unlocking_production_methods = {
-		pm_bakery
-		pm_sweeteners
-		pm_fruit_sweeteners
-		pm_baking_powder
-		pm_fruit_baking_powder
-	}
 }
 
-REPLACE_OR_CREATE:pm_cannery_meat = {
+REPLACE_OR_CREATE:pm_iron_canned_meat = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	replacement_if_valid = pm_iron_canned_meat_principle_3
 	unlocking_technologies = {
 		canneries
 	}
@@ -110,139 +93,203 @@ REPLACE_OR_CREATE:pm_cannery_meat = {
 		workforce_scaled = {
 			# input goods
 			goods_input_meat_add = 40
-			goods_input_iron_add = 1
-			# output goods
-			goods_output_groceries_add = 80
+			goods_input_iron_add = 10
+			# output goods 1.3
+			goods_output_groceries_add = 60
 		}
 	}
 }
 
-REPLACE_OR_CREATE:pm_cannery_fish = {
+REPLACE_OR_CREATE:pm_steel_canned_meat = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	replacement_if_valid = pm_steel_canned_meat_principle_3
 	unlocking_technologies = {
 		canneries
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fish_add = 40
-			goods_input_iron_add = 1
-			# output goods
-			goods_output_groceries_add = 80
+			goods_input_meat_add = 40
+			goods_input_steel_add = 5
+			# output goods 1.3
+			goods_output_groceries_add = 60
 		}
 	}
 }
 
-REPLACE_OR_CREATE:pm_cannery_all = {
+REPLACE_OR_CREATE:pm_vacuum_packed_meat = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
+	replacement_if_valid = pm_vacuum_packed_meat_principle_3
+	unlocking_technologies = {
+		vacuum_canning
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_meat_add = 40
+			goods_input_rubber_add = 5
+			# output goods 1.3
+			goods_output_groceries_add = 60
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_iron_canned_meat_principle_3 = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
-	unlocking_technologies = {
-		canneries
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_fish_add = 40
-			goods_input_meat_add = 40
-			goods_input_iron_add = 2
-			# output goods
-			goods_output_groceries_add = 160
-		}
-	}
-}
-
-REPLACE_OR_CREATE:pm_vacuum_cannery_meat = {
-	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
-	replacement_if_valid = pm_vacuum_canning_principle_3
-	unlocking_technologies = {
-		vacuum_canning
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_meat_add = 40
-			goods_input_rubber_add = 1
-			# output goods
-			goods_output_groceries_add = 80
-		}
-	}
-}
-
-REPLACE_OR_CREATE:pm_vacuum_cannery_fish = {
-	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
-	replacement_if_valid = pm_vacuum_canning_principle_3
-	unlocking_technologies = {
-		vacuum_canning
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_fish_add = 40
-			goods_input_rubber_add = 1
-			# output goods
-			goods_output_groceries_add = 80
-		}
-	}
-}
-
-REPLACE_OR_CREATE:pm_vacuum_canning_all = {
-	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
-	replacement_if_valid = pm_vacuum_canning_principle_3
-	unlocking_technologies = {
-		vacuum_canning
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_fish_add = 40
-			goods_input_meat_add = 40
-			goods_input_rubber_add = 2
-			# output goods
-			goods_output_groceries_add = 160
-		}
-	}
-}
-
-REPLACE_OR_CREATE:pm_vacuum_cannery_meat_principle_3 = {
-	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_principles = {
 		principle_food_standardization_3
 	}
 	unlocking_technologies = {
-		vacuum_canning
+		canneries
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
 			goods_input_meat_add = 40
-			goods_input_rubber_add = 1
-			# output goods
+			goods_input_iron_add = 20
+			# output goods 2.2
 			goods_output_groceries_add = 100
 		}
 	}
 }
 
-REPLACE_OR_CREATE:pm_vacuum_cannery_fish_principle_3 = {
-	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
+REPLACE_OR_CREATE:pm_steel_canned_meat_principle_3 = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_principles = {
 		principle_food_standardization_3
 	}
 	unlocking_technologies = {
-		vacuum_canning
+		canneries
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fish_add = 40
-			goods_input_rubber_add = 1
-			# output goods
+			goods_input_meat_add = 40
+			goods_input_steel_add = 10
+			# output goods 2.1
 			goods_output_groceries_add = 100
 		}
 	}
 }
 
-REPLACE_OR_CREATE:pm_vacuum_canning_all_principle_3 = {
+REPLACE_OR_CREATE:pm_vacuum_packed_meat_principle_3 = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
+	is_hidden_when_unavailable = yes
+	unlocking_principles = {
+		principle_food_standardization_3
+	}
+	unlocking_technologies = {
+		vacuum_canning
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_meat_add = 40
+			goods_input_rubber_add = 10
+			# output goods 2.1
+			goods_output_groceries_add = 100
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_canning_fish_disabled = {
+	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
+}
+
+REPLACE_OR_CREATE:pm_iron_canned_fish = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	replacement_if_valid = pm_iron_canned_fish_principle_3
+	unlocking_technologies = {
+		canneries
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_fish_add = 40
+			goods_input_iron_add = 10
+			# output goods 1.3
+			goods_output_groceries_add = 60
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_steel_canned_fish = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	replacement_if_valid = pm_steel_canned_fish_principle_3
+	unlocking_technologies = {
+		canneries
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_fish_add = 40
+			goods_input_steel_add = 5
+			# output goods 1.3
+			goods_output_groceries_add = 60
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_vacuum_packed_fish = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
+	replacement_if_valid = pm_vacuum_packed_fish_principle_3
+	unlocking_technologies = {
+		vacuum_canning
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_fish_add = 40
+			goods_input_rubber_add = 5
+			# output goods 1.3
+			goods_output_groceries_add = 60
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_iron_canned_fish_principle_3 = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	is_hidden_when_unavailable = yes
+	unlocking_principles = {
+		principle_food_standardization_3
+	}
+	unlocking_technologies = {
+		canneries
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_fish_add = 40
+			goods_input_iron_add = 20
+			# output goods 2.2
+			goods_output_groceries_add = 100
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_steel_canned_fish_principle_3 = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	is_hidden_when_unavailable = yes
+	unlocking_principles = {
+		principle_food_standardization_3
+	}
+	unlocking_technologies = {
+		canneries
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_fish_add = 40
+			goods_input_steel_add = 10
+			# output goods 2.1
+			goods_output_groceries_add = 100
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_vacuum_packed_fish_principle_3 = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_principles = {
@@ -255,10 +302,9 @@ REPLACE_OR_CREATE:pm_vacuum_canning_all_principle_3 = {
 		workforce_scaled = {
 			# input goods
 			goods_input_fish_add = 40
-			goods_input_meat_add = 40
-			goods_input_rubber_add = 2
-			# output goods
-			goods_output_groceries_add = 200
+			goods_input_rubber_add = 10
+			# output goods 2.1
+			goods_output_groceries_add = 100
 		}
 	}
 }

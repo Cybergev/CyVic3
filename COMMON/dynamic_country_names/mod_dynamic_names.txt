@@ -1,4 +1,60 @@
-﻿REPLACE_OR_CREATE:JAP = {
+﻿REPLACE_OR_CREATE:CHI = {
+	# China
+	dynamic_country_name = {
+		name = dyn_c_great_qing
+		adjective = dyn_c_great_qing_adj
+		is_main_tag_only = yes
+		priority = 0
+		trigger = {
+			scope:actor ?= {
+				country_has_primary_culture = cu:manchu
+				OR = {
+					has_law_or_variant = law_type:law_theocracy
+					has_law_or_variant = law_type:law_monarchy
+				}
+				OR = {
+					has_law_or_variant = law_type:law_autocracy
+					has_law_or_variant = law_type:law_oligarchy
+					has_law_or_variant = law_type:law_technocracy
+					has_law_or_variant = law_type:law_single_party_state
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_empire_of_china
+		adjective = dyn_c_empire_of_china_adj
+		is_main_tag_only = yes
+		priority = 0
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					has_law_or_variant = law_type:law_theocracy
+					has_law_or_variant = law_type:law_monarchy
+				}
+				OR = {
+					has_law_or_variant = law_type:law_autocracy
+					has_law_or_variant = law_type:law_oligarchy
+					has_law_or_variant = law_type:law_technocracy
+					has_law_or_variant = law_type:law_single_party_state
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_peoples_republic_of_china
+		adjective = CHI_ADJ
+		is_main_tag_only = yes
+		priority = 0
+		trigger = {
+			scope:actor ?= {
+				has_law_or_variant = law_type:law_council_republic
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:JAP = {
 	# Japan
 	dynamic_country_name = {
 		name = dyn_c_japan_shogunate
@@ -43,6 +99,30 @@
 					coa_dictatorship_trigger = yes
 					coa_fascist_trigger = yes
 					coa_military_trigger = yes
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:PAN = {
+	# Punjab
+	dynamic_country_name = {
+		name = dyn_c_sikh_empire
+		adjective = dyn_c_sikh_empire_adj
+		is_main_tag_only = yes
+		priority = 0
+		trigger = {
+			scope:actor ?= {
+				country_has_state_religion = rel:sikh
+				NAND = {
+					has_law_or_variant = law_type:law_state_atheism
+					has_law_or_variant = law_type:law_total_separation
+				}
+				OR = {
+					has_law_or_variant = law_type:law_theocracy
+					has_law_or_variant = law_type:law_monarchy
+					has_law_or_variant = law_type:law_corporate_state
 				}
 			}
 		}

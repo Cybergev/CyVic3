@@ -23,7 +23,7 @@ REPLACE_OR_CREATE:EUR_republic = {
 	color = "EUR_base_color"
 	possible = {
 		exists = c:EUR
-		THIS = c:EUR
+		c:EUR ?= THIS
 		OR = {
 			has_government_type = gov_presidential_democracy
 			has_government_type = gov_parliamentary_democracy
@@ -35,7 +35,7 @@ REPLACE_OR_CREATE:EUR_communist = {
 	color = "EUR_communist_color"
 	possible = {
 		exists = c:EUR
-		THIS = c:EUR
+		c:EUR ?= THIS
 		OR = {
 			has_government_type = gov_council_dictatorship
 			has_government_type = gov_cybernetic_state
@@ -49,7 +49,7 @@ REPLACE_OR_CREATE:EUR_technate = {
 	color = "EUR_tehcnate_color"
 	possible = {
 		exists = c:EUR
-		THIS = c:EUR
+		c:EUR ?= THIS
 		OR = {
 			has_government_type = gov_contechne
 			has_government_type = gov_enlightened_despotate
@@ -63,7 +63,7 @@ REPLACE_OR_CREATE:EUR_dictatorship = {
 	color = "EUR_dictatorship_color"
 	possible = {
 		exists = c:EUR
-		THIS = c:EUR
+		c:EUR ?= THIS
 		OR = {
 			AND = {
 				has_law = law_type:law_monarchy
@@ -95,8 +95,58 @@ REPLACE_OR_CREATE:EUR_fascist = {
 	color = "EUR_fascist_color"
 	possible = {
 		exists = c:EUR
-		THIS = c:EUR
+		c:EUR ?= THIS
 		has_government_type = gov_fascist_state
+	}
+}
+
+REPLACE_OR_CREATE:han_imperial_china = {
+	color = "red_china"
+	possible = {
+		OR = {
+			AND = {
+				exists = c:CHI
+				c:CHI ?= THIS
+			}
+			AND = {
+				exists = c:BEI
+				c:BEI ?= THIS
+			}
+		}
+		NOT = {
+			country_has_primary_culture = cu:manchu
+		}
+	}
+}
+
+REPLACE_OR_CREATE:republican_china = {
+	# Beiyang Government stays yellow
+	color = "azure"
+	possible = {
+		exists = c:CHI
+		c:CHI ?= THIS
+		OR = {
+			has_law_or_variant = law_type:law_presidential_republic
+			has_law_or_variant = law_type:law_parliamentary_republic
+			has_law_or_variant = law_type:law_corporate_state
+		}
+	}
+}
+
+REPLACE_OR_CREATE:communist_china = {
+	color = "communist_china_red"
+	possible = {
+		OR = {
+			AND = {
+				exists = c:CHI
+				c:CHI ?= THIS
+			}
+			AND = {
+				exists = c:BEI
+				c:BEI ?= THIS
+			}
+		}
+		has_law_or_variant = law_type:law_council_republic
 	}
 }
 

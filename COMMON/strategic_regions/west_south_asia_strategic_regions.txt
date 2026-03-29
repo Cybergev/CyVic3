@@ -125,6 +125,7 @@ region_madras = {
 		STATE_MADRAS
 		STATE_HYDERABAD
 		STATE_KURNOOL
+		STATE_BOMBAY
 	}
 }
 
@@ -153,9 +154,6 @@ region_bombay = {
 		123
 	}
 	states = {
-		STATE_BOMBAY
-		STATE_GUJARAT
-		STATE_SINDH
 	}
 }
 
@@ -170,8 +168,10 @@ region_punjab = {
 	states = {
 		STATE_PUNJAB
 		STATE_HILL_PUNJAB
+		STATE_SINDH
 		STATE_DELHI
 		STATE_RAJPUTANA
+		STATE_GUJARAT
 	}
 }
 

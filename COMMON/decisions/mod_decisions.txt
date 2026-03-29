@@ -12,51 +12,21 @@
 	}
 }
 
-destroy_china = {
+start_election = {
 	is_shown = {
-		c:chi ?= root
-		exists = c:chi
+		country_has_voting_franchise = yes
 	}
 	possible = {
-		c:chi ?= root
-		exists = c:chi
+		in_election_campaign = no
+		country_has_voting_franchise = yes
 	}
 	when_taken = {
-		trigger_event = {
-			id = warlord_china_events.100
+		call_election = {
+			months = 3
 		}
-	}
-	ai_chance = {
-		base = 0
-	}
-}
-
-european_culture_unification = {
-	is_shown = {
-		european_culture_check = yes
-		not = {
-			country_has_primary_culture = cu:european
+		add_radicals = {
+			value = 0.2
 		}
-	}
-	possible = {
-		not = {
-			country_has_primary_culture = cu:european
-		}
-	}
-	when_taken = {
-		every_primary_culture = {
-			root = {
-				remove_primary_culture = prev
-				add_radicals = {
-					value = 1
-					culture = prev
-				}
-			}
-		}
-		add_primary_culture = cu:european
-	}
-	ai_chance = {
-		base = 0
 	}
 }
 
@@ -748,7 +718,7 @@ homeland_expansion = {
 	}
 }
 
-promote_national_values = {
+promotion_national_values = {
 	is_shown = {
 		has_technology_researched = nationalism
 	}
@@ -781,7 +751,7 @@ promote_national_values = {
 		promote_national_val = yes
 	}
 	ai_chance = {
-		base = 0
+		base = 1000000
 	}
 }
 
@@ -1150,13 +1120,13 @@ redirec_communism_cours = {
 fix_population = {
 	is_shown = {
 		any_state = {
-			state_population >= 100000000
+			state_population >= 200000000
 		}
 	}
 	when_taken = {
 		every_state = {
 			limit = {
-				state_population >= 100000000
+				state_population >= 200000000
 			}
 			kill_population_percent_in_state = {
 				strata = upper

@@ -7,7 +7,7 @@
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 10
+			goods_output_services_add = 10
 		}
 		level_scaled = {
 			building_employment_laborers_add = 1000
@@ -33,7 +33,8 @@ REPLACE_OR_CREATE:pm_philosophy_department = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 15
+			goods_input_paper_add = 5
+			goods_output_services_add = 25
 		}
 		level_scaled = {
 			building_employment_clerks_add = 500
@@ -58,7 +59,8 @@ REPLACE_OR_CREATE:pm_analytical_philosophy_department = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 20
+			goods_input_paper_add = 10
+			goods_output_services_add = 50
 		}
 	}
 	state_modifiers = {

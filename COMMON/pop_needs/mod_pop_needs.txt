@@ -112,6 +112,9 @@ REPLACE:popneed_luxury_food = {
 
 REPLACE:popneed_intoxicants = {
 	default = liquor
+	obsession_demand_min = 1
+	obsession_demand_mult = 2
+	prestige_goods_demand_increase = 1
 	entry = {
 		goods = liquor
 		weight = 1
@@ -133,6 +136,37 @@ REPLACE:popneed_intoxicants = {
 	entry = {
 		goods = opium
 		weight = 1
+		max_supply_share = 1
+		min_supply_share = 0
+	}
+}
+
+REPLACE:popneed_stimulants = {
+	default = tobacco
+	obsession_demand_min = 1
+	obsession_demand_mult = 2
+	prestige_goods_demand_increase = 1
+	entry = {
+		goods = tobacco
+		weight = 1
+		max_supply_share = 1
+		min_supply_share = 0
+	}
+	entry = {
+		goods = opium
+		weight = 2
+		max_supply_share = 1
+		min_supply_share = 0
+	}
+	entry = {
+		goods = coffee
+		weight = 0.5
+		max_supply_share = 1
+		min_supply_share = 0
+	}
+	entry = {
+		goods = tea
+		weight = 0.5
 		max_supply_share = 1
 		min_supply_share = 0
 	}

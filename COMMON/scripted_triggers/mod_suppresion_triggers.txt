@@ -6,6 +6,7 @@
 				is_subject_type = subject_type_puppet
 				is_subject_type = subject_type_colony
 				is_subject_type = subject_type_vassal
+				is_subject_type = subject_type_crown_land
 			}
 			any_overlord_or_above = {
 				has_modifier = suppression_colonial_manufacturing_industry_policy
@@ -173,6 +174,7 @@ REPLACE_OR_CREATE:desuppression_resource_trigger = {
 REPLACE_OR_CREATE:suppression_manufacturing_bg_trigger = {
 	OR = {
 		is_building_group = bg_manufacturing
+		is_building_type = building_trade_center
 		is_building_type = building_arts_academy
 	}
 }

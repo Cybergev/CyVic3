@@ -1,5 +1,28 @@
 ﻿NDiplomacy = {
 	BASE_YEARLY_INFAMY_DECAY_RATE = 12
+	#
+	WAR_GOAL_REGIME_CHANGE_MIN_LAW_PROGRESSIVENESS_DIFFERENCE = 0	# If the difference between the target wargoal holder's laws in a law group are not at least this, don't change it as part of regime change
+	#
+	ECONOMIC_DEPENDENCE_MIN = -10
+	ECONOMIC_DEPENDENCE_MAX = 10
+	ECONOMIC_DEPENDENCE_GDP_RATIO_BY_OTHER_FACTOR = 1	# Ex. if you own 15% of the other country's GDP, that works out to +0.75
+	ECONOMIC_DEPENDENCE_GDP_RATIO_BY_OTHER_MIN = 0
+	ECONOMIC_DEPENDENCE_GDP_RATIO_BY_OTHER_MAX = 1
+	ECONOMIC_DEPENDENCE_OTHER_GDP_RATIO_OWNED_FACTOR = 1	#More embarrassing if your subjects own your stuff than the other way round.
+	ECONOMIC_DEPENDENCE_OTHER_GDP_RATIO_OWNED_MIN = -1	#This value is negative
+	ECONOMIC_DEPENDENCE_OTHER_GDP_RATIO_OWNED_MAX = 0
+	ECONOMIC_DEPENDENCE_GDP_PERCENTAGE_FACTOR = 0.1
+	ECONOMIC_DEPENDENCE_GDP_PERCENTAGE_MIN = 0
+	ECONOMIC_DEPENDENCE_GDP_PERCENTAGE_MAX = 1
+	ECONOMIC_DEPENDENCE_POP_GOODS_DEPENDENCE_ON_OTHER_FACTOR = 1	# The total % of the £ value goods supplied by the other country compared to its GDP is multiplied by this (i.e. every multiple of 25% yields +0.75 ED)
+	ECONOMIC_DEPENDENCE_POP_GOODS_DEPENDENCE_ON_OTHER_MIN = 0	# At best, a country's pop goods dependence on another can reach 0
+	ECONOMIC_DEPENDENCE_POP_GOODS_DEPENDENCE_ON_OTHER_MAX = 1	# At worst, a country's pop goods dependence on another can reach +2
+	ECONOMIC_DEPENDENCE_OTHER_POP_GOODS_DEPENDENCE_FACTOR = 1	# The total % of the £ value goods supplied by another country by this compared to their GDP is multiplied by this
+	ECONOMIC_DEPENDENCE_OTHER_POP_GOODS_DEPENDENCE_MIN = -1	# At best, another country's pop goods dependence on this can yield -2 ED
+	ECONOMIC_DEPENDENCE_OTHER_POP_GOODS_DEPENDENCE_MAX = 0	# At worst, another country's pop goods dependence on this can yield 0 ED
+	ECONOMIC_DEPENDENCE_TRADE_DEPENDENCE_FACTOR = 1	# This is the factor applied when value of trade volume between countries represents 100% of GDP
+	ECONOMIC_DEPENDENCE_TRADE_DEPENDENCE_MIN = 0
+	ECONOMIC_DEPENDENCE_TRADE_DEPENDENCE_MAX = 1
 }
 
 NTechnology = {
@@ -21,9 +44,13 @@ NEconomy = {
 	COUNTRY_GDP_MODIFIER_MAX_MULTIPLIER = 1000000000
 	ECONOMY_OF_SCALE_START_LEVEL = 1	# Level at which buildings start getting economy of scale bonuses. Levels lower than this value provide no bonus [>=1]
 	ECONOMY_OF_SCALE_NATIONALIZED_FRACTION_MULT = 0	# Non-government building economy of scale modifier if multiplied by (1 - the fraction of nationalized levels * this)
+	AUTO_DOWNSIZE_BUILDING_MONTHS_TO_WAIT = 1	# After a building decides to start auto-downsizing, wait this many months before actually starting to downsize, in case conditions change
 	MIN_GOODS_PRICE = 1	# A good cannot have a lower base price than this
 	PRICE_RANGE = 0.99999	# min price of a good is base * (1 - PRICE_RANGE), Max price is base * (1 + PRICE_RANGE), PRICE_RANGE is locked to [0-1]
-	GOLD_RESERVE_LIMIT_FACTOR = 0.5	# The base factor of annual GDP that should be provided as a Gold Reserve
+	COUNTRY_MIN_CREDIT_BASE = 100000			# Added to the total Building Cash Reserves to determine credit limit (base)
+	COUNTRY_MIN_CREDIT_SCALED = 1.0 			# Added to the total Building Cash Reserves to determine credit limit (multiplied by GDP)
+	GOLD_RESERVE_MIN = 100000						# If Gold Reserves are computed to be lower than this, it's instead set to this
+	GOLD_RESERVE_LIMIT_FACTOR = 1.0	# The base factor of annual GDP that should be provided as a Gold Reserve
 	OVERSEAS_INFRASTRUCTURE_CONVOY_COST_MULTIPLIER = 1	# Convoy cost for each infrastructure usage in overseas state for port connection shipping lanes
 	COMPANY_ON_ESTABLISH_COOLDOWN_MONTHS = 12	# Cooldown in months after establishing a company before you can disband it
 	COMPANY_ON_DISBAND_COOLDOWN_MONTHS = 12	# Cooldown in months after disbanding a company before you can re-establish it
@@ -51,6 +78,6 @@ NPops = {
 	FOOD_SECURITY_STARVATION_THRESHOLD = @starvation_threshold	# If Food Security is lower than this, the pop is considered to be in a starving state
 	FOOD_SECURITY_SEVERE_STARVATION_THRESHOLD = @[starvation_threshold/2]	# If Food Security is lower than this, the pop is considered to be in a severe starving state
 	STARVATION_EFFECTS_SCALING_FACTOR = @starvation_scaling_factor	# Acts as a scaling factor when converting food security to starvation effects: StarvationValue = CLAMP( (StarvationThreshold - FoodSecurity) * ScalingFactor, 0, 1)
-	FAMINE_POPULATION_SHARE_IN_STARVATION = 0.20	# If at least this % of state population is in starvation, the state is considered to have a famine
-	FAMINE_POPULATION_SHARE_IN_SEVERE_STARVATION = 0.10	# If at least this % of state population is in severe starvation, the state is considered to have a famine
+	FAMINE_POPULATION_SHARE_IN_STARVATION = 0.2	# If at least this % of state population is in starvation, the state is considered to have a famine
+	FAMINE_POPULATION_SHARE_IN_SEVERE_STARVATION = 0.1	# If at least this % of state population is in severe starvation, the state is considered to have a famine
 }

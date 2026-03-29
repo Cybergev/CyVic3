@@ -180,7 +180,6 @@ REPLACE_OR_CREATE:pm_corvee_labor = {
 	unlocking_laws = {
 		law_serfdom
 		law_manorialism
-		law_tenant_farmers
 	}
 	country_modifiers = {
 		workforce_scaled = {

@@ -10,18 +10,28 @@
 	}
 }
 
-REPLACE_OR_CREATE:pmg_canning = {
+REPLACE_OR_CREATE:pmg_canning_meat = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_disabled_canning
-		pm_cannery_meat
-		pm_cannery_fish
-		pm_cannery_all
-		pm_vacuum_cannery_meat
-		pm_vacuum_cannery_fish
-		pm_vacuum_canning_all
-		pm_vacuum_cannery_meat_principle_3
-		pm_vacuum_cannery_fish_principle_3
-		pm_vacuum_canning_all_principle_3
+		pm_canning_meat_disabled
+		pm_iron_canned_meat
+		pm_steel_canned_meat
+		pm_vacuum_packed_meat
+		pm_iron_canned_meat_principle_3
+		pm_steel_canned_meat_principle_3
+		pm_vacuum_packed_meat_principle_3
+	}
+}
+
+REPLACE_OR_CREATE:pmg_canning_fish = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_canning_fish_disabled
+		pm_iron_canned_fish
+		pm_steel_canned_fish
+		pm_vacuum_packed_fish
+		pm_iron_canned_fish_principle_3
+		pm_steel_canned_fish_principle_3
+		pm_vacuum_packed_fish_principle_3
 	}
 }
