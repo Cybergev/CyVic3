@@ -1,0 +1,181 @@
+﻿european_culture_unification = {
+	is_shown = {
+		european_culture_check = yes
+		not = {
+			country_has_primary_culture = cu:european
+		}
+	}
+	possible = {
+		not = {
+			country_has_primary_culture = cu:european
+		}
+	}
+	when_taken = {
+		every_primary_culture = {
+			root = {
+				remove_primary_culture = prev
+				add_radicals = {
+					value = 1
+					culture = prev
+				}
+			}
+		}
+		add_primary_culture = cu:european
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+join_german_unification = {
+	is_shown = {
+		country_is_in_europe = yes
+	}
+	possible = {
+		OR = {
+			country_has_primary_culture = cu:alemannic
+			country_has_primary_culture = cu:danish
+			country_has_primary_culture = cu:dutch
+			country_has_primary_culture = cu:norwegian
+			country_has_primary_culture = cu:swedish
+		}
+	}
+	when_taken = {
+		if = {
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:danish
+					country_has_primary_culture = cu:dutch
+					country_has_primary_culture = cu:norwegian
+					country_has_primary_culture = cu:swedish
+				}
+			}
+			add_primary_culture = cu:north_german
+		}
+		if = {
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:alemannic
+				}
+			}
+			add_primary_culture = cu:south_german
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+#removers
+remove_east_german = {
+	is_shown = {
+		country_has_primary_culture = cu:east_german
+	}
+	possible = {
+		country_has_primary_culture = cu:east_german
+	}
+	when_taken = {
+		remove_primary_culture = cu:east_german
+		add_radicals = {
+			value = 1
+			culture = cu:east_german
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+remove_north_german = {
+	is_shown = {
+		country_has_primary_culture = cu:north_german
+	}
+	possible = {
+		country_has_primary_culture = cu:north_german
+	}
+	when_taken = {
+		remove_primary_culture = cu:north_german
+		add_radicals = {
+			value = 1
+			culture = cu:north_german
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_south_german = {
+	is_shown = {
+		country_has_primary_culture = cu:south_german
+	}
+	possible = {
+		country_has_primary_culture = cu:south_german
+	}
+	when_taken = {
+		remove_primary_culture = cu:south_german
+		add_radicals = {
+			value = 1
+			culture = cu:south_german
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_manchu = {
+	is_shown = {
+		country_has_primary_culture = cu:manchu
+	}
+	possible = {
+		country_has_primary_culture = cu:manchu
+	}
+	when_taken = {
+		remove_primary_culture = cu:manchu
+		add_radicals = {
+			value = 1
+			culture = cu:manchu
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_han = {
+	is_shown = {
+		country_has_primary_culture = cu:han
+	}
+	possible = {
+		country_has_primary_culture = cu:han
+	}
+	when_taken = {
+		remove_primary_culture = cu:han
+		add_radicals = {
+			value = 1
+			culture = cu:han
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_francoprovencal = {
+	is_shown = {
+		country_has_primary_culture = cu:francoprovencal
+	}
+	possible = {
+		country_has_primary_culture = cu:francoprovencal
+	}
+	when_taken = {
+		remove_primary_culture = cu:francoprovencal
+		add_radicals = {
+			value = 1
+			culture = cu:francoprovencal
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}

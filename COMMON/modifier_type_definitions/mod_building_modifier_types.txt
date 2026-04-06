@@ -1,4 +1,13 @@
-﻿building_distillation_plants_throughput_add = {
+﻿building_group_bg_extraction_tax_mult = {
+	decimals = 1
+	color=neutral
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_distillation_plants_throughput_add = {
 	decimals = 1
 	color = good
 	percent = yes

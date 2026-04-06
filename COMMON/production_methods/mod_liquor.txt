@@ -45,7 +45,7 @@ REPLACE_OR_CREATE:pm_grain_rectification = {
 		}
 	}
 	unlocking_technologies = {
-		fractional_distillation
+		aniline
 	}
 	building_modifiers = {
 		workforce_scaled = {

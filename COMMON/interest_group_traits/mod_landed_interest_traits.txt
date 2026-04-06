@@ -1,20 +1,23 @@
-﻿REPLACE:ig_trait_noble_privileges = {
-	max_approval = unhappy
-	modifier = {
-		building_group_bg_agriculture_tax_mult = -0.1
-		building_group_bg_ranching_tax_mult = -0.1
-		building_group_bg_plantations_tax_mult = -0.1
-	}
-}
-
-REPLACE:ig_trait_family_ties = {
+﻿REPLACE:ig_trait_family_ties = {
+	icon = "gfx/interface/icons/ig_trait_icons/family_ties.dds"
 	min_approval = happy
 	modifier = {
 		country_influence_mult = 0.1
+		country_prestige_mult = 0.1
+	}
+}
+
+REPLACE:ig_trait_the_velvet_book = {
+	icon = "gfx/interface/icons/ig_trait_icons/family_ties.dds"
+	min_approval = happy
+	modifier = {
+		country_influence_mult = 0.1
+		country_prestige_mult = 0.1
 	}
 }
 
 REPLACE:ig_trait_noblesse_oblige = {
+	icon = "gfx/interface/icons/ig_trait_icons/noblesse_oblige.dds"
 	min_approval = loyal
 	modifier = {
 		state_aristocrats_investment_pool_contribution_add = 0.1
@@ -23,18 +26,21 @@ REPLACE:ig_trait_noblesse_oblige = {
 }
 
 REPLACE:ig_trait_profitable_estates = {
+	icon = "gfx/interface/icons/ig_trait_icons/noblesse_oblige.dds"
 	min_approval = loyal
 	modifier = {
-		state_aristocrats_investment_pool_contribution_add = 0.15
-		state_aristocrats_investment_pool_efficiency_mult = 0.3
+		state_aristocrats_investment_pool_contribution_add = 0.2
+		state_aristocrats_investment_pool_efficiency_mult = 0.4
 	}
 }
 
 REPLACE:ig_trait_latifundios = {
+	icon = "gfx/interface/icons/ig_trait_icons/farmers_markets.dds"
 	min_approval = loyal
 	modifier = {
 		building_group_bg_agriculture_tax_mult = 0.1
 		building_group_bg_ranching_tax_mult = 0.1
 		building_group_bg_plantations_tax_mult = 0.1
+		state_aristocrats_investment_pool_contribution_add = 0.1
 	}
 }

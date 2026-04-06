@@ -265,7 +265,6 @@ REPLACE_OR_CREATE:central_planning = {
 	category = society
 	modifier = {
 		state_tax_capacity_add = 25
-		country_government_dividends_efficiency_add = 0.1
 	}
 	unlocking_technologies = {
 		identification_documents
@@ -300,7 +299,6 @@ REPLACE_OR_CREATE:modern_financial_instruments = {
 	modifier = {
 		country_minting_mult = 0.1
 		country_loan_interest_rate_add = -0.02
-		country_government_dividends_efficiency_add = 0.1
 	}
 	unlocking_technologies = {
 		international_exchange_standards

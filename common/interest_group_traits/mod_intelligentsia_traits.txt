@@ -1,4 +1,5 @@
 ﻿REPLACE:ig_trait_propagandists = {
+	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
 	min_approval = loyal
 	modifier = {
 		country_prestige_mult = 0.1
@@ -7,6 +8,7 @@
 }
 
 REPLACE:ig_trait_avant_garde = {
+	icon = "gfx/interface/icons/ig_trait_icons/avant_garde.dds"
 	min_approval = happy
 	modifier = {
 		building_art_academy_throughput_add = 0.1
@@ -15,6 +17,7 @@ REPLACE:ig_trait_avant_garde = {
 }
 
 REPLACE:ig_trait_social_criticism = {
+	icon = "gfx/interface/icons/ig_trait_icons/social_criticism.dds"
 	max_approval = unhappy
 	modifier = {
 		country_authority_mult = -0.2
@@ -23,6 +26,7 @@ REPLACE:ig_trait_social_criticism = {
 }
 
 REPLACE:ig_trait_restoration = {
+	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
 	min_approval = loyal
 	modifier = {
 		country_authority_mult = 0.1

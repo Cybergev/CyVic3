@@ -404,14 +404,14 @@ REPLACE_OR_CREATE:decree_promote_national_values = {
 		}
 		if = {
 			limit = {
-				religion_percent_state = {
-					target = scope:country.religion
-					value < 1
-				}
 				NOT = {
 					scope:country = {
 						has_law_or_variant = law_type:law_total_separation
 					}
+				}
+				religion_percent_state = {
+					target = scope:country.religion
+					value < 1
 				}
 			}
 			if = {
@@ -499,7 +499,7 @@ REPLACE_OR_CREATE:decree_promote_national_values = {
 				limit = {
 					religion_percent_state = {
 						target = scope:country.religion
-						value <= 0.8
+						value <= 0.9
 					}
 				}
 				add = 10
