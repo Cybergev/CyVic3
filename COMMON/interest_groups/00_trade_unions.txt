@@ -104,10 +104,10 @@
 	on_character_ig_membership = {
 	}
 	pop_potential = {
-		NOR = {
-			is_pop_type = aristocrats
-			is_pop_type = capitalists
-			is_pop_type = shopkeepers
+		OR = {
+			is_pop_type = engineers
+			is_pop_type = machinists
+			is_pop_type = laborers
 		}
 		NOR = {
 			pop_employment_building_group = bg_agriculture
@@ -122,6 +122,11 @@
 			if = {
 				limit = {
 					OR = {
+						is_pop_type = engineers
+						is_pop_type = machinists
+						is_pop_type = laborers
+					}
+					NOR = {
 						pop_employment_building_group = bg_agriculture
 						pop_employment_building_group = bg_ranching
 						pop_employment_building_group = bg_plantations
@@ -136,7 +141,7 @@
 				limit = {
 					is_pop_type = engineers
 				}
-				value = 50
+				value = 100
 			}
 		}
 		add = {
@@ -146,6 +151,28 @@
 					is_pop_type = machinists
 				}
 				value = 250
+			}
+		}
+		add = {
+			desc = "POP_LABORERS"
+			if = {
+				limit = {
+					is_pop_type = laborers
+				}
+				if = {
+					limit = {
+						OR = {
+							pop_employment_building_group = bg_extraction
+							pop_employment_building_group = bg_infrastructure
+							pop_employment_building_group = bg_manufacturing
+							pop_employment_building_group = bg_service
+						}
+					}
+					value = 100
+				}
+				else = {
+					value = 50
+				}
 			}
 		}
 		add = {

@@ -1,0 +1,474 @@
+﻿je_mass_construction_development_administration = {
+	name = "je_mass_construction_development_administration"
+	desc = "je_mass_construction_development_administration"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = tech_bureaucracy
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_government_administration
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_development_administration = {
+	name = "je_mass_desctruction_development_administration"
+	desc = "je_mass_desctruction_development_administration"
+	visible = {
+		always = yes
+	}
+	possible = {
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_government_administration
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_development_arts_academy = {
+	name = "je_mass_construction_development_arts_academy"
+	desc = "je_mass_construction_development_arts_academy"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = romanticism
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_arts_academy
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_development_arts_academy = {
+	name = "je_mass_desctruction_development_arts_academy"
+	desc = "je_mass_desctruction_development_arts_academy"
+	visible = {
+		always = yes
+	}
+	possible = {
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_arts_academy
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_development_university = {
+	name = "je_mass_construction_development_university"
+	desc = "je_mass_construction_development_university"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = academia
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_university
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_development_university = {
+	name = "je_mass_desctruction_development_university"
+	desc = "je_mass_desctruction_development_university"
+	visible = {
+		always = yes
+	}
+	possible = {
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_university
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_development_skyscraper = {
+	name = "je_mass_construction_development_skyscraper"
+	desc = "je_mass_construction_development_skyscraper"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_scope_state = {
+			OR = {
+				has_modifier = skyscraper_site
+				has_building = building_skyscraper
+			}
+		}
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_skyscraper
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_development_skyscraper = {
+	name = "je_mass_desctruction_development_skyscraper"
+	desc = "je_mass_desctruction_development_skyscraper"
+	visible = {
+		always = yes
+	}
+	possible = {
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_skyscraper
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_development_power_bloc_statue = {
+	name = "je_mass_construction_development_power_bloc_statue"
+	desc = "je_mass_construction_development_power_bloc_statue"
+	visible = {
+		always = yes
+	}
+	possible = {
+		is_in_power_bloc = yes
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_power_bloc_statue
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_development_power_bloc_statue = {
+	name = "je_mass_desctruction_development_power_bloc_statue"
+	desc = "je_mass_desctruction_development_power_bloc_statue"
+	visible = {
+		always = yes
+	}
+	possible = {
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_power_bloc_statue
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_development_construction_sector = {
+	name = "je_mass_construction_development_construction_sector"
+	desc = "je_mass_construction_development_construction_sector"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = urbanization
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_construction_sector
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_development_construction_sector = {
+	name = "je_mass_desctruction_development_construction_sector"
+	desc = "je_mass_desctruction_development_construction_sector"
+	visible = {
+		always = yes
+	}
+	possible = {
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_construction_sector
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_development_trade_center = {
+	name = "je_mass_construction_development_trade_center"
+	desc = "je_mass_construction_development_trade_center"
+	visible = {
+		always = yes
+	}
+	possible = {
+		trade_center_construction_allowed = yes
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_trade_center
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_development_trade_center = {
+	name = "je_mass_desctruction_development_trade_center"
+	desc = "je_mass_desctruction_development_trade_center"
+	visible = {
+		always = yes
+	}
+	possible = {
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_trade_center
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_development_railway = {
+	name = "je_mass_construction_development_railway"
+	desc = "je_mass_construction_development_railway"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = railways
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_railway
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_development_railway = {
+	name = "je_mass_desctruction_development_railway"
+	desc = "je_mass_desctruction_development_railway"
+	visible = {
+		always = yes
+	}
+	possible = {
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_railway
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_development_port = {
+	name = "je_mass_construction_development_port"
+	desc = "je_mass_construction_development_port"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = navigation
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_port
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_development_port = {
+	name = "je_mass_desctruction_development_port"
+	desc = "je_mass_desctruction_development_port"
+	visible = {
+		always = yes
+	}
+	possible = {
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_port
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_development_electrics_industry = {
+	name = "je_mass_construction_development_electrics_industry"
+	desc = "je_mass_construction_development_electrics_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = electrical_generation
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_electrics_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_development_electrics_industry = {
+	name = "je_mass_desctruction_development_electrics_industry"
+	desc = "je_mass_desctruction_development_electrics_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		variable_list_size = {
+			name = mbm_list
+			value > 0
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_electrics_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}

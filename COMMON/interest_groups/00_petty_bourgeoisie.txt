@@ -250,6 +250,13 @@
 		}
 	}
 	pop_potential = {
+		OR = {
+			is_pop_type = aristocrats
+			is_pop_type = academics
+			is_pop_type = bureaucrats
+			is_pop_type = clerks
+			is_pop_type = shopkeepers
+		}
 		custom_tooltip = {
 			text = would_be_accepted_under_national_supremacy_tt
 			this.culture = {
@@ -277,61 +284,8 @@
 				}
 			}
 		}
-		NOR = {
-			trigger_if = {
-				limit = {
-					NOT = {
-						c:BIC ?= owner
-					}
-				}
-				is_pop_type = capitalists
-			}
-		}
-		OR = {
-			pop_employment_building_group = bg_manufacturing
-			pop_employment_building_group = bg_service
-			pop_employment_building_group = bg_urban_facilities
-			pop_employment_building_group = bg_private_infrastructure
-			pop_employment_building_group = bg_financial_districts
-			pop_employment_building_group = bg_government
-			pop_employment_building_group = bg_logging
-			pop_employment_building_group = bg_mining
-			pop_employment_building_group = bg_fishing
-			pop_employment_building_group = bg_whaling
-			pop_employment_building_group = bg_oil_extraction
-			AND = {
-				custom_tooltip = {
-					text = owner_has_homesteading_tt
-					owner = {
-						OR = {
-							has_law_or_variant = law_type:law_homesteading
-							has_law_or_variant = law_type:law_commercialized_agriculture
-						}
-					}
-				}
-				OR = {
-					pop_employment_building_group = bg_agriculture
-					pop_employment_building_group = bg_ranching
-					pop_employment_building_group = bg_plantations
-				}
-			}
-		}
 	}
 	pop_weight = {
-		if = {
-			limit = {
-				strata = middle
-				OR = {
-					pop_employment_building_group = bg_government
-					pop_employment_building_group = bg_service
-					pop_employment_building_group = bg_urban_facilities
-				}
-			}
-			add = {
-				desc = "POP_BASE_ATTRACTION"
-				value = 25
-			}
-		}
 		add = {
 			desc = "POP_SHOPKEEPERS"
 			if = {
@@ -348,24 +302,6 @@
 					is_pop_type = bureaucrats
 				}
 				value = 100
-			}
-		}
-		add = {
-			desc = "POP_CLERKS"
-			if = {
-				limit = {
-					is_pop_type = clerks
-				}
-				value = 50
-			}
-		}
-		add = {
-			desc = "POP_ENGINEERS"
-			if = {
-				limit = {
-					is_pop_type = engineers
-				}
-				value = 25
 			}
 		}
 		add = {
@@ -415,20 +351,6 @@
 					}
 				}
 				value = -100
-			}
-		}
-		if = {
-			limit = {
-				NOR = {
-					pop_employment_building_group = bg_agriculture
-					pop_employment_building_group = bg_ranching
-					pop_employment_building_group = bg_plantations
-				}
-			}
-			add = {
-				desc = "URBAN_POP"
-				value = standard_of_living
-				multiply = 1
 			}
 		}
 		if = {

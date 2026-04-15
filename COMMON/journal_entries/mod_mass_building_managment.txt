@@ -1,0 +1,91 @@
+﻿je_mass_building_managment = {
+	icon = "gfx/interface/icons/invention_icons/steel_frame_buildings.dds"
+	group = je_group_mass_building_managment
+	is_shown_when_inactive = {
+		is_player = yes
+	}
+	possible = {
+		is_player = yes
+	}
+	immediate = {
+		add_to_variable_list = {
+			name = mbm_list
+			target = scope:capital_state
+		}
+	}
+	scripted_button = je_mass_building_managment_button_1
+	scripted_button = je_mass_building_managment_button_2
+	scripted_button = je_mass_building_managment_button_3
+	scripted_button = je_mass_building_managment_button_4
+	scripted_button = je_mass_building_managment_button_5
+	scripted_button = je_mass_building_managment_button_6
+	scripted_button = je_mass_building_managment_button_7
+	scripted_button = je_mass_building_managment_button_8
+	weight = 100000
+	should_be_pinned_by_default = yes
+}
+
+je_mass_building_managment_development = {
+	icon = "gfx/interface/icons/invention_icons/steel_frame_buildings.dds"
+	group = je_group_mass_building_managment
+	is_shown_when_inactive = {
+		is_player = yes
+	}
+	possible = {
+		is_player = yes
+	}
+	immediate = {
+	}
+	scripted_button = je_mass_construction_development_administration
+	scripted_button = je_mass_desctruction_development_administration
+	scripted_button = je_mass_construction_development_arts_academy
+	scripted_button = je_mass_desctruction_development_arts_academy
+	scripted_button = je_mass_construction_development_university
+	scripted_button = je_mass_desctruction_development_university
+	scripted_button = je_mass_construction_development_skyscraper
+	scripted_button = je_mass_desctruction_development_skyscraper
+	scripted_button = je_mass_construction_development_power_bloc_statue
+	scripted_button = je_mass_desctruction_development_power_bloc_statue
+	scripted_button = je_mass_construction_development_construction_sector
+	scripted_button = je_mass_desctruction_development_construction_sector
+	scripted_button = je_mass_construction_development_trade_center
+	scripted_button = je_mass_desctruction_development_trade_center
+	scripted_button = je_mass_construction_development_railway
+	scripted_button = je_mass_desctruction_development_railway
+	scripted_button = je_mass_construction_development_port
+	scripted_button = je_mass_desctruction_development_port
+	scripted_button = je_mass_construction_development_electrics_industry
+	scripted_button = je_mass_desctruction_development_electrics_industry
+	weight = 100000
+	should_be_pinned_by_default = yes
+}
+
+je_mass_building_managment_urban = {
+	icon = "gfx/interface/icons/invention_icons/steel_frame_buildings.dds"
+	group = je_group_mass_building_managment
+	is_shown_when_inactive = {
+		is_player = yes
+	}
+	possible = {
+		is_player = yes
+	}
+	immediate = {
+	}
+	weight = 100000
+	should_be_pinned_by_default = yes
+}
+
+je_mass_building_managment_rural = {
+	icon = "gfx/interface/icons/invention_icons/steel_frame_buildings.dds"
+	group = je_group_mass_building_managment
+	is_shown_when_inactive = {
+		is_player = yes
+	}
+	possible = {
+		is_player = yes
+	}
+	immediate = {
+	}
+	weight = 100000
+	should_be_pinned_by_default = yes
+}

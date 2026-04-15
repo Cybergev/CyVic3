@@ -27,38 +27,60 @@
 	}
 }
 
-join_german_unification = {
+join_north_german_unification = {
 	is_shown = {
 		country_is_in_europe = yes
 	}
 	possible = {
 		OR = {
-			country_has_primary_culture = cu:alemannic
 			country_has_primary_culture = cu:danish
 			country_has_primary_culture = cu:dutch
 			country_has_primary_culture = cu:norwegian
 			country_has_primary_culture = cu:swedish
 		}
+		NOT = {
+			country_has_primary_culture = cu:north_german
+		}
 	}
 	when_taken = {
-		if = {
-			limit = {
-				OR = {
-					country_has_primary_culture = cu:danish
-					country_has_primary_culture = cu:dutch
-					country_has_primary_culture = cu:norwegian
-					country_has_primary_culture = cu:swedish
-				}
-			}
-			add_primary_culture = cu:north_german
+		add_primary_culture = cu:north_german
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+join_south_german_unification = {
+	is_shown = {
+		country_is_in_europe = yes
+	}
+	possible = {
+		country_has_primary_culture = cu:alemannic
+		NOT = {
+			country_has_primary_culture = cu:south_german
 		}
-		if = {
-			limit = {
-				OR = {
-					country_has_primary_culture = cu:alemannic
-				}
-			}
-			add_primary_culture = cu:south_german
+	}
+	when_taken = {
+		add_primary_culture = cu:south_german
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+#REMOVERS
+remove_alemannic = {
+	is_shown = {
+		country_has_primary_culture = cu:alemannic
+	}
+	possible = {
+		country_has_primary_culture = cu:alemannic
+	}
+	when_taken = {
+		remove_primary_culture = cu:alemannic
+		add_radicals = {
+			value = 1
+			culture = cu:alemannic
 		}
 	}
 	ai_chance = {
@@ -66,7 +88,63 @@ join_german_unification = {
 	}
 }
 
-#removers
+remove_czech = {
+	is_shown = {
+		country_has_primary_culture = cu:czech
+	}
+	possible = {
+		country_has_primary_culture = cu:czech
+	}
+	when_taken = {
+		remove_primary_culture = cu:czech
+		add_radicals = {
+			value = 1
+			culture = cu:czech
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_danish = {
+	is_shown = {
+		country_has_primary_culture = cu:danish
+	}
+	possible = {
+		country_has_primary_culture = cu:danish
+	}
+	when_taken = {
+		remove_primary_culture = cu:danish
+		add_radicals = {
+			value = 1
+			culture = cu:danish
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_dutch = {
+	is_shown = {
+		country_has_primary_culture = cu:dutch
+	}
+	possible = {
+		country_has_primary_culture = cu:dutch
+	}
+	when_taken = {
+		remove_primary_culture = cu:dutch
+		add_radicals = {
+			value = 1
+			culture = cu:dutch
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
 remove_east_german = {
 	is_shown = {
 		country_has_primary_culture = cu:east_german
@@ -85,18 +163,19 @@ remove_east_german = {
 		base = 0
 	}
 }
-remove_north_german = {
+
+remove_finnish = {
 	is_shown = {
-		country_has_primary_culture = cu:north_german
+		country_has_primary_culture = cu:finnish
 	}
 	possible = {
-		country_has_primary_culture = cu:north_german
+		country_has_primary_culture = cu:finnish
 	}
 	when_taken = {
-		remove_primary_culture = cu:north_german
+		remove_primary_culture = cu:finnish
 		add_radicals = {
 			value = 1
-			culture = cu:north_german
+			culture = cu:finnish
 		}
 	}
 	ai_chance = {
@@ -104,18 +183,18 @@ remove_north_german = {
 	}
 }
 
-remove_south_german = {
+remove_flemish = {
 	is_shown = {
-		country_has_primary_culture = cu:south_german
+		country_has_primary_culture = cu:flemish
 	}
 	possible = {
-		country_has_primary_culture = cu:south_german
+		country_has_primary_culture = cu:flemish
 	}
 	when_taken = {
-		remove_primary_culture = cu:south_german
+		remove_primary_culture = cu:flemish
 		add_radicals = {
 			value = 1
-			culture = cu:south_german
+			culture = cu:flemish
 		}
 	}
 	ai_chance = {
@@ -123,18 +202,37 @@ remove_south_german = {
 	}
 }
 
-remove_manchu = {
+remove_francoprovencal = {
 	is_shown = {
-		country_has_primary_culture = cu:manchu
+		country_has_primary_culture = cu:francoprovencal
 	}
 	possible = {
-		country_has_primary_culture = cu:manchu
+		country_has_primary_culture = cu:francoprovencal
 	}
 	when_taken = {
-		remove_primary_culture = cu:manchu
+		remove_primary_culture = cu:francoprovencal
 		add_radicals = {
 			value = 1
-			culture = cu:manchu
+			culture = cu:francoprovencal
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_icelandic = {
+	is_shown = {
+		country_has_primary_culture = cu:icelandic
+	}
+	possible = {
+		country_has_primary_culture = cu:icelandic
+	}
+	when_taken = {
+		remove_primary_culture = cu:icelandic
+		add_radicals = {
+			value = 1
+			culture = cu:icelandic
 		}
 	}
 	ai_chance = {
@@ -161,18 +259,170 @@ remove_han = {
 	}
 }
 
-remove_francoprovencal = {
+remove_manchu = {
 	is_shown = {
-		country_has_primary_culture = cu:francoprovencal
+		country_has_primary_culture = cu:manchu
 	}
 	possible = {
-		country_has_primary_culture = cu:francoprovencal
+		country_has_primary_culture = cu:manchu
 	}
 	when_taken = {
-		remove_primary_culture = cu:francoprovencal
+		remove_primary_culture = cu:manchu
 		add_radicals = {
 			value = 1
-			culture = cu:francoprovencal
+			culture = cu:manchu
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_north_german = {
+	is_shown = {
+		country_has_primary_culture = cu:north_german
+	}
+	possible = {
+		country_has_primary_culture = cu:north_german
+	}
+	when_taken = {
+		remove_primary_culture = cu:north_german
+		add_radicals = {
+			value = 1
+			culture = cu:north_german
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_north_german = {
+	is_shown = {
+		country_has_primary_culture = cu:north_italian
+	}
+	possible = {
+		country_has_primary_culture = cu:north_italian
+	}
+	when_taken = {
+		remove_primary_culture = cu:north_italian
+		add_radicals = {
+			value = 1
+			culture = cu:north_italian
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_norwegian = {
+	is_shown = {
+		country_has_primary_culture = cu:norwegian
+	}
+	possible = {
+		country_has_primary_culture = cu:norwegian
+	}
+	when_taken = {
+		remove_primary_culture = cu:norwegian
+		add_radicals = {
+			value = 1
+			culture = cu:norwegian
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_south_german = {
+	is_shown = {
+		country_has_primary_culture = cu:south_german
+	}
+	possible = {
+		country_has_primary_culture = cu:south_german
+	}
+	when_taken = {
+		remove_primary_culture = cu:south_german
+		add_radicals = {
+			value = 1
+			culture = cu:south_german
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_slovene = {
+	is_shown = {
+		country_has_primary_culture = cu:slovene
+	}
+	possible = {
+		country_has_primary_culture = cu:slovene
+	}
+	when_taken = {
+		remove_primary_culture = cu:slovene
+		add_radicals = {
+			value = 1
+			culture = cu:slovene
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_south_italian = {
+	is_shown = {
+		country_has_primary_culture = cu:south_italian
+	}
+	possible = {
+		country_has_primary_culture = cu:south_italian
+	}
+	when_taken = {
+		remove_primary_culture = cu:south_italian
+		add_radicals = {
+			value = 1
+			culture = cu:south_italian
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_swedish = {
+	is_shown = {
+		country_has_primary_culture = cu:swedish
+	}
+	possible = {
+		country_has_primary_culture = cu:swedish
+	}
+	when_taken = {
+		remove_primary_culture = cu:swedish
+		add_radicals = {
+			value = 1
+			culture = cu:swedish
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+remove_wallonian = {
+	is_shown = {
+		country_has_primary_culture = cu:wallonian
+	}
+	possible = {
+		country_has_primary_culture = cu:wallonian
+	}
+	when_taken = {
+		remove_primary_culture = cu:wallonian
+		add_radicals = {
+			value = 1
+			culture = cu:wallonian
 		}
 	}
 	ai_chance = {

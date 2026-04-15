@@ -1,0 +1,163 @@
+﻿break_truce = {
+	texture = "gfx/interface/icons/war_goals/leave_power_bloc.dds"
+	groups = {
+		general
+	}
+	requires_approval = no
+	potential = {
+		scope:target_country = {
+			has_truce_with = root
+		}
+	}
+	possible = {
+		any_country = {
+			has_truce_with = root
+		}
+	}
+	accept_effect = {
+		end_truce = scope:target_country
+		add_modifier = {
+			name = modifier_untrustworthy_country
+			years = 1
+			is_decaying = yes
+		}
+		change_relations = {
+			country = scope:target_country
+			value = -100
+		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = scope:target_country
+			PRO_AMOUNT = -4
+			ANTI_AMOUNT = 4
+			FACTOR = appeasement_embargo_declared
+		}
+		if = {
+			limit = {
+				scope:target_country = {
+					country_rank = rank_value:great_power
+				}
+			}
+			change_infamy = 20
+		}
+		else_if = {
+			limit = {
+				scope:target_country = {
+					OR = {
+						country_rank = rank_value:major_power
+						country_rank = rank_value:unrecognized_major_power
+					}
+				}
+			}
+			change_infamy = 10
+		}
+		else_if = {
+			limit = {
+				scope:target_country = {
+					OR = {
+						country_rank = rank_value:minor_power
+						country_rank = rank_value:unrecognized_regional_power
+					}
+				}
+			}
+			change_infamy = 5
+		}
+		else_if = {
+			limit = {
+				scope:target_country = {
+					OR = {
+						country_rank = rank_value:insignificant_power
+						country_rank = rank_value:unrecognized_power
+					}
+				}
+			}
+			change_infamy = 2
+		}
+	}
+	ai = {
+		evaluation_chance = {
+			value = 0.25
+			multiply = {
+				add = root.country_rank
+				divide = scope:target_country.country_rank
+			}
+			multiply = {
+				add = root.army_power_projection
+				divide = scope:target_country.army_power_projection
+			}
+		}
+		propose_score = {
+			value = 0.25
+			multiply = {
+				add = root.country_rank
+				divide = scope:target_country.country_rank
+			}
+			multiply = {
+				add = root.army_power_projection
+				divide = scope:target_country.army_power_projection
+			}
+		}
+		will_propose = {
+			NOR = {
+				has_attitude = {
+					who = scope:target_country
+					attitude = cooperative
+				}
+				has_attitude = {
+					who = scope:target_country
+					attitude = genial
+				}
+				has_attitude = {
+					who = scope:target_country
+					attitude = protective
+				}
+				has_attitude = {
+					who = scope:target_country
+					attitude = conciliatory
+				}
+			}
+			root.infamy <= 25
+			root.country_rank >= scope:target_country.country_rank
+			root.army_power_projection >= scope:target_country.army_power_projection
+			NOR = {
+				total_income <= 0
+				in_default = yes
+				has_modifier = declared_bankruptcy
+				has_modifier = modifier_untrustworthy_country
+			}
+			scope:target_country = {
+				OR = {
+					total_income <= 0
+					in_default = yes
+					has_modifier = declared_bankruptcy
+					has_modifier = modifier_untrustworthy_country
+				}
+			}
+			OR = {
+				scope:target_country = {
+					any_scope_state = {
+						OR = {
+							has_claim_by = root
+							is_homeland_of_country_cultures = root
+						}
+					}
+				}
+				scope:target_country = {
+					has_diplomatic_pact = {
+						who = root
+						type = rivalry
+					}
+				}
+				has_diplomatic_pact = {
+					who = scope:target_country
+					type = rivalry
+				}
+				has_attitude = {
+					who = scope:target_country
+					attitude = antagonistic
+				}
+				has_strategic_adjacency = scope:target_country
+			}
+		}
+	}
+}

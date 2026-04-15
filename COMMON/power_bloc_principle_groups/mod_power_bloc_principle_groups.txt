@@ -7,15 +7,6 @@
 	}
 }
 
-REPLACE:principle_group_divine_economics = {
-	primary_for_identity = identity_religious
-	levels = {
-		principle_divine_economics_1
-		principle_divine_economics_2
-		principle_divine_economics_3
-	}
-}
-
 REPLACE:principle_group_shared_canon = {
 	primary_for_identity = identity_cultural
 	levels = {

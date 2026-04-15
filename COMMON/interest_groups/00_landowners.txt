@@ -510,7 +510,7 @@
 			}
 			add = {
 				desc = "POP_BASE_ATTRACTION"
-				value = -50
+				value = -100
 			}
 		}
 		add = {

@@ -317,3 +317,9 @@ REPLACE:power_bloc_leverage_gain = {
 		}
 	}
 }
+
+REPLACE:ai_power_bloc_principle_score = {
+}
+
+REPLACE:ai_power_bloc_principle_score_treaties = {
+}

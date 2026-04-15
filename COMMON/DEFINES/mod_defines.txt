@@ -1,4 +1,28 @@
-﻿NDiplomacy = {
+﻿NAI = {
+	# Confidence is added to boldness to determine whether the AI is willing to back down
+	DIPLO_PLAY_CONFIDENCE_FORCE_BALANCE_FACTOR = 100	# Confidence level if force balance to the enemy is at DIPLO_PLAY_FORCE_BALANCE_SCALE, scaled down if lower
+	DIPLO_PLAY_CONFIDENCE_STRONG_ARMY_FACTOR = 100	# Scaled by our relative forces compared to DIPLO_PLAY_STRONG_ARMY_MAX
+	DIPLO_PLAY_CONFIDENCE_CIVIL_WAR_OR_UPRISING = 100	# Add this confidence to both sides in a civil war or native uprising (overrides DIPLO_PLAY_CONFIDENCE_EXISTENTIAL_PLAY)
+	DIPLO_PLAY_CONFIDENCE_EXISTENTIAL_PLAY = 100	# Add this confidence if backing down would result in annexation
+	DIPLO_PLAY_CONFIDENCE_FROM_TURMOIL = -100	# At 100% turmoil across the country (weighted by state population), subtract this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_LOYALISTS = 100	# At 100% turmoil across the country (weighted by state population), add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_DEVASTATION = -100	# At 100% devastation, subtract this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_DEBT_LEVEL = -100	# At 100% debt level, subtract this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_BANKRUPTCY = -100	# Subtract this amount of confidence when bankrupt
+	DIPLO_PLAY_CONFIDENCE_FROM_GOLD_RESERVES = 100	# At 100% gold reserves, add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_OWN_CONFLICTS = -50	# If we are in another conflict where military strength compared to our enemies is equal to or above DIPLO_PLAY_FORCE_BALANCE_SCALE, subtract this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_TURMOIL = 100	# At 100% turmoil across the enemy country (weighted by state population), add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_DEVASTATION = 100	# At 100% devastation for enemy, add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_DEBT_LEVEL = 100	# At 100% debt level for enemy, add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_BANKRUPTCY = 100	# If enemy is bankrupt, add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_CONFLICTS = 50	# If the other side is in another conflict where military strength compared to their enemies is equal to or above DIPLO_PLAY_FORCE_BALANCE_SCALE, add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_VERY_LOW_THRESHOLD = -100	# If confidence is this or below, show it as very low
+	DIPLO_PLAY_CONFIDENCE_LOW_THRESHOLD = -50	# If confidence is this or below, show it as low
+	DIPLO_PLAY_CONFIDENCE_HIGH_THRESHOLD = 50	# If confidence is this or above, show it as high
+	DIPLO_PLAY_CONFIDENCE_VERY_HIGH_THRESHOLD = 100	# If confidence is this or above, show it as very high
+}
+
+NDiplomacy = {
 	BASE_YEARLY_INFAMY_DECAY_RATE = 12
 	#
 	WAR_GOAL_REGIME_CHANGE_MIN_LAW_PROGRESSIVENESS_DIFFERENCE = 0	# If the difference between the target wargoal holder's laws in a law group are not at least this, don't change it as part of regime change
@@ -47,10 +71,10 @@ NEconomy = {
 	AUTO_DOWNSIZE_BUILDING_MONTHS_TO_WAIT = 1	# After a building decides to start auto-downsizing, wait this many months before actually starting to downsize, in case conditions change
 	MIN_GOODS_PRICE = 1	# A good cannot have a lower base price than this
 	PRICE_RANGE = 0.99999	# min price of a good is base * (1 - PRICE_RANGE), Max price is base * (1 + PRICE_RANGE), PRICE_RANGE is locked to [0-1]
-	COUNTRY_MIN_CREDIT_BASE = 100000			# Added to the total Building Cash Reserves to determine credit limit (base)
-	COUNTRY_MIN_CREDIT_SCALED = 1.0 			# Added to the total Building Cash Reserves to determine credit limit (multiplied by GDP)
-	GOLD_RESERVE_MIN = 100000						# If Gold Reserves are computed to be lower than this, it's instead set to this
-	GOLD_RESERVE_LIMIT_FACTOR = 1.0	# The base factor of annual GDP that should be provided as a Gold Reserve
+	COUNTRY_MIN_CREDIT_BASE = 100000	# Added to the total Building Cash Reserves to determine credit limit (base)
+	COUNTRY_MIN_CREDIT_SCALED = 1	# Added to the total Building Cash Reserves to determine credit limit (multiplied by GDP)
+	GOLD_RESERVE_MIN = 100000	# If Gold Reserves are computed to be lower than this, it's instead set to this
+	GOLD_RESERVE_LIMIT_FACTOR = 1	# The base factor of annual GDP that should be provided as a Gold Reserve
 	OVERSEAS_INFRASTRUCTURE_CONVOY_COST_MULTIPLIER = 1	# Convoy cost for each infrastructure usage in overseas state for port connection shipping lanes
 	COMPANY_ON_ESTABLISH_COOLDOWN_MONTHS = 12	# Cooldown in months after establishing a company before you can disband it
 	COMPANY_ON_DISBAND_COOLDOWN_MONTHS = 12	# Cooldown in months after disbanding a company before you can re-establish it

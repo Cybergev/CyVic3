@@ -62,6 +62,17 @@ REPLACE_OR_CREATE:state_trait_christianiafjorden = {
 	}
 }
 
+REPLACE_OR_CREATE:state_trait_hamburger_hafen = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.2
+		building_port_throughput_add = 0.2
+		building_military_shipyards_throughput_add = 0.2
+		building_naval_base_throughput_add = 0.2
+		goods_output_electricity_mult = 0.2
+	}
+}
+
 REPLACE_OR_CREATE:state_trait_bremerhaven = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {

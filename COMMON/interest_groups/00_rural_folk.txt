@@ -253,14 +253,18 @@
 		}
 	}
 	pop_potential = {
-		NOR = {
-			is_pop_type = aristocrats
-			is_pop_type = capitalists
-		}
 		OR = {
-			pop_employment_building_group = bg_agriculture
-			pop_employment_building_group = bg_ranching
-			pop_employment_building_group = bg_plantations
+			is_pop_type = machinists
+			is_pop_type = farmers
+			is_pop_type = laborers
+			is_pop_type = peasants
+			is_pop_type = clergymen
+		}
+		NOR = {
+			pop_employment_building_group = bg_extraction
+			pop_employment_building_group = bg_infrastructure
+			pop_employment_building_group = bg_manufacturing
+			pop_employment_building_group = bg_service
 		}
 	}
 	pop_weight = {
@@ -270,12 +274,20 @@
 			if = {
 				limit = {
 					OR = {
-						pop_employment_building_group = bg_agriculture
-						pop_employment_building_group = bg_ranching
-						pop_employment_building_group = bg_plantations
+						is_pop_type = machinists
+						is_pop_type = farmers
+						is_pop_type = laborers
+						is_pop_type = peasants
+						is_pop_type = clergymen
+					}
+					NOR = {
+						pop_employment_building_group = bg_extraction
+						pop_employment_building_group = bg_infrastructure
+						pop_employment_building_group = bg_manufacturing
+						pop_employment_building_group = bg_service
 					}
 				}
-				value = 100
+				value = -100
 			}
 		}
 		add = {
@@ -294,6 +306,27 @@
 					is_pop_type = peasants
 				}
 				value = 250
+			}
+		}
+		add = {
+			desc = "POP_LABORERS"
+			if = {
+				limit = {
+					is_pop_type = laborers
+				}
+				if = {
+					limit = {
+						OR = {
+							pop_employment_building_group = bg_agriculture
+							pop_employment_building_group = bg_ranching
+							pop_employment_building_group = bg_plantations
+						}
+					}
+					value = 100
+				}
+				else = {
+					value = 50
+				}
 			}
 		}
 		add = {

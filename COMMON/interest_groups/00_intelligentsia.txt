@@ -258,33 +258,20 @@
 	on_character_ig_membership = {
 	}
 	pop_potential = {
-		literacy_rate >= 0.5
+		OR = {
+			is_pop_type = aristocrats
+			is_pop_type = academics
+			is_pop_type = bureaucrats
+			is_pop_type = clergymen
+			is_pop_type = clerks
+		}
 	}
 	pop_weight = {
-		value = 0
 		add = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
-			if = {
-				limit = {
-					strata = lower
-				}
-				multiply = 0.5
-			}
-			if = {
-				limit = {
-					strata = middle
-				}
-				multiply = 1
-			}
-			if = {
-				limit = {
-					strata = upper
-				}
-				multiply = 2
-			}
 		}
-		add = {
+		multiply = {
 			desc = "POP_ACADEMICS"
 			if = {
 				limit = {
@@ -293,7 +280,7 @@
 				value = 250
 			}
 		}
-		add = {
+		multiply = {
 			desc = "POP_BUREAUCRATS"
 			if = {
 				limit = {
@@ -302,7 +289,7 @@
 				value = 100
 			}
 		}
-		add = {
+		multiply = {
 			desc = "POP_CLERKS"
 			if = {
 				limit = {
@@ -311,7 +298,7 @@
 				value = 50
 			}
 		}
-		add = {
+		multiply = {
 			desc = "POP_ARISTOCRATS"
 			if = {
 				limit = {

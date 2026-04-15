@@ -1,0 +1,3 @@
+﻿REPLACE_OR_CREATE:pm_no_production = {
+	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
+}

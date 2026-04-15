@@ -1,6 +1,44 @@
 ﻿l_russian:
+
+#---------------------------
+je_group_mass_building_managment: "$je_mass_building_managment$"
+
+
+je_mass_building_managment: "Массовое [Concept('concept_construction', 'строительство')]"
+je_mass_building_managment_reason: "$je_mass_building_managment$"
+
+je_mass_building_managment_development: "$je_mass_building_managment$: $IS_DEVELOPMENT$"
+je_mass_building_managment_development_reason: "$je_mass_building_managment_development$"
+
+je_mass_building_managment_urban: "$je_mass_building_managment$: $IS_URBAN$"
+je_mass_building_managment_urba_reason: "$je_mass_building_managment_urban$"
+
+je_mass_building_managment_rural: "$je_mass_building_managment$: $IS_RURAL$"
+je_mass_building_managment_rural_reason: "$je_mass_building_managment_rural$"
+
+
+je_mass_building_managment_button_1: "Добавить все [Concept('concept_state', 'области')]"
+je_mass_building_managment_button_2: "Убрать все [Concept('concept_state', 'области')]"
+je_mass_building_managment_button_3: "Добавить все [Concept('concept_incorporated_state', 'включённые область')] [Concept('i', 'области')]"
+je_mass_building_managment_button_4: "Убрать все [Concept('concept_incorporated_state', 'включённые область')] [Concept('concept_state', 'области')]"
+je_mass_building_managment_button_5: "Добавить все [Concept('concept_unincorporated_state', 'невключённые область')] [Concept('i', 'области')]"
+je_mass_building_managment_button_6: "Убрать все [Concept('concept_unincorporated_state', 'невключённые область')] [Concept('concept_state', 'области')]"
+je_mass_building_managment_button_7: "Добавить [Concept('concept_decree', 'отмеченные')] [Concept('concept_state', 'области')]"
+je_mass_building_managment_button_8: "Убрать [Concept('concept_decree', 'отмеченные')] [Concept('concept_state', 'области')]"
+
+
+mass_building_managment_target: "Цель массового [Concept('concept_construction', 'строительства')]"
+
+
+
+
+
+
+
+#---------------------------
+
+
 region_england: "Британия"
-fixers: "fixers"
 EUR: "Европа"
 EUR_ADJ: "Европейск"
 

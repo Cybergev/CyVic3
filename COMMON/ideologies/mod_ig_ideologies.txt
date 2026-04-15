@@ -1432,8 +1432,8 @@ REPLACE:ideology_liberal = {
 	}
 	lawgroup_education_system = {
 		law_no_schools = strongly_disapprove
-		law_religious_schools = disapprove
-		law_private_schools = neutral
+		law_religious_schools = strongly_disapprove
+		law_private_schools = approve
 		law_public_schools = approve
 	}
 }
@@ -1482,8 +1482,8 @@ REPLACE:ideology_liberal_movement = {
 	}
 	lawgroup_education_system = {
 		law_no_schools = strongly_disapprove
-		law_religious_schools = disapprove
-		law_private_schools = neutral
+		law_religious_schools = strongly_disapprove
+		law_private_schools = approve
 		law_public_schools = approve
 	}
 }

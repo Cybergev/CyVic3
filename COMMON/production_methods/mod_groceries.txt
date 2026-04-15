@@ -4,6 +4,7 @@
 
 REPLACE_OR_CREATE:pm_bakery = {
 	texture = "gfx/interface/icons/production_method_icons/bakeries.dds"
+	is_default = yes
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
@@ -85,6 +86,7 @@ REPLACE_OR_CREATE:pm_canning_meat_disabled = {
 
 REPLACE_OR_CREATE:pm_iron_canned_meat = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	is_default = yes
 	replacement_if_valid = pm_iron_canned_meat_principle_3
 	unlocking_technologies = {
 		canneries
@@ -200,6 +202,7 @@ REPLACE_OR_CREATE:pm_canning_fish_disabled = {
 
 REPLACE_OR_CREATE:pm_iron_canned_fish = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	is_default = yes
 	replacement_if_valid = pm_iron_canned_fish_principle_3
 	unlocking_technologies = {
 		canneries

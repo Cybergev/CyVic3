@@ -1,0 +1,3 @@
+﻿je_group_mass_building_managment = {
+	context = country
+}

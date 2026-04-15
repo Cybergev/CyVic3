@@ -284,7 +284,7 @@
 				limit = {
 					is_pop_type = engineers
 				}
-				value = 50
+				value = 100
 			}
 		}
 		add = {

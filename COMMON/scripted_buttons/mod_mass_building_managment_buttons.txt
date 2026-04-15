@@ -1,0 +1,219 @@
+﻿je_mass_building_managment_button_1 = {
+	name = "je_mass_building_managment_button_1"
+	desc = "je_mass_building_managment_button_1"
+	visible = {
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+	effect = {
+		clear_variable_list = mbm_list
+		every_scope_state = {
+			root = {
+				add_to_variable_list = {
+					name = mbm_list
+					target = prev
+				}
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_2 = {
+	name = "je_mass_building_managment_button_2"
+	desc = "je_mass_building_managment_button_2"
+	visible = {
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+	effect = {
+		clear_variable_list = mbm_list
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_3 = {
+	name = "je_mass_building_managment_button_3"
+	desc = "je_mass_building_managment_button_3"
+	visible = {
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+	effect = {
+		every_scope_state = {
+			limit = {
+				is_incorporated = yes
+			}
+			root = {
+				add_to_variable_list = {
+					name = mbm_list
+					target = prev
+				}
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_4 = {
+	name = "je_mass_building_managment_button_4"
+	desc = "je_mass_building_managment_button_4"
+	visible = {
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+	effect = {
+		every_scope_state = {
+			limit = {
+				is_incorporated = yes
+				is_target_in_variable_list = {
+					name = mbm_list
+					target = this
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = mbm_list
+					target = prev
+				}
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_5 = {
+	name = "je_mass_building_managment_button_5"
+	desc = "je_mass_building_managment_button_5"
+	visible = {
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+	effect = {
+		every_scope_state = {
+			limit = {
+				is_incorporated = no
+			}
+			root = {
+				add_to_variable_list = {
+					name = mbm_list
+					target = prev
+				}
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_6 = {
+	name = "je_mass_building_managment_button_6"
+	desc = "je_mass_building_managment_button_6"
+	visible = {
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+	effect = {
+		every_scope_state = {
+			limit = {
+				is_incorporated = no
+				is_target_in_variable_list = {
+					name = mbm_list
+					target = this
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = mbm_list
+					target = prev
+				}
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_7 = {
+	name = "je_mass_building_managment_button_7"
+	desc = "je_mass_building_managment_button_7"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_scope_state = {
+			has_decree = mass_building_managment_target
+		}
+	}
+	effect = {
+		every_scope_state = {
+			limit = {
+				has_decree = mass_building_managment_target
+			}
+			root = {
+				add_to_variable_list = {
+					name = mbm_list
+					target = prev
+				}
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_8 = {
+	name = "je_mass_building_managment_button_8"
+	desc = "je_mass_building_managment_button_8"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_scope_state = {
+			has_decree = mass_building_managment_target
+		}
+	}
+	effect = {
+		every_scope_state = {
+			limit = {
+				has_decree = mass_building_managment_target
+				is_target_in_variable_list = {
+					name = mbm_list
+					target = this
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = mbm_list
+					target = prev
+				}
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
