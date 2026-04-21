@@ -6,6 +6,7 @@
 			goods_output_merchant_marine_add = 10
 		}
 		level_scaled = {
+			building_employment_clerks_add = 100
 			building_employment_laborers_add = 100
 		}
 	}
@@ -24,8 +25,8 @@ REPLACE_OR_CREATE:pm_basic_port = {
 			goods_output_merchant_marine_add = 20
 		}
 		level_scaled = {
+			building_employment_clerks_add = 500
 			building_employment_laborers_add = 500
-			building_employment_bureaucrats_add = 500
 		}
 	}
 	state_modifiers = {
@@ -52,8 +53,8 @@ REPLACE_OR_CREATE:pm_industrial_port = {
 			goods_output_merchant_marine_add = 50
 		}
 		level_scaled = {
+			building_employment_clerks_add = 500
 			building_employment_machinists_add = 500
-			building_employment_bureaucrats_add = 500
 		}
 	}
 	state_modifiers = {
@@ -80,8 +81,8 @@ REPLACE_OR_CREATE:pm_modern_port = {
 			goods_output_merchant_marine_add = 100
 		}
 		level_scaled = {
+			building_employment_clerks_add = 500
 			building_employment_engineers_add = 500
-			building_employment_bureaucrats_add = 500
 		}
 	}
 	state_modifiers = {

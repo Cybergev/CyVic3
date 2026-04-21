@@ -6,9 +6,9 @@
 	}
 	possible = {
 		has_technology_researched = tech_bureaucracy
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
@@ -29,9 +29,9 @@ je_mass_desctruction_development_administration = {
 		always = yes
 	}
 	possible = {
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
@@ -45,23 +45,23 @@ je_mass_desctruction_development_administration = {
 	}
 }
 
-je_mass_construction_development_arts_academy = {
-	name = "je_mass_construction_development_arts_academy"
-	desc = "je_mass_construction_development_arts_academy"
+je_mass_construction_development_art_academy = {
+	name = "je_mass_construction_development_art_academy"
+	desc = "je_mass_construction_development_art_academy"
 	visible = {
 		always = yes
 	}
 	possible = {
 		has_technology_researched = romanticism
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			start_building_construction = building_arts_academy
+			start_building_construction = building_art_academy
 		}
 	}
 	ai_chance = {
@@ -69,22 +69,22 @@ je_mass_construction_development_arts_academy = {
 	}
 }
 
-je_mass_desctruction_development_arts_academy = {
-	name = "je_mass_desctruction_development_arts_academy"
-	desc = "je_mass_desctruction_development_arts_academy"
+je_mass_desctruction_development_art_academy = {
+	name = "je_mass_desctruction_development_art_academy"
+	desc = "je_mass_desctruction_development_art_academy"
 	visible = {
 		always = yes
 	}
 	possible = {
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			remove_building = building_arts_academy
+			remove_building = building_art_academy
 		}
 	}
 	ai_chance = {
@@ -100,9 +100,9 @@ je_mass_construction_development_university = {
 	}
 	possible = {
 		has_technology_researched = academia
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
@@ -123,9 +123,9 @@ je_mass_desctruction_development_university = {
 		always = yes
 	}
 	possible = {
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
@@ -152,15 +152,22 @@ je_mass_construction_development_skyscraper = {
 				has_building = building_skyscraper
 			}
 		}
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			start_building_construction = building_skyscraper
+			if = {
+				limit = {
+					NOT = {
+						has_building = building_skyscraper
+					}
+				}
+				start_building_construction = building_skyscraper
+			}
 		}
 	}
 	ai_chance = {
@@ -175,9 +182,9 @@ je_mass_desctruction_development_skyscraper = {
 		always = yes
 	}
 	possible = {
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
@@ -199,15 +206,22 @@ je_mass_construction_development_power_bloc_statue = {
 	}
 	possible = {
 		is_in_power_bloc = yes
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			start_building_construction = building_power_bloc_statue
+			if = {
+				limit = {
+					NOT = {
+						has_building = building_power_bloc_statue
+					}
+				}
+				start_building_construction = building_power_bloc_statue
+			}
 		}
 	}
 	ai_chance = {
@@ -222,9 +236,9 @@ je_mass_desctruction_development_power_bloc_statue = {
 		always = yes
 	}
 	possible = {
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
@@ -246,9 +260,9 @@ je_mass_construction_development_construction_sector = {
 	}
 	possible = {
 		has_technology_researched = urbanization
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
@@ -269,9 +283,9 @@ je_mass_desctruction_development_construction_sector = {
 		always = yes
 	}
 	possible = {
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
@@ -293,9 +307,9 @@ je_mass_construction_development_trade_center = {
 	}
 	possible = {
 		trade_center_construction_allowed = yes
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
@@ -316,9 +330,9 @@ je_mass_desctruction_development_trade_center = {
 		always = yes
 	}
 	possible = {
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
@@ -340,9 +354,9 @@ je_mass_construction_development_railway = {
 	}
 	possible = {
 		has_technology_researched = railways
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
@@ -363,9 +377,9 @@ je_mass_desctruction_development_railway = {
 		always = yes
 	}
 	possible = {
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
@@ -387,15 +401,20 @@ je_mass_construction_development_port = {
 	}
 	possible = {
 		has_technology_researched = navigation
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			start_building_construction = building_port
+			if = {
+				limit = {
+					is_coastal = yes
+				}
+				start_building_construction = building_port
+			}
 		}
 	}
 	ai_chance = {
@@ -410,9 +429,9 @@ je_mass_desctruction_development_port = {
 		always = yes
 	}
 	possible = {
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
@@ -426,23 +445,23 @@ je_mass_desctruction_development_port = {
 	}
 }
 
-je_mass_construction_development_electrics_industry = {
-	name = "je_mass_construction_development_electrics_industry"
-	desc = "je_mass_construction_development_electrics_industry"
+je_mass_construction_development_power_plant = {
+	name = "je_mass_construction_development_power_plant"
+	desc = "je_mass_construction_development_power_plant"
 	visible = {
 		always = yes
 	}
 	possible = {
 		has_technology_researched = electrical_generation
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			start_building_construction = building_electrics_industry
+			start_building_construction = building_power_plant
 		}
 	}
 	ai_chance = {
@@ -450,22 +469,22 @@ je_mass_construction_development_electrics_industry = {
 	}
 }
 
-je_mass_desctruction_development_electrics_industry = {
-	name = "je_mass_desctruction_development_electrics_industry"
-	desc = "je_mass_desctruction_development_electrics_industry"
+je_mass_desctruction_development_power_plant = {
+	name = "je_mass_desctruction_development_power_plant"
+	desc = "je_mass_desctruction_development_power_plant"
 	visible = {
 		always = yes
 	}
 	possible = {
-		variable_list_size = {
-			name = mbm_list
-			value > 0
+		any_in_list = {
+			variable = mbm_list
+			owner = root
 		}
 	}
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			remove_building = building_electrics_industry
+			remove_building = building_power_plant
 		}
 	}
 	ai_chance = {

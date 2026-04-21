@@ -83,7 +83,7 @@ REPLACE:commander_rank_3 = {
 		character_command_limit_add = 300
 	}
 	country_modifier = {
-		country_bureaucracy_add = -30
+		country_bureaucracy_add = -300
 	}
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.3
@@ -119,7 +119,7 @@ REPLACE:commander_rank_4 = {
 		character_command_limit_add = 400
 	}
 	country_modifier = {
-		country_bureaucracy_add = -40
+		country_bureaucracy_add = -400
 	}
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.4
@@ -155,7 +155,7 @@ REPLACE:commander_rank_5 = {
 		character_command_limit_add = 500
 	}
 	country_modifier = {
-		country_bureaucracy_add = -50
+		country_bureaucracy_add = -500
 	}
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.5

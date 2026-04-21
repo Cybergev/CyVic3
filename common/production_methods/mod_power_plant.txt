@@ -8,12 +8,12 @@
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_engines_add = 20
-			goods_input_coal_add = 20
-			goods_input_wood_add = 20
+			goods_input_wood_add = 40
 			goods_output_electricity_add = 200
 		}
 		level_scaled = {
-			building_employment_laborers_add = 2000
+			building_employment_laborers_add = 3000
+			building_employment_clerks_add = 1000
 			building_employment_machinists_add = 1000
 		}
 	}
@@ -31,13 +31,14 @@ REPLACE_OR_CREATE:pm_coal-fired_plant = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 30
-			goods_input_coal_add = 30
+			goods_input_engines_add = 20
+			goods_input_coal_add = 20
 			goods_output_electricity_add = 300
 		}
 		level_scaled = {
+			building_employment_clerks_add = 500
 			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 1000
+			building_employment_engineers_add = 500
 		}
 	}
 }
@@ -54,12 +55,13 @@ REPLACE_OR_CREATE:pm_oil-fired_plant = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 40
-			goods_input_oil_add = 40
+			goods_input_engines_add = 20
+			goods_input_oil_add = 20
 			goods_output_electricity_add = 400
 		}
 		level_scaled = {
-			building_employment_engineers_add = 1000
+			building_employment_clerks_add = 500
+			building_employment_engineers_add = 500
 		}
 	}
 }

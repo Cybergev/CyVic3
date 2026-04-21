@@ -270,8 +270,9 @@
 		add = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
+			multiply = 50
 		}
-		multiply = {
+		add = {
 			desc = "POP_ACADEMICS"
 			if = {
 				limit = {
@@ -280,7 +281,7 @@
 				value = 250
 			}
 		}
-		multiply = {
+		add = {
 			desc = "POP_BUREAUCRATS"
 			if = {
 				limit = {
@@ -289,7 +290,7 @@
 				value = 100
 			}
 		}
-		multiply = {
+		add = {
 			desc = "POP_CLERKS"
 			if = {
 				limit = {
@@ -298,7 +299,7 @@
 				value = 50
 			}
 		}
-		multiply = {
+		add = {
 			desc = "POP_ARISTOCRATS"
 			if = {
 				limit = {

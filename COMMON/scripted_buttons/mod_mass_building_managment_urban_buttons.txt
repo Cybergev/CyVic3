@@ -1,0 +1,1371 @@
+﻿je_mass_construction_urban_military_shipyard = {
+	name = "je_mass_construction_urban_military_shipyard"
+	desc = "je_mass_construction_urban_military_shipyard"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = admiralty
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			if = {
+				limit = {
+					is_coastal = yes
+				}
+				start_building_construction = building_military_shipyard
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_military_shipyard = {
+	name = "je_mass_desctruction_urban_military_shipyard"
+	desc = "je_mass_desctruction_urban_military_shipyard"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_military_shipyard
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_aeroplanes_industry = {
+	name = "je_mass_construction_urban_aeroplanes_industry"
+	desc = "je_mass_construction_urban_aeroplanes_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = military_aviation
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_aeroplanes_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_aeroplanes_industry = {
+	name = "je_mass_desctruction_urban_aeroplanes_industry"
+	desc = "je_mass_desctruction_urban_aeroplanes_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_aeroplanes_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_tanks_industry = {
+	name = "je_mass_construction_urban_tanks_industry"
+	desc = "je_mass_construction_urban_tanks_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = mobile_armor
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_tanks_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_tanks_industry = {
+	name = "je_mass_desctruction_urban_tanks_industry"
+	desc = "je_mass_desctruction_urban_tanks_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_tanks_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_artillery_foundry = {
+	name = "je_mass_construction_urban_artillery_foundry"
+	desc = "je_mass_construction_urban_artillery_foundry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = gunsmithing
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_artillery_foundry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_artillery_foundry = {
+	name = "je_mass_desctruction_urban_artillery_foundry"
+	desc = "je_mass_desctruction_urban_artillery_foundry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_artillery_foundry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_arms_industry = {
+	name = "je_mass_construction_urban_arms_industry"
+	desc = "je_mass_construction_urban_arms_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = gunsmithing
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_arms_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_arms_industry = {
+	name = "je_mass_desctruction_urban_arms_industry"
+	desc = "je_mass_desctruction_urban_arms_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_arms_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_munition_plant = {
+	name = "je_mass_construction_urban_munition_plant"
+	desc = "je_mass_construction_urban_munition_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = percussion_cap
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_munition_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_munition_plant = {
+	name = "je_mass_desctruction_urban_munition_plant"
+	desc = "je_mass_desctruction_urban_munition_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_munition_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_shipyard = {
+	name = "je_mass_construction_urban_shipyard"
+	desc = "je_mass_construction_urban_shipyard"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = navigation
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			if = {
+				limit = {
+					is_coastal = yes
+				}
+				start_building_construction = building_shipyard
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_shipyard = {
+	name = "je_mass_desctruction_urban_shipyard"
+	desc = "je_mass_desctruction_urban_shipyard"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_shipyard
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_automotive_industry = {
+	name = "je_mass_construction_urban_automotive_industry"
+	desc = "je_mass_construction_urban_automotive_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = combustion_engine
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_automotive_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_automotive_industry = {
+	name = "je_mass_desctruction_urban_automotive_industry"
+	desc = "je_mass_desctruction_urban_automotive_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_automotive_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_motor_industry = {
+	name = "je_mass_construction_urban_motor_industry"
+	desc = "je_mass_construction_urban_motor_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = atmospheric_engine
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_motor_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_motor_industry = {
+	name = "je_mass_desctruction_urban_motor_industry"
+	desc = "je_mass_desctruction_urban_motor_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_motor_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_steel_mill = {
+	name = "je_mass_construction_urban_steel_mill"
+	desc = "je_mass_construction_urban_steel_mill"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = steelworking
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_steel_mill
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_steel_mill = {
+	name = "je_mass_desctruction_urban_steel_mill"
+	desc = "je_mass_desctruction_urban_steel_mill"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_steel_mill
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_glassworks = {
+	name = "je_mass_construction_urban_glassworks"
+	desc = "je_mass_construction_urban_glassworks"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = manufacturies
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_glassworks
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_glassworks = {
+	name = "je_mass_desctruction_urban_glassworks"
+	desc = "je_mass_desctruction_urban_glassworks"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_glassworks
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_explosives_factory = {
+	name = "je_mass_construction_urban_explosives_factory"
+	desc = "je_mass_construction_urban_explosives_factory"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = intensive_agriculture
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_explosives_factory
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_explosives_factory = {
+	name = "je_mass_desctruction_urban_explosives_factory"
+	desc = "je_mass_desctruction_urban_explosives_factory"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_explosives_factory
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_synthetic_opium_plant = {
+	name = "je_mass_construction_urban_synthetic_opium_plant"
+	desc = "je_mass_construction_urban_synthetic_opium_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = pharmaceuticals
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_synthetic_opium_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_synthetic_opium_plant = {
+	name = "je_mass_desctruction_urban_synthetic_opium_plant"
+	desc = "je_mass_desctruction_urban_synthetic_opium_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_synthetic_opium_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_synthetic_oil_plant = {
+	name = "je_mass_construction_urban_synthetic_oil_plant"
+	desc = "je_mass_construction_urban_synthetic_oil_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = aniline
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_synthetic_oil_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_synthetic_oil_plant = {
+	name = "je_mass_desctruction_urban_synthetic_oil_plant"
+	desc = "je_mass_desctruction_urban_synthetic_oil_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_synthetic_oil_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_synthetic_rubber_plant = {
+	name = "je_mass_construction_urban_synthetic_rubber_plant"
+	desc = "je_mass_construction_urban_synthetic_rubber_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = vulcanization
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_synthetic_rubber_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_synthetic_rubber_plant = {
+	name = "je_mass_desctruction_urban_synthetic_rubber_plant"
+	desc = "je_mass_desctruction_urban_synthetic_rubber_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_synthetic_rubber_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_synthetic_silk_plant = {
+	name = "je_mass_construction_urban_synthetic_silk_plant"
+	desc = "je_mass_construction_urban_synthetic_silk_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = art_silk
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_synthetic_silk_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_synthetic_silk_plant = {
+	name = "je_mass_desctruction_urban_synthetic_silk_plant"
+	desc = "je_mass_desctruction_urban_synthetic_silk_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_synthetic_silk_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_synthetics_plant = {
+	name = "je_mass_construction_urban_synthetics_plant"
+	desc = "je_mass_construction_urban_synthetics_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = aniline
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_synthetics_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_synthetics_plant = {
+	name = "je_mass_desctruction_urban_synthetics_plant"
+	desc = "je_mass_desctruction_urban_synthetics_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_synthetics_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_chemical_plant = {
+	name = "je_mass_construction_urban_chemical_plant"
+	desc = "je_mass_construction_urban_chemical_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = intensive_agriculture
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_chemical_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_chemical_plant = {
+	name = "je_mass_desctruction_urban_chemical_plant"
+	desc = "je_mass_desctruction_urban_chemical_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_chemical_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_radios_industry = {
+	name = "je_mass_construction_urban_radios_industry"
+	desc = "je_mass_construction_urban_radios_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = radio
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_radios_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_radios_industry = {
+	name = "je_mass_desctruction_urban_radios_industry"
+	desc = "je_mass_desctruction_urban_radios_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_military_shipyard
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_electrics_industry = {
+	name = "je_mass_construction_urban_electrics_industry"
+	desc = "je_mass_construction_urban_electrics_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = telephone
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_electrics_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_electrics_industry = {
+	name = "je_mass_desctruction_urban_electrics_industry"
+	desc = "je_mass_desctruction_urban_electrics_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_electrics_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_distillation_plant = {
+	name = "je_mass_construction_urban_distillation_plant"
+	desc = "je_mass_construction_urban_distillation_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = distillation
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_distillation_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_distillation_plant = {
+	name = "je_mass_desctruction_urban_distillation_plant"
+	desc = "je_mass_desctruction_urban_distillation_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_distillation_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_charcoal_plant = {
+	name = "je_mass_construction_urban_charcoal_plant"
+	desc = "je_mass_construction_urban_charcoal_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = steelworking
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_charcoal_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_charcoal_plant = {
+	name = "je_mass_desctruction_urban_charcoal_plant"
+	desc = "je_mass_desctruction_urban_charcoal_plant"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_charcoal_plant
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_porcelain_manufactory = {
+	name = "je_mass_construction_urban_porcelain_manufactory"
+	desc = "je_mass_construction_urban_porcelain_manufactory"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = manufacturies
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_porcelain_manufactory
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_porcelain_manufactory = {
+	name = "je_mass_desctruction_urban_porcelain_manufactory"
+	desc = "je_mass_desctruction_urban_porcelain_manufactory"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_porcelain_manufactory
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_furniture_manufactory = {
+	name = "je_mass_construction_urban_furniture_manufactory"
+	desc = "je_mass_construction_urban_furniture_manufactory"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = manufacturies
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_furniture_manufactory
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_furniture_manufactory = {
+	name = "je_mass_desctruction_urban_furniture_manufactory"
+	desc = "je_mass_desctruction_urban_furniture_manufactory"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_furniture_manufactory
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_textile_mill = {
+	name = "je_mass_construction_urban_textile_mill"
+	desc = "je_mass_construction_urban_textile_mill"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = manufacturies
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_textile_mill
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_textile_mill = {
+	name = "je_mass_desctruction_urban_textile_mill"
+	desc = "je_mass_desctruction_urban_textile_mill"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_textile_mill
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_paper_mill = {
+	name = "je_mass_construction_urban_paper_mill"
+	desc = "je_mass_construction_urban_paper_mill"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = manufacturies
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_paper_mill
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_paper_mill = {
+	name = "je_mass_desctruction_urban_paper_mill"
+	desc = "je_mass_desctruction_urban_paper_mill"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_paper_mill
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_tooling_workshop = {
+	name = "je_mass_construction_urban_tooling_workshop"
+	desc = "je_mass_construction_urban_tooling_workshop"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = manufacturies
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_tooling_workshop
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_tooling_workshop = {
+	name = "je_mass_desctruction_urban_tooling_workshop"
+	desc = "je_mass_desctruction_urban_tooling_workshop"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_tooling_workshop
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_hardwood_workshop = {
+	name = "je_mass_construction_urban_hardwood_workshop"
+	desc = "je_mass_construction_urban_hardwood_workshop"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_hardwood_workshop
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_hardwood_workshop = {
+	name = "je_mass_desctruction_urban_hardwood_workshop"
+	desc = "je_mass_desctruction_urban_hardwood_workshop"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_hardwood_workshop
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_food_industry = {
+	name = "je_mass_construction_urban_food_industry"
+	desc = "je_mass_construction_urban_food_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = manufacturies
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			start_building_construction = building_food_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_desctruction_urban_food_industry = {
+	name = "je_mass_desctruction_urban_food_industry"
+	desc = "je_mass_desctruction_urban_food_industry"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_food_industry
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}

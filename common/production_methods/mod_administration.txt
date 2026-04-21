@@ -12,8 +12,7 @@
 	}
 	building_modifiers = {
 		level_scaled = {
-			building_employment_laborers_add = 1500
-			building_employment_clerks_add = 500
+			building_employment_clerks_add = 3000
 		}
 	}
 }
@@ -38,8 +37,7 @@ REPLACE_OR_CREATE:pm_horizontal_drawer_cabinets = {
 			goods_input_paper_add = 5
 		}
 		level_scaled = {
-			building_employment_laborers_add = 1000
-			building_employment_clerks_add = 1000
+			building_employment_clerks_add = 2000
 		}
 	}
 }
@@ -64,7 +62,7 @@ REPLACE_OR_CREATE:pm_vertical_filing_cabinets = {
 			goods_input_paper_add = 10
 		}
 		level_scaled = {
-			building_employment_clerks_add = 500
+			building_employment_clerks_add = 1000
 		}
 	}
 }
@@ -72,7 +70,7 @@ REPLACE_OR_CREATE:pm_vertical_filing_cabinets = {
 REPLACE_OR_CREATE:pm_switch_boards = {
 	texture = "gfx/interface/icons/production_method_icons/telephone_switchboards.dds"
 	unlocking_technologies = {
-		central_planning
+		telephone
 	}
 	country_modifiers = {
 		workforce_scaled = {
@@ -89,6 +87,9 @@ REPLACE_OR_CREATE:pm_switch_boards = {
 			goods_input_paper_add = 10
 			goods_input_telephones_add = 10
 		}
+		level_scaled = {
+			building_employment_clerks_add = 500
+		}
 	}
 }
 
@@ -99,8 +100,7 @@ REPLACE_OR_CREATE:pm_hereditary_bureaucrats = {
 	}
 	building_modifiers = {
 		level_scaled = {
-			building_employment_aristocrats_add = 1000
-			building_employment_bureaucrats_add = -500
+			building_employment_aristocrats_add = 500
 		}
 	}
 }
@@ -125,8 +125,8 @@ REPLACE_OR_CREATE:pm_religious_bureaucrats = {
 	}
 	building_modifiers = {
 		level_scaled = {
-			building_employment_bureaucrats_add = -500
-			building_employment_clergymen_add = 1000
+			building_employment_clerks_add = -500
+			building_employment_clergymen_add = 500
 		}
 	}
 }
@@ -135,10 +135,5 @@ REPLACE_OR_CREATE:pm_secular_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
 	disallowing_laws = {
 		law_state_religion
-	}
-	building_modifiers = {
-		level_scaled = {
-			building_employment_bureaucrats_add = 500
-		}
 	}
 }

@@ -275,7 +275,6 @@
 					is_pop_type = capitalists
 				}
 				value = 250
-				add = this.standard_of_living
 			}
 		}
 		add = {
@@ -284,7 +283,7 @@
 				limit = {
 					is_pop_type = engineers
 				}
-				value = 100
+				value = 50
 			}
 		}
 		add = {

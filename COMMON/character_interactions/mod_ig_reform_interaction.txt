@@ -68,7 +68,13 @@ swap_ideology_to_communist = {
 			has_ideology = ideology:ideology_anarchist
 			has_ideology = ideology:ideology_vanguardist
 			and = {
-				has_ideology = ideology:ideology_moderate
+				or = {
+					has_ideology = ideology:ideology_moderate
+					has_ideology = ideology:ideology_modernizer_leader
+					has_ideology = ideology:ideology_reformer
+					has_ideology = ideology:ideology_utilitarian_leader
+					has_ideology = ideology:ideology_protectionist
+				}
 				or = {
 					owner = {
 						has_technology_researched = socialism

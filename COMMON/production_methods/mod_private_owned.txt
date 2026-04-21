@@ -79,6 +79,9 @@ REPLACE_OR_CREATE:pm_financial_district_privately_owned = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	replacement_if_valid = pm_financial_district_publicly_traded
 	is_hidden_when_unavailable = yes
+	disallowing_laws = {
+		law_command_economy
+	}
 	building_modifiers = {
 		level_scaled = {
 			building_employment_capitalists_add = 100
@@ -95,6 +98,9 @@ REPLACE_OR_CREATE:pm_financial_district_publicly_traded = {
 	is_hidden_when_unavailable = yes
 	unlocking_technologies = {
 		mutual_funds
+	}
+	disallowing_laws = {
+		law_command_economy
 	}
 	building_modifiers = {
 		level_scaled = {

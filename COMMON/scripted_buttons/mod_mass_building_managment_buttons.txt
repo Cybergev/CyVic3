@@ -200,9 +200,11 @@ je_mass_building_managment_button_8 = {
 		every_scope_state = {
 			limit = {
 				has_decree = mass_building_managment_target
-				is_target_in_variable_list = {
-					name = mbm_list
-					target = this
+				root = {
+					is_target_in_variable_list = {
+						name = mbm_list
+						target = prev
+					}
 				}
 			}
 			root = {

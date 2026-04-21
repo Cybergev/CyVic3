@@ -12,6 +12,15 @@
 			name = mbm_list
 			target = scope:capital_state
 		}
+		add_journal_entry = {
+			type = je_mass_building_managment_development
+		}
+		add_journal_entry = {
+			type = je_mass_building_managment_rural
+		}
+		add_journal_entry = {
+			type = je_mass_building_managment_urban
+		}
 	}
 	scripted_button = je_mass_building_managment_button_1
 	scripted_button = je_mass_building_managment_button_2
@@ -31,15 +40,12 @@ je_mass_building_managment_development = {
 	is_shown_when_inactive = {
 		is_player = yes
 	}
-	possible = {
-		is_player = yes
-	}
 	immediate = {
 	}
 	scripted_button = je_mass_construction_development_administration
 	scripted_button = je_mass_desctruction_development_administration
-	scripted_button = je_mass_construction_development_arts_academy
-	scripted_button = je_mass_desctruction_development_arts_academy
+	scripted_button = je_mass_construction_development_art_academy
+	scripted_button = je_mass_desctruction_development_art_academy
 	scripted_button = je_mass_construction_development_university
 	scripted_button = je_mass_desctruction_development_university
 	scripted_button = je_mass_construction_development_skyscraper
@@ -54,23 +60,8 @@ je_mass_building_managment_development = {
 	scripted_button = je_mass_desctruction_development_railway
 	scripted_button = je_mass_construction_development_port
 	scripted_button = je_mass_desctruction_development_port
-	scripted_button = je_mass_construction_development_electrics_industry
-	scripted_button = je_mass_desctruction_development_electrics_industry
-	weight = 100000
-	should_be_pinned_by_default = yes
-}
-
-je_mass_building_managment_urban = {
-	icon = "gfx/interface/icons/invention_icons/steel_frame_buildings.dds"
-	group = je_group_mass_building_managment
-	is_shown_when_inactive = {
-		is_player = yes
-	}
-	possible = {
-		is_player = yes
-	}
-	immediate = {
-	}
+	scripted_button = je_mass_construction_development_power_plant
+	scripted_button = je_mass_desctruction_development_power_plant
 	weight = 100000
 	should_be_pinned_by_default = yes
 }
@@ -81,11 +72,128 @@ je_mass_building_managment_rural = {
 	is_shown_when_inactive = {
 		is_player = yes
 	}
-	possible = {
+	immediate = {
+	}
+	scripted_button = je_mass_construction_rural_livestock_ranch
+	scripted_button = je_mass_desctruction_rural_livestock_ranch
+	scripted_button = je_mass_construction_rural_rye_farm
+	scripted_button = je_mass_desctruction_rural_rye_farm
+	scripted_button = je_mass_construction_rural_wheat_farm
+	scripted_button = je_mass_desctruction_rural_wheat_farm
+	scripted_button = je_mass_construction_rural_maize_farm
+	scripted_button = je_mass_desctruction_rural_maize_farm
+	scripted_button = je_mass_construction_rural_millet_farm
+	scripted_button = je_mass_desctruction_rural_millet_farm
+	scripted_button = je_mass_construction_rural_rice_farm
+	scripted_button = je_mass_desctruction_rural_rice_farm
+	scripted_button = je_mass_construction_rural_vineyard
+	scripted_button = je_mass_desctruction_rural_vineyard
+	scripted_button = je_mass_construction_rural_banana_plantation
+	scripted_button = je_mass_desctruction_rural_banana_plantation
+	scripted_button = je_mass_construction_rural_coffee_plantation
+	scripted_button = je_mass_desctruction_rural_coffee_plantation
+	scripted_button = je_mass_construction_rural_cotton_plantation
+	scripted_button = je_mass_desctruction_rural_cotton_plantation
+	scripted_button = je_mass_construction_rural_dye_plantation
+	scripted_button = je_mass_desctruction_rural_dye_plantation
+	scripted_button = je_mass_construction_rural_opium_plantation
+	scripted_button = je_mass_desctruction_rural_opium_plantation
+	scripted_button = je_mass_construction_rural_rubber_plantation
+	scripted_button = je_mass_desctruction_rural_rubber_plantation
+	scripted_button = je_mass_construction_rural_silk_plantation
+	scripted_button = je_mass_desctruction_rural_silk_plantation
+	scripted_button = je_mass_construction_rural_sugar_plantation
+	scripted_button = je_mass_desctruction_rural_sugar_plantation
+	scripted_button = je_mass_construction_rural_tea_plantation
+	scripted_button = je_mass_desctruction_rural_tea_plantation
+	scripted_button = je_mass_construction_rural_tobacco_plantation
+	scripted_button = je_mass_desctruction_rural_tobacco_plantation
+	scripted_button = je_mass_construction_rural_fishing_wharf
+	scripted_button = je_mass_desctruction_rural_fishing_wharf
+	scripted_button = je_mass_construction_rural_whaling_station
+	scripted_button = je_mass_desctruction_rural_whaling_station
+	scripted_button = je_mass_construction_rural_logging_camp
+	scripted_button = je_mass_desctruction_rural_logging_camp
+	scripted_button = je_mass_construction_rural_coal_mine
+	scripted_button = je_mass_desctruction_rural_coal_mine
+	scripted_button = je_mass_construction_rural_iron_mine
+	scripted_button = je_mass_desctruction_rural_iron_mine
+	scripted_button = je_mass_construction_rural_lead_mine
+	scripted_button = je_mass_desctruction_rural_lead_mine
+	scripted_button = je_mass_construction_rural_sulfur_mine
+	scripted_button = je_mass_desctruction_rural_sulfur_mine
+	scripted_button = je_mass_construction_rural_gold_mine
+	scripted_button = je_mass_desctruction_rural_gold_mine
+	scripted_button = je_mass_construction_rural_oil_rig
+	scripted_button = je_mass_desctruction_rural_oil_rig
+	weight = 100000
+	should_be_pinned_by_default = yes
+}
+
+je_mass_building_managment_urban = {
+	icon = "gfx/interface/icons/invention_icons/steel_frame_buildings.dds"
+	group = je_group_mass_building_managment
+	is_shown_when_inactive = {
 		is_player = yes
 	}
 	immediate = {
 	}
+	scripted_button = je_mass_construction_urban_military_shipyard
+	scripted_button = je_mass_desctruction_urban_military_shipyard
+	scripted_button = je_mass_construction_urban_aeroplanes_industry
+	scripted_button = je_mass_desctruction_urban_aeroplanes_industry
+	scripted_button = je_mass_construction_urban_tanks_industry
+	scripted_button = je_mass_desctruction_urban_tanks_industry
+	scripted_button = je_mass_construction_urban_artillery_foundry
+	scripted_button = je_mass_desctruction_urban_artillery_foundry
+	scripted_button = je_mass_construction_urban_arms_industry
+	scripted_button = je_mass_desctruction_urban_arms_industry
+	scripted_button = je_mass_construction_urban_shipyard
+	scripted_button = je_mass_desctruction_urban_shipyard
+	scripted_button = je_mass_construction_urban_automotive_industry
+	scripted_button = je_mass_desctruction_urban_automotive_industry
+	scripted_button = je_mass_construction_urban_motor_industry
+	scripted_button = je_mass_desctruction_urban_motor_industry
+	scripted_button = je_mass_construction_urban_steel_mill
+	scripted_button = je_mass_desctruction_urban_steel_mill
+	scripted_button = je_mass_construction_urban_glassworks
+	scripted_button = je_mass_desctruction_urban_glassworks
+	scripted_button = je_mass_construction_urban_explosives_factory
+	scripted_button = je_mass_desctruction_urban_explosives_factory
+	scripted_button = je_mass_construction_urban_synthetic_opium_plant
+	scripted_button = je_mass_desctruction_urban_synthetic_opium_plant
+	scripted_button = je_mass_construction_urban_synthetic_oil_plant
+	scripted_button = je_mass_desctruction_urban_synthetic_oil_plant
+	scripted_button = je_mass_construction_urban_synthetic_rubber_plant
+	scripted_button = je_mass_desctruction_urban_synthetic_rubber_plant
+	scripted_button = je_mass_construction_urban_synthetic_silk_plant
+	scripted_button = je_mass_desctruction_urban_synthetic_silk_plant
+	scripted_button = je_mass_construction_urban_synthetics_plant
+	scripted_button = je_mass_desctruction_urban_synthetics_plant
+	scripted_button = je_mass_construction_urban_chemical_plant
+	scripted_button = je_mass_desctruction_urban_chemical_plant
+	scripted_button = je_mass_construction_urban_radios_industry
+	scripted_button = je_mass_desctruction_urban_radios_industry
+	scripted_button = je_mass_construction_urban_electrics_industry
+	scripted_button = je_mass_desctruction_urban_electrics_industry
+	scripted_button = je_mass_construction_urban_distillation_plant
+	scripted_button = je_mass_desctruction_urban_distillation_plant
+	scripted_button = je_mass_construction_urban_charcoal_plant
+	scripted_button = je_mass_desctruction_urban_charcoal_plant
+	scripted_button = je_mass_construction_urban_porcelain_manufactory
+	scripted_button = je_mass_desctruction_urban_porcelain_manufactory
+	scripted_button = je_mass_construction_urban_furniture_manufactory
+	scripted_button = je_mass_desctruction_urban_furniture_manufactory
+	scripted_button = je_mass_construction_urban_textile_mill
+	scripted_button = je_mass_desctruction_urban_textile_mill
+	scripted_button = je_mass_construction_urban_paper_mill
+	scripted_button = je_mass_desctruction_urban_paper_mill
+	scripted_button = je_mass_construction_urban_tooling_workshop
+	scripted_button = je_mass_desctruction_urban_tooling_workshop
+	scripted_button = je_mass_construction_urban_hardwood_workshop
+	scripted_button = je_mass_desctruction_urban_hardwood_workshop
+	scripted_button = je_mass_construction_urban_food_industry
+	scripted_button = je_mass_desctruction_urban_food_industry
 	weight = 100000
 	should_be_pinned_by_default = yes
 }
