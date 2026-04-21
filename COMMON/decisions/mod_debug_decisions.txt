@@ -616,24 +616,12 @@ set_theocracy = {
 
 debug_action = {
 	is_shown = {
-		always = yes
+		always = no
 	}
 	possible = {
-		always = yes
+		always = no
 	}
 	when_taken = {
-		add_journal_entry = {
-			type = je_mass_building_managment
-		}
-		add_journal_entry = {
-			type = je_mass_building_managment_development
-		}
-		add_journal_entry = {
-			type = je_mass_building_managment_urban
-		}
-		add_journal_entry = {
-			type = je_mass_building_managment_rural
-		}
 	}
 	ai_chance = {
 		base = 0

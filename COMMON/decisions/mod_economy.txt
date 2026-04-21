@@ -61,3 +61,24 @@ mod_change_privatization = {
 		base = 0
 	}
 }
+
+start_mass_building = {
+	is_shown = {
+		NOT = {
+			has_journal_entry = je_mass_building_managment
+		}
+	}
+	possible = {
+		NOT = {
+			has_journal_entry = je_mass_building_managment
+		}
+	}
+	when_taken = {
+		add_journal_entry = {
+			type = je_mass_building_managment
+		}
+	}
+	ai_chance = {
+		base = 0
+	}
+}

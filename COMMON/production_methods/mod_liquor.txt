@@ -122,6 +122,24 @@ REPLACE_OR_CREATE:pm_no_synthetic_liquor = {
 	texture = "gfx/interface/icons/production_method_icons/no_production_1.dds"
 }
 
+REPLACE_OR_CREATE:pm_wood_hydrolis_process = {
+	texture = "gfx/interface/icons/production_method_icons/wood_chemic.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 40
+			goods_input_fertilizer_add = 10
+			# output goods 1.45
+			goods_output_liquor_add = 40
+		}
+	}
+}
+
 REPLACE_OR_CREATE:pm_acetaldehyde_process = {
 	texture = "gfx/interface/icons/production_method_icons/procft.dds"
 	state_modifiers = {

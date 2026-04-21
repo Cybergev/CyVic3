@@ -544,6 +544,9 @@ building_charcoal_plant = {
 	icon = "gfx/interface/icons/building_icons/charcoal_plants.dds"
 	city_type = city
 	levels_per_mesh = 50
+	unlocking_technologies = {
+		steelworking
+	}
 	production_method_groups = {
 		pmg_charcoal
 		pmg_automation_light_industry

@@ -23,9 +23,35 @@
 }
 
 NDiplomacy = {
+	INFAMY_THRESHOLD_INFAMOUS = 50	# Above this, countries are considered infamous and get related penalties
+	INFAMY_THRESHOLD_NOTORIOUS = 75	# Above this, countries are considered notorious and get related penalties
+	INFAMY_THRESHOLD_PARIAH = 100	# Above this, countries are considered pariah and get related penalties
 	BASE_YEARLY_INFAMY_DECAY_RATE = 12
 	#
 	WAR_GOAL_REGIME_CHANGE_MIN_LAW_PROGRESSIVENESS_DIFFERENCE = 0	# If the difference between the target wargoal holder's laws in a law group are not at least this, don't change it as part of regime change
+	WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR = 100000	# The amount of population by which the factor below is multiplied
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER = 0.1	# For each WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR population in a country/state, multiply infamy by this
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE = 10	# Infamy population multiplier can't be higher than this for each state affected
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL = 100	# Infamy population multiplier can't be higher than this, regardless of number of states affected
+	WAR_GOAL_INFAMY_HOMELAND_FACTOR = -1	# Infamy is adjusted by this if the states taken/puppeted etc are Homelands of the aggressor
+	WAR_GOAL_INFAMY_UNINCORPORATED_FACTOR = -0.5	# Infamy is adjusted by this if the states taken/puppeted etc are unincorporated
+	WAR_GOAL_INFAMY_CONQUER_STATE = 2
+	WAR_GOAL_INFAMY_RETURN_STATE = 1
+	WAR_GOAL_INFAMY_MAKE_PROTECTORATE = 2
+	WAR_GOAL_INFAMY_MAKE_TRIBUTARY = 2
+	WAR_GOAL_INFAMY_MAKE_DOMINION = 2
+	WAR_GOAL_INFAMY_REDUCE_AUTONOMY = 2
+	WAR_GOAL_INFAMY_TRANSFER_SUBJECT = 2
+	WAR_GOAL_INFAMY_ANNEX_COUNTRY = 2
+	WAR_GOAL_INFAMY_REGIME_CHANGE = 0.5
+	WAR_GOAL_INFAMY_FORCE_NATIONALIZATION = 5
+	#
+	COUNTRY_TIER_CITY_STATE_PRESTIGE = 0
+	COUNTRY_TIER_PRINCIPALITY_PRESTIGE = 20
+	COUNTRY_TIER_GRAND_PRINCIPALITY_PRESTIGE = 40
+	COUNTRY_TIER_KINGDOM_PRESTIGE = 60
+	COUNTRY_TIER_EMPIRE_PRESTIGE = 80
+	COUNTRY_TIER_HEGEMONY_PRESTIGE = 100
 	#
 	ECONOMIC_DEPENDENCE_MIN = -10
 	ECONOMIC_DEPENDENCE_MAX = 10

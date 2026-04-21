@@ -387,11 +387,6 @@ REPLACE:mobilization_option_rail_transport = {
 				has_mobilization_option = mobilization_option:mobilization_option_forced_march
 			}
 		}
-		market ?= {
-			mg:engines ?= {
-				market_goods_sell_orders > 0
-			}
-		}
 	}
 	on_activate_while_mobilized = {
 		custom_tooltip = {
@@ -415,7 +410,7 @@ REPLACE:mobilization_option_rail_transport = {
 		railways
 	}
 	upkeep_modifier = {
-		goods_input_engines_add = 10
+		goods_input_transportation_add = 10
 	}
 	unit_modifier = {
 		military_formation_movement_speed_mult = 0.25
