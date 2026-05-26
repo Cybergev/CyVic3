@@ -1,5 +1,10 @@
 ﻿REPLACE_OR_CREATE:pm_basic_shipbuilding = {
 	texture = "gfx/interface/icons/production_method_icons/wooden_ships.dds"
+	country_modifiers = {
+		workforce_scaled = {
+			country_ship_construction_add = 25
+		}
+	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
@@ -15,6 +20,11 @@ REPLACE_OR_CREATE:pm_complex_shipbuilding = {
 	texture = "gfx/interface/icons/production_method_icons/reinforced_wooden_ships.dds"
 	unlocking_technologies = {
 		screw_frigate
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_ship_construction_add = 50
+		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
@@ -38,6 +48,11 @@ REPLACE_OR_CREATE:pm_metal_shipbuilding = {
 	unlocking_technologies = {
 		gantry_cranes
 	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_ship_construction_add = 75
+		}
+	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
@@ -59,6 +74,11 @@ REPLACE_OR_CREATE:pm_arc_welding_shipbuilding = {
 			state_pollution_generation_add = 20
 		}
 	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_ship_construction_add = 100
+		}
+	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
@@ -67,70 +87,6 @@ REPLACE_OR_CREATE:pm_arc_welding_shipbuilding = {
 			goods_input_electricity_add = 40
 			# output goods
 			goods_output_steamers_add = 100
-		}
-	}
-	required_input_goods = electricity
-}
-
-REPLACE_OR_CREATE:pm_military_shipbuilding_wooden = {
-	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_wooden.dds"
-	building_modifiers = {
-		workforce_scaled = {
-			#input goods
-			goods_input_wood_add = 200
-			goods_input_fabric_add = 100
-			# output goods
-			goods_output_manowars_add = 50
-		}
-	}
-}
-
-REPLACE_OR_CREATE:pm_military_shipbuilding_wooden_2 = {
-	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_wooden_2.dds"
-	unlocking_technologies = {
-		screw_frigate
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			#input goods
-			goods_input_hardwood_add = 200
-			goods_input_fabric_add = 100
-			goods_input_engines_add = 100
-			# output goods
-			goods_output_manowars_add = 100
-		}
-	}
-}
-
-REPLACE_OR_CREATE:pm_military_shipbuilding_steam = {
-	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_steam.dds"
-	unlocking_technologies = {
-		ironclad_tech
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			#input goods
-			goods_input_steel_add = 200
-			goods_input_engines_add = 100
-			# output goods
-			goods_output_ironclads_add = 50
-		}
-	}
-}
-
-REPLACE_OR_CREATE:pm_military_shipbuilding_steam_2 = {
-	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_steam_2.dds"
-	unlocking_technologies = {
-		arc_welding
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			#input
-			goods_input_steel_add = 400
-			goods_input_engines_add = 200
-			goods_input_electricity_add = 40
-			# output goods
-			goods_output_ironclads_add = 100
 		}
 	}
 	required_input_goods = electricity

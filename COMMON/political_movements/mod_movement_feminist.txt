@@ -1,0 +1,15 @@
+﻿INJECT:movement_feminist = {
+	disband_trigger = {
+		has_law_or_variant = law_type:law_womens_suffrage
+	}
+	creation_weight = {
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_womens_suffrage
+			}
+			multiply = {
+				value = 0
+			}
+		}
+	}
+}

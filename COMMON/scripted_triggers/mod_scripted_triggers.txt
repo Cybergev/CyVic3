@@ -89,3 +89,23 @@ REPLACE_OR_CREATE:ideology_vanguardist_valid_trigger = {
 		}
 	}
 }
+
+REPLACE_OR_CREATE:country_has_laws_in_need_of_critical_modernization = {
+	OR = {
+		has_law_or_variant = law_type:law_peasant_levies
+		has_law_or_variant = law_type:law_traditionalism
+		has_law_or_variant = law_type:law_industry_banned
+		has_law_or_variant = law_type:law_extraction_economy
+		has_law_or_variant = law_type:law_serfdom
+		has_law_or_variant = law_type:law_tenant_farmers
+		has_law_or_variant = law_type:law_land_based_taxation
+		has_law_or_variant = law_type:law_per_capita_based_taxation
+		has_law_or_variant = law_type:law_isolationism
+		has_law_or_variant = law_type:law_mercantilism
+		has_law_or_variant = law_type:law_child_labor_allowed
+		has_law_or_variant = law_type:law_restricted_child_labor
+		has_law_or_variant = law_type:law_guild_system
+		has_law_or_variant = law_type:law_no_schools
+		has_law_or_variant = law_type:law_religious_schools
+	}
+}

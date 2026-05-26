@@ -23,7 +23,7 @@
 		add_primary_culture = cu:european
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -46,7 +46,7 @@ join_north_german_unification = {
 		add_primary_culture = cu:north_german
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -64,7 +64,7 @@ join_south_german_unification = {
 		add_primary_culture = cu:south_german
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -84,7 +84,7 @@ remove_alemannic = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -103,7 +103,7 @@ remove_czech = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -122,7 +122,7 @@ remove_danish = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -141,7 +141,7 @@ remove_dutch = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -160,7 +160,7 @@ remove_east_german = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -179,7 +179,7 @@ remove_finnish = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -198,7 +198,7 @@ remove_flemish = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -217,7 +217,7 @@ remove_francoprovencal = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -236,7 +236,7 @@ remove_icelandic = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -255,7 +255,7 @@ remove_han = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -274,7 +274,7 @@ remove_manchu = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -293,7 +293,7 @@ remove_north_german = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -312,7 +312,7 @@ remove_north_german = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -331,7 +331,7 @@ remove_norwegian = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -350,7 +350,7 @@ remove_south_german = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -369,7 +369,7 @@ remove_slovene = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -388,7 +388,7 @@ remove_south_italian = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -407,7 +407,7 @@ remove_swedish = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -426,6 +426,6 @@ remove_wallonian = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }

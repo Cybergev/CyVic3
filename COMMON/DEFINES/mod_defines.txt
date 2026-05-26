@@ -4,11 +4,11 @@
 	DIPLO_PLAY_CONFIDENCE_STRONG_ARMY_FACTOR = 100	# Scaled by our relative forces compared to DIPLO_PLAY_STRONG_ARMY_MAX
 	DIPLO_PLAY_CONFIDENCE_CIVIL_WAR_OR_UPRISING = 100	# Add this confidence to both sides in a civil war or native uprising (overrides DIPLO_PLAY_CONFIDENCE_EXISTENTIAL_PLAY)
 	DIPLO_PLAY_CONFIDENCE_EXISTENTIAL_PLAY = 100	# Add this confidence if backing down would result in annexation
-	DIPLO_PLAY_CONFIDENCE_FROM_TURMOIL = -100	# At 100% turmoil across the country (weighted by state population), subtract this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_TURMOIL = -50	# At 100% turmoil across the country (weighted by state population), subtract this amount of confidence
 	DIPLO_PLAY_CONFIDENCE_FROM_LOYALISTS = 100	# At 100% turmoil across the country (weighted by state population), add this amount of confidence
-	DIPLO_PLAY_CONFIDENCE_FROM_DEVASTATION = -100	# At 100% devastation, subtract this amount of confidence
-	DIPLO_PLAY_CONFIDENCE_FROM_DEBT_LEVEL = -100	# At 100% debt level, subtract this amount of confidence
-	DIPLO_PLAY_CONFIDENCE_FROM_BANKRUPTCY = -100	# Subtract this amount of confidence when bankrupt
+	DIPLO_PLAY_CONFIDENCE_FROM_DEVASTATION = -50	# At 100% devastation, subtract this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_DEBT_LEVEL = -50	# At 100% debt level, subtract this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_BANKRUPTCY = -50	# Subtract this amount of confidence when bankrupt
 	DIPLO_PLAY_CONFIDENCE_FROM_GOLD_RESERVES = 100	# At 100% gold reserves, add this amount of confidence
 	DIPLO_PLAY_CONFIDENCE_FROM_OWN_CONFLICTS = -50	# If we are in another conflict where military strength compared to our enemies is equal to or above DIPLO_PLAY_FORCE_BALANCE_SCALE, subtract this amount of confidence
 	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_TURMOIL = 100	# At 100% turmoil across the enemy country (weighted by state population), add this amount of confidence
@@ -104,10 +104,6 @@ NEconomy = {
 	OVERSEAS_INFRASTRUCTURE_CONVOY_COST_MULTIPLIER = 1	# Convoy cost for each infrastructure usage in overseas state for port connection shipping lanes
 	COMPANY_ON_ESTABLISH_COOLDOWN_MONTHS = 12	# Cooldown in months after establishing a company before you can disband it
 	COMPANY_ON_DISBAND_COOLDOWN_MONTHS = 12	# Cooldown in months after disbanding a company before you can re-establish it
-}
-
-NMilitary = {
-	MAX_NUM_COMMANDERS_PER_FORMATION = 12	# The maximum number of commanders in a given Military Formation
 }
 
 NPowerBlocs = {

@@ -313,6 +313,12 @@
 	}
 	if = {
 		limit = {
+			has_ideology = ideology:ideology_mercantile
+		}
+		remove_ideology = ideology_mercantile
+	}
+	if = {
+		limit = {
 			has_ideology = ideology:ideology_egalitarian_modern
 		}
 		remove_ideology = ideology_egalitarian_modern
@@ -384,6 +390,7 @@ REPLACE_OR_CREATE:promote_national_val = {
 	root = {
 		every_scope_state = {
 			limit = {
+				is_incorporated = yes
 				not = {
 					has_modifier = national_values_promotion
 				}
@@ -455,7 +462,6 @@ REPLACE_OR_CREATE:promote_national_val = {
 				add_modifier = {
 					name = national_values_promotion
 					years = 10
-					is_decaying = yes
 				}
 			}
 		}

@@ -205,7 +205,7 @@ REPLACE_OR_CREATE:pm_no_steam_automation = {
 		level_scaled = {
 			building_employment_laborers_add = 4000
 			building_employment_machinists_add = 500
-			building_employment_shopkeepers_add = 500
+			building_employment_clerks_add = 500
 		}
 	}
 }
@@ -231,7 +231,7 @@ REPLACE_OR_CREATE:pm_steam_donkey = {
 		level_scaled = {
 			building_employment_machinists_add = 2000
 			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
+			building_employment_clerks_add = 500
 		}
 	}
 }
@@ -254,7 +254,7 @@ REPLACE_OR_CREATE:pm_automatic_power = {
 		}
 		level_scaled = {
 			building_employment_engineers_add = 500
-			building_employment_shopkeepers_add = 500
+			building_employment_clerks_add = 500
 		}
 	}
 	required_input_goods = electricity

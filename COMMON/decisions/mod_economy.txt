@@ -1,14 +1,52 @@
-﻿mod_change_private_construction = {
+﻿mod_support_private_construction = {
 	is_shown = {
 		always = yes
+	}
+	possible = {
+		NOT = {
+			has_modifier = ban_private_construction
+		}
+	}
+	when_taken = {
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = support_private_construction
+				}
+			}
+			add_modifier = support_private_construction
+			add_loyalists = {
+				pop_type = aristocrats
+				value = 1
+			}
+			add_loyalists = {
+				pop_type = capitalists
+				value = 1
+			}
+		}
+		else = {
+			remove_modifier = support_private_construction
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+mod_ban_private_construction = {
+	is_shown = {
+		always = yes
+	}
+	possible = {
+		NOT = {
+			has_modifier = support_private_construction
+		}
 	}
 	when_taken = {
 		if = {
 			limit = {
 				NOT = {
 					has_modifier = ban_private_construction
-					has_law = law_type:law_extraction_economy
-					has_law = law_type:law_command_economy
 				}
 			}
 			add_modifier = ban_private_construction
@@ -26,21 +64,51 @@
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
-mod_change_privatization = {
+mod_support_privatization = {
 	is_shown = {
 		always = yes
+	}
+	possible = {
+		NOT = {
+			has_modifier = ban_privatization
+		}
+	}
+	when_taken = {
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = support_privatization
+				}
+			}
+			add_modifier = support_privatization
+		}
+		else = {
+			remove_modifier = support_privatization
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+mod_ban_privatization = {
+	is_shown = {
+		always = yes
+	}
+	possible = {
+		NOT = {
+			has_modifier = support_privatization
+		}
 	}
 	when_taken = {
 		if = {
 			limit = {
 				NOT = {
 					has_modifier = ban_privatization
-					has_law = law_type:law_extraction_economy
-					has_law = law_type:law_command_economy
 				}
 			}
 			add_modifier = ban_privatization
@@ -58,7 +126,7 @@ mod_change_privatization = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -79,6 +147,6 @@ start_mass_building = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }

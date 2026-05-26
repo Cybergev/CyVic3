@@ -80,6 +80,7 @@ REPLACE_OR_CREATE:pm_religious_academia = {
 	}
 	building_modifiers = {
 		level_scaled = {
+			building_employment_academics_add = 500
 			building_employment_clergymen_add = 500
 			building_employment_clerks_add = -500
 		}

@@ -3,12 +3,10 @@ swap_ideology_to_anarchist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_anarchist.dds"
 	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
 	potential = {
-		owner = {
-			scope:actor = owner
-		}
+		owner = scope:actor
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -51,12 +49,10 @@ swap_ideology_to_communist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_communist.dds"
 	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
 	potential = {
-		owner = {
-			scope:actor = owner
-		}
+		owner = scope:actor
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -106,12 +102,10 @@ swap_ideology_to_vanguardist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_vanguardist.dds"
 	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
 	potential = {
-		owner = {
-			scope:actor = owner
-		}
+		owner = scope:actor
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -157,12 +151,10 @@ swap_ideology_to_corporatist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_corporatist.dds"
 	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
 	potential = {
-		owner = {
-			scope:actor = owner
-		}
+		owner = scope:actor
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -215,12 +207,10 @@ swap_ideology_to_positivist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_positivist.dds"
 	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
 	potential = {
-		owner = {
-			scope:actor = owner
-		}
+		owner = scope:actor
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -269,12 +259,10 @@ swap_ideology_to_fascist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_fascist.dds"
 	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
 	potential = {
-		owner = {
-			scope:actor = owner
-		}
+		owner = scope:actor
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -324,12 +312,10 @@ swap_ideology_to_integralist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_integralist.dds"
 	clicksound = "event:/sfx/dlc/1.3_ip1/ui/character_invite"
 	potential = {
-		owner = {
-			scope:actor = owner
-		}
+		owner = scope:actor
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -385,8 +371,8 @@ socialist_reform = {
 			has_technology_researched = socialism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -398,8 +384,8 @@ socialist_reform = {
 			has_technology_researched = socialism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		or = {
 			has_ideology = ideology:ideology_anarchist
@@ -434,8 +420,8 @@ anarchist_reform = {
 			has_technology_researched = anarchism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -447,8 +433,8 @@ anarchist_reform = {
 			has_technology_researched = anarchism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		has_ideology = ideology:ideology_anarchist
 		interest_group = {
@@ -482,8 +468,8 @@ communist_reform = {
 			has_technology_researched = socialism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -495,8 +481,8 @@ communist_reform = {
 			has_technology_researched = socialism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		has_ideology = ideology:ideology_communist
 		interest_group = {
@@ -528,8 +514,8 @@ vanguardist_reform = {
 			has_technology_researched = socialism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -541,8 +527,8 @@ vanguardist_reform = {
 			has_technology_researched = socialism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		has_ideology = ideology:ideology_vanguardist
 		interest_group = {
@@ -576,8 +562,8 @@ corporatist_reform = {
 			has_technology_researched = corporatism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -589,8 +575,8 @@ corporatist_reform = {
 			has_technology_researched = corporatism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		has_ideology = ideology:ideology_corporatist_leader
 		interest_group = {
@@ -618,8 +604,8 @@ positivist_reform = {
 			has_technology_researched = corporatism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -631,8 +617,8 @@ positivist_reform = {
 			has_technology_researched = corporatism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		has_ideology = ideology:ideology_positivist
 		interest_group = {
@@ -663,8 +649,8 @@ fascist_reform = {
 			has_technology_researched = corporatism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -676,8 +662,8 @@ fascist_reform = {
 			has_technology_researched = corporatism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		has_ideology = ideology:ideology_fascist
 		interest_group = {
@@ -706,8 +692,8 @@ integralist_reform = {
 			has_technology_researched = corporatism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		interest_group = {
 			is_in_government = yes
@@ -719,8 +705,8 @@ integralist_reform = {
 			has_technology_researched = corporatism
 		}
 		or = {
-			has_role = ruler
-			has_role = politician
+			has_role_of_type = ruler
+			has_role_of_type = politician
 		}
 		has_ideology = ideology:ideology_integralist
 		interest_group = {

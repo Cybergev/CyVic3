@@ -216,6 +216,7 @@ REPLACE_OR_CREATE:pm_homesteading_building_subsistence = {
 	texture = "gfx/interface/icons/production_method_icons/homesteading.dds"
 	unlocking_laws = {
 		law_collectivized_agriculture
+		law_peasant_proprietorship
 		law_homesteading
 	}
 	building_modifiers = {
@@ -230,6 +231,7 @@ REPLACE_OR_CREATE:pm_homesteading_building_subsistence_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/homesteading.dds"
 	unlocking_laws = {
 		law_collectivized_agriculture
+		law_peasant_proprietorship
 		law_homesteading
 	}
 	building_modifiers = {

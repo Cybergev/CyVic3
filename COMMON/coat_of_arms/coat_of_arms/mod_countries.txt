@@ -266,70 +266,190 @@ CHI_republic = {
 		instance = { scale = { 1.0 0.2 } position = { 0.5 0.9 } }
 	}
 }
-EUR_republic = {
-	pattern = "pattern_solid.tga"
-	color1 = "EUR_base_color"
 
+CIR = {
+	@cir_stars_scale = 0.15
+	@cir_stars_pos_x_mod = 0
+	@cir_stars_pos_y_mod = 0
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		# Right side stars
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.12] @[cir_stars_pos_y_mod+0.65] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.18] @[cir_stars_pos_y_mod+0.43] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.27] @[cir_stars_pos_y_mod+0.25] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.38] @[cir_stars_pos_y_mod+0.14] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.38] @[cir_stars_pos_y_mod+0.30] } }
+		# Middle row stars
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.50] @[cir_stars_pos_y_mod+0.10] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.50] @[cir_stars_pos_y_mod+0.30] } }
+		# Left side stars
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.88] @[cir_stars_pos_y_mod+0.65] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.82] @[cir_stars_pos_y_mod+0.43] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.73] @[cir_stars_pos_y_mod+0.25] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.62] @[cir_stars_pos_y_mod+0.14] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.62] @[cir_stars_pos_y_mod+0.30] } }
+	}
+	colored_emblem = {
+		texture = "ce_three_arrows_square.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+        instance = { position = { 0.5 0.67 } scale = { 0.55 0.55 } }
+    }
+}
+
+CIR_war = {
+	@cir_stars_scale = 0.15
+	@cir_stars_pos_x_mod = 0
+	@cir_stars_pos_y_mod = 0
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		# Right side stars
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.12] @[cir_stars_pos_y_mod+0.65] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.18] @[cir_stars_pos_y_mod+0.43] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.27] @[cir_stars_pos_y_mod+0.25] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.38] @[cir_stars_pos_y_mod+0.14] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.38] @[cir_stars_pos_y_mod+0.30] } }
+		# Middle row stars
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.50] @[cir_stars_pos_y_mod+0.10] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.50] @[cir_stars_pos_y_mod+0.30] } }
+		# Left side stars
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.88] @[cir_stars_pos_y_mod+0.65] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.82] @[cir_stars_pos_y_mod+0.43] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.73] @[cir_stars_pos_y_mod+0.25] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.62] @[cir_stars_pos_y_mod+0.14] } }
+        instance = { scale = { @cir_stars_scale @cir_stars_scale } position = { @[cir_stars_pos_x_mod+0.62] @[cir_stars_pos_y_mod+0.30] } }
+	}
+	colored_emblem = {
+		texture = "ce_three_arrows_square.dds"
+		color1 = "black"
+		color2 = "black"
+        instance = { position = { 0.5 0.67 } scale = { 0.55 0.55 } }
+    }
+}
+
+CIR_theocracy = {
+	@cir_t_stars_scale = 0.15
+	@cir_t_stars_pos_x_mod = 0
+	@cir_t_stars_pos_y_mod = 0
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+	colored_emblem = {
+		texture = "ce_crescent_pale.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+        instance = { position = { 0.5 0.45 } rotation = 180 scale = { 1.0 1.0 } }
+    }
+	colored_emblem = {
+		texture = "ce_three_arrows_square.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+        instance = { position = { 0.5 0.67 } scale = { 0.55 0.55 } }
+    }
+}
+
+CIR_theocracy_war = {
+	@cir_t_stars_scale = 0.15
+	@cir_t_stars_pos_x_mod = 0
+	@cir_t_stars_pos_y_mod = 0
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+	colored_emblem = {
+		texture = "ce_crescent_pale.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+        instance = { position = { 0.5 0.45 } rotation = 180 scale = { 1.0 1.0 } }
+    }
+	colored_emblem = {
+		texture = "ce_crescent_pale.dds"
+		color1 = "black"
+		color2 = "black"
+        instance = { position = { 0.5 0.67 } scale = { 0.55 0.55 } }
+    }
+}
+
+CIR_dictatorship = {
+	@cir_d_star_scale = 1.0
+	@cir_d_stars_pos_x_mod = 0.5
+	@cir_d_stars_pos_y_mod = 0.5
+	pattern = "pattern_solid.tga"
+	color1 = "green"
 	colored_emblem = {
 		texture = "ce_stars_circle_13.dds"
 		color1 = "yellow"
+        instance = { position = { @cir_d_stars_pos_x_mod @cir_d_stars_pos_y_mod } scale = { @cir_d_star_scale @cir_d_star_scale } }
 	}
-}
-
-EUR_communist = {
-	pattern = "pattern_solid.tga"
-	color1 = "EUR_communist_color"
-
 	colored_emblem = {
-		texture = "ce_hammer_sickle_cogwheel_usa.dds"
+		texture = "ce_three_arrows_square.dds"
 		color1 = "yellow"
-		instance = { scale = { 0.6 0.6 } position = { 0.5 0.5 } }				
-	}
-	colored_emblem = {
-		texture = "ce_coa_frame_austria.dds"
-		color1 = "yellow"
-		color2 = "EUR_communist_color"
-		color3 = "EUR_base_color"
-		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }				
-	}
-}
-
-EUR_technate = {
-	pattern = "pattern_solid.tga"
-	color1 = "EUR_tehcnate_color"
-
-	colored_emblem = {
-		texture = "ce_frame_octagon.dds"
-		color1 = "EUR_tehcnate_color"
 		color2 = "yellow"
-		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
-	}
-	colored_emblem = {
-		texture = "ce_delta.dds"
-		color1 = "yellow"
-		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
-	}
+        instance = { position = { 0.5 0.5 } scale = { 0.55 0.55 } }
+    }
 }
 
-EUR_dictatorship = {
+CIR_dictatorship_war = {
+	@cir_d_star_scale = 1.0
+	@cir_d_stars_pos_x_mod = 0.5
+	@cir_d_stars_pos_y_mod = 0.5
 	pattern = "pattern_solid.tga"
-	color1 = "EUR_dictatorship_color"
-
+	color1 = "black"
 	colored_emblem = {
-		texture = "ce_cross_burgundy.dds"
+		texture = "ce_stars_circle_13.dds"
 		color1 = "yellow"
+        instance = { position = { @cir_d_stars_pos_x_mod @cir_d_stars_pos_y_mod } scale = { @cir_d_star_scale @cir_d_star_scale } }
 	}
+	colored_emblem = {
+		texture = "ce_three_arrows_square.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+        instance = { position = { 0.5 0.5 } scale = { 0.55 0.55 } }
+    }
 }
 
-EUR_fascist = {
+CIR_communist = {
+	@cir_c_star_scale = 0.15
+	@cir_c_stars_pos_x_mod = 0
+	@cir_c_stars_pos_y_mod = 0
 	pattern = "pattern_solid.tga"
-	color1 = "EUR_fascist_color"
-
+	color1 = "red"
+	color2 = "green"
+	color3 = "yellow"
 	colored_emblem = {
-		texture = "ce_labrys.dds"
+		texture = "ce_star_05.dds"
 		color1 = "yellow"
-		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }				
-	}	
+		# Right side stars
+        instance = { scale = { @cir_c_star_scale @cir_c_star_scale } position = { @[cir_c_stars_pos_x_mod+0.12] @[cir_c_stars_pos_y_mod+0.65] } }
+        instance = { scale = { @cir_c_star_scale @cir_c_star_scale } position = { @[cir_c_stars_pos_x_mod+0.18] @[cir_c_stars_pos_y_mod+0.43] } }
+        instance = { scale = { @cir_c_star_scale @cir_c_star_scale } position = { @[cir_c_stars_pos_x_mod+0.27] @[cir_c_stars_pos_y_mod+0.25] } }
+        instance = { scale = { @cir_c_star_scale @cir_c_star_scale } position = { @[cir_c_stars_pos_x_mod+0.38] @[cir_c_stars_pos_y_mod+0.14] } }
+        instance = { scale = { @cir_c_star_scale @cir_c_star_scale } position = { @[cir_c_stars_pos_x_mod+0.38] @[cir_c_stars_pos_y_mod+0.30] } }
+		# Middle row stars
+        instance = { scale = { @cir_c_star_scale @cir_c_star_scale } position = { @[cir_c_stars_pos_x_mod+0.50] @[cir_c_stars_pos_y_mod+0.10] } }
+        instance = { scale = { @cir_c_star_scale @cir_c_star_scale } position = { @[cir_c_stars_pos_x_mod+0.50] @[cir_c_stars_pos_y_mod+0.30] } }
+		# Left side stars
+        instance = { scale = { @cir_c_star_scale @cir_c_star_scale } position = { @[cir_c_stars_pos_x_mod+0.88] @[cir_c_stars_pos_y_mod+0.65] } }
+        instance = { scale = { @cir_c_star_scale @cir_c_star_scale } position = { @[cir_c_stars_pos_x_mod+0.82] @[cir_c_stars_pos_y_mod+0.43] } }
+        instance = { scale = { @cir_c_star_scale @cir_c_star_scale } position = { @[cir_c_stars_pos_x_mod+0.73] @[cir_c_stars_pos_y_mod+0.25] } }
+        instance = { scale = { @cir_c_star_scale @cir_c_star_scale } position = { @[cir_c_stars_pos_x_mod+0.62] @[cir_c_stars_pos_y_mod+0.14] } }
+        instance = { scale = { @cir_c_star_scale @cir_c_star_scale } position = { @[cir_c_stars_pos_x_mod+0.62] @[cir_c_stars_pos_y_mod+0.30] } }
+	}
+	colored_emblem = {
+		texture = "ce_stripe_bottom_nkp.dds"
+		color1 = "white"
+        instance = { position = { 0.5 0.34 } scale = { 1.0 2.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "green"
+		instance = { position = { 0.5 0.95 } scale = { 1.0 0.2 } }
+	}
 }
 
 CSA_stainless = {
@@ -338,7 +458,6 @@ CSA_stainless = {
 	color1 = "red"
 	color2 = "white"
 	color3 = "blue"
-
 	colored_emblem = {
 		texture = "ce_saltire_fimbriated.dds"
 		color1 = color2
@@ -429,6 +548,72 @@ CSA_communist = {
 		color2 = "red"
 		instance = { scale = { 0.50 0.50 } position = { 0.25 0.337 }  }	
 	}
+}
+
+EUR_republic = {
+	pattern = "pattern_solid.tga"
+	color1 = "EUR_base_color"
+
+	colored_emblem = {
+		texture = "ce_stars_circle_13.dds"
+		color1 = "yellow"
+	}
+}
+
+EUR_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = "EUR_communist_color"
+
+	colored_emblem = {
+		texture = "ce_hammer_sickle_cogwheel_usa.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.6 0.6 } position = { 0.5 0.5 } }				
+	}
+	colored_emblem = {
+		texture = "ce_coa_frame_austria.dds"
+		color1 = "yellow"
+		color2 = "EUR_communist_color"
+		color3 = "EUR_base_color"
+		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }				
+	}
+}
+
+EUR_technate = {
+	pattern = "pattern_solid.tga"
+	color1 = "EUR_tehcnate_color"
+
+	colored_emblem = {
+		texture = "ce_frame_octagon.dds"
+		color1 = "EUR_tehcnate_color"
+		color2 = "yellow"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_delta.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
+	}
+}
+
+EUR_dictatorship = {
+	pattern = "pattern_solid.tga"
+	color1 = "EUR_dictatorship_color"
+
+	colored_emblem = {
+		texture = "ce_cross_burgundy.dds"
+		color1 = "yellow"
+	}
+}
+
+EUR_fascist = {
+	pattern = "pattern_solid.tga"
+	color1 = "EUR_fascist_color"
+
+	colored_emblem = {
+		texture = "ce_labrys.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }				
+	}	
 }
 
 PER = { # Persia

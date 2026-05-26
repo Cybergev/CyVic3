@@ -244,6 +244,24 @@ REPLACE_OR_CREATE:decree_encourage_resource_industry = {
 	}
 }
 
+REPLACE_OR_CREATE:decree_encourage_workforce = {
+	texture = "gfx/interface/icons/ig_trait_icons/solidarity.dds"
+	unlocking_technologies = {
+		centralization
+	}
+	country_trigger = {
+		is_player = yes
+	}
+	modifier = {
+		state_working_adult_ratio_add = 0.25
+		building_minimum_wage_mult = 1.0
+	}
+	cost = 100
+	ai_weight = {
+		value = 0		##Changed from 10 to prevent AI going bankrupt
+	}
+}
+
 REPLACE_OR_CREATE:decree_promote_social_mobility = {
 	texture = "gfx/interface/icons/decree/decree_promote_social_mobility.dds"
 	state_trigger = {
@@ -639,6 +657,25 @@ REPLACE_OR_CREATE:decree_emergency_relief = {
 			}
 			multiply = 0
 		}
+	}
+}
+
+REPLACE_OR_CREATE:decree_childbirth_incentive = {
+	texture = "gfx/interface/icons/ig_trait_icons/be_fruitful_and_multiply.dds"
+	unlocking_technologies = {
+		centralization
+	}
+	modifier = {
+		state_welfare_payments_add = 1.0
+		state_working_adult_ratio_add = -0.5
+		state_birth_rate_mult = 0.25
+	}
+	cost = 100
+	country_trigger = {
+		is_player = yes
+	}
+	ai_weight = {
+		value = 0		##Changed from 10 to prevent AI going bankrupt
 	}
 }
 

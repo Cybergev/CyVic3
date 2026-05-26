@@ -16,7 +16,7 @@
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -38,7 +38,7 @@ set_collectivized_agriculture = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -60,7 +60,7 @@ set_commercialized_agriculture_agriculture = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -82,7 +82,7 @@ set_tenant_farmers = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -104,7 +104,7 @@ set_serfdom = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -126,7 +126,7 @@ set_command_economy = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -148,7 +148,7 @@ set_cooperative_ownership = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -170,7 +170,7 @@ set_interventionism = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -192,7 +192,7 @@ set_multicultural = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -214,7 +214,7 @@ set_cultural_exclusion = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -236,7 +236,7 @@ set_racial_segregation = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -258,7 +258,7 @@ set_national_supremacy = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -280,7 +280,7 @@ set_ethnostate = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -302,7 +302,7 @@ set_anarchy = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -324,7 +324,7 @@ set_universal_suffrage = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -346,7 +346,7 @@ set_census_voting = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -368,7 +368,7 @@ set_wealth_voting = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -390,7 +390,7 @@ set_landed_voting = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -412,7 +412,7 @@ set_single_party_state = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -434,7 +434,7 @@ set_technocracy = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -456,7 +456,7 @@ set_oligarchy = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -478,7 +478,7 @@ set_autocracy = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -500,7 +500,7 @@ set_council_republic = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -522,7 +522,7 @@ set_corporate_state = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -544,7 +544,7 @@ set_parliamentary_republic = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -566,7 +566,7 @@ set_presidential_republic = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -588,7 +588,7 @@ set_monarchy = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -610,7 +610,7 @@ set_theocracy = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -624,6 +624,6 @@ debug_action = {
 	when_taken = {
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }

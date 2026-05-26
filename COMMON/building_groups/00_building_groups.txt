@@ -308,6 +308,18 @@ bg_bureaucracy = {
 	parent_group = bg_government
 }
 
+bg_naval_administration = {
+	parent_group = bg_navy
+	economy_of_scale = no
+	infrastructure_usage_per_level = 0.2
+}
+
+bg_naval_fortification = {
+	parent_group = bg_navy
+	economy_of_scale = no
+	infrastructure_usage_per_level = 0.2
+}
+
 bg_trade = {
 	parent_group = bg_private_infrastructure
 	stateregion_max_level = no
@@ -318,6 +330,14 @@ bg_trade = {
 	default_building = building_trade_center
 	can_use_slaves = yes
 	infrastructure_usage_per_level = 1
+}
+
+bg_ship_construction = {
+	parent_group = bg_light_industry
+	economy_of_scale_ai_factor = 5
+	infrastructure_usage_per_level = 2
+	construction_efficiency_modifier = yes
+	builds_ships = yes
 }
 
 # Needed for autonomous investment to track investments separately from other ownership buildings
@@ -440,6 +460,38 @@ bg_navy = {
 	parent_group = bg_military
 }
 
+bg_naval_logistics_center = {
+	parent_group = bg_navy
+	urbanization = 2
+	always_possible = yes
+	auto_place_buildings = yes
+	ignores_productivity_when_hiring = yes
+	can_use_slaves = yes
+	proportionality_limit = 1
+	fired_pops_become_radical = no
+	infrastructure_usage_per_level = 0.1
+	default_building = building_naval_logistics_center
+	should_auto_expand = {
+		always = no
+	}
+}
+
+bg_land_logistics_center = {
+	parent_group = bg_army
+	urbanization = 2
+	always_possible = yes
+	auto_place_buildings = yes
+	ignores_productivity_when_hiring = yes
+	can_use_slaves = yes
+	proportionality_limit = 1
+	fired_pops_become_radical = no
+	infrastructure_usage_per_level = 0.1
+	default_building = building_land_logistics_center
+	should_auto_expand = {
+		always = no
+	}
+}
+
 bg_skyscraper = {
 	parent_group = bg_monuments
 	urbanization = 100
@@ -449,90 +501,4 @@ bg_skyscraper = {
 bg_monuments_hidden = {
 	always_possible = yes
 	is_shown_in_outliner = no
-}
-
-### LEGACY BUILDING GROUPS - These exist only for save game compatibility and are not actually used ###
-# TODO PRCAL-42162 - remove all legacy building groups
-bg_iron_mining = {
-	default_building = building_iron_mine
-}
-
-bg_sulfur_mining = {
-	default_building = building_sulfur_mine
-}
-
-bg_coal_mining = {
-	default_building = building_coal_mine
-}
-
-bg_gold_mining = {
-	default_building = building_gold_mine
-}
-
-bg_lead_mining = {
-	default_building = building_lead_mine
-}
-
-bg_rye_farms = {
-	default_building = building_rye_farm
-}
-
-bg_rice_farms = {
-	default_building = building_rice_farm
-}
-
-bg_maize_farms = {
-	default_building = building_maize_farm
-}
-
-bg_wheat_farms = {
-	default_building = building_wheat_farm
-}
-
-bg_millet_farms = {
-	default_building = building_millet_farm
-}
-
-bg_vineyard_plantations = {
-	default_building = building_vineyard
-}
-
-bg_cotton_plantations = {
-	default_building = building_cotton_plantation
-}
-
-bg_livestock_ranches = {
-	default_building = building_livestock_ranch
-}
-
-bg_tobacco_plantations = {
-	default_building = building_tobacco_plantation
-}
-
-bg_banana_plantations = {
-	default_building = building_banana_plantation
-}
-
-bg_coffee_plantations = {
-	default_building = building_coffee_plantation
-}
-
-bg_silk_plantations = {
-	default_building = building_silk_plantation
-}
-
-bg_dye_plantations = {
-	default_building = building_dye_plantation
-}
-
-bg_opium_plantations = {
-	default_building = building_opium_plantation
-}
-
-bg_tea_plantations = {
-	default_building = building_tea_plantation
-}
-
-bg_sugar_plantations = {
-	default_building = building_sugar_plantation
 }

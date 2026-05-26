@@ -343,6 +343,7 @@ REPLACE:ideology_russian_patriarch = {
 	lawgroup_land_reform = {
 		law_collectivized_agriculture = strongly_disapprove
 		law_homesteading = disapprove
+		law_peasant_proprietorship = disapprove
 		law_commercialized_agriculture = disapprove
 		law_tenant_farmers = neutral
 		law_manorialism = neutral
@@ -557,6 +558,12 @@ REPLACE:ideology_sikh_militancy = {
 		law_national_militia = strongly_disapprove
 		law_peasant_levies = strongly_disapprove
 	}
+	lawgroup_navy_model = {
+		law_merchant_navy = disapprove
+		law_diplomatic_navy = approve
+		law_jeune_ecole = approve
+		law_professional_navy = strongly_approve
+	}
 	lawgroup_colonization = {
 		law_no_colonial_affairs = neutral
 		law_frontier_colonization = approve
@@ -585,6 +592,19 @@ REPLACE:ideology_bakufu = {
 		law_technocracy = approve
 		law_oligarchy = approve
 		law_autocracy = strongly_approve
+	}
+	lawgroup_edo_social_system = {
+		law_lax_edo_system = strongly_disapprove
+		law_intermediate_edo_system = disapprove
+		law_strict_edo_system = strongly_approve
+	}
+	lawgroup_land_reform = {
+		law_serfdom = approve
+		law_tenant_farmers = neutral
+		law_commercialized_agriculture = disapprove
+		law_homesteading = disapprove
+		law_peasant_proprietorship = disapprove
+		law_collectivized_agriculture = disapprove
 	}
 }
 
@@ -632,6 +652,12 @@ REPLACE:ideology_paternalistic = {
 		law_professional_army = neutral
 		law_peasant_levies = approve
 	}
+	lawgroup_navy_model = {
+		law_jeune_ecole = strongly_disapprove
+		law_professional_navy = disapprove
+		law_diplomatic_navy = neutral
+		law_merchant_navy = approve
+	}
 }
 
 REPLACE:ideology_papal_paternalistic = {
@@ -677,6 +703,12 @@ REPLACE:ideology_papal_paternalistic = {
 		law_mass_conscription = neutral
 		law_professional_army = neutral
 		law_peasant_levies = approve
+	}
+	lawgroup_navy_model = {
+		law_jeune_ecole = strongly_disapprove
+		law_professional_navy = disapprove
+		law_diplomatic_navy = neutral
+		law_merchant_navy = approve
 	}
 }
 
@@ -724,6 +756,12 @@ REPLACE:ideology_scholar_paternalistic = {
 		law_professional_army = neutral
 		law_peasant_levies = approve
 	}
+	lawgroup_navy_model = {
+		law_jeune_ecole = strongly_disapprove
+		law_professional_navy = disapprove
+		law_diplomatic_navy = neutral
+		law_merchant_navy = approve
+	}
 }
 
 REPLACE:ideology_junker_paternalistic = {
@@ -770,6 +808,12 @@ REPLACE:ideology_junker_paternalistic = {
 		law_professional_army = neutral
 		law_peasant_levies = approve
 	}
+	lawgroup_navy_model = {
+		law_jeune_ecole = strongly_disapprove
+		law_professional_navy = disapprove
+		law_diplomatic_navy = neutral
+		law_merchant_navy = approve
+	}
 }
 
 REPLACE:ideology_republican_paternalistic = {
@@ -815,6 +859,12 @@ REPLACE:ideology_republican_paternalistic = {
 		law_mass_conscription = neutral
 		law_professional_army = neutral
 		law_peasant_levies = approve
+	}
+	lawgroup_navy_model = {
+		law_jeune_ecole = strongly_disapprove
+		law_professional_navy = disapprove
+		law_diplomatic_navy = neutral
+		law_merchant_navy = approve
 	}
 }
 
@@ -970,6 +1020,7 @@ REPLACE:ideology_hierarchic = {
 	}
 	lawgroup_land_reform = {
 		law_homesteading = strongly_disapprove
+		law_peasant_proprietorship = strongly_disapprove
 		law_collectivized_agriculture = disapprove
 		law_commercialized_agriculture = disapprove
 		law_tenant_farmers = neutral
@@ -1042,6 +1093,7 @@ REPLACE:ideology_laissez_faire = {
 	lawgroup_land_reform = {
 		law_collectivized_agriculture = strongly_disapprove
 		law_homesteading = disapprove
+		law_peasant_proprietorship = disapprove
 		law_serfdom = disapprove
 		law_manorialism = disapprove
 		law_tenant_farmers = neutral
@@ -1150,10 +1202,17 @@ REPLACE:ideology_particularist = {
 		law_professional_army = approve
 		law_national_militia = approve
 	}
+	lawgroup_navy_model = {
+		law_jeune_ecole = strongly_disapprove
+		law_professional_navy = disapprove
+		law_diplomatic_navy = neutral
+		law_merchant_navy = approve
+	}
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
 		law_manorialism = disapprove
 		law_tenant_farmers = disapprove
+		law_peasant_proprietorship = approve
 		law_homesteading = approve
 		law_collectivized_agriculture = approve
 		law_commercialized_agriculture = approve
@@ -1193,6 +1252,28 @@ REPLACE:ideology_isolationist = {
 		law_no_migration_controls = disapprove
 		law_migration_controls = neutral
 		law_closed_borders = approve
+	}
+}
+
+REPLACE:ideology_jingoist = {
+	icon = "gfx/interface/icons/ideology_icons/jingoist.dds"
+	lawgroup_army_model = {
+		law_peasant_levies = strongly_disapprove
+		law_national_militia = disapprove
+		law_professional_army = approve
+		law_mass_conscription = approve
+	}
+	lawgroup_navy_model = {
+		law_merchant_navy = strongly_disapprove
+		law_diplomatic_navy = neutral
+		law_professional_navy = approve
+		law_jeune_ecole = approve
+	}
+	lawgroup_colonization = {
+		law_no_colonial_affairs = neutral
+		law_frontier_colonization = neutral
+		law_colonial_exploitation = approve
+		law_colonial_resettlement = approve
 	}
 }
 
@@ -1649,6 +1730,12 @@ REPLACE:ideology_anarchist_movement = {
 		law_mass_conscription = neutral
 		law_national_militia = strongly_approve
 	}
+	lawgroup_navy_model = {
+		law_professional_navy = strongly_disapprove
+		law_jeune_ecole = strongly_disapprove
+		law_diplomatic_navy = approve
+		law_merchant_navy = approve
+	}
 	lawgroup_economic_system = {
 		law_traditionalism = strongly_disapprove
 		law_industry_banned = strongly_disapprove
@@ -1665,6 +1752,7 @@ REPLACE:ideology_anarchist_movement = {
 		law_tenant_farmers = strongly_disapprove
 		law_commercialized_agriculture = strongly_disapprove
 		law_collectivized_agriculture = neutral
+		law_peasant_proprietorship = strongly_approve
 		law_homesteading = strongly_approve
 	}
 	lawgroup_free_speech = {
@@ -1714,6 +1802,12 @@ REPLACE:ideology_communist_movement = {
 		law_mass_conscription = approve
 		law_national_militia = strongly_approve
 	}
+	lawgroup_navy_model = {
+		law_merchant_navy = disapprove
+		law_diplomatic_navy = approve
+		law_professional_navy = approve
+		law_jeune_ecole = approve
+	}
 	lawgroup_economic_system = {
 		law_traditionalism = strongly_disapprove
 		law_industry_banned = strongly_disapprove
@@ -1730,6 +1824,7 @@ REPLACE:ideology_communist_movement = {
 		law_tenant_farmers = strongly_disapprove
 		law_commercialized_agriculture = strongly_disapprove
 		law_collectivized_agriculture = approve
+		law_peasant_proprietorship = strongly_approve
 		law_homesteading = strongly_approve
 	}
 	lawgroup_free_speech = {
@@ -1779,6 +1874,12 @@ REPLACE:ideology_vanguardist_movement = {
 		law_mass_conscription = approve
 		law_professional_army = strongly_approve
 	}
+	lawgroup_navy_model = {
+		law_merchant_navy = disapprove
+		law_diplomatic_navy = approve
+		law_jeune_ecole = approve
+		law_professional_navy = strongly_approve
+	}
 	lawgroup_economic_system = {
 		law_traditionalism = strongly_disapprove
 		law_industry_banned = strongly_disapprove
@@ -1794,6 +1895,7 @@ REPLACE:ideology_vanguardist_movement = {
 		law_manorialism = strongly_disapprove
 		law_tenant_farmers = strongly_disapprove
 		law_commercialized_agriculture = strongly_disapprove
+		law_peasant_proprietorship = approve
 		law_homesteading = approve
 		law_collectivized_agriculture = strongly_approve
 	}
@@ -1831,6 +1933,7 @@ REPLACE:ideology_corporatist_movement = {
 		law_tenant_farmers = neutral
 		law_commercialized_agriculture = approve
 		law_collectivized_agriculture = approve
+		law_peasant_proprietorship = approve
 		law_homesteading = approve
 	}
 	lawgroup_labour_associations = {
@@ -1925,8 +2028,14 @@ REPLACE:ideology_positivist_movement = {
 	lawgroup_army_model = {
 		law_peasant_levies = strongly_disapprove
 		law_national_militia = disapprove
-		law_mass_conscription = approve
 		law_professional_army = approve
+		law_mass_conscription = approve
+	}
+	lawgroup_navy_model = {
+		law_merchant_navy = disapprove
+		law_diplomatic_navy = approve
+		law_professional_navy = approve
+		law_jeune_ecole = approve
 	}
 	lawgroup_education_system = {
 		law_no_schools = strongly_disapprove
@@ -1988,6 +2097,12 @@ REPLACE:ideology_fascist_movement = {
 		law_mass_conscription = approve
 		law_professional_army = strongly_approve
 	}
+	lawgroup_navy_model = {
+		law_merchant_navy = disapprove
+		law_diplomatic_navy = approve
+		law_jeune_ecole = approve
+		law_professional_navy = strongly_approve
+	}
 	lawgroup_free_speech = {
 		law_protected_speech = strongly_disapprove
 		law_right_of_assembly = strongly_disapprove
@@ -2045,6 +2160,12 @@ REPLACE:ideology_integralist_movement = {
 		law_national_militia = disapprove
 		law_mass_conscription = approve
 		law_professional_army = strongly_approve
+	}
+	lawgroup_navy_model = {
+		law_merchant_navy = disapprove
+		law_diplomatic_navy = approve
+		law_jeune_ecole = approve
+		law_professional_navy = strongly_approve
 	}
 	lawgroup_free_speech = {
 		law_protected_speech = strongly_disapprove

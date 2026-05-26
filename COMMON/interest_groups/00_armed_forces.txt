@@ -10,6 +10,7 @@
 	}
 	character_ideologies = {
 		ideology_moderate
+		ideology_authoritarian
 	}
 	enable = {
 		always = yes
@@ -306,6 +307,7 @@
 					limit = {
 						owner = {
 							OR = {
+								has_law = law_type:law_warrior_caste
 								has_law = law_type:law_professional_army
 								has_law = law_type:law_mass_conscription
 							}
@@ -338,7 +340,7 @@
 						pop_employment_building_group = bg_military_industry
 					}
 				}
-				value = 100
+				value = 1000
 			}
 		}
 		add = {
@@ -356,7 +358,7 @@
 		}
 		multiply = {
 			desc = "LEADER_POPULARITY"
-			scope:interest_group = {
+			scope:interest_group ?= {
 				leader ?= {
 					value = popularity
 					multiply = 0.0025
@@ -368,7 +370,7 @@
 		}
 		if = {
 			limit = {
-				scope:interest_group = {
+				scope:interest_group ?= {
 					is_in_government = yes
 				}
 			}
@@ -381,7 +383,7 @@
 		}
 		if = {
 			limit = {
-				scope:interest_group = {
+				scope:interest_group ?= {
 					is_in_government = yes
 				}
 			}
@@ -395,7 +397,7 @@
 		}
 		if = {
 			limit = {
-				scope:interest_group = {
+				scope:interest_group ?= {
 					is_in_government = no
 				}
 			}
@@ -490,6 +492,9 @@
 	commander_weight = {
 		value = 5
 	}
+	magnate_weight = {
+		value = 1
+	}
 	executive_weight = {
 		value = 0.2
 		# The company owning BIC should not get non-industrialist executives
@@ -514,6 +519,9 @@
 		value = 0
 	}
 	female_executive_chance = {
+		value = 0
+	}
+	female_monarch_chance = {
 		value = 0
 	}
 	female_politician_chance = {
@@ -566,15 +574,28 @@
 			}
 		}
 	}
-	# The chance that a commander belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular commander in the IG
-	commander_leader_chance = {
-		value = 0.75
-		multiply = ig_commander_leader_chance_mult
+	# Multiplier applied to the weight for an appropriate commander will be selected from the character pool to lead the IG
+	# root = interest group
+	commander_leader_weight = {
+		value = 3
 	}
-	# The chance that a executive belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular executive in the IG
-	executive_leader_chance = {
+	# Multiplier applied to the weight for an appropriate magnate will be selected from the character pool to lead the IG
+	# root = interest group
+	magnate_leader_weight = {
+		value = 1
+		if = {
+			limit = {
+				c:JAP ?= owner
+				NOT = {
+					has_variable = japan_restoration_complete
+				}
+			}
+			add = 5
+		}
+	}
+	# Multiplier applied to the weight for an appropriate executive will be selected from the character pool to lead the IG
+	# root = interest group
+	executive_leader_weight = {
 		value = 0.1
 	}
 }

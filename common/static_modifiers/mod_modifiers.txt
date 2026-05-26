@@ -6,7 +6,7 @@ REPLACE_OR_CREATE:base_values = {
 	country_law_enactment_max_setbacks_add = 3
 	country_minting_add = 1000
 	state_tax_capacity_add = 100
-	state_infrastructure_add = 5
+	state_infrastructure_add = 10
 	state_infrastructure_from_automobiles_consumption_add = 0.25
 	state_lower_strata_expected_sol_add = 5
 	state_middle_strata_expected_sol_add = 10
@@ -25,9 +25,11 @@ REPLACE_OR_CREATE:base_values = {
 	building_unincorporated_subsistence_output_mult = -0.2
 	building_economy_of_scale_level_cap_add = 50
 	state_market_access_price_impact = 0.75
-	country_company_throughput_bonus_add = 0.2
+	country_company_throughput_bonus_add = 0.5
 	country_company_construction_efficiency_bonus_add = 0.5
 	military_formation_organization_gain_add = 0.25	# 400 days to get max organization
+	country_ship_construction_progress_max_add = 0
+	military_formation_organization_gain_add = 1	# 100 days to get max organization
 	state_urbanization_per_level_add = 100
 	unit_experience_gain_add = 0.5
 	# To account for the power derived from bearing arms
@@ -39,6 +41,10 @@ REPLACE_OR_CREATE:base_values = {
 	state_max_trade_advantage_from_capacity_add = 0.2
 	country_party_whip_impact_add = 0.5
 	state_blockade_resistance_add = 100
+	state_fortification_bombardment_resistance_add = 100
+	state_building_naval_fortification_max_level_add = 5
+	country_max_unassigned_generals_add = 3
+	country_max_unassigned_admirals_add = 3
 }
 
 REPLACE_OR_CREATE:legislative_efficiency = {
@@ -49,7 +55,7 @@ REPLACE_OR_CREATE:legislative_efficiency = {
 
 REPLACE_OR_CREATE:efficient_bureaucracy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_government_dividends_efficiency_add = 1.0
+	country_government_dividends_efficiency_add = 1
 	state_tax_capacity_mult = 0.1
 	building_group_bg_infrastructure_throughput_add = 0.1
 }
@@ -58,7 +64,7 @@ REPLACE_OR_CREATE:administrative_overburden = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	state_construction_mult = -0.2
 	state_tax_waste_add = 0.2
-	country_government_dividends_waste_add = 1.0
+	country_government_dividends_waste_add = 1
 }
 
 REPLACE_OR_CREATE:political_dysfunction = {
@@ -204,6 +210,7 @@ REPLACE_OR_CREATE:country_humiliated = {
 
 REPLACE_OR_CREATE:national_values_promotion = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_bureaucracy_population_base_cost_factor_mult = 1
 	state_radicalism_increases_violent_hostility_mult = 0.4
 	state_radicalism_increases_cultural_erasure_mult = 0.3
 	state_radicalism_increases_open_prejudice_mult = 0.2
@@ -289,15 +296,43 @@ REPLACE_OR_CREATE:suppression_modifier = {
 	building_soldiers_standard_of_living_add = -1000
 }
 
+REPLACE_OR_CREATE:support_private_construction = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	state_bureaucracy_population_base_cost_factor_mult = 1
+	country_authority_add = -100
+	country_private_construction_allocation_mult = 1
+	interest_group_ig_industrialists_approval_add = 10
+	interest_group_ig_landowners_approval_add = 10
+}
+
 REPLACE_OR_CREATE:ban_private_construction = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	state_bureaucracy_population_base_cost_factor_mult = 1
+	country_authority_add = -100
 	country_private_construction_allocation_mult = -10
 	interest_group_ig_industrialists_approval_add = -10
 	interest_group_ig_landowners_approval_add = -10
 }
 
+REPLACE_OR_CREATE:support_privatization = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	state_bureaucracy_population_base_cost_factor_mult = 1
+	country_authority_add = -100
+	country_government_dividends_reinvestment_add = 1
+	interest_group_ig_industrialists_approval_add = 10
+	interest_group_ig_landowners_approval_add = 10
+	building_nationalization_investment_return_add = 1
+	country_disable_non_company_privatization_bool = no
+	state_aristocrats_investment_pool_efficiency_mult = 1
+	state_capitalists_investment_pool_efficiency_mult = 1
+	state_farmers_investment_pool_efficiency_mult = 1
+	state_shopkeepers_investment_pool_efficiency_mult = 1
+}
+
 REPLACE_OR_CREATE:ban_privatization = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	state_bureaucracy_population_base_cost_factor_mult = 1
+	country_authority_add = -100
 	country_government_dividends_reinvestment_add = -10
 	interest_group_ig_industrialists_approval_add = -10
 	interest_group_ig_landowners_approval_add = -10

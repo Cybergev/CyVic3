@@ -108,7 +108,7 @@ remove_regency = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -138,7 +138,7 @@ remove_private_property = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -216,7 +216,7 @@ homeland_expansion = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -226,6 +226,7 @@ promotion_national_values = {
 	}
 	possible = {
 		any_scope_state = {
+			is_incorporated = yes
 			not = {
 				has_modifier = national_values_promotion
 			}
@@ -253,7 +254,13 @@ promotion_national_values = {
 		promote_national_val = yes
 	}
 	ai_chance = {
-		base = 1000000
+		value = 0
+		if = {
+			limit = {
+				relative_bureaucracy >= 100
+			}
+			add = 1000
+		}
 	}
 }
 
@@ -275,7 +282,7 @@ destroy_all_buildings = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -457,7 +464,7 @@ chande_arable_land = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -479,7 +486,7 @@ suppress_colonial_manufacturing_industry = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 		modifier = {
 			or = {
 				has_strategy = ai_strategy_economic_imperialism
@@ -506,7 +513,7 @@ desuppress_colonial_manufacturing_industry = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 		modifier = {
 			nor = {
 				has_strategy = ai_strategy_economic_imperialism
@@ -537,7 +544,7 @@ suppresss_colonial_agricultural_industry = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -555,7 +562,7 @@ desuppress_colonial_agricultural_industry = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -577,7 +584,7 @@ suppress_colonial_resource_industry = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -595,7 +602,7 @@ desuppress_colonial_resource_industry = {
 		}
 	}
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -645,6 +652,6 @@ fix_population = {
 		}
 	}
 	ai_chance = {
-		base = 1000000
+		value = 1000
 	}
 }

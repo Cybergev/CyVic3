@@ -3,13 +3,13 @@
 	military_type = army
 	behavior = advance
 	visible = {
-		has_role = general
+		has_role_of_type = general
 	}
 	possible = {
-		has_role = general
+		has_role_of_type = general
 		trigger_if = {
 			limit = {
-				has_role = general
+				has_role_of_type = general
 			}
 			OR = {
 				commander_military_formation ?= {
@@ -53,13 +53,13 @@ REPLACE:advance_tank_assualt = {
 	military_type = army
 	behavior = advance
 	visible = {
-		has_role = general
+		has_role_of_type = general
 	}
 	possible = {
-		has_role = general
+		has_role_of_type = general
 		trigger_if = {
 			limit = {
-				has_role = general
+				has_role_of_type = general
 			}
 			commander_military_formation ?= {
 				formation_army_unit_type_fraction = {
@@ -89,13 +89,13 @@ REPLACE:advance_cavalry_assualt = {
 	military_type = army
 	behavior = advance
 	visible = {
-		has_role = general
+		has_role_of_type = general
 	}
 	possible = {
-		has_role = general
+		has_role_of_type = general
 		trigger_if = {
 			limit = {
-				has_role = general
+				has_role_of_type = general
 			}
 			OR = {
 				commander_military_formation ?= {

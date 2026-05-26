@@ -6,6 +6,9 @@
 	}
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.05
+		country_company_construction_efficiency_bonus_add = 0.05
+		country_free_charters_add = 1
+		country_max_companies_add = 1
 		state_market_access_price_impact = 0.05
 	}
 	ai_weight = {
@@ -38,6 +41,9 @@ REPLACE:principle_internal_trade_2 = {
 	}
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.075
+		country_company_construction_efficiency_bonus_add = 0.075
+		country_free_charters_add = 2
+		country_max_companies_add = 2
 		state_market_access_price_impact = 0.075
 	}
 	ai_weight = {
@@ -53,6 +59,9 @@ REPLACE:principle_internal_trade_3 = {
 	}
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.1
+		country_company_construction_efficiency_bonus_add = 0.1
+		country_free_charters_add = 3
+		country_max_companies_add = 3
 		state_market_access_price_impact = 0.1
 	}
 	ai_weight = {
@@ -72,6 +81,9 @@ REPLACE:principle_market_unification_1 = {
 	}
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.05
+		country_company_construction_efficiency_bonus_add = 0.05
+		country_free_charters_add = 1
+		country_max_companies_add = 1
 	}
 	ai_weight = {
 		value = 200		# Generally a good group for a PB to have
@@ -93,6 +105,9 @@ REPLACE:principle_market_unification_2 = {
 	}
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.075
+		country_company_construction_efficiency_bonus_add = 0.075
+		country_free_charters_add = 2
+		country_max_companies_add = 2
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones
@@ -108,6 +123,9 @@ REPLACE:principle_market_unification_3 = {
 	}
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.1
+		country_company_construction_efficiency_bonus_add = 0.1
+		country_free_charters_add = 3
+		country_max_companies_add = 3
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones
@@ -122,6 +140,9 @@ REPLACE:principle_companies_1 = {
 	}
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.1
+		country_company_construction_efficiency_bonus_add = 0.1
+		country_free_charters_add = 1
+		country_max_companies_add = 1
 	}
 	ai_weight = {
 		value = 100
@@ -147,7 +168,9 @@ REPLACE:principle_companies_2 = {
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.1
-		country_free_charters_add = 1
+		country_company_construction_efficiency_bonus_add = 0.1
+		country_free_charters_add = 2
+		country_max_companies_add = 2
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones
@@ -159,8 +182,9 @@ REPLACE:principle_companies_3 = {
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.1
-		country_free_charters_add = 1
-		country_max_companies_add = 1
+		country_company_construction_efficiency_bonus_add = 0.1
+		country_free_charters_add = 3
+		country_max_companies_add = 3
 	}
 	ai_weight = {
 		value = 1000		# AI prefers upgrading groups it has already picked to unlocking new ones
@@ -230,6 +254,9 @@ REPLACE:principle_foreign_investment_1 = {
 	}
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.05
+		country_company_construction_efficiency_bonus_add = 0.05
+		country_free_charters_add = 1
+		country_max_companies_add = 1
 		country_higher_leverage_from_economic_dependence_bool = yes
 	}
 	ai_weight = {
@@ -261,6 +288,9 @@ REPLACE:principle_foreign_investment_2 = {
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.075
+		country_company_construction_efficiency_bonus_add = 0.075
+		country_free_charters_add = 2
+		country_max_companies_add = 2
 		country_higher_leverage_from_economic_dependence_bool = yes
 	}
 	ai_weight = {
@@ -274,6 +304,9 @@ REPLACE:principle_foreign_investment_3 = {
 	allows_foreign_investment_in_lower_rank = yes
 	member_modifier = {
 		country_company_throughput_bonus_add = 0.1
+		country_company_construction_efficiency_bonus_add = 0.1
+		country_free_charters_add = 3
+		country_max_companies_add = 3
 		country_higher_leverage_from_economic_dependence_bool = yes
 	}
 	power_bloc_modifier = {

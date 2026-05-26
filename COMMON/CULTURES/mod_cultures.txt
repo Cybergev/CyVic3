@@ -344,7 +344,12 @@ REPLACE_OR_CREATE:japanese= {
 	religion = shinto
 	heritage = heritage_japanese
 	language = language_japanese
-	traditions = { }
+	traditions = {
+	}
+	name_format = last_first
+	obsessions = {
+		tea
+	}
 	male_common_first_names = {
 		Aritomo
 		Gentaro
@@ -372,7 +377,7 @@ REPLACE_OR_CREATE:japanese= {
 		Maresuke
 		Masatake
 		Masujiro
-		Michisura
+		Michitsura
 		Mineo
 		Mitsue
 		Mitsuomi
@@ -421,7 +426,7 @@ REPLACE_OR_CREATE:japanese= {
 		Ginko
 		Gyokuran
 		Kaho
-		Kei
+		Keiko
 		Kin
 		Kumehachi
 		Masako

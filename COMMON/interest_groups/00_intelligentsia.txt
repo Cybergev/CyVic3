@@ -149,7 +149,6 @@
 			limit = {
 				OR = {
 					c:GBR ?= THIS
-					c:JAP ?= THIS
 					c:POR ?= THIS
 					c:SPA ?= THIS
 					c:AUS ?= THIS
@@ -162,6 +161,15 @@
 			ig:ig_intelligentsia ?= {
 				remove_ideology = ideology_republican
 				add_ideology = ideology_constitutionalist
+			}
+		}
+		if = {
+			limit = {
+				country_has_primary_culture = cu:japanese
+			}
+			ig:ig_intelligentsia ?= {
+				set_interest_group_name = ig_rangakusha
+				add_ideology = ideology_rangaku
 			}
 		}
 	}
@@ -268,11 +276,6 @@
 	}
 	pop_weight = {
 		add = {
-			desc = "POP_LITERACY"
-			value = literacy_rate
-			multiply = 50
-		}
-		add = {
 			desc = "POP_ACADEMICS"
 			if = {
 				limit = {
@@ -308,10 +311,13 @@
 				if = {
 					limit = {
 						owner = {
-							has_law_or_variant = law_type:law_hereditary_bureaucrats
+							has_law = law_type:law_hereditary_bureaucrats
 						}
 					}
 					value = 100
+				}
+				else = {
+					value = 25
 				}
 			}
 		}
@@ -322,6 +328,7 @@
 					is_pop_type = officers
 					owner = {
 						OR = {
+							has_law_or_variant = law_type:law_warrior_caste
 							has_law_or_variant = law_type:law_professional_army
 							has_law_or_variant = law_type:law_mass_conscription
 						}
@@ -337,6 +344,7 @@
 					is_pop_type = soldiers
 					owner = {
 						OR = {
+							has_law_or_variant = law_type:law_warrior_caste
 							has_law_or_variant = law_type:law_professional_army
 							has_law_or_variant = law_type:law_mass_conscription
 						}
@@ -556,6 +564,9 @@
 	commander_weight = {
 		value = 1
 	}
+	magnate_weight = {
+		value = 1
+	}
 	executive_weight = {
 		value = 2
 		# The company owning BIC should not get non-industrialist executives
@@ -581,6 +592,9 @@
 	}
 	female_executive_chance = {
 		value = 0
+	}
+	female_monarch_chance = {
+		value = 0.025
 	}
 	female_politician_chance = {
 		value = 0
@@ -632,15 +646,28 @@
 			}
 		}
 	}
-	# The chance that a commander belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular commander in the IG
-	commander_leader_chance = {
-		value = 0.25
-		multiply = ig_commander_leader_chance_mult
+	# Multiplier applied to the weight for an appropriate commander will be selected from the character pool to lead the IG
+	# root = interest group
+	commander_leader_weight = {
+		value = 0.5
 	}
-	# The chance that a executive belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular executive in the IG
-	executive_leader_chance = {
+	# Multiplier applied to the weight for an appropriate magnate will be selected from the character pool to lead the IG
+	# root = interest group
+	magnate_leader_weight = {
+		value = 0.5
+		if = {
+			limit = {
+				c:JAP ?= owner
+				NOT = {
+					has_variable = japan_restoration_complete
+				}
+			}
+			add = 5
+		}
+	}
+	# Multiplier applied to the weight for an appropriate executive will be selected from the character pool to lead the IG
+	# root = interest group
+	executive_leader_weight = {
 		value = 0.5
 	}
 }
