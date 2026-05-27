@@ -9,14 +9,6 @@
 	}
 	effect = {
 		clear_variable_list = mbm_list
-		every_scope_state = {
-			root = {
-				add_to_variable_list = {
-					name = mbm_list
-					target = prev
-				}
-			}
-		}
 	}
 	ai_chance = {
 		value = 0
@@ -34,6 +26,14 @@ je_mass_building_managment_button_2 = {
 	}
 	effect = {
 		clear_variable_list = mbm_list
+		every_scope_state = {
+			root = {
+				add_to_variable_list = {
+					name = mbm_list
+					target = prev
+				}
+			}
+		}
 	}
 	ai_chance = {
 		value = 0
@@ -53,14 +53,21 @@ je_mass_building_managment_button_3 = {
 		every_scope_state = {
 			limit = {
 				is_incorporated = yes
+				is_target_in_variable_list = {
+					name = mbm_list
+					target = this
+				}
 			}
 			root = {
-				add_to_variable_list = {
+				remove_list_variable = {
 					name = mbm_list
 					target = prev
 				}
 			}
 		}
+	}
+	possible = {
+		always = yes
 	}
 	ai_chance = {
 		value = 0
@@ -73,20 +80,13 @@ je_mass_building_managment_button_4 = {
 	visible = {
 		always = yes
 	}
-	possible = {
-		always = yes
-	}
 	effect = {
 		every_scope_state = {
 			limit = {
 				is_incorporated = yes
-				is_target_in_variable_list = {
-					name = mbm_list
-					target = this
-				}
 			}
 			root = {
-				remove_list_variable = {
+				add_to_variable_list = {
 					name = mbm_list
 					target = prev
 				}
@@ -111,14 +111,21 @@ je_mass_building_managment_button_5 = {
 		every_scope_state = {
 			limit = {
 				is_incorporated = no
+				is_target_in_variable_list = {
+					name = mbm_list
+					target = this
+				}
 			}
 			root = {
-				add_to_variable_list = {
+				remove_list_variable = {
 					name = mbm_list
 					target = prev
 				}
 			}
 		}
+	}
+	possible = {
+		always = yes
 	}
 	ai_chance = {
 		value = 0
@@ -131,20 +138,13 @@ je_mass_building_managment_button_6 = {
 	visible = {
 		always = yes
 	}
-	possible = {
-		always = yes
-	}
 	effect = {
 		every_scope_state = {
 			limit = {
 				is_incorporated = no
-				is_target_in_variable_list = {
-					name = mbm_list
-					target = this
-				}
 			}
 			root = {
-				remove_list_variable = {
+				add_to_variable_list = {
 					name = mbm_list
 					target = prev
 				}
@@ -171,13 +171,24 @@ je_mass_building_managment_button_7 = {
 		every_scope_state = {
 			limit = {
 				has_decree = mass_building_managment_target
+				root = {
+					is_target_in_variable_list = {
+						name = mbm_list
+						target = prev
+					}
+				}
 			}
 			root = {
-				add_to_variable_list = {
+				remove_list_variable = {
 					name = mbm_list
 					target = prev
 				}
 			}
+		}
+	}
+	possible = {
+		any_scope_state = {
+			has_decree = mass_building_managment_target
 		}
 	}
 	ai_chance = {
@@ -191,24 +202,13 @@ je_mass_building_managment_button_8 = {
 	visible = {
 		always = yes
 	}
-	possible = {
-		any_scope_state = {
-			has_decree = mass_building_managment_target
-		}
-	}
 	effect = {
 		every_scope_state = {
 			limit = {
 				has_decree = mass_building_managment_target
-				root = {
-					is_target_in_variable_list = {
-						name = mbm_list
-						target = prev
-					}
-				}
 			}
 			root = {
-				remove_list_variable = {
+				add_to_variable_list = {
 					name = mbm_list
 					target = prev
 				}
@@ -387,6 +387,314 @@ je_mass_building_managment_button_15 = {
 			set_variable = {
 				name = mbm_count
 				value = 100
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_16 = {
+	name = "je_mass_building_managment_button_16"
+	desc = "je_mass_building_managment_button_16"
+	visible = {
+		always = yes
+	}
+	possible = {
+		var:mbm_count >= 0
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				subtract = 1
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_17 = {
+	name = "je_mass_building_managment_button_17"
+	desc = "je_mass_building_managment_button_17"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_variable = mbm_count
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				add = 1
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_18 = {
+	name = "je_mass_building_managment_button_18"
+	desc = "je_mass_building_managment_button_18"
+	visible = {
+		always = yes
+	}
+	possible = {
+		var:mbm_count >= 2
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				subtract = 2
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_19 = {
+	name = "je_mass_building_managment_button_19"
+	desc = "je_mass_building_managment_button_19"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_variable = mbm_count
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				add = 2
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_20 = {
+	name = "je_mass_building_managment_button_20"
+	desc = "je_mass_building_managment_button_20"
+	visible = {
+		always = yes
+	}
+	possible = {
+		var:mbm_count >= 5
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				subtract = 5
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_21 = {
+	name = "je_mass_building_managment_button_21"
+	desc = "je_mass_building_managment_button_21"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_variable = mbm_count
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				add = 5
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_22 = {
+	name = "je_mass_building_managment_button_22"
+	desc = "je_mass_building_managment_button_22"
+	visible = {
+		always = yes
+	}
+	possible = {
+		var:mbm_count >= 10
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				subtract = 10
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_23 = {
+	name = "je_mass_building_managment_button_23"
+	desc = "je_mass_building_managment_button_23"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_variable = mbm_count
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				add = 10
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_24 = {
+	name = "je_mass_building_managment_button_24"
+	desc = "je_mass_building_managment_button_24"
+	visible = {
+		always = yes
+	}
+	possible = {
+		var:mbm_count >= 20
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				subtract = 20
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_25 = {
+	name = "je_mass_building_managment_button_25"
+	desc = "je_mass_building_managment_button_25"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_variable = mbm_count
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				add = 20
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_26 = {
+	name = "je_mass_building_managment_button_26"
+	desc = "je_mass_building_managment_button_26"
+	visible = {
+		always = yes
+	}
+	possible = {
+		var:mbm_count >= 50
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				subtract = 50
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_27 = {
+	name = "je_mass_building_managment_button_27"
+	desc = "je_mass_building_managment_button_27"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_variable = mbm_count
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				add = 50
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_28 = {
+	name = "je_mass_building_managment_button_28"
+	desc = "je_mass_building_managment_button_28"
+	visible = {
+		always = yes
+	}
+	possible = {
+		var:mbm_count >= 100
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				subtract = 100
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_building_managment_button_29 = {
+	name = "je_mass_building_managment_button_29"
+	desc = "je_mass_building_managment_button_29"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_variable = mbm_count
+	}
+	effect = {
+		root = {
+			change_variable = {
+				name = mbm_count
+				add = 50
 			}
 		}
 	}

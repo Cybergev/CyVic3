@@ -43,6 +43,20 @@
 	scripted_button = je_mass_building_managment_button_13
 	scripted_button = je_mass_building_managment_button_14
 	scripted_button = je_mass_building_managment_button_15
+	scripted_button = je_mass_building_managment_button_16
+	scripted_button = je_mass_building_managment_button_17
+	scripted_button = je_mass_building_managment_button_18
+	scripted_button = je_mass_building_managment_button_19
+	scripted_button = je_mass_building_managment_button_20
+	scripted_button = je_mass_building_managment_button_21
+	scripted_button = je_mass_building_managment_button_22
+	scripted_button = je_mass_building_managment_button_23
+	scripted_button = je_mass_building_managment_button_24
+	scripted_button = je_mass_building_managment_button_25
+	scripted_button = je_mass_building_managment_button_26
+	scripted_button = je_mass_building_managment_button_27
+	scripted_button = je_mass_building_managment_button_28
+	scripted_button = je_mass_building_managment_button_29
 	weight = 100010
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }
