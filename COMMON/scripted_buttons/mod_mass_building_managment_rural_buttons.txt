@@ -37,10 +37,15 @@ je_mass_construction_rural_livestock_ranch = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			mass_building = {
-				TARGET = this
-				COUNT = root.var:mbm_count
-				BUILDING = building_livestock_ranch
+			if = {
+				limit = {
+					has_potential_resource = building_livestock_ranch
+				}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_livestock_ranch
+				}
 			}
 		}
 	}
@@ -92,13 +97,10 @@ je_mass_construction_rural_rye_farm = {
 				limit = {
 					has_potential_resource = building_rye_farm
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_rye_farm
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_rye_farm
 				}
 			}
 		}
@@ -151,13 +153,10 @@ je_mass_construction_rural_wheat_farm = {
 				limit = {
 					has_potential_resource = building_wheat_farm
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_wheat_farm
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_wheat_farm
 				}
 			}
 		}
@@ -210,13 +209,10 @@ je_mass_construction_rural_maize_farm = {
 				limit = {
 					has_potential_resource = building_maize_farm
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_maize_farm
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_maize_farm
 				}
 			}
 		}
@@ -269,13 +265,10 @@ je_mass_construction_rural_millet_farm = {
 				limit = {
 					has_potential_resource = building_millet_farm
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_millet_farm
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_millet_farm
 				}
 			}
 		}
@@ -328,13 +321,10 @@ je_mass_construction_rural_rice_farm = {
 				limit = {
 					has_potential_resource = building_rice_farm
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_rice_farm
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_rice_farm
 				}
 			}
 		}
@@ -387,13 +377,10 @@ je_mass_construction_rural_vineyard = {
 				limit = {
 					has_potential_resource = building_vineyard
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_vineyard
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_vineyard
 				}
 			}
 		}
@@ -446,13 +433,10 @@ je_mass_construction_rural_banana_plantation = {
 				limit = {
 					has_potential_resource = building_banana_plantation
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_banana_plantation
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_banana_plantation
 				}
 			}
 		}
@@ -505,13 +489,10 @@ je_mass_construction_rural_coffee_plantation = {
 				limit = {
 					has_potential_resource = building_coffee_plantation
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_coffee_plantation
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_coffee_plantation
 				}
 			}
 		}
@@ -564,13 +545,10 @@ je_mass_construction_rural_cotton_plantation = {
 				limit = {
 					has_potential_resource = building_cotton_plantation
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_cotton_plantation
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_cotton_plantation
 				}
 			}
 		}
@@ -623,13 +601,10 @@ je_mass_construction_rural_dye_plantation = {
 				limit = {
 					has_potential_resource = building_dye_plantation
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_dye_plantation
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_dye_plantation
 				}
 			}
 		}
@@ -682,13 +657,10 @@ je_mass_construction_rural_opium_plantation = {
 				limit = {
 					has_potential_resource = building_opium_plantation
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_opium_plantation
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_opium_plantation
 				}
 			}
 		}
@@ -741,13 +713,10 @@ je_mass_construction_rural_rubber_plantation = {
 				limit = {
 					has_potential_resource = building_rubber_plantation
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_rubber_plantation
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_rubber_plantation
 				}
 			}
 		}
@@ -800,13 +769,10 @@ je_mass_construction_rural_silk_plantation = {
 				limit = {
 					has_potential_resource = building_silk_plantation
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_silk_plantation
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_silk_plantation
 				}
 			}
 		}
@@ -859,13 +825,10 @@ je_mass_construction_rural_sugar_plantation = {
 				limit = {
 					has_potential_resource = building_sugar_plantation
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_sugar_plantation
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_sugar_plantation
 				}
 			}
 		}
@@ -918,13 +881,10 @@ je_mass_construction_rural_tea_plantation = {
 				limit = {
 					has_potential_resource = building_tea_plantation
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_tea_plantation
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_tea_plantation
 				}
 			}
 		}
@@ -977,13 +937,10 @@ je_mass_construction_rural_tobacco_plantation = {
 				limit = {
 					has_potential_resource = building_tobacco_plantation
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_tobacco_plantation
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_tobacco_plantation
 				}
 			}
 		}
@@ -1035,13 +992,10 @@ je_mass_construction_rural_fishing_wharf = {
 				limit = {
 					has_potential_resource = building_fishing_wharf
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_fishing_wharf
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_fishing_wharf
 				}
 			}
 		}
@@ -1094,13 +1048,10 @@ je_mass_construction_rural_whaling_station = {
 				limit = {
 					has_potential_resource = building_whaling_station
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_whaling_station
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_whaling_station
 				}
 			}
 		}
@@ -1152,13 +1103,10 @@ je_mass_construction_rural_logging_camp = {
 				limit = {
 					has_potential_resource = building_logging_camp
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_logging_camp
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_logging_camp
 				}
 			}
 		}
@@ -1211,13 +1159,10 @@ je_mass_construction_rural_coal_mine = {
 				limit = {
 					has_potential_resource = building_coal_mine
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_coal_mine
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_coal_mine
 				}
 			}
 		}
@@ -1270,13 +1215,10 @@ je_mass_construction_rural_iron_mine = {
 				limit = {
 					has_potential_resource = building_iron_mine
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_iron_mine
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_iron_mine
 				}
 			}
 		}
@@ -1329,13 +1271,10 @@ je_mass_construction_rural_lead_mine = {
 				limit = {
 					has_potential_resource = building_lead_mine
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_lead_mine
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_lead_mine
 				}
 			}
 		}
@@ -1388,13 +1327,10 @@ je_mass_construction_rural_sulfur_mine = {
 				limit = {
 					has_potential_resource = building_sulfur_mine
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_sulfur_mine
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_sulfur_mine
 				}
 			}
 		}
@@ -1447,13 +1383,10 @@ je_mass_construction_rural_gold_mine = {
 				limit = {
 					has_potential_resource = building_gold_mine
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_gold_mine
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_gold_mine
 				}
 			}
 		}
@@ -1506,13 +1439,10 @@ je_mass_construction_rural_oil_rig = {
 				limit = {
 					has_potential_resource = building_oil_rig
 				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_oil_rig
-					}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_oil_rig
 				}
 			}
 		}

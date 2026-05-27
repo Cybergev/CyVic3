@@ -37,13 +37,10 @@ je_mass_construction_urban_aeroplanes_industry = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_aeroplanes_industry
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_aeroplanes_industry
 			}
 		}
 	}
@@ -91,13 +88,10 @@ je_mass_construction_urban_tanks_industry = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_tanks_industry
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_tanks_industry
 			}
 		}
 	}
@@ -145,13 +139,10 @@ je_mass_construction_urban_artillery_foundry = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_artillery_foundry
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_artillery_foundry
 			}
 		}
 	}
@@ -199,13 +190,10 @@ je_mass_construction_urban_arms_industry = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_arms_industry
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_arms_industry
 			}
 		}
 	}
@@ -253,13 +241,10 @@ je_mass_construction_urban_munition_plant = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_munition_plant
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_munition_plant
 			}
 		}
 	}
@@ -366,13 +351,10 @@ je_mass_construction_urban_automotive_industry = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_automotive_industry
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_automotive_industry
 			}
 		}
 	}
@@ -420,13 +402,10 @@ je_mass_construction_urban_motor_industry = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_motor_industry
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_motor_industry
 			}
 		}
 	}
@@ -474,13 +453,10 @@ je_mass_construction_urban_steel_mill = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_steel_mill
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_steel_mill
 			}
 		}
 	}
@@ -528,13 +504,10 @@ je_mass_construction_urban_glassworks = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_glassworks
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_glassworks
 			}
 		}
 	}
@@ -582,13 +555,10 @@ je_mass_construction_urban_explosives_factory = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_explosives_factory
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_explosives_factory
 			}
 		}
 	}
@@ -636,13 +606,10 @@ je_mass_construction_urban_synthetic_opium_plant = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_synthetic_opium_plant
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_synthetic_opium_plant
 			}
 		}
 	}
@@ -690,13 +657,10 @@ je_mass_construction_urban_synthetic_oil_plant = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_synthetic_oil_plant
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_synthetic_oil_plant
 			}
 		}
 	}
@@ -744,13 +708,10 @@ je_mass_construction_urban_synthetic_rubber_plant = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_synthetic_rubber_plant
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_synthetic_rubber_plant
 			}
 		}
 	}
@@ -798,13 +759,10 @@ je_mass_construction_urban_synthetic_silk_plant = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_synthetic_silk_plant
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_synthetic_silk_plant
 			}
 		}
 	}
@@ -852,13 +810,10 @@ je_mass_construction_urban_synthetics_plant = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_synthetics_plant
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_synthetics_plant
 			}
 		}
 	}
@@ -906,13 +861,10 @@ je_mass_construction_urban_chemical_plant = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_chemical_plant
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_chemical_plant
 			}
 		}
 	}
@@ -960,13 +912,10 @@ je_mass_construction_urban_radios_industry = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_radios_industry
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_radios_industry
 			}
 		}
 	}
@@ -1014,13 +963,10 @@ je_mass_construction_urban_electrics_industry = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_electrics_industry
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_electrics_industry
 			}
 		}
 	}
@@ -1068,13 +1014,10 @@ je_mass_construction_urban_distillation_plant = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_distillation_plant
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_distillation_plant
 			}
 		}
 	}
@@ -1122,13 +1065,10 @@ je_mass_construction_urban_charcoal_plant = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_charcoal_plant
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_charcoal_plant
 			}
 		}
 	}
@@ -1176,13 +1116,10 @@ je_mass_construction_urban_porcelain_manufactory = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_porcelain_manufactory
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_porcelain_manufactory
 			}
 		}
 	}
@@ -1230,13 +1167,10 @@ je_mass_construction_urban_furniture_manufactory = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_furniture_manufactory
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_furniture_manufactory
 			}
 		}
 	}
@@ -1284,13 +1218,10 @@ je_mass_construction_urban_textile_mill = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_textile_mill
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_textile_mill
 			}
 		}
 	}
@@ -1338,13 +1269,10 @@ je_mass_construction_urban_paper_mill = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_paper_mill
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_paper_mill
 			}
 		}
 	}
@@ -1392,13 +1320,10 @@ je_mass_construction_urban_tooling_workshop = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_tooling_workshop
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_tooling_workshop
 			}
 		}
 	}
@@ -1445,13 +1370,10 @@ je_mass_construction_urban_hardwood_workshop = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_hardwood_workshop
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_hardwood_workshop
 			}
 		}
 	}
@@ -1499,13 +1421,10 @@ je_mass_construction_urban_food_industry = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			every_in_list = {
-				variable = mbm_list
-				mass_building = {
-					TARGET = this
-					COUNT = root.var:mbm_count
-					BUILDING = building_food_industry
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_food_industry
 			}
 		}
 	}
