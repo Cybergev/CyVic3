@@ -33,6 +33,7 @@ je_mass_building_managment_button_12: "Установить количество
 je_mass_building_managment_button_13: "Установить количество [Concept('concept_construction', 'застраиваемых')] зданий на 20"
 je_mass_building_managment_button_14: "Установить количество [Concept('concept_construction', 'застраиваемых')] зданий на 50"
 je_mass_building_managment_button_15: "Установить количество [Concept('concept_construction', 'застраиваемых')] зданий на 100"
+
 je_mass_building_managment_button_16: "Уменьшить количество [Concept('concept_construction', 'застраиваемых')] зданий на 1"
 je_mass_building_managment_button_17: "Увеличить количество [Concept('concept_construction', 'застраиваемых')] зданий на 1"
 je_mass_building_managment_button_18: "Уменьшить количество [Concept('concept_construction', 'застраиваемых')] зданий на 2"
@@ -45,8 +46,8 @@ je_mass_building_managment_button_24: "Уменьшить количество [
 je_mass_building_managment_button_25: "Увеличить количество [Concept('concept_construction', 'застраиваемых')] зданий на 20"
 je_mass_building_managment_button_26: "Уменьшить количество [Concept('concept_construction', 'застраиваемых')] зданий на 50"
 je_mass_building_managment_button_27: "Увеличить количество [Concept('concept_construction', 'застраиваемых')] зданий на 50"
-je_mass_building_managment_button_28: "Увеличить количество [Concept('concept_construction', 'застраиваемых')] зданий на 100"
-je_mass_building_managment_button_29: "Уменьшить количество [Concept('concept_construction', 'застраиваемых')] зданий на 100"
+je_mass_building_managment_button_28: "Уменьшить количество [Concept('concept_construction', 'застраиваемых')] зданий на 100"
+je_mass_building_managment_button_29: "Увеличить количество [Concept('concept_construction', 'застраиваемых')] зданий на 100"
 
 je_mass_construction_development_administration: "Построить $building_government_administration$"
 je_mass_desctruction_development_administration: "Разрушить $building_government_administration$"

@@ -405,18 +405,10 @@ je_mass_construction_development_railway = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			if = {
-				limit = {
-					is_coastal = yes
-				}
-				every_in_list = {
-					variable = mbm_list
-					mass_building = {
-						TARGET = this
-						COUNT = root.var:mbm_count
-						BUILDING = building_railway
-					}
-				}
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_railway
 			}
 		}
 	}
@@ -464,10 +456,15 @@ je_mass_construction_development_port = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			mass_building = {
-				TARGET = this
-				COUNT = root.var:mbm_count
-				BUILDING = building_port
+			if = {
+				limit = {
+					is_coastal = yes
+				}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_port
+				}
 			}
 		}
 	}
