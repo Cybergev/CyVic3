@@ -25,6 +25,13 @@ je_mass_building_managment_button_5: "Добавить все [Concept('concept_
 je_mass_building_managment_button_6: "Убрать все [Concept('concept_unincorporated_state', 'невключённые область')] [Concept('concept_state', 'области')]"
 je_mass_building_managment_button_7: "Добавить [Concept('concept_decree', 'отмеченные')] [Concept('concept_state', 'области')]"
 je_mass_building_managment_button_8: "Убрать [Concept('concept_decree', 'отмеченные')] [Concept('concept_state', 'области')]"
+je_mass_building_managment_button_9: "Установить количество зданий на 1"
+je_mass_building_managment_button_10: "Установить количество зданий на 2"
+je_mass_building_managment_button_11: "Установить количество зданий на 5"
+je_mass_building_managment_button_12: "Установить количество зданий на 10"
+je_mass_building_managment_button_13: "Установить количество зданий на 20"
+je_mass_building_managment_button_14: "Установить количество зданий на 50"
+je_mass_building_managment_button_15: "Установить количество зданий на 100"
 
 je_mass_construction_development_administration: "Построить $building_government_administration$"
 je_mass_desctruction_development_administration: "Разрушить $building_government_administration$"

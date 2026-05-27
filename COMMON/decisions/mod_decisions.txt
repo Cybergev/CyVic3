@@ -257,9 +257,9 @@ promotion_national_values = {
 		value = 0
 		if = {
 			limit = {
-				relative_bureaucracy >= 100
+				relative_bureaucracy >= 0.5
 			}
-			add = 1000
+			add = 100
 		}
 	}
 }

@@ -1,0 +1,86 @@
+﻿fix_je_caucasian_war = {
+	is_shown = {
+		any_scope_state = {
+			has_modifier = caucasus_war_attacker
+		}
+	}
+	possible = {
+		OR = {
+			country_has_primary_culture = cu:russian
+			country_has_primary_culture = cu:chechen
+			country_has_primary_culture = cu:circassian
+			country_has_primary_culture = cu:north_caucasian
+		}
+		NOR = {
+			has_journal_entry = je_caucasian_war
+			has_journal_entry = je_caucasian_war_circassia
+			has_journal_entry = je_caucasian_war_imamate
+		}
+	}
+	when_taken = {
+		if = {
+			limit = {
+				country_has_primary_culture = cu:russian
+			}
+			add_journal_entry = {
+				type = je_caucasian_war
+			}
+		}
+		else_if = {
+			limit = {
+				country_has_primary_culture = cu:circassian
+			}
+			add_journal_entry = {
+				type = je_caucasian_war_circassia
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:chechen
+					country_has_primary_culture = cu:north_caucasian
+				}
+			}
+			add_journal_entry = {
+				type = je_caucasian_war_imamate
+			}
+		}
+	}
+	ai_chance = {
+		value = 100
+	}
+}
+
+fix_caucasus_war_attacker = {
+	is_shown = {
+		any_scope_state = {
+			has_modifier = caucasus_war_attacker
+		}
+	}
+	possible = {
+		NOR = {
+			has_journal_entry = je_caucasian_war
+			has_journal_entry = je_caucasian_war_circassia
+			has_journal_entry = je_caucasian_war_imamate
+		}
+		OR = {
+			has_modifier = modifier_jizya_tax
+			has_modifier = modifier_conversion_of_reclaimed_territories
+			has_modifier = modifier_honour_and_life_sol
+			has_modifier = modifier_honour_and_life_military
+			has_modifier = modifier_circassian_last_stand
+			has_modifier = modifier_circassian_diplomacy
+		}
+	}
+	when_taken = {
+		every_scope_state = {
+			limit = {
+				has_modifier = caucasus_war_attacker
+			}
+			remove_modifier = caucasus_war_attacker
+		}
+	}
+	ai_chance = {
+		value = 100
+	}
+}

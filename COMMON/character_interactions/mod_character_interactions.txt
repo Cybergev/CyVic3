@@ -1,151 +1,4 @@
-﻿REPLACE_OR_CREATE:grant_leadership_to_agitator = {
-	icon = "gfx/interface/character_panel/grant_command_not.dds"
-	clicksound = "event:/sfx/dlc/1.3_ip1/ui/agitator_promote"
-	potential = {
-		has_dlc_feature = agitators
-		exists = owner
-		owner ?= scope:actor
-	}
-	show_requirements = yes
-	possible = {
-		age >= define:NCharacters|ADULT_AGE
-		interest_group ?= {
-			is_in_government = yes
-		}
-		character_acceptance = {
-			target = scope:actor
-			value >= acceptance_status_3
-		}
-		trigger_if = {
-			limit = {
-				owner ?= {
-					has_law_or_variant_or_variant = law_type:law_state_atheism
-				}
-			}
-			nor = {
-				has_ideology = ideology:ideology_theocrat
-				has_ideology = ideology:ideology_integralist
-				has_ideology = ideology:ideology_traditionalist
-				has_ideology = ideology:ideology_traditionalist_minoritarian
-			}
-		}
-		or = {
-			is_female = no
-			scope:actor ?= {
-				has_law_or_variant_or_variant = law_type:law_womens_suffrage
-			}
-		}
-	}
-	effect = {
-		show_as_tooltip = {
-			remove_character_role = agitator
-		}
-		custom_tooltip = {
-			text = make_agitator_ig_leader_tt
-			set_as_interest_group_leader = yes
-		}
-	}
-	ai_chance = {
-		value = -50
-		if = {
-			limit = {
-				popularity > interest_group.leader.popularity
-			}
-			add = 25
-		}
-		if = {
-			limit = {
-				interest_group.leader.popularity <= -50
-			}
-			add = 50
-		}
-		if = {
-			limit = {
-				interest_group.leader.popularity >= 50
-			}
-			add = -50
-		}
-		if = {
-			limit = {
-				interest_group ?= {
-					ig_approval <= 0
-				}
-			}
-			add = 25
-		}
-		if = {
-			limit = {
-				this.ideology = owner.ruler.ideology
-			}
-			add = 50
-		}
-	}
-}
-
-REPLACE_OR_CREATE:grant_command_to_agitator = {
-	icon = "gfx/interface/character_panel/grant_command.dds"
-	clicksound = "event:/sfx/ui/military/command_grant"
-	potential = {
-		owner ?= scope:actor
-	}
-	show_requirements = yes
-	possible = {
-		or = {
-			has_role_of_type = agitator
-			has_role_of_type = politician
-		}
-		not = {
-			is_ruler = yes
-			has_role_of_type = general
-			has_role_of_type = admiral
-		}
-		is_female = no
-	}
-	effect = {
-		add_character_role = general
-	}
-	ai_chance = {
-		value = 0
-		if = {
-			limit = {
-				has_commander_traits = yes
-			}
-			add = 50
-		}
-		if = {
-			limit = {
-				is_interest_group_type = ig_armed_forces
-			}
-			add = 25
-		}
-		if = {
-			limit = {
-				NOT = {
-					owner ?= {
-						any_scope_general = {
-							exists = this
-						}
-					}
-				}
-			}
-			add = 25
-		}
-		if = {
-			limit = {
-				owner ?= {
-					any_scope_war = {
-						any_scope_front = {
-							is_vulnerable_front = root.owner
-						}
-					}
-				}
-			}
-			add = 100
-		}
-	}
-}
-
-REPLACE_OR_CREATE:foster_national_agitation = {
+﻿REPLACE_OR_CREATE:foster_national_agitation = {
 	potential = {
 		is_in_exile_pool = no
 		has_role_of_type = agitator
@@ -1281,17 +1134,451 @@ REPLACE_OR_CREATE:resign_from_office = {
 	}
 }
 
+REPLACE_OR_CREATE:grant_leadership = {
+	icon = "gfx/interface/character_panel/grant_command_not.dds"
+	clicksound = "event:/sfx/dlc/1.3_ip1/ui/agitator_promote"
+	potential = {
+		owner ?= scope:actor
+		is_interest_group_leader = no
+	}
+	show_requirements = yes
+	possible = {
+		age >= define:NCharacters|ADULT_AGE
+		owner = {
+			has_law_or_variant = law_type:law_appointed_bureaucrats
+		}
+		interest_group ?= {
+			leader = {
+				is_ruler_of_own_country = no
+			}
+			is_in_government = yes
+			is_revolutionary = no
+			ig_clout > define:NPolitics|MARGINAL_IG_THRESHOLD
+		}
+		character_acceptance = {
+			target = scope:actor
+			value >= acceptance_status_3
+		}
+		trigger_if = {
+			limit = {
+				owner ?= {
+					has_law_or_variant_or_variant = law_type:law_state_atheism
+				}
+			}
+			nor = {
+				has_ideology = ideology:ideology_theocrat
+				has_ideology = ideology:ideology_integralist
+				has_ideology = ideology:ideology_traditionalist
+				has_ideology = ideology:ideology_traditionalist_minoritarian
+			}
+		}
+		trigger_if = {
+			limit = {
+				is_female = yes
+			}
+			has_law_or_variant = law_type:law_womens_suffrage
+		}
+	}
+	effect = {
+		interest_group ?= {
+			add_modifier = {
+				name = retired_ig_leader
+				multiplier = {
+					value = root.popularity
+					divide = 100
+					add = 1
+					min = 1
+					round = yes
+				}
+				years = 5
+				is_decaying = yes
+			}
+		}
+		set_as_interest_group_leader = yes
+	}
+	ai_chance = {
+		value = -50
+		if = {
+			limit = {
+				interest_group.leader = {
+					is_ruler_of_own_country = yes
+				}
+			}
+			add = -1000
+		}
+		if = {
+			limit = {
+				popularity > interest_group.leader.popularity
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				interest_group.leader.popularity <= -50
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				interest_group.leader.popularity >= 50
+			}
+			add = -50
+		}
+		if = {
+			limit = {
+				interest_group ?= {
+					ig_approval <= 0
+				}
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				this.ideology = owner.ruler.ideology
+			}
+			add = 100
+		}
+	}
+}
+
+REPLACE_OR_CREATE:retire_leader = {
+	# icon = ""
+	clicksound = "event:/sfx/ui/military/commander_retire"
+	potential = {
+		owner ?= scope:actor
+		is_interest_group_leader = yes
+		is_ruler_of_own_country = no
+	}
+	show_requirements = yes
+	possible = {
+		owner = {
+			has_law_or_variant = law_type:law_appointed_bureaucrats
+		}
+		is_ruler_of_own_country = no
+		interest_group ?= {
+			is_in_government = yes
+			is_revolutionary = no
+			ig_clout > define:NPolitics|MARGINAL_IG_THRESHOLD
+		}
+	}
+	effect = {
+		replace_character_roles = {
+			remove = {
+				politician
+			}
+		}
+		retire_character_if_should_be_culled = yes
+		interest_group ?= {
+			add_modifier = {
+				name = retired_ig_leader
+				multiplier = {
+					value = root.popularity
+					divide = 100
+					add = 1
+					min = 1
+					round = yes
+				}
+				years = 5
+				is_decaying = yes
+			}
+		}
+	}
+	show_confirmation_box = yes
+	ai_chance = {
+		value = -50
+		if = {
+			limit = {
+				popularity <= -50
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				popularity <= -75
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				interest_group ?= {
+					ig_approval <= 0
+				}
+			}
+			add = -50
+		}
+		if = {
+			limit = {
+				age >= 75
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = psychological_affliction
+					has_trait = syphilis
+					has_trait = wounded
+					has_trait = kidney_stones
+				}
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = alcoholic
+					has_trait = cocaine_addiction
+					has_trait = opium_addiction
+				}
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				has_trait = shellshocked
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = trench_rat
+					has_trait = stalwart_defender
+					has_trait = defense_in_depth_specialist
+				}
+			}
+			add = -100
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = expert_convoy_raider
+					has_trait = expert_artillery_commander
+					has_trait = expert_offensive_planner
+					has_trait = expert_defensive_strategist
+					has_trait = expert_naval_commander
+				}
+			}
+			add = -75
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = experienced_convoy_raider
+					has_trait = experienced_artillery_commander
+					has_trait = experienced_offensive_planner
+					has_trait = experienced_defensive_strategist
+					has_trait = experienced_naval_commander
+				}
+			}
+			add = -50
+		}
+		if = {
+			limit = {
+				owner ?= {
+					OR = {
+						is_diplomatic_play_committed_participant = yes
+						is_at_war = yes
+					}
+				}
+			}
+			add = -50
+		}
+		if = {
+			limit = {
+				owner ?= {
+					any_scope_war = {
+						any_scope_front = {
+							is_vulnerable_front = root.owner
+						}
+					}
+				}
+			}
+			add = -150
+		}
+	}
+}
+
+REPLACE_OR_CREATE:grant_admiral = {
+	icon = "gfx/interface/character_panel/grant_command.dds"
+	clicksound = "event:/sfx/ui/military/command_grant"
+	potential = {
+		owner ?= scope:actor
+	}
+	show_requirements = yes
+	possible = {
+		age >= define:NCharacters|ADULT_AGE
+		trigger_if = {
+			limit = {
+				is_ruler_of_own_country = yes
+			}
+			NOT = {
+				has_role_of_type = admiral
+			}
+		}
+		trigger_else = {
+			NOT = {
+				has_role_of_type = general
+				has_role_of_type = admiral
+			}
+		}
+		character_acceptance = {
+			target = scope:actor
+			value >= acceptance_status_3
+		}
+		trigger_if = {
+			limit = {
+				is_female = yes
+			}
+			has_law_or_variant = law_type:law_womens_suffrage
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				has_role_of_type = general
+			}
+			remove_character_role = general
+		}
+		add_character_role = admiral
+	}
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				has_commander_traits = yes
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				is_interest_group_type = ig_armed_forces
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				NOT = {
+					owner ?= {
+						any_scope_general = {
+							exists = this
+						}
+					}
+				}
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				owner ?= {
+					any_scope_war = {
+						any_scope_front = {
+							is_vulnerable_front = root.owner
+						}
+					}
+				}
+			}
+			add = 100
+		}
+	}
+}
+
+REPLACE_OR_CREATE:grant_general = {
+	icon = "gfx/interface/character_panel/grant_command.dds"
+	clicksound = "event:/sfx/ui/military/command_grant"
+	potential = {
+		owner ?= scope:actor
+	}
+	show_requirements = yes
+	possible = {
+		age >= define:NCharacters|ADULT_AGE
+		trigger_if = {
+			limit = {
+				is_ruler_of_own_country = yes
+			}
+			NOT = {
+				has_role_of_type = general
+			}
+		}
+		trigger_else = {
+			NOT = {
+				has_role_of_type = general
+				has_role_of_type = admiral
+			}
+		}
+		character_acceptance = {
+			target = scope:actor
+			value >= acceptance_status_3
+		}
+		trigger_if = {
+			limit = {
+				is_female = yes
+			}
+			has_law_or_variant = law_type:law_womens_suffrage
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				has_role_of_type = admiral
+			}
+			remove_character_role = admiral
+		}
+		add_character_role = general
+	}
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				has_commander_traits = yes
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				is_interest_group_type = ig_armed_forces
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				NOT = {
+					owner ?= {
+						any_scope_general = {
+							exists = this
+						}
+					}
+				}
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				owner ?= {
+					any_scope_war = {
+						any_scope_front = {
+							is_vulnerable_front = root.owner
+						}
+					}
+				}
+			}
+			add = 100
+		}
+	}
+}
+
 REPLACE_OR_CREATE:retire_commander = {
 	# icon = ""
 	clicksound = "event:/sfx/ui/military/commander_retire"
 	potential = {
 		owner ?= scope:actor
-		is_commander = yes
-		is_ruler_of_own_country = no
+		OR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
 	}
 	show_requirements = yes
 	possible = {
-		is_ruler_of_own_country = no
 		interest_group ?= {
 			is_insurrectionary = no
 		}
@@ -1330,41 +1617,54 @@ REPLACE_OR_CREATE:retire_commander = {
 	effect = {
 		if = {
 			limit = {
-				owner = {
-					has_journal_entry = je_ip4_coup
-				}
-				root = {
-					has_variable = golpista_var
-				}
+				is_ruler_of_own_country = yes
 			}
-			owner = {
-				set_variable = retire_golpista_var
-				character_execute_immediate_coup = yes
+			replace_character_roles = {
+				remove = {
+					general
+					admiral
+				}
 			}
 		}
 		else = {
-			hidden_effect = {
-				replace_character_roles = {
-					remove = {
-						general
-						admiral
+			if = {
+				limit = {
+					owner = {
+						has_journal_entry = je_ip4_coup
+					}
+					root = {
+						has_variable = golpista_var
 					}
 				}
-				retire_character_if_should_be_culled = yes
+				owner = {
+					set_variable = retire_golpista_var
+					character_execute_immediate_coup = yes
+				}
 			}
-			interest_group ?= {
-				add_modifier = {
-					name = retired_commander_interest_group_impact
-					multiplier = {
-						value = root.popularity
-						divide = 100
-						add = 1
-						min = 1
-						multiply = root.commander_rank
-						round = yes
+			else = {
+				hidden_effect = {
+					replace_character_roles = {
+						remove = {
+							general
+							admiral
+						}
 					}
-					years = 5
-					is_decaying = yes
+					retire_character_if_should_be_culled = yes
+				}
+				interest_group ?= {
+					add_modifier = {
+						name = retired_commander_interest_group_impact
+						multiplier = {
+							value = root.popularity
+							divide = 100
+							add = 1
+							min = 1
+							multiply = root.commander_rank
+							round = yes
+						}
+						years = 5
+						is_decaying = yes
+					}
 				}
 			}
 		}
@@ -1482,10 +1782,12 @@ REPLACE_OR_CREATE:change_ig_party_status = {
 	clicksound = "event:/sfx/ui/military/command_grant"
 	potential = {
 		owner = scope:actor
+		country_has_voting_franchise = yes
 		has_role_of_type = politician
 	}
 	show_requirements = yes
 	possible = {
+		country_has_voting_franchise = yes
 		interest_group ?= {
 			is_revolutionary = no
 			ig_clout > define:NPolitics|MARGINAL_IG_THRESHOLD
@@ -1602,5 +1904,58 @@ REPLACE_OR_CREATE:political_purge = {
 	}
 	ai_chance = {
 		base = 0
+	}
+}
+
+#BREAKING===================
+REPLACE:grant_leadership_to_agitator = {
+	icon = "gfx/interface/character_panel/grant_command.dds"
+	clicksound = "event:/SFX/UI/Military/command_grant"
+	potential = {
+		always = no
+	}
+	possible = {
+		always = no
+	}
+	effect = {
+	}
+}
+
+REPLACE:grant_command_to_agitator = {
+	icon = "gfx/interface/character_panel/grant_command.dds"
+	clicksound = "event:/SFX/UI/Military/command_grant"
+	potential = {
+		always = no
+	}
+	possible = {
+		always = no
+	}
+	effect = {
+	}
+}
+
+REPLACE:grant_command_to_ruler = {
+	icon = "gfx/interface/character_panel/grant_command.dds"
+	clicksound = "event:/SFX/UI/Military/command_grant"
+	potential = {
+		always = no
+	}
+	possible = {
+		always = no
+	}
+	effect = {
+	}
+}
+
+REPLACE:remove_command_from_ruler = {
+	icon = "gfx/interface/character_panel/grant_command_not.dds"
+	clicksound = "event:/SFX/UI/Military/command_remove"
+	potential = {
+		always = no
+	}
+	possible = {
+		always = no
+	}
+	effect = {
 	}
 }

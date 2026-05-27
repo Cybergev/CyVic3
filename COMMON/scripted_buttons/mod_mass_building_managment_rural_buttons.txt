@@ -1,28 +1,4 @@
-﻿je_mass_construction_rural_livestock_ranch = {
-	name = "je_mass_construction_rural_livestock_ranch"
-	desc = "je_mass_construction_rural_livestock_ranch"
-	visible = {
-		always = yes
-	}
-	possible = {
-		has_technology_researched = enclosure
-		any_in_list = {
-			variable = mbm_list
-			owner = root
-		}
-	}
-	effect = {
-		every_in_list = {
-			variable = mbm_list
-			start_building_construction = building_livestock_ranch
-		}
-	}
-	ai_chance = {
-		value = 0
-	}
-}
-
-je_mass_desctruction_rural_livestock_ranch = {
+﻿je_mass_desctruction_rural_livestock_ranch = {
 	name = "je_mass_desctruction_rural_livestock_ranch"
 	desc = "je_mass_desctruction_rural_livestock_ranch"
 	visible = {
@@ -45,9 +21,9 @@ je_mass_desctruction_rural_livestock_ranch = {
 	}
 }
 
-je_mass_construction_rural_rye_farm = {
-	name = "je_mass_construction_rural_rye_farm"
-	desc = "je_mass_construction_rural_rye_farm"
+je_mass_construction_rural_livestock_ranch = {
+	name = "je_mass_construction_rural_livestock_ranch"
+	desc = "je_mass_construction_rural_livestock_ranch"
 	visible = {
 		always = yes
 	}
@@ -61,11 +37,10 @@ je_mass_construction_rural_rye_farm = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			if = {
-				limit = {
-					has_potential_resource = building_rye_farm
-				}
-				start_building_construction = building_rye_farm
+			mass_building = {
+				TARGET = this
+				COUNT = root.var:mbm_count
+				BUILDING = building_livestock_ranch
 			}
 		}
 	}
@@ -97,9 +72,9 @@ je_mass_desctruction_rural_rye_farm = {
 	}
 }
 
-je_mass_construction_rural_wheat_farm = {
-	name = "je_mass_construction_rural_wheat_farm"
-	desc = "je_mass_construction_rural_wheat_farm"
+je_mass_construction_rural_rye_farm = {
+	name = "je_mass_construction_rural_rye_farm"
+	desc = "je_mass_construction_rural_rye_farm"
 	visible = {
 		always = yes
 	}
@@ -115,9 +90,16 @@ je_mass_construction_rural_wheat_farm = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_wheat_farm
+					has_potential_resource = building_rye_farm
 				}
-				start_building_construction = building_wheat_farm
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_rye_farm
+					}
+				}
 			}
 		}
 	}
@@ -149,9 +131,9 @@ je_mass_desctruction_rural_wheat_farm = {
 	}
 }
 
-je_mass_construction_rural_maize_farm = {
-	name = "je_mass_construction_rural_maize_farm"
-	desc = "je_mass_construction_rural_maize_farm"
+je_mass_construction_rural_wheat_farm = {
+	name = "je_mass_construction_rural_wheat_farm"
+	desc = "je_mass_construction_rural_wheat_farm"
 	visible = {
 		always = yes
 	}
@@ -167,9 +149,16 @@ je_mass_construction_rural_maize_farm = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_maize_farm
+					has_potential_resource = building_wheat_farm
 				}
-				start_building_construction = building_maize_farm
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_wheat_farm
+					}
+				}
 			}
 		}
 	}
@@ -201,9 +190,9 @@ je_mass_desctruction_rural_maize_farm = {
 	}
 }
 
-je_mass_construction_rural_millet_farm = {
-	name = "je_mass_construction_rural_millet_farm"
-	desc = "je_mass_construction_rural_millet_farm"
+je_mass_construction_rural_maize_farm = {
+	name = "je_mass_construction_rural_maize_farm"
+	desc = "je_mass_construction_rural_maize_farm"
 	visible = {
 		always = yes
 	}
@@ -219,9 +208,16 @@ je_mass_construction_rural_millet_farm = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_millet_farm
+					has_potential_resource = building_maize_farm
 				}
-				start_building_construction = building_millet_farm
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_maize_farm
+					}
+				}
 			}
 		}
 	}
@@ -253,9 +249,9 @@ je_mass_desctruction_rural_millet_farm = {
 	}
 }
 
-je_mass_construction_rural_rice_farm = {
-	name = "je_mass_construction_rural_rice_farm"
-	desc = "je_mass_construction_rural_rice_farm"
+je_mass_construction_rural_millet_farm = {
+	name = "je_mass_construction_rural_millet_farm"
+	desc = "je_mass_construction_rural_millet_farm"
 	visible = {
 		always = yes
 	}
@@ -271,9 +267,16 @@ je_mass_construction_rural_rice_farm = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_rice_farm
+					has_potential_resource = building_millet_farm
 				}
-				start_building_construction = building_rice_farm
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_millet_farm
+					}
+				}
 			}
 		}
 	}
@@ -305,9 +308,9 @@ je_mass_desctruction_rural_rice_farm = {
 	}
 }
 
-je_mass_construction_rural_vineyard = {
-	name = "je_mass_construction_rural_vineyard"
-	desc = "je_mass_construction_rural_vineyard"
+je_mass_construction_rural_rice_farm = {
+	name = "je_mass_construction_rural_rice_farm"
+	desc = "je_mass_construction_rural_rice_farm"
 	visible = {
 		always = yes
 	}
@@ -323,9 +326,16 @@ je_mass_construction_rural_vineyard = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_vineyard
+					has_potential_resource = building_rice_farm
 				}
-				start_building_construction = building_vineyard
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_rice_farm
+					}
+				}
 			}
 		}
 	}
@@ -357,9 +367,9 @@ je_mass_desctruction_rural_vineyard = {
 	}
 }
 
-je_mass_construction_rural_banana_plantation = {
-	name = "je_mass_construction_rural_banana_plantation"
-	desc = "je_mass_construction_rural_banana_plantation"
+je_mass_construction_rural_vineyard = {
+	name = "je_mass_construction_rural_vineyard"
+	desc = "je_mass_construction_rural_vineyard"
 	visible = {
 		always = yes
 	}
@@ -375,9 +385,16 @@ je_mass_construction_rural_banana_plantation = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_banana_plantation
+					has_potential_resource = building_vineyard
 				}
-				start_building_construction = building_banana_plantation
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_vineyard
+					}
+				}
 			}
 		}
 	}
@@ -409,9 +426,9 @@ je_mass_desctruction_rural_banana_plantation = {
 	}
 }
 
-je_mass_construction_rural_coffee_plantation = {
-	name = "je_mass_construction_rural_coffee_plantation"
-	desc = "je_mass_construction_rural_coffee_plantation"
+je_mass_construction_rural_banana_plantation = {
+	name = "je_mass_construction_rural_banana_plantation"
+	desc = "je_mass_construction_rural_banana_plantation"
 	visible = {
 		always = yes
 	}
@@ -427,9 +444,16 @@ je_mass_construction_rural_coffee_plantation = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_coffee_plantation
+					has_potential_resource = building_banana_plantation
 				}
-				start_building_construction = building_coffee_plantation
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_banana_plantation
+					}
+				}
 			}
 		}
 	}
@@ -461,9 +485,9 @@ je_mass_desctruction_rural_coffee_plantation = {
 	}
 }
 
-je_mass_construction_rural_cotton_plantation = {
-	name = "je_mass_construction_rural_cotton_plantation"
-	desc = "je_mass_construction_rural_cotton_plantation"
+je_mass_construction_rural_coffee_plantation = {
+	name = "je_mass_construction_rural_coffee_plantation"
+	desc = "je_mass_construction_rural_coffee_plantation"
 	visible = {
 		always = yes
 	}
@@ -479,9 +503,16 @@ je_mass_construction_rural_cotton_plantation = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_cotton_plantation
+					has_potential_resource = building_coffee_plantation
 				}
-				start_building_construction = building_cotton_plantation
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_coffee_plantation
+					}
+				}
 			}
 		}
 	}
@@ -513,9 +544,9 @@ je_mass_desctruction_rural_cotton_plantation = {
 	}
 }
 
-je_mass_construction_rural_dye_plantation = {
-	name = "je_mass_construction_rural_dye_plantation"
-	desc = "je_mass_construction_rural_dye_plantation"
+je_mass_construction_rural_cotton_plantation = {
+	name = "je_mass_construction_rural_cotton_plantation"
+	desc = "je_mass_construction_rural_cotton_plantation"
 	visible = {
 		always = yes
 	}
@@ -531,9 +562,16 @@ je_mass_construction_rural_dye_plantation = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_dye_plantation
+					has_potential_resource = building_cotton_plantation
 				}
-				start_building_construction = building_dye_plantation
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_cotton_plantation
+					}
+				}
 			}
 		}
 	}
@@ -565,9 +603,9 @@ je_mass_desctruction_rural_dye_plantation = {
 	}
 }
 
-je_mass_construction_rural_opium_plantation = {
-	name = "je_mass_construction_rural_opium_plantation"
-	desc = "je_mass_construction_rural_opium_plantation"
+je_mass_construction_rural_dye_plantation = {
+	name = "je_mass_construction_rural_dye_plantation"
+	desc = "je_mass_construction_rural_dye_plantation"
 	visible = {
 		always = yes
 	}
@@ -583,9 +621,16 @@ je_mass_construction_rural_opium_plantation = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_opium_plantation
+					has_potential_resource = building_dye_plantation
 				}
-				start_building_construction = building_opium_plantation
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_dye_plantation
+					}
+				}
 			}
 		}
 	}
@@ -617,14 +662,14 @@ je_mass_desctruction_rural_opium_plantation = {
 	}
 }
 
-je_mass_construction_rural_rubber_plantation = {
-	name = "je_mass_construction_rural_rubber_plantation"
-	desc = "je_mass_construction_rural_rubber_plantation"
+je_mass_construction_rural_opium_plantation = {
+	name = "je_mass_construction_rural_opium_plantation"
+	desc = "je_mass_construction_rural_opium_plantation"
 	visible = {
 		always = yes
 	}
 	possible = {
-		has_technology_researched = vulcanization
+		has_technology_researched = enclosure
 		any_in_list = {
 			variable = mbm_list
 			owner = root
@@ -635,9 +680,16 @@ je_mass_construction_rural_rubber_plantation = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_rubber_plantation
+					has_potential_resource = building_opium_plantation
 				}
-				start_building_construction = building_rubber_plantation
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_opium_plantation
+					}
+				}
 			}
 		}
 	}
@@ -669,14 +721,14 @@ je_mass_desctruction_rural_rubber_plantation = {
 	}
 }
 
-je_mass_construction_rural_silk_plantation = {
-	name = "je_mass_construction_rural_silk_plantation"
-	desc = "je_mass_construction_rural_silk_plantation"
+je_mass_construction_rural_rubber_plantation = {
+	name = "je_mass_construction_rural_rubber_plantation"
+	desc = "je_mass_construction_rural_rubber_plantation"
 	visible = {
 		always = yes
 	}
 	possible = {
-		has_technology_researched = enclosure
+		has_technology_researched = vulcanization
 		any_in_list = {
 			variable = mbm_list
 			owner = root
@@ -687,9 +739,16 @@ je_mass_construction_rural_silk_plantation = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_silk_plantation
+					has_potential_resource = building_rubber_plantation
 				}
-				start_building_construction = building_silk_plantation
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_rubber_plantation
+					}
+				}
 			}
 		}
 	}
@@ -721,9 +780,9 @@ je_mass_desctruction_rural_silk_plantation = {
 	}
 }
 
-je_mass_construction_rural_sugar_plantation = {
-	name = "je_mass_construction_rural_sugar_plantation"
-	desc = "je_mass_construction_rural_sugar_plantation"
+je_mass_construction_rural_silk_plantation = {
+	name = "je_mass_construction_rural_silk_plantation"
+	desc = "je_mass_construction_rural_silk_plantation"
 	visible = {
 		always = yes
 	}
@@ -739,9 +798,16 @@ je_mass_construction_rural_sugar_plantation = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_sugar_plantation
+					has_potential_resource = building_silk_plantation
 				}
-				start_building_construction = building_sugar_plantation
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_silk_plantation
+					}
+				}
 			}
 		}
 	}
@@ -773,9 +839,9 @@ je_mass_desctruction_rural_sugar_plantation = {
 	}
 }
 
-je_mass_construction_rural_tea_plantation = {
-	name = "je_mass_construction_rural_tea_plantation"
-	desc = "je_mass_construction_rural_tea_plantation"
+je_mass_construction_rural_sugar_plantation = {
+	name = "je_mass_construction_rural_sugar_plantation"
+	desc = "je_mass_construction_rural_sugar_plantation"
 	visible = {
 		always = yes
 	}
@@ -791,9 +857,16 @@ je_mass_construction_rural_tea_plantation = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_tea_plantation
+					has_potential_resource = building_sugar_plantation
 				}
-				start_building_construction = building_tea_plantation
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_sugar_plantation
+					}
+				}
 			}
 		}
 	}
@@ -825,9 +898,9 @@ je_mass_desctruction_rural_tea_plantation = {
 	}
 }
 
-je_mass_construction_rural_tobacco_plantation = {
-	name = "je_mass_construction_rural_tobacco_plantation"
-	desc = "je_mass_construction_rural_tobacco_plantation"
+je_mass_construction_rural_tea_plantation = {
+	name = "je_mass_construction_rural_tea_plantation"
+	desc = "je_mass_construction_rural_tea_plantation"
 	visible = {
 		always = yes
 	}
@@ -843,9 +916,16 @@ je_mass_construction_rural_tobacco_plantation = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_tobacco_plantation
+					has_potential_resource = building_tea_plantation
 				}
-				start_building_construction = building_tobacco_plantation
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_tea_plantation
+					}
+				}
 			}
 		}
 	}
@@ -877,13 +957,14 @@ je_mass_desctruction_rural_tobacco_plantation = {
 	}
 }
 
-je_mass_construction_rural_fishing_wharf = {
-	name = "je_mass_construction_rural_fishing_wharf"
-	desc = "je_mass_construction_rural_fishing_wharf"
+je_mass_construction_rural_tobacco_plantation = {
+	name = "je_mass_construction_rural_tobacco_plantation"
+	desc = "je_mass_construction_rural_tobacco_plantation"
 	visible = {
 		always = yes
 	}
 	possible = {
+		has_technology_researched = enclosure
 		any_in_list = {
 			variable = mbm_list
 			owner = root
@@ -894,9 +975,16 @@ je_mass_construction_rural_fishing_wharf = {
 			variable = mbm_list
 			if = {
 				limit = {
-					has_potential_resource = building_fishing_wharf
+					has_potential_resource = building_tobacco_plantation
 				}
-				start_building_construction = building_fishing_wharf
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_tobacco_plantation
+					}
+				}
 			}
 		}
 	}
@@ -928,14 +1016,13 @@ je_mass_desctruction_rural_fishing_wharf = {
 	}
 }
 
-je_mass_construction_rural_whaling_station = {
-	name = "je_mass_construction_rural_whaling_station"
-	desc = "je_mass_construction_rural_whaling_station"
+je_mass_construction_rural_fishing_wharf = {
+	name = "je_mass_construction_rural_fishing_wharf"
+	desc = "je_mass_construction_rural_fishing_wharf"
 	visible = {
 		always = yes
 	}
 	possible = {
-		has_technology_researched = shaft_mining
 		any_in_list = {
 			variable = mbm_list
 			owner = root
@@ -944,7 +1031,19 @@ je_mass_construction_rural_whaling_station = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			start_building_construction = building_whaling_station
+			if = {
+				limit = {
+					has_potential_resource = building_fishing_wharf
+				}
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_fishing_wharf
+					}
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -975,13 +1074,14 @@ je_mass_desctruction_rural_whaling_station = {
 	}
 }
 
-je_mass_construction_rural_logging_camp = {
-	name = "je_mass_construction_rural_logging_camp"
-	desc = "je_mass_construction_rural_logging_camp"
+je_mass_construction_rural_whaling_station = {
+	name = "je_mass_construction_rural_whaling_station"
+	desc = "je_mass_construction_rural_whaling_station"
 	visible = {
 		always = yes
 	}
 	possible = {
+		has_technology_researched = shaft_mining
 		any_in_list = {
 			variable = mbm_list
 			owner = root
@@ -990,7 +1090,19 @@ je_mass_construction_rural_logging_camp = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			start_building_construction = building_logging_camp
+			if = {
+				limit = {
+					has_potential_resource = building_whaling_station
+				}
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_whaling_station
+					}
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -1021,14 +1133,13 @@ je_mass_desctruction_rural_logging_camp = {
 	}
 }
 
-je_mass_construction_rural_coal_mine = {
-	name = "je_mass_construction_rural_coal_mine"
-	desc = "je_mass_construction_rural_coal_mine"
+je_mass_construction_rural_logging_camp = {
+	name = "je_mass_construction_rural_logging_camp"
+	desc = "je_mass_construction_rural_logging_camp"
 	visible = {
 		always = yes
 	}
 	possible = {
-		has_technology_researched = shaft_mining
 		any_in_list = {
 			variable = mbm_list
 			owner = root
@@ -1037,7 +1148,19 @@ je_mass_construction_rural_coal_mine = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			start_building_construction = building_coal_mine
+			if = {
+				limit = {
+					has_potential_resource = building_logging_camp
+				}
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_logging_camp
+					}
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -1068,9 +1191,9 @@ je_mass_desctruction_rural_coal_mine = {
 	}
 }
 
-je_mass_construction_rural_iron_mine = {
-	name = "je_mass_construction_rural_iron_mine"
-	desc = "je_mass_construction_rural_iron_mine"
+je_mass_construction_rural_coal_mine = {
+	name = "je_mass_construction_rural_coal_mine"
+	desc = "je_mass_construction_rural_coal_mine"
 	visible = {
 		always = yes
 	}
@@ -1084,7 +1207,19 @@ je_mass_construction_rural_iron_mine = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			start_building_construction = building_iron_mine
+			if = {
+				limit = {
+					has_potential_resource = building_coal_mine
+				}
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_coal_mine
+					}
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -1115,9 +1250,9 @@ je_mass_desctruction_rural_iron_mine = {
 	}
 }
 
-je_mass_construction_rural_lead_mine = {
-	name = "je_mass_construction_rural_lead_mine"
-	desc = "je_mass_construction_rural_lead_mine"
+je_mass_construction_rural_iron_mine = {
+	name = "je_mass_construction_rural_iron_mine"
+	desc = "je_mass_construction_rural_iron_mine"
 	visible = {
 		always = yes
 	}
@@ -1131,7 +1266,19 @@ je_mass_construction_rural_lead_mine = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			start_building_construction = building_lead_mine
+			if = {
+				limit = {
+					has_potential_resource = building_iron_mine
+				}
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_iron_mine
+					}
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -1162,9 +1309,9 @@ je_mass_desctruction_rural_lead_mine = {
 	}
 }
 
-je_mass_construction_rural_sulfur_mine = {
-	name = "je_mass_construction_rural_sulfur_mine"
-	desc = "je_mass_construction_rural_sulfur_mine"
+je_mass_construction_rural_lead_mine = {
+	name = "je_mass_construction_rural_lead_mine"
+	desc = "je_mass_construction_rural_lead_mine"
 	visible = {
 		always = yes
 	}
@@ -1178,7 +1325,19 @@ je_mass_construction_rural_sulfur_mine = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			start_building_construction = building_sulfur_mine
+			if = {
+				limit = {
+					has_potential_resource = building_lead_mine
+				}
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_lead_mine
+					}
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -1209,9 +1368,9 @@ je_mass_desctruction_rural_sulfur_mine = {
 	}
 }
 
-je_mass_construction_rural_gold_mine = {
-	name = "je_mass_construction_rural_gold_mine"
-	desc = "je_mass_construction_rural_gold_mine"
+je_mass_construction_rural_sulfur_mine = {
+	name = "je_mass_construction_rural_sulfur_mine"
+	desc = "je_mass_construction_rural_sulfur_mine"
 	visible = {
 		always = yes
 	}
@@ -1225,7 +1384,19 @@ je_mass_construction_rural_gold_mine = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			start_building_construction = building_gold_mine
+			if = {
+				limit = {
+					has_potential_resource = building_sulfur_mine
+				}
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_sulfur_mine
+					}
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -1256,14 +1427,14 @@ je_mass_desctruction_rural_gold_mine = {
 	}
 }
 
-je_mass_construction_rural_oil_rig = {
-	name = "je_mass_construction_rural_oil_rig"
-	desc = "je_mass_construction_rural_oil_rig"
+je_mass_construction_rural_gold_mine = {
+	name = "je_mass_construction_rural_gold_mine"
+	desc = "je_mass_construction_rural_gold_mine"
 	visible = {
 		always = yes
 	}
 	possible = {
-		has_technology_researched = pumpjacks
+		has_technology_researched = shaft_mining
 		any_in_list = {
 			variable = mbm_list
 			owner = root
@@ -1272,7 +1443,19 @@ je_mass_construction_rural_oil_rig = {
 	effect = {
 		every_in_list = {
 			variable = mbm_list
-			start_building_construction = building_oil_rig
+			if = {
+				limit = {
+					has_potential_resource = building_gold_mine
+				}
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_gold_mine
+					}
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -1296,6 +1479,42 @@ je_mass_desctruction_rural_oil_rig = {
 		every_in_list = {
 			variable = mbm_list
 			remove_building = building_oil_rig
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_rural_oil_rig = {
+	name = "je_mass_construction_rural_oil_rig"
+	desc = "je_mass_construction_rural_oil_rig"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = pumpjacks
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			if = {
+				limit = {
+					has_potential_resource = building_oil_rig
+				}
+				every_in_list = {
+					variable = mbm_list
+					mass_building = {
+						TARGET = this
+						COUNT = root.var:mbm_count
+						BUILDING = building_oil_rig
+					}
+				}
+			}
 		}
 	}
 	ai_chance = {

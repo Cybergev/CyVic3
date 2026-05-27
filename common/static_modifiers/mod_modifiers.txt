@@ -139,32 +139,12 @@ REPLACE_OR_CREATE:severe_starvation_penalty = {
 REPLACE_OR_CREATE:unemployment_birth_penalty_state = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	state_birth_rate_mult = -0.2
+	state_mortality_mult = 0.4
 }
 
 REPLACE_OR_CREATE:literacy_penalty = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	state_birth_rate_mult = -0.2
-}
-
-REPLACE_OR_CREATE:low_organization = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-	character_advancement_speed_mult = -0.5
-	character_interception_add = -5
-	unit_offense_mult = -0.5
-	unit_defense_mult = -0.5
-	unit_blockade_mult = -0.5
-	unit_morale_recovery_mult = -1
-	unit_morale_damage_mult = -0.5
-	unit_morale_loss_mult = 0.5
-	battle_casualties_mult = 0.5
-	unit_kill_rate_add = -0.5
-	unit_recovery_rate_add = -0.5
-	unit_devastation_mult = 1
-	unit_convoy_raiding_mult = -0.5
-	unit_convoy_defense_mult = -0.5
-	unit_supply_consumption_mult = 1
-	unit_occupation_mult = -1
-	military_formation_movement_speed_mult = -0.5
 }
 
 #STATIC
@@ -222,6 +202,11 @@ REPLACE_OR_CREATE:homeland_expanded = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_assimilation_mult = 0.1
 	state_conversion_mult = 0.1
+}
+
+REPLACE_OR_CREATE:retired_ig_leader = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	interest_group_approval_add = -1
 }
 
 REPLACE_OR_CREATE:purged_ig = {

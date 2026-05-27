@@ -2,16 +2,16 @@
 	texture = "gfx/interface/icons/production_method_icons/wooden_ships.dds"
 	country_modifiers = {
 		workforce_scaled = {
-			country_ship_construction_add = 25
+			country_ship_construction_add = 0.25
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 100
-			goods_input_fabric_add = 100
+			goods_input_wood_add = 2
+			goods_input_fabric_add = 2
 			# output goods
-			goods_output_clippers_add = 50
+			goods_output_clippers_add = 1
 		}
 	}
 }
@@ -23,17 +23,17 @@ REPLACE_OR_CREATE:pm_complex_shipbuilding = {
 	}
 	country_modifiers = {
 		workforce_scaled = {
-			country_ship_construction_add = 50
+			country_ship_construction_add = 0.50
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_hardwood_add = 100
-			goods_input_fabric_add = 100
-			goods_input_engines_add = 100
+			goods_input_hardwood_add = 2
+			goods_input_fabric_add = 2
+			goods_input_engines_add = 1
 			# output goods
-			goods_output_clippers_add = 100
+			goods_output_clippers_add = 2
 		}
 	}
 }
@@ -50,16 +50,16 @@ REPLACE_OR_CREATE:pm_metal_shipbuilding = {
 	}
 	country_modifiers = {
 		workforce_scaled = {
-			country_ship_construction_add = 75
+			country_ship_construction_add = 0.75
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 100
-			goods_input_engines_add = 100
+			goods_input_steel_add = 2
+			goods_input_engines_add = 2
 			# output goods
-			goods_output_steamers_add = 50
+			goods_output_steamers_add = 1
 		}
 	}
 }
@@ -76,17 +76,17 @@ REPLACE_OR_CREATE:pm_arc_welding_shipbuilding = {
 	}
 	country_modifiers = {
 		workforce_scaled = {
-			country_ship_construction_add = 100
+			country_ship_construction_add = 1
 		}
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 200
-			goods_input_engines_add = 200
-			goods_input_electricity_add = 40
+			goods_input_steel_add = 2
+			goods_input_engines_add = 2
+			goods_input_electricity_add = 1
 			# output goods
-			goods_output_steamers_add = 100
+			goods_output_steamers_add = 2
 		}
 	}
 	required_input_goods = electricity

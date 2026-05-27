@@ -814,6 +814,9 @@ law_commercialized_agriculture = {
 	unlocking_technologies = {
 		postal_savings
 	}
+	modifier = {
+		country_financial_districts_buy_farms_likelihood = 1
+	}
 	on_enact = {
 		custom_tooltip = financial_districts_buy_farms_tt
 		if = {

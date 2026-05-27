@@ -150,15 +150,28 @@
 			limit = {
 				exists = c:RUS
 				c:RUS ?= owner
-				OR = {
-					region = sr:region_manchuria
-				}
+				is_in_geographic_region = geographic_region_manchuria_old
 				any_scope_building = {
 					is_building_type = building_railway
 					levels_owned_by_country = {
 						target = c:RUS
 						value < 1
 					}
+				}
+			}
+			add = 10000
+		}
+		if = {
+			# Colonisation of Korea
+			limit = {
+				owner ?= {
+					c:JAP ?= this
+					has_journal_entry = je_colonize_korea
+				}
+				is_in_geographic_region = geographic_region_korea
+				any_scope_building = {
+					is_building_type = building_railway
+					level < 10
 				}
 			}
 			add = 10000
@@ -176,7 +189,9 @@
 					state_goods_pricier > 0.5
 				}
 			}
-			state.market_access < 1
+			state = {
+				infrastructure_delta <= -20
+			}
 		}
 		NOT = {
 			is_under_construction = yes

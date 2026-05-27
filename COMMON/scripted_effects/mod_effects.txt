@@ -986,3 +986,12 @@ REPLACE_OR_CREATE:effect_destroy_all_buildings = {
 	remove_building = building_trade_center
 	remove_building = building_construction_sector
 }
+
+mass_building = {
+	$TARGET$ = {
+		while = {
+			count = $COUNT$
+			start_building_construction = $BUILDING$
+		}
+	}
+}

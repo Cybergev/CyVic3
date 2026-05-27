@@ -1,0 +1,202 @@
+﻿REPLACE:je_caucasian_war_circassia = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_russia_expansion
+	modifiers_while_active = {
+		caucasus_war_defender_circassia
+	}
+	is_shown_when_inactive = {
+		country_has_primary_culture = cu:circassian
+	}
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_KUBAN
+			has_modifier = caucasus_war_attacker
+		}
+	}
+	immediate = {
+		c:RUS ?= {
+			save_scope_as = russia_scope
+		}
+		s:STATE_KUBAN = {
+			save_scope_as = kuban_scope
+		}
+	}
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = caucasian_war_milyutin_loc
+				trigger = {
+					c:RUS ?= {
+						has_variable = milyutin_memorandum_accepted
+					}
+				}
+			}
+			triggered_desc = {
+				desc = caucasian_war_escalated_loc
+				trigger = {
+					OR = {
+						c:RUS ?= {
+							has_variable = escalated_caucasian_war
+						}
+						NAND = {
+							c:CHC ?= {
+								has_truce_with = c:RUS
+							}
+							c:CIR ?= {
+								has_truce_with = c:RUS
+							}
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = caucasian_war_non_escalated_loc
+				trigger = {
+					c:CHC ?= {
+						has_truce_with = c:RUS
+					}
+					c:CIR ?= {
+						has_truce_with = c:RUS
+					}
+				}
+			}
+		}
+	}
+	complete = {
+		c:CIR ?= {
+			any_scope_state = {
+				state_region = s:STATE_KUBAN
+				is_split_state = no
+			}
+		}
+	}
+	on_complete = {
+		trigger_event = {
+			id = caucasuswar_end.2
+		}
+		hidden_effect = {
+			set_variable = honor_and_life_achievement
+		}
+	}
+	event_outcome_completed_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = event_effects_caucasuswar_end.2_tt
+			}
+		}
+	}
+	on_monthly_pulse = {
+		effect = {
+		}
+		random_events = {
+			100 = 0
+			30 = caucasuswar.7
+			10 = caucasuswar.10
+		}
+	}
+	weight = 100
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+REPLACE:je_caucasian_war_imamate = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_russia_expansion
+	modifiers_while_active = {
+		caucasus_war_defender_imamate
+	}
+	is_shown_when_inactive = {
+		OR = {
+			country_has_primary_culture = cu:chechen
+			country_has_primary_culture = cu:north_caucasian
+		}
+	}
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_DAGESTAN
+			has_modifier = caucasus_war_attacker
+		}
+		any_scope_state = {
+			state_region = s:STATE_NORTH_CAUCASUS
+			has_modifier = caucasus_war_attacker
+		}
+	}
+	immediate = {
+		c:RUS ?= {
+			save_scope_as = russia_scope
+		}
+		s:STATE_NORTH_CAUCASUS = {
+			save_scope_as = north_caucasus_scope
+		}
+		s:STATE_DAGESTAN = {
+			save_scope_as = dagestan_scope
+		}
+	}
+	scripted_button = imamate_dispatch_muhammad_amin
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = caucasian_war_milyutin_loc
+				trigger = {
+					c:RUS ?= {
+						has_variable = milyutin_memorandum_accepted
+					}
+				}
+			}
+			triggered_desc = {
+				desc = caucasian_war_escalated_loc
+				trigger = {
+					OR = {
+						c:RUS ?= {
+							has_variable = escalated_caucasian_war
+						}
+						NAND = {
+							c:CHC ?= {
+								has_truce_with = c:RUS
+							}
+							c:CIR ?= {
+								has_truce_with = c:RUS
+							}
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = caucasian_war_non_escalated_loc
+				trigger = {
+					c:CHC ?= {
+						has_truce_with = c:RUS
+					}
+					c:CIR ?= {
+						has_truce_with = c:RUS
+					}
+				}
+			}
+		}
+	}
+	complete = {
+		c:CHC ?= {
+			any_scope_state = {
+				state_region = s:STATE_DAGESTAN
+				is_split_state = no
+			}
+			any_scope_state = {
+				state_region = s:STATE_NORTH_CAUCASUS
+				is_split_state = no
+			}
+		}
+	}
+	event_outcome_completed_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = event_effects_caucasuswar_end.5_tt
+			}
+		}
+	}
+	on_complete = {
+		trigger_event = {
+			id = caucasuswar_end.5
+		}
+	}
+	weight = 100
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
