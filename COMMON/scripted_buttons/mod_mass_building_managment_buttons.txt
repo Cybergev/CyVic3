@@ -186,11 +186,6 @@ je_mass_building_managment_button_7 = {
 			}
 		}
 	}
-	possible = {
-		any_scope_state = {
-			has_decree = mass_building_managment_target
-		}
-	}
 	ai_chance = {
 		value = 0
 	}
@@ -201,6 +196,11 @@ je_mass_building_managment_button_8 = {
 	desc = "je_mass_building_managment_button_8"
 	visible = {
 		always = yes
+	}
+	possible = {
+		any_scope_state = {
+			has_decree = mass_building_managment_target
+		}
 	}
 	effect = {
 		every_scope_state = {
@@ -410,6 +410,12 @@ je_mass_building_managment_button_16 = {
 				name = mbm_count
 				subtract = 1
 			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -431,6 +437,21 @@ je_mass_building_managment_button_17 = {
 			change_variable = {
 				name = mbm_count
 				add = 1
+			}
+			if = {
+				limit = {
+					root.var:mbm_count > 1000 
+				}
+				set_variable = {
+					name = mbm_count
+					value = 1000
+				}
+			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
 			}
 		}
 	}
@@ -454,6 +475,12 @@ je_mass_building_managment_button_18 = {
 				name = mbm_count
 				subtract = 2
 			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -475,6 +502,21 @@ je_mass_building_managment_button_19 = {
 			change_variable = {
 				name = mbm_count
 				add = 2
+			}
+			if = {
+				limit = {
+					root.var:mbm_count > 1000 
+				}
+				set_variable = {
+					name = mbm_count
+					value = 1000
+				}
+			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
 			}
 		}
 	}
@@ -498,6 +540,12 @@ je_mass_building_managment_button_20 = {
 				name = mbm_count
 				subtract = 5
 			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -519,6 +567,21 @@ je_mass_building_managment_button_21 = {
 			change_variable = {
 				name = mbm_count
 				add = 5
+			}
+			if = {
+				limit = {
+					root.var:mbm_count > 1000 
+				}
+				set_variable = {
+					name = mbm_count
+					value = 1000
+				}
+			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
 			}
 		}
 	}
@@ -542,6 +605,12 @@ je_mass_building_managment_button_22 = {
 				name = mbm_count
 				subtract = 10
 			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -563,6 +632,21 @@ je_mass_building_managment_button_23 = {
 			change_variable = {
 				name = mbm_count
 				add = 10
+			}
+			if = {
+				limit = {
+					root.var:mbm_count > 1000 
+				}
+				set_variable = {
+					name = mbm_count
+					value = 1000
+				}
+			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
 			}
 		}
 	}
@@ -586,6 +670,12 @@ je_mass_building_managment_button_24 = {
 				name = mbm_count
 				subtract = 20
 			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -607,6 +697,21 @@ je_mass_building_managment_button_25 = {
 			change_variable = {
 				name = mbm_count
 				add = 20
+			}
+			if = {
+				limit = {
+					root.var:mbm_count > 1000 
+				}
+				set_variable = {
+					name = mbm_count
+					value = 1000
+				}
+			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
 			}
 		}
 	}
@@ -630,6 +735,12 @@ je_mass_building_managment_button_26 = {
 				name = mbm_count
 				subtract = 50
 			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -651,6 +762,21 @@ je_mass_building_managment_button_27 = {
 			change_variable = {
 				name = mbm_count
 				add = 50
+			}
+			if = {
+				limit = {
+					root.var:mbm_count > 1000 
+				}
+				set_variable = {
+					name = mbm_count
+					value = 1000
+				}
+			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
 			}
 		}
 	}
@@ -674,6 +800,12 @@ je_mass_building_managment_button_28 = {
 				name = mbm_count
 				subtract = 100
 			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
+			}
 		}
 	}
 	ai_chance = {
@@ -694,7 +826,22 @@ je_mass_building_managment_button_29 = {
 		root = {
 			change_variable = {
 				name = mbm_count
-				add = 50
+				add = 100
+			}
+			if = {
+				limit = {
+					root.var:mbm_count > 1000 
+				}
+				set_variable = {
+					name = mbm_count
+					value = 1000
+				}
+			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
 			}
 		}
 	}

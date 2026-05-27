@@ -1,0 +1,9 @@
+﻿mbm_count_bar = {
+	name = "mbm_count_bar"
+	desc = "mbm_count_bar_desc"
+	second_desc = "mbm_count_bar_second_desc"
+	default = yes
+	start_value = 0
+	min_value = 0
+	max_value = 1000
+}

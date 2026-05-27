@@ -17,6 +17,12 @@
 				name = mbm_count
 				value = 1
 			}
+			je:je_mass_building_managment = {
+				set_bar_progress = {
+					name = mbm_count_bar
+					value = root.var:mbm_count
+				}
+			}
 			add_journal_entry = {
 				type = je_mass_building_managment_development
 			}
@@ -57,6 +63,7 @@
 	scripted_button = je_mass_building_managment_button_27
 	scripted_button = je_mass_building_managment_button_28
 	scripted_button = je_mass_building_managment_button_29
+	scripted_progress_bar = mbm_count_bar
 	weight = 100010
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }
