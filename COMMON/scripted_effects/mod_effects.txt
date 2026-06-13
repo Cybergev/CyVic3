@@ -205,9 +205,9 @@
 	}
 	if = {
 		limit = {
-			has_ideology = ideology:ideology_stratocratic
+			has_ideology = ideology:ideology_hierarchic
 		}
-		remove_ideology = ideology_stratocratic
+		remove_ideology = ideology_hierarchic
 	}
 	if = {
 		limit = {
@@ -985,6 +985,68 @@ REPLACE_OR_CREATE:effect_destroy_all_buildings = {
 	remove_building = building_railway
 	remove_building = building_trade_center
 	remove_building = building_construction_sector
+}
+
+set_mbm_count = {
+	set_variable = {
+		name = mbm_count
+		value = $SET_VALUE$
+	}
+	if = {
+		limit = {
+			root.var:mbm_count < 0
+		}
+		set_variable = {
+			name = mbm_count
+			value = 0
+		}
+	}
+	else_if = {
+		limit = {
+			root.var:mbm_count > 1000
+		}
+		set_variable = {
+			name = mbm_count
+			value = 1000
+		}
+	}
+	je:je_mass_building_managment = {
+		set_bar_progress = {
+			name = mbm_count_bar
+			value = root.var:mbm_count
+		}
+	}
+}
+
+change_mbm_count = {
+	change_variable = {
+		name = mbm_count
+		add = $CHANGE_VALUE$
+	}
+	if = {
+		limit = {
+			root.var:mbm_count < 0
+		}
+		set_variable = {
+			name = mbm_count
+			value = 0
+		}
+	}
+	else_if = {
+		limit = {
+			root.var:mbm_count > 1000
+		}
+		set_variable = {
+			name = mbm_count
+			value = 1000
+		}
+	}
+	je:je_mass_building_managment = {
+		set_bar_progress = {
+			name = mbm_count_bar
+			value = root.var:mbm_count
+		}
+	}
 }
 
 mass_building = {

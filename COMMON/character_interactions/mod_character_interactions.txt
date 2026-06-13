@@ -1161,8 +1161,8 @@ REPLACE_OR_CREATE:grant_leadership = {
 		}
 		trigger_if = {
 			limit = {
-				owner ?= {
-					has_law_or_variant_or_variant = law_type:law_state_atheism
+				owner = {
+					has_law_or_variant = law_type:law_state_atheism
 				}
 			}
 			nor = {
@@ -1176,7 +1176,9 @@ REPLACE_OR_CREATE:grant_leadership = {
 			limit = {
 				is_female = yes
 			}
-			has_law_or_variant = law_type:law_womens_suffrage
+			owner = {
+				has_law_or_variant = law_type:law_womens_suffrage
+			}
 		}
 	}
 	effect = {
@@ -1412,6 +1414,7 @@ REPLACE_OR_CREATE:grant_admiral = {
 			limit = {
 				is_ruler_of_own_country = yes
 			}
+			ruler_can_have_command = yes
 			NOT = {
 				has_role_of_type = admiral
 			}
@@ -1430,7 +1433,9 @@ REPLACE_OR_CREATE:grant_admiral = {
 			limit = {
 				is_female = yes
 			}
-			has_law_or_variant = law_type:law_womens_suffrage
+			owner = {
+				has_law_or_variant = law_type:law_womens_suffrage
+			}
 		}
 	}
 	effect = {
@@ -1496,6 +1501,7 @@ REPLACE_OR_CREATE:grant_general = {
 			limit = {
 				is_ruler_of_own_country = yes
 			}
+			ruler_can_have_command = yes
 			NOT = {
 				has_role_of_type = general
 			}
@@ -1514,7 +1520,9 @@ REPLACE_OR_CREATE:grant_general = {
 			limit = {
 				is_female = yes
 			}
-			has_law_or_variant = law_type:law_womens_suffrage
+			owner = {
+				has_law_or_variant = law_type:law_womens_suffrage
+			}
 		}
 	}
 	effect = {

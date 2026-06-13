@@ -11,6 +11,7 @@ REPLACE:ig_trait_secular_shrine_theory = {
 	icon = "gfx/interface/icons/ig_trait_icons/divine_right.dds"
 	min_approval = happy
 	modifier = {
+		interest_group_in_government_attraction_mult = 0.25
 		country_radicals_from_legitimacy_mult = -0.25
 		country_loyalists_from_legitimacy_mult = 0.25
 	}

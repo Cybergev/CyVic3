@@ -473,6 +473,62 @@ je_mass_construction_development_port = {
 	}
 }
 
+je_mass_desctruction_urban_shipyard = {
+	name = "je_mass_desctruction_urban_shipyard"
+	desc = "je_mass_desctruction_urban_shipyard"
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			remove_building = building_shipyard
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+je_mass_construction_urban_shipyard = {
+	name = "je_mass_construction_urban_shipyard"
+	desc = "je_mass_construction_urban_shipyard"
+	visible = {
+		always = yes
+	}
+	possible = {
+		has_technology_researched = navigation
+		any_in_list = {
+			variable = mbm_list
+			owner = root
+		}
+	}
+	effect = {
+		every_in_list = {
+			variable = mbm_list
+			if = {
+				limit = {
+					is_coastal = yes
+				}
+				mass_building = {
+					TARGET = this
+					COUNT = root.var:mbm_count
+					BUILDING = building_shipyard
+				}
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
 je_mass_desctruction_development_power_plant = {
 	name = "je_mass_desctruction_development_power_plant"
 	desc = "je_mass_desctruction_development_power_plant"

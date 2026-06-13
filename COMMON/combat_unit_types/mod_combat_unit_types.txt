@@ -7,11 +7,13 @@
 REPLACE:combat_unit_type_irregular_infantry = {
 	group = combat_unit_group_infantry
 	max_manpower = 1000
+	supply_capacity = 10
 	conscript_peasant_levies = yes
 	battle_modifier = {
 		unit_offense_add = 5
 		unit_defense_add = 5
 		unit_morale_loss_add = 10
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	upkeep_modifier = {
 	}
@@ -67,6 +69,7 @@ REPLACE:combat_unit_type_irregular_infantry = {
 REPLACE:combat_unit_type_line_infantry = {
 	group = combat_unit_group_infantry
 	max_manpower = 1000
+	supply_capacity = 20
 	conscript_peasant_levies = yes
 	upkeep_modifier = {
 		goods_input_small_arms_add = 2
@@ -76,6 +79,7 @@ REPLACE:combat_unit_type_line_infantry = {
 		unit_offense_add = 10
 		unit_defense_add = 10
 		unit_morale_loss_add = 9
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	unlocking_technologies = {
 		line_infantry
@@ -120,6 +124,7 @@ REPLACE:combat_unit_type_line_infantry = {
 REPLACE:combat_unit_type_skirmish_infantry = {
 	group = combat_unit_group_infantry
 	max_manpower = 1000
+	supply_capacity = 40
 	conscript_peasant_levies = yes
 	upkeep_modifier = {
 		goods_input_small_arms_add = 4
@@ -129,6 +134,7 @@ REPLACE:combat_unit_type_skirmish_infantry = {
 		unit_offense_add = 20
 		unit_defense_add = 20
 		unit_morale_loss_add = 8
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	unlocking_technologies = {
 		general_staff
@@ -173,6 +179,7 @@ REPLACE:combat_unit_type_skirmish_infantry = {
 REPLACE:combat_unit_type_trench_infantry = {
 	group = combat_unit_group_infantry
 	max_manpower = 1000
+	supply_capacity = 60
 	conscript_peasant_levies = yes
 	upkeep_modifier = {
 		goods_input_small_arms_add = 6
@@ -182,6 +189,7 @@ REPLACE:combat_unit_type_trench_infantry = {
 		unit_offense_add = 30
 		unit_defense_add = 30
 		unit_morale_loss_add = 7
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	unlocking_technologies = {
 		trench_works
@@ -226,6 +234,7 @@ REPLACE:combat_unit_type_trench_infantry = {
 REPLACE:combat_unit_type_squad_infantry = {
 	group = combat_unit_group_infantry
 	max_manpower = 1000
+	supply_capacity = 80
 	conscript_peasant_levies = yes
 	upkeep_modifier = {
 		goods_input_small_arms_add = 8
@@ -236,6 +245,7 @@ REPLACE:combat_unit_type_squad_infantry = {
 		unit_offense_add = 40
 		unit_defense_add = 40
 		unit_morale_loss_add = 6
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	unlocking_technologies = {
 		nco_training
@@ -280,6 +290,7 @@ REPLACE:combat_unit_type_squad_infantry = {
 REPLACE:combat_unit_type_mechanized_infantry = {
 	group = combat_unit_group_infantry
 	max_manpower = 1000
+	supply_capacity = 100
 	upkeep_modifier = {
 		goods_input_oil_add = 10
 		goods_input_ammunition_add = 10
@@ -292,6 +303,7 @@ REPLACE:combat_unit_type_mechanized_infantry = {
 		unit_offense_add = 50
 		unit_defense_add = 50
 		unit_morale_loss_add = 5
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	unlocking_technologies = {
 		mobile_armor
@@ -337,6 +349,7 @@ REPLACE:combat_unit_type_mechanized_infantry = {
 REPLACE:combat_unit_type_cannon_artillery = {
 	group = combat_unit_group_artillery
 	max_manpower = 1000
+	supply_capacity = 10
 	upkeep_modifier = {
 		goods_input_explosives_add = 2
 		goods_input_artillery_add = 2
@@ -348,6 +361,7 @@ REPLACE:combat_unit_type_cannon_artillery = {
 		unit_morale_damage_mult = 0.2
 		unit_kill_rate_add = 0.1
 		unit_devastation_mult = 0.1
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	formation_modifier = {
 		military_formation_mobilization_speed_mult = -0.25
@@ -395,6 +409,7 @@ REPLACE:combat_unit_type_cannon_artillery = {
 REPLACE:combat_unit_type_mobile_artillery = {
 	group = combat_unit_group_artillery
 	max_manpower = 1000
+	supply_capacity = 20
 	upkeep_modifier = {
 		goods_input_explosives_add = 2
 		goods_input_artillery_add = 4
@@ -406,6 +421,7 @@ REPLACE:combat_unit_type_mobile_artillery = {
 		unit_morale_damage_mult = 0.2
 		unit_kill_rate_add = 0.2
 		unit_devastation_mult = 0.2
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	formation_modifier = {
 		military_formation_mobilization_speed_mult = -0.25
@@ -453,6 +469,7 @@ REPLACE:combat_unit_type_mobile_artillery = {
 REPLACE:combat_unit_type_shrapnel_artillery = {
 	group = combat_unit_group_artillery
 	max_manpower = 1000
+	supply_capacity = 30
 	upkeep_modifier = {
 		goods_input_artillery_add = 6
 		goods_input_ammunition_add = 6
@@ -464,6 +481,7 @@ REPLACE:combat_unit_type_shrapnel_artillery = {
 		unit_morale_damage_mult = 0.3
 		unit_kill_rate_add = 0.3
 		unit_devastation_mult = 0.3
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	formation_modifier = {
 		military_formation_mobilization_speed_mult = -0.25
@@ -511,6 +529,7 @@ REPLACE:combat_unit_type_shrapnel_artillery = {
 REPLACE:combat_unit_type_siege_artillery = {
 	group = combat_unit_group_artillery
 	max_manpower = 1000
+	supply_capacity = 40
 	upkeep_modifier = {
 		goods_input_artillery_add = 8
 		goods_input_ammunition_add = 8
@@ -523,6 +542,7 @@ REPLACE:combat_unit_type_siege_artillery = {
 		unit_morale_damage_mult = 0.4
 		unit_kill_rate_add = 0.4
 		unit_devastation_mult = 0.4
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	formation_modifier = {
 		military_formation_mobilization_speed_mult = -0.25
@@ -570,6 +590,7 @@ REPLACE:combat_unit_type_siege_artillery = {
 REPLACE:combat_unit_type_heavy_tank = {
 	group = combat_unit_group_artillery
 	max_manpower = 1000
+	supply_capacity = 50
 	upkeep_modifier = {
 		goods_input_oil_add = 10
 		goods_input_ammunition_add = 10
@@ -584,6 +605,7 @@ REPLACE:combat_unit_type_heavy_tank = {
 		unit_morale_damage_mult = 0.5
 		unit_kill_rate_add = 0.5
 		unit_devastation_mult = 0.5
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	formation_modifier = {
 		military_formation_mobilization_speed_mult = -0.25
@@ -607,6 +629,7 @@ REPLACE:combat_unit_type_heavy_tank = {
 REPLACE:combat_unit_type_hussars = {
 	group = combat_unit_group_cavalry
 	max_manpower = 1000
+	supply_capacity = 10
 	upkeep_modifier = {
 		goods_input_grain_add = 2
 		goods_input_small_arms_add = 2
@@ -616,6 +639,7 @@ REPLACE:combat_unit_type_hussars = {
 		unit_defense_add = 10
 		unit_morale_loss_add = 7.5
 		unit_occupation_mult = 0.1
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	formation_modifier = {
 		military_formation_movement_speed_mult = 0.25
@@ -663,6 +687,7 @@ REPLACE:combat_unit_type_hussars = {
 REPLACE:combat_unit_type_dragoons = {
 	group = combat_unit_group_cavalry
 	max_manpower = 1000
+	supply_capacity = 20
 	upkeep_modifier = {
 		goods_input_grain_add = 4
 		goods_input_small_arms_add = 4
@@ -673,7 +698,7 @@ REPLACE:combat_unit_type_dragoons = {
 		unit_defense_add = 20
 		unit_morale_loss_add = 5.5
 		unit_occupation_mult = 0.2
-		#should get modifiers to mobile/surprise battle conditions appearing
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	formation_modifier = {
 		military_formation_movement_speed_mult = 0.25
@@ -721,6 +746,7 @@ REPLACE:combat_unit_type_dragoons = {
 REPLACE:combat_unit_type_cuirassiers = {
 	group = combat_unit_group_cavalry
 	max_manpower = 1000
+	supply_capacity = 30
 	upkeep_modifier = {
 		goods_input_grain_add = 6
 		goods_input_small_arms_add = 6
@@ -731,6 +757,7 @@ REPLACE:combat_unit_type_cuirassiers = {
 		unit_defense_add = 30
 		unit_morale_loss_add = 4.5
 		unit_occupation_mult = 0.3
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	formation_modifier = {
 		military_formation_movement_speed_mult = 0.25
@@ -778,6 +805,7 @@ REPLACE:combat_unit_type_cuirassiers = {
 REPLACE:combat_unit_type_lancers = {
 	group = combat_unit_group_cavalry
 	max_manpower = 1000
+	supply_capacity = 40
 	upkeep_modifier = {
 		goods_input_grain_add = 8
 		goods_input_small_arms_add = 8
@@ -790,6 +818,7 @@ REPLACE:combat_unit_type_lancers = {
 		unit_kill_rate_add = 0.05
 		unit_morale_loss_mult = 0.05
 		unit_occupation_mult = 0.4
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	formation_modifier = {
 		military_formation_movement_speed_mult = 0.25
@@ -837,6 +866,7 @@ REPLACE:combat_unit_type_lancers = {
 REPLACE:combat_unit_type_light_tanks = {
 	group = combat_unit_group_cavalry
 	max_manpower = 1000
+	supply_capacity = 50
 	upkeep_modifier = {
 		goods_input_oil_add = 10
 		goods_input_ammunition_add = 10
@@ -849,6 +879,7 @@ REPLACE:combat_unit_type_light_tanks = {
 		unit_defense_add = 50
 		unit_morale_loss_add = 2.5
 		unit_occupation_mult = 0.5
+		unit_naval_invasion_efficiency_mult = -0.25
 	}
 	formation_modifier = {
 		military_formation_movement_speed_mult = 0.25
@@ -865,5 +896,90 @@ REPLACE:combat_unit_type_light_tanks = {
 		combat_unit_type_dragoons
 		combat_unit_type_cuirassiers
 		combat_unit_type_lancers
+	}
+}
+
+### marines
+REPLACE:combat_unit_type_low_tier_marines = {
+	group = combat_unit_group_marines
+	max_manpower = 1000
+	supply_capacity = 25
+	conscript_peasant_levies = yes
+	upkeep_modifier = {
+		goods_input_small_arms_add = 2.5
+	}
+	battle_modifier = {
+		unit_offense_add = 10
+		unit_defense_add = 10
+		unit_morale_loss_add = 10
+		# no naval invasion efficiency loss
+	}
+	unlocking_technologies = {
+		line_infantry
+	}
+	combat_unit_image = {
+		# fallback
+		texture = "gfx/unit_illustrations/marines_eu_low.dds"
+	}
+	upgrades = {
+		combat_unit_type_mid_tier_marines
+		combat_unit_type_high_tier_marines
+	}
+}
+
+REPLACE:combat_unit_type_mid_tier_marines = {
+	group = combat_unit_group_marines
+	max_manpower = 1000
+	supply_capacity = 50
+	conscript_peasant_levies = yes
+	upkeep_modifier = {
+		goods_input_small_arms_add = 5
+		goods_input_ammunition_add = 5
+	}
+	battle_modifier = {
+		unit_offense_add = 25
+		unit_defense_add = 25
+		unit_morale_loss_add = 7.5
+		# no naval invasion efficiency loss
+	}
+	unlocking_technologies = {
+		power_of_the_purse
+	}
+	combat_unit_image = {
+		# fallback
+		texture = "gfx/unit_illustrations/marines_eu_mid.dds"
+	}
+	upgrades = {
+		combat_unit_type_low_tier_marines
+		combat_unit_type_high_tier_marines
+	}
+}
+
+REPLACE:combat_unit_type_high_tier_marines = {
+	group = combat_unit_group_marines
+	max_manpower = 1000
+	supply_capacity = 100
+	conscript_peasant_levies = yes
+	upkeep_modifier = {
+		goods_input_small_arms_add = 10
+		goods_input_artillery_add = 10
+		goods_input_ammunition_add = 10
+	}
+	battle_modifier = {
+		unit_offense_add = 50
+		unit_defense_add = 50
+		unit_morale_loss_add = 5
+		# no naval invasion efficiency loss
+	}
+	unlocking_technologies = {
+		landing_craft
+	}
+	combat_unit_image = {
+		# fallback
+		texture = "gfx/unit_illustrations/marines_eu_high.dds"
+	}
+	upgrades = {
+		combat_unit_type_low_tier_marines
+		combat_unit_type_mid_tier_marines
 	}
 }

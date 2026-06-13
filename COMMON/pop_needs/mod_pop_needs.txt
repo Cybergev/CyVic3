@@ -226,13 +226,13 @@ REPLACE:popneed_crude_items = {
 	}
 	entry = {
 		goods = hardwood
-		weight = 1
+		weight = 2
 		max_supply_share = 1
 		min_supply_share = 0
 	}
 	entry = {
 		goods = glass
-		weight = 1
+		weight = 3
 		max_supply_share = 1
 		min_supply_share = 0
 	}
@@ -242,13 +242,13 @@ REPLACE:popneed_household_items = {
 	default = furniture
 	entry = {
 		goods = furniture
-		weight = 1
+		weight = 2
 		max_supply_share = 1
 		min_supply_share = 0
 	}
 	entry = {
 		goods = luxury_furniture
-		weight = 2
+		weight = 3
 		max_supply_share = 1
 		min_supply_share = 0
 	}
@@ -366,7 +366,7 @@ REPLACE:popneed_communication = {
 	}
 	entry = {
 		goods = telephones
-		weight = 2
+		weight = 3
 		max_supply_share = 1
 		min_supply_share = 0
 	}

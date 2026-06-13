@@ -4,7 +4,7 @@
 	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
 	category = society
 	modifier = {
-		state_infrastructure_from_population_add = 1
+		state_infrastructure_from_population_add = 2
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 10
 		country_max_weekly_construction_progress_add = 10
@@ -19,7 +19,7 @@ REPLACE_OR_CREATE:urban_planning = {
 	texture = "gfx/interface/icons/invention_icons/urban_planning.dds"
 	category = society
 	modifier = {
-		state_infrastructure_from_population_add = 1
+		state_infrastructure_from_population_add = 2
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 10
 		country_max_weekly_construction_progress_add = 10
@@ -29,6 +29,28 @@ REPLACE_OR_CREATE:urban_planning = {
 	}
 	ai_weight = {
 		value = 2		# Important in general
+	}
+}
+
+REPLACE_OR_CREATE:centralization = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/centralization.dds"
+	category = society
+	modifier = {
+		country_institution_home_affairs_max_investment_add = 1
+		state_incorporation_speed_mult = 0.05
+	}
+	unlocking_technologies = {
+		tech_bureaucracy
+	}
+	ai_weight = {
+		value = 1.5		# Important in general
+		if = {
+			limit = {
+				has_journal_entry = je_age_of_princes
+			}
+			add = 20
+		}
 	}
 }
 
@@ -153,7 +175,7 @@ REPLACE_OR_CREATE:modern_sewerage = {
 	texture = "gfx/interface/icons/invention_icons/modern_sewerage.dds"
 	category = society
 	modifier = {
-		state_infrastructure_from_population_add = 1
+		state_infrastructure_from_population_add = 2
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 10
 		country_max_weekly_construction_progress_add = 10
@@ -174,7 +196,7 @@ REPLACE_OR_CREATE:steel_frame_buildings = {
 	texture = "gfx/interface/icons/invention_icons/steel_frame_buildings.dds"
 	category = society
 	modifier = {
-		state_infrastructure_from_population_add = 1
+		state_infrastructure_from_population_add = 2
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 10
 		country_max_weekly_construction_progress_add = 10
@@ -194,7 +216,7 @@ REPLACE_OR_CREATE:elevator = {
 	texture = "gfx/interface/icons/invention_icons/elevator.dds"
 	category = society
 	modifier = {
-		state_infrastructure_from_population_add = 1
+		state_infrastructure_from_population_add = 2
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 10
 		country_max_weekly_construction_progress_add = 10
@@ -265,6 +287,7 @@ REPLACE_OR_CREATE:central_planning = {
 	category = society
 	modifier = {
 		state_tax_capacity_add = 25
+		state_incorporation_speed_mult = 0.05
 	}
 	unlocking_technologies = {
 		identification_documents
@@ -299,6 +322,7 @@ REPLACE_OR_CREATE:modern_financial_instruments = {
 	modifier = {
 		country_minting_mult = 0.1
 		country_loan_interest_rate_add = -0.02
+		state_max_trade_advantage_from_capacity_add = 0.5
 	}
 	unlocking_technologies = {
 		international_exchange_standards

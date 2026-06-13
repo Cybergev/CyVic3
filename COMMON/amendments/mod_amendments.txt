@@ -109,3 +109,37 @@ REPLACE_OR_CREATE:amendment_generic_sponsor_polstr_increase_negotiation_3 = {
 	}
 	amendment_activism_multiplier = 0.5
 }
+
+#PECISAL==================
+REPLACE_OR_CREATE:amendment_prussian_education = {
+	parent = law_public_schools
+	allowed_laws = {
+		law_religious_schools
+		law_private_schools
+		law_public_schools
+	}
+	modifier = {
+		interest_group_in_government_attraction_mult = 0.25
+		country_radicals_from_legitimacy_mult = -0.25
+		country_loyalists_from_legitimacy_mult = 0.25
+	}
+	possible = {
+		always = yes
+	}
+	would_sponsor = {
+		AND = {
+			exists = scope:approval
+			scope:approval > 0
+		}
+	}
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			interest_group_has_socialist_ideology = yes
+		}
+	}
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+	amendment_activism_multiplier = 0.25
+}

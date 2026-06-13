@@ -132,3 +132,11 @@ building_goods_output_mult = {
 		ai_value = 0
 	}
 }
+
+country_ship_construction_add = {
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}

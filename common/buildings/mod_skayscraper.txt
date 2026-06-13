@@ -7,9 +7,8 @@
 	production_method_groups = {
 		pmg_airship_mooring_post
 		pmg_base_building_skyscraper
-		pmg_base_building_government_administration
-		pmg_government_administration_bureaucrat_professionalism
-		pmg_government_administration_religious_administration
+		pmg_skyscraper_bureaucrat_professionalism
+		pmg_skyscraper_religious_administration
 	}
 	icon = "gfx/interface/icons/building_icons/skyscraper.dds"
 	required_construction = construction_cost_monument

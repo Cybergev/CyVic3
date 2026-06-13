@@ -227,17 +227,16 @@ je_mass_building_managment_button_9 = {
 		always = yes
 	}
 	possible = {
-		NAND = {
-			has_variable = mbm_count
-			var:mbm_count = 1
+		hidden_trigger = {
+			NAND = {
+				has_variable = mbm_count
+				var:mbm_count = 1
+			}
 		}
 	}
 	effect = {
-		root = {
-			set_variable = {
-				name = mbm_count
-				value = 1
-			}
+		set_mbm_count = {
+			SET_VALUE = 1
 		}
 	}
 	ai_chance = {
@@ -252,17 +251,16 @@ je_mass_building_managment_button_10 = {
 		always = yes
 	}
 	possible = {
-		NAND = {
-			has_variable = mbm_count
-			var:mbm_count = 2
+		hidden_trigger = {
+			NAND = {
+				has_variable = mbm_count
+				var:mbm_count = 2
+			}
 		}
 	}
 	effect = {
-		root = {
-			set_variable = {
-				name = mbm_count
-				value = 2
-			}
+		set_mbm_count = {
+			SET_VALUE = 2
 		}
 	}
 	ai_chance = {
@@ -277,17 +275,16 @@ je_mass_building_managment_button_11 = {
 		always = yes
 	}
 	possible = {
-		NAND = {
-			has_variable = mbm_count
-			var:mbm_count = 5
+		hidden_trigger = {
+			NAND = {
+				has_variable = mbm_count
+				var:mbm_count = 5
+			}
 		}
 	}
 	effect = {
-		root = {
-			set_variable = {
-				name = mbm_count
-				value = 5
-			}
+		set_mbm_count = {
+			SET_VALUE = 5
 		}
 	}
 	ai_chance = {
@@ -302,17 +299,16 @@ je_mass_building_managment_button_12 = {
 		always = yes
 	}
 	possible = {
-		NAND = {
-			has_variable = mbm_count
-			var:mbm_count = 10
+		hidden_trigger = {
+			NAND = {
+				has_variable = mbm_count
+				var:mbm_count = 10
+			}
 		}
 	}
 	effect = {
-		root = {
-			set_variable = {
-				name = mbm_count
-				value = 10
-			}
+		set_mbm_count = {
+			SET_VALUE = 10
 		}
 	}
 	ai_chance = {
@@ -327,17 +323,16 @@ je_mass_building_managment_button_13 = {
 		always = yes
 	}
 	possible = {
-		NAND = {
-			has_variable = mbm_count
-			var:mbm_count = 20
+		hidden_trigger = {
+			NAND = {
+				has_variable = mbm_count
+				var:mbm_count = 20
+			}
 		}
 	}
 	effect = {
-		root = {
-			set_variable = {
-				name = mbm_count
-				value = 20
-			}
+		set_mbm_count = {
+			SET_VALUE = 20
 		}
 	}
 	ai_chance = {
@@ -352,17 +347,16 @@ je_mass_building_managment_button_14 = {
 		always = yes
 	}
 	possible = {
-		NAND = {
-			has_variable = mbm_count
-			var:mbm_count = 50
+		hidden_trigger = {
+			NAND = {
+				has_variable = mbm_count
+				var:mbm_count = 50
+			}
 		}
 	}
 	effect = {
-		root = {
-			set_variable = {
-				name = mbm_count
-				value = 50
-			}
+		set_mbm_count = {
+			SET_VALUE = 50
 		}
 	}
 	ai_chance = {
@@ -377,17 +371,16 @@ je_mass_building_managment_button_15 = {
 		always = yes
 	}
 	possible = {
-		NAND = {
-			has_variable = mbm_count
-			var:mbm_count = 100
+		hidden_trigger = {
+			NAND = {
+				has_variable = mbm_count
+				var:mbm_count = 100
+			}
 		}
 	}
 	effect = {
-		root = {
-			set_variable = {
-				name = mbm_count
-				value = 100
-			}
+		set_mbm_count = {
+			SET_VALUE = 100
 		}
 	}
 	ai_chance = {
@@ -402,20 +395,13 @@ je_mass_building_managment_button_16 = {
 		always = yes
 	}
 	possible = {
-		var:mbm_count >= 0
+		hidden_trigger = {
+			var:mbm_count >= 0
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				subtract = 1
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = -1
 		}
 	}
 	ai_chance = {
@@ -430,29 +416,13 @@ je_mass_building_managment_button_17 = {
 		always = yes
 	}
 	possible = {
-		has_variable = mbm_count
+		hidden_trigger = {
+			has_variable = mbm_count
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				add = 1
-			}
-			if = {
-				limit = {
-					root.var:mbm_count > 1000 
-				}
-				set_variable = {
-					name = mbm_count
-					value = 1000
-				}
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = 1
 		}
 	}
 	ai_chance = {
@@ -467,20 +437,13 @@ je_mass_building_managment_button_18 = {
 		always = yes
 	}
 	possible = {
-		var:mbm_count >= 2
+		hidden_trigger = {
+			var:mbm_count >= 2
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				subtract = 2
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = -2
 		}
 	}
 	ai_chance = {
@@ -495,29 +458,13 @@ je_mass_building_managment_button_19 = {
 		always = yes
 	}
 	possible = {
-		has_variable = mbm_count
+		hidden_trigger = {
+			has_variable = mbm_count
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				add = 2
-			}
-			if = {
-				limit = {
-					root.var:mbm_count > 1000 
-				}
-				set_variable = {
-					name = mbm_count
-					value = 1000
-				}
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = 2
 		}
 	}
 	ai_chance = {
@@ -532,20 +479,13 @@ je_mass_building_managment_button_20 = {
 		always = yes
 	}
 	possible = {
-		var:mbm_count >= 5
+		hidden_trigger = {
+			var:mbm_count >= 5
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				subtract = 5
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = -5
 		}
 	}
 	ai_chance = {
@@ -560,29 +500,13 @@ je_mass_building_managment_button_21 = {
 		always = yes
 	}
 	possible = {
-		has_variable = mbm_count
+		hidden_trigger = {
+			has_variable = mbm_count
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				add = 5
-			}
-			if = {
-				limit = {
-					root.var:mbm_count > 1000 
-				}
-				set_variable = {
-					name = mbm_count
-					value = 1000
-				}
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = 5
 		}
 	}
 	ai_chance = {
@@ -597,20 +521,13 @@ je_mass_building_managment_button_22 = {
 		always = yes
 	}
 	possible = {
-		var:mbm_count >= 10
+		hidden_trigger = {
+			var:mbm_count >= 10
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				subtract = 10
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = -10
 		}
 	}
 	ai_chance = {
@@ -625,29 +542,13 @@ je_mass_building_managment_button_23 = {
 		always = yes
 	}
 	possible = {
-		has_variable = mbm_count
+		hidden_trigger = {
+			has_variable = mbm_count
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				add = 10
-			}
-			if = {
-				limit = {
-					root.var:mbm_count > 1000 
-				}
-				set_variable = {
-					name = mbm_count
-					value = 1000
-				}
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = 10
 		}
 	}
 	ai_chance = {
@@ -662,20 +563,13 @@ je_mass_building_managment_button_24 = {
 		always = yes
 	}
 	possible = {
-		var:mbm_count >= 20
+		hidden_trigger = {
+			var:mbm_count >= 20
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				subtract = 20
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = -20
 		}
 	}
 	ai_chance = {
@@ -690,29 +584,13 @@ je_mass_building_managment_button_25 = {
 		always = yes
 	}
 	possible = {
-		has_variable = mbm_count
+		hidden_trigger = {
+			has_variable = mbm_count
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				add = 20
-			}
-			if = {
-				limit = {
-					root.var:mbm_count > 1000 
-				}
-				set_variable = {
-					name = mbm_count
-					value = 1000
-				}
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = 20
 		}
 	}
 	ai_chance = {
@@ -727,20 +605,13 @@ je_mass_building_managment_button_26 = {
 		always = yes
 	}
 	possible = {
-		var:mbm_count >= 50
+		hidden_trigger = {
+			var:mbm_count >= 50
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				subtract = 50
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = -50
 		}
 	}
 	ai_chance = {
@@ -755,29 +626,13 @@ je_mass_building_managment_button_27 = {
 		always = yes
 	}
 	possible = {
-		has_variable = mbm_count
+		hidden_trigger = {
+			has_variable = mbm_count
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				add = 50
-			}
-			if = {
-				limit = {
-					root.var:mbm_count > 1000 
-				}
-				set_variable = {
-					name = mbm_count
-					value = 1000
-				}
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = 50
 		}
 	}
 	ai_chance = {
@@ -792,20 +647,13 @@ je_mass_building_managment_button_28 = {
 		always = yes
 	}
 	possible = {
-		var:mbm_count >= 100
+		hidden_trigger = {
+			var:mbm_count >= 100
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				subtract = 100
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = -100
 		}
 	}
 	ai_chance = {
@@ -820,29 +668,13 @@ je_mass_building_managment_button_29 = {
 		always = yes
 	}
 	possible = {
-		has_variable = mbm_count
+		hidden_trigger = {
+			has_variable = mbm_count
+		}
 	}
 	effect = {
-		root = {
-			change_variable = {
-				name = mbm_count
-				add = 100
-			}
-			if = {
-				limit = {
-					root.var:mbm_count > 1000 
-				}
-				set_variable = {
-					name = mbm_count
-					value = 1000
-				}
-			}
-			je:je_mass_building_managment = {
-				set_bar_progress = {
-					name = mbm_count_bar
-					value = root.var:mbm_count
-				}
-			}
+		change_mbm_count = {
+			CHANGE_VALUE = 100
 		}
 	}
 	ai_chance = {

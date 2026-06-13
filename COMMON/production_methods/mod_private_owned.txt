@@ -1,7 +1,6 @@
 ﻿REPLACE_OR_CREATE:pm_manor_house_privately_owned = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
 	replacement_if_valid = pm_manor_house_principle_divine_economics_2
-	is_hidden_when_unavailable = yes
 	disallowing_laws = {
 		law_command_economy
 		law_cooperative_ownership
@@ -19,7 +18,6 @@
 REPLACE_OR_CREATE:pm_manor_house_worker_cooperative = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 	replacement_if_valid = pm_manor_house_worker_cooperative_divine_economics_2
-	is_hidden_when_unavailable = yes
 	unlocking_laws = {
 		law_command_economy
 		law_cooperative_ownership
@@ -37,7 +35,6 @@ REPLACE_OR_CREATE:pm_manor_house_worker_cooperative = {
 
 REPLACE_OR_CREATE:pm_manor_house_principle_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/devine_economics.dds"
-	is_hidden_when_unavailable = yes
 	unlocking_principles = {
 		principle_divine_economics_2
 		principle_divine_economics_3
@@ -54,7 +51,6 @@ REPLACE_OR_CREATE:pm_manor_house_principle_divine_economics_2 = {
 
 REPLACE_OR_CREATE:pm_manor_house_worker_cooperative_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
-	is_hidden_when_unavailable = yes
 	unlocking_laws = {
 		law_command_economy
 		law_cooperative_ownership
@@ -78,7 +74,6 @@ REPLACE_OR_CREATE:pm_manor_house_worker_cooperative_divine_economics_2 = {
 REPLACE_OR_CREATE:pm_financial_district_privately_owned = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	replacement_if_valid = pm_financial_district_publicly_traded
-	is_hidden_when_unavailable = yes
 	disallowing_laws = {
 		law_command_economy
 	}
@@ -95,7 +90,6 @@ REPLACE_OR_CREATE:pm_financial_district_privately_owned = {
 REPLACE_OR_CREATE:pm_financial_district_publicly_traded = {
 	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
 	replacement_if_valid = pm_financial_district_principle_divine_economics_2
-	is_hidden_when_unavailable = yes
 	unlocking_technologies = {
 		mutual_funds
 	}
@@ -115,7 +109,6 @@ REPLACE_OR_CREATE:pm_financial_district_publicly_traded = {
 REPLACE_OR_CREATE:pm_company_headquarter_privately_owned_aristocrats = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
 	replacement_if_valid = pm_financial_district_principle_divine_economics_2
-	is_hidden_when_unavailable = yes
 	unlocking_laws = {
 		law_traditionalism
 	}
@@ -132,7 +125,6 @@ REPLACE_OR_CREATE:pm_company_headquarter_privately_owned_aristocrats = {
 REPLACE_OR_CREATE:pm_company_headquarter_government_run = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 	replacement_if_valid = pm_company_headquarter_government_run_divine_economics_2
-	is_hidden_when_unavailable = yes
 	unlocking_laws = {
 		law_command_economy
 	}
@@ -150,7 +142,6 @@ REPLACE_OR_CREATE:pm_company_headquarter_government_run = {
 REPLACE_OR_CREATE:pm_company_headquarter_worker_cooperative = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 	replacement_if_valid = pm_company_headquarter_worker_cooperative_divine_economics_2
-	is_hidden_when_unavailable = yes
 	unlocking_laws = {
 		law_command_economy
 		law_cooperative_ownership
@@ -168,7 +159,6 @@ REPLACE_OR_CREATE:pm_company_headquarter_worker_cooperative = {
 
 REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/devine_economics.dds"
-	is_hidden_when_unavailable = yes
 	unlocking_principles = {
 		principle_divine_economics_2
 		principle_divine_economics_3
@@ -185,7 +175,6 @@ REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2 = {
 
 REPLACE_OR_CREATE:pm_company_headquarter_government_run_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
-	is_hidden_when_unavailable = yes
 	unlocking_laws = {
 		law_command_economy
 	}
@@ -206,7 +195,6 @@ REPLACE_OR_CREATE:pm_company_headquarter_government_run_divine_economics_2 = {
 
 REPLACE_OR_CREATE:pm_company_headquarter_worker_cooperative_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
-	is_hidden_when_unavailable = yes
 	unlocking_laws = {
 		law_command_economy
 		law_cooperative_ownership

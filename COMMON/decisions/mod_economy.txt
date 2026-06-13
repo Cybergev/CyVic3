@@ -150,3 +150,189 @@ start_mass_building = {
 		value = 0
 	}
 }
+
+suppress_colonial_manufacturing_industry = {
+	is_shown = {
+		not = {
+			has_modifier = suppression_colonial_manufacturing_industry_policy
+		}
+	}
+	possible = {
+		not = {
+			has_modifier = suppression_colonial_manufacturing_industry_policy
+		}
+	}
+	when_taken = {
+		add_modifier = suppression_colonial_manufacturing_industry_policy
+		trigger_event = {
+			id = suppression_event.1
+		}
+		every_country = {
+			limit = {
+				is_subject_of = root
+			}
+			trigger_event = {
+				id = suppression_event.1
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+		modifier = {
+			or = {
+				has_strategy = ai_strategy_economic_imperialism
+				has_strategy = ai_strategy_colonial_expansion
+				has_strategy = ai_strategy_colonial_extraction
+				has_strategy = ai_strategy_industrial_expansion
+			}
+			add = 100
+		}
+	}
+}
+
+desuppress_colonial_manufacturing_industry = {
+	is_shown = {
+		has_modifier = suppression_colonial_manufacturing_industry_policy
+	}
+	possible = {
+		has_modifier = suppression_colonial_manufacturing_industry_policy
+	}
+	when_taken = {
+		remove_modifier = suppression_colonial_manufacturing_industry_policy
+		trigger_event = {
+			id = suppression_event.1
+		}
+		every_country = {
+			limit = {
+				is_subject_of = root
+			}
+			trigger_event = {
+				id = suppression_event.1
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+		modifier = {
+			nor = {
+				has_strategy = ai_strategy_economic_imperialism
+				has_strategy = ai_strategy_colonial_expansion
+				has_strategy = ai_strategy_colonial_extraction
+				has_strategy = ai_strategy_industrial_expansion
+			}
+			add = 100
+		}
+	}
+}
+
+suppresss_colonial_agricultural_industry = {
+	is_shown = {
+		not = {
+			has_modifier = suppression_colonial_agricultural_industry_policy
+		}
+	}
+	possible = {
+		not = {
+			has_modifier = suppression_colonial_agricultural_industry_policy
+		}
+	}
+	when_taken = {
+		add_modifier = suppression_colonial_agricultural_industry_policy
+		trigger_event = {
+			id = suppression_event.1
+		}
+		every_country = {
+			limit = {
+				is_subject_of = root
+			}
+			trigger_event = {
+				id = suppression_event.1
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+desuppress_colonial_agricultural_industry = {
+	is_shown = {
+		has_modifier = suppression_colonial_agricultural_industry_policy
+	}
+	possible = {
+		has_modifier = suppression_colonial_agricultural_industry_policy
+	}
+	when_taken = {
+		remove_modifier = suppression_colonial_agricultural_industry_policy
+		trigger_event = {
+			id = suppression_event.1
+		}
+		every_country = {
+			limit = {
+				is_subject_of = root
+			}
+			trigger_event = {
+				id = suppression_event.1
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+suppress_colonial_resource_industry = {
+	is_shown = {
+		not = {
+			has_modifier = suppression_colonial_resource_industry_policy
+		}
+	}
+	possible = {
+		not = {
+			has_modifier = suppression_colonial_resource_industry_policy
+		}
+	}
+	when_taken = {
+		add_modifier = suppression_colonial_resource_industry_policy
+		trigger_event = {
+			id = suppression_event.1
+		}
+		every_country = {
+			limit = {
+				is_subject_of = root
+			}
+			trigger_event = {
+				id = suppression_event.1
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+desuppress_colonial_resource_industry = {
+	is_shown = {
+		has_modifier = suppression_colonial_resource_industry_policy
+	}
+	possible = {
+		has_modifier = suppression_colonial_resource_industry_policy
+	}
+	when_taken = {
+		remove_modifier = suppression_colonial_resource_industry_policy
+		trigger_event = {
+			id = suppression_event.1
+		}
+		every_country = {
+			limit = {
+				is_subject_of = root
+			}
+			trigger_event = {
+				id = suppression_event.1
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}

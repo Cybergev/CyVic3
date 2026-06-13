@@ -1,9 +1,14 @@
 ﻿REPLACE_OR_CREATE:pm_skyscraper_bureaucratic_nexus = {
 	texture = "gfx/interface/icons/production_method_icons/skyscraper_bureaucratic_nexus.dds"
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 10000
+		}
+	}
 	state_modifiers = {
 		workforce_scaled = {
+			state_tax_capacity_add = 100
 			building_group_bg_service_throughput_add = 0.1
-			building_group_bg_government_throughput_add = 0.1
 			building_group_bg_infrastructure_throughput_add = 0.1
 		}
 	}
@@ -11,15 +16,61 @@
 
 REPLACE_OR_CREATE:pm_skyscraper_trade_nexus = {
 	texture = "gfx/interface/icons/production_method_icons/skyscraper_trade_nexus.dds"
-	country_modifiers = {
-		workforce_scaled = {
-			state_trade_capacity_mult = 0.1
-			state_trade_advantage_mult = 0.1
-		}
-	}
 	state_modifiers = {
 		workforce_scaled = {
+			state_trade_capacity_add = 100
+			state_weekly_trades_add = 10
+			state_trade_advantage_mult = 0.1
 			building_trade_center_throughput_add = 0.1
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_skyscraper_hereditary_bureaucrats = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
+	unlocking_laws = {
+		law_hereditary_bureaucrats
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_aristocrats_add = 5000
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_skyscraper_professional_bureaucrats = {
+	texture = "gfx/interface/icons/production_method_icons/professional_bureaucrats.dds"
+	disallowing_laws = {
+		law_hereditary_bureaucrats
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 5000
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_skyscraper_religious_bureaucrats = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
+	disallowing_laws = {
+		law_total_separation
+		law_state_atheism
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clergymen_add = 5000
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_skyscraper_secular_bureaucrats = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
+	disallowing_laws = {
+		law_state_religion
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 5000
 		}
 	}
 }

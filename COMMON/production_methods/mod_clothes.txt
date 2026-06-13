@@ -4,11 +4,12 @@
 
 REPLACE_OR_CREATE:pm_handsewn_clothes = {
 	texture = "gfx/interface/icons/production_method_icons/handsewn_clothes.dds"
+	is_default = yes
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fabric_add = 40
-			# output goods
+			goods_input_fabric_add = 60
+			# output goods 1.3
 			goods_output_clothes_add = 40
 		}
 	}
@@ -22,9 +23,9 @@ REPLACE_OR_CREATE:pm_dye_workshops = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fabric_add = 40
+			goods_input_fabric_add = 60
 			goods_input_dye_add = 10
-			# output goods
+			# output goods 1.5
 			goods_output_clothes_add = 60
 		}
 	}
@@ -41,7 +42,7 @@ REPLACE_OR_CREATE:pm_sewing_machines = {
 			goods_input_fabric_add = 40
 			goods_input_dye_add = 10
 			goods_input_tools_add = 10
-			# output goods
+			# output goods 2
 			goods_output_clothes_add = 80
 		}
 	}
@@ -55,11 +56,11 @@ REPLACE_OR_CREATE:pm_electric_sewing_machines = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_fabric_add = 40
+			goods_input_fabric_add = 20
 			goods_input_dye_add = 10
-			goods_input_tools_add = 10
+			goods_input_tools_add = 20
 			goods_input_electricity_add = 10
-			# output goods
+			# output goods 2.2
 			goods_output_clothes_add = 100
 		}
 	}

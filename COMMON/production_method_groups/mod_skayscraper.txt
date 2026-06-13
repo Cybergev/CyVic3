@@ -1,0 +1,17 @@
+﻿REPLACE_OR_CREATE:pmg_skyscraper_bureaucrat_professionalism = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_skyscraper_hereditary_bureaucrats
+		pm_skyscraper_professional_bureaucrats
+	}
+}
+
+REPLACE_OR_CREATE:pmg_skyscraper_religious_administration = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_skyscraper_religious_bureaucrats
+		pm_skyscraper_secular_bureaucrats
+	}
+}

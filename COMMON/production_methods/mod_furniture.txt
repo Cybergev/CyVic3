@@ -4,13 +4,13 @@
 
 REPLACE_OR_CREATE:pm_handcrafted_furniture = {
 	texture = "gfx/interface/icons/production_method_icons/furniture_handicraft.dds"
+	is_default = yes
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 40
-			goods_input_fabric_add = 20
+			goods_input_wood_add = 60
 			goods_input_tools_add = 10
-			# output goods
+			# output goods 1.5
 			goods_output_furniture_add = 60
 		}
 	}
@@ -25,9 +25,9 @@ REPLACE_OR_CREATE:pm_lathe = {
 		workforce_scaled = {
 			# input goods
 			goods_input_hardwood_add = 20
-			goods_input_fabric_add = 10
+			goods_input_dye_add = 10
 			goods_input_tools_add = 10
-			# output goods
+			# output goods 2.0
 			goods_output_furniture_add = 80
 		}
 	}
@@ -46,10 +46,11 @@ REPLACE_OR_CREATE:pm_mechanized_workshops = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_hardwood_add = 40
-			goods_input_fabric_add = 20
+			goods_input_hardwood_add = 20
+			goods_input_fabric_add = 10
+			goods_input_dye_add = 10
 			goods_input_tools_add = 10
-			# output goods
+			# output goods 2.22
 			goods_output_furniture_add = 100
 		}
 	}

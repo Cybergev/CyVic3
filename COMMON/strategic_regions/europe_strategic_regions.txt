@@ -222,6 +222,8 @@ region_eastern_europe = {
 		STATE_STAVROPOL
 		STATE_ROSTOV
 		STATE_ASTRAKHAN
+		STATE_URALSK
+		STATE_SAMARA
 		STATE_KALMYKIA
 		STATE_NORTH_CAUCASUS
 		STATE_INGRIA
@@ -245,7 +247,6 @@ region_eastern_europe = {
 		STATE_PERM
 		STATE_VYATKA
 		STATE_KAZAN
-		STATE_SAMARA
 		STATE_VILNIUS
 		STATE_COURLAND
 		STATE_TARTU
@@ -264,16 +265,5 @@ region_eastern_europe = {
 		STATE_VOLHYNIA
 		STATE_CHERNIHIV
 		STATE_BESSARABIA
-	}
-}
-
-region_russia = {
-	capital_province = xE0A021
-	map_color = {
-		20
-		112
-		22
-	}
-	states = {
 	}
 }

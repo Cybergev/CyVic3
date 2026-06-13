@@ -201,8 +201,8 @@ law_womens_suffrage = {
 	}
 	modifier = {
 		state_working_adult_ratio_add = 0.25
-		state_dependent_political_participation_add = 0.5
 		state_birth_rate_mult = -0.25
+		state_dependent_political_participation_add = 0.5
 	}
 	ai_enact_weight_modifier = {
 		#Petitions
@@ -1295,7 +1295,6 @@ law_charitable_health_system = {
 		state_standard_of_living_add = 0.5
 		state_pollution_reduction_health_mult = -0.05
 		state_mortality_mult = -0.05
-		state_birth_rate_mult = 0.01
 		country_clergymen_pol_str_mult = 0.1
 	}
 	# Don't return to charity if we have something more advanced
@@ -1334,7 +1333,6 @@ law_private_health_insurance = {
 		state_upper_strata_standard_of_living_add = 2
 		state_pollution_reduction_health_mult = -0.1
 		state_mortality_wealth_mult = -0.1
-		state_birth_rate_mult = 0.01
 	}
 	ai_enact_weight_modifier = {
 		#Petitions
@@ -1361,7 +1359,6 @@ law_public_health_insurance = {
 		state_pollution_reduction_health_mult = -0.2
 		state_mortality_mult = -0.1
 		state_mortality_wealth_mult = -0.1
-		state_birth_rate_mult = 0.02
 	}
 	ai_enact_weight_modifier = {
 		#Petitions
@@ -1435,7 +1432,6 @@ law_wage_subsidies = {
 	institution_modifier = {
 		state_welfare_payments_add = 0.2
 		state_food_security_add = 0.02
-		state_birth_rate_mult = 0.02
 	}
 	ai_enact_weight_modifier = {
 		#Petitions
@@ -1466,7 +1462,6 @@ law_old_age_pension = {
 		state_working_adult_ratio_add = -0.02
 		state_dependent_wage_mult = 0.2
 		state_dependent_political_participation_add = 0.02
-		state_birth_rate_mult = 0.02
 	}
 	# Below needed since this Law changes Politial Participation
 	on_activate = {

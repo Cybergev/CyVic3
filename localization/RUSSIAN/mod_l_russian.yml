@@ -195,8 +195,6 @@ mass_building_managment_target: "Цель массового [Concept('concept_c
 
 #---------------------------
 
-
-region_england: "Британия"
 EUR: "Европа"
 EUR_ADJ: "Европейск"
 
@@ -369,6 +367,16 @@ pm_percussion_iron_caps: "$pm_percussion_caps$"
 pm_explosive_lead_shells: "$pm_explosive_shells$"
 pm_explosive_iron_shells: "$pm_explosive_shells$"
 pm_explosive_steel_shells: "$pm_explosive_shells$"
+
+#---------------------------
+
+pmg_skyscraper_bureaucrat_professionalism: "$pmg_government_administration_bureaucrat_professionalism$"
+pm_skyscraper_hereditary_bureaucrats: "$pm_hereditary_bureaucrats$"
+pm_skyscraper_professional_bureaucrats: "$pm_professional_bureaucrats$"
+
+pmg_skyscraper_religious_administration: "$pmg_government_administration_religious_administration$"
+pm_skyscraper_religious_bureaucrats: "$pm_religious_bureaucrats$"
+pm_skyscraper_secular_bureaucrats: "$pm_secular_bureaucrats$"
 
 #---------------------------
 

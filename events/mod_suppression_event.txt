@@ -2,13 +2,8 @@
 suppression_event.1 = {
 	type = country_event
 	hidden = yes
-	trigger = {
-		any_country = {
-			suppression_trigger = yes
-		}
-	}
 	immediate = {
-		every_country = {
+		if = {
 			limit = {
 				suppression_trigger = yes
 			}
@@ -36,49 +31,26 @@ suppression_event.1 = {
 				}
 			}
 		}
-	}
-}
-
-suppression_event.2 = {
-	type = country_event
-	hidden = yes
-	trigger = {
-		any_country = {
-			any_scope_building = {
-				desuppression_manufacturing_trigger = yes
-				desuppression_agricultural_trigger = yes
-				desuppression_resource_trigger = yes
-			}
-		}
-	}
-	immediate = {
-		every_country = {
-			limit = {
-				any_scope_building = {
-					desuppression_manufacturing_trigger = yes
-					desuppression_agricultural_trigger = yes
-					desuppression_resource_trigger = yes
-				}
-			}
+		else = {
 			every_scope_building = {
 				if = {
 					limit = {
 						suppression_manufacturing_bg_trigger = yes
-						desuppression_manufacturing_trigger = yes
+						suppression_manufacturing_trigger = no
 					}
 					remove_modifier = suppression_modifier
 				}
 				if = {
 					limit = {
 						suppression_agricultural_bg_trigger = yes
-						desuppression_agricultural_trigger = yes
+						suppression_agricultural_trigger = no
 					}
 					remove_modifier = suppression_modifier
 				}
 				if = {
 					limit = {
 						suppression_resource_bg_trigger = yes
-						desuppression_resource_trigger = yes
+						suppression_resource_trigger = no
 					}
 					remove_modifier = suppression_modifier
 				}

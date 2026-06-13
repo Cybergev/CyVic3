@@ -13,6 +13,12 @@
 			# output goods
 			goods_output_clippers_add = 1
 		}
+		level_scaled = {
+			building_employment_laborers_add = 700
+			building_employment_machinists_add = 100
+			building_employment_clerks_add = 100
+			building_employment_bureaucrats_add = 100
+		}
 	}
 }
 
@@ -35,6 +41,12 @@ REPLACE_OR_CREATE:pm_complex_shipbuilding = {
 			# output goods
 			goods_output_clippers_add = 2
 		}
+		level_scaled = {
+			building_employment_laborers_add = 400
+			building_employment_machinists_add = 200
+			building_employment_clerks_add = 200
+			building_employment_bureaucrats_add = 200
+		}
 	}
 }
 
@@ -42,7 +54,7 @@ REPLACE_OR_CREATE:pm_metal_shipbuilding = {
 	texture = "gfx/interface/icons/production_method_icons/reinforced_steam_ships.dds"
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 10
+			state_pollution_generation_add = 0.5
 		}
 	}
 	unlocking_technologies = {
@@ -61,6 +73,12 @@ REPLACE_OR_CREATE:pm_metal_shipbuilding = {
 			# output goods
 			goods_output_steamers_add = 1
 		}
+		level_scaled = {
+			building_employment_machinists_add = 250
+			building_employment_engineers_add = 250
+			building_employment_clerks_add = 250
+			building_employment_bureaucrats_add = 250
+		}
 	}
 }
 
@@ -71,7 +89,7 @@ REPLACE_OR_CREATE:pm_arc_welding_shipbuilding = {
 	}
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 20
+			state_pollution_generation_add = 1
 		}
 	}
 	country_modifiers = {
@@ -87,6 +105,10 @@ REPLACE_OR_CREATE:pm_arc_welding_shipbuilding = {
 			goods_input_electricity_add = 1
 			# output goods
 			goods_output_steamers_add = 2
+		}
+		level_scaled = {
+			building_employment_engineers_add = 500
+			building_employment_bureaucrats_add = 500
 		}
 	}
 	required_input_goods = electricity

@@ -244,7 +244,6 @@ bg_service = {
 	auto_place_buildings = yes
 	always_self_owning = yes
 	economy_of_scale = yes
-	can_use_slaves = yes
 	default_building = building_urban_center
 	cash_reserves_max = 25000
 }
@@ -328,12 +327,13 @@ bg_trade = {
 	has_trade_revenue = yes
 	economy_of_scale = no
 	default_building = building_trade_center
-	can_use_slaves = yes
 	infrastructure_usage_per_level = 1
 }
 
 bg_ship_construction = {
-	parent_group = bg_light_industry
+	category = development
+	lens = development
+	parent_group = bg_heavy_industry
 	economy_of_scale_ai_factor = 5
 	infrastructure_usage_per_level = 2
 	construction_efficiency_modifier = yes
@@ -366,7 +366,6 @@ bg_owner_buildings = {
 	min_productivity_to_hire = 10
 	lens = trade
 	always_possible = yes
-	can_use_slaves = yes
 	auto_place_buildings = yes
 	owns_other_buildings = yes
 	always_self_owning = yes
@@ -407,7 +406,6 @@ bg_construction = {
 	infrastructure_usage_per_level = 1
 	lens = development
 	is_government_funded = yes
-	can_use_slaves = yes
 	economy_of_scale_ai_factor = 5
 }
 
@@ -429,6 +427,7 @@ bg_monuments = {
 	lens = development
 	always_possible = yes
 	is_government_funded = yes
+	can_use_slaves = yes
 	inheritable_construction = yes
 	economy_of_scale = no
 	default_building = building_eiffel_tower	# TODO PRCAL-42162 - remove this, it's only here to avoid read errors
@@ -440,6 +439,7 @@ bg_military = {
 	always_possible = yes
 	is_military = yes
 	is_government_funded = yes
+	can_use_slaves = yes
 	infrastructure_usage_per_level = 1
 	lens = development
 	urbanization = 10

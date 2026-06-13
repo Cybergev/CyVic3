@@ -1,25 +1,42 @@
 ﻿NAI = {
-	# Confidence is added to boldness to determine whether the AI is willing to back down
 	DIPLO_PLAY_CONFIDENCE_FORCE_BALANCE_FACTOR = 100	# Confidence level if force balance to the enemy is at DIPLO_PLAY_FORCE_BALANCE_SCALE, scaled down if lower
-	DIPLO_PLAY_CONFIDENCE_STRONG_ARMY_FACTOR = 100	# Scaled by our relative forces compared to DIPLO_PLAY_STRONG_ARMY_MAX
+	DIPLO_PLAY_CONFIDENCE_STRONG_ARMY_FACTOR = 20	# Scaled by our relative forces compared to DIPLO_PLAY_STRONG_ARMY_MAX
 	DIPLO_PLAY_CONFIDENCE_CIVIL_WAR_OR_UPRISING = 100	# Add this confidence to both sides in a civil war or native uprising (overrides DIPLO_PLAY_CONFIDENCE_EXISTENTIAL_PLAY)
 	DIPLO_PLAY_CONFIDENCE_EXISTENTIAL_PLAY = 100	# Add this confidence if backing down would result in annexation
-	DIPLO_PLAY_CONFIDENCE_FROM_TURMOIL = -50	# At 100% turmoil across the country (weighted by state population), subtract this amount of confidence
-	DIPLO_PLAY_CONFIDENCE_FROM_LOYALISTS = 100	# At 100% turmoil across the country (weighted by state population), add this amount of confidence
-	DIPLO_PLAY_CONFIDENCE_FROM_DEVASTATION = -50	# At 100% devastation, subtract this amount of confidence
-	DIPLO_PLAY_CONFIDENCE_FROM_DEBT_LEVEL = -50	# At 100% debt level, subtract this amount of confidence
-	DIPLO_PLAY_CONFIDENCE_FROM_BANKRUPTCY = -50	# Subtract this amount of confidence when bankrupt
-	DIPLO_PLAY_CONFIDENCE_FROM_GOLD_RESERVES = 100	# At 100% gold reserves, add this amount of confidence
-	DIPLO_PLAY_CONFIDENCE_FROM_OWN_CONFLICTS = -50	# If we are in another conflict where military strength compared to our enemies is equal to or above DIPLO_PLAY_FORCE_BALANCE_SCALE, subtract this amount of confidence
-	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_TURMOIL = 100	# At 100% turmoil across the enemy country (weighted by state population), add this amount of confidence
-	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_DEVASTATION = 100	# At 100% devastation for enemy, add this amount of confidence
-	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_DEBT_LEVEL = 100	# At 100% debt level for enemy, add this amount of confidence
-	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_BANKRUPTCY = 100	# If enemy is bankrupt, add this amount of confidence
-	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_CONFLICTS = 50	# If the other side is in another conflict where military strength compared to their enemies is equal to or above DIPLO_PLAY_FORCE_BALANCE_SCALE, add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_TURMOIL = -10	# At 100% turmoil across the country (weighted by state population), subtract this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_LOYALISTS = 20	# At 100% turmoil across the country (weighted by state population), add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_DEVASTATION = -10	# At 100% devastation, subtract this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_DEBT_LEVEL = -10	# At 100% debt level, subtract this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_BANKRUPTCY = -10	# Subtract this amount of confidence when bankrupt
+	DIPLO_PLAY_CONFIDENCE_FROM_GOLD_RESERVES = 20	# At 100% gold reserves, add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_OWN_CONFLICTS = -10	# If we are in another conflict where military strength compared to our enemies is equal to or above DIPLO_PLAY_FORCE_BALANCE_SCALE, subtract this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_TURMOIL = 20	# At 100% turmoil across the enemy country (weighted by state population), add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_DEVASTATION = 20	# At 100% devastation for enemy, add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_DEBT_LEVEL = 20	# At 100% debt level for enemy, add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_BANKRUPTCY = 20	# If enemy is bankrupt, add this amount of confidence
+	DIPLO_PLAY_CONFIDENCE_FROM_ENEMY_CONFLICTS = 20	# If the other side is in another conflict where military strength compared to their enemies is equal to or above DIPLO_PLAY_FORCE_BALANCE_SCALE, add this amount of confidence
 	DIPLO_PLAY_CONFIDENCE_VERY_LOW_THRESHOLD = -100	# If confidence is this or below, show it as very low
 	DIPLO_PLAY_CONFIDENCE_LOW_THRESHOLD = -50	# If confidence is this or below, show it as low
+	DIPLO_PLAY_NEUTRALITY_MIN = 0
 	DIPLO_PLAY_CONFIDENCE_HIGH_THRESHOLD = 50	# If confidence is this or above, show it as high
 	DIPLO_PLAY_CONFIDENCE_VERY_HIGH_THRESHOLD = 100	# If confidence is this or above, show it as very high
+	#
+	AI_PEACE_AGREEMENT_WHITE_PEACE_BASE = 0	# If no wargoals are being enforced on either side
+	#
+	AI_MONTHS_OF_REDUCED_PEACE_DESIRE = 20	# Before this amount of months, reduce AI peace desire
+	AI_PEACE_DESIRE_FROM_SHORT_WAR = -5	# Subtract this amount of peace desire for the above number of months (multiplied by AI_MONTHS_OF_REDUCED_PEACE_DESIRE - months of war duration)
+	AI_PEACE_DESIRE_FROM_TURMOIL = 20	# Add this amount of peace desire at 100% radicals
+	AI_PEACE_DESIRE_FROM_DEVASTATION = 20	# Add this amount of peace desire at 100% devastation
+	AI_PEACE_DESIRE_FROM_LOYALISTS = -20	# Subtract this amount of peace desire at 100% loyalists
+	AI_PEACE_DESIRE_FROM_DEBT_LEVEL = 20	# Add this amount of peace desire at 100% debt level
+	AI_PEACE_DESIRE_FROM_BANKRUPTCY = 20	# Add this amount of peace desire when bankrupt
+	AI_PEACE_DESIRE_FROM_GOLD_RESERVES = -20	# Subtract this amount of peace desire at 100% gold reserves
+	AI_PEACE_DESIRE_FROM_FORCE_BALANCE = 100	# Up to this amount is added or subtracted from war support based on DIPLO_PLAY_FORCE_BALANCE_SCALE of the two sides
+	AI_PEACE_DESIRE_FACTOR_FROM_ANNEXATION = 0	# If peace will cause the country to be annexed then all positive peace desire factors will be multiplied by this value
+}
+
+NMilitary = {
+	MILITARY_FORMATION_COMMAND_LIMIT_NO_COMMANDER = 100	# Default command limit if formation has no commander
 }
 
 NDiplomacy = {
@@ -117,13 +134,4 @@ NPops = {
 	MIN_ASSIMILATION = 100	# If there is any assmiliation at least this many people will assimilate
 	CONVERSION_RATE = 0.01	# Percentage of pops who will Convert into a different Religion each month, if eligible
 	MIN_CONVERSION = 100	# If there is any conversion at least this many people will convert
-	#
-	@starvation_threshold = 0.5
-	@starvation_scaling_factor = @[1/starvation_threshold]
-	FOOD_SECURITY_MODERATE_THRESHOLD = @[2*starvation_threshold]	# If Food Security is lower than this, the pop is marked as having moderate food security
-	FOOD_SECURITY_STARVATION_THRESHOLD = @starvation_threshold	# If Food Security is lower than this, the pop is considered to be in a starving state
-	FOOD_SECURITY_SEVERE_STARVATION_THRESHOLD = @[starvation_threshold/2]	# If Food Security is lower than this, the pop is considered to be in a severe starving state
-	STARVATION_EFFECTS_SCALING_FACTOR = @starvation_scaling_factor	# Acts as a scaling factor when converting food security to starvation effects: StarvationValue = CLAMP( (StarvationThreshold - FoodSecurity) * ScalingFactor, 0, 1)
-	FAMINE_POPULATION_SHARE_IN_STARVATION = 0.2	# If at least this % of state population is in starvation, the state is considered to have a famine
-	FAMINE_POPULATION_SHARE_IN_SEVERE_STARVATION = 0.1	# If at least this % of state population is in severe starvation, the state is considered to have a famine
 }
