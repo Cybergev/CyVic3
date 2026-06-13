@@ -114,8 +114,6 @@ REPLACE_OR_CREATE:suppression_manufacturing_bg_trigger = {
 
 REPLACE_OR_CREATE:suppression_agricultural_bg_trigger = {
 	OR = {
-		is_building_group = bg_subsistence_agriculture
-		is_building_group = bg_subsistence_ranching
 		is_building_group = bg_agriculture
 		is_building_group = bg_plantations
 		is_building_group = bg_ranching
