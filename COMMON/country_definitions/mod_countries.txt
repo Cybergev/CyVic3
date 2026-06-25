@@ -6,6 +6,14 @@
 	capital = STATE_FLANDERS
 }
 
+REPLACE_OR_CREATE:ARA = {
+	color = { 70  110  20 }
+	country_type = recognized
+	tier = empire
+	cultures = { bedouin }
+	capital = STATE_HEDJAZ
+}
+
 REPLACE_OR_CREATE:ENG = {
 	color = { 150 50 50 }
 	country_type = recognized

@@ -1,17 +1,323 @@
-﻿building_shipyard = {
+﻿REPLACE:building_skyscraper = {
+	building_group = bg_skyscraper
+	city_type = city
+	levels_per_mesh = 1
+	enable_air_connection = yes
+	expandable = no
+	production_method_groups = {
+		pmg_airship_mooring_post
+		pmg_base_building_skyscraper
+		pmg_skyscraper_bureaucrat_professionalism
+		pmg_skyscraper_religious_administration
+	}
+	icon = "gfx/interface/icons/building_icons/skyscraper.dds"
+	required_construction = construction_cost_monument
+	can_build_government = {
+		OR = {
+			has_modifier = skyscraper_site
+			owner = {
+				any_scope_state = {
+					has_building = building_skyscraper
+				}
+			}
+		}
+	}
+	can_build_private = {
+		always = no
+	}
+	ai_value = {
+		if = {
+			limit = {
+				is_capital = yes
+			}
+			add = 2500
+		}
+		if = {
+			limit = {
+				is_incorporated = yes
+				state_population >= 500000
+			}
+			add = {
+				value = state_population
+				divide = 1000
+				max = 5000
+			}
+		}
+	}
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+REPLACE:building_government_administration = {
+	building_group = bg_bureaucracy
+	city_type = city
+	levels_per_mesh = 50
+	unlocking_technologies = {
+		tech_bureaucracy
+	}
+	ai_value = {
+		value = 0
+		if = {
+			limit = {
+				owner = {
+					relative_bureaucracy <= 0.1
+				}
+			}
+			add = 1000
+		}
+	}
+	production_method_groups = {
+		pmg_base_building_government_administration
+		pmg_government_administration_bureaucrat_professionalism
+		pmg_government_administration_religious_administration
+	}
+	icon = "gfx/interface/icons/building_icons/building_government_administration.dds"
+	required_construction = construction_cost_low
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+REPLACE:building_university = {
+	building_group = bg_technology
+	city_type = city
+	levels_per_mesh = 50
+	unlocking_technologies = {
+		academia
+	}
+	production_method_groups = {
+		pmg_base_building_university
+		pmg_university_academia
+		pmg_principle_freedom_of_movement_3
+	}
+	icon = "gfx/interface/icons/building_icons/building_university.dds"
+	required_construction = construction_cost_low
+	ownership_type = self
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	should_auto_expand = {
+		occupancy >= 0.8
+		cash_reserves_ratio >= 0.5
+	}
+}
+
+INJECT:building_art_academy = {
+	required_construction = construction_cost_low
+}
+
+REPLACE:building_urban_center = {
+	building_group = bg_service
+	icon = "gfx/interface/icons/building_icons/urban_center.dds"
+	city_type = city
+	residence_points_per_level = 0
+	ai_nationalization_desire = -100
+	unlocking_technologies = {
+		urbanization
+	}
+	production_method_groups = {
+		pmg_amenities
+		pmg_street_lighting
+		pmg_public_transport
+		pmg_passenger_trains
+		pmg_urban_clergy
+	}
+	buildable = no
+	expandable = no
+	downsizeable = no
+	can_switch_owner = no
+	terrain_manipulator = urban_city
+	ownership_type = self
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+REPLACE:building_manor_house = {
+	building_group = bg_manor_houses
+	city_type = farm
+	levels_per_mesh = 50
+	lens = infrastructure
+	icon = "gfx/interface/icons/building_icons/building_manor_houses.dds"
+	production_method_groups = {
+		pmg_ownership_building_manor_house
+	}
+	investment_scores = {
+		bg_agriculture_score = {
+			group = "bg_agriculture"
+			score = {
+				value = 1
+				subtract = {
+					value = modifier:country_financial_districts_buy_farms_likelihood
+				}
+			}
+		}
+		bg_ranching_score = {
+			group = "bg_ranching"
+			score = {
+				value = 1
+				subtract = {
+					value = modifier:country_financial_districts_buy_farms_likelihood
+				}
+			}
+		}
+		bg_plantations_score = {
+			group = "bg_plantations"
+			score = {
+				value = 1
+				subtract = {
+					value = modifier:country_financial_districts_buy_farms_likelihood
+				}
+			}
+		}
+	}
+	buildable = no
+	expandable = no
+	downsizeable = no
+	ownership_type = other
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+REPLACE:building_financial_district = {
+	building_group = bg_financial_districts
+	city_type = city
+	levels_per_mesh = 50
+	lens = infrastructure
+	icon = "gfx/interface/icons/building_icons/building_financial_district.dds"
+	production_method_groups = {
+		pmg_ownership_building_financial_district
+	}
+	investment_scores = {
+		bg_agriculture_score = {
+			group = "bg_agriculture"
+			score = {
+				value = 0
+				add = {
+					value = modifier:country_financial_districts_buy_farms_likelihood
+				}
+			}
+		}
+		bg_ranching_score = {
+			group = "bg_ranching"
+			score = {
+				value = 0
+				add = {
+					value = modifier:country_financial_districts_buy_farms_likelihood
+				}
+			}
+		}
+		bg_plantations_score = {
+			group = "bg_plantations"
+			score = {
+				value = 0
+				add = {
+					value = modifier:country_financial_districts_buy_farms_likelihood
+				}
+			}
+		}
+		bg_manufacturing_score = {
+			group = "bg_manufacturing"
+			score = {
+				value = 1
+			}
+		}
+		bg_mining_score = {
+			group = "bg_extraction"
+			score = {
+				value = 1
+			}
+		}
+		bg_power_score = {
+			group = "bg_power"
+			score = {
+				value = 1
+			}
+		}
+		bg_infrastructure_score = {
+			group = "bg_infrastructure"
+			score = {
+				value = 1
+			}
+		}
+		bg_manufacturing_score = {
+			group = "bg_trade"
+			score = {
+				value = 1
+			}
+		}
+		bg_arts_score = {
+			group = "bg_technology"
+			score = {
+				value = 1
+			}
+		}
+		bg_arts_score = {
+			group = "bg_arts"
+			score = {
+				value = 1
+			}
+		}
+	}
+	buildable = no
+	expandable = no
+	downsizeable = no
+	ownership_type = other
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+REPLACE:building_company_headquarter = {
+	building_group = bg_company_headquarter
+	city_type = city
+	levels_per_mesh = 50
+	lens = infrastructure
+	icon = "gfx/interface/icons/building_icons/building_company_hq.dds"
+	production_method_groups = {
+		pmg_ownership_building_financial_district
+	}
+	investment_scores = {
+	}
+	buildable = no
+	expandable = no
+	downsizeable = no
+	ownership_type = other
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+REPLACE:building_company_regional_headquarter = {
+	building_group = bg_company_regional_headquarter
+	city_type = city
+	levels_per_mesh = 50
+	lens = infrastructure
+	icon = "gfx/interface/icons/building_icons/building_company_regional_hq.dds"
+	production_method_groups = {
+		pmg_ownership_building_financial_district
+	}
+	investment_scores = {
+	}
+	buildable = no
+	expandable = no
+	downsizeable = no
+	ownership_type = other
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+INJECT:building_construction_sector = {
+	required_construction = construction_cost_very_low
+	ownership_type = self
+	should_auto_expand = {
+		occupancy >= 0.5
+	}
+}
+
+building_shipyard = {
 	aliases = {
 		building_shipyards
 	}
 	building_group = bg_ship_construction
 	icon = "gfx/interface/icons/building_icons/shipyards.dds"
 	city_type = port
+	levels_per_mesh = 1
+	ai_nationalization_desire = 0.25	# AI is a bit reluctant to privatize government goods
 	unlocking_technologies = {
 		navigation
 	}
 	production_method_groups = {
 		pmg_base_building_shipyard
 	}
-	required_construction = construction_cost_high
+	required_construction = construction_cost_very_high
 	potential = {
 		is_coastal = yes
 	}
@@ -19,6 +325,209 @@
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_harbour.dds"
 }
 
-INJECT:building_government_administration = {
+REPLACE:building_railway = {
+	building_group = bg_private_infrastructure
+	icon = "gfx/interface/icons/building_icons/building_railway.dds"
+	ai_nationalization_desire = 0.5	# AI is reluctant to privatize railways since they are likely to need subsidies anyway
+	unlocking_technologies = {
+		railways
+	}
+	production_method_groups = {
+		pmg_base_building_railway
+	}
+	required_construction = construction_cost_low
+	ai_value = {
+		value = 2000		# Railways are important
+		if = {
+			# Trans-Siberian Railway
+			limit = {
+				owner = {
+					has_journal_entry = je_trans_siberian_railway
+				}
+				OR = {
+					state_region = s:STATE_MOSCOW
+					state_region = s:STATE_YAROSLAVL
+					state_region = s:STATE_NIZHNY_NOVGOROD
+					state_region = s:STATE_CHUVASHIA
+					state_region = s:STATE_KAZAN
+					state_region = s:STATE_UFA
+					state_region = s:STATE_CHELYABINSK
+					state_region = s:STATE_URAL
+					state_region = s:STATE_TOBOLSK
+					state_region = s:STATE_TOMSK
+					state_region = s:STATE_KRASNOYARSK
+					state_region = s:STATE_IRKUTSK
+					state_region = s:STATE_BURYATIA
+					state_region = s:STATE_TRANS_BAIKAL
+					state_region = s:STATE_YAKUTSK
+					state_region = s:STATE_OKHOTSK
+					state_region = s:STATE_AMUR
+					state_region = s:STATE_OUTER_MANCHURIA
+				}
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
+		else_if = {
+			# Shinkansen, my beloved
+			limit = {
+				owner = {
+					has_journal_entry = je_meiji_economy
+				}
+				is_incorporated = yes				# Japan proper
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
+		else_if = {
+			# Trans-Continental Railways
+			limit = {
+				owner = {
+					has_journal_entry = je_trans_continental_railway
+				}
+				OR = {
+					state_region = s:STATE_NEBRASKA
+					state_region = s:STATE_WYOMING
+					state_region = s:STATE_UTAH
+					state_region = s:STATE_NEVADA
+					state_region = s:STATE_CALIFORNIA
+				}
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
+		else_if = {
+			# Canadian Pacific Highway
+			limit = {
+				owner = {
+					has_journal_entry = je_canada_pacific_railway
+				}
+				OR = {
+					state_region = s:STATE_QUEBEC
+					state_region = s:STATE_BRITISH_COLUMBIA
+					state_region = s:STATE_ONTARIO
+					state_region = s:STATE_ALBERTA
+					state_region = s:STATE_SASKATCHEWAN
+					state_region = s:STATE_MANITOBA
+				}
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
+		else_if = {
+			# AI Metternich wants railways
+			limit = {
+				owner ?= {
+					c:AUS ?= this
+					has_journal_entry = je_metternich
+				}
+				is_incorporated = yes
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
+		else_if = {
+			# Portugal - Regeneration
+			limit = {
+				owner = {
+					has_journal_entry = je_portugal_regeneration_public_works
+				}
+				is_incorporated = yes
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+		}
+		if = {
+			# Manchurian Railway
+			limit = {
+				exists = c:RUS
+				c:RUS ?= owner
+				is_in_geographic_region = geographic_region_manchuria_old
+				any_scope_building = {
+					is_building_type = building_railway
+					levels_owned_by_country = {
+						target = c:RUS
+						value < 1
+					}
+				}
+			}
+			add = 10000
+		}
+		if = {
+			# Colonisation of Korea
+			limit = {
+				owner ?= {
+					c:JAP ?= this
+					has_journal_entry = je_colonize_korea
+				}
+				is_in_geographic_region = geographic_region_korea
+				any_scope_building = {
+					is_building_type = building_railway
+					level < 10
+				}
+			}
+			add = 10000
+		}
+	}
+	should_auto_expand = {
+		occupancy >= 0.8
+		OR = {
+			cash_reserves_ratio > 0.5
+			is_subsidized = yes
+		}
+		OR = {
+			state = {
+				sg:transportation = {
+					state_goods_pricier > 0.5
+				}
+			}
+			state = {
+				infrastructure_delta <= -20
+			}
+		}
+		NOT = {
+			is_under_construction = yes
+		}
+	}
+	ownership_type = self
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
+}
+
+INJECT:building_port = {
 	required_construction = construction_cost_low
 }

@@ -112,6 +112,36 @@ remove_regency = {
 	}
 }
 
+remove_claims = {
+	is_shown = {
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+	when_taken = {
+		every_country = {
+			limit = {
+				NOT = {
+					is_country_type = decentralized
+				}
+				any_state = {
+					has_claim_by = prev
+				}
+			}
+			every_state_region = {
+				limit = {
+					has_claim_by = prev
+				}
+				remove_claim = prev
+			}
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
 remove_private_property = {
 	is_shown = {
 		always = yes

@@ -136,6 +136,34 @@ REPLACE_OR_CREATE:declared_bankruptcy = {
 	state_radicals_from_political_movements_mult = 1
 	state_welfare_payments_mult = -1
 }
+# scaled by a formation's lack of organization, down to the minimum value set in defines
+REPLACE_OR_CREATE:low_organization_army = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	unit_morale_loss_mult = 0.5
+	unit_offense_mult = -0.5
+	unit_defense_mult = -0.5
+	unit_morale_recovery_mult = -1
+	unit_morale_loss_mult = 0.5
+	unit_recovery_rate_add = -0.5
+	military_formation_movement_speed_mult = -0.5
+	unit_advancement_speed_mult = -0.5
+	character_advancement_speed_mult = -0.5
+	unit_morale_damage_mult = -0.5
+	unit_kill_rate_add = -0.5
+	unit_devastation_mult = 0.5
+	unit_occupation_mult = -0.5
+}
+
+# scaled by a formation's lack of organization, down to the minimum value set in defines
+REPLACE_OR_CREATE:low_organization_fleet = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	ship_accuracy_mult = -0.5
+	ship_hull_damage_mult = -0.5
+	ship_crew_damage_mult = -0.5
+	ship_blockade_strength_mult = -0.5
+	ship_readiness_gain_mult = -0.5
+	ship_critical_hit_chance_mult = -0.5
+}
 
 #STATIC
 REPLACE_OR_CREATE:state_turmoil = {
@@ -171,8 +199,8 @@ REPLACE_OR_CREATE:country_humiliated = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_authority_mult = -0.5
 	country_influence_mult = -0.5
-	country_liberty_desire_decrease_mult = 0.5
 	country_liberty_desire_increase_mult = -0.5
+	country_liberty_desire_decrease_mult = 0.5
 	country_prestige_mult = -0.5
 	country_leverage_resistance_mult = -0.5
 	country_leverage_generation_mult = -0.5
@@ -218,16 +246,22 @@ REPLACE_OR_CREATE:accepted_movement = {
 REPLACE_OR_CREATE:suppression_colonial_manufacturing_industry_policy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_liberty_desire_of_subjects_add = 0.5
+	country_bureaucracy_add = -500
+	country_influence_add = -500
 }
 
 REPLACE_OR_CREATE:suppression_colonial_agricultural_industry_policy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_liberty_desire_of_subjects_add = 0.25
+	country_bureaucracy_add = -250
+	country_influence_add = -250
 }
 
 REPLACE_OR_CREATE:suppression_colonial_resource_industry_policy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_liberty_desire_of_subjects_add = 0.25
+	country_bureaucracy_add = -250
+	country_influence_add = -250
 }
 
 REPLACE_OR_CREATE:suppression_modifier = {
@@ -272,7 +306,7 @@ REPLACE_OR_CREATE:suppression_modifier = {
 }
 
 REPLACE_OR_CREATE:support_private_construction = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	state_bureaucracy_population_base_cost_factor_mult = 1
 	country_authority_add = -100
 	country_private_construction_allocation_mult = 1
@@ -281,7 +315,7 @@ REPLACE_OR_CREATE:support_private_construction = {
 }
 
 REPLACE_OR_CREATE:ban_private_construction = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
 	state_bureaucracy_population_base_cost_factor_mult = 1
 	country_authority_add = -100
 	country_private_construction_allocation_mult = -10
@@ -290,7 +324,7 @@ REPLACE_OR_CREATE:ban_private_construction = {
 }
 
 REPLACE_OR_CREATE:support_privatization = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	state_bureaucracy_population_base_cost_factor_mult = 1
 	country_authority_add = -100
 	country_government_dividends_reinvestment_add = 1
@@ -305,7 +339,7 @@ REPLACE_OR_CREATE:support_privatization = {
 }
 
 REPLACE_OR_CREATE:ban_privatization = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	state_bureaucracy_population_base_cost_factor_mult = 1
 	country_authority_add = -100
 	country_government_dividends_reinvestment_add = -10

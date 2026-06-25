@@ -6,6 +6,7 @@
 	required_construction = construction_cost_low
 	production_method_groups = {
 		pmg_base_building_fishing_wharf
+		pmg_exploitation
 		pmg_equipment
 		pmg_refrigeration
 	}
@@ -27,6 +28,7 @@ building_whaling_station = {
 	}
 	production_method_groups = {
 		pmg_base_building_whaling_station
+		pmg_exploitation
 		pmg_equipment
 		pmg_refrigeration
 	}
@@ -46,6 +48,7 @@ building_logging_camp = {
 	levels_per_mesh = 50
 	production_method_groups = {
 		pmg_base_building_logging_camp
+		pmg_exploitation
 		pmg_equipment
 		pmg_train_automation
 	}
@@ -66,8 +69,8 @@ building_coal_mine = {
 	production_method_groups = {
 		pmg_mining_equipment_building_coal_mine
 		pmg_explosives
+		pmg_exploitation
 		pmg_steam_automation
-		pmg_train_automation
 	}
 	ownership_type = self
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
@@ -86,8 +89,8 @@ building_iron_mine = {
 	production_method_groups = {
 		pmg_mining_equipment_building_iron_mine
 		pmg_explosives
+		pmg_exploitation
 		pmg_steam_automation
-		pmg_train_automation
 	}
 	ownership_type = self
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
@@ -106,8 +109,8 @@ building_lead_mine = {
 	production_method_groups = {
 		pmg_mining_equipment_building_lead_mine
 		pmg_explosives
+		pmg_exploitation
 		pmg_steam_automation
-		pmg_train_automation
 	}
 	ownership_type = self
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
@@ -126,8 +129,8 @@ building_sulfur_mine = {
 	production_method_groups = {
 		pmg_mining_equipment_building_sulfur_mine
 		pmg_explosives
+		pmg_exploitation
 		pmg_steam_automation
-		pmg_train_automation
 	}
 	ownership_type = self
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
@@ -148,8 +151,8 @@ building_gold_mine = {
 	production_method_groups = {
 		pmg_mining_equipment_building_gold_mine
 		pmg_explosives
+		pmg_exploitation
 		pmg_steam_automation
-		pmg_train_automation
 	}
 	ownership_type = self
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
@@ -171,6 +174,8 @@ building_gold_field = {
 	production_method_groups = {
 		pmg_base_building_gold_field
 		pmg_explosives
+		pmg_exploitation
+		pmg_steam_automation
 	}
 	ownership_type = self
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
@@ -187,8 +192,8 @@ building_oil_rig = {
 	}
 	production_method_groups = {
 		pmg_base_building_oil_rig
+		pmg_exploitation
 		pmg_steam_automation
-		pmg_train_automation
 	}
 	ownership_type = self
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_oil.dds"

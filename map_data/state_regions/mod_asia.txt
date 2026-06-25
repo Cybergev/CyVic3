@@ -1,0 +1,49 @@
+﻿STATE_HEDJAZ = {
+    id = 402
+    subsistence_building = "building_subsistence_pasture"
+    provinces = { "x01B53C" "x034F87" "x04F7B6" "x0521C1" "x05AA56" "x12C743" "x189DA8" "x1B7D77" "x1BC05F" "x1DBFE3" "x1EBD1A" "x21BF48" "x21EDF5" "x226FAA" "x24FBED" "x27A2A8" "x28DBD5" "x292DD7" "x2999ED" "x2B5B11" "x3090A0" "x314E1E" "x320615" "x3B598C" "x3BE5E7" "x46CB97" "x490DFA" "x4F8C15" "x50A387" "x521E15" "x56AD8A" "x5A8CB9" "x5CBEA7" "x5DA23F" "x5DF095" "x5F15CE" "x60A82A" "x60CD79" "x61CFA0" "x6809FA" "x694321" "x6AB15B" "x6DE5B5" "x6DECD7" "x6E30A8" "x73D602" "x74B86E" "x74CB6D" "x75C3D2" "x778137" "x7CE787" "x7E1168" "x7FB9EE" "x80B1A9" "x862801" "x87AE0B" "x8BF770" "x8DCF10" "x8DED0C" "x91C7AF" "x926BB8" "x93BDD6" "x96DD61" "x9BC8FF" "x9D05B5" "x9DCEC5" "xA1824A" "xA3FA9D" "xA657F7" "xA81C83" "xA8EF8C" "xADCFD1" "xADF397" "xAF3276" "xB090A0" "xB2A43B" "xB47D47" "xBB2219" "xBB3419" "xBB9BB6" "xBBA7D8" "xC6CF64" "xCD06B6" "xCE4CD0" "xCEC06C" "xD128E6" "xD24798" "xDAF133" "xDD0665" "xDF5580" "xE0B808" "xE19850" "xE2A4DE" "xE4415E" "xE463A6" "xE49A74" "xE4A66C" "xE5D28A" "xE6B022" "xE78A14" "xECA39C" "xEEB4B7" "xF4D889" "xF5C539" "xF9520D" }
+    traits = { "state_trait_tihamah" }
+    city = "xE19850"
+    port = "x862801"
+    farm = "x5F15CE"
+    mine = "x314E1E"
+    wood = "x2999ED"
+    arable_land = 20
+    arable_resources = { "building_livestock_ranch" }
+    capped_resources = {
+        building_iron_mine = 30
+        building_lead_mine = 20
+        building_gold_mine = 10
+        building_sulfur_mine = 30
+        building_fishing_wharf = 5
+    }
+    naval_exit_id = 3047
+}
+
+STATE_YEMEN = {
+    id = 401
+    subsistence_building = "building_subsistence_pasture"
+    traits = { "state_trait_natural_harbors" "state_trait_yemeni_highlands" }
+    provinces = { "x00E3EF" "x02B35C" "x02F9FF" "x034B03" "x075453" "x0B9A27" "x0C7E0C" "x1A7BB0" "x1C7B77" "x2197EF" "x2576C1" "x2975A3" "x299C0F" "x2A9E89" "x2BD409" "x308FDF" "x30A3E2" "x314190" "x319060" "x346541" "x37058F" "x3D1674" "x3D7345" "x3D86FC" "x49FCAB" "x54840B" "x567A83" "x5C91FE" "x5DF9FC" "x5F3582" "x60DFF9" "x625380" "x6290E6" "x657048" "x672267" "x68B524" "x6BD0A9" "x6D2F95" "x75D341" "x7C3EA9" "x7EC879" "x8436FE" "x843C65" "x84FA60" "x872CEB" "x895FE6" "x8B1488" "x8BF4B8" "x8D121D" "x8D6307" "x8E96A7" "x90602A" "x95D64E" "x9D6547" "x9D8A78" "x9E941B" "x9EDF3C" "xA0540A" "xA05CB5" "xA1AAB0" "xA2FDFA" "xAD1CE2" "xB010DF" "xB08F60" "xB090E0" "xB79DED" "xB8A8D2" "xBAA208" "xBB387A" "xBDEA27" "xC09525" "xC790E8" "xCF401E" "xCF61E1" "xCF6C49" "xD3F276" "xD6CC22" "xDD033C" "xDD732E" "xDFA579" "xE5892F" "xE5DF3B" "xEF2E43" "xF385EB" "xF86F58" "xFA0283" "xFE5027" }
+    prime_land = { x567A83 xE5892F x02F9FF x7EC879 x625380 x9D8A78 xEF2E43 xBB387A xCF6C49 x7C3EA9 xFE5027 x68B524 xE5DF3B x1A7BB0 x2576C1 xCF401E x49FCAB x6290E6 xF86F58 x84FA60 x8B1488 x075453 x00E3EF xB79DED x9E941B x034B03 x8436FE }
+    impassable = { x37058F }
+    city = "x319060"
+    port = "x9EDF3C"
+    farm = "xD6CC22"
+    mine = "x49FCAB"
+    wood = "x034B03"
+    arable_land = 70
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_coffee_plantation" "building_tobacco_plantation" }
+    capped_resources = {
+        building_coal_mine = 10
+        building_iron_mine = 20
+        building_lead_mine = 20
+        building_gold_mine = 5
+        building_fishing_wharf = 9
+    }
+    resource = {
+        type = "building_oil_rig"
+        undiscovered_amount = 30
+    }
+    naval_exit_id = 3047
+}

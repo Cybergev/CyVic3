@@ -1,7 +1,0 @@
-﻿INJECT:building_suez_canal = {
-	building_group = bg_public_infrastructure
-}
-
-INJECT:building_panama_canal = {
-	building_group = bg_public_infrastructure
-}

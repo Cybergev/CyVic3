@@ -15,6 +15,9 @@
 
 REPLACE_OR_CREATE:pm_home_workshops_building_subsistence_pasture = {
 	texture = "gfx/interface/icons/production_method_icons/home_workshops.dds"
+	disallowing_laws = {
+		law_serfdom
+	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_output_meat_add = 1
@@ -48,6 +51,9 @@ REPLACE_OR_CREATE:pm_home_workshops_no_building_subsistence_fishing_village = {
 
 REPLACE_OR_CREATE:pm_home_workshops_building_subsistence_fishing_village = {
 	texture = "gfx/interface/icons/production_method_icons/home_workshops.dds"
+	disallowing_laws = {
+		law_serfdom
+	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_output_fabric_add = 1
@@ -80,6 +86,9 @@ REPLACE_OR_CREATE:pm_home_workshops_no_building_subsistence_farm = {
 
 REPLACE_OR_CREATE:pm_home_workshops_building_subsistence_farm = {
 	texture = "gfx/interface/icons/production_method_icons/home_workshops.dds"
+	disallowing_laws = {
+		law_serfdom
+	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_output_fabric_add = 1
@@ -113,6 +122,9 @@ REPLACE_OR_CREATE:pm_home_workshops_no_building_subsistence_orchard = {
 
 REPLACE_OR_CREATE:pm_home_workshops_building_subsistence_orchard = {
 	texture = "gfx/interface/icons/production_method_icons/home_workshops.dds"
+	disallowing_laws = {
+		law_serfdom
+	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_output_fabric_add = 1
@@ -146,6 +158,9 @@ REPLACE_OR_CREATE:pm_home_workshops_no_building_subsistence_rice_farm = {
 
 REPLACE_OR_CREATE:pm_home_workshops_building_subsistence_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/home_workshops.dds"
+	disallowing_laws = {
+		law_serfdom
+	}
 	building_modifiers = {
 		workforce_scaled = {
 			goods_output_fabric_add = 2
@@ -219,9 +234,12 @@ REPLACE_OR_CREATE:pm_homesteading_building_subsistence = {
 		law_homesteading
 	}
 	building_modifiers = {
+		unscaled = {
+			building_subsistence_output_add = 5
+		}
 		level_scaled = {
-			building_employment_peasants_add = -5000
-			building_employment_farmers_add = 2000
+			building_employment_peasants_add = -1000
+			building_employment_farmers_add = 1000
 		}
 	}
 }
@@ -233,9 +251,12 @@ REPLACE_OR_CREATE:pm_homesteading_building_subsistence_rice_farm = {
 		law_homesteading
 	}
 	building_modifiers = {
+		unscaled = {
+			building_subsistence_output_add = 5
+		}
 		level_scaled = {
-			building_employment_peasants_add = -10000
-			building_employment_farmers_add = 4000
+			building_employment_peasants_add = -2000
+			building_employment_farmers_add = 2000
 		}
 	}
 }

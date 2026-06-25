@@ -11,22 +11,11 @@
 REPLACE_OR_CREATE:pmg_secondary_building_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
-		pm_no_sugar
-		pm_simple_sugar_farming
-		pm_soil_enriching_sugar_farming
-		pm_fertilization_sugar_farming
-		pm_chemical_fertilizer_sugar_farming
-	}
-}
-
-REPLACE_OR_CREATE:pmg_tertiary_building_farm = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_no_orchards
-		pm_simple_orchards
-		pm_soil_enriching_orchards
-		pm_fertilization_orchards
-		pm_chemical_fertilizer_orchards
+		pm_no_secondary
+		pm_simple_secondary_farming
+		pm_soil_enriching_secondary_farming
+		pm_fertilization_secondary_farming
+		pm_chemical_fertilizer_secondary_farming
 	}
 }
 
@@ -43,21 +32,10 @@ REPLACE_OR_CREATE:pmg_base_building_rice_farm = {
 REPLACE_OR_CREATE:pmg_secondary_building_rice_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
-		pm_no_sugar
-		pm_simple_sugar_building_rice_farm
-		pm_soil_enriching_sugar_building_rice_farm
-		pm_fertilization_sugar_building_rice_farm
-		pm_chemical_fertilizer_sugar_building_rice_farm
-	}
-}
-
-REPLACE_OR_CREATE:pmg_tertiary_building_rice_farm = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
-	production_methods = {
-		pm_no_orchards
-		pm_simple_orchards_building_rice_farm
-		pm_soil_enriching_orchards_building_rice_farm
-		pm_fertilization_orchards_building_rice_farm
-		pm_chemical_fertilizer_orchards_building_rice_farm
+		pm_no_secondary
+		pm_simple_secondary_building_rice_farm
+		pm_soil_enriching_secondary_building_rice_farm
+		pm_fertilization_secondary_building_rice_farm
+		pm_chemical_fertilizer_secondary_building_rice_farm
 	}
 }

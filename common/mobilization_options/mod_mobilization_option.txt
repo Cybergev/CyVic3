@@ -23,7 +23,7 @@
 		# empty on purpose - this is the minimum mobilization cost
 	}
 	ai_weight = {
-		value = 1
+		value = 2
 	}
 	group = supplies
 }
@@ -109,7 +109,7 @@ REPLACE:mobilization_option_extra_supplies = {
 		character_battle_condition_broken_supply_line_mult = -0.2
 	}
 	ai_weight = {
-		value = 1
+		value = 2
 	}
 	group = supplies
 }
@@ -198,7 +198,7 @@ REPLACE:mobilization_option_luxurious_supplies = {
 		character_battle_condition_broken_supply_line_mult = -0.4
 	}
 	ai_weight = {
-		value = 1
+		value = 2
 	}
 	group = supplies
 }
@@ -358,22 +358,19 @@ REPLACE:mobilization_option_forced_march = {
 	unit_modifier = {
 		military_formation_movement_speed_mult = 0.1
 		military_formation_mobilization_speed_mult = 0.1
+		unit_morale_loss_mult = 0.1
+		unit_morale_recovery_mult = -0.1
 	}
 	ai_weight = {
 		value = 0
 		if = {
 			limit = {
-				scope:military_formation = {
-					highest_ranked_commander ?= {
-						OR = {
-							has_trait = cruel
-							has_trait = reckless
-							has_trait = arrogant
-						}
-					}
+				NOR = {
+					has_technology_researched = railways
+					has_technology_researched = combustion_engine
 				}
 			}
-			add = 1
+			add = 2
 		}
 	}
 	group = transport
@@ -417,7 +414,7 @@ REPLACE:mobilization_option_rail_transport = {
 		military_formation_mobilization_speed_mult = 0.25
 	}
 	ai_weight = {
-		value = 1
+		value = 2
 	}
 	group = transport
 }
@@ -469,7 +466,7 @@ REPLACE:mobilization_option_truck_transport = {
 		military_formation_mobilization_speed_mult = 0.25
 	}
 	ai_weight = {
-		value = 1
+		value = 2
 	}
 	group = transport
 }
@@ -516,7 +513,7 @@ REPLACE:mobilization_option_machinegunners = {
 		unit_defense_mult = 0.25
 	}
 	ai_weight = {
-		value = 1
+		value = 3
 	}
 	group = special_weapons
 }
@@ -564,7 +561,7 @@ mobilization_option_mortarmen = {
 		unit_devastation_mult = 0.25
 	}
 	ai_weight = {
-		value = 1
+		value = 3
 	}
 	group = special_weapons
 }
@@ -611,7 +608,7 @@ REPLACE:mobilization_option_flamethrowers = {
 		unit_devastation_mult = 0.25
 	}
 	ai_weight = {
-		value = 1
+		value = 3
 	}
 	group = special_weapons
 }
@@ -662,7 +659,7 @@ REPLACE:mobilization_option_chemical_weapons = {
 		unit_devastation_mult = 0.5
 	}
 	ai_weight = {
-		value = 1
+		value = 3
 	}
 	group = special_weapons
 }
@@ -710,7 +707,7 @@ REPLACE:mobilization_option_motorized_recon = {
 		character_battle_condition_rapid_advance_mult = 0.5
 	}
 	ai_weight = {
-		value = 1
+		value = 2
 	}
 	group = reconnaissance
 }
@@ -758,7 +755,7 @@ REPLACE:mobilization_option_balloon_recon = {
 		character_battle_condition_lost_mult = -0.5
 	}
 	ai_weight = {
-		value = 1
+		value = 2
 	}
 	group = reconnaissance
 }
@@ -806,7 +803,7 @@ REPLACE:mobilization_option_aerial_recon = {
 		military_formation_attrition_risk_mult = -0.5
 	}
 	ai_weight = {
-		value = 1
+		value = 2
 	}
 	group = reconnaissance
 }
@@ -858,7 +855,7 @@ REPLACE:mobilization_option_first_aid = {
 		unit_recovery_rate_add = 0.25
 	}
 	ai_weight = {
-		value = 1
+		value = 3
 	}
 	group = medic_support
 }
@@ -910,7 +907,7 @@ REPLACE:mobilization_option_field_hospitals = {
 		unit_recovery_rate_add = 0.5
 	}
 	ai_weight = {
-		value = 1
+		value = 3
 	}
 	group = medic_support
 }

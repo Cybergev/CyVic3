@@ -710,10 +710,6 @@
 	}
 	pop_weight = {
 		add = {
-			desc = "POP_BASE_ATTRACTION"
-			value = 25
-		}
-		add = {
 			desc = "POP_CLERGYMEN"
 			if = {
 				limit = {
@@ -771,7 +767,7 @@
 			}
 			multiply = {
 				desc = "STATE_ATHEISM_LAW"
-				value = 0.1
+				value = 0.5
 			}
 		}
 		if = {
@@ -793,34 +789,6 @@
 			}
 			multiply = {
 				desc = "FREEDOM_OF_CONSCIENCE_LAW"
-				value = 1.25
-			}
-		}
-		if = {
-			limit = {
-				owner = {
-					has_law_or_variant = law_type:law_religious_schools
-				}
-			}
-			multiply = {
-				desc = "RELIGIOUS_SCHOOLS_LAW"
-				value = owner.institution:institution_schools.investment
-				divide = 10
-				add = 1
-			}
-		}
-		if = {
-			limit = {
-				owner = {
-					has_technology_researched = corporatism
-					NOT = {
-						has_law_or_variant = law_type:law_total_separation
-						has_law_or_variant = law_type:law_state_atheism
-					}
-				}
-			}
-			multiply = {
-				desc = "CORPORATISM_TECH"
 				value = 1.25
 			}
 		}

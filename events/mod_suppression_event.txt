@@ -6,45 +6,39 @@ suppression_event.1 = {
 		every_scope_building = {
 			if = {
 				limit = {
-					suppression_manufacturing_bg_trigger = yes
+					suppression_manufacturing_trigger = yes
 				}
-				if = {
-					limit = {
-						suppression_manufacturing_trigger = yes
-					}
-					add_modifier = suppression_modifier
-				}
-				else = {
-					remove_modifier = suppression_modifier
-				}
+				add_modifier = suppression_modifier
 			}
 			if = {
 				limit = {
-					suppression_agricultural_bg_trigger = yes
+					desuppression_manufacturing_trigger = yes
 				}
-				if = {
-					limit = {
-						suppression_agricultural_trigger = yes
-					}
-					add_modifier = suppression_modifier
-				}
-				else = {
-					remove_modifier = suppression_modifier
-				}
+				remove_modifier = suppression_modifier
 			}
 			if = {
 				limit = {
-					suppression_resource_bg_trigger = yes
+					suppression_agricultural_trigger = yes
 				}
-				if = {
-					limit = {
-						suppression_resource_trigger = yes
-					}
-					add_modifier = suppression_modifier
+				add_modifier = suppression_modifier
+			}
+			if = {
+				limit = {
+					desuppression_agricultural_trigger = yes
 				}
-				else = {
-					remove_modifier = suppression_modifier
+				remove_modifier = suppression_modifier
+			}
+			if = {
+				limit = {
+					suppression_resource_trigger = yes
 				}
+				add_modifier = suppression_modifier
+			}
+			if = {
+				limit = {
+					desuppression_resource_trigger = yes
+				}
+				remove_modifier = suppression_modifier
 			}
 		}
 	}

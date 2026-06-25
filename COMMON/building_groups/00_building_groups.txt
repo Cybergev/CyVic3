@@ -72,6 +72,7 @@ bg_agriculture = {
 	lens = agriculture
 	economy_of_scale = yes
 	can_use_slaves = yes
+	cash_reserves_max = 25000
 	urbanization = 5
 	infrastructure_usage_per_level = 1
 	should_auto_expand = {
@@ -105,6 +106,7 @@ bg_ranching = {
 	lens = agriculture
 	economy_of_scale = yes
 	can_use_slaves = yes
+	cash_reserves_max = 25000
 	urbanization = 5
 	infrastructure_usage_per_level = 1
 	should_auto_expand = {
@@ -294,7 +296,7 @@ bg_government = {
 	lens = development
 	urbanization = 10
 	infrastructure_usage_per_level = 1
-	economy_of_scale_ai_factor = 3
+	economy_of_scale_ai_factor = 2
 	construction_efficiency_modifier = yes
 }
 
@@ -321,7 +323,6 @@ bg_naval_fortification = {
 
 bg_trade = {
 	parent_group = bg_private_infrastructure
-	stateregion_max_level = no
 	lens = trade
 	subsidized = no
 	has_trade_revenue = yes
@@ -331,11 +332,9 @@ bg_trade = {
 }
 
 bg_ship_construction = {
-	category = development
-	lens = development
-	parent_group = bg_heavy_industry
+	parent_group = bg_construction
+	stateregion_max_level = no
 	economy_of_scale_ai_factor = 5
-	infrastructure_usage_per_level = 2
 	construction_efficiency_modifier = yes
 	builds_ships = yes
 }
@@ -389,7 +388,6 @@ bg_infrastructure = {
 	urbanization = 5
 	economy_of_scale = yes
 	can_use_slaves = yes
-	stateregion_max_level = yes
 	economy_of_scale_ai_factor = 2
 	foreign_investment_ai_factor = 0.75
 	construction_efficiency_modifier = yes
@@ -402,10 +400,9 @@ bg_public_infrastructure = {
 }
 
 bg_construction = {
-	parent_group = bg_public_infrastructure
+	parent_group = bg_private_infrastructure
+	stateregion_max_level = yes
 	infrastructure_usage_per_level = 1
-	lens = development
-	is_government_funded = yes
 	economy_of_scale_ai_factor = 5
 }
 
@@ -417,7 +414,7 @@ bg_private_infrastructure = {
 }
 
 bg_canals = {
-	parent_group = bg_public_infrastructure
+	parent_group = bg_private_infrastructure
 	inheritable_construction = yes
 	urbanization = 100
 }

@@ -1,3 +1,0 @@
-﻿INJECT:building_art_academy = {
-	required_construction = construction_cost_low
-}

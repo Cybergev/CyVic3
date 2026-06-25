@@ -1251,12 +1251,6 @@ REPLACE:ideology_particularist = {
 		law_professional_army = approve
 		law_national_militia = approve
 	}
-	lawgroup_navy_model = {
-		law_jeune_ecole = strongly_disapprove
-		law_professional_navy = disapprove
-		law_diplomatic_navy = neutral
-		law_merchant_navy = approve
-	}
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
 		law_manorialism = disapprove

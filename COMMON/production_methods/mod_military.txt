@@ -283,16 +283,13 @@ REPLACE_OR_CREATE:pm_mobile_warfare_tactics_conscription = {
 #NAVY
 REPLACE_OR_CREATE:pm_no_naval_theory = {
 	texture = "gfx/interface/icons/production_method_icons/no_naval_theory.dds"
-	profession_ratio = {
-		soldiers = 90
-		officers = 10
-	}
 	building_modifiers = {
-		unscaled = {
-			building_training_rate_add = 10
-		}
 		level_scaled = {
-			building_training_rate_add = 6
+			building_employment_soldiers_add = 900
+			building_employment_officers_add = 100
+		}
+		workforce_scaled = {
+			country_sailors_max_add = 1000
 		}
 	}
 }
@@ -302,18 +299,13 @@ REPLACE_OR_CREATE:pm_power_of_the_purse = {
 	unlocking_technologies = {
 		power_of_the_purse
 	}
-	profession_ratio = {
-		soldiers = 80
-		officers = 20
-	}
 	building_modifiers = {
-		unscaled = {
-			unit_morale_loss_mult = -0.2
-			unit_morale_damage_mult = 0.2
-			building_training_rate_add = 10
-		}
 		level_scaled = {
-			building_training_rate_add = 7
+			building_employment_soldiers_add = 800
+			building_employment_officers_add = 300
+		}
+		workforce_scaled = {
+			country_sailors_max_add = 1000
 		}
 	}
 }
@@ -323,18 +315,13 @@ REPLACE_OR_CREATE:pm_jeune_ecole = {
 	unlocking_technologies = {
 		jeune_ecole
 	}
-	profession_ratio = {
-		soldiers = 70
-		officers = 30
-	}
 	building_modifiers = {
-		unscaled = {
-			unit_morale_loss_mult = -0.3
-			unit_morale_damage_mult = 0.3
-			building_training_rate_add = 10
-		}
 		level_scaled = {
-			building_training_rate_add = 8
+			building_employment_soldiers_add = 700
+			building_employment_officers_add = 300
+		}
+		workforce_scaled = {
+			country_sailors_max_add = 1000
 		}
 	}
 }
@@ -344,18 +331,13 @@ REPLACE_OR_CREATE:pm_sea_lane_strategies = {
 	unlocking_technologies = {
 		sea_lane_strategies
 	}
-	profession_ratio = {
-		soldiers = 60
-		officers = 40
-	}
 	building_modifiers = {
-		unscaled = {
-			unit_morale_loss_mult = -0.4
-			unit_morale_damage_mult = 0.4
-			building_training_rate_add = 10
-		}
 		level_scaled = {
-			building_training_rate_add = 9
+			building_employment_soldiers_add = 600
+			building_employment_officers_add = 400
+		}
+		workforce_scaled = {
+			country_sailors_max_add = 1000
 		}
 	}
 }
@@ -365,18 +347,13 @@ REPLACE_OR_CREATE:pm_battlefleet_tactics = {
 	unlocking_technologies = {
 		battlefleet_tactics
 	}
-	profession_ratio = {
-		soldiers = 50
-		officers = 50
-	}
 	building_modifiers = {
-		unscaled = {
-			unit_morale_loss_mult = -0.5
-			unit_morale_damage_mult = 0.5
-			building_training_rate_add = 10
-		}
 		level_scaled = {
-			building_training_rate_add = 10
+			building_employment_soldiers_add = 500
+			building_employment_officers_add = 500
+		}
+		workforce_scaled = {
+			country_sailors_max_add = 1000
 		}
 	}
 }
@@ -419,6 +396,93 @@ REPLACE_OR_CREATE:pm_samurai_training = {
 		}
 		level_scaled = {
 			building_training_rate_add = 5
+		}
+	}
+}
+
+#FORTIFICATION=============================
+REPLACE_OR_CREATE:pm_naval_fortification_basic = {
+	texture = "gfx/interface/icons/production_method_icons/fortification_basic.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_fortification_naval_invasion_add = 25
+			state_fortification_naval_battle_mult = 0.025
+			state_fortification_bombardment_resistance_add = 250
+			state_blockade_resistance_add = 25
+		}
+		unscaled = {
+			state_control_strait_bool = yes
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_explosives_add = 10
+			goods_input_small_arms_add = 10
+			goods_input_iron_add = 10
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 800
+			building_employment_officers_add = 200
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_naval_fortification_reinforced = {
+	texture = "gfx/interface/icons/production_method_icons/fortification_reinforced.dds"
+	unlocking_technologies = {
+		breech_loading_artillery
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_fortification_naval_invasion_add = 50
+			state_fortification_naval_battle_mult = 0.05
+			state_fortification_bombardment_resistance_add = 500
+			state_blockade_resistance_add = 50
+		}
+		unscaled = {
+			state_control_strait_bool = yes
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_artillery_add = 10
+			goods_input_explosives_add = 20
+			goods_input_small_arms_add = 10
+			goods_input_steel_add = 10
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 650
+			building_employment_officers_add = 350
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_naval_fortification_advanced = {
+	texture = "gfx/interface/icons/production_method_icons/fortification_advanced.dds"
+	unlocking_technologies = {
+		concrete_fortifications
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_fortification_naval_invasion_add = 100
+			state_fortification_naval_battle_mult = 0.1
+			state_fortification_bombardment_resistance_add = 1000
+			state_blockade_resistance_add = 100
+		}
+		unscaled = {
+			state_control_strait_bool = yes
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ammunition_add = 20
+			goods_input_artillery_add = 10
+			goods_input_small_arms_add = 10
+			goods_input_steel_add = 10
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 500
+			building_employment_officers_add = 500
 		}
 	}
 }

@@ -1,3 +1,0 @@
-﻿INJECT:building_government_administration = {
-	required_construction = construction_cost_low
-}

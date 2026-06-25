@@ -991,10 +991,7 @@ REPLACE_OR_CREATE:resign_from_office = {
 		is_ruler_of_own_country = yes
 		is_immortal = no
 		owner ?= {
-			NOR = {
-				country_has_monarchy_law = yes
-				has_law_or_variant = law_type:law_theocracy
-			}
+			country_has_monarchy_law = no
 		}
 	}
 	show_requirements = yes
@@ -1153,7 +1150,6 @@ REPLACE_OR_CREATE:grant_leadership = {
 			}
 			is_in_government = yes
 			is_revolutionary = no
-			ig_clout > define:NPolitics|MARGINAL_IG_THRESHOLD
 		}
 		character_acceptance = {
 			target = scope:actor
@@ -1260,7 +1256,6 @@ REPLACE_OR_CREATE:retire_leader = {
 		interest_group ?= {
 			is_in_government = yes
 			is_revolutionary = no
-			ig_clout > define:NPolitics|MARGINAL_IG_THRESHOLD
 		}
 	}
 	effect = {
@@ -1844,7 +1839,6 @@ REPLACE_OR_CREATE:political_purge = {
 		}
 		interest_group ?= {
 			is_revolutionary = no
-			ig_clout > define:NPolitics|MARGINAL_IG_THRESHOLD
 		}
 	}
 	effect = {

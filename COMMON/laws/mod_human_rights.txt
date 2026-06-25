@@ -950,6 +950,7 @@ law_no_schools = {
 		law_compulsory_primary_school
 	}
 	modifier = {
+		country_institution_cost_institution_schools_mult = -1.0
 	}
 	can_enact = {
 		custom_tooltip = {
@@ -983,13 +984,8 @@ law_religious_schools = {
 	unlocking_laws = {
 		law_state_religion
 	}
-	disallowing_laws = {
-		law_total_separation
-		law_state_atheism
-		law_serfdom
-	}
 	modifier = {
-		country_institution_cost_institution_schools_mult = -0.25
+		country_institution_cost_institution_schools_mult = -1.0
 	}
 	institution = institution_schools
 	institution_modifier = {
@@ -1080,8 +1076,13 @@ law_private_schools = {
 	unlocking_technologies = {
 		academia
 	}
+	disallowing_laws = {
+		law_state_religion
+		law_state_atheism
+		law_serfdom
+	}
 	modifier = {
-		country_institution_cost_institution_schools_mult = -0.5
+		country_institution_cost_institution_schools_mult = -1.0
 	}
 	institution = institution_schools
 	institution_modifier = {
@@ -1288,7 +1289,7 @@ law_charitable_health_system = {
 		medical_degrees
 	}
 	modifier = {
-		country_institution_cost_institution_health_system_mult = -0.25
+		country_institution_cost_institution_health_system_mult = -1.0
 	}
 	institution = institution_health_system
 	institution_modifier = {
@@ -1324,7 +1325,7 @@ law_private_health_insurance = {
 		pharmaceuticals
 	}
 	modifier = {
-		country_institution_cost_institution_health_system_mult = -0.5
+		country_institution_cost_institution_health_system_mult = -1.0
 	}
 	institution = institution_health_system
 	institution_modifier = {

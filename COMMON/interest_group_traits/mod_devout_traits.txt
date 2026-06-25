@@ -1,13 +1,4 @@
-﻿REPLACE:ig_trait_the_best_revenge = {
-	icon = "gfx/interface/icons/ig_trait_icons/be_fruitful_and_multiply.dds"
-	min_approval = loyal
-	modifier = {
-		state_birth_rate_mult = 0.05
-		state_mortality_mult = -0.05
-	}
-}
-
-REPLACE:ig_trait_secular_shrine_theory = {
+﻿REPLACE:ig_trait_secular_shrine_theory = {
 	icon = "gfx/interface/icons/ig_trait_icons/divine_right.dds"
 	min_approval = happy
 	modifier = {
@@ -21,6 +12,6 @@ REPLACE:ig_trait_heavenly_sovereign = {
 	icon = "gfx/interface/icons/ig_trait_icons/be_fruitful_and_multiply.dds"
 	min_approval = loyal
 	modifier = {
-		country_authority_mult = 0.25
+		country_authority_mult = 0.50
 	}
 }

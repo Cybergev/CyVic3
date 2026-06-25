@@ -1,17 +1,317 @@
-﻿REPLACE:je_caucasian_war_circassia = {
+﻿REPLACE:je_caucasian_war = {
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	group = je_group_russia_expansion
+	is_shown_when_inactive = {
+		NOT = {
+			has_global_variable = caucasus_failure_var
+		}
+	}
+	possible = {
+		country_has_primary_culture = cu:russian
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_KUBAN
+				state_region = s:STATE_NORTH_CAUCASUS
+				state_region = s:STATE_DAGESTAN
+			}
+			OR = {
+				owner = c:CIR
+				owner = c:CHC
+			}
+		}
+	}
+	immediate = {
+		set_global_variable = caucasian_war_happened
+		c:CIR ?= {
+			save_scope_as = circassia_scope
+		}
+		c:CHC ?= {
+			save_scope_as = imamate_scope
+		}
+		c:RUS ?= {
+			save_scope_as = russia_scope
+		}
+		every_scope_state = {
+			limit = {
+				OR = {
+					AND = {
+						state_region = s:STATE_KUBAN
+						exists = c:CIR
+						owner = c:RUS
+					}
+					AND = {
+						state_region = s:STATE_NORTH_CAUCASUS
+						OR = {
+							exists = c:CIR
+							exists = c:CHC
+						}
+						owner = c:RUS
+					}
+					AND = {
+						state_region = s:STATE_DAGESTAN
+						exists = c:CHC
+						owner = c:RUS
+					}
+				}
+				NOT = {
+					has_modifier = caucasus_war_attacker
+				}
+			}
+			add_modifier = caucasus_war_attacker
+		}
+	}
+	scripted_button = russia_escalate_caucasian_war
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = caucasian_war_milyutin_loc
+				trigger = {
+					has_variable = milyutin_memorandum_accepted
+				}
+			}
+			triggered_desc = {
+				desc = caucasian_war_escalated_loc
+				trigger = {
+					OR = {
+						has_variable = escalated_caucasian_war
+						NAND = {
+							c:CHC ?= {
+								has_truce_with = root
+							}
+							c:CIR ?= {
+								has_truce_with = root
+							}
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = caucasian_war_non_escalated_loc
+				trigger = {
+					c:CHC ?= {
+						has_truce_with = root
+					}
+					c:CIR ?= {
+						has_truce_with = root
+					}
+				}
+			}
+		}
+	}
+	complete = {
+		custom_tooltip = {
+			text = caucasus_secured_tt
+			NOT = {
+				exists = c:CIR
+				exists = c:CHC
+			}
+		}
+		s:STATE_KUBAN = {
+			trigger_if = {
+				limit = {
+					NOT = {
+						root = {
+							has_state_in_state_region = STATE_KUBAN
+						}
+					}
+				}
+				root = {
+					has_state_in_state_region = STATE_KUBAN
+				}
+			}
+			region_state:RUS ?= {
+				turmoil <= 0.25
+				is_split_state = no
+			}
+		}
+		s:STATE_DAGESTAN = {
+			trigger_if = {
+				limit = {
+					NOT = {
+						root = {
+							has_state_in_state_region = STATE_DAGESTAN
+						}
+					}
+				}
+				root = {
+					has_state_in_state_region = STATE_DAGESTAN
+				}
+			}
+			region_state:RUS ?= {
+				turmoil <= 0.25
+				is_split_state = no
+			}
+		}
+		s:STATE_NORTH_CAUCASUS = {
+			trigger_if = {
+				limit = {
+					NOT = {
+						root = {
+							has_state_in_state_region = STATE_NORTH_CAUCASUS
+						}
+					}
+				}
+				root = {
+					has_state_in_state_region = STATE_NORTH_CAUCASUS
+				}
+			}
+			region_state:RUS ?= {
+				turmoil <= 0.25
+				is_split_state = no
+			}
+		}
+	}
+	on_complete = {
+		set_global_variable = caucasus_consolidated_var
+		if = {
+			limit = {
+				NOT = {
+					has_variable = imamate_defeated
+				}
+			}
+			trigger_event = {
+				id = caucasuswar_end.3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_variable = circassia_defeated
+				}
+			}
+			trigger_event = {
+				id = caucasuswar_end.1
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					has_modifier = caucasus_war_attacker
+				}
+				remove_modifier = caucasus_war_attacker
+			}
+		}
+	}
+	event_outcome_completed_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOR = {
+						has_variable = circassia_defeated
+						has_variable = imamate_defeated
+					}
+				}
+				desc = event_effects_caucasuswar_endings_tt
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = {
+						has_variable = imamate_defeated
+					}
+				}
+				desc = event_effects_caucasuswar_end.3_tt
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = {
+						has_variable = circassia_defeated
+					}
+				}
+				desc = event_effects_caucasuswar_end.1_tt
+			}
+		}
+	}
+	fail = {
+		custom_tooltip = {
+			text = caucasus_lost_tt
+			NOT = {
+				any_scope_state = {
+					state_region = s:STATE_DAGESTAN
+				}
+				any_scope_state = {
+					state_region = s:STATE_KUBAN
+				}
+				any_scope_state = {
+					state_region = s:STATE_NORTH_CAUCASUS
+				}
+			}
+		}
+	}
+	on_fail = {
+		set_global_variable = caucasus_failure_var
+		trigger_event = {
+			id = caucasuswar_end.4
+			days = 0
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					has_modifier = caucasus_war_attacker
+				}
+				remove_modifier = caucasus_war_attacker
+			}
+		}
+	}
+	event_outcome_failed_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = event_effects_caucasuswar_end.4_tt
+			}
+		}
+	}
+	on_weekly_pulse = {
+		events = {
+			caucasuswar_end.1
+			caucasuswar_end.3
+		}
+	}
+	invalid = {
+		OR = {
+			c:CIR ?= {
+				is_subject = yes
+				NOT = {
+					is_subject_of = ROOT
+				}
+			}
+			c:CHC ?= {
+				is_subject = yes
+				NOT = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+	}
+	on_invalid = {
+		set_global_variable = caucasus_failure_var
+	}
+	on_yearly_pulse = {
+		random_events = {
+			90 = 0
+			10 = caucasuswar.1
+			10 = caucasuswar.2
+			10 = caucasuswar.3
+			10 = caucasuswar.4
+			50 = caucasuswar.6
+		}
+	}
+	weight = 100
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+REPLACE:je_caucasian_war_circassia = {
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 	group = je_group_russia_expansion
 	modifiers_while_active = {
 		caucasus_war_defender_circassia
 	}
 	is_shown_when_inactive = {
-		country_has_primary_culture = cu:circassian
-	}
-	possible = {
 		any_scope_state = {
 			state_region = s:STATE_KUBAN
 			has_modifier = caucasus_war_attacker
 		}
+	}
+	possible = {
+		country_has_primary_culture = cu:circassian
 	}
 	immediate = {
 		c:RUS ?= {
@@ -63,11 +363,9 @@
 		}
 	}
 	complete = {
-		c:CIR ?= {
-			any_scope_state = {
-				state_region = s:STATE_KUBAN
-				is_split_state = no
-			}
+		s:STATE_KUBAN = {
+			is_split_state = no
+			owner = root
 		}
 	}
 	on_complete = {
@@ -76,6 +374,24 @@
 		}
 		hidden_effect = {
 			set_variable = honor_and_life_achievement
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_NORTH_CAUCASUS
+					state_region = s:STATE_STAVROPOL
+				}
+			}
+			add_claim = c:CIR
+			add_homeland = cu:circassian
+		}
+		hidden_effect = {
+			every_scope_state = {
+				limit = {
+					has_modifier = caucasus_war_attacker
+				}
+				remove_modifier = caucasus_war_attacker
+			}
 		}
 	}
 	event_outcome_completed_desc = {
@@ -105,19 +421,18 @@ REPLACE:je_caucasian_war_imamate = {
 		caucasus_war_defender_imamate
 	}
 	is_shown_when_inactive = {
-		OR = {
-			country_has_primary_culture = cu:chechen
-			country_has_primary_culture = cu:north_caucasian
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_NORTH_CAUCASUS
+				state_region = s:STATE_DAGESTAN
+			}
+			has_modifier = caucasus_war_attacker
 		}
 	}
 	possible = {
-		any_scope_state = {
-			state_region = s:STATE_DAGESTAN
-			has_modifier = caucasus_war_attacker
-		}
-		any_scope_state = {
-			state_region = s:STATE_NORTH_CAUCASUS
-			has_modifier = caucasus_war_attacker
+		OR = {
+			country_has_primary_culture = cu:chechen
+			country_has_primary_culture = cu:north_caucasian
 		}
 	}
 	immediate = {
@@ -174,14 +489,16 @@ REPLACE:je_caucasian_war_imamate = {
 		}
 	}
 	complete = {
-		c:CHC ?= {
-			any_scope_state = {
-				state_region = s:STATE_DAGESTAN
-				is_split_state = no
-			}
-			any_scope_state = {
+		any_scope_state = {
+			OR = {
 				state_region = s:STATE_NORTH_CAUCASUS
-				is_split_state = no
+				state_region = s:STATE_DAGESTAN
+			}
+			is_split_state = no
+			OR = {
+				owner = root
+				owner = c:CIR
+				owner = c:DAG
 			}
 		}
 	}
@@ -195,6 +512,22 @@ REPLACE:je_caucasian_war_imamate = {
 	on_complete = {
 		trigger_event = {
 			id = caucasuswar_end.5
+		}
+		every_state = {
+			limit = {
+				state_region = s:STATE_STAVROPOL
+			}
+			add_claim = c:CHC
+			add_homeland = cu:chechen
+			add_homeland = cu:north_caucasian
+		}
+		hidden_effect = {
+			every_scope_state = {
+				limit = {
+					has_modifier = caucasus_war_attacker
+				}
+				remove_modifier = caucasus_war_attacker
+			}
 		}
 	}
 	weight = 100

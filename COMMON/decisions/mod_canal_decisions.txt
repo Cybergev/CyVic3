@@ -1,0 +1,64 @@
+﻿REPLACE:suez_survey_decision = {
+	is_shown = {
+		NOT = {
+			has_variable = survey_suez_taken
+			has_global_variable = suez_canal_complete
+		}
+		OR = {
+			country_rank = rank_value:great_power
+			s:STATE_SINAI = {
+				any_scope_state = {
+					owner = ROOT
+				}
+			}
+		}
+		s:STATE_SINAI = {
+			NOT = {
+				any_scope_state = {
+					has_building = building_suez_canal
+				}
+			}
+		}
+	}
+	possible = {
+		has_interest_marker_in_region = sr:region_near_east
+		has_technology_researched = colonization
+		produced_bureaucracy > 1000
+	}
+	when_taken = {
+		set_variable = {
+			name = survey_suez_taken
+			value = 0
+		}
+		add_modifier = {
+			name = modifier_surveying_suez
+		}
+		add_journal_entry = {
+			type = je_suez_survey
+		}
+	}
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				produced_bureaucracy > 5000
+			}
+			add = 10
+		}
+		if = {
+			limit = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+			}
+			multiply = 0
+		}
+	}
+}

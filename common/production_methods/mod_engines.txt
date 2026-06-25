@@ -7,8 +7,8 @@
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_steel_add = 100
-			goods_output_engines_add = 100
+			goods_input_steel_add = 200
+			goods_output_engines_add = 200
 		}
 	}
 }
@@ -26,9 +26,9 @@ REPLACE_OR_CREATE:pm_electric_engines = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 150
+			goods_input_steel_add = 300
 			# output goods
-			goods_output_engines_add = 150
+			goods_output_engines_add = 300
 		}
 	}
 }
@@ -46,9 +46,9 @@ REPLACE_OR_CREATE:pm_diesel_engines = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 200
+			goods_input_steel_add = 400
 			# output goods
-			goods_output_engines_add = 200
+			goods_output_engines_add = 400
 		}
 	}
 }

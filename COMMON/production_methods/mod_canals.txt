@@ -7,15 +7,13 @@
 			country_prestige_add = 100
 		}
 	}
-	state_modifiers = {
-		level_scaled = {
-			state_migration_pull_mult = 0.5
-		}
-	}
 	building_modifiers = {
 		level_scaled = {
-			building_employment_engineers_add = 500
-			building_employment_bureaucrats_add = 500
+			building_employment_engineers_add = 1000
+			building_employment_bureaucrats_add = 1000
+		}
+		workforce_scaled = {
+			goods_output_merchant_marine_add = 1000
 		}
 	}
 }
